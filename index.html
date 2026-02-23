@@ -87,6 +87,82 @@
     line-height: 1.6;
   }
 
+  /* Today in Bergen County */
+  .today {
+    background: #F0F0E8;
+    padding: 2.75rem 1.5rem 3.25rem;
+  }
+  .today-inner {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .today h2 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    color: #1C1C1C;
+    margin-bottom: 0.35rem;
+  }
+  .today-date {
+    color: #006B3F;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  .today-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .story-card {
+    background: #fff;
+    border: 1px solid #dfd7cd;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  .story-pill {
+    display: inline-block;
+    background: #1C1C1C;
+    color: #FFB81C;
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+  }
+  .story-card h3 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    color: #1C1C1C;
+    margin-bottom: 0.5rem;
+  }
+  .story-card p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: #4a4a3f;
+    margin-bottom: 0.6rem;
+  }
+  .story-meta {
+    font-size: 0.82rem;
+    color: #6B6B5E;
+    line-height: 1.45;
+    margin-bottom: 0.55rem;
+  }
+  .story-card a {
+    color: #006B3F;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.86rem;
+  }
+  .story-card a:hover { text-decoration: underline; }
+  .today-cta {
+    text-align: center;
+    margin-top: 1.15rem;
+    color: #1C1C1C;
+    font-weight: 600;
+  }
+
   /* Subscribe form */
   .subscribe-form {
     display: flex;
@@ -304,6 +380,10 @@
   }
 
   /* Mobile */
+  @media (max-width: 640px) {
+    .today-grid { grid-template-columns: 1fr; }
+  }
+
   @media (max-width: 480px) {
     .subscribe-form {
       flex-direction: column;
@@ -334,6 +414,48 @@
   </form>
   <p class="hero-note">Free. Every Friday. Unsubscribe anytime.</p>
 </section>
+
+<!-- TODAY_START -->
+<section class="today">
+  <div class="today-inner">
+    <h2>What's Happening Today</h2>
+    <p class="today-date">Monday, February 23, 2026</p>
+
+    <div class="today-grid">
+      <article class="story-card">
+        <span class="story-pill">🚔 Crime</span>
+        <h3>Bergen County school closures, delayed openings due to snow, blizzard conditions for Monday (Feb. 23, 2026)</h3>
+        <p>Weather-related local operations impact across Bergen County schools.</p>
+        
+        <a href="https://www.nj.com/bergen/2026/02/bergen-county-school-closures-delayed-openings-due-to-snow-blizzard-conditions-for-monday-feb-23-2026.html" target="_blank" rel="noopener">Source: NJ.com Bergen →</a>
+      </article>
+      <article class="story-card">
+        <span class="story-pill">🍕 Food</span>
+        <h3>13 New Food Spots in Bergen County, NJ</h3>
+        <p>Roundup of upcoming/opening food businesses including Running Latte Cafe, Dosa House, Honey Brewed Cafe, Asu Mare Peru Restobar, Tommy&#x27;s Tap and Tavern (Paramus location planned).</p>
+        <p class="story-meta">Running Latte Cafe: 189 N Washington Ave, Bergenfield, NJ 07621, USA • <a href="https://maps.google.com/?q=Running+Latte+Cafe+189+N+Washington+Ave,+Bergenfield,+NJ+07621,+USA" target="_blank" rel="noopener">Map</a></p>
+        <a href="https://thelocalgirl.com/bergen/new-restaurants-bergen-county-nj-february-2026/" target="_blank" rel="noopener">Source: thelocalgirl.com →</a>
+      </article>
+      <article class="story-card">
+        <span class="story-pill">📅 Events</span>
+        <h3>February 2026 Events in Bergen County</h3>
+        <p>Event listings include Ridgefield Park Civic Center events, Ramsey/Teaneck/Bergenfield community listings, and other February local activities.</p>
+        
+        <a href="https://thelocalgirl.com/bergen/bergen-county-events-new-jersey-february-2026/" target="_blank" rel="noopener">Source: thelocalgirl.com →</a>
+      </article>
+      <article class="story-card">
+        <span class="story-pill">🏠 Real Estate</span>
+        <h3>Recently sold residential properties in Bergen County: Feb. 2 to 8</h3>
+        <p>173 Bergen County transactions reported; median sale $765,000 (Rutherford, 1,544 sq ft).</p>
+        
+        <a href="https://www.nj.com/realestate-news/2026/02/recently-sold-residential-properties-in-bergen-county-feb-2-to-8.html" target="_blank" rel="noopener">Source: NJ.com Real Estate →</a>
+      </article>
+    </div>
+
+    <p class="today-cta">Get the full weekly roundup — subscribe free 👆</p>
+  </div>
+</section>
+<!-- TODAY_END -->
 
 <div class="lane-stripe"></div>
 
