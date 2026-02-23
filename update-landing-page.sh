@@ -35,22 +35,32 @@ cat = data.get("categories", {})
 stories = []
 
 if isinstance(cat, dict) and "restaurant_openings_closings" in cat:
+    crime_arr = cat.get("local_news_crime", [])
+    crime_pick = None
+    for c in crime_arr:
+        t = (c.get("title") or "").lower()
+        if any(k in t for k in ["shoot", "arrest", "raid", "crime", "police"]):
+            crime_pick = c
+            break
+    if crime_pick is None and crime_arr:
+        crime_pick = crime_arr[0]
+
     pickers = [
-        ("🚔 Crime", cat.get("local_news_crime", []), 0),
-        ("🍕 Food", cat.get("restaurant_openings_closings", []), 0),
-        ("📅 Events", cat.get("weekend_events", []), 0),
-        ("🏠 Real Estate", cat.get("real_estate_transactions", []), 0),
+        ("🚔 Crime", crime_pick),
+        ("🍕 Food", (cat.get("restaurant_openings_closings", []) or [None])[0]),
+        ("📅 Events", (cat.get("weekend_events", []) or [None])[0]),
+        ("🏠 Real Estate", (cat.get("real_estate_transactions", []) or [None])[0]),
     ]
-    for label, arr, idx in pickers:
-        if arr and len(arr) > idx:
-            x = arr[idx]
-            stories.append({
-                "pill": label,
-                "title": x.get("title", "Untitled"),
-                "summary": x.get("summary", ""),
-                "source": x.get("source", "Source"),
-                "url": x.get("url", "#"),
-            })
+    for label, x in pickers:
+        if not x:
+            continue
+        stories.append({
+            "pill": label,
+            "title": x.get("title", "Untitled"),
+            "summary": x.get("summary", ""),
+            "source": x.get("source", "Source"),
+            "url": x.get("url", "#"),
+        })
 elif isinstance(data.get("items"), list):
     # fallback schema from scrape-bergen-news.sh
     mapping = {
