@@ -31,13 +31,17 @@ with open(DATA_FILE, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 LISTICLE_PATTERNS = [
-    r"\b\d+\s+(best|things|places|spots|restaurants|events)\b",
+    r"\b\d+\s+(best|things|places|spots|restaurants|events|festivals)\b",
     r"\broundup\b",
+    r"\bmega[-\s]?guide\b",
+    r"\bevents?\s+guide\b",
+    r"\bfairs?\s+and\s+festivals?\b",
     r"\bthis\s+week\b",
     r"\bthis\s+month\b",
     r"\bfebruary\s+\d{4}\b",
     r"\btop\s+\d+\b",
     r"\bguide\s+to\b",
+    r"\bshould\s+know\s+about\b",
 ]
 
 def is_listicle(title: str, summary: str) -> bool:
@@ -75,10 +79,8 @@ if not items and isinstance(data.get("categories"), dict):
 if not items:
     raise SystemExit("No stories available to build daily section")
 
-# Filter out listicles/roundups
+# Filter out listicles/roundups (strict; do not fail-open)
 filtered = [i for i in items if not is_listicle(i.get("title", ""), i.get("description", ""))]
-if not filtered:
-    filtered = items  # fail-open so page still updates
 
 # Priority pillars: Food, Sports, Events, Jersey Chaos
 pillars = [
