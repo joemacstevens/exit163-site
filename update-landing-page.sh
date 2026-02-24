@@ -160,6 +160,35 @@ for cat_key, pill in pillars:
         "meta": place_line,
     })
 
+# If no event card made, synthesize from municipal updates when available
+if not any(c.get('pill') == '📅 Event' for c in cards):
+    mus = data.get('municipal_updates', [])
+    if mus:
+        m = mus[0]
+        cards.append({
+            "pill": "📅 Event",
+            "title": m.get('title', 'Local Community Update'),
+            "summary": clean_summary(m.get('summary', 'Local municipal update relevant for today.')),
+            "source": m.get('source', 'Municipal Source'),
+            "url": m.get('url', '#'),
+            "meta": "",
+        })
+
+# If still light, add one more curated food/drink pick
+if len(cards) < 3:
+    places = data.get("goplaces_restaurant_details", [])
+    if len(places) > 1:
+        p = places[1]
+        maps = f"https://maps.google.com/?q={str(p.get('address','')).replace(' ', '+')}"
+        cards.append({
+            "pill": "🍸 Drink / Food Pick",
+            "title": f"{p.get('name','Local Drink/Food Pick')} ({p.get('rating','?')}★)",
+            "summary": "Another hand-picked stop if you're getting off this exit today.",
+            "source": "Exit 163 Curated Pick",
+            "url": maps,
+            "meta": f"{p.get('address','')} • <a href=\"{maps}\" target=\"_blank\" rel=\"noopener\">Map</a>",
+        })
+
 # If any pillar missing, fill from clean non-crime/weather stories only
 if len(cards) < 4:
     for x in filtered:
