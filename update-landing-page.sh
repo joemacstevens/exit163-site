@@ -30,91 +30,135 @@ INDEX_FILE = sys.argv[2]
 with open(DATA_FILE, "r", encoding="utf-8") as f:
     data = json.load(f)
 
-# Support both known data schemas.
-cat = data.get("categories", {})
-stories = []
+LISTICLE_PATTERNS = [
+    r"\b\d+\s+(best|things|places|spots|restaurants|events)\b",
+    r"\broundup\b",
+    r"\bthis\s+week\b",
+    r"\bthis\s+month\b",
+    r"\bfebruary\s+\d{4}\b",
+    r"\btop\s+\d+\b",
+    r"\bguide\s+to\b",
+]
 
-if isinstance(cat, dict) and "restaurant_openings_closings" in cat:
-    crime_arr = cat.get("local_news_crime", [])
-    crime_pick = None
-    for c in crime_arr:
-        t = (c.get("title") or "").lower()
-        if any(k in t for k in ["shoot", "arrest", "raid", "crime", "police"]):
-            crime_pick = c
-            break
-    if crime_pick is None and crime_arr:
-        crime_pick = crime_arr[0]
+def is_listicle(title: str, summary: str) -> bool:
+    t = f"{title} {summary}".lower()
+    return any(re.search(p, t) for p in LISTICLE_PATTERNS)
 
-    pickers = [
-        ("🚔 Crime", crime_pick),
-        ("🍕 Food", (cat.get("restaurant_openings_closings", []) or [None])[0]),
-        ("📅 Events", (cat.get("weekend_events", []) or [None])[0]),
-        ("🏠 Real Estate", (cat.get("real_estate_transactions", []) or [None])[0]),
-    ]
-    for label, x in pickers:
-        if not x:
-            continue
-        stories.append({
-            "pill": label,
-            "title": x.get("title", "Untitled"),
-            "summary": x.get("summary", ""),
-            "source": x.get("source", "Source"),
-            "url": x.get("url", "#"),
-        })
-elif isinstance(data.get("items"), list):
-    # fallback schema from scrape-bergen-news.sh
-    mapping = {
-        "crime": "🚔 Crime",
-        "food": "🍕 Food",
-        "events": "📅 Events",
-        "real_estate": "🏠 Real Estate",
-        "sports": "🏈 Sports",
-        "business": "💼 Business",
-    }
-    seen = set()
-    for item in data["items"]:
-        c = item.get("category")
-        if c in mapping and c not in seen:
-            seen.add(c)
-            stories.append({
-                "pill": mapping[c],
-                "title": item.get("title", "Untitled"),
-                "summary": item.get("description", ""),
-                "source": item.get("source", "Source"),
-                "url": item.get("url", "#"),
+def clean_summary(text: str, max_len=220):
+    txt = (text or "").strip()
+    if len(txt) <= max_len:
+        return txt
+    return txt[:max_len].rsplit(" ", 1)[0] + "…"
+
+# Build candidate pool from fallback schema preferred
+items = data.get("items", []) if isinstance(data.get("items"), list) else []
+
+# If old schema appears, transform minimally
+if not items and isinstance(data.get("categories"), dict):
+    cat = data["categories"]
+    for c, arr in {
+        "food": cat.get("restaurant_openings_closings", []),
+        "events": cat.get("weekend_events", []),
+        "sports": cat.get("sports", []),
+        "oddity": cat.get("local_news_crime", []),
+    }.items():
+        for x in arr or []:
+            items.append({
+                "category": c,
+                "title": x.get("title", "Untitled"),
+                "description": x.get("summary", ""),
+                "source": x.get("source", "Source"),
+                "url": x.get("url", "#"),
+                "place_details": {},
             })
-        if len(stories) >= 4:
-            break
 
-if not stories:
+if not items:
     raise SystemExit("No stories available to build daily section")
 
-# Optional place enrichment from known field
-place_lines = []
-for p in data.get("restaurant_place_details", [])[:1]:
-    address = p.get("address", "")
-    name = p.get("name", "")
-    if address and name:
-        q = (name + " " + address).replace(" ", "+")
-        place_lines.append(f"{name}: {address} • <a href=\"https://maps.google.com/?q={q}\" target=\"_blank\" rel=\"noopener\">Map</a>")
+# Filter out listicles/roundups
+filtered = [i for i in items if not is_listicle(i.get("title", ""), i.get("description", ""))]
+if not filtered:
+    filtered = items  # fail-open so page still updates
+
+# Priority pillars: Food, Sports, Events, Jersey Chaos
+pillars = [
+    ("food", "🍕 Food & Drink"),
+    ("sports", "🏈 Sports"),
+    ("events", "📅 Event"),
+    ("oddity", "🌀 Jersey Chaos"),
+]
+
+cards = []
+used_urls = set()
+for cat_key, pill in pillars:
+    candidates = [x for x in filtered if x.get("category") == cat_key and x.get("url") not in used_urls]
+    if not candidates:
+        continue
+    pick = candidates[0]
+    used_urls.add(pick.get("url"))
+
+    pd = pick.get("place_details") or {}
+    place_line = ""
+    if pd.get("address"):
+        q = (pd.get("address") or "").replace(" ", "+")
+        map_url = pd.get("maps_link") or f"https://maps.google.com/?q={q}"
+        phone = pd.get("phone")
+        bits = [pd.get("address")]
+        if phone:
+            bits.append(phone)
+        bits.append(f'<a href="{escape(map_url)}" target="_blank" rel="noopener">Map</a>')
+        place_line = " • ".join(bits)
+
+    cards.append({
+        "pill": pill,
+        "title": pick.get("title", "Untitled"),
+        "summary": clean_summary(pick.get("description", "")),
+        "source": pick.get("source", "Source"),
+        "url": pick.get("url", "#"),
+        "meta": place_line,
+    })
+
+# If any pillar missing, fill from other non-listicle stories
+if len(cards) < 4:
+    for x in filtered:
+        u = x.get("url")
+        if u in used_urls:
+            continue
+        used_urls.add(u)
+        cards.append({
+            "pill": "📍 Local Pick",
+            "title": x.get("title", "Untitled"),
+            "summary": clean_summary(x.get("description", "")),
+            "source": x.get("source", "Source"),
+            "url": u,
+            "meta": "",
+        })
+        if len(cards) >= 4:
+            break
+
+if not cards:
+    raise SystemExit("No cards after filtering")
 
 date_label = datetime.strptime(data.get("date"), "%Y-%m-%d").strftime("%A, %B %-d, %Y")
 
 cards_html = []
-for i, s in enumerate(stories[:4]):
+for s in cards[:4]:
     cards_html.append(f'''      <article class="story-card">
         <span class="story-pill">{escape(s["pill"])}</span>
         <h3>{escape(s["title"])}</h3>
-        <p>{escape(s["summary"][:260])}</p>
-        {'<p class="story-meta">'+place_lines[0]+'</p>' if i == 1 and place_lines else ''}
+        <p>{escape(s["summary"])}</p>
+        {('<p class="story-meta">'+s['meta']+'</p>') if s.get('meta') else ''}
         <a href="{escape(s['url'])}" target="_blank" rel="noopener">Source: {escape(s['source'])} →</a>
       </article>''')
+
+lead = "If you’re getting off this exit today: one place to eat, one game to care about, one thing to do, and one wild Jersey curveball."
 
 section = f'''<!-- TODAY_START -->
 <section class="today">
   <div class="today-inner">
     <h2>What's Happening Today</h2>
     <p class="today-date">{escape(date_label)}</p>
+    <p class="today-lead">{escape(lead)}</p>
 
     <div class="today-grid">
 {chr(10).join(cards_html)}
@@ -133,16 +177,23 @@ if "<!-- TODAY_START -->" in html and "<!-- TODAY_END -->" in html:
 else:
     html = html.replace("</section>\n\n<div class=\"lane-stripe\"></div>", f"</section>\n\n{section}\n\n<div class=\"lane-stripe\"></div>", 1)
 
+# Ensure basic style for lead line exists
+if ".today-lead" not in html:
+    html = html.replace(
+        ".today-date { color: #5f7f71; font-weight: 700; margin-top: 4px; }",
+        ".today-date { color: #5f7f71; font-weight: 700; margin-top: 4px; }\n    .today-lead { margin-top: 10px; color: #33443d; font-weight: 500; }"
+    )
+
 with open(INDEX_FILE, "w", encoding="utf-8") as f:
     f.write(html)
 
-print("Updated daily section in index.html")
+print("Updated daily section in index.html (pillar-first + anti-listicle)")
 PY
 
 cd "$SITE_DIR"
 git add index.html update-landing-page.sh
 if ! git diff --cached --quiet; then
-  git commit -m "Add daily Bergen County section and updater script"
+  git commit -m "Shift daily section to pillar-first editorial voice; filter listicles"
   git push
   echo "Pushed changes."
 else
