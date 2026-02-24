@@ -54,6 +54,21 @@ def clean_summary(text: str, max_len=220):
         return txt
     return txt[:max_len].rsplit(" ", 1)[0] + "…"
 
+CRIME_WEATHER_PATTERNS = [
+    r"\bpolice\b", r"\barrest\b", r"\bcrime\b", r"\bshooting\b", r"\bpursuit\b",
+    r"\bcocaine\b", r"\bweather\b", r"\bsnow\b", r"\bicy\b", r"\bstorm\b"
+]
+
+def is_crime_or_weather(title: str, summary: str) -> bool:
+    t = f"{title} {summary}".lower()
+    return any(re.search(p, t) for p in CRIME_WEATHER_PATTERNS)
+
+def is_fun_chaos(title: str, summary: str) -> bool:
+    t = f"{title} {summary}".lower()
+    # keep chaos quirky, not hard crime/weather
+    quirky = ["weird", "odd", "viral", "bizarre", "chaos", "wtf", "wild", "funny"]
+    return any(k in t for k in quirky) and not is_crime_or_weather(title, summary)
+
 # Build candidate pool from fallback schema preferred
 items = data.get("items", []) if isinstance(data.get("items"), list) else []
 
@@ -63,7 +78,7 @@ if not items and isinstance(data.get("categories"), dict):
     for c, arr in {
         "food": cat.get("restaurant_openings_closings", []),
         "events": cat.get("weekend_events", []),
-        "sports": cat.get("sports", []),
+        "sports": cat.get("sports", []) or cat.get("high_school_sports_scores", []),
         "oddity": cat.get("local_news_crime", []),
     }.items():
         for x in arr or []:
@@ -94,6 +109,31 @@ cards = []
 used_urls = set()
 for cat_key, pill in pillars:
     candidates = [x for x in filtered if x.get("category") == cat_key and x.get("url") not in used_urls]
+
+    # Keep daily feed anchored to food/sports/events; avoid crime/weather takeover
+    if cat_key in ("food", "sports", "events"):
+        candidates = [x for x in candidates if not is_crime_or_weather(x.get("title", ""), x.get("description", ""))]
+
+    # Jersey Chaos should be quirky/funny; if none, we'll skip it
+    if cat_key == "oddity":
+        candidates = [x for x in candidates if is_fun_chaos(x.get("title", ""), x.get("description", ""))]
+
+    # If no clean food story, synthesize a local food pick from goplaces details
+    if cat_key == "food" and not candidates:
+        places = data.get("goplaces_restaurant_details", [])
+        if places:
+            p = places[0]
+            maps = f"https://maps.google.com/?q={str(p.get('address','')).replace(' ', '+')}"
+            cards.append({
+                "pill": "🍕 Food & Drink",
+                "title": f"{p.get('name','Local Food Pick')} ({p.get('rating','?')}★)",
+                "summary": "Fresh local pick for today — hand-selected by Exit 163.",
+                "source": "Exit 163 Curated Pick",
+                "url": maps,
+                "meta": f"{p.get('address','')} • <a href=\"{maps}\" target=\"_blank\" rel=\"noopener\">Map</a>",
+            })
+        continue
+
     if not candidates:
         continue
     pick = candidates[0]
@@ -120,11 +160,13 @@ for cat_key, pill in pillars:
         "meta": place_line,
     })
 
-# If any pillar missing, fill from other non-listicle stories
+# If any pillar missing, fill from clean non-crime/weather stories only
 if len(cards) < 4:
     for x in filtered:
         u = x.get("url")
         if u in used_urls:
+            continue
+        if is_crime_or_weather(x.get("title", ""), x.get("description", "")):
             continue
         used_urls.add(u)
         cards.append({
