@@ -50,6 +50,23 @@ def is_listicle(title: str, summary: str) -> bool:
 
 def clean_summary(text: str, max_len=220):
     txt = (text or "").strip()
+    # remove scraper/internal-error language from user-facing copy
+    bad_phrases = [
+        "scraper extraction returned minimal body text",
+        "may require browser/manual pull",
+        "fetch error",
+        "http 403",
+        "http 404",
+        "not available due to scraping limitations",
+    ]
+    lower = txt.lower()
+    for b in bad_phrases:
+        i = lower.find(b)
+        if i != -1:
+            txt = txt[:i].strip().rstrip(';,.')
+            break
+    if not txt:
+        txt = "Local municipal advisory posted — check source for full details."
     if len(txt) <= max_len:
         return txt
     return txt[:max_len].rsplit(" ", 1)[0] + "…"
@@ -165,10 +182,14 @@ if not any(c.get('pill') == '📅 Event' for c in cards):
     mus = data.get('municipal_updates', [])
     if mus:
         m = mus[0]
+        raw_summary = m.get('summary', 'Local municipal update relevant for today.')
+        summary = clean_summary(raw_summary)
+        if 'municipal notice posted' in raw_summary.lower() or 'advisory' in m.get('title','').lower():
+            summary = "Official local advisory posted. Tap source for full notice and updates."
         cards.append({
             "pill": "📅 Event",
             "title": m.get('title', 'Local Community Update'),
-            "summary": clean_summary(m.get('summary', 'Local municipal update relevant for today.')),
+            "summary": summary,
             "source": m.get('source', 'Municipal Source'),
             "url": m.get('url', '#'),
             "meta": "",
