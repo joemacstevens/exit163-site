@@ -101,7 +101,7 @@ if not items and isinstance(data.get("categories"), dict):
         for x in arr or []:
             items.append({
                 "category": c,
-                "title": x.get("title", "Untitled"),
+                "title": x.get("headline") or x.get("title", "Untitled"),
                 "description": x.get("summary", ""),
                 "source": x.get("source", "Source"),
                 "url": x.get("url", "#"),
