@@ -7,7 +7,14 @@ BERGEN_DIR="$WORKSPACE_DIR/bergen-newsletter"
 DATA_DIR="$BERGEN_DIR/data"
 TODAY="${1:-$(date +%F)}"
 DATA_FILE="$DATA_DIR/$TODAY.json"
+EDITORIAL_FILE="$DATA_DIR/$TODAY-editorial.json"
 INDEX_FILE="$SITE_DIR/index.html"
+
+# Try to generate editorial content if not already present
+if [[ -f "$DATA_FILE" && ! -f "$EDITORIAL_FILE" ]]; then
+  echo "Running researcher + writer pipeline..."
+  python3 "$BERGEN_DIR/research-and-write.py" "$TODAY" || echo "Warning: editorial pipeline failed, will use raw data"
+fi
 
 if [[ ! -f "$DATA_FILE" ]]; then
   echo "No data file for $TODAY. Running bergen scraper..."
@@ -19,13 +26,27 @@ if [[ ! -f "$DATA_FILE" ]]; then
   exit 1
 fi
 
-python3 - "$DATA_FILE" "$INDEX_FILE" <<'PY'
-import json, sys, re
+python3 - "$DATA_FILE" "$INDEX_FILE" "$EDITORIAL_FILE" <<'PY'
+import json, sys, re, os
 from datetime import datetime
 from html import escape
 
 DATA_FILE = sys.argv[1]
 INDEX_FILE = sys.argv[2]
+EDITORIAL_FILE = sys.argv[3] if len(sys.argv) > 3 else None
+
+# Check for editorial JSON first
+USE_EDITORIAL = False
+editorial_data = None
+if EDITORIAL_FILE and os.path.exists(EDITORIAL_FILE):
+    try:
+        with open(EDITORIAL_FILE, "r", encoding="utf-8") as ef:
+            editorial_data = json.load(ef)
+        if editorial_data.get("cards") and len(editorial_data["cards"]) > 0:
+            USE_EDITORIAL = True
+            print(f"Using editorial data: {EDITORIAL_FILE} ({len(editorial_data['cards'])} cards)")
+    except Exception as e:
+        print(f"Warning: Failed to load editorial file: {e}")
 
 with open(DATA_FILE, "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -273,6 +294,28 @@ if len(cards) < 4:
         })
         if len(cards) >= 4:
             break
+
+# ---- Editorial fast path ----
+if USE_EDITORIAL:
+    cards = []
+    for ec in editorial_data["cards"]:
+        cards.append({
+            "pill": ec.get("pill", "📍 Local"),
+            "title": ec.get("title", "Untitled"),
+            "summary": ec.get("summary", ""),
+            "source": ec.get("source", "Source"),
+            "url": ec.get("url", "#"),
+            "meta": "",
+        })
+        # Add place_details meta if present
+        pd = ec.get("place_details") or {}
+        if pd.get("address"):
+            q = pd["address"].replace(" ", "+")
+            map_url = pd.get("maps_link") or f"https://maps.google.com/?q={q}"
+            bits = [pd["address"]]
+            if pd.get("phone"): bits.append(pd["phone"])
+            bits.append(f'<a href="{escape(map_url)}" target="_blank" rel="noopener">Map</a>')
+            cards[-1]["meta"] = " • ".join(bits)
 
 if not cards:
     raise SystemExit("No cards after filtering")
