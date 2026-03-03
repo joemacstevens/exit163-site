@@ -48,8 +48,48 @@ def is_listicle(title: str, summary: str) -> bool:
     t = f"{title} {summary}".lower()
     return any(re.search(p, t) for p in LISTICLE_PATTERNS)
 
+def strip_html(text: str) -> str:
+    """Remove HTML tags and decode HTML entities."""
+    import html as htmlmod
+    txt = re.sub(r'<[^>]+>', '', text)          # strip tags
+    txt = htmlmod.unescape(txt)                  # decode entities (&#x27; → ')
+    txt = re.sub(r'\s+', ' ', txt).strip()       # collapse whitespace
+    return txt
+
+def is_nav_dump(text: str) -> bool:
+    """Detect navigation/menu dumps scraped as content."""
+    indicators = ['REGISTER FOR', 'UPCOMING EVENTS', 'Loading Events', 'QUICK LINKS',
+                  'SCOREBOARD', 'Contact Information', 'PHYSICAL FORMS',
+                  'Log In', 'Sign Up', 'Menu', 'Skip to content', 'Cookie Policy']
+    lower = text.lower()
+    hits = sum(1 for i in indicators if i.lower() in lower)
+    return hits >= 2
+
+def is_stale(title: str, summary: str) -> bool:
+    """Filter content clearly from prior years."""
+    t = f"{title} {summary}"
+    stale_years = ['2023', '2024', '2025']
+    for y in stale_years:
+        if re.search(rf'\b{y}\b', t) and '2026' not in t:
+            return True
+    return False
+
+def is_generic_page(title: str, url: str) -> bool:
+    """Filter homepages and generic landing pages (not articles)."""
+    lower = title.lower()
+    generics = ['official website', 'home page', 'homepage', 'starting a business',
+                'welcome to', 'about us', 'contact us']
+    if any(g in lower for g in generics):
+        return True
+    # URL is just a domain root or /category/ — not an article
+    from urllib.parse import urlparse
+    path = urlparse(url).path.strip('/')
+    if len(path.split('/')) <= 1 and not path:
+        return True
+    return False
+
 def clean_summary(text: str, max_len=220):
-    txt = (text or "").strip()
+    txt = strip_html((text or "").strip())
     # remove scraper/internal-error language from user-facing copy
     bad_phrases = [
         "scraper extraction returned minimal body text",
@@ -111,8 +151,12 @@ if not items and isinstance(data.get("categories"), dict):
 if not items:
     raise SystemExit("No stories available to build daily section")
 
-# Filter out listicles/roundups (strict; do not fail-open)
-filtered = [i for i in items if not is_listicle(i.get("title", ""), i.get("description", ""))]
+# Filter out listicles, nav dumps, stale content, and generic pages
+filtered = [i for i in items
+    if not is_listicle(i.get("title", ""), i.get("description", ""))
+    and not is_nav_dump(i.get("description", ""))
+    and not is_stale(i.get("title", ""), i.get("description", ""))
+    and not is_generic_page(i.get("title", ""), i.get("url", ""))]
 
 # Priority pillars: Food, Sports, Events, Jersey Chaos
 pillars = [
@@ -170,7 +214,7 @@ for cat_key, pill in pillars:
 
     cards.append({
         "pill": pill,
-        "title": pick.get("title", "Untitled"),
+        "title": strip_html(pick.get("title", "Untitled")),
         "summary": clean_summary(pick.get("description", "")),
         "source": pick.get("source", "Source"),
         "url": pick.get("url", "#"),
