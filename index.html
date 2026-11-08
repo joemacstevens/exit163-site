@@ -407,8 +407,8 @@
   <h1>Bergen County news<br>you'll <span>actually read.</span></h1>
   <p class="hero-sub">New restaurants, local crime, weekend events, real estate, and one good hot take — every Friday in 5 minutes.</p>
   
-  <form class="subscribe-form" action="https://app.beehiiv.com/subscribe" method="POST">
-    <input type="hidden" name="publication_id" value="pub_ee97ff45-69d9-4b3e-afe2-290baf350a1b">
+  <form class="subscribe-form" action="/api/subscribe" method="POST">
+    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
     <input type="email" name="email" placeholder="your@email.com" required>
     <button type="submit">YOUR EXIT →</button>
   </form>
@@ -511,8 +511,8 @@
     <li><span class="tag">Real Estate</span> 173 homes sold in Bergen County last week. Median: $765K</li>
     <li><span class="tag">Hot Take</span> The fact that a bullet in a Newark overhead bin only made page 6...</li>
   </ul>
-  <form class="subscribe-form" action="https://app.beehiiv.com/subscribe" method="POST" style="margin-bottom:0">
-    <input type="hidden" name="publication_id" value="pub_ee97ff45-69d9-4b3e-afe2-290baf350a1b">
+  <form class="subscribe-form" action="/api/subscribe" method="POST" style="margin-bottom:0">
+    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
     <input type="email" name="email" placeholder="your@email.com" required>
     <button type="submit">YOUR EXIT →</button>
   </form>
@@ -537,8 +537,8 @@
     <dd>One click, any time. But you won't want to.</dd>
   </dl>
   
-  <form class="subscribe-form" action="https://app.beehiiv.com/subscribe" method="POST">
-    <input type="hidden" name="publication_id" value="pub_ee97ff45-69d9-4b3e-afe2-290baf350a1b">
+  <form class="subscribe-form" action="/api/subscribe" method="POST">
+    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
     <input type="email" name="email" placeholder="your@email.com" required>
     <button type="submit">YOUR EXIT →</button>
   </form>
@@ -552,5 +552,32 @@
   <p class="copy">© 2026 Exit 163. Bergen County, NJ. · <a href="/privacy" style="color:#FFB81C;">Privacy Policy</a></p>
 </footer>
 
+<script>
+(function(){
+  function msg(form, text, ok){
+    var el = form.nextElementSibling && form.nextElementSibling.classList.contains('subscribe-msg') ? form.nextElementSibling : null;
+    if(!el){ el=document.createElement('p'); el.className='subscribe-msg'; form.parentNode.insertBefore(el, form.nextSibling); }
+    el.textContent=text; el.style.cssText='margin:10px 0 0;font-weight:700;color:'+(ok?'#1f7a4d':'#b3261e');
+  }
+  document.querySelectorAll('form.subscribe-form').forEach(function(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button'), label=btn.textContent;
+      btn.disabled=true; btn.textContent='Adding you…';
+      fetch(form.action,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
+        .then(function(r){return r.json().catch(function(){return {ok:false};});})
+        .then(function(d){
+          if(d.ok){ form.reset(); msg(form,"You're in! Check your inbox. First issue lands Friday at 7am.",true); }
+          else { msg(form,d.error||'Something went wrong. Please try again.',false); }
+        })
+        .catch(function(){ msg(form,'Network hiccup. Please try again.',false); })
+        .finally(function(){ btn.disabled=false; btn.textContent=label; });
+    });
+  });
+  var q=new URLSearchParams(location.search), f=document.querySelector('form.subscribe-form');
+  if(f && q.has('subscribed')) msg(f,"You're in! Check your inbox. First issue lands Friday at 7am.",true);
+  if(f && q.has('subscribe_error')) msg(f,'That didn\'t work. Please check your email and try again.',false);
+})();
+</script>
 </body>
 </html>
