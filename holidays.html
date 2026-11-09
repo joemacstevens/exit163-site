@@ -119,6 +119,7 @@
   .chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; flex: 1; min-width: 0; padding: 2px; }
   .types { display: flex; flex-wrap: wrap; gap: 6px; }
   .sep { flex: none; width: 1px; height: 22px; background: var(--line); margin: 0 4px; }
+  @media (max-width: 1100px) { .sep { display: none; } }
   .chip.wk[aria-pressed="true"] { background: var(--amber); border-color: var(--amber); color: #111; }
   .chips::-webkit-scrollbar { display: none; }
   .chip { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 12px; border-radius: 999px; border: 1.5px solid var(--line); background: rgba(255,255,255,0.03); color: var(--text); font: 700 14px var(--sign); cursor: pointer; transition: border-color .15s, background .15s; }
@@ -548,7 +549,8 @@
       sub = 'Unlock them free and see what happened last year, with links to check. The weekly update tells you the moment dates are announced.';
     } else if (total) {
       var trees = tba.filter(function (e) { return e.type === 'tree'; }).length + lockedDated.filter(function (e) { return e.type === 'tree'; }).length;
-      title = 'Unlock <em>' + plural(total, 'more event', 'more events') + '</em> free.';
+      var TN = { tree: ['tree lighting', 'tree lightings'], menorah: ['menorah lighting', 'menorah lightings'], market: ['holiday market', 'holiday markets'], santa: ['Santa event', 'Santa events'] }[state.type] || ['event', 'events'];
+      title = 'Unlock <em>' + plural(total, 'more ' + TN[0], 'more ' + TN[1]) + '</em> free.';
       sub = (state.town ? 'Everything in ' + where + '. ' : '') + (trees && !state.type ? 'Includes ' + plural(trees, 'more tree lighting', 'more tree lightings') + '. ' : '') + 'Updated weekly as towns announce dates.';
     } else {
       title = 'Get the <em>full tracker</em> free.'; sub = 'Updated weekly as towns announce dates.';
@@ -576,7 +578,7 @@
       var free = dated.filter(function (e) { return state.freeIds[e._id]; });
       var locked = dated.filter(function (e) { return !state.freeIds[e._id]; });
       lockedCount = locked.length + tba.length;
-      var html = free.length ? timeline(free) : (dated.length ? '' : '<div class="empty"><b>No confirmed dates yet' + (state.town ? ' for ' + esc(state.town) : '') + '.</b>' + (tba.length ? 'But ' + plural(tba.length, 'event is', 'events are') + ' on the way. Unlock to see last year&rsquo;s details.' : 'Towns are still posting 2026 dates. Check back next week.') + '</div>');
+      var html = free.length ? timeline(free) : (dated.length ? '' : '<div class="empty"><b>No confirmed dates yet' + (state.town ? ' for ' + esc(state.town) : '') + '.</b>' + (tba.length ? '' : 'Towns are still posting 2026 dates. Check back next week.') + '</div>');
       if (lockedCount) {
         html += gateHTML(locked, tba);
         if (locked.length) html += '<p class="locked-label">' + plural(locked.length, 'more dated event', 'more dated events') + (tba.length ? ' + ' + tba.length + ' waiting on dates' : '') + ' in the full list</p><div class="locked" aria-hidden="true"><div class="inner">' + timeline(locked.slice(0, 3)) + '</div></div>';
