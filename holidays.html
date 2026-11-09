@@ -116,7 +116,10 @@
   /* ---------- Filters ---------- */
   .filters { position: sticky; top: 0; z-index: 5; background: rgba(11,13,16,0.86); -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid var(--line); }
   .filters .wrap { display: flex; gap: 12px; align-items: center; padding-top: 12px; padding-bottom: 12px; }
-  .chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; flex: 1; min-width: 0; padding: 2px; }
+  .chips { display: flex; gap: 6px; align-items: center; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; flex: 1; min-width: 0; padding: 2px; -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent); padding-right: 36px; }
+  .types { display: flex; gap: 6px; }
+  .sep { flex: none; width: 1px; height: 22px; background: var(--line); margin: 0 4px; }
+  .chip.wk[aria-pressed="true"] { background: var(--amber); border-color: var(--amber); color: #111; }
   .chips::-webkit-scrollbar { display: none; }
   .chip { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 13px; border-radius: 999px; border: 1.5px solid var(--line); background: rgba(255,255,255,0.03); color: var(--text); font: 700 14px var(--sign); cursor: pointer; transition: border-color .15s, background .15s; }
   .chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--amber)); box-shadow: 0 0 10px var(--c, var(--amber)); font-style: normal; }
@@ -125,15 +128,17 @@
   .chip[aria-pressed="true"] { background: #fff; color: #111; border-color: #fff; }
   .chip[aria-pressed="true"] .n { color: #555; }
   .town { position: relative; flex: none; }
-  .town select { appearance: none; -webkit-appearance: none; height: 38px; padding: 0 34px 0 14px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--ink-2); color: #fff; font: 700 14px var(--sign); cursor: pointer; max-width: 210px; }
+  .town select { appearance: none; -webkit-appearance: none; height: 38px; padding: 0 32px 0 13px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--ink-2); color: #fff; font: 700 14px var(--sign); cursor: pointer; max-width: 220px; }
+  .town select.on { background: #fff; color: #111; border-color: #fff; }
+  .town.on::after { border-color: #111; }
   .town select:focus { border-color: var(--amber); outline: none; }
   .town::after { content: ''; position: absolute; right: 14px; top: 50%; width: 7px; height: 7px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: translateY(-70%) rotate(45deg); pointer-events: none; }
   .count { font-size: 13px; color: var(--dim); padding: 16px 0 0; }
   .count b { color: var(--text); font-weight: 600; }
   @media (max-width: 720px) {
-    .filters .wrap { flex-direction: column; align-items: stretch; gap: 8px; padding-top: 10px; padding-bottom: 10px; }
-    .chips { margin: 0 -20px; padding: 2px 20px; }
-    .town select { width: 100%; max-width: none; }
+    .filters .wrap { padding-top: 9px; padding-bottom: 9px; }
+    .chips { margin: 0 -20px; padding: 2px 36px 2px 20px; }
+    .town select { max-width: 170px; }
   }
 
   /* ---------- Timeline list ---------- */
@@ -150,7 +155,7 @@
   .week-label::after { content: ''; flex: 1; height: 0; border-top: 3px dashed rgba(255,184,28,0.3); }
   .week-label:first-child { margin-top: 18px; }
 
-  .card { position: relative; background: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 18px 18px 16px 22px; overflow: hidden; transition: border-color .2s, transform .2s; }
+  .card { position: relative; background: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px 14px 22px; overflow: hidden; transition: border-color .2s, transform .2s; }
   .card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--c); box-shadow: 0 0 18px var(--c); }
   .card:hover { border-color: rgba(255,255,255,0.22); }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
@@ -163,21 +168,33 @@
   .facts div { display: flex; gap: 8px; align-items: flex-start; }
   .facts svg { flex: none; width: 15px; height: 15px; margin-top: 3px; color: var(--dim); }
   .facts strong { color: #fff; font-weight: 600; }
-  .notes { margin-top: 10px; font-size: 14px; color: var(--dim); line-height: 1.55; }
-  .card-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-  .card-acts .btn { height: 36px; font-size: 13px; padding: 0 12px; }
+  .notes { margin-top: 8px; font-size: 14px; color: var(--muted); line-height: 1.5; }
+  .card-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .card-acts .btn { height: 36px; font-size: 13px; padding: 0 12px; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .via { margin-left: auto; align-self: center; font-size: 12px; color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 40%; }
+  .why { margin-top: 8px; font-size: 13px; color: var(--dim); }
+  .why summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 6px; font: 700 12.5px var(--sign); color: #FFD27A; }
+  .why.ok summary { color: var(--ok); }
+  .why summary::-webkit-details-marker { display: none; }
+  .why summary::after { content: '+'; font-size: 15px; line-height: 1; }
+  .why[open] summary::after { content: '\2212'; }
+  .why p { margin-top: 6px; padding: 8px 10px; border-radius: 8px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); line-height: 1.5; }
   @media (max-width: 640px) {
     .day { grid-template-columns: 1fr; gap: 10px; padding-top: 18px; }
     .day-head { position: static; display: flex; align-items: center; gap: 12px; }
     .day-sign { display: flex; align-items: baseline; gap: 8px; padding: 6px 12px 4px; }
     .day-sign .d { font-size: 24px; }
     .day-rel { margin: 0; }
-    .card { padding: 16px 14px 14px 18px; }
+    .card { padding: 14px 14px 12px 18px; }
     .card h3 { font-size: 18px; }
+    .card-acts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .card-acts .btn { padding: 0 6px; font-size: 12.5px; gap: 5px; }
+    .card-acts .btn svg { width: 14px; height: 14px; }
+    .via { grid-column: 1 / -1; margin: 0; max-width: none; }
   }
 
   /* ---------- Gate ---------- */
-  .gate { position: relative; margin: 36px 0 8px; border-radius: 22px; overflow: hidden; border: 1px solid rgba(255,184,28,0.4); background: radial-gradient(120% 120% at 100% 0%, rgba(255,184,28,0.18), transparent 50%), radial-gradient(100% 120% at 0% 100%, rgba(0,107,63,0.45), transparent 55%), var(--ink); padding: clamp(22px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 28px; align-items: center; }
+  .gate { scroll-margin-top: 80px; position: relative; margin: 36px 0 8px; border-radius: 22px; overflow: hidden; border: 1px solid rgba(255,184,28,0.4); background: radial-gradient(120% 120% at 100% 0%, rgba(255,184,28,0.18), transparent 50%), radial-gradient(100% 120% at 0% 100%, rgba(0,107,63,0.45), transparent 55%), var(--ink); padding: clamp(22px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 28px; align-items: center; }
   .gate h2 { font: 900 clamp(1.8rem, 4vw, 2.6rem)/1.02 var(--sign); color: #fff; letter-spacing: -0.03em; margin-bottom: 12px; }
   .gate h2 em { font-style: normal; color: var(--amber); }
   .gate p { color: var(--muted); font-size: 15.5px; }
@@ -207,7 +224,7 @@
   .locked::after { content: ''; position: absolute; inset: 40% 0 0 0; background: linear-gradient(rgba(11,13,16,0), var(--asphalt)); }
   .locked-label { text-align: center; font: 800 13px var(--sign); letter-spacing: .14em; text-transform: uppercase; color: var(--dim); margin-top: 30px; }
 
-  .unlocked { display: flex; align-items: center; gap: 12px; margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: rgba(75,227,154,0.08); border: 1px solid rgba(75,227,154,0.35); font-size: 15px; color: var(--text); }
+  .unlocked { scroll-margin-top: 90px; display: flex; align-items: center; gap: 12px; margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: rgba(75,227,154,0.08); border: 1px solid rgba(75,227,154,0.35); font-size: 15px; color: var(--text); }
   .unlocked b { color: #fff; }
   .unlocked .ck { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ok); color: #062; display: grid; place-items: center; font-weight: 900; }
 
@@ -225,6 +242,15 @@
   .tba-item a { display: inline-block; margin-top: 6px; font: 700 12.5px var(--sign); color: var(--amber); text-decoration: none; }
   .tba-item a:hover { text-decoration: underline; }
 
+  .unlock-bar { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 20; display: none; align-items: center; justify-content: space-between; gap: 10px; height: 54px; padding: 0 8px 0 16px; border-radius: 14px; background: var(--amber); color: #111; text-decoration: none; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.8); transform: translateY(150%); transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+  .unlock-bar span { font: 700 14px var(--sign); }
+  .unlock-bar b { font: 900 15px var(--sign); background: #111; color: var(--amber); padding: 9px 12px; border-radius: 10px; white-space: nowrap; }
+  .unlock-bar.on { transform: none; }
+  .unlock-bar[hidden] { display: none !important; }
+  @media (max-width: 760px) { .unlock-bar { display: flex; } footer { padding-bottom: 96px; } }
+  .tba-item .last { margin-top: 4px; font-size: 13px; color: var(--text); }
+  .tba-item .last b { font-weight: 600; color: var(--dim); }
+  .tba-teaser { margin-top: 14px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; filter: blur(5px); opacity: .5; pointer-events: none; user-select: none; }
   .empty { text-align: center; padding: 48px 16px; color: var(--muted); }
   .empty b { display: block; font: 900 22px var(--sign); color: #fff; margin-bottom: 6px; }
 
@@ -274,8 +300,8 @@
   <div class="wrap hero-grid">
     <div>
       <p class="kicker">Holiday Tracker 2026</p>
-      <h1>Every Bergen <span class="glow">tree lighting, menorah &amp; holiday market</span>, in one list.</h1>
-      <p class="lede">Tree lightings, menorah lightings, markets and Santa visits across Bergen County&rsquo;s 70 towns, sorted by date. <strong>Every listing links to its source.</strong></p>
+      <h1>Bergen County holiday lights, <span class="glow">all in one list.</span></h1>
+      <p class="lede">Every tree lighting, menorah lighting, holiday market and Santa visit we can find, from <span id="townCount">40</span> Bergen towns so far, sorted by date. <strong>Every listing links to its source.</strong></p>
       <div class="signs" id="signs" aria-label="Tracker stats"></div>
       <p class="updated">Last updated <b id="updated"></b> &middot; new dates added every week</p>
     </div>
@@ -285,10 +311,14 @@
 
 <div class="filters" id="filters">
   <div class="wrap">
-    <div class="chips" role="group" aria-label="Filter by type" id="typeChips"></div>
-    <div class="town">
-      <label for="town" class="sr">Town</label>
-      <select id="town"><option value="">All towns</option></select>
+    <div class="chips" id="chipRow">
+      <div class="town">
+        <label for="town" class="sr">Town</label>
+        <select id="town"><option value="">&#128205; All towns</option></select>
+      </div>
+      <button type="button" class="chip wk" id="wkChip" aria-pressed="false">Weekends only</button>
+      <span class="sep" aria-hidden="true"></span>
+      <div class="types" role="group" aria-label="Filter by type" id="typeChips"></div>
     </div>
   </div>
 </div>
@@ -302,7 +332,7 @@
     <div>
       <h2>Rather just ask?</h2>
       <p>Exit 163 is also a local agent you can text. It knows every listing on this page and remembers your town.</p>
-      <span class="bubble">what&rsquo;s the next tree lighting near Ridgewood?</span>
+      <span class="bubble" id="agentBubble">what&rsquo;s the next tree lighting near Ridgewood?</span>
     </div>
     <div>
       <a class="btn solid" href="/">Get the agent free &rarr;</a>
@@ -317,11 +347,11 @@
 <template id="gateTpl">
   <section class="gate" id="gate">
     <div>
-      <h2>Unlock the <em>full list</em> free.</h2>
-      <p>Get every event in the tracker, updated weekly as towns announce dates.</p>
+      <h2 data-gate-title>Unlock the <em>full list</em> free.</h2>
+      <p data-gate-sub>Get every event in the tracker, updated weekly as towns announce dates.</p>
       <ul>
         <li>All dated events, every town</li>
-        <li data-tba-li>Plus the events still waiting on 2026 dates</li>
+        <li>Plus every event still waiting on a 2026 date</li>
         <li>The Friday weekend picks by text or email</li>
         <li>Ask the agent anything, any time</li>
       </ul>
@@ -344,6 +374,8 @@
     </form>
   </section>
 </template>
+
+<a class="unlock-bar" id="unlockBar" href="#gate" hidden><span id="unlockBarTxt">More events in the full list</span><b>Unlock free &rarr;</b></a>
 
 <footer>
   <div class="wrap foot">
@@ -389,7 +421,7 @@
     ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg>'
   };
 
-  var state = { type: '', town: '', unlocked: false, events: [], freeIds: {} };
+  var state = { type: '', town: '', weekends: false, unlocked: false, events: [], freeIds: {} };
 
   function storageGet() { try { return localStorage.getItem(UNLOCK_KEY) === '1'; } catch (e) { return false; } }
   function storageSet() { try { localStorage.setItem(UNLOCK_KEY, '1'); } catch (e) {} }
@@ -455,16 +487,18 @@
   function card(e) {
     var tags = '<span class="tag type">' + esc(TYPE_LABEL[e.type] || 'Holiday event') + '</span><span class="tag">' + esc(e.town) + '</span>';
     tags += e.verified_2026 ? '<span class="tag ok">2026 date confirmed</span>' : '<span class="tag warn">Date not yet confirmed</span>';
+    var why = e.verify_note ? '<details class="why' + (e.verified_2026 ? ' ok' : '') + '"><summary>' + (e.verified_2026 ? 'How we confirmed it' : 'Why unconfirmed?') + '</summary><p>' + esc(e.verify_note) + '</p></details>' : '';
     var facts = '<div>' + ICO.clock + '<span><strong>' + (e.time ? esc(e.time) : 'Time TBA') + '</strong></span></div>';
     if (e.location) facts += '<div>' + ICO.pin + '<span>' + esc(e.location) + '</span></div>';
     if (e.cost) facts += '<div>' + ICO.tag + '<span>' + esc(e.cost) + '</span></div>';
     return '<article class="card" style="--c:' + (TYPE_C[e.type] || 'var(--t-other)') + '">' +
       '<div class="tags">' + tags + '</div><h3>' + esc(e.event) + '</h3><div class="facts">' + facts + '</div>' +
-      (e.notes ? '<p class="notes">' + esc(e.notes) + '</p>' : '') +
+      (e.notes ? '<p class="notes">' + esc(e.notes) + '</p>' : '') + why +
       '<div class="card-acts">' +
-        '<a class="btn" href="' + esc(safeUrl(e.source_url)) + '" target="_blank" rel="noopener">' + ICO.ext + 'Source: ' + esc(hostOf(e.source_url)) + '</a>' +
-        '<button class="btn" type="button" data-ics="' + e._id + '">' + ICO.cal + 'Add to calendar</button>' +
+        '<a class="btn" href="' + esc(safeUrl(e.source_url)) + '" target="_blank" rel="noopener" title="' + esc(hostOf(e.source_url)) + '">' + ICO.ext + 'Source</a>' +
+        '<button class="btn" type="button" data-ics="' + e._id + '">' + ICO.cal + 'Calendar</button>' +
         '<a class="btn" href="' + esc(mapsUrl(e)) + '" target="_blank" rel="noopener">' + ICO.pin + 'Directions</a>' +
+        '<span class="via">via ' + esc(hostOf(e.source_url)) + '</span>' +
       '</div></article>';
   }
 
@@ -484,8 +518,39 @@
     return html;
   }
 
+  function isWeekend(e) { var d = parseISO(e.date); return d && (d.getDay() === 0 || d.getDay() === 5 || d.getDay() === 6); }
   function filtered() {
-    return state.events.filter(function (e) { return (!state.type || e.type === state.type) && (!state.town || e.town === state.town); });
+    return state.events.filter(function (e) {
+      return (!state.type || e.type === state.type) && (!state.town || e.town === state.town) && (!state.weekends || !e.date || isWeekend(e));
+    });
+  }
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+
+  function tbaItem(e) {
+    return '<article class="tba-item" style="--c:' + (TYPE_C[e.type] || 'var(--t-other)') + '"><div class="town-n">' + esc(e.town) + ' &middot; ' + esc(TYPE_LABEL[e.type] || 'Event') + '</div>' +
+      '<h3>' + esc(e.event) + '</h3>' +
+      (e.last_seen ? '<p class="last"><b>Last held:</b> ' + esc(e.last_seen) + '</p>' : '') +
+      (e.notes ? '<p>' + esc(e.notes) + '</p>' : '') +
+      (e.verify_note ? '<details class="why"><summary>Research notes</summary><p>' + esc(e.verify_note) + '</p></details>' : '') +
+      '<a href="' + esc(safeUrl(e.source_url)) + '" target="_blank" rel="noopener">Check ' + esc(hostOf(e.source_url)) + ' &rarr;</a></article>';
+  }
+
+  function gateHTML(lockedDated, tba) {
+    var html = document.getElementById('gateTpl').innerHTML;
+    var total = lockedDated.length + tba.length;
+    var where = state.town ? esc(state.town) : 'Bergen';
+    var title, sub;
+    if (!lockedDated.length && tba.length) {
+      title = where + ' has <em>' + plural(tba.length, 'event', 'events') + '</em> waiting on 2026 dates.';
+      sub = 'Unlock them free and see what happened last year, with links to check. The weekly update tells you the moment dates are announced.';
+    } else if (total) {
+      var trees = tba.filter(function (e) { return e.type === 'tree'; }).length + lockedDated.filter(function (e) { return e.type === 'tree'; }).length;
+      title = 'Unlock <em>' + plural(total, 'more event', 'more events') + '</em> free.';
+      sub = (state.town ? 'Everything in ' + where + '. ' : '') + (trees && !state.type ? 'Includes ' + plural(trees, 'more tree lighting', 'more tree lightings') + '. ' : '') + 'Updated weekly as towns announce dates.';
+    } else {
+      title = 'Get the <em>full tracker</em> free.'; sub = 'Updated weekly as towns announce dates.';
+    }
+    return html.replace(/<h2 data-gate-title>[\s\S]*?<\/h2>/, '<h2 data-gate-title>' + title + '</h2>').replace(/<p data-gate-sub>[\s\S]*?<\/p>/, '<p data-gate-sub>' + sub + '</p>');
   }
 
   function render() {
@@ -493,38 +558,61 @@
     var dated = list.filter(function (e) { return e.date; });
     var tba = list.filter(function (e) { return !e.date; });
     var out = document.getElementById('results');
-    document.getElementById('count').innerHTML = '<b>' + dated.length + '</b> upcoming ' + (dated.length === 1 ? 'event' : 'events') + (tba.length ? ' &middot; <b>' + tba.length + '</b> waiting on 2026 dates' : '') + (state.town ? ' in ' + esc(state.town) : '');
+    document.getElementById('count').innerHTML = '<b>' + dated.length + '</b> upcoming ' + (dated.length === 1 ? 'event' : 'events') + (tba.length ? ' &middot; <b>' + tba.length + '</b> waiting on 2026 dates' : '') + (state.town ? ' in ' + esc(state.town) : '') + (state.weekends ? ' &middot; weekends only' : '');
+    var bubble = document.getElementById('agentBubble');
+    if (bubble) bubble.textContent = 'what’s the next ' + (state.type === 'menorah' ? 'menorah lighting' : state.type === 'market' ? 'holiday market' : state.type === 'santa' ? 'Santa visit' : 'tree lighting') + ' near ' + (state.town || 'Ridgewood') + '?';
 
-    if (!dated.length) {
-      out.innerHTML = '<div class="empty"><b>No dates yet' + (state.town ? ' for ' + esc(state.town) : '') + '.</b>Towns are still posting 2026 dates. Check back next week, or see the ones waiting on dates below.</div>';
-    } else if (state.unlocked) {
-      out.innerHTML = '<div class="unlocked"><span class="ck">&#10003;</span><span><b>You&rsquo;re in.</b> Here&rsquo;s every event on the tracker.</span></div>' + timeline(dated);
+    var lockedCount = 0;
+    if (state.unlocked) {
+      out.innerHTML = '<div class="unlocked"><span class="ck">&#10003;</span><span><b>You&rsquo;re in.</b> Here&rsquo;s every event on the tracker.</span></div>' +
+        (dated.length ? timeline(dated) : '<div class="empty"><b>No dates yet' + (state.town ? ' for ' + esc(state.town) : '') + '.</b>See the events waiting on 2026 dates below.</div>');
+      renderTba(tba);
     } else {
       var free = dated.filter(function (e) { return state.freeIds[e._id]; });
       var locked = dated.filter(function (e) { return !state.freeIds[e._id]; });
-      var html = free.length ? timeline(free) : '';
-      html += document.getElementById('gateTpl').innerHTML;
-      if (locked.length) {
-        html += '<p class="locked-label">' + locked.length + ' more ' + (locked.length === 1 ? 'event' : 'events') + ' in the full list</p>' +
-          '<div class="locked" aria-hidden="true"><div class="inner">' + timeline(locked.slice(0, 4)) + '</div></div>';
+      lockedCount = locked.length + tba.length;
+      var html = free.length ? timeline(free) : (dated.length ? '' : '<div class="empty"><b>No confirmed dates yet' + (state.town ? ' for ' + esc(state.town) : '') + '.</b>' + (tba.length ? 'But ' + plural(tba.length, 'event is', 'events are') + ' on the way. Unlock to see last year&rsquo;s details.' : 'Towns are still posting 2026 dates. Check back next week.') + '</div>');
+      if (lockedCount) {
+        html += gateHTML(locked, tba);
+        if (locked.length) html += '<div class="locked" aria-hidden="true"><div class="inner">' + timeline(locked.slice(0, 3)) + '</div></div>';
+        else html += '<div class="tba-teaser" aria-hidden="true">' + tba.slice(0, 3).map(tbaItem).join('') + '</div>';
       }
       out.innerHTML = html;
       wireForm(out.querySelector('form.join'));
+      renderTba([]);
     }
-    renderTba(state.unlocked ? tba : []);
+    updateBar(lockedCount);
   }
 
   function renderTba(tba) {
     var el = document.getElementById('tba');
-    if (!tba.length) { el.hidden = true; return; }
+    if (!tba.length) { el.hidden = true; el.innerHTML = ''; return; }
     el.hidden = false;
-    el.innerHTML = '<div class="tba-head"><h2>Dates not announced yet</h2><p>These happen every year. We&rsquo;ll move them up the moment the town confirms. Last year&rsquo;s details are shown as a guide.</p></div>' +
-      '<div class="tba-grid">' + tba.map(function (e) {
-        return '<article class="tba-item" style="--c:' + (TYPE_C[e.type] || 'var(--t-other)') + '"><div class="town-n">' + esc(e.town) + ' &middot; ' + esc(TYPE_LABEL[e.type] || 'Event') + '</div>' +
-          '<h3>' + esc(e.event) + '</h3>' + (e.notes ? '<p>' + esc(e.notes) + '</p>' : '') +
-          '<a href="' + esc(safeUrl(e.source_url)) + '" target="_blank" rel="noopener">Check ' + esc(hostOf(e.source_url)) + ' &rarr;</a></article>';
-      }).join('') + '</div>';
+    el.innerHTML = '<div class="tba-head"><h2>Dates not announced yet</h2><p>These happen every year. We&rsquo;ll move them up the moment the town confirms. Last year&rsquo;s details are a guide only.</p></div>' +
+      '<div class="tba-grid">' + tba.map(tbaItem).join('') + '</div>';
   }
+
+  /* ---------- Mobile unlock bar ---------- */
+  var barState = { count: 0, gateVisible: false, pastHero: false };
+  function updateBar(count) {
+    if (count !== undefined) barState.count = count;
+    var bar = document.getElementById('unlockBar');
+    if (!bar) return;
+    bar.hidden = state.unlocked || !barState.count;
+    document.getElementById('unlockBarTxt').textContent = barState.count + ' more in the full list';
+    bar.classList.toggle('on', !bar.hidden && barState.pastHero && !barState.gateVisible);
+    var g = document.getElementById('gate');
+    if (g && 'IntersectionObserver' in window && g !== barState.gateEl) {
+      barState.gateEl = g;
+      if (barState.gio) barState.gio.disconnect();
+      barState.gio = new IntersectionObserver(function (en) { barState.gateVisible = en[0].isIntersecting; updateBar(); });
+      barState.gio.observe(g);
+    }
+  }
+  window.addEventListener('scroll', function () {
+    var past = window.scrollY > document.querySelector('.hero').offsetHeight;
+    if (past !== barState.pastHero) { barState.pastHero = past; updateBar(); }
+  }, { passive: true });
 
   /* ---------- Signup gate (phone and/or email via /api/join) ---------- */
   function validPhone(v) { var d = v.replace(/\D/g, ''); if (d.length === 11 && d[0] === '1') d = d.slice(1); return /^[2-9]\d{2}[2-9]\d{6}$/.test(d); }
@@ -549,9 +637,9 @@
         .then(function (d) {
           if (!d.ok) { btn.disabled = false; label.textContent = 'Unlock the full list'; return err(d.error || 'Something went wrong. Please try again.', d.field === 'phone' ? phone : d.field === 'email' ? email : null); }
           storageSet(); state.unlocked = true; render();
-          var note = document.querySelector('.unlocked span:last-child');
-          if (note && d.phone === 'sent') note.innerHTML = '<b>You&rsquo;re in.</b> Here&rsquo;s every event. Check your texts and reply JOIN to switch on your agent.';
-          document.getElementById('count').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+          var box = document.querySelector('.unlocked'), note = box && box.querySelector('span:last-child');
+          if (note && d.phone === 'sent') note.innerHTML = '<b>You&rsquo;re in.</b> Here&rsquo;s every event. <b>Check your texts and reply JOIN</b> to switch on your agent.';
+          if (box) box.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
         })
         .catch(function () { btn.disabled = false; label.textContent = 'Unlock the full list'; err('Network hiccup. Please try again.'); });
     });
@@ -569,8 +657,8 @@
 
   /* ---------- Filters ---------- */
   function buildFilters() {
-    var counts = {}; state.events.forEach(function (e) { if (e.date) counts[e.type] = (counts[e.type] || 0) + 1; });
-    var total = state.events.filter(function (e) { return e.date; }).length;
+    var counts = {}; state.events.forEach(function (e) { counts[e.type] = (counts[e.type] || 0) + 1; });
+    var total = state.events.length;
     var chips = document.getElementById('typeChips');
     chips.innerHTML = TYPES.map(function (t) {
       var n = t.id ? (counts[t.id] || 0) : total;
@@ -585,7 +673,9 @@
     var sel = document.getElementById('town'), towns = {};
     state.events.forEach(function (e) { towns[e.town] = (towns[e.town] || 0) + 1; });
     Object.keys(towns).sort().forEach(function (t) { var o = document.createElement('option'); o.value = t; o.textContent = t + ' (' + towns[t] + ')'; sel.appendChild(o); });
-    sel.addEventListener('change', function () { state.town = sel.value; render(); jumpToList(); });
+    sel.addEventListener('change', function () { state.town = sel.value; sel.classList.toggle('on', !!sel.value); sel.parentNode.classList.toggle('on', !!sel.value); render(); jumpToList(); });
+    var wk = document.getElementById('wkChip');
+    wk.addEventListener('click', function () { state.weekends = !state.weekends; wk.setAttribute('aria-pressed', String(state.weekends)); render(); jumpToList(); });
   }
   function jumpToList() {
     var f = document.getElementById('filters'), c = document.getElementById('count');
@@ -594,13 +684,24 @@
 
   /* ---------- Hero: stats + next-up countdown ---------- */
   function heroStats() {
-    var towns = {}; state.events.forEach(function (e) { towns[e.town] = 1; });
+    var towns = {}; state.events.forEach(function (e) { if (e.town !== 'Bergen County') towns[e.town] = 1; });
+    var tc = document.getElementById('townCount'); if (tc) tc.textContent = Object.keys(towns).length;
     var dated = state.events.filter(function (e) { return e.date; }).length;
     var conf = state.events.filter(function (e) { return e.verified_2026 && e.date; }).length;
     document.getElementById('signs').innerHTML =
       '<div class="mini-sign"><b>' + dated + '</b><small>Upcoming</small></div>' +
       '<div class="mini-sign"><b>' + Object.keys(towns).length + '</b><small>Towns</small></div>' +
       '<div class="mini-sign"><b>' + conf + '</b><small>Confirmed</small></div>';
+  }
+  function jsonLd() {
+    var items = state.events.filter(function (e) { return e.date; }).map(function (e) {
+      var tm = parseTimes(e.time), start = e.date + (tm ? 'T' + pad(tm.start.h) + ':' + pad(tm.start.m) + ':00-05:00' : '');
+      return { '@type': 'Event', name: e.event, startDate: start, eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        location: { '@type': 'Place', name: e.location || e.town, address: { '@type': 'PostalAddress', addressLocality: e.town, addressRegion: 'NJ', addressCountry: 'US' } },
+        description: e.notes || (TYPE_LABEL[e.type] + ' in ' + e.town), url: e.source_url, isAccessibleForFree: /free/i.test(e.cost || '') || undefined };
+    });
+    var sc = document.createElement('script'); sc.type = 'application/ld+json';
+    sc.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': items }); document.head.appendChild(sc);
   }
   function spotlight() {
     var next = state.events.filter(function (e) { return e.date; })[0];
@@ -624,7 +725,7 @@
     state.events = sortEvents(events.filter(function (e) { return e && e.town && e.event && (!e.date || e.date >= today); }));
     state.events.forEach(function (e, i) { e._id = i; });
     state.events.filter(function (e) { return e.date; }).slice(0, FREE_COUNT).forEach(function (e) { state.freeIds[e._id] = true; });
-    heroStats(); spotlight(); buildFilters(); render();
+    heroStats(); spotlight(); buildFilters(); render(); jsonLd();
   }
 
   var u = parseISO(LAST_UPDATED); document.getElementById('updated').textContent = MONTHS[u.getMonth()] + ' ' + u.getDate();
