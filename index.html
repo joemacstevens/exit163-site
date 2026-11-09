@@ -436,7 +436,7 @@
     <span>Bergen County, NJ</span>
   </a>
   <nav aria-label="Primary">
-    <a class="hide-sm" href="#how">How it works</a>
+    <a class="hide-sm" href="#easy">How it works</a>
     <a class="hide-sm" href="#ai">For your AI</a>
     <a class="ig" href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener" aria-label="Exit 163 on Instagram">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
@@ -529,7 +529,7 @@
   </div>
 </section>
 
-<section class="block surfaces" id="how">
+<section class="block surfaces" id="how" style="padding-top:clamp(24px, 3vw, 40px)">
   <div class="wrap">
     <div class="rv">
       <p class="eyebrow">One local brain, three ways in</p>
@@ -761,7 +761,7 @@
     if (res.phone === 'already') steps.push('<li><span class="n">&#10003;</span><span><b>Your number&rsquo;s already in.</b> Just text us a question any time.</span></li>');
     if (res.phone === 'opted_out') steps.push('<li><span class="n">!</span><span><b>That number texted STOP before.</b> Text <span class="kbd">START</span> to us to turn it back on.</span></li>');
     if (res.phone === 'error') steps.push('<li><span class="n">!</span><span><b>We couldn&rsquo;t text that number.</b> Try again in a minute, or check the digits.</span></li>');
-    if (res.email === 'ok') steps.push('<li><span class="n">' + (steps.length + 1) + '</span><span><b>Check your inbox.</b> Your welcome email is on the way. First full issue: Friday, 7am.</span></li>');
+    if (res.email === 'ok') steps.push('<li><span class="n">' + (steps.length + 1) + '</span><span><b>Check your inbox.</b> Your welcome email is on the way. First full issue: this Friday, 7am.</span></li>');
     if (res.email === 'error') steps.push('<li><span class="n">!</span><span><b>Your email didn&rsquo;t go through.</b> Give it another try.</span></li>');
     if (!sentPhone) steps.push('<li><span class="n">+</span><span><b>Want the agent too?</b> <a href="#" data-again style="color:var(--amber)">Add your number</a> and text it anything.</span></li>');
     if (!sentEmail) steps.push('<li><span class="n">+</span><span><b>Want the full Friday issue?</b> <a href="#" data-again style="color:var(--amber)">Add your email</a> too.</span></li>');
