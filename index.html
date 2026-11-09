@@ -245,10 +245,10 @@
     width: 100%; max-width: 330px; height: 580px; border-radius: 48px;
     background: #050607; padding: 12px; position: relative;
     box-shadow: 0 0 0 2px #2a2f36, 0 0 0 9px #0f1215, 0 0 0 10px #2a2f36, 0 60px 120px -30px rgba(0,0,0,.9), 0 0 120px -20px rgba(255,184,28,0.25);
-    transform: rotateY(-14deg) rotateX(6deg) rotateZ(1deg); transform-style: preserve-3d;
+    transform: rotateY(-2deg); transform-style: preserve-3d;
     transition: transform .6s cubic-bezier(.2,.8,.2,1);
   }
-  .phone-stage:hover .phone { transform: rotateY(-4deg) rotateX(2deg); }
+  .phone-stage:hover .phone { transform: none; }
   .screen { position: absolute; inset: 12px; border-radius: 37px; overflow: hidden; background: #000; display: flex; flex-direction: column; }
   .island { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 34%; height: 26px; background: #000; border-radius: 20px; z-index: 3; }
   .chat-head { padding: 46px 16px 12px; text-align: center; background: rgba(28,28,30,0.92); border-bottom: 1px solid #222; }
@@ -256,7 +256,8 @@
   .chat-head .av b { font: 900 12px var(--sign); color: #fff; }
   .chat-head p { font-size: 12px; color: #ddd; font-weight: 600; }
   .chat-head small { font-size: 10px; color: #888; }
-  .thread { flex: 1; padding: 14px 12px; display: flex; flex-direction: column; gap: 6px; overflow: hidden; justify-content: flex-start; }
+  .thread { flex: 1; min-height: 0; padding: 14px 12px; display: flex; flex-direction: column; gap: 6px; overflow: hidden; justify-content: flex-start; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22px); mask-image: linear-gradient(to bottom, transparent 0, #000 22px); }
+  .thread > :first-child { margin-top: auto; }
   .bub { max-width: 80%; padding: 8px 12px; border-radius: 18px; font-size: 13.5px; line-height: 1.35; opacity: 0; transform: translateY(8px) scale(.98); transition: opacity .3s, transform .3s; }
   .bub.show { opacity: 1; transform: none; }
   .bub.me { align-self: flex-end; background: #0A84FF; color: #fff; border-bottom-right-radius: 5px; }
@@ -267,6 +268,11 @@
   .bub.typing i:nth-child(2) { animation-delay: .15s; } .bub.typing i:nth-child(3) { animation-delay: .3s; }
   @keyframes blink { 0%, 60%, 100% { opacity: .3; } 30% { opacity: 1; } }
   .compose { margin: 8px 10px 14px; height: 34px; border-radius: 17px; border: 1px solid #333; color: #666; font-size: 13px; display: flex; align-items: center; padding: 0 14px; }
+  .try { margin-top: 26px; padding: 14px 16px; border-radius: 14px; background: rgba(255,184,28,0.08); border: 1px solid rgba(255,184,28,0.35); color: var(--muted); font-size: 15px; }
+  .try a { color: #fff; text-decoration: none; }
+  .try [data-textline-num], .alt [data-textline-num] { white-space: nowrap; }
+  .try a:hover b { color: var(--amber); }
+  .try [hidden], .try[hidden] { display: none; }
   .demo-note { text-align: center; font-size: 12px; color: var(--dim); margin-top: 22px; }
   @media (max-width: 920px) {
     .demo-grid { grid-template-columns: 1fr; }
@@ -308,7 +314,7 @@
 
   /* ---------- Steps (mile markers) ---------- */
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; position: relative; }
-  .steps::before { content: ''; position: absolute; left: 6%; right: 6%; top: 46px; height: 0; border-top: 4px dashed rgba(255,184,28,0.5); z-index: 0; }
+  .steps::before { content: ''; position: absolute; left: 64px; right: calc(33.333% - 76px); top: 46px; height: 0; border-top: 4px dashed rgba(255,184,28,0.5); z-index: 0; }
   .step { position: relative; z-index: 1; text-align: left; }
   .marker {
     display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
@@ -503,6 +509,7 @@
         <li><span class="b-ico" aria-hidden="true">&#128205;</span><div><h3>It remembers your town</h3><p>Tell it once you&rsquo;re in Teaneck. From then on, &ldquo;what&rsquo;s on tonight?&rdquo; is all you need to send.</p></div></li>
         <li><span class="b-ico" aria-hidden="true">&#128197;</span><div><h3>Friday, handled</h3><p>Reply JOIN and the best of the Bergen weekend shows up every Friday morning. One text. That&rsquo;s it.</p></div></li>
       </ul>
+      <p class="try" data-textline-try hidden>Don&rsquo;t take our word for it. <a data-try href="#">Text <b>&ldquo;what&rsquo;s on in Ridgewood this weekend?&rdquo;</b> to <span data-textline-num></span> &rarr;</a></p>
     </div>
     <div class="phone-stage rv">
       <div class="phone" role="img" aria-label="Example text conversation with the Exit 163 agent">
@@ -513,7 +520,7 @@
             <p>Exit 163</p>
             <small>Text Message</small>
           </div>
-          <div class="thread" id="thread"></div>
+          <div class="thread" id="thread"><div class="bub me show">anything fun for the kids saturday? we’re in teaneck</div><div class="bub bot show">Saved Teaneck as your town 👍 3 picks Saturday:<br>🎄 Tree lighting, 4pm, free<br>🎨 Library craft hour, 11am<br>⛸️ Public skate, 1–3pm<span class="src">📎 Source for each →</span></div></div>
           <div class="compose">Text Message</div>
         </div>
       </div>
@@ -535,7 +542,7 @@
         <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg></div>
         <h3>Text the agent</h3>
         <p>Ask anything about your town, any day. Get the Friday weekend text when you reply JOIN.</p>
-        <div class="meta"><span class="chip">SMS</span><span class="chip">No app</span><span class="chip">~1 blast / wk</span></div>
+        <div class="meta"><span class="chip">SMS</span><span class="chip">No app</span><span class="chip">1 text / wk</span></div>
         <a class="cta" href="#join-hero" data-focus="phone">Add my number &rarr;</a>
       </article>
       <article class="way mail rv" data-tilt>
@@ -565,7 +572,7 @@
   </div>
 </section>
 
-<section class="block" id="easy">
+<section class="block" id="easy" style="padding-top:clamp(24px, 3vw, 40px)">
   <div class="wrap">
     <div class="rv">
       <p class="eyebrow">Thirty seconds, start to finish</p>
@@ -730,6 +737,8 @@
       window.__textline = d.number;
       document.querySelectorAll('[data-textline-num]').forEach(function (el) { el.textContent = d.number.pretty; });
       document.querySelectorAll('[data-textline]').forEach(function (a) { a.href = 'sms:' + d.number.e164 + '?&body=JOIN'; });
+      document.querySelectorAll('[data-try]').forEach(function (a) { a.href = 'sms:' + d.number.e164 + '?&body=' + encodeURIComponent('what\u2019s on in Ridgewood this weekend?'); });
+      document.querySelectorAll('[data-textline-try]').forEach(function (el) { el.hidden = false; });
       if (window.matchMedia('(pointer: coarse)').matches) document.querySelectorAll('[data-textline-wrap]').forEach(function (el) { el.hidden = false; });
     }).catch(function () {});
 
@@ -876,40 +885,42 @@
   }
 
   /* ---------- Demo conversation ---------- */
-  var SCRIPT = [
-    ['me', 'hey, anything fun for the kids saturday? we’re in teaneck'],
-    ['bot', 'Got you. Saved Teaneck as your town. 3 picks for Saturday:<br>🎄 Tree lighting downtown, 4pm, free<br>🎨 Kids craft hour at the library, 11am<br>⛸️ Public skate, 1–3pm<br><span class="src">📎 source links for each →</span>'],
+  // The first exchange is static HTML (so no-JS, reduced motion, crawlers and fast scrolls all see a
+  // complete answer). Only the follow-up animates; the thread scrolls to keep the newest bubble in view.
+  var FOLLOW = [
     ['me', 'perfect. dinner after that’s not chaos?'],
-    ['bot', 'Early dinner, kid-friendly, 10 min away: want pizza, ramen, or diner?'],
+    ['bot', 'Kid-friendly, 10 min away, open at 5. Pizza, ramen, or diner?'],
     ['me', 'ramen 🍜'],
-    ['bot', 'On it. Two spots open at 5, both take walk-ins. Sending addresses now.']
+    ['bot', 'Two ramen spots open at 5, both take walk-ins.<span class="src">📎 Addresses + sources →</span>']
   ];
   var thread = document.getElementById('thread');
+  var initial = thread.innerHTML;
+  function toBottom() { thread.scrollTo ? thread.scrollTo({ top: thread.scrollHeight, behavior: 'smooth' }) : (thread.scrollTop = thread.scrollHeight); }
   function bubble(kind, htmlText) {
     var b = document.createElement('div'); b.className = 'bub ' + kind; b.innerHTML = htmlText;
     thread.appendChild(b);
-    while (thread.children.length > 6) thread.removeChild(thread.firstChild);
-    requestAnimationFrame(function () { b.classList.add('show'); });
+    requestAnimationFrame(function () { b.classList.add('show'); toBottom(); });
     return b;
   }
   function runChat() {
-    thread.innerHTML = '';
-    if (reduce) { SCRIPT.slice(0, 4).forEach(function (s) { bubble(s[0], s[1]).classList.add('show'); }); return; }
     var i = 0;
     (function next() {
-      if (i >= SCRIPT.length) { setTimeout(runChat, 4200); return; }
-      var s = SCRIPT[i++];
+      if (i >= FOLLOW.length) {
+        setTimeout(function () { thread.innerHTML = initial; thread.scrollTop = 0; setTimeout(runChat, 2400); }, 6000);
+        return;
+      }
+      var s = FOLLOW[i++];
       if (s[0] === 'bot') {
         var t = bubble('bot typing', '<i></i><i></i><i></i>');
-        setTimeout(function () { t.remove(); bubble('bot', s[1]); setTimeout(next, 1600); }, 1100);
+        setTimeout(function () { t.remove(); bubble('bot', s[1]); setTimeout(next, 1800); }, 1100);
       } else { bubble('me', s[1]); setTimeout(next, 900); }
     })();
   }
-  var chatStarted = false;
+  var chatStarted = reduce;
   var phoneEl = document.querySelector('.phone');
   if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (en, obs) { if (en[0].isIntersecting && !chatStarted) { chatStarted = true; runChat(); obs.disconnect(); } }, { threshold: 0.3 }).observe(phoneEl);
-  } else runChat();
+    new IntersectionObserver(function (en, obs) { if (en[0].isIntersecting && !chatStarted) { chatStarted = true; setTimeout(runChat, 1800); obs.disconnect(); } }, { threshold: 0.3 }).observe(phoneEl);
+  }
 })();
 </script>
 
@@ -1004,7 +1015,6 @@ window.addEventListener('DOMContentLoaded', function () {
   glow.position.set(sign.position.x, sign.position.y, 0.2); gantry.add(glow);
   gantry.position.z = -46; scene.add(gantry);
   // second, far gantry (left) for depth
-  var far = gantry.clone(); far.position.set(-2, 0, -150); far.scale.set(1, 1, 1); scene.add(far);
 
   // Skyline on the horizon with lit windows
   function windowsTex() {
