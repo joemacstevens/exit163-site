@@ -141,3 +141,22 @@ alter table impressions   enable row level security;
 alter table queries       enable row level security;
 alter table sms_users     enable row level security;
 alter table sms_messages  enable row level security;
+
+-- 2026-11-09: profiles, places, recurrence -----------------------------------
+alter table sms_users add column if not exists first_name text;
+alter table sms_users add column if not exists email text;
+alter table sms_users add column if not exists newsletter_opt_in_at timestamptz;
+alter table sms_users add column if not exists ig_handle text;
+alter table sms_users add column if not exists notes text;
+alter table venues add column if not exists tags text[] not null default '{}';
+alter table venues add column if not exists best_for text[] not null default '{}';
+alter table venues add column if not exists price_text text;
+alter table venues add column if not exists hours_text text;
+alter table venues add column if not exists source_url text;
+alter table venues add column if not exists verified boolean not null default false;
+alter table venues add column if not exists status text not null default 'open';
+alter table venues add column if not exists opened_on date;
+alter table venues add column if not exists origin text not null default 'research';
+create index if not exists venues_town_idx on venues (town_slug);
+alter table events add column if not exists recurrence_text text;
+alter table events add column if not exists research_batch text;

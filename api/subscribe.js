@@ -1,6 +1,8 @@
 // POST /api/subscribe — adds an email to the Exit 163 list in Resend.
+// Env: RESEND_API_KEY (required, full-access key). Segment/topic IDs can be overridden by env.
+const { addSubscriber, sendWelcome } = require('../lib/newsletter');
 const { readBody } = require('../lib/http');
-const { EMAIL_RE, addSubscriber, sendWelcome } = require('../lib/newsletter');
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') { res.setHeader('Allow', 'POST'); return res.status(405).json({ ok: false, error: 'Method not allowed' }); }

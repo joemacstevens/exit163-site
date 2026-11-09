@@ -36,9 +36,10 @@ async function joinPhone(phone, email) {
   if (existing?.opted_out) return { status: 'opted_out' };
   if (existing?.blast_opt_in) return { status: 'already' };
 
-  const prefs = { ...(existing?.prefs || {}), source: 'web', ...(email ? { email } : {}) };
-  if (existing) await q(db().from('sms_users').update({ prefs }).eq('phone', phone));
-  else await q(db().from('sms_users').insert({ phone, prefs }));
+  const row = { prefs: { ...(existing?.prefs || {}), source: 'web' } };
+  if (email) Object.assign(row, { email, newsletter_opt_in_at: new Date().toISOString() });
+  if (existing) await q(db().from('sms_users').update(row).eq('phone', phone));
+  else await q(db().from('sms_users').insert({ phone, ...row }));
 
   const since = new Date(Date.now() - RESEND_WINDOW_MS).toISOString();
   const recent = await q(db().from('sms_messages').select('id').eq('phone', phone)

@@ -1,0 +1,2862 @@
+{
+  "events": [
+    {
+      "title": "Miracle Holiday Pop-Up Bar at 86 and Vine",
+      "town": "Norwood",
+      "location": "86 and Vine",
+      "category": "nightlife",
+      "tags": [
+        "holiday",
+        "cocktails",
+        "pop-up bar",
+        "christmas"
+      ],
+      "starts_on": "2026-11-23",
+      "ends_on": "2026-12-31",
+      "recurrence_text": "Wednesdays through Saturdays",
+      "time_text": null,
+      "cost_text": null,
+      "description": "New for 2026, this Norwood restaurant turns into a kitschy Miracle Christmas bar with over-the-top decor, themed glassware and whimsical holiday cocktails.",
+      "source_url": "https://njmonthly.com/articles/eat-drink/nj-holiday-pop-up-bars/",
+      "verified": true
+    },
+    {
+      "title": "Thursday Trivia at The Orange Lantern",
+      "town": "Paramus",
+      "location": "The Orange Lantern, 15 Firehouse Lane",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "bar",
+        "weekly"
+      ],
+      "starts_on": null,
+      "ends_on": null,
+      "recurrence_text": "Every Thursday",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Weekly Joe Trivia night with prizes at this popular Paramus sports bar.",
+      "source_url": "https://www.orangelantern.com/",
+      "verified": true
+    },
+    {
+      "title": "Ted Poley with Wicked",
+      "town": "Teaneck",
+      "location": "Debonair Music Hall",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "concert",
+        "all ages"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7:00 PM",
+      "cost_text": null,
+      "description": "Ted Poley headlines an all-ages night at Debonair, with Wicked opening.",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "verified": true
+    },
+    {
+      "title": "Ours",
+      "town": "Teaneck",
+      "location": "Debonair Music Hall",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "concert",
+        "all ages"
+      ],
+      "starts_on": "2026-11-14",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8:00 PM",
+      "cost_text": null,
+      "description": "The band Ours plays an all-ages show at Teaneck's Debonair Music Hall.",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "verified": true
+    },
+    {
+      "title": "Pynk Floid NYC",
+      "town": "Teaneck",
+      "location": "Debonair Music Hall",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "concert",
+        "all ages"
+      ],
+      "starts_on": "2026-11-20",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7:30 PM",
+      "cost_text": null,
+      "description": "Pink Floyd tribute show at Debonair Music Hall; all ages.",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "verified": true
+    },
+    {
+      "title": "Gary Ho Ho Hoey - Rockin Holiday Show",
+      "town": "Teaneck",
+      "location": "Debonair Music Hall",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "concert",
+        "all ages"
+      ],
+      "starts_on": "2026-11-28",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7:30 PM",
+      "cost_text": null,
+      "description": "A rockin' holiday show presented by Debonair Music Hall; all ages.",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "verified": true
+    },
+    {
+      "title": "Mike Tramp Up Close and Intimate",
+      "town": "Teaneck",
+      "location": "Debonair Music Hall",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "concert",
+        "all ages"
+      ],
+      "starts_on": "2026-12-04",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8:00 PM",
+      "cost_text": null,
+      "description": "Mike Tramp performs an up-close, intimate all-ages show.",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "verified": true
+    },
+    {
+      "title": "Jewbilation: A Hanukah Variety Show",
+      "town": "Teaneck",
+      "location": "Debonair Music Hall",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "concert",
+        "all ages"
+      ],
+      "starts_on": "2026-12-09",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7:30 PM",
+      "cost_text": null,
+      "description": "Hanukkah variety show hosted by Steve Goldberg with comedy and music guests.",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "verified": true
+    },
+    {
+      "title": "Gary Lucas' Gods & Monsters",
+      "town": "Teaneck",
+      "location": "Debonair Music Hall",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "concert",
+        "all ages"
+      ],
+      "starts_on": "2026-12-20",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7:30 PM",
+      "cost_text": null,
+      "description": "Gary Lucas' Gods & Monsters play Teaneck, with an opener to be announced.",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "verified": true
+    },
+    {
+      "title": "Dave Kopec Electric Birthday Bash",
+      "town": "Teaneck",
+      "location": "Debonair Music Hall",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "concert",
+        "all ages"
+      ],
+      "starts_on": "2027-01-09",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8:00 PM",
+      "cost_text": null,
+      "description": "Dave Kopec celebrates with an electric birthday show at Debonair.",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "verified": true
+    },
+    {
+      "title": "The Gary Randman Project (free show)",
+      "town": "Teaneck",
+      "location": "Debonair Music Hall",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "free",
+        "all ages"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7:00 PM",
+      "cost_text": "Free",
+      "description": "Free all-ages live music night at Debonair Music Hall.",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "verified": true
+    },
+    {
+      "title": "Joe DeVito at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, 801 Rutherford Ave.",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-14",
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Comedian Joe DeVito, seen on 'Gutfeld!', headlines Bananas.",
+      "source_url": "https://www.bananascomedyclub.com/",
+      "verified": true
+    },
+    {
+      "title": "Anthony Fuentes at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, 801 Rutherford Ave.",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-11-22",
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Stand-up from Anthony Fuentes, featured on 'The Kelly Clarkson Show'.",
+      "source_url": "https://www.bananascomedyclub.com/",
+      "verified": true
+    },
+    {
+      "title": "Carlos Mencia at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, 801 Rutherford Ave.",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-11-27",
+      "ends_on": "2026-11-29",
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "'Mind of Mencia' star Carlos Mencia plays Thanksgiving weekend at Bananas.",
+      "source_url": "https://www.bananascomedyclub.com/",
+      "verified": true
+    },
+    {
+      "title": "Mike Vecchione at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, 801 Rutherford Ave.",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-12-04",
+      "ends_on": "2026-12-06",
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Mike Vecchione, seen on 'The Tonight Show', headlines a weekend of stand-up.",
+      "source_url": "https://www.bananascomedyclub.com/",
+      "verified": true
+    },
+    {
+      "title": "Steve Furey at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, 801 Rutherford Ave.",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-12-11",
+      "ends_on": "2026-12-13",
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Steve Furey of 'Funny AF with Kevin Hart' takes the stage.",
+      "source_url": "https://www.bananascomedyclub.com/",
+      "verified": true
+    },
+    {
+      "title": "Sheryl Underwood at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, 801 Rutherford Ave.",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-12-18",
+      "ends_on": "2026-12-20",
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "'The Talk' co-host Sheryl Underwood brings her stand-up to Rutherford.",
+      "source_url": "https://www.bananascomedyclub.com/",
+      "verified": true
+    },
+    {
+      "title": "Dead To The Core (Grateful Dead tribute)",
+      "town": "Paramus",
+      "location": "The Orange Lantern, 15 Firehouse Lane",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "bar"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8:00 PM",
+      "cost_text": null,
+      "description": "Grateful Dead tribute band jams at The Orange Lantern.",
+      "source_url": "https://www.thelocalmusicfinder.com/events/county/bergen-county-nj",
+      "verified": true
+    },
+    {
+      "title": "Country Wednesday with The Black Book Band",
+      "town": "Glen Rock",
+      "location": "Stone & Rail, 175 Rock Rd.",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "bar"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7 PM - 10 PM",
+      "cost_text": "Free admission",
+      "description": "Veterans Day country night with a live cover band.",
+      "source_url": "https://www.thelocalmusicfinder.com/events/county/bergen-county-nj",
+      "verified": true
+    },
+    {
+      "title": "After Party live at Five Dimes Brewery",
+      "town": "Westwood",
+      "location": "Five Dimes Brewery, 247 Westwood Ave.",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "bar"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8:00 PM",
+      "cost_text": null,
+      "description": "Cover band After Party plays the Westwood taproom.",
+      "source_url": "https://www.thelocalmusicfinder.com/events/county/bergen-county-nj",
+      "verified": true
+    },
+    {
+      "title": "Mr. Lovejoy at The Shannon Rose",
+      "town": "Ramsey",
+      "location": "The Shannon Rose, 1200 Rte. 17 N.",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "bar"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "9:00 PM",
+      "cost_text": null,
+      "description": "Friday-night live band at the Ramsey Irish pub.",
+      "source_url": "https://www.thelocalmusicfinder.com/events/county/bergen-county-nj",
+      "verified": true
+    }
+  ],
+  "places": [
+    {
+      "name": "Brasserie Memere",
+      "town": "Closter",
+      "address": "107 Vervalen St.",
+      "category": "food",
+      "tags": [
+        "french",
+        "brunch",
+        "burgers",
+        "outdoor dining"
+      ],
+      "best_for": [
+        "brunch",
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "French brasserie that swept Bergen Magazine's 2026 readers' poll, taking first place for brunch, French food and outdoor dining and second for date night.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Stern and Bow",
+      "town": "Closter",
+      "address": "171 Schraalenburgh Rd.",
+      "category": "food",
+      "tags": [
+        "seafood",
+        "date night",
+        "brunch",
+        "outdoor dining"
+      ],
+      "best_for": [
+        "date night",
+        "brunch",
+        "special occasion"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Seafood-focused spot that readers voted Bergen County's top date-night restaurant and best seafood in 2026; also a brunch favorite.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Saddle River Inn",
+      "town": "Saddle River",
+      "address": "2 Barnstable Ct.",
+      "category": "food",
+      "tags": [
+        "fine dining",
+        "romantic",
+        "date night"
+      ],
+      "best_for": [
+        "date night",
+        "special occasion"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Long-loved romantic dining room that placed in the top three for date night in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Willow & Whisk",
+      "town": "Wyckoff",
+      "address": "319 Franklin Ave.",
+      "category": "food",
+      "tags": [
+        "breakfast",
+        "brunch",
+        "cafe"
+      ],
+      "best_for": [
+        "brunch",
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Breakfast and brunch favorite that ranks near the top of readers' lists for both categories year after year.",
+      "website": "http://willowandwhisk.com/",
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Matthew's Diner",
+      "town": "Waldwick",
+      "address": "4 Franklin Tpke.",
+      "category": "food",
+      "tags": [
+        "diner",
+        "breakfast"
+      ],
+      "best_for": [
+        "kids",
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Classic diner that readers named both Bergen's best diner and best breakfast in 2026.",
+      "website": "http://matthewsdiner.com/",
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "State Line Diner",
+      "town": "Mahwah",
+      "address": "375 Rte. 17",
+      "category": "food",
+      "tags": [
+        "diner",
+        "breakfast"
+      ],
+      "best_for": [
+        "kids",
+        "budget",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Route 17 diner institution near the New York line, voted runner-up best diner in 2026.",
+      "website": "http://statelinediner.com/",
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Sanducci's Trattoria",
+      "town": "River Edge",
+      "address": "620 Kinderkamack Rd.",
+      "category": "food",
+      "tags": [
+        "italian",
+        "byob",
+        "pizza"
+      ],
+      "best_for": [
+        "groups",
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "BYOB Italian trattoria voted Bergen's best Italian restaurant and best BYO in 2026; its pizza kitchen next door also ranked for pizza.",
+      "website": "http://sanduccis.com/",
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Kinchley's Tavern",
+      "town": "Ramsey",
+      "address": "586 Franklin Tpke.",
+      "category": "food",
+      "tags": [
+        "pizza",
+        "thin crust",
+        "tavern"
+      ],
+      "best_for": [
+        "kids",
+        "budget",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Ramsey tavern that readers voted Bergen County's best pizza in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Grant Street Cafe",
+      "town": "Dumont",
+      "address": "25 Grant Ave.",
+      "category": "food",
+      "tags": [
+        "pizza",
+        "wings",
+        "bar"
+      ],
+      "best_for": [
+        "groups",
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Neighborhood bar-restaurant that placed in the 2026 readers' top three for both pizza and wings.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Pizza Nova",
+      "town": "Tenafly",
+      "address": "24 Washington St.",
+      "category": "food",
+      "tags": [
+        "pizza",
+        "gluten-free",
+        "vegan"
+      ],
+      "best_for": [
+        "kids",
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Tenafly pizzeria that readers keep ranking for gluten-free and vegan-friendly options.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Andiamo",
+      "town": "Haworth",
+      "address": "23 Hardenburgh Ave.",
+      "category": "food",
+      "tags": [
+        "italian",
+        "outdoor dining"
+      ],
+      "best_for": [
+        "special occasion",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Italian restaurant that tied for second-best Italian in Bergen Magazine's 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Andrea's Ristorante",
+      "town": "Waldwick",
+      "address": "20 E. Prospect St.",
+      "category": "food",
+      "tags": [
+        "italian"
+      ],
+      "best_for": [
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Waldwick Italian spot that tied for second-best Italian restaurant in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Savini Restaurant",
+      "town": "Allendale",
+      "address": "168 W. Crescent Ave.",
+      "category": "food",
+      "tags": [
+        "italian",
+        "fine dining"
+      ],
+      "best_for": [
+        "special occasion",
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Upscale Italian dining in Allendale, tied for second in the 2026 readers' best-Italian vote.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Allendale Steak House",
+      "town": "Allendale",
+      "address": "90 W. Allendale Ave.",
+      "category": "food",
+      "tags": [
+        "steakhouse"
+      ],
+      "best_for": [
+        "special occasion"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Readers tied it for Bergen County's best steakhouse in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Roots Steakhouse",
+      "town": "Ridgewood",
+      "address": "17 Chestnut St.",
+      "category": "food",
+      "tags": [
+        "steakhouse"
+      ],
+      "best_for": [
+        "special occasion",
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Downtown Ridgewood steakhouse that tied for first place among steakhouses in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The River Palm Terrace",
+      "town": "Edgewater",
+      "address": "1416 River Rd.",
+      "category": "food",
+      "tags": [
+        "steakhouse",
+        "sushi",
+        "seafood"
+      ],
+      "best_for": [
+        "special occasion"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Edgewater steakhouse that has topped readers' steak and sushi lists, still placing second for steak in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Haven Riverfront Restaurant and Bar",
+      "town": "Edgewater",
+      "address": "2 Main St.",
+      "category": "food",
+      "tags": [
+        "waterfront",
+        "skyline views",
+        "outdoor dining"
+      ],
+      "best_for": [
+        "date night",
+        "special occasion"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Edgewater riverfront restaurant and bar, voted Bergen's best waterfront dining in 2026 and a top pick for outdoor dining.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Nisiotis Taverna",
+      "town": "Teaneck",
+      "address": "365 Queen Anne Rd.",
+      "category": "food",
+      "tags": [
+        "greek",
+        "seafood",
+        "mediterranean"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Greek taverna that readers named the county's best Greek restaurant in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Varka",
+      "town": "Ramsey",
+      "address": "30 N. Spruce St.",
+      "category": "food",
+      "tags": [
+        "greek",
+        "seafood",
+        "mediterranean"
+      ],
+      "best_for": [
+        "special occasion"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Upscale Greek seafood restaurant that placed in four 2026 readers' categories, including seafood and Mediterranean.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Mezza",
+      "town": "Westwood",
+      "address": "22 Jefferson Ave.",
+      "category": "food",
+      "tags": [
+        "mediterranean",
+        "byob"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Westwood Mediterranean spot voted best Mediterranean restaurant in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Samdan",
+      "town": "Cresskill",
+      "address": "178 Piermont Rd.",
+      "category": "food",
+      "tags": [
+        "mediterranean"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Cresskill Mediterranean favorite that again placed among readers' top Mediterranean picks.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Cafe Panache",
+      "town": "Ramsey",
+      "address": "130 E. Main St.",
+      "category": "food",
+      "tags": [
+        "french",
+        "byob",
+        "fine dining"
+      ],
+      "best_for": [
+        "date night",
+        "special occasion"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Refined BYOB that readers ranked among Bergen's best French and BYO restaurants in 2026.",
+      "website": "http://cafepanachenj.com/",
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "LaTour",
+      "town": "Ridgewood",
+      "address": "6 E. Ridgewood Ave.",
+      "category": "food",
+      "tags": [
+        "french",
+        "byob"
+      ],
+      "best_for": [
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Intimate French restaurant in downtown Ridgewood, runner-up for best French in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bici",
+      "town": "Ramsey",
+      "address": "61 E. Main St.",
+      "category": "food",
+      "tags": [
+        "italian",
+        "byob"
+      ],
+      "best_for": [
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Ramsey BYO that readers voted the county's second-best BYO restaurant in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Hanami",
+      "town": "Cresskill",
+      "address": "41 Union Ave. (also 301 Center Ave., Westwood)",
+      "category": "food",
+      "tags": [
+        "japanese",
+        "sushi",
+        "chinese"
+      ],
+      "best_for": [
+        "groups",
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Readers' pick for both best Japanese restaurant and best sushi in Bergen County in 2026, with locations in Cresskill and Westwood.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Tawara",
+      "town": "Ramsey",
+      "address": "53 W. Main St.",
+      "category": "food",
+      "tags": [
+        "japanese",
+        "sushi"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Ramsey Japanese restaurant that placed second for Japanese food in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Masago Sushi",
+      "town": "Ridgewood",
+      "address": "22 S. Broad St.",
+      "category": "food",
+      "tags": [
+        "sushi",
+        "japanese"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Ridgewood sushi spot voted runner-up best sushi in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Sunny Wok",
+      "town": "Ho-Ho-Kus",
+      "address": "604 N. Maple Ave.",
+      "category": "food",
+      "tags": [
+        "chinese"
+      ],
+      "best_for": [
+        "kids",
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Voted Bergen County's best Chinese restaurant in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Dong Bang Grill",
+      "town": "Fort Lee",
+      "address": "1616 Palisades Ave.",
+      "category": "food",
+      "tags": [
+        "korean",
+        "korean bbq"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Fort Lee Korean barbecue spot that tied for Bergen's best Korean restaurant in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "So Good",
+      "town": "Closter",
+      "address": "190 Closter Dock Rd.",
+      "category": "food",
+      "tags": [
+        "korean"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Closter Korean restaurant that tied for best Korean in Bergen Magazine's 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Thaiway",
+      "town": "Englewood",
+      "address": "24 N. Dean St.",
+      "category": "food",
+      "tags": [
+        "thai"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Downtown Englewood Thai restaurant voted the county's best Thai in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Pimaan Thai Restaurant",
+      "town": "Emerson",
+      "address": "79 Kinderkamack Rd.",
+      "category": "food",
+      "tags": [
+        "thai"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Longtime readers' favorite for Thai food, second in the 2026 poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bombay Hut",
+      "town": "Waldwick",
+      "address": "18A E. Prospect St.",
+      "category": "food",
+      "tags": [
+        "indian"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Voted Bergen County's best Indian restaurant in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Downtown Dhaba",
+      "town": "Westwood",
+      "address": "266 Center Ave.",
+      "category": "food",
+      "tags": [
+        "indian"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Westwood Indian restaurant that came in second for Indian food in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Blue Moon Mexican Cafe",
+      "town": "Wyckoff",
+      "address": "327 Franklin Ave.",
+      "category": "food",
+      "tags": [
+        "mexican"
+      ],
+      "best_for": [
+        "kids",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Readers' choice for Bergen's best Mexican restaurant in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Lolita's Mexican Cantina",
+      "town": "Westwood",
+      "address": "65 Old Hook Rd.",
+      "category": "food",
+      "tags": [
+        "mexican",
+        "margaritas"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Lively Mexican cantina, a perennial top-two pick for Mexican food in the readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Pop Taco & Bar",
+      "town": "Dumont",
+      "address": "20 E. Madison Ave.",
+      "category": "food",
+      "tags": [
+        "mexican",
+        "tacos",
+        "bar"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Taco bar that tied for third-best Mexican in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Brother's Smokehouse",
+      "town": "Ramsey",
+      "address": "900 Rte. 17 N.",
+      "category": "food",
+      "tags": [
+        "barbecue",
+        "bbq"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Route 17 smokehouse voted Bergen County's best barbecue two years running.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Cubby's BBQ",
+      "town": "Hackensack",
+      "address": "249 S. River St.",
+      "category": "food",
+      "tags": [
+        "barbecue",
+        "bbq"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Casual Hackensack barbecue joint that placed second for BBQ in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Pit",
+      "town": "Edgewater",
+      "address": "33 Rte. 5",
+      "category": "food",
+      "tags": [
+        "barbecue",
+        "bbq"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Edgewater barbecue spot that cracked the readers' top three for BBQ in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Biggie's",
+      "town": "Carlstadt",
+      "address": "430 Rte. 17 S.",
+      "category": "food",
+      "tags": [
+        "seafood",
+        "wings",
+        "burgers",
+        "clam bar"
+      ],
+      "best_for": [
+        "groups",
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Casual clam bar and wings spot that ranked in the 2026 readers' poll for seafood and wings.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Marty's",
+      "town": "Hackensack",
+      "address": "137 1/2 Main St. (also 2024 Center Ave., Fort Lee)",
+      "category": "food",
+      "tags": [
+        "burgers"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Burger counter with spots in Hackensack and Fort Lee, third-best burgers in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Hiram's",
+      "town": "Fort Lee",
+      "address": "1345 Palisade Ave.",
+      "category": "food",
+      "tags": [
+        "hot dogs",
+        "classic"
+      ],
+      "best_for": [
+        "budget",
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Fort Lee hot dog spot voted Bergen's best hot dogs in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Veggie Heaven",
+      "town": "Teaneck",
+      "address": "473 Cedar Ln.",
+      "category": "food",
+      "tags": [
+        "vegan",
+        "vegetarian",
+        "chinese"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Teaneck vegetarian restaurant voted best vegan/vegetarian in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Alt Eats Cafe",
+      "town": "Ho-Ho-Kus",
+      "address": "622 N. Maple Ave.",
+      "category": "food",
+      "tags": [
+        "gluten-free",
+        "vegan",
+        "cafe"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Allergy-friendly cafe that readers named the top spot for gluten-free goodies in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Ridge House",
+      "town": "Wood-Ridge",
+      "address": "191 Valley Blvd.",
+      "category": "food",
+      "tags": [
+        "new american",
+        "outdoor dining"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Voted Bergen County's best new restaurant in the 2026 readers' poll, and a runner-up for outdoor dining.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Kosher Nosh",
+      "town": "Glen Rock",
+      "address": "894 Prospect St. (also 172 Piermont Rd., Cresskill)",
+      "category": "food",
+      "tags": [
+        "jewish deli",
+        "kosher",
+        "deli"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Voted best Jewish deli in Bergen County in 2026, with shops in Glen Rock and Cresskill.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "L'Arte Della Pasticceria",
+      "town": "Ramsey",
+      "address": "109 E. Main St.",
+      "category": "food",
+      "tags": [
+        "bakery",
+        "italian pastry"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Italian pastry shop voted Bergen County's best bakery in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "B&W Bakery",
+      "town": "Hackensack",
+      "address": "614 Main St.",
+      "category": "food",
+      "tags": [
+        "bakery",
+        "crumb cake"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Classic Hackensack bakery that places in the readers' top bakeries every year.",
+      "website": "http://bandwbakery.com/",
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Despina's Cream Bakery",
+      "town": "River Vale",
+      "address": "669G Westwood Ave.",
+      "category": "food",
+      "tags": [
+        "bakery",
+        "cupcakes",
+        "dessert"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "River Vale bakery that tied for best cupcakes and ranked for bakery and candy in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Sook Pastry",
+      "town": "Ridgewood",
+      "address": "24 S. Broad St.",
+      "category": "food",
+      "tags": [
+        "bakery",
+        "pastry"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Ridgewood pastry shop that tied for third-best bakery in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Kara Kakes",
+      "town": "Franklin Lakes",
+      "address": "799 Franklin Ave.",
+      "category": "food",
+      "tags": [
+        "cupcakes",
+        "bakery"
+      ],
+      "best_for": [
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Cupcake shop that tied for first place in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Conrad's Confectionery",
+      "town": "Westwood",
+      "address": "107 Westwood Ave.",
+      "category": "food",
+      "tags": [
+        "candy",
+        "chocolate",
+        "ice cream",
+        "classic"
+      ],
+      "best_for": [
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Westwood candy shop voted Bergen County's best candy and chocolate shop in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Cranberry Junction",
+      "town": "Hackensack",
+      "address": "19 Temple Ave.",
+      "category": "food",
+      "tags": [
+        "ice cream",
+        "dessert"
+      ],
+      "best_for": [
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Readers' pick for best ice cream in Bergen County two years running.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Van Dyk's Ice Cream",
+      "town": "Ridgewood",
+      "address": "145 Ackerman Ave.",
+      "category": "food",
+      "tags": [
+        "ice cream",
+        "dessert"
+      ],
+      "best_for": [
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Ridgewood ice cream parlor that keeps landing in the readers' top three.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bagel Nosh",
+      "town": "Waldwick",
+      "address": "24 E. Prospect St.",
+      "category": "food",
+      "tags": [
+        "bagels",
+        "breakfast"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Voted Bergen's best bagels in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Teaneck Road Hot Bagels",
+      "town": "Teaneck",
+      "address": "976 Teaneck Rd.",
+      "category": "food",
+      "tags": [
+        "bagels"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Teaneck bagel shop that finished second for bagels in both 2025 and 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Vale Coffee Shoppe",
+      "town": "River Vale",
+      "address": "669 Westwood Ave.",
+      "category": "food",
+      "tags": [
+        "coffee",
+        "cafe"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Tied for Bergen County's best coffeehouse in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Il Freno Espresso Bar",
+      "town": "Park Ridge",
+      "address": "83 Park Ave.",
+      "category": "food",
+      "tags": [
+        "coffee",
+        "espresso",
+        "cafe"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Park Ridge espresso bar that tied for best coffeehouse in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Pour City Roasters",
+      "town": "Franklin Lakes",
+      "address": "807 Franklin Ave.",
+      "category": "food",
+      "tags": [
+        "coffee",
+        "roastery"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Local roaster and cafe that readers ranked among the top coffeehouses in both 2025 and 2026.",
+      "website": "http://pourcityroasters.com/",
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Nightshade Coffee",
+      "town": "Westwood",
+      "address": "459 Broadway",
+      "category": "food",
+      "tags": [
+        "coffee",
+        "cafe"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Westwood coffee shop that placed third among coffeehouses in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Five Dimes Brewery",
+      "town": "Westwood",
+      "address": "247 Westwood Ave.",
+      "category": "food",
+      "tags": [
+        "brewery",
+        "craft beer",
+        "taproom"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Downtown Westwood taproom voted Bergen County's best craft brewery in 2026.",
+      "website": "http://fivedimesbrewery.com/",
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Gearblock Brewing Company",
+      "town": "Waldwick",
+      "address": "140 Franklin Tpke., #2",
+      "category": "food",
+      "tags": [
+        "brewery",
+        "craft beer",
+        "taproom"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Waldwick brewery and taproom, runner-up for best craft brewery in 2026.",
+      "website": "http://gearblockbrewing.com/",
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Hackensack Brewing Company",
+      "town": "Hackensack",
+      "address": "78 Johnson Ave.",
+      "category": "food",
+      "tags": [
+        "brewery",
+        "craft beer",
+        "taproom"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Hackensack's craft brewery, a top-three readers' pick in both 2025 and 2026.",
+      "website": "http://hackensackbrewing.com/",
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Uncle Giuseppe's Marketplace",
+      "town": "Ramsey",
+      "address": "10 Triangle Plz.",
+      "category": "food",
+      "tags": [
+        "italian market",
+        "mozzarella",
+        "gourmet grocery"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Italian marketplace voted best gourmet grocery and best fresh mozzarella in 2026.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Clemente Bakery",
+      "town": "South Hackensack",
+      "address": "120 Leuning St.",
+      "category": "food",
+      "tags": [
+        "italian deli",
+        "bakery",
+        "sandwiches"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Voted Bergen County's best Italian deli in the 2026 readers' poll.",
+      "website": null,
+      "source_url": "https://www.healthandlifemags.com/readers-choice-2026-best-restaurants-food-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Nikki Nikkei",
+      "town": "Closter",
+      "address": "252 Schraalenburgh Rd.",
+      "category": "food",
+      "tags": [
+        "peruvian",
+        "japanese",
+        "nikkei",
+        "cocktails",
+        "new"
+      ],
+      "best_for": [
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": "Dinner Tuesday-Saturday",
+      "description": "Peruvian-Japanese newcomer from the team behind Verana and Mykos, with ceviche, hand rolls, a cozy stone fireplace and an inventive cocktail list; dinner Tuesday-Saturday, walk-ins at the bar.",
+      "website": "https://www.nikkinikkei.com/",
+      "source_url": "https://bergenmama.com/article/nikki-nikkei-restaurant-opens-in-closter-nj",
+      "status": "open",
+      "opened_on": "2026-10-31",
+      "verified": true
+    },
+    {
+      "name": "Serafina Tenafly",
+      "town": "Tenafly",
+      "address": "Downtown Tenafly",
+      "category": "food",
+      "tags": [
+        "italian",
+        "pasta",
+        "pizza",
+        "new"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "The NYC Italian mainstay's first New Jersey location, serving pastas, pizzas and its well-known Wagyu burger in a lively sit-down room.",
+      "website": null,
+      "source_url": "https://thelocalgirl.com/bergen/serafina-italian-restaurant-tenafly-new-jersey/",
+      "status": "open",
+      "opened_on": "2026-10-14",
+      "verified": true
+    },
+    {
+      "name": "PopUp Bagels",
+      "town": "Tenafly",
+      "address": "6-8 Washington St.",
+      "category": "food",
+      "tags": [
+        "bagels",
+        "new"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "The cult 'grip, rip and dip' bagel shop's first Bergen County storefront, with hot bagels and rotating schmears.",
+      "website": null,
+      "source_url": "https://thelocalgirl.com/bergen/serafina-italian-restaurant-tenafly-new-jersey/",
+      "status": "open",
+      "opened_on": "2026-10-09",
+      "verified": true
+    },
+    {
+      "name": "COV",
+      "town": "Edgewater",
+      "address": "115 River Rd.",
+      "category": "food",
+      "tags": [
+        "waterfront",
+        "seafood",
+        "cocktails",
+        "skyline views",
+        "new"
+      ],
+      "best_for": [
+        "date night",
+        "special occasion"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "New Hudson River restaurant and bar on the former Pier 115 site, with a chilled seafood bar, shareable plates, creative cocktails and Manhattan skyline views.",
+      "website": "https://cov-restaurants.com/",
+      "source_url": "https://patch.com/new-jersey/ridgewood/newest-nj-waterfront-restaurant-cov-opens-edgewater-peek-inside",
+      "status": "open",
+      "opened_on": "2026-07-19",
+      "verified": true
+    },
+    {
+      "name": "Millburn Deli",
+      "town": "Ridgewood",
+      "address": "15 Oak St.",
+      "category": "food",
+      "tags": [
+        "sandwiches",
+        "deli",
+        "sloppy joe",
+        "new"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "The 1946 Essex County sandwich institution's first Bergen outpost, serving its famous Sloppy Joes, the Gobbler and other signature sandwiches.",
+      "website": "https://www.millburndeli.com/location/ridgewood/",
+      "source_url": "https://jerseybites.com/new-restaurant-openings-august-2026-farm-fresh-italian-pastries-french-cuisine-and-more/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bar Mutz",
+      "town": "Westwood",
+      "address": "90 Center Ave.",
+      "category": "food",
+      "tags": [
+        "italian",
+        "mozzarella",
+        "pasta",
+        "lively"
+      ],
+      "best_for": [
+        "groups",
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Chef Robbie Felice's high-energy Italian spot, where fresh-pulled mozzarella rolls by on a cart and the music stays up; named one of NJ Monthly's best new restaurants.",
+      "website": "http://barmutz.com/",
+      "source_url": "https://njmonthly.com/articles/eat-drink/best-new-restaurants-in-new-jersey/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Capon's Chophouse",
+      "town": "Hackensack",
+      "address": "390 Hackensack Ave. (The Shops at Riverside)",
+      "category": "food",
+      "tags": [
+        "steakhouse",
+        "new"
+      ],
+      "best_for": [
+        "special occasion",
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Chef Josh Capon's buzzy NYC-style steakhouse inside the Shops at Riverside, picked by NJ Monthly as one of the state's best new restaurants.",
+      "website": "http://caponschophouse.com/",
+      "source_url": "https://njmonthly.com/articles/eat-drink/best-new-restaurants-in-new-jersey/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "High Line",
+      "town": "Ridgewood",
+      "address": "Above Steel Wheel Tavern",
+      "category": "nightlife",
+      "tags": [
+        "cocktails",
+        "piano",
+        "lounge",
+        "small plates"
+      ],
+      "best_for": [
+        "date night",
+        "live music"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Elevated cocktail lounge upstairs from Steel Wheel Tavern with shareable small plates and live piano music. Listed as opening soon in August 2026; check current status.",
+      "website": "https://www.highlineridgewood.com/",
+      "source_url": "https://bergenmama.com/article/restaurant-openings-in-bergen-county-nj-worth-getting-excited-for",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Orbit Karaoke",
+      "town": "Fort Lee",
+      "address": null,
+      "category": "nightlife",
+      "tags": [
+        "karaoke",
+        "private rooms",
+        "birthday"
+      ],
+      "best_for": [
+        "groups",
+        "late night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Karaoke spot with private LED-lit rooms and drinks, made for birthdays and group nights out. Announced as coming soon in August 2026; check current status.",
+      "website": null,
+      "source_url": "https://bergenmama.com/article/restaurant-openings-in-bergen-county-nj-worth-getting-excited-for",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Azul",
+      "town": "Hackensack",
+      "address": null,
+      "category": "food",
+      "tags": [
+        "mexican",
+        "mezcal",
+        "cocktails"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Mexican kitchen and mezcal bar from Chef Cristino 'Tony' Campos with mole, achiote pork and agave cocktails. Announced as coming soon in August 2026; check current status.",
+      "website": null,
+      "source_url": "https://bergenmama.com/article/restaurant-openings-in-bergen-county-nj-worth-getting-excited-for",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Milkshake Factory",
+      "town": "Ridgewood",
+      "address": null,
+      "category": "food",
+      "tags": [
+        "milkshakes",
+        "chocolate",
+        "dessert"
+      ],
+      "best_for": [
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Shake and chocolate shop with over-the-top handspun milkshakes, dairy-free options and house-made barks. Announced as coming soon in August 2026.",
+      "website": "https://www.milkshakefactory.com/locations/ridgewood/",
+      "source_url": "https://bergenmama.com/article/restaurant-openings-in-bergen-county-nj-worth-getting-excited-for",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Wagyu House",
+      "town": "East Rutherford",
+      "address": "American Dream",
+      "category": "food",
+      "tags": [
+        "japanese bbq",
+        "yakiniku",
+        "wagyu"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Japanese yakiniku spot at American Dream where groups grill premium cuts over charcoal at the table. Announced as coming soon in August 2026; check current status.",
+      "website": "https://wagyuhouse.group/project/wagyu-house-new-jersey/",
+      "source_url": "https://bergenmama.com/article/restaurant-openings-in-bergen-county-nj-worth-getting-excited-for",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "VintEdge Wine Bar & Kitchen",
+      "town": "Lyndhurst",
+      "address": null,
+      "category": "nightlife",
+      "tags": [
+        "wine bar",
+        "brunch",
+        "happy hour"
+      ],
+      "best_for": [
+        "date night",
+        "brunch"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Upscale wine bar and kitchen with Sunday brunch, happy hours and shareable bites. Announced as coming soon in August 2026; check current status.",
+      "website": "https://www.vintedgewinebarlyndhurst.com/",
+      "source_url": "https://bergenmama.com/article/restaurant-openings-in-bergen-county-nj-worth-getting-excited-for",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Cafe Ssum + Karaoke",
+      "town": "Palisades Park",
+      "address": "450 Broad Ave.",
+      "category": "nightlife",
+      "tags": [
+        "korean",
+        "cafe",
+        "karaoke",
+        "private rooms"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Korean-style cafe with private karaoke rooms, drinks and snacks; a fun hangout for friends.",
+      "website": "http://www.cafessum.com/",
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Khyber Coffee and Tea House",
+      "town": "Hackensack",
+      "address": "264 Main St.",
+      "category": "food",
+      "tags": [
+        "coffee",
+        "chai",
+        "tea",
+        "new"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "South Asian-inspired cafe on Main Street pouring chai, specialty coffee and matcha with pastries.",
+      "website": "https://www.drinkkhyber.com/",
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Joysey Cafe",
+      "town": "Elmwood Park",
+      "address": "274 Broadway",
+      "category": "food",
+      "tags": [
+        "coffee",
+        "matcha",
+        "smoothies",
+        "new"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "New coffee shop serving espresso drinks, frappes, matcha, chai and smoothies.",
+      "website": "https://www.joyseycafe.com/",
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Grill + Greens",
+      "town": "Ridgewood",
+      "address": "36 Prospect St.",
+      "category": "food",
+      "tags": [
+        "healthy",
+        "salads",
+        "wraps",
+        "new"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Third location of this healthy fast-casual spot, with salads, wraps, soups and balanced combo plates.",
+      "website": null,
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Penelope's Pizzeria and Sports Bar",
+      "town": "North Arlington",
+      "address": "25 Schuyler Ave.",
+      "category": "nightlife",
+      "tags": [
+        "pizza",
+        "sports bar",
+        "dj",
+        "wings"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "New pizzeria and sports bar with a full bar, lots of TVs, craft cocktails and DJs on weekends.",
+      "website": "https://www.penelopespizzeria.com/",
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Dipped and Smashed",
+      "town": "Fort Lee",
+      "address": "187 Main St. (Hudson Lights)",
+      "category": "food",
+      "tags": [
+        "burgers",
+        "hot chicken"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Hoboken smashburger and Nashville hot chicken spot opening its second location at Hudson Lights.",
+      "website": "https://dippednsmashed.com/",
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Yui Izakaya",
+      "town": "Fort Lee",
+      "address": "2060 Hudson St. (Hudson Lights)",
+      "category": "food",
+      "tags": [
+        "japanese",
+        "izakaya"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Japanese izakaya taking over the former Otter Fine Sushi space at Hudson Lights.",
+      "website": null,
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Robby's Pizza",
+      "town": "Ridgewood",
+      "address": "Downtown Ridgewood",
+      "category": "food",
+      "tags": [
+        "pizza",
+        "sourdough"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Sourdough pizzeria from the owner of Wayne Ale House and Little Falls Tavern, focused on crispy pies.",
+      "website": null,
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Rojo Tequileria + Mexican Grill",
+      "town": "Cliffside Park",
+      "address": "790 Anderson Ave.",
+      "category": "food",
+      "tags": [
+        "mexican",
+        "tequila",
+        "cocktails"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Mexican and Latin restaurant with a tequila bar and craft cocktails on the way to Cliffside Park.",
+      "website": null,
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "The Golden Goat",
+      "town": "Park Ridge",
+      "address": "133 Park Ave.",
+      "category": "food",
+      "tags": [
+        "asian",
+        "dumplings",
+        "noodles"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Asian comfort food built around handmade dumplings, noodles and wok dishes, coming to downtown Park Ridge.",
+      "website": null,
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "The Cuban Press",
+      "town": "Westwood",
+      "address": "271 Westwood Ave.",
+      "category": "food",
+      "tags": [
+        "cuban",
+        "sandwiches",
+        "coffee"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Cuban pressed sandwiches, empanadas and coffee coming to Westwood.",
+      "website": null,
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "The Filling Station (TFS Burger Works)",
+      "town": "Rutherford",
+      "address": "329 Union Ave.",
+      "category": "food",
+      "tags": [
+        "burgers",
+        "milkshakes"
+      ],
+      "best_for": [
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Burger joint with hot dogs, chicken sandwiches, ice cream and shakes coming to Rutherford.",
+      "website": "https://www.tfsburgerworks.com/",
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "K Midnight Kitchen",
+      "town": "Edgewater",
+      "address": "24 Hilliard Ave.",
+      "category": "food",
+      "tags": [
+        "dominican",
+        "caribbean",
+        "soul food"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Caribbean-inspired spot planning Dominican street food like yaroa and empanadas plus soul-food favorites.",
+      "website": null,
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Ctrl Alt Refresh",
+      "town": "Hackensack",
+      "address": "95 Anderson St.",
+      "category": "food",
+      "tags": [
+        "gaming cafe",
+        "filipino",
+        "bubble tea"
+      ],
+      "best_for": [
+        "teens",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Gaming cafe with rentable high-end PCs, a projector lounge and Filipino- and Chinese-inspired comfort food.",
+      "website": "https://ctrlaltrefresh.com/",
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Liv Breads",
+      "town": "Paramus",
+      "address": "Westfield Garden State Plaza",
+      "category": "food",
+      "tags": [
+        "bakery",
+        "sourdough"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Artisan bakery with sourdough, pastries and sandwiches coming to Garden State Plaza.",
+      "website": null,
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "The Station",
+      "town": "Demarest",
+      "address": "24 Park St.",
+      "category": "food",
+      "tags": [
+        "american",
+        "brasserie",
+        "historic"
+      ],
+      "best_for": [],
+      "price_text": null,
+      "hours_text": null,
+      "description": "American brasserie planned for Demarest's historic railroad station, projected to open in 2027.",
+      "website": "https://www.demareststation.com/",
+      "source_url": "https://thelocalgirl.com/bergen/new-businesses-opening-bergen-county-nj-fall-2026/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "So Moon Nan Jip",
+      "town": "Palisades Park",
+      "address": "Broad Ave. area",
+      "category": "food",
+      "tags": [
+        "korean bbq",
+        "korean",
+        "galbi"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Lively tabletop Korean barbecue where meats are grilled over flames; NJ Monthly's pick for first-timers, with galbi and pork belly plus banchan.",
+      "website": null,
+      "source_url": "https://njmonthly.com/articles/eat-drink/korean-restaurants-in-palisades-park/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Jin Go Gae Catering",
+      "town": "Palisades Park",
+      "address": "Broad Ave. area",
+      "category": "food",
+      "tags": [
+        "korean",
+        "takeout",
+        "banchan"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Busy Korean grab-and-go counter stacked with prepared meats, banchan and japchae.",
+      "website": null,
+      "source_url": "https://njmonthly.com/articles/eat-drink/korean-restaurants-in-palisades-park/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bunsik Nara",
+      "town": "Palisades Park",
+      "address": "Broad Ave. area",
+      "category": "food",
+      "tags": [
+        "korean",
+        "fast casual",
+        "bibimbap"
+      ],
+      "best_for": [
+        "groups",
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Brightly lit modern Korean fast-casual spot with a huge menu of bibimbap, dumplings and spicy rice cakes for sharing.",
+      "website": null,
+      "source_url": "https://njmonthly.com/articles/eat-drink/korean-restaurants-in-palisades-park/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Mama Chicken",
+      "town": "Palisades Park",
+      "address": "Broad Ave. area",
+      "category": "food",
+      "tags": [
+        "korean fried chicken",
+        "korean"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Go-to for extra-crispy, double-fried Korean-style chicken, served by the whole bird.",
+      "website": null,
+      "source_url": "https://njmonthly.com/articles/eat-drink/korean-restaurants-in-palisades-park/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Three Star Bagels",
+      "town": "Fort Lee",
+      "address": "270 Columbia Ave.",
+      "category": "food",
+      "tags": [
+        "bagels",
+        "breakfast"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Fort Lee bagel shop going strong for 50 years, with breakfast sandwiches and deli lunches too.",
+      "website": "https://3starbagelsnj.com/",
+      "source_url": "https://thelocalgirl.com/bergen/best-bagel-spots-bergen-county-nj/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bagel Supreme",
+      "town": "Rutherford",
+      "address": "284 Park Ave.",
+      "category": "food",
+      "tags": [
+        "bagels",
+        "breakfast"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Park Avenue staple since 1994, known for build-your-own cream cheese combos.",
+      "website": "https://bagelsupreme.com/locations/rutherford",
+      "source_url": "https://thelocalgirl.com/bergen/best-bagel-spots-bergen-county-nj/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Tailored Ham",
+      "town": "New Milford",
+      "address": "366 River Rd.",
+      "category": "food",
+      "tags": [
+        "bagels",
+        "breakfast"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Newer bagel spot (opened 2025) with loaded Taylor ham sandwiches plus smoothies and boba.",
+      "website": "https://www.thetailoredham.com/",
+      "source_url": "https://thelocalgirl.com/bergen/best-bagel-spots-bergen-county-nj/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Brix City Brewing",
+      "town": "Little Ferry",
+      "address": "4 Alsan Way",
+      "category": "nightlife",
+      "tags": [
+        "brewery",
+        "craft beer",
+        "taproom"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Little Ferry craft brewery and taproom, listed among Bergen County breweries on BeerMenus.",
+      "website": null,
+      "source_url": "https://www.beermenus.com/counties/356-bergen-county-new-jersey/nearby/breweries",
+      "status": "open",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Bolero Snort Brewery",
+      "town": "Ridgefield Park",
+      "address": "65 Railroad Ave.",
+      "category": "nightlife",
+      "tags": [
+        "brewery",
+        "craft beer",
+        "taproom"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Ridgefield Park craft brewery listed among Bergen County breweries on BeerMenus.",
+      "website": null,
+      "source_url": "https://www.beermenus.com/counties/356-bergen-county-new-jersey/nearby/breweries",
+      "status": "open",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Steel Wheel Tavern",
+      "town": "Ridgewood",
+      "address": "51 N. Broad St.",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "bar",
+        "tavern"
+      ],
+      "best_for": [
+        "live music",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Ridgewood tavern known for keeping live music going in northern Bergen, with local artists across many genres six days a week.",
+      "website": "https://www.steelwheeltavern.com/",
+      "source_url": "https://www.steelwheeltavern.com/entertainment",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Orange Lantern",
+      "town": "Paramus",
+      "address": "15 Firehouse Lane",
+      "category": "nightlife",
+      "tags": [
+        "sports bar",
+        "live music",
+        "trivia",
+        "bands"
+      ],
+      "best_for": [
+        "live music",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": "Mon-Sat from 10 AM, Sun from 12 PM",
+      "description": "Frequently voted one of Bergen's best sports bars, with local bands twice a week and Thursday trivia.",
+      "website": "https://www.orangelantern.com/",
+      "source_url": "https://www.orangelantern.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bananas Comedy Club",
+      "town": "Rutherford",
+      "address": "801 Rutherford Ave. (Renaissance Meadowlands Hotel)",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "shows"
+      ],
+      "best_for": [
+        "date night",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Intimate stand-up club that brings nationally known comics to a small room, with shows most weekends.",
+      "website": "https://www.bananascomedyclub.com/",
+      "source_url": "https://www.bananascomedyclub.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "address": "32 S. Washington Ave.",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "open mic",
+        "pub"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Comedy room below Tommy Fox's Public House with showcases, classes and a Tuesday open mic, per a Montclair Girl comedy guide (undated; confirm schedule).",
+      "website": null,
+      "source_url": "https://www.themontclairgirl.com/comedy-clubs-north-new-jersey/",
+      "status": "open",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Debonair Music Hall",
+      "town": "Teaneck",
+      "address": null,
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "concerts",
+        "all ages",
+        "rock",
+        "tribute bands"
+      ],
+      "best_for": [
+        "live music",
+        "teens"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "All-ages Teaneck concert hall with a packed calendar of local rock bands, tribute acts, holiday shows and the occasional improv night.",
+      "website": "https://debonairmusichall.com/",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Stone & Rail",
+      "town": "Glen Rock",
+      "address": "175 Rock Rd.",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "bar",
+        "country night"
+      ],
+      "best_for": [
+        "live music"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Glen Rock bar-restaurant that books live bands, including country nights, listed on The Local Music Finder's Bergen calendar.",
+      "website": null,
+      "source_url": "https://www.thelocalmusicfinder.com/events/county/bergen-county-nj",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Tommy Fox's Public House",
+      "town": "Bergenfield",
+      "address": "32 S. Washington Ave.",
+      "category": "nightlife",
+      "tags": [
+        "pub",
+        "live music"
+      ],
+      "best_for": [
+        "live music",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Bergenfield public house with live music nights on The Local Music Finder's Bergen calendar.",
+      "website": null,
+      "source_url": "https://www.thelocalmusicfinder.com/events/county/bergen-county-nj",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Shannon Rose",
+      "town": "Ramsey",
+      "address": "1200 Rte. 17 N.",
+      "category": "nightlife",
+      "tags": [
+        "pub",
+        "live music",
+        "restaurant"
+      ],
+      "best_for": [
+        "live music",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Route 17 pub and restaurant that books live bands; readers also ranked it among Bergen's most romantic restaurants in 2025.",
+      "website": null,
+      "source_url": "https://www.thelocalmusicfinder.com/events/county/bergen-county-nj",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "River & Henley",
+      "town": "New Milford",
+      "address": null,
+      "category": "nightlife",
+      "tags": [
+        "bar",
+        "live music"
+      ],
+      "best_for": [
+        "live music",
+        "late night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "New Milford bar that hosts late Friday-night cover bands, per The Local Music Finder.",
+      "website": null,
+      "source_url": "https://www.thelocalmusicfinder.com/events/county/bergen-county-nj",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Juicy Platters",
+      "town": "Fair Lawn",
+      "address": "23-16 Broadway",
+      "category": "food",
+      "tags": [
+        "late night",
+        "platters",
+        "halal"
+      ],
+      "best_for": [
+        "late night",
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": "Sun-Thu 11 AM - 2 AM; Fri-Sat 11 AM - 4 AM (per older listing)",
+      "description": "Late-night platter spot that Boozy Burbs lists as open into the early morning; the listing is older, so confirm hours before heading out.",
+      "website": "https://juicyplatters.com/",
+      "source_url": "https://www.boozyburbs.com/late-night-dining-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Linwood Pizza",
+      "town": "Fort Lee",
+      "address": "140 Linwood Plaza",
+      "category": "food",
+      "tags": [
+        "pizza",
+        "late night"
+      ],
+      "best_for": [
+        "late night",
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": "Everyday 11 AM - 3 AM (per older listing)",
+      "description": "Fort Lee pizzeria that Boozy Burbs lists among Bergen's late-night options; listing is older, so confirm hours.",
+      "website": null,
+      "source_url": "https://www.boozyburbs.com/late-night-dining-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": false
+    }
+  ]
+}

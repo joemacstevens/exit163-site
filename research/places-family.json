@@ -1,0 +1,1724 @@
+{
+  "events": [
+    {
+      "title": "Family Forest School at Tenafly Nature Center",
+      "town": "Tenafly",
+      "location": "Tenafly Nature Center, 313 Hudson Ave",
+      "category": "family",
+      "tags": [
+        "toddlers",
+        "nature",
+        "outdoors"
+      ],
+      "starts_on": "2026-09-08",
+      "ends_on": "2026-12-03",
+      "recurrence_text": "Tuesday, Wednesday or Thursday mornings",
+      "time_text": null,
+      "cost_text": null,
+      "description": "A 90-minute outdoor nature adventure for kids 18 months to 3.5 years with their caregivers; the fall session runs through December 3 (see the center's site to sign up).",
+      "source_url": "https://tenaflynaturecenter.org/",
+      "verified": true
+    },
+    {
+      "title": "1776 Fort Lee on the Palisades",
+      "town": "Fort Lee",
+      "location": "Fort Lee Historic Park",
+      "category": "family",
+      "tags": [
+        "history",
+        "revolutionary war",
+        "free"
+      ],
+      "starts_on": "2026-11-21",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "A Revolutionary War anniversary program at Fort Lee Historic Park marking the 1776 events on the Palisades; good for history-curious kids.",
+      "source_url": "https://njpalisades.org/",
+      "verified": true
+    },
+    {
+      "title": "1776 Invasion of the Jerseys",
+      "town": "Alpine",
+      "location": "Alpine Picnic Area, Palisades Interstate Park",
+      "category": "family",
+      "tags": [
+        "history",
+        "revolutionary war",
+        "outdoors"
+      ],
+      "starts_on": "2026-11-21",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "A Palisades Interstate Park history program at the Alpine Picnic Area tied to the 250th anniversary of the 1776 campaign in New Jersey.",
+      "source_url": "https://njpalisades.org/",
+      "verified": true
+    },
+    {
+      "title": "Bounce Safari Open Bounce",
+      "town": "Waldwick",
+      "location": "Bounce Safari, 3 North St",
+      "category": "family",
+      "tags": [
+        "kids",
+        "indoor",
+        "bounce",
+        "walk-in"
+      ],
+      "starts_on": null,
+      "ends_on": null,
+      "recurrence_text": "Mondays and Tuesdays",
+      "time_text": "4 PM - 7 PM",
+      "cost_text": null,
+      "description": "Walk-in open bounce sessions on the inflatables. Schedule comes from an undated Facebook post, so confirm before going.",
+      "source_url": "https://www.facebook.com/BounceSafari/",
+      "verified": false
+    }
+  ],
+  "places": [
+    {
+      "name": "Nickelodeon Universe Theme Park",
+      "town": "East Rutherford",
+      "address": "American Dream, 1 American Dream Way",
+      "category": "family",
+      "tags": [
+        "theme park",
+        "rides",
+        "roller coasters",
+        "indoor",
+        "american dream"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "$$$",
+      "hours_text": null,
+      "description": "A full indoor amusement park with record-breaking coasters, gentler junior rides and Nickelodeon character meet-and-greets, so it works year-round no matter the weather.",
+      "website": "https://www.americandream.com/venue/nickelodeon-universe",
+      "source_url": "https://www.americandream.com/venue/nickelodeon-universe",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "DreamWorks Water Park",
+      "town": "East Rutherford",
+      "address": "American Dream, 1 American Dream Way",
+      "category": "family",
+      "tags": [
+        "water park",
+        "indoor",
+        "slides",
+        "wave pool",
+        "american dream"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "$$$",
+      "hours_text": null,
+      "description": "North America's largest indoor water park, kept at a tropical 82°F all year, with big slides, a wave pool and DreamWorks characters; a Sunset Pass covers the last three hours of the day.",
+      "website": "https://www.americandream.com/venue/dreamworks-water-park",
+      "source_url": "https://www.americandream.com/venue/dreamworks-water-park",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Big SNOW American Dream",
+      "town": "East Rutherford",
+      "address": "American Dream, 1 American Dream Way",
+      "category": "outdoors",
+      "tags": [
+        "skiing",
+        "snowboarding",
+        "snow tubing",
+        "indoor",
+        "american dream",
+        "winter"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "$$$",
+      "hours_text": null,
+      "description": "North America's only indoor real-snow ski and snowboard slope, open year-round, with lessons, snow play and tubing packages for first-timers.",
+      "website": "https://www.bigsnowamericandream.com/",
+      "source_url": "https://www.bigsnowamericandream.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "LEGOLAND Discovery Center New Jersey",
+      "town": "East Rutherford",
+      "address": "American Dream, 1 American Dream Way",
+      "category": "family",
+      "tags": [
+        "lego",
+        "indoor play",
+        "american dream",
+        "building"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "rainy day"
+      ],
+      "price_text": "Tickets from $29.99",
+      "hours_text": null,
+      "description": "An indoor LEGO playground with building zones and rides aimed at younger kids; combo tickets with SEA LIFE next door are available.",
+      "website": "https://www.legolanddiscoverycenter.com/new-jersey/",
+      "source_url": "https://www.legolanddiscoverycenter.com/new-jersey/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "SEA LIFE New Jersey Aquarium",
+      "town": "East Rutherford",
+      "address": "American Dream, 1 American Dream Way",
+      "category": "family",
+      "tags": [
+        "aquarium",
+        "animals",
+        "indoor",
+        "american dream"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "An indoor aquarium inside American Dream that pairs easily with LEGOLAND Discovery Center for a full rainy-day outing with little ones.",
+      "website": "https://www.visitsealife.com/new-jersey/",
+      "source_url": "https://www.visitsealife.com/new-jersey/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Rink @ The Arena",
+      "town": "East Rutherford",
+      "address": "American Dream, 1 American Dream Way",
+      "category": "family",
+      "tags": [
+        "ice skating",
+        "public skating",
+        "hockey",
+        "indoor",
+        "american dream"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "An NHL-size indoor rink at American Dream with public skating sessions and Learn to Skate classes for beginners of every age.",
+      "website": "https://www.americandream.com/venue/the-rink",
+      "source_url": "https://www.americandream.com/venue/the-rink",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Sesame Street Learn & Play",
+      "town": "East Rutherford",
+      "address": "American Dream, 1 American Dream Way",
+      "category": "family",
+      "tags": [
+        "sesame street",
+        "indoor play",
+        "american dream",
+        "preschool"
+      ],
+      "best_for": [
+        "toddlers",
+        "kids",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A Sesame Street-themed play attraction at American Dream geared to preschoolers; it is listed among the mall's current attractions.",
+      "website": "https://www.americandream.com/venue/sesame-street-learn-and-play",
+      "source_url": "https://www.americandream.com/venue/nickelodeon-universe",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Angry Birds Mini Golf",
+      "town": "East Rutherford",
+      "address": "American Dream, 1 American Dream Way",
+      "category": "family",
+      "tags": [
+        "mini golf",
+        "indoor",
+        "american dream"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "Indoor themed mini golf at American Dream, a lower-key add-on to a day at the parks; listed among the mall's current attractions.",
+      "website": "https://www.americandream.com",
+      "source_url": "https://www.americandream.com/venue/nickelodeon-universe",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Gameroom Powered by Hasbro",
+      "town": "East Rutherford",
+      "address": "American Dream, 1 American Dream Way",
+      "category": "family",
+      "tags": [
+        "arcade",
+        "games",
+        "indoor",
+        "american dream"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A Hasbro-branded arcade and game space at American Dream, good for teens and groups; listed among the mall's current attractions and birthday venues.",
+      "website": "https://www.americandream.com",
+      "source_url": "https://www.americandream.com/venue/nickelodeon-universe",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bergen County Zoo",
+      "town": "Paramus",
+      "address": "Van Saun County Park",
+      "category": "family",
+      "tags": [
+        "zoo",
+        "animals",
+        "train",
+        "carousel"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "budget"
+      ],
+      "price_text": "Adults $6 Bergen residents / $10 non-residents; kids less",
+      "hours_text": "10 AM - 4:30 PM daily (last entry 4 PM), weather permitting",
+      "description": "A small, very manageable county zoo with animals from the Americas plus a train and carousel ($3 a ride), and cheap admission for Bergen residents.",
+      "website": "https://bergencountynj.gov/bergen-county-department-of-parks/bergen-county-zoo/",
+      "source_url": "https://bergencountynj.gov/bergen-county-department-of-parks/bergen-county-zoo/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Van Saun County Park",
+      "town": "Paramus",
+      "address": null,
+      "category": "outdoors",
+      "tags": [
+        "park",
+        "playground",
+        "carousel",
+        "zoo",
+        "pony rides",
+        "dog park"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "free",
+        "dogs"
+      ],
+      "price_text": "Free (zoo and rides extra)",
+      "hours_text": "Most county parks open 7:30 AM to a half hour after sunset",
+      "description": "One of the county's busiest parks, with big playgrounds, the zoo, a carousel, a mini train, pony rides and a dog park near the Continental Avenue entrance in River Edge.",
+      "website": "https://bergencountynj.gov/bergen-county-department-of-parks/van-saun-county-park/",
+      "source_url": "https://bergencountynj.gov/bergen-county-department-of-parks/van-saun-county-park/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Saddle River County Park",
+      "town": "Bergen County",
+      "address": "Ridgewood to Rochelle Park (multiple entrances)",
+      "category": "outdoors",
+      "tags": [
+        "park",
+        "bike path",
+        "trail",
+        "playground",
+        "ponds",
+        "fishing"
+      ],
+      "best_for": [
+        "kids",
+        "free",
+        "dogs",
+        "budget"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "A 577-acre linear park linking five areas by a roughly 6-mile bike and walking path, with ponds, playgrounds, a waterfall at Dunkerhook and ice skating on ponds when conditions allow.",
+      "website": "https://bergencountynj.gov/bergen-county-department-of-parks/saddle-river-county-park/",
+      "source_url": "https://bergencountynj.gov/bergen-county-department-of-parks/saddle-river-county-park/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Wild Duck Pond (Saddle River County Park)",
+      "town": "Ridgewood",
+      "address": "East Ridgewood Ave entrance",
+      "category": "outdoors",
+      "tags": [
+        "pond",
+        "playground",
+        "dog park",
+        "ducks",
+        "fishing"
+      ],
+      "best_for": [
+        "toddlers",
+        "kids",
+        "free",
+        "dogs"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "A favorite stop on the Saddle River path with a pond, playground, picnic areas and an off-leash dog run; ice skating is allowed when the weather cooperates.",
+      "website": "https://bergencountynj.gov/bergen-county-department-of-parks/saddle-river-county-park/",
+      "source_url": "https://bergencountynj.gov/bergen-county-department-of-parks/saddle-river-county-park/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Overpeck County Park",
+      "town": "Leonia",
+      "address": "40 Fort Lee Rd",
+      "category": "outdoors",
+      "tags": [
+        "park",
+        "playground",
+        "kayak",
+        "bike path",
+        "dog park",
+        "tennis"
+      ],
+      "best_for": [
+        "kids",
+        "free",
+        "dogs",
+        "groups"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "Bergen's 805-acre premier recreation park with a playground, five miles of walking and biking paths, a kayak launch, sports fields and an off-leash dog area.",
+      "website": "https://bergencountynj.gov/bergen-county-department-of-parks/overpeck-county-park/",
+      "source_url": "https://bergencountynj.gov/bergen-county-department-of-parks/overpeck-county-park/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Ramapo Valley County Reservation",
+      "town": "Mahwah",
+      "address": "Ramapo Valley Rd (Route 202)",
+      "category": "outdoors",
+      "tags": [
+        "hiking",
+        "trails",
+        "river",
+        "camping",
+        "cross-country skiing"
+      ],
+      "best_for": [
+        "free",
+        "dogs",
+        "teens",
+        "groups"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "Bergen's largest park at over 4,000 acres, with hilly trails, the Ramapo River, ponds and cross-country skiing in winter; great for a real hike close to home.",
+      "website": "https://bergencountynj.gov/bergen-county-department-of-parks/ramapo-valley-county-reservation/",
+      "source_url": "https://bergencountynj.gov/bergen-county-department-of-parks/ramapo-valley-county-reservation/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Riverside County Park",
+      "town": "Lyndhurst",
+      "address": "315 Riverside Ave, Lyndhurst (North); 799 Riverside Ave, North Arlington (South)",
+      "category": "outdoors",
+      "tags": [
+        "park",
+        "walking path",
+        "dog park",
+        "passaic river"
+      ],
+      "best_for": [
+        "kids",
+        "free",
+        "dogs"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "An 85-acre park along the Passaic River with over 3 miles of paved paths, ball fields, a rowing center and the county's Joseph A. Carucci Jr. dog run.",
+      "website": "https://bergencountynj.gov/bergen-county-department-of-parks/riverside-county-park/",
+      "source_url": "https://bergencountynj.gov/bergen-county-department-of-parks/riverside-county-park/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Wood Dale County Park",
+      "town": "Woodcliff Lake",
+      "address": "Prospect Ave",
+      "category": "outdoors",
+      "tags": [
+        "park",
+        "pond",
+        "dog park",
+        "fishing"
+      ],
+      "best_for": [
+        "free",
+        "dogs",
+        "toddlers"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "A 118-acre northern Bergen park built around a scenic pond, with catch-and-release fishing, picnic spots and one of the county's dog runs.",
+      "website": "https://bergencountynj.gov/bergen-county-department-of-parks/wood-dale-county-park/",
+      "source_url": "https://bergencountynj.gov/bergen-county-department-of-parks/wood-dale-county-park/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Sam Nelkin County Park Dog Run",
+      "town": "Wallington",
+      "address": "Rose St",
+      "category": "outdoors",
+      "tags": [
+        "dog park",
+        "off-leash"
+      ],
+      "best_for": [
+        "dogs",
+        "free"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "One of five official Bergen County dog runs, handy for South Bergen dog owners.",
+      "website": "https://bergencountynj.gov/bergen-county-department-of-parks/dog-runs/",
+      "source_url": "https://bergencountynj.gov/bergen-county-department-of-parks/dog-runs/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "James A. McFaul Environmental Center",
+      "town": "Wyckoff",
+      "address": "150 Crescent Ave",
+      "category": "outdoors",
+      "tags": [
+        "nature center",
+        "trails",
+        "wildlife",
+        "museum",
+        "free"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "free",
+        "rainy day"
+      ],
+      "price_text": null,
+      "hours_text": "Hours change with the seasons; closed Thanksgiving, Christmas and New Year's Day",
+      "description": "A county wildlife sanctuary on a former 81-acre farm with nature trails, gardens and indoor science exhibits, an easy free outing with small kids.",
+      "website": "https://bergencountynj.gov/bergen-county-department-of-parks/j-a-mcfaul-environmental-center/",
+      "source_url": "https://bergencountynj.gov/bergen-county-department-of-parks/j-a-mcfaul-environmental-center/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Campgaw Mountain Ski & Tubing",
+      "town": "Mahwah",
+      "address": "200 Campgaw Rd",
+      "category": "outdoors",
+      "tags": [
+        "skiing",
+        "snowboarding",
+        "snow tubing",
+        "winter",
+        "lessons"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "groups"
+      ],
+      "price_text": "Tubing about $27-$39; lift tickets vary",
+      "hours_text": null,
+      "description": "Bergen County's own small ski hill with beginner-friendly slopes, lessons and snow tubing; 2026-27 season passes and programs are on sale now.",
+      "website": "https://www.skicampgaw.com/",
+      "source_url": "https://www.skicampgaw.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Palisades Interstate Park (NJ Section)",
+      "town": "Bergen County",
+      "address": "Along the Hudson River cliffs, Fort Lee to Alpine",
+      "category": "outdoors",
+      "tags": [
+        "hiking",
+        "trails",
+        "views",
+        "hudson river",
+        "history"
+      ],
+      "best_for": [
+        "free",
+        "dogs",
+        "teens",
+        "groups"
+      ],
+      "price_text": "Free (parking fees at some areas)",
+      "hours_text": null,
+      "description": "About 2,500 acres of clifftop and riverfront parkland minutes from Manhattan, with the Long Path and Shore Trail plus history programs at Fort Lee Historic Park.",
+      "website": "https://njpalisades.org/",
+      "source_url": "https://njpalisades.org/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Fort Lee Historic Park",
+      "town": "Fort Lee",
+      "address": null,
+      "category": "outdoors",
+      "tags": [
+        "history",
+        "revolutionary war",
+        "views",
+        "palisades"
+      ],
+      "best_for": [
+        "kids",
+        "free"
+      ],
+      "price_text": "Free; parking fees may apply",
+      "hours_text": null,
+      "description": "A Revolutionary War site on top of the Palisades that hosts frequent history programs, lectures and reenactments.",
+      "website": "https://njpalisades.org/",
+      "source_url": "https://njpalisades.org/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "State Line Lookout",
+      "town": "Alpine",
+      "address": null,
+      "category": "outdoors",
+      "tags": [
+        "views",
+        "hiking",
+        "palisades",
+        "cross-country skiing"
+      ],
+      "best_for": [
+        "free",
+        "dogs",
+        "teens"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "The highest point on the Palisades cliffs, with wide Hudson River views and trailheads; a classic short scenic outing.",
+      "website": "https://njpalisades.org/stateline/",
+      "source_url": "https://njpalisades.org/stateline/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Flat Rock Brook Nature Center",
+      "town": "Englewood",
+      "address": "443 Van Nostrand Ave",
+      "category": "outdoors",
+      "tags": [
+        "nature center",
+        "trails",
+        "hiking",
+        "playground",
+        "free"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "free"
+      ],
+      "price_text": "Free",
+      "hours_text": "Trails open dawn to dusk",
+      "description": "3.6 miles of self-guided forest trails on the Palisades ridge with a cascading stream, a natural playground and picnic area.",
+      "website": "https://www.flatrockbrook.org/visit",
+      "source_url": "https://www.flatrockbrook.org/visit",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Tenafly Nature Center",
+      "town": "Tenafly",
+      "address": "313 Hudson Ave",
+      "category": "outdoors",
+      "tags": [
+        "nature center",
+        "trails",
+        "hiking",
+        "pond",
+        "programs"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "free"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "A wooded preserve with miles of trails and Pfister's Pond, plus year-round family nature programs including toddler mornings and seasonal campfires.",
+      "website": "https://tenaflynaturecenter.org/",
+      "source_url": "https://tenaflynaturecenter.org/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Celery Farm",
+      "town": "Allendale",
+      "address": "Franklin Turnpike (main entrance)",
+      "category": "outdoors",
+      "tags": [
+        "nature preserve",
+        "birding",
+        "wetland",
+        "trails"
+      ],
+      "best_for": [
+        "free",
+        "kids"
+      ],
+      "price_text": "Free",
+      "hours_text": "Open daylight hours every day",
+      "description": "A 107-acre wetland preserve with footpaths and observation platforms where over 240 bird species have been spotted, great for a quiet family walk.",
+      "website": "https://www.allendalenj.gov/recreation-culture/celery-farm/",
+      "source_url": "https://www.allendalenj.gov/recreation-culture/celery-farm/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Richard W. DeKorte Park",
+      "town": "Lyndhurst",
+      "address": null,
+      "category": "outdoors",
+      "tags": [
+        "trails",
+        "wetlands",
+        "birding",
+        "boardwalk",
+        "meadowlands"
+      ],
+      "best_for": [
+        "kids",
+        "free"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "Meadowlands park with about 3.5 miles of paths and boardwalks over the marsh with big wetland views; note part of the Saw Mill Creek Trail is closed after storm damage.",
+      "website": "https://www.njsea.com/parks-and-trails/",
+      "source_url": "https://www.njsea.com/parks-and-trails/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Lorrimer Sanctuary",
+      "town": "Franklin Lakes",
+      "address": "790 Ewing Ave",
+      "category": "outdoors",
+      "tags": [
+        "nature",
+        "trails",
+        "audubon",
+        "birding"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "free"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "A 14-acre NJ Audubon sanctuary with a short, easy self-guided trail loop that's perfect for little legs.",
+      "website": "https://njaudubon.org/centers/lorrimer-sanctuary/",
+      "source_url": "https://njaudubon.org/centers/lorrimer-sanctuary/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Teaneck Creek Conservancy",
+      "town": "Teaneck",
+      "address": "20 Puffin Way",
+      "category": "outdoors",
+      "tags": [
+        "trails",
+        "eco-art",
+        "nature",
+        "wetlands"
+      ],
+      "best_for": [
+        "free",
+        "kids",
+        "dogs"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "About 1.3 miles of groomed trails through restored wetlands with outdoor eco-art installations; the site says the trails remain open.",
+      "website": "http://www.teaneckcreek.org/",
+      "source_url": "http://www.teaneckcreek.org/",
+      "status": "open",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Abma's Farm",
+      "town": "Wyckoff",
+      "address": "700 Lawlins Rd",
+      "category": "family",
+      "tags": [
+        "farm",
+        "petting zoo",
+        "farm market",
+        "bakery",
+        "animals"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "budget"
+      ],
+      "price_text": "Petting zoo ticketed",
+      "hours_text": null,
+      "description": "A 90-plus-year-old family farm with a farm market and bakery plus a barnyard petting zoo with goats, alpacas, ponies and 'Bunnyville', and seasonal events like photos with Santa.",
+      "website": "https://www.abmasfarm.com/wyckoff/",
+      "source_url": "https://www.abmasfarm.com/wyckoff/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Demarest Farms",
+      "town": "Hillsdale",
+      "address": "244 Wierimus Rd",
+      "category": "family",
+      "tags": [
+        "farm",
+        "petting zoo",
+        "farm market",
+        "holiday lights",
+        "animals"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers"
+      ],
+      "price_text": "Petting zoo ticketed; Orchard of Lights $35-$69",
+      "hours_text": "8 AM - 5 PM daily (2026 season)",
+      "description": "A Pascack Valley farm market with a farmyard petting zoo and, in the holiday season, an Orchard of Lights and Santa photo sessions.",
+      "website": "https://demarestfarms.com/",
+      "source_url": "https://demarestfarms.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Catch Air Paramus",
+      "town": "Paramus",
+      "address": "224 Rte 4",
+      "category": "family",
+      "tags": [
+        "indoor playground",
+        "toddlers",
+        "birthday parties"
+      ],
+      "best_for": [
+        "toddlers",
+        "kids",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "Catch Air's Paramus indoor playground for young children, a sister location to Hasbrouck Heights.",
+      "website": "https://catchair.com/",
+      "source_url": "https://catchair.com/location/hasbrouck-heights-nj/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Sky Zone Allendale-Saddle River",
+      "town": "Allendale",
+      "address": "80 Commerce Dr",
+      "category": "family",
+      "tags": [
+        "trampoline",
+        "indoor",
+        "birthday parties"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A big trampoline park with open jump, foam pits and dodgeball, plus holiday events like a noon New Year's Eve party for kids.",
+      "website": "https://www.skyzone.com/allendale-saddle-river-nj/",
+      "source_url": "https://www.skyzone.com/allendale-saddle-river-nj/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Urban Air Adventure Park",
+      "town": "South Hackensack",
+      "address": "69 Wesley St",
+      "category": "family",
+      "tags": [
+        "trampoline",
+        "indoor",
+        "climbing",
+        "ninja course"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "Unlimited Play about $40 (discounts for groups)",
+      "hours_text": "Sun 10 AM - 8 PM; Mon 3 PM - 8 PM (see site for other days)",
+      "description": "A trampoline and adventure park with climbing, ninja-style courses and an all-day play option, good for burning off energy on cold days.",
+      "website": "https://www.urbanair.com/new-jersey-south-hackensack/",
+      "source_url": "https://www.urbanair.com/new-jersey-south-hackensack/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Xtreme Energy Active Play",
+      "town": "Paramus",
+      "address": null,
+      "category": "family",
+      "tags": [
+        "indoor play",
+        "trampoline",
+        "climbing",
+        "ninja",
+        "obstacle course"
+      ],
+      "best_for": [
+        "kids",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": "Tue-Thu 1 PM - 6 PM; Fri 1 PM - 8 PM; Sat-Sun 10 AM - 8 PM",
+      "description": "Obstacle courses, trampolines, rock climbing and ninja challenges designed for kids ages 2 to 12.",
+      "website": "https://www.xtreme.energy/home/paramus",
+      "source_url": "https://www.xtreme.energy/home/paramus",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Catch Air Hasbrouck Heights",
+      "town": "Hasbrouck Heights",
+      "address": "69 NJ-17",
+      "category": "family",
+      "tags": [
+        "indoor playground",
+        "toddlers",
+        "birthday parties"
+      ],
+      "best_for": [
+        "toddlers",
+        "kids",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": "Sun-Wed 10 AM - 7 PM; Thu-Sat 10 AM - 8 PM",
+      "description": "A space-themed indoor playground for young kids with walk-ins welcome; grippy socks required.",
+      "website": "https://catchair.com/location/hasbrouck-heights-nj/",
+      "source_url": "https://catchair.com/location/hasbrouck-heights-nj/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Jumpin' Jax Kids",
+      "town": "Paramus",
+      "address": null,
+      "category": "family",
+      "tags": [
+        "indoor playground",
+        "open play",
+        "toddlers",
+        "climbing"
+      ],
+      "best_for": [
+        "toddlers",
+        "kids",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": "Open play Mon-Fri 10 AM - 3 PM; Sat-Sun 10 AM - 1 PM",
+      "description": "A long-running Paramus indoor play area with soft crawling zones for babies and climbing features for older kids during open play.",
+      "website": "https://jumpinjaxkids.com/",
+      "source_url": "https://jumpinjaxkids.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Go Playland",
+      "town": "Paramus",
+      "address": "Westfield Garden State Plaza, 1 Garden State Plaza",
+      "category": "family",
+      "tags": [
+        "indoor playground",
+        "mall",
+        "ball pit",
+        "trampoline"
+      ],
+      "best_for": [
+        "toddlers",
+        "kids",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": "Mon-Thu 10 AM - 9 PM; Fri-Sat 10 AM - 9:30 PM",
+      "description": "An indoor playground inside Garden State Plaza for ages 1-12 with climbing walls, slides, ball pits, a trampoline and sensory play.",
+      "website": "https://goplayland.com/",
+      "source_url": "https://www.westfield.com/en/united-states/gardenstateplaza/retailers/go-playland/80588",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Great Story Kids Cafe",
+      "town": "Ridgefield",
+      "address": "321 Broad Ave Ste 135 (entrance inside Super H Mart)",
+      "category": "family",
+      "tags": [
+        "indoor playground",
+        "cafe",
+        "toddlers"
+      ],
+      "best_for": [
+        "toddlers",
+        "kids",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": "Mon-Sat 10 AM - 7 PM; Sun 11 AM - 6 PM",
+      "description": "A themed indoor playground with zones for imaginative play, climbing and racing, aimed at younger kids; socks required.",
+      "website": "https://www.tgsplay.com/",
+      "source_url": "https://www.tgsplay.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Paper Street Play",
+      "town": "Park Ridge",
+      "address": "40 Park Ave, Store 1",
+      "category": "family",
+      "tags": [
+        "pretend play",
+        "indoor play",
+        "toddlers",
+        "classes"
+      ],
+      "best_for": [
+        "toddlers",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A boutique play space of child-sized playhouses for pretend play, capped at 10 admissions per 90-minute slot so it stays calm; reservations recommended.",
+      "website": "https://www.paperstreetplay.com/",
+      "source_url": "https://www.paperstreetplay.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bounce Safari",
+      "town": "Waldwick",
+      "address": "3 North St",
+      "category": "family",
+      "tags": [
+        "inflatables",
+        "bounce house",
+        "birthday parties"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "Indoor inflatables and play structures known mainly for private parties, with periodic open bounce sessions for walk-ins.",
+      "website": "https://www.bouncesafari.com/",
+      "source_url": "https://www.bouncesafari.com/blog/tags/open-bounce",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "BounceU Paramus",
+      "town": "Paramus",
+      "address": null,
+      "category": "family",
+      "tags": [
+        "inflatables",
+        "bounce house",
+        "birthday parties",
+        "open bounce"
+      ],
+      "best_for": [
+        "kids",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "Inflatable bounce rooms near Garden State Plaza known for private parties, with scheduled open bounce sessions for kids to burn off energy.",
+      "website": "https://www.bounceu.com/paramus-nj/",
+      "source_url": "https://www.bounceu.com/paramus-nj/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "1 Gym 4 All",
+      "town": "Waldwick",
+      "address": "145 Hopper Ave",
+      "category": "family",
+      "tags": [
+        "sensory gym",
+        "inclusive",
+        "zipline",
+        "trampoline",
+        "toddlers"
+      ],
+      "best_for": [
+        "toddlers",
+        "kids",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": "7 AM - 7 PM (extended hours, self check-in)",
+      "description": "An inclusive sensory gym with swings, a trampoline and zipline in one easy-to-watch room, now at a new Waldwick location.",
+      "website": "https://1gym4all.com/",
+      "source_url": "https://1gym4all.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Humdingers",
+      "town": "Paramus",
+      "address": "64 E Midland Ave",
+      "category": "family",
+      "tags": [
+        "bowling",
+        "laser tag",
+        "arcade",
+        "batting cages",
+        "vr"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "groups",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "An all-in-one entertainment center with 12 boutique bowling lanes, a new 30-player laser tag arena, an interactive ValoArena, arcade and food.",
+      "website": "https://www.humdingersnj.com/",
+      "source_url": "https://www.humdingersnj.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Monster Mini Golf Paramus",
+      "town": "Paramus",
+      "address": null,
+      "category": "family",
+      "tags": [
+        "mini golf",
+        "glow in the dark",
+        "arcade",
+        "indoor"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "budget"
+      ],
+      "price_text": "$15-$16 per round",
+      "hours_text": "Mon, Tue, Thu 2-9 PM; Wed 12-9 PM; Fri 2-10 PM; Sat 12-10 PM; Sun 12-8 PM",
+      "description": "An 18-hole glow-in-the-dark indoor mini golf course with monster-themed obstacles and an arcade.",
+      "website": "https://monsterminigolf.com/locations/us/nj/paramus/",
+      "source_url": "https://monsterminigolf.com/locations/us/nj/paramus/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Power Up Arena",
+      "town": "Paramus",
+      "address": "Westfield Garden State Plaza",
+      "category": "family",
+      "tags": [
+        "arcade",
+        "vr",
+        "gel blasters",
+        "interactive games"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A 17,000 sq ft high-tech game zone inside Garden State Plaza with gel blaster battles, free-roam VR, a glowing pixel floor and arcade games; walk-ins welcome.",
+      "website": "https://www.poweruparena.com/",
+      "source_url": "https://www.poweruparena.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "NxGn Arena",
+      "town": "Edgewater",
+      "address": "43 The Promenade (City Place)",
+      "category": "family",
+      "tags": [
+        "laser tag",
+        "arcade",
+        "vr",
+        "sim racing"
+      ],
+      "best_for": [
+        "teens",
+        "groups",
+        "rainy day"
+      ],
+      "price_text": "Laser tag $40 per player per hour ($25 happy hour)",
+      "hours_text": null,
+      "description": "Tactical laser tag in an apocalyptic NYC-style arena plus arcade, VR and sim racing; most attractions start at age 7.",
+      "website": "https://nxgnarena.com/",
+      "source_url": "https://nxgnarena.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Birdies Golf",
+      "town": "Upper Saddle River",
+      "address": "107 Pleasant Ave",
+      "category": "family",
+      "tags": [
+        "mini golf",
+        "golf simulators",
+        "indoor",
+        "multi-sport"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "groups",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "Indoor 18-hole putting course plus golf simulators that also play baseball, soccer, hockey and more, so it's fun even for non-golfers.",
+      "website": "https://www.birdiesgolfnj.com/",
+      "source_url": "https://www.birdiesgolfnj.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Paramus Mini Golf",
+      "town": "Paramus",
+      "address": "314 Paramus Rd",
+      "category": "family",
+      "tags": [
+        "mini golf",
+        "outdoor"
+      ],
+      "best_for": [
+        "kids",
+        "budget"
+      ],
+      "price_text": "$",
+      "hours_text": null,
+      "description": "A classic outdoor mini golf course; check its Facebook page for seasonal hours and weather closures.",
+      "website": "https://www.paramusminigolf.com/",
+      "source_url": "https://www.paramusminigolf.com/contact",
+      "status": "open",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Bowler City Lanes",
+      "town": "Hackensack",
+      "address": "85 Midtown Bridge Approach",
+      "category": "family",
+      "tags": [
+        "bowling",
+        "birthday parties"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "groups",
+        "rainy day",
+        "budget"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A longtime Hackensack bowling landmark that's a go-to for rainy days and kids' birthday parties.",
+      "website": "https://nationwidebowling.com/",
+      "source_url": "https://www.mybergen.com/bowling-in-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "North Arlington Bowl",
+      "town": "North Arlington",
+      "address": "200 Schuyler Ave",
+      "category": "family",
+      "tags": [
+        "bowling"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "groups",
+        "rainy day",
+        "budget"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A neighborhood bowling center in South Bergen for casual family games and leagues.",
+      "website": "https://nationwidebowling.com/",
+      "source_url": "https://www.mybergen.com/bowling-in-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bowlero Fair Lawn",
+      "town": "Fair Lawn",
+      "address": "22 Maple Ave",
+      "category": "family",
+      "tags": [
+        "bowling",
+        "arcade"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "groups",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A Bowlero bowling center in Fair Lawn, good for group outings and birthdays.",
+      "website": "https://www.bowlero.com/location/bowlero-fair-lawn",
+      "source_url": "https://www.mybergen.com/bowling-in-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Holiday Bowl",
+      "town": "Oakland",
+      "address": "29 Spruce St",
+      "category": "family",
+      "tags": [
+        "bowling"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "groups",
+        "rainy day",
+        "budget"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A northwest Bergen bowling alley for laid-back family games.",
+      "website": "http://holidaybowlnj.com/",
+      "source_url": "https://www.mybergen.com/bowling-in-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Wallington Lanes",
+      "town": "Wallington",
+      "address": "299 Paterson Ave",
+      "category": "family",
+      "tags": [
+        "bowling"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "groups",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A South Bergen bowling center listed in the 2026 local bowling guide.",
+      "website": "http://www.amf.com/wallingtonlanes",
+      "source_url": "https://www.mybergen.com/bowling-in-bergen-county/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Ice House",
+      "town": "Hackensack",
+      "address": null,
+      "category": "family",
+      "tags": [
+        "ice skating",
+        "public skating",
+        "hockey",
+        "indoor"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "$25 online / $30 at the booth (skate rental included)",
+      "hours_text": null,
+      "description": "A four-rink skating complex with public skating sessions that include skate rental; helmets are strongly recommended.",
+      "website": "https://www.icehousenj.com/",
+      "source_url": "https://www.icehousenj.com/public-skating",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "GOAT Climbing Gym",
+      "town": "Hackensack",
+      "address": "77 River St",
+      "category": "family",
+      "tags": [
+        "rock climbing",
+        "indoor",
+        "birthday parties"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "$$",
+      "hours_text": "Mon-Fri 10 AM - 10 PM; Sat 10 AM - 8 PM; Sun 10 AM - 6 PM",
+      "description": "A walk-in roped-climbing gym with some of the tallest walls in the area (25-60 ft), welcoming to both kids and first-timers.",
+      "website": "https://goatclimbinggym.com/",
+      "source_url": "https://goatclimbinggym.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Gravity Vault Upper Saddle River",
+      "town": "Upper Saddle River",
+      "address": null,
+      "category": "family",
+      "tags": [
+        "rock climbing",
+        "bouldering",
+        "indoor",
+        "kids classes"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "A 19,000 sq ft climbing and bouldering gym with 140+ routes, a speed wall and kids' classes, camps and parties for ages 5 and up.",
+      "website": "https://gravityvault.com/locations/upper-saddle-river-nj",
+      "source_url": "https://gravityvault.com/locations/upper-saddle-river-nj",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Aviation Hall of Fame & Museum of New Jersey",
+      "town": "Teterboro",
+      "address": "400 Fred Wehran Dr",
+      "category": "arts",
+      "tags": [
+        "museum",
+        "aviation",
+        "planes",
+        "history"
+      ],
+      "best_for": [
+        "kids",
+        "rainy day"
+      ],
+      "price_text": null,
+      "hours_text": "Wed-Sat, timed entries 10:30 AM - 3:30 PM",
+      "description": "A museum at Teterboro Airport with historic aircraft, engines and space gear that plane-loving kids will enjoy.",
+      "website": "https://njahof.org/",
+      "source_url": "https://njahof.org/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Meadowlands Museum",
+      "town": "Rutherford",
+      "address": "91 Crane Ave",
+      "category": "arts",
+      "tags": [
+        "museum",
+        "local history",
+        "antique toys"
+      ],
+      "best_for": [
+        "kids",
+        "rainy day"
+      ],
+      "price_text": null,
+      "hours_text": "Most Saturdays 10 AM - 4 PM",
+      "description": "A small local history museum in an old house, with a collection of antique toys and children's games.",
+      "website": "https://www.meadowlandsmuseum.com/",
+      "source_url": "https://www.meadowlandsmuseum.com/visit-us",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Historic New Bridge Landing",
+      "town": "River Edge",
+      "address": "1201 Main St",
+      "category": "arts",
+      "tags": [
+        "history",
+        "revolutionary war",
+        "museum",
+        "walking tour"
+      ],
+      "best_for": [
+        "kids",
+        "free"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Revolutionary War-era Bergen Dutch sandstone houses along the Hackensack River with a self-guided walking tour and Bergen County Historical Society programs.",
+      "website": "https://www.bergencountyhistory.org/",
+      "source_url": "https://www.bergencountyhistory.org/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Hermitage",
+      "town": "Ho-Ho-Kus",
+      "address": null,
+      "category": "arts",
+      "tags": [
+        "history",
+        "museum",
+        "house tour",
+        "gardens"
+      ],
+      "best_for": [
+        "kids",
+        "rainy day"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "A National Historic Landmark house museum open year-round for tours, gardens and family programs.",
+      "website": "https://www.thehermitage.org/",
+      "source_url": "https://www.thehermitage.org/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Westfield Garden State Plaza",
+      "town": "Paramus",
+      "address": "1 Garden State Plaza",
+      "category": "shopping",
+      "tags": [
+        "mall",
+        "indoor",
+        "kids attractions"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day"
+      ],
+      "price_text": "Free to visit",
+      "hours_text": null,
+      "description": "New Jersey's flagship mall, with kid-friendly stops like Go Playland and Power Up Arena that make it a solid rainy-day base.",
+      "website": "https://www.westfield.com/en/united-states/gardenstateplaza",
+      "source_url": "https://www.westfield.com/en/united-states/gardenstateplaza",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "American Dream",
+      "town": "East Rutherford",
+      "address": "1 American Dream Way",
+      "category": "shopping",
+      "tags": [
+        "mall",
+        "theme park",
+        "water park",
+        "indoor"
+      ],
+      "best_for": [
+        "kids",
+        "teens",
+        "rainy day",
+        "groups"
+      ],
+      "price_text": "Free to enter; attractions ticketed",
+      "hours_text": null,
+      "description": "A mega-mall with Nickelodeon Universe, DreamWorks Water Park, Big SNOW, SEA LIFE, LEGOLAND Discovery Center and dozens of smaller attractions under one roof.",
+      "website": "https://www.americandream.com",
+      "source_url": "https://www.americandream.com/venue/nickelodeon-universe",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Ramsey Free Public Library Children's Room",
+      "town": "Ramsey",
+      "address": null,
+      "category": "family",
+      "tags": [
+        "library",
+        "storytime",
+        "free",
+        "kids"
+      ],
+      "best_for": [
+        "kids",
+        "toddlers",
+        "free",
+        "rainy day"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "A children's room with monthly storytimes, crafts and performances, plus take-home story time kits and borrowable sensory kits.",
+      "website": "https://www.ramseylibrary.org/kids",
+      "source_url": "https://www.ramseylibrary.org/kids",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Leonia Public Library Children's Room",
+      "town": "Leonia",
+      "address": null,
+      "category": "family",
+      "tags": [
+        "library",
+        "toddler play area",
+        "free"
+      ],
+      "best_for": [
+        "toddlers",
+        "kids",
+        "free",
+        "rainy day"
+      ],
+      "price_text": "Free",
+      "hours_text": null,
+      "description": "The lower-level children's room has a toddler play area, free coloring pages and plenty of books, an easy free rainy-day stop.",
+      "website": "https://www.leonialibrary.org/childrens-services",
+      "source_url": "https://www.leonialibrary.org/childrens-services",
+      "status": "open",
+      "opened_on": null,
+      "verified": false
+    }
+  ]
+}
