@@ -356,7 +356,10 @@ with open(INDEX_FILE, "r", encoding="utf-8") as f:
 if "<!-- TODAY_START -->" in html and "<!-- TODAY_END -->" in html:
     html = re.sub(r"<!-- TODAY_START -->.*?<!-- TODAY_END -->", section, html, flags=re.S)
 else:
-    html = html.replace("</section>\n\n<div class=\"lane-stripe\"></div>", f"</section>\n\n{section}\n\n<div class=\"lane-stripe\"></div>", 1)
+    # The landing page no longer shows a daily events section (agent-first redesign).
+    # Without the TODAY markers there is nothing to update, so leave index.html alone.
+    print("index.html has no TODAY markers; skipping daily section update")
+    sys.exit(0)
 
 # Ensure basic style for lead line exists
 if ".today-lead" not in html:

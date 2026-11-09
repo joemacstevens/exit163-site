@@ -13,7 +13,7 @@
 
 ## Pages
 
-- [Home and newsletter signup](https://www.exit163.com/)
+- [Home: sign up for the text agent and newsletter](https://www.exit163.com/)
 - [Bergen County holiday tracker 2026](https://www.exit163.com/holidays): tree lightings, menorah lightings, holiday markets and Santa events by town
 - [For businesses](https://www.exit163.com/claim): claim a free listing or sponsor a town
 - [Privacy](https://www.exit163.com/privacy)
