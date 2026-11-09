@@ -427,6 +427,7 @@
     .bub { opacity: 1; transform: none; }
   }
 </style>
+<script src="/meta-pixel.js"></script>
 </head>
 <body>
 
@@ -823,6 +824,7 @@
           form.classList.add('is-done');
           done.focus({ preventScroll: true });
           if (window.gtag) window.gtag('event', 'sign_up', { method: [p && 'sms', m && 'email'].filter(Boolean).join('+') });
+          if (window.fbq) window.fbq('track', 'Lead', { content_name: 'home_signup', content_category: [p && 'sms', m && 'email'].filter(Boolean).join('+') });
         })
         .catch(function () { err('Network hiccup. Please try again.'); })
         .finally(function () { btn.disabled = false; label.textContent = 'Get my local agent'; });
