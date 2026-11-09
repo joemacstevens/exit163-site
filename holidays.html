@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bergen County Tree Lighting &amp; Holiday Market Tracker 2026 | Exit 163</title>
+<meta name="description" content="Every Bergen County tree lighting, menorah lighting, holiday market and Santa event for 2026, in one list. Sorted by date, filterable by town, updated weekly.">
+<link rel="canonical" href="https://exit163.com/holidays">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://exit163.com/holidays">
+<meta property="og:title" content="Bergen County Tree Lighting &amp; Holiday Market Tracker 2026">
+<meta property="og:description" content="Every Bergen tree lighting, menorah lighting, holiday market and Santa event, in one list. Filter by your town. Updated weekly.">
+<meta property="og:image" content="https://exit163.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bergen County Holiday Tracker 2026">
+<meta name="twitter:description" content="Every Bergen tree lighting, menorah lighting, holiday market and Santa event, in one list.">
+<meta name="twitter:image" content="https://exit163.com/og-image.png">
+<meta name="theme-color" content="#1C1C1C">
+<link rel="icon" type="image/png" href="/avatar.png">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;900&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #F0F0E8; color: #2D3436; min-height: 100vh; }
+  a { color: #006B3F; }
+
+  .topbar { background: #1C1C1C; padding: 0.75rem 1rem; }
+  .topbar a { color: #F0F0E8; text-decoration: none; font-family: 'Overpass', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.04em; }
+  .topbar a span { background: #006B3F; border: 2px solid rgba(255,255,255,0.5); border-radius: 4px; padding: 0.1rem 0.4rem; margin-right: 0.4rem; }
+
+  .hero { background: #1C1C1C; color: #F0F0E8; padding: 1.75rem 1rem 2.5rem; text-align: center; position: relative; }
+  .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: #FFB81C; }
+  .kicker { display: inline-block; background: #006B3F; color: #fff; font-family: 'Overpass', sans-serif; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 999px; margin-bottom: 1rem; }
+  .hero h1 { font-family: 'Overpass', sans-serif; font-weight: 900; font-size: clamp(1.7rem, 7vw, 3rem); line-height: 1.15; color: #fff; max-width: 760px; margin: 0 auto 0.85rem; }
+  .hero h1 span { color: #FFB81C; }
+  .hero-sub { font-size: 1rem; color: rgba(240,240,232,0.75); max-width: 520px; margin: 0 auto 1rem; line-height: 1.55; }
+  .updated { font-size: 0.82rem; color: #FFB81C; font-weight: 600; }
+  .stats { margin-top: 0.4rem; font-size: 0.82rem; color: rgba(240,240,232,0.55); }
+
+  main { max-width: 760px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+
+  .filters { position: sticky; top: 0; z-index: 5; background: #F0F0E8; padding: 0.75rem 0 0.6rem; border-bottom: 1px solid #dfd7cd; margin-bottom: 1rem; }
+  .chips { display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex: 0 0 auto; border: 1.5px solid #1C1C1C; background: #fff; color: #1C1C1C; border-radius: 999px; padding: 0.45rem 0.85rem; font: 600 0.85rem 'Inter', sans-serif; cursor: pointer; min-height: 38px; }
+  .chip[aria-pressed="true"] { background: #1C1C1C; color: #FFB81C; }
+  .town-row { display: flex; gap: 0.5rem; align-items: center; }
+  .town-row label { font-size: 0.85rem; font-weight: 600; color: #1C1C1C; }
+  .town-row select { flex: 1; min-width: 0; padding: 0.55rem 0.6rem; border: 1.5px solid #c9c0b4; border-radius: 8px; background: #fff; font: 500 0.95rem 'Inter', sans-serif; color: #1C1C1C; }
+  .count { font-size: 0.8rem; color: #6B6B5E; margin-top: 0.5rem; }
+
+  .section-label { font-family: 'Overpass', sans-serif; font-weight: 900; font-size: 1.15rem; color: #1C1C1C; margin: 1.25rem 0 0.6rem; }
+  .list { display: grid; gap: 0.75rem; }
+  .card { background: #fff; border: 1px solid #dfd7cd; border-radius: 12px; padding: 0.95rem 1rem; display: grid; grid-template-columns: 58px 1fr; gap: 0.85rem; }
+  .datebox { background: #006B3F; color: #fff; border-radius: 8px; text-align: center; padding: 0.45rem 0.2rem; align-self: start; font-family: 'Overpass', sans-serif; }
+  .datebox .m { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #FFB81C; }
+  .datebox .d { font-size: 1.6rem; font-weight: 900; line-height: 1.05; }
+  .datebox .w { font-size: 0.68rem; font-weight: 700; opacity: 0.8; }
+  .datebox.tba { background: #E8E0D8; color: #6B6B5E; }
+  .datebox.tba .d { font-size: 1rem; padding: 0.35rem 0; }
+  .pills { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.4rem; }
+  .pill { display: inline-block; background: #1C1C1C; color: #FFB81C; border-radius: 999px; padding: 0.2rem 0.6rem; font-size: 0.7rem; font-weight: 700; }
+  .pill.town { background: #F0F0E8; color: #1C1C1C; border: 1px solid #dfd7cd; }
+  .pill.warn { background: #FFF3D6; color: #8a5a00; border: 1px solid #f1d38a; }
+  .card h3 { font-family: 'Overpass', sans-serif; font-size: 1.05rem; line-height: 1.3; color: #1C1C1C; margin-bottom: 0.3rem; }
+  .meta { font-size: 0.85rem; color: #4a4a3f; line-height: 1.45; }
+  .meta strong { color: #1C1C1C; font-weight: 600; }
+  .notes { font-size: 0.84rem; color: #6B6B5E; line-height: 1.5; margin-top: 0.35rem; }
+  .src { display: inline-block; margin-top: 0.45rem; font-size: 0.82rem; font-weight: 700; text-decoration: none; }
+  .src:hover { text-decoration: underline; }
+
+  .locked { position: relative; }
+  .locked .card { filter: blur(5px); user-select: none; pointer-events: none; opacity: 0.85; }
+  .locked-fade { position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(rgba(240,240,232,0), #F0F0E8); pointer-events: none; }
+
+  .gate { background: #1C1C1C; color: #F0F0E8; border-radius: 14px; padding: 1.5rem 1.1rem; text-align: center; margin: 1rem 0; border-bottom: 4px solid #FFB81C; }
+  .gate h2 { font-family: 'Overpass', sans-serif; font-weight: 900; font-size: 1.4rem; line-height: 1.2; color: #fff; margin-bottom: 0.5rem; }
+  .gate h2 span { color: #FFB81C; }
+  .gate p { color: rgba(240,240,232,0.75); font-size: 0.95rem; line-height: 1.5; margin: 0 auto 1.1rem; max-width: 440px; }
+  .gate .fine { font-size: 0.78rem; color: rgba(240,240,232,0.45); margin: 0.6rem 0 0; }
+
+  /* Reused from index.html */
+  .subscribe-form { display: flex; gap: 0.5rem; max-width: 460px; margin: 0 auto; }
+  .subscribe-form input[type="email"] { flex: 1; min-width: 0; padding: 0.875rem 1.25rem; border: 2px solid rgba(255,255,255,0.2); border-radius: 8px; background: rgba(255,255,255,0.1); color: #fff; font-size: 1rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
+  .subscribe-form input[type="email"]::placeholder { color: rgba(255,255,255,0.4); }
+  .subscribe-form input[type="email"]:focus { border-color: #FFB81C; }
+  .subscribe-form button { padding: 0.875rem 1.5rem; background: #FFB81C; color: #1C1C1C; border: none; border-radius: 8px; font-weight: 700; font-size: 1rem; font-family: 'Inter', sans-serif; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+  .subscribe-form button:hover { background: #e5a518; }
+  .subscribe-form button:disabled { opacity: 0.7; cursor: wait; }
+  .subscribe-msg { margin: 10px 0 0; font-weight: 700; }
+
+  .unlocked-note { background: #E3F1E9; border: 1px solid #b7dcc6; color: #1f5a3c; border-radius: 10px; padding: 0.7rem 0.9rem; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.75rem; }
+  .empty { text-align: center; color: #6B6B5E; padding: 2rem 1rem; font-size: 0.95rem; }
+  .tip { margin-top: 2rem; background: #fff; border: 1px dashed #c9c0b4; border-radius: 12px; padding: 1rem; font-size: 0.88rem; color: #4a4a3f; line-height: 1.55; }
+
+  .footer { border-top: 3px solid #006B3F; padding: 2rem 1rem; text-align: center; }
+  .footer p { font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; color: #6B6B5E; margin-bottom: 0.5rem; }
+  .footer .copy { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.75rem; color: #999; }
+  .footer a { font-weight: 600; text-decoration: none; }
+
+  @media (max-width: 480px) {
+    .subscribe-form { flex-direction: column; }
+    .subscribe-form button { width: 100%; }
+  }
+  @media (min-width: 640px) {
+    .card { grid-template-columns: 70px 1fr; padding: 1.1rem 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topbar"><a href="/"><span>163</span>&larr; Exit 163 home</a></nav>
+
+<header class="hero">
+  <span class="kicker">Holiday Tracker 2026</span>
+  <h1>Every Bergen <span>tree lighting, menorah lighting &amp; holiday market</span>, in one list</h1>
+  <p class="hero-sub">Tree lightings, menorah lightings, holiday markets and Santa events across Bergen County's 70 towns, sorted by date. Every listing links to its source.</p>
+  <p class="updated">Last updated <span id="updated"></span></p>
+  <p class="stats" id="stats"></p>
+</header>
+
+<main>
+  <div class="filters">
+    <div class="chips" role="group" aria-label="Filter by type" id="typeChips"></div>
+    <div class="town-row">
+      <label for="town">Town</label>
+      <select id="town"><option value="">All towns</option></select>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+  </div>
+
+  <div id="results"><p class="empty">Loading events&hellip;</p></div>
+
+  <div class="tip">
+    <strong>Know about an event we're missing?</strong> Towns post dates all through November, so we add new ones every week. Listings marked "2026 date TBA" show last year's date as a guide only, so check the source before you go. Spotted something? DM us on <a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">Instagram</a>.
+  </div>
+</main>
+
+<template id="gateTpl">
+  <section class="gate" id="gate">
+    <h2>Unlock the <span>full list</span> free</h2>
+    <p>Get every event in the tracker, plus the Friday Exit 163 newsletter with this weekend's best Bergen County plans.</p>
+    <form class="subscribe-form" action="/api/subscribe" method="POST">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" inputmode="email" aria-label="Email address">
+      <button type="submit">UNLOCK &rarr;</button>
+    </form>
+    <p class="fine">Free. Every Friday. Unsubscribe anytime.</p>
+  </section>
+</template>
+
+<footer class="footer">
+  <p>Exit 163 is a weekly newsletter for people who live off the Turnpike and love it here anyway.</p>
+  <p class="copy"><a href="/">exit163.com</a> &middot; <a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="/privacy">Privacy Policy</a></p>
+  <p class="copy">&copy; 2026 Exit 163. Bergen County, NJ.</p>
+</footer>
+
+<script>
+(function(){
+  // EDITOR: bump this when you update holidays-2026.json.
+  var LAST_UPDATED = '2026-11-08';
+  var DATA_URL = '/holidays-2026.json';
+  var FREE_COUNT = 6;
+  var UNLOCK_KEY = 'exit163_holidays_unlocked';
+
+  var TYPES = [
+    { id: '', label: 'All' },
+    { id: 'tree', label: '🎄 Tree lightings' },
+    { id: 'menorah', label: '🕎 Menorah lightings' },
+    { id: 'market', label: '🛍️ Markets' },
+    { id: 'santa', label: '🎅 Santa' },
+    { id: 'other', label: '✨ More' }
+  ];
+  var TYPE_LABEL = { tree: 'Tree lighting', menorah: 'Menorah lighting', market: 'Holiday market', santa: 'Santa', other: 'Holiday event' };
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  var state = { type: '', town: '', unlocked: false, events: [], freeIds: {} };
+
+  function storageGet(){ try { return window.localStorage.getItem(UNLOCK_KEY) === '1'; } catch (e) { return false; } }
+  function storageSet(){ try { window.localStorage.setItem(UNLOCK_KEY, '1'); } catch (e) {} }
+
+  function esc(s){
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function parseISO(iso){
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+    return m ? new Date(+m[1], +m[2] - 1, +m[3], 12) : null;
+  }
+  function todayISO(){
+    var d = new Date();
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  }
+  function prettyDate(iso){
+    var d = parseISO(iso);
+    return d ? DAYS[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() : iso;
+  }
+  function safeUrl(u){ return /^https?:\/\//i.test(u || '') ? u : '#'; }
+  function hostOf(u){ try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return 'source'; } }
+
+  // Dated, upcoming events first (by date), then TBA events (by town).
+  function sortEvents(list){
+    return list.slice().sort(function(a, b){
+      if (a.date && b.date) return a.date < b.date ? -1 : a.date > b.date ? 1 : a.town.localeCompare(b.town);
+      if (a.date) return -1;
+      if (b.date) return 1;
+      return a.town.localeCompare(b.town) || a.event.localeCompare(b.event);
+    });
+  }
+
+  function card(e){
+    var d = parseISO(e.date);
+    var dateBox = d
+      ? '<div class="datebox"><div class="m">' + MONTHS[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div><div class="w">' + DAYS[d.getDay()] + '</div></div>'
+      : '<div class="datebox tba"><div class="m">2026</div><div class="d">TBA</div></div>';
+    var pills = '<span class="pill">' + esc(TYPE_LABEL[e.type] || 'Holiday event') + '</span><span class="pill town">' + esc(e.town) + '</span>';
+    if (d && !e.verified_2026) pills += '<span class="pill warn">Date not yet confirmed</span>';
+    var when = d ? prettyDate(e.date) + ' · ' + (e.time ? esc(e.time) : 'time TBA') : '2026 date TBA';
+    var meta = '<div class="meta"><strong>When:</strong> ' + when + '</div>';
+    if (e.location) meta += '<div class="meta"><strong>Where:</strong> ' + esc(e.location) + '</div>';
+    if (e.cost) meta += '<div class="meta"><strong>Cost:</strong> ' + esc(e.cost) + '</div>';
+    return '<article class="card">' + dateBox + '<div><div class="pills">' + pills + '</div>' +
+      '<h3>' + esc(e.event) + '</h3>' + meta +
+      (e.notes ? '<p class="notes">' + esc(e.notes) + '</p>' : '') +
+      '<a class="src" href="' + esc(safeUrl(e.source_url)) + '" target="_blank" rel="noopener">Source: ' + esc(hostOf(e.source_url)) + ' &rarr;</a>' +
+      '</div></article>';
+  }
+
+  function render(){
+    var list = state.events.filter(function(e){
+      return (!state.type || e.type === state.type) && (!state.town || e.town === state.town);
+    });
+    var out = document.getElementById('results');
+    var countEl = document.getElementById('count');
+    var dated = list.filter(function(e){ return e.date; }).length;
+    countEl.textContent = list.length + (list.length === 1 ? ' event' : ' events') + ' · ' + dated + ' with dates · ' + (list.length - dated) + ' TBA';
+
+    if (!list.length) {
+      out.innerHTML = '<p class="empty">Nothing listed for this filter yet. Towns are still posting 2026 dates, so check back next week.</p>';
+      return;
+    }
+
+    if (state.unlocked) {
+      out.innerHTML = '<div class="unlocked-note">You\'re in. Here\'s the full list.</div><div class="list">' + list.map(card).join('') + '</div>';
+      return;
+    }
+
+    var free = list.filter(function(e){ return state.freeIds[e._id]; });
+    var locked = list.filter(function(e){ return !state.freeIds[e._id]; });
+    var html = '';
+    if (free.length) html += '<h2 class="section-label">Coming up next</h2><div class="list">' + free.map(card).join('') + '</div>';
+    html += document.getElementById('gateTpl').innerHTML;
+    if (locked.length) {
+      // Only a few blurred teasers are drawn; the full list renders after unlock.
+      html += '<h2 class="section-label">' + locked.length + ' more ' + (locked.length === 1 ? 'event' : 'events') + ' in the full list</h2>' +
+        '<div class="locked" aria-hidden="true"><div class="list">' + locked.slice(0, 4).map(card).join('') + '</div><div class="locked-fade"></div></div>';
+    }
+    out.innerHTML = html;
+    wireForm(out.querySelector('form.subscribe-form'));
+  }
+
+  function msg(form, text, ok){
+    var el = form.nextElementSibling && form.nextElementSibling.classList.contains('subscribe-msg') ? form.nextElementSibling : null;
+    if (!el) { el = document.createElement('p'); el.className = 'subscribe-msg'; form.parentNode.insertBefore(el, form.nextSibling); }
+    el.textContent = text; el.style.color = ok ? '#7CD8A4' : '#FF8A80';
+  }
+
+  function wireForm(form){
+    if (!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = form.querySelector('button'), label = btn.textContent;
+      btn.disabled = true; btn.textContent = 'Unlocking…';
+      fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
+        .then(function(r){ return r.json().catch(function(){ return { ok: false }; }); })
+        .then(function(d){
+          if (d.ok) {
+            storageSet();
+            state.unlocked = true;
+            render();
+            var top = document.getElementById('results');
+            if (top && top.scrollIntoView) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            msg(form, d.error || 'Something went wrong. Please try again.', false);
+            btn.disabled = false; btn.textContent = label;
+          }
+        })
+        .catch(function(){ msg(form, 'Network hiccup. Please try again.', false); btn.disabled = false; btn.textContent = label; });
+    });
+  }
+
+  function buildFilters(){
+    var chips = document.getElementById('typeChips');
+    chips.innerHTML = TYPES.map(function(t){
+      return '<button type="button" class="chip" data-type="' + t.id + '" aria-pressed="' + (t.id === state.type) + '">' + t.label + '</button>';
+    }).join('');
+    chips.addEventListener('click', function(e){
+      var b = e.target.closest('.chip'); if (!b) return;
+      state.type = b.getAttribute('data-type');
+      chips.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', String(c === b)); });
+      render();
+    });
+    var sel = document.getElementById('town');
+    var towns = {};
+    state.events.forEach(function(e){ towns[e.town] = (towns[e.town] || 0) + 1; });
+    Object.keys(towns).sort().forEach(function(t){
+      var o = document.createElement('option'); o.value = t; o.textContent = t + ' (' + towns[t] + ')'; sel.appendChild(o);
+    });
+    sel.addEventListener('change', function(){ state.town = sel.value; render(); });
+  }
+
+  function init(events){
+    var today = todayISO();
+    // Drop events whose date has passed; keep TBA ones.
+    state.events = sortEvents(events.filter(function(e){ return e && e.town && e.event && (!e.date || e.date >= today); }));
+    state.events.forEach(function(e, i){ e._id = i; });
+    // Free preview = the next FREE_COUNT dated events overall (independent of filters).
+    state.events.filter(function(e){ return e.date; }).slice(0, FREE_COUNT).forEach(function(e){ state.freeIds[e._id] = true; });
+    var towns = {}; state.events.forEach(function(e){ towns[e.town] = 1; });
+    var verified = state.events.filter(function(e){ return e.verified_2026; }).length;
+    document.getElementById('stats').textContent = state.events.length + ' events · ' + Object.keys(towns).length + ' towns · ' + verified + ' confirmed for 2026';
+    buildFilters();
+    render();
+  }
+
+  document.getElementById('updated').textContent = prettyDate(LAST_UPDATED).replace(/^\w+, /, '');
+  state.unlocked = storageGet() || /[?&]unlocked=1\b/.test(location.search);
+
+  fetch(DATA_URL, { cache: 'no-cache' })
+    .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(data){ init(Array.isArray(data) ? data : []); })
+    .catch(function(){ document.getElementById('results').innerHTML = '<p class="empty">Couldn\'t load the list. Please refresh.</p>'; });
+})();
+</script>
+</body>
+</html>

@@ -7,6 +7,10 @@
       "destination": "/privacy.html"
     },
     {
+      "source": "/holidays",
+      "destination": "/holidays.html"
+    },
+    {
       "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
