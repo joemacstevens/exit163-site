@@ -1,0 +1,1225 @@
+{
+  "events": [
+    {
+      "title": "An Evening with Peter Billingsley and A Christmas Story",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "arts",
+      "tags": [
+        "holiday",
+        "movie",
+        "talk"
+      ],
+      "starts_on": "2026-11-14",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7 PM",
+      "cost_text": null,
+      "description": "The actor who played Ralphie in the holiday classic A Christmas Story hosts an evening built around the film. A fun pre-holiday night out for fans of the movie.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "CoComelon: Sing-A-Long LIVE",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "family",
+      "tags": [
+        "kids",
+        "toddlers",
+        "music",
+        "show"
+      ],
+      "starts_on": "2026-11-15",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "1 PM",
+      "cost_text": null,
+      "description": "A live sing-along stage show with the CoComelon characters, aimed squarely at toddlers and preschoolers.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "Menopause The Musical: 25th Anniversary Tour",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "arts",
+      "tags": [
+        "musical",
+        "comedy",
+        "theater"
+      ],
+      "starts_on": "2026-11-18",
+      "ends_on": "2026-11-19",
+      "recurrence_text": "Two nights",
+      "time_text": "7 PM",
+      "cost_text": null,
+      "description": "The long-running comedy musical about four women and 'the change' stops in Englewood on its 25th anniversary tour. A girls'-night-out favorite.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "Dog Man: The Musical",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "family",
+      "tags": [
+        "kids",
+        "musical",
+        "books"
+      ],
+      "starts_on": "2026-11-20",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7 PM",
+      "cost_text": null,
+      "description": "Dav Pilkey's best-selling Dog Man graphic novels come to life as a kids' musical. Great for elementary-age readers.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "John Pizzarelli Trio: Tony Bennett Centennial Celebration",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "arts",
+      "tags": [
+        "jazz",
+        "concert",
+        "music"
+      ],
+      "starts_on": "2026-11-22",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7 PM",
+      "cost_text": null,
+      "description": "Jazz guitarist John Pizzarelli and his trio play a tribute to Tony Bennett for his 100th birthday at bergenPAC's historic theater.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "Anthony Rodia: Insanely Funny Tour",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "arts",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-11-27",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8 PM",
+      "cost_text": null,
+      "description": "Stand-up comic Anthony Rodia brings his tour to bergenPAC the night after Thanksgiving, an easy way to get out of the house with visiting family.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "Zebra in Concert",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "arts",
+      "tags": [
+        "rock",
+        "concert",
+        "music"
+      ],
+      "starts_on": "2026-11-28",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8 PM",
+      "cost_text": null,
+      "description": "Rock band Zebra plays bergenPAC on Thanksgiving weekend.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "A Very Jenn and Mel Christmas Show",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "holiday",
+      "tags": [
+        "christmas",
+        "show",
+        "music"
+      ],
+      "starts_on": "2026-11-29",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "3 PM",
+      "cost_text": null,
+      "description": "A Sunday-afternoon Christmas variety show to kick off the holiday season.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "New Jersey Ballet's Nutcracker",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "holiday",
+      "tags": [
+        "nutcracker",
+        "ballet",
+        "kids",
+        "christmas"
+      ],
+      "starts_on": "2026-12-05",
+      "ends_on": "2026-12-06",
+      "recurrence_text": "Sat-Sun",
+      "time_text": null,
+      "cost_text": null,
+      "description": "New Jersey Ballet performs the holiday classic The Nutcracker on the bergenPAC stage. A good first ballet for kids.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "Darlene Love: Love for the Holidays",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "holiday",
+      "tags": [
+        "christmas",
+        "concert",
+        "music"
+      ],
+      "starts_on": "2026-12-11",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8 PM",
+      "cost_text": null,
+      "description": "Darlene Love brings her 'Love for the Holidays' show to Englewood, a seasonal favorite for fans of classic holiday pop.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "Holiday Doo Wop",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "holiday",
+      "tags": [
+        "doo wop",
+        "oldies",
+        "concert",
+        "christmas"
+      ],
+      "starts_on": "2026-12-12",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7 PM",
+      "cost_text": null,
+      "description": "An evening of doo-wop harmonies and holiday favorites, popular with the oldies crowd.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "Night Ranger in Concert",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "arts",
+      "tags": [
+        "rock",
+        "concert",
+        "music",
+        "80s"
+      ],
+      "starts_on": "2026-12-13",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7 PM",
+      "cost_text": null,
+      "description": "Rock band Night Ranger plays bergenPAC in mid-December.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "bergenPAC Showtime: 101 Dalmatians KIDS, Newsies JR. and The Addams Family",
+      "town": "Englewood",
+      "location": "bergenPAC, Englewood",
+      "category": "family",
+      "tags": [
+        "kids",
+        "musical",
+        "theater",
+        "students"
+      ],
+      "starts_on": "2026-12-19",
+      "ends_on": null,
+      "recurrence_text": "Three shows in one day",
+      "time_text": "101 Dalmatians KIDS 11 AM; Newsies JR. 2 PM; The Addams Family 6 PM",
+      "cost_text": null,
+      "description": "Students from bergenPAC's Performing Arts School stage three musicals in one day, from the youngest kids to the high school troupe.",
+      "source_url": "https://www.bergenpac.org/events",
+      "verified": true
+    },
+    {
+      "title": "Dracula: A Comedy of Terrors (Bergen County Players)",
+      "town": "Oradell",
+      "location": "Bergen County Players, 298 Kinderkamack Road",
+      "category": "arts",
+      "tags": [
+        "theater",
+        "comedy",
+        "community theater"
+      ],
+      "starts_on": "2026-10-24",
+      "ends_on": "2026-11-14",
+      "recurrence_text": "Final week of run",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Community theater troupe Bergen County Players finishes its run of this fast, silly spin on the Dracula legend.",
+      "source_url": "https://www.bcplayers.org",
+      "verified": true
+    },
+    {
+      "title": "Rodgers & Hammerstein's Cinderella (Bergen County Players)",
+      "town": "Oradell",
+      "location": "Bergen County Players, 298 Kinderkamack Road",
+      "category": "arts",
+      "tags": [
+        "theater",
+        "musical",
+        "family",
+        "holiday season"
+      ],
+      "starts_on": "2026-12-05",
+      "ends_on": "2026-12-20",
+      "recurrence_text": "Multi-week run",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Bergen County Players stages the Rodgers & Hammerstein Cinderella musical for the holiday season. A family-friendly classic at the Little Firehouse Theatre.",
+      "source_url": "https://www.bcplayers.org",
+      "verified": true
+    },
+    {
+      "title": "She Loves Me (Bergenstages)",
+      "town": "Paramus",
+      "location": "Ciccone Theatre, Bergen Community College main campus",
+      "category": "arts",
+      "tags": [
+        "theater",
+        "musical",
+        "budget"
+      ],
+      "starts_on": "2026-12-04",
+      "ends_on": "2026-12-12",
+      "recurrence_text": "Dec 4, 5, 10, 11, 12 evenings; Dec 5 & 12 matinees",
+      "time_text": "7:30 PM; 2 PM matinees Dec 5 & 12",
+      "cost_text": "$18 general, $12 seniors/BCC, $5 students",
+      "description": "Bergen Community College's theater program performs the romantic musical that inspired You've Got Mail. An affordable night of musical theater; the Dec 10 show includes a talk-back.",
+      "source_url": "https://bergen.edu/theatres-at-bergen/bergenstages/current-season/",
+      "verified": true
+    },
+    {
+      "title": "Howdy Stranger Improv Comedy Show",
+      "town": "Hackensack",
+      "location": "Hackensack Meridian Health Theatre, HACPAC",
+      "category": "arts",
+      "tags": [
+        "comedy",
+        "improv",
+        "date night"
+      ],
+      "starts_on": "2026-11-14",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8 PM",
+      "cost_text": "$15 - $25",
+      "description": "A 90-minute game-show-style improv show where audience shouting drives the scenes.",
+      "source_url": "https://hacpac.org/upcoming-events/",
+      "verified": true
+    },
+    {
+      "title": "The Christmas Caper",
+      "town": "Hackensack",
+      "location": "Hackensack Meridian Health Theatre, HACPAC",
+      "category": "holiday",
+      "tags": [
+        "kids",
+        "christmas",
+        "show",
+        "sensory friendly"
+      ],
+      "starts_on": "2026-12-04",
+      "ends_on": "2026-12-12",
+      "recurrence_text": "Dec 4, 5, 11, 12 plus a sensory-friendly show Dec 6",
+      "time_text": "7:30 PM; 2 PM matinees Dec 5 & 12; sensory-friendly 3 PM Dec 6",
+      "cost_text": "$15",
+      "description": "Hackensack's annual holiday family show: Mrs. Claus and Santa's elves race to save Christmas. There's a sensory-friendly performance on Dec 6.",
+      "source_url": "https://hacpac.org/upcoming-events/",
+      "verified": true
+    },
+    {
+      "title": "As You Like It (Ramapo College Theater)",
+      "town": "Mahwah",
+      "location": "Berrie Center, Ramapo College",
+      "category": "arts",
+      "tags": [
+        "theater",
+        "shakespeare",
+        "budget"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-21",
+      "recurrence_text": "Nov 13-15 and 19-21",
+      "time_text": "7:30 PM; 2 PM on Nov 15",
+      "cost_text": "$18 adults",
+      "description": "Ramapo College theater students perform Shakespeare's romantic comedy.",
+      "source_url": "https://www.ramapo.edu/berriecenter/performance-schedule/",
+      "verified": true
+    },
+    {
+      "title": "A Holiday Evening with John Lloyd Young",
+      "town": "Mahwah",
+      "location": "Sharp Theater, Berrie Center, Ramapo College",
+      "category": "holiday",
+      "tags": [
+        "concert",
+        "christmas",
+        "broadway"
+      ],
+      "starts_on": "2026-12-05",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7:30 PM - 9:30 PM",
+      "cost_text": "$50/$45 adults, $20 under 17",
+      "description": "The original Tony-winning Frankie Valli from Jersey Boys sings Four Seasons hits, oldies and Christmas songs.",
+      "source_url": "https://www.ramapo.edu/berriecenter/performance-schedule/",
+      "verified": true
+    },
+    {
+      "title": "Ridgewood Symphony Orchestra: A Celebration of America and Ridgewood",
+      "town": "Ridgewood",
+      "location": "West Side Presbyterian Church",
+      "category": "arts",
+      "tags": [
+        "classical",
+        "concert",
+        "orchestra"
+      ],
+      "starts_on": "2026-12-09",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8 PM",
+      "cost_text": null,
+      "description": "The Ridgewood Symphony plays Copland, Ives and Beethoven plus a piece by Ridgewood composer Kathryn Komsa Schmidt.",
+      "source_url": "https://www.ridgewoodsymphony.org/subscribe/",
+      "verified": true
+    },
+    {
+      "title": "The Nutcracker (BalletArts & Adelphi Orchestra)",
+      "town": "Oradell",
+      "location": "River Dell High School, 55 Pyle Street",
+      "category": "holiday",
+      "tags": [
+        "nutcracker",
+        "ballet",
+        "live orchestra",
+        "kids"
+      ],
+      "starts_on": "2026-12-12",
+      "ends_on": "2026-12-13",
+      "recurrence_text": "Sat-Sun",
+      "time_text": null,
+      "cost_text": null,
+      "description": "A local Nutcracker with a live orchestra and a guest dancer from American Ballet Theatre's JKO School.",
+      "source_url": "https://thelocalgirl.com/calendar/event/the-nutcracker/",
+      "verified": true
+    },
+    {
+      "title": "Winter Market Grand Opening at The Hermitage",
+      "town": "Ho-Ho-Kus",
+      "location": "The Hermitage",
+      "category": "shopping",
+      "tags": [
+        "market",
+        "free",
+        "history"
+      ],
+      "starts_on": "2026-11-14",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": "Free",
+      "description": "The historic Hermitage museum opens its winter market. A good excuse to see the grounds of this National Historic Landmark.",
+      "source_url": "https://thehermitage.app.neoncrm.com/nx/portal/neonevents/events?path=%2Fportal%2Fevents",
+      "verified": true
+    },
+    {
+      "title": "Candlelight Holiday Tours at The Hermitage",
+      "town": "Ho-Ho-Kus",
+      "location": "The Hermitage",
+      "category": "holiday",
+      "tags": [
+        "history",
+        "tours",
+        "candlelight",
+        "date night"
+      ],
+      "starts_on": "2026-11-29",
+      "ends_on": "2026-12-20",
+      "recurrence_text": "Select evenings",
+      "time_text": null,
+      "cost_text": "$25",
+      "description": "Evening tours of the historic Hermitage house by candlelight. Space is limited, so book ahead.",
+      "source_url": "https://thehermitage.app.neoncrm.com/nx/portal/neonevents/events?path=%2Fportal%2Fevents",
+      "verified": true
+    },
+    {
+      "title": "Children's Nutcracker Tea at The Hermitage",
+      "town": "Ho-Ho-Kus",
+      "location": "The Hermitage",
+      "category": "family",
+      "tags": [
+        "kids",
+        "tea",
+        "nutcracker",
+        "holiday"
+      ],
+      "starts_on": "2026-12-06",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": "$20 - $25",
+      "description": "A Nutcracker-themed tea party for kids inside the historic Hermitage.",
+      "source_url": "https://thehermitage.app.neoncrm.com/nx/portal/neonevents/events?path=%2Fportal%2Fevents",
+      "verified": true
+    },
+    {
+      "title": "Dickens Christmas Carol at The Hermitage",
+      "town": "Ho-Ho-Kus",
+      "location": "The Hermitage",
+      "category": "holiday",
+      "tags": [
+        "theater",
+        "christmas",
+        "history"
+      ],
+      "starts_on": "2026-12-12",
+      "ends_on": "2026-12-20",
+      "recurrence_text": "Select dates",
+      "time_text": null,
+      "cost_text": "$35",
+      "description": "A Dickens Christmas Carol performance at the historic Hermitage, an intimate holiday outing.",
+      "source_url": "https://thehermitage.app.neoncrm.com/nx/portal/neonevents/events?path=%2Fportal%2Fevents",
+      "verified": true
+    },
+    {
+      "title": "Winter Solstice Campfire and Night Hike",
+      "town": "Tenafly",
+      "location": "Tenafly Nature Center, 313 Hudson Avenue",
+      "category": "outdoors",
+      "tags": [
+        "hike",
+        "campfire",
+        "s'mores",
+        "kids",
+        "nature"
+      ],
+      "starts_on": "2026-12-20",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "4 PM - 6 PM",
+      "cost_text": "$12",
+      "description": "A guided dusk hike through the forest near the longest night of the year, ending with a campfire and marshmallows. For adults and families with kids 4+; register ahead.",
+      "source_url": "https://secure.qgiv.com/for/54publicprogramregistrationform-fy2027/event/wintersolsticecampfire2026/",
+      "verified": true
+    },
+    {
+      "title": "Nature Story Time at Tenafly Nature Center",
+      "town": "Tenafly",
+      "location": "Tenafly Nature Center, 313 Hudson Avenue",
+      "category": "family",
+      "tags": [
+        "kids",
+        "toddlers",
+        "animals",
+        "nature",
+        "story time"
+      ],
+      "starts_on": "2026-11-21",
+      "ends_on": "2026-12-19",
+      "recurrence_text": "Nov 21 and Dec 19",
+      "time_text": "10 AM - 10:30 AM",
+      "cost_text": null,
+      "description": "A nature-themed story plus a visit from one of the center's animal ambassadors, for young kids with an adult. Registration required.",
+      "source_url": "https://palmieriproperties.com/blog/tenafly-nature-centers-cold-season-calendar-runs-straight-to-the-longest-night",
+      "verified": true
+    },
+    {
+      "title": "Noon Year's Eve Party (Ages 4 to 8)",
+      "town": "Englewood",
+      "location": "Englewood Public Library, Children's Room",
+      "category": "family",
+      "tags": [
+        "kids",
+        "new year's eve",
+        "library"
+      ],
+      "starts_on": "2026-12-31",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "11:15 AM - 12 PM",
+      "cost_text": null,
+      "description": "Kids 4 to 8 count down to noon at the Englewood library. Registration opens Dec 17 at 11:15 AM, one form per child.",
+      "source_url": "https://bccls.libcal.com/event/17408997",
+      "verified": true
+    },
+    {
+      "title": "Racefaster Thanksgiving Day Run",
+      "town": "Glen Rock",
+      "location": "390 Doremus Avenue",
+      "category": "sports",
+      "tags": [
+        "turkey trot",
+        "5k",
+        "thanksgiving",
+        "kids run"
+      ],
+      "starts_on": "2026-11-26",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "5K 9 AM; Kids Fun Run 9:45 AM",
+      "cost_text": "$45 (5K), $30 (kids run)",
+      "description": "Glen Rock's Thanksgiving morning 5K, with a kids' fun run, a family tradition before the big meal.",
+      "source_url": "https://runsignup.com/Race/NJ/GlenRock/TheGlenRockThanksgivingDayRun",
+      "verified": true
+    },
+    {
+      "title": "Upper Saddle River 5K Run",
+      "town": "Upper Saddle River",
+      "location": null,
+      "category": "sports",
+      "tags": [
+        "turkey trot",
+        "5k",
+        "thanksgiving",
+        "charity"
+      ],
+      "starts_on": "2026-11-26",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "Check-in 7:30 AM; race 9 AM",
+      "cost_text": "$35 through 11/18, $40 after",
+      "description": "One of the largest Thanksgiving races in New Jersey, now in its 27th year, with proceeds going to local causes. Bring non-perishable food to donate; registration is online only.",
+      "source_url": "https://www.usr5k.org/",
+      "verified": true
+    },
+    {
+      "title": "Leonia Turkey Trot",
+      "town": "Leonia",
+      "location": "Leonia High School",
+      "category": "sports",
+      "tags": [
+        "turkey trot",
+        "5k",
+        "thanksgiving"
+      ],
+      "starts_on": "2026-11-26",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "9 AM",
+      "cost_text": null,
+      "description": "Leonia's annual Thanksgiving 5K (plus a 1-mile run) is open to runners and walkers of all ages.",
+      "source_url": "https://thelocalgirl.com/bergen/new-jersey-5ks-bergen-county-2026/",
+      "verified": true
+    },
+    {
+      "title": "Be Grateful 5K",
+      "town": "Rochelle Park",
+      "location": null,
+      "category": "sports",
+      "tags": [
+        "turkey trot",
+        "5k",
+        "thanksgiving"
+      ],
+      "starts_on": "2026-11-26",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "A Thanksgiving Day 5K in Rochelle Park.",
+      "source_url": "https://www.runningintheusa.com/race/list/map/table/bergen-county-nj/upcoming/sort-by-open-date",
+      "verified": true
+    },
+    {
+      "title": "River Vale Turkey Trot Charity 5K",
+      "town": "River Vale",
+      "location": null,
+      "category": "sports",
+      "tags": [
+        "turkey trot",
+        "5k",
+        "thanksgiving",
+        "charity"
+      ],
+      "starts_on": "2026-11-26",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "A Thanksgiving morning charity 5K in River Vale hosted by Run 4 the Love and Fitness With Friends.",
+      "source_url": "https://www.runningintheusa.com/race/list/map/table/bergen-county-nj/upcoming/sort-by-open-date",
+      "verified": true
+    },
+    {
+      "title": "Thunderbird Run",
+      "town": "Mahwah",
+      "location": null,
+      "category": "sports",
+      "tags": [
+        "5k",
+        "kids run",
+        "running"
+      ],
+      "starts_on": "2026-11-22",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "A Sunday 5K in Mahwah with a kids' run.",
+      "source_url": "https://www.runningintheusa.com/race/list/map/table/bergen-county-nj/upcoming/sort-by-open-date",
+      "verified": true
+    },
+    {
+      "title": "Holiday Hustle 5K",
+      "town": "Ridgefield Park",
+      "location": null,
+      "category": "sports",
+      "tags": [
+        "5k",
+        "holiday",
+        "running"
+      ],
+      "starts_on": "2026-12-06",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "A December holiday-themed 5K in Ridgefield Park.",
+      "source_url": "https://www.runningintheusa.com/race/list/map/table/bergen-county-nj/upcoming/sort-by-open-date",
+      "verified": true
+    },
+    {
+      "title": "Racefaster through the Mall",
+      "town": "East Rutherford",
+      "location": null,
+      "category": "sports",
+      "tags": [
+        "5k",
+        "kids run",
+        "indoor",
+        "running"
+      ],
+      "starts_on": "2026-12-06",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "A December 5K in East Rutherford that, as the name says, runs through the mall, plus a kids' run.",
+      "source_url": "https://www.runningintheusa.com/race/list/map/table/bergen-county-nj/upcoming/sort-by-open-date",
+      "verified": true
+    },
+    {
+      "title": "Saddle River County parkrun",
+      "town": "Saddle Brook",
+      "location": "Saddle River County Park",
+      "category": "sports",
+      "tags": [
+        "5k",
+        "free",
+        "weekly",
+        "running",
+        "walking"
+      ],
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-12-26",
+      "recurrence_text": "Every Saturday",
+      "time_text": null,
+      "cost_text": "Free",
+      "description": "A free, timed community 5K every Saturday in Saddle River County Park. Walkers are welcome.",
+      "source_url": "https://www.runningintheusa.com/race/list/map/table/bergen-county-nj/upcoming/sort-by-open-date",
+      "verified": true
+    },
+    {
+      "title": "New York Giants Home Games",
+      "town": "East Rutherford",
+      "location": "MetLife Stadium",
+      "category": "sports",
+      "tags": [
+        "nfl",
+        "football",
+        "giants"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-20",
+      "recurrence_text": "vs. Commanders Thu Nov 12; vs. Jaguars Sun Nov 22; vs. 49ers Sun Dec 6; vs. Browns Sun Dec 20",
+      "time_text": "Nov 12 8:15 PM; Nov 22 1 PM; Dec games TBA",
+      "cost_text": null,
+      "description": "The Giants play four home games at MetLife Stadium through the end of December.",
+      "source_url": "https://www.metlifestadium.com/events",
+      "verified": true
+    },
+    {
+      "title": "New York Jets Home Games",
+      "town": "East Rutherford",
+      "location": "MetLife Stadium",
+      "category": "sports",
+      "tags": [
+        "nfl",
+        "football",
+        "jets"
+      ],
+      "starts_on": "2026-11-15",
+      "ends_on": "2026-12-27",
+      "recurrence_text": "vs. Bills Sun Nov 15; vs. Broncos Sun Dec 13; vs. Patriots Sun Dec 27",
+      "time_text": "Nov 15 1 PM; Dec games TBA",
+      "cost_text": null,
+      "description": "The Jets host three home games at MetLife Stadium from mid-November through December.",
+      "source_url": "https://www.metlifestadium.com/events",
+      "verified": true
+    },
+    {
+      "title": "NJSIAA High School Football Championships",
+      "town": "East Rutherford",
+      "location": "MetLife Stadium",
+      "category": "sports",
+      "tags": [
+        "high school",
+        "football",
+        "state finals"
+      ],
+      "starts_on": "2026-11-28",
+      "ends_on": "2026-11-29",
+      "recurrence_text": "Sat-Sun",
+      "time_text": null,
+      "cost_text": "On sale TBA",
+      "description": "All of New Jersey's public-school football state championship games are played at MetLife over Thanksgiving weekend. Bergen teams that advance play here.",
+      "source_url": "https://www.metlifestadium.com/events",
+      "verified": true
+    },
+    {
+      "title": "Army-Navy Game",
+      "town": "East Rutherford",
+      "location": "MetLife Stadium",
+      "category": "sports",
+      "tags": [
+        "college football",
+        "army-navy",
+        "bucket list"
+      ],
+      "starts_on": "2026-12-12",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "College football's historic Army-Navy rivalry game is at MetLife Stadium this year, a rare chance to see it close to home.",
+      "source_url": "https://www.metlifestadium.com/events",
+      "verified": true
+    },
+    {
+      "title": "Cirque Musica Holiday Wonderland",
+      "town": "East Rutherford",
+      "location": "Dream Live Performing Arts Center, American Dream",
+      "category": "holiday",
+      "tags": [
+        "circus",
+        "acrobats",
+        "family",
+        "christmas"
+      ],
+      "starts_on": "2026-11-21",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "2 PM and 7 PM",
+      "cost_text": null,
+      "description": "A holiday circus show mixing acrobatics with seasonal music at American Dream's Dream Live theater.",
+      "source_url": "https://www.ticketmaster.com/dream-live-at-american-dream-tickets-east-rutherford/venue/237829",
+      "verified": true
+    },
+    {
+      "title": "Bow Wow and Pretty Ricky",
+      "town": "East Rutherford",
+      "location": "Dream Live Performing Arts Center, American Dream",
+      "category": "nightlife",
+      "tags": [
+        "concert",
+        "r&b",
+        "hip-hop"
+      ],
+      "starts_on": "2026-12-04",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7 PM",
+      "cost_text": null,
+      "description": "R&B and hip-hop names Bow Wow and Pretty Ricky perform at Dream Live inside American Dream.",
+      "source_url": "https://www.ticketmaster.com/dream-live-at-american-dream-tickets-east-rutherford/venue/237829",
+      "verified": true
+    },
+    {
+      "title": "A Big Band Holiday to Remember",
+      "town": "East Rutherford",
+      "location": "Dream Live Performing Arts Center, American Dream",
+      "category": "holiday",
+      "tags": [
+        "big band",
+        "concert",
+        "christmas"
+      ],
+      "starts_on": "2026-12-12",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "6 PM",
+      "cost_text": null,
+      "description": "A big-band holiday concert at Dream Live inside American Dream.",
+      "source_url": "https://www.ticketmaster.com/dream-live-at-american-dream-tickets-east-rutherford/venue/237829",
+      "verified": true
+    },
+    {
+      "title": "The Sound of Music Sing-a-Long",
+      "town": "East Rutherford",
+      "location": "Dream Live Performing Arts Center, American Dream",
+      "category": "holiday",
+      "tags": [
+        "sing-along",
+        "movie",
+        "family"
+      ],
+      "starts_on": "2026-12-21",
+      "ends_on": "2026-12-22",
+      "recurrence_text": "Two nights",
+      "time_text": "7 PM",
+      "cost_text": null,
+      "description": "Sing along to The Sound of Music on the big screen during school break.",
+      "source_url": "https://www.ticketmaster.com/dream-live-at-american-dream-tickets-east-rutherford/venue/237829",
+      "verified": true
+    },
+    {
+      "title": "Elf Shelf: Holiday Spectacular",
+      "town": "East Rutherford",
+      "location": "Dream Live Performing Arts Center, American Dream",
+      "category": "family",
+      "tags": [
+        "kids",
+        "christmas",
+        "show"
+      ],
+      "starts_on": "2026-12-23",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "2 PM and 6 PM",
+      "cost_text": null,
+      "description": "A kids' holiday stage show on the day before Christmas Eve at American Dream.",
+      "source_url": "https://www.ticketmaster.com/dream-live-at-american-dream-tickets-east-rutherford/venue/237829",
+      "verified": true
+    },
+    {
+      "title": "The Wizard of Oz (Vital Theatre Company)",
+      "town": "East Rutherford",
+      "location": "Dream Live Performing Arts Center, American Dream",
+      "category": "family",
+      "tags": [
+        "kids",
+        "musical",
+        "theater"
+      ],
+      "starts_on": "2026-12-27",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "1 PM and 5 PM",
+      "cost_text": null,
+      "description": "Vital Theatre Company's kid-friendly Wizard of Oz during winter break.",
+      "source_url": "https://www.ticketmaster.com/dream-live-at-american-dream-tickets-east-rutherford/venue/237829",
+      "verified": true
+    },
+    {
+      "title": "Kidz Bop Live",
+      "town": "East Rutherford",
+      "location": "Dream Live Performing Arts Center, American Dream",
+      "category": "family",
+      "tags": [
+        "kids",
+        "concert",
+        "music"
+      ],
+      "starts_on": "2026-12-30",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7 PM",
+      "cost_text": null,
+      "description": "The Kidz Bop singers play a concert at Dream Live the night before New Year's Eve.",
+      "source_url": "https://www.ticketmaster.com/dream-live-at-american-dream-tickets-east-rutherford/venue/237829",
+      "verified": true
+    },
+    {
+      "title": "FDU Knights Men's Basketball Home Games",
+      "town": "Hackensack",
+      "location": "Bogota Savings Bank Center",
+      "category": "sports",
+      "tags": [
+        "college basketball",
+        "fdu"
+      ],
+      "starts_on": "2026-11-18",
+      "ends_on": "2026-12-28",
+      "recurrence_text": "vs. NJIT Nov 18; vs. Vermont State Randolph Nov 25; vs. Binghamton Nov 30; vs. Lafayette Dec 4; vs. Manhattanville Dec 28",
+      "time_text": "Nov 18 7 PM; Nov 25 12 PM; Nov 30 7 PM; Dec 4 7 PM; Dec 28 12 PM",
+      "cost_text": null,
+      "description": "Fairleigh Dickinson's Division I men's team plays five home games through December. An affordable, up-close college hoops outing.",
+      "source_url": "https://fduknights.com/sports/mens-basketball/schedule/2026-27",
+      "verified": true
+    },
+    {
+      "title": "Joe DeVito at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-14",
+      "recurrence_text": "Multiple shows",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Gutfeld! regular and writer Joe DeVito headlines, known for his sharp timing and unexpected twists.",
+      "source_url": "https://www.bananascomedyclub.com/events",
+      "verified": true
+    },
+    {
+      "title": "Anthony Fuentes at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-11-22",
+      "recurrence_text": "Multiple shows",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Fast-rising comic Anthony Fuentes brings his storytelling and crowd work, with plenty about family and dating.",
+      "source_url": "https://www.bananascomedyclub.com/events",
+      "verified": true
+    },
+    {
+      "title": "Carlos Mencia at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-11-27",
+      "ends_on": "2026-11-29",
+      "recurrence_text": "Multiple shows",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Mind of Mencia star Carlos Mencia headlines over Thanksgiving weekend.",
+      "source_url": "https://www.bananascomedyclub.com/events",
+      "verified": true
+    },
+    {
+      "title": "Mike Vecchione at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-12-04",
+      "ends_on": "2026-12-06",
+      "recurrence_text": "Multiple shows",
+      "time_text": null,
+      "cost_text": null,
+      "description": "NYC comic Mike Vecchione, seen on The Tonight Show and Netflix, brings his dry, joke-heavy style.",
+      "source_url": "https://www.bananascomedyclub.com/events",
+      "verified": true
+    },
+    {
+      "title": "Steve Furey at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-12-11",
+      "ends_on": "2026-12-13",
+      "recurrence_text": "Multiple shows",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Steve Furey, who opened arena tours for Bert Kreischer, headlines for three nights.",
+      "source_url": "https://www.bananascomedyclub.com/events",
+      "verified": true
+    },
+    {
+      "title": "Sheryl Underwood at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-12-18",
+      "ends_on": "2026-12-20",
+      "recurrence_text": "Multiple shows",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Comedian and TV host Sheryl Underwood headlines the weekend before Christmas.",
+      "source_url": "https://www.bananascomedyclub.com/events",
+      "verified": true
+    },
+    {
+      "title": "Live Jazz at Brvsh Cul7ur3",
+      "town": "Teaneck",
+      "location": "Brvsh Cul7ur3, 482 Cedar Lane",
+      "category": "arts",
+      "tags": [
+        "jazz",
+        "live music",
+        "date night"
+      ],
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-12-17",
+      "recurrence_text": "Jimmy Heath Tribute Nov 14; Ben Monder Trio Nov 28; Miguel Zenon Duo with Luis Perdomo Dec 12; Rodney Green Trio Dec 17",
+      "time_text": null,
+      "cost_text": null,
+      "description": "This Cedar Lane venue hosts a run of jazz nights this season, from a Jimmy Heath tribute to saxophonist Miguel Zenon in duo with pianist Luis Perdomo.",
+      "source_url": "https://thelocalgirl.com/bergen/events/",
+      "verified": true
+    },
+    {
+      "title": "Kids Holiday Cookie Decorating Workshop at Felina",
+      "town": "Ridgewood",
+      "location": "Felina Ridgewood, 18 Prospect St",
+      "category": "family",
+      "tags": [
+        "kids",
+        "cookies",
+        "holiday",
+        "workshop"
+      ],
+      "starts_on": "2026-12-13",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": "$75 for 1 child + 1 adult",
+      "description": "Kids get a kit of six fresh-baked sugar cookies with festive toppings, plus pizza and juice.",
+      "source_url": "https://thelocalgirl.com/calendar/event/kids-holiday-cookie-decorating-workshop-at-felina-ridgewood/",
+      "verified": true
+    },
+    {
+      "title": "Downtown Hackensack ELF CON Bar Crawl",
+      "town": "Hackensack",
+      "location": "Main Street (check-in at SideBar Gastropub, 45 Main St)",
+      "category": "nightlife",
+      "tags": [
+        "bar crawl",
+        "holiday",
+        "elf",
+        "21+"
+      ],
+      "starts_on": "2026-12-12",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "1 PM - 6 PM",
+      "cost_text": "$20 - $81.88",
+      "description": "An elf-costume bar crawl through downtown Hackensack with drink and food specials, DJs, karaoke and a hop-on trolley.",
+      "source_url": "https://thelocalgirl.com/calendar/event/downtown-hackensack-elf-con-bar-crawl/",
+      "verified": true
+    },
+    {
+      "title": "Garden State Roller Derby: Season Finale",
+      "town": "North Arlington",
+      "location": "Inline Skating Club of America, 170 Schuyler Avenue",
+      "category": "sports",
+      "tags": [
+        "roller derby",
+        "sports",
+        "bake sale"
+      ],
+      "starts_on": "2026-11-14",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": "$16.30",
+      "description": "Garden State Roller Derby's Brick City Bruisers take on Jersey Shore Roller Derby in the last bout of 2026, with a bake sale and raffles.",
+      "source_url": "https://thelocalgirl.com/calendar/event/gsr-vs-jersey-shore-roller-derby/",
+      "verified": true
+    },
+    {
+      "title": "Train and Winter Show at the NY Society of Model Engineers",
+      "town": "Carlstadt",
+      "location": "341 Hoboken Road",
+      "category": "family",
+      "tags": [
+        "trains",
+        "kids",
+        "holiday",
+        "model trains"
+      ],
+      "starts_on": "2026-11-28",
+      "ends_on": "2026-12-13",
+      "recurrence_text": "Nov 28-29, Dec 5-6, Dec 12-13 (weekends)",
+      "time_text": "1 PM - 5 PM",
+      "cost_text": "$8 adults, kids 12 and under free",
+      "description": "A big model railroad club opens its layouts to the public for its holiday train show. Cheap, and a hit with train-loving kids.",
+      "source_url": "https://www.modelengineers.org/shows/",
+      "verified": true
+    },
+    {
+      "title": "Thanksgiving Craft Fair at Paramus High School",
+      "town": "Paramus",
+      "location": "Paramus High School",
+      "category": "shopping",
+      "tags": [
+        "craft fair",
+        "handmade",
+        "gifts"
+      ],
+      "starts_on": "2026-11-29",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "A PJ Promotions craft fair at Paramus High School on Thanksgiving weekend, good for early holiday gift shopping.",
+      "source_url": "https://www.mybergen.com/bergen-county-area-street-fairs/",
+      "verified": true
+    },
+    {
+      "title": "Studio Ghibli Tuesdays: My Neighbor Totoro",
+      "town": "Rutherford",
+      "location": "Rivoli at the Williams Center",
+      "category": "arts",
+      "tags": [
+        "movie",
+        "anime",
+        "family"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "5:30 PM (dubbed), 7:15 PM (subtitled)",
+      "cost_text": null,
+      "description": "The Williams Center's Studio Ghibli Tuesday series screens My Neighbor Totoro in dubbed and subtitled versions.",
+      "source_url": "https://www.ticketmaster.com/williams-center-tickets-rutherford/venue/1644",
+      "verified": true
+    }
+  ],
+  "places": []
+}
