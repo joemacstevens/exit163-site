@@ -46,6 +46,7 @@ async function sendWelcome(email) {
   const html = `<div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#1a1a1a;max-width:560px">
 <p>You're in. 🚗</p>
 <p>Every <strong>Friday at 7am</strong>, Exit 163 lands in your inbox with the best things to do in Bergen County this weekend: events, new restaurants, family picks, date nights, and the local news worth knowing.</p>
+<p style="background:#fff6e0;border-left:4px solid #FFB81C;padding:12px 14px">🎄 <strong>Your bonus:</strong> every Bergen tree lighting, menorah lighting &amp; holiday market for 2026, in one list.<br><a href="https://www.exit163.com/holidays?unlocked=1" style="color:#1f5e44;font-weight:700">Open the full holiday tracker →</a></p>
 <p>Two quick favors so you don't miss it:</p>
 <ol><li>Move this email to your <strong>Primary</strong> inbox (Gmail users: drag it over).</li>
 <li>Follow along daily on Instagram: <a href="https://www.instagram.com/exit.163/">@exit.163</a></li></ol>
