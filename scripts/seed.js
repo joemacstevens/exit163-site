@@ -26,7 +26,7 @@ const TYPE_TAGS = { tree: ['tree lighting'], menorah: ['menorah', 'hanukkah'], s
       starts_on: h.date || null,
       time_text: h.time || null,
       cost_text: h.cost || null,
-      description: h.notes || null,
+      description: [h.notes, h.last_seen && `Last held: ${h.last_seen}.`, h.verify_note].filter(Boolean).join(' ') || null,
       source_url: h.source_url || null,
       verified: Boolean(h.verified_2026),
       origin: 'research',
