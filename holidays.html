@@ -116,12 +116,12 @@
   /* ---------- Filters ---------- */
   .filters { position: sticky; top: 0; z-index: 5; background: rgba(11,13,16,0.86); -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid var(--line); }
   .filters .wrap { display: flex; gap: 12px; align-items: center; padding-top: 12px; padding-bottom: 12px; }
-  .chips { display: flex; gap: 6px; align-items: center; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; flex: 1; min-width: 0; padding: 2px; -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent); padding-right: 36px; }
-  .types { display: flex; gap: 6px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; flex: 1; min-width: 0; padding: 2px; }
+  .types { display: flex; flex-wrap: wrap; gap: 6px; }
   .sep { flex: none; width: 1px; height: 22px; background: var(--line); margin: 0 4px; }
   .chip.wk[aria-pressed="true"] { background: var(--amber); border-color: var(--amber); color: #111; }
   .chips::-webkit-scrollbar { display: none; }
-  .chip { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 13px; border-radius: 999px; border: 1.5px solid var(--line); background: rgba(255,255,255,0.03); color: var(--text); font: 700 14px var(--sign); cursor: pointer; transition: border-color .15s, background .15s; }
+  .chip { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 12px; border-radius: 999px; border: 1.5px solid var(--line); background: rgba(255,255,255,0.03); color: var(--text); font: 700 14px var(--sign); cursor: pointer; transition: border-color .15s, background .15s; }
   .chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--amber)); box-shadow: 0 0 10px var(--c, var(--amber)); font-style: normal; }
   .chip .n { font-weight: 600; color: var(--dim); font-size: 12px; }
   .chip:hover { border-color: rgba(255,255,255,0.3); }
@@ -137,8 +137,11 @@
   .count b { color: var(--text); font-weight: 600; }
   @media (max-width: 720px) {
     .filters .wrap { padding-top: 9px; padding-bottom: 9px; }
-    .chips { margin: 0 -20px; padding: 2px 36px 2px 20px; }
-    .town select { max-width: 170px; }
+    .chips { gap: 6px; }
+    .sep { display: none; }
+    .types { order: 3; flex-basis: calc(100% + 40px); flex-wrap: nowrap; margin: 2px -20px 0; padding: 0 36px 0 20px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent); }
+    .types::-webkit-scrollbar { display: none; }
+    .town select { max-width: 200px; }
   }
 
   /* ---------- Timeline list ---------- */
@@ -194,7 +197,7 @@
   }
 
   /* ---------- Gate ---------- */
-  .gate { scroll-margin-top: 80px; position: relative; margin: 36px 0 8px; border-radius: 22px; overflow: hidden; border: 1px solid rgba(255,184,28,0.4); background: radial-gradient(120% 120% at 100% 0%, rgba(255,184,28,0.18), transparent 50%), radial-gradient(100% 120% at 0% 100%, rgba(0,107,63,0.45), transparent 55%), var(--ink); padding: clamp(22px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 28px; align-items: center; }
+  .gate { scroll-margin-top: 124px; position: relative; margin: 36px 0 8px; border-radius: 22px; overflow: hidden; border: 1px solid rgba(255,184,28,0.4); background: radial-gradient(120% 120% at 100% 0%, rgba(255,184,28,0.18), transparent 50%), radial-gradient(100% 120% at 0% 100%, rgba(0,107,63,0.45), transparent 55%), var(--ink); padding: clamp(22px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 28px; align-items: center; }
   .gate h2 { font: 900 clamp(1.8rem, 4vw, 2.6rem)/1.02 var(--sign); color: #fff; letter-spacing: -0.03em; margin-bottom: 12px; }
   .gate h2 em { font-style: normal; color: var(--amber); }
   .gate p { color: var(--muted); font-size: 15.5px; }
@@ -224,7 +227,7 @@
   .locked::after { content: ''; position: absolute; inset: 40% 0 0 0; background: linear-gradient(rgba(11,13,16,0), var(--asphalt)); }
   .locked-label { text-align: center; font: 800 13px var(--sign); letter-spacing: .14em; text-transform: uppercase; color: var(--dim); margin-top: 30px; }
 
-  .unlocked { scroll-margin-top: 90px; display: flex; align-items: center; gap: 12px; margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: rgba(75,227,154,0.08); border: 1px solid rgba(75,227,154,0.35); font-size: 15px; color: var(--text); }
+  .unlocked { scroll-margin-top: 124px; display: flex; align-items: center; gap: 12px; margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: rgba(75,227,154,0.08); border: 1px solid rgba(75,227,154,0.35); font-size: 15px; color: var(--text); }
   .unlocked b { color: #fff; }
   .unlocked .ck { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ok); color: #062; display: grid; place-items: center; font-weight: 900; }
 
@@ -529,9 +532,9 @@
   function tbaItem(e) {
     return '<article class="tba-item" style="--c:' + (TYPE_C[e.type] || 'var(--t-other)') + '"><div class="town-n">' + esc(e.town) + ' &middot; ' + esc(TYPE_LABEL[e.type] || 'Event') + '</div>' +
       '<h3>' + esc(e.event) + '</h3>' +
-      (e.last_seen ? '<p class="last"><b>Last held:</b> ' + esc(e.last_seen) + '</p>' : '') +
+      '<p class="last"><b>Last held:</b> ' + (e.last_seen ? esc(e.last_seen) : 'not found') + '</p>' +
       (e.notes ? '<p>' + esc(e.notes) + '</p>' : '') +
-      (e.verify_note ? '<details class="why"><summary>Research notes</summary><p>' + esc(e.verify_note) + '</p></details>' : '') +
+      (e.verify_note ? '<details class="why"><summary>Why no date yet?</summary><p>' + esc(e.verify_note) + '</p></details>' : '') +
       '<a href="' + esc(safeUrl(e.source_url)) + '" target="_blank" rel="noopener">Check ' + esc(hostOf(e.source_url)) + ' &rarr;</a></article>';
   }
 
@@ -550,7 +553,9 @@
     } else {
       title = 'Get the <em>full tracker</em> free.'; sub = 'Updated weekly as towns announce dates.';
     }
-    return html.replace(/<h2 data-gate-title>[\s\S]*?<\/h2>/, '<h2 data-gate-title>' + title + '</h2>').replace(/<p data-gate-sub>[\s\S]*?<\/p>/, '<p data-gate-sub>' + sub + '</p>');
+    html = html.replace(/<h2 data-gate-title[^>]*>[\s\S]*?<\/h2>/, '<h2 data-gate-title>' + title + '</h2>').replace(/<p data-gate-sub[^>]*>[\s\S]*?<\/p>/, '<p data-gate-sub>' + sub + '</p>');
+    if (!lockedDated.length && tba.length) html = html.replace('<li>All dated events, every town</li>', '<li>Last year&rsquo;s date, time and place for each</li>').replace('<li>Plus every event still waiting on a 2026 date</li>', '<li>A heads-up when the 2026 dates drop</li>');
+    return html;
   }
 
   function render() {
@@ -574,7 +579,7 @@
       var html = free.length ? timeline(free) : (dated.length ? '' : '<div class="empty"><b>No confirmed dates yet' + (state.town ? ' for ' + esc(state.town) : '') + '.</b>' + (tba.length ? 'But ' + plural(tba.length, 'event is', 'events are') + ' on the way. Unlock to see last year&rsquo;s details.' : 'Towns are still posting 2026 dates. Check back next week.') + '</div>');
       if (lockedCount) {
         html += gateHTML(locked, tba);
-        if (locked.length) html += '<div class="locked" aria-hidden="true"><div class="inner">' + timeline(locked.slice(0, 3)) + '</div></div>';
+        if (locked.length) html += '<p class="locked-label">' + plural(locked.length, 'more dated event', 'more dated events') + (tba.length ? ' + ' + tba.length + ' waiting on dates' : '') + ' in the full list</p><div class="locked" aria-hidden="true"><div class="inner">' + timeline(locked.slice(0, 3)) + '</div></div>';
         else html += '<div class="tba-teaser" aria-hidden="true">' + tba.slice(0, 3).map(tbaItem).join('') + '</div>';
       }
       out.innerHTML = html;
