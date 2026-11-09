@@ -284,6 +284,7 @@
     .rv { opacity: 1; transform: none; }
   }
 </style>
+<script src="/meta-pixel.js"></script>
 </head>
 <body>
 
@@ -644,6 +645,7 @@
         .then(function (d) {
           if (!d.ok) { btn.disabled = false; label.textContent = 'Unlock the full list'; return err(d.error || 'Something went wrong. Please try again.', d.field === 'phone' ? phone : d.field === 'email' ? email : null); }
           storageSet(); state.unlocked = true; render();
+          if (window.fbq) window.fbq('track', 'Lead', { content_name: 'holidays_unlock', content_category: [p && 'sms', m && 'email'].filter(Boolean).join('+') });
           var box = document.querySelector('.unlocked'), note = box && box.querySelector('span:last-child');
           if (note && d.phone === 'sent') note.innerHTML = '<b>You&rsquo;re in.</b> Here&rsquo;s every event. <b>Check your texts and reply JOIN</b> to switch on your agent.';
           if (box) box.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
