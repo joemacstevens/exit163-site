@@ -1,0 +1,1316 @@
+{
+  "events": [
+    {
+      "title": "Trivia Night at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "Tommy Fox's Public House, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "pub",
+        "weekly"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "7:00 PM",
+      "cost_text": "Free to play",
+      "description": "Joe Trivia hosts a weekly team quiz at this classic Irish pub; grab a pint and a table early.",
+      "source_url": "https://www.tommyfoxs.com/events/",
+      "verified": true
+    },
+    {
+      "title": "Trivia Night at Bowler City",
+      "town": "Hackensack",
+      "location": "Bowler City",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "bowling",
+        "weekly"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "7pm",
+      "cost_text": "Free to play",
+      "description": "Weekly Joe Trivia night at the Hackensack bowling alley. Listed on Joe Trivia's current weekly schedule (the host company), not yet confirmed on the venue's own site.",
+      "source_url": "https://www.joetrivia.com/tuesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at QB's Bar & Grill",
+      "town": "Dumont",
+      "location": "QB's Bar & Grill",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "bar",
+        "weekly"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "7pm",
+      "cost_text": "Free to play",
+      "description": "Neighborhood sports bar trivia night run by Joe Trivia. Listed on Joe Trivia's current weekly schedule (the host company), not yet confirmed on the venue's own site.",
+      "source_url": "https://www.joetrivia.com/tuesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Blarney Station",
+      "town": "East Rutherford",
+      "location": "Blarney Station, 258 Park Ave",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "pub",
+        "irish",
+        "weekly"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "8pm",
+      "cost_text": "Free to play",
+      "description": "Tuesday team trivia at a long-running Park Avenue Irish pub with a kitchen open till midnight. Listed on Joe Trivia's current weekly schedule (the host company), not yet confirmed on the venue's own site.",
+      "source_url": "https://www.joetrivia.com/tuesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at TPR Restaurant & Bar",
+      "town": "Tenafly",
+      "location": "TPR Restaurant, 38 W Railroad Ave",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "italian",
+        "weekly"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Wednesday",
+      "time_text": "7pm",
+      "cost_text": "Free to play",
+      "description": "Midweek trivia in the bar room of this Tenafly Italian trattoria. Listed on Joe Trivia's current weekly schedule (the host company), not yet confirmed on the venue's own site.",
+      "source_url": "https://www.joetrivia.com/wednesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Heights Bar & Grill",
+      "town": "Hasbrouck Heights",
+      "location": "Heights Bar & Grill, 163 Boulevard",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "craft beer",
+        "weekly"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Wednesday",
+      "time_text": "8pm",
+      "cost_text": "Free to play",
+      "description": "Craft-beer pub trivia on the Boulevard; the bar stays open till midnight on weeknights. Listed on Joe Trivia's current weekly schedule (the host company), not yet confirmed on the venue's own site.",
+      "source_url": "https://www.joetrivia.com/wednesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at House of Que",
+      "town": "East Rutherford",
+      "location": "House of Que, American Dream",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "bbq",
+        "american dream",
+        "weekly"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Thursday",
+      "time_text": "7pm",
+      "cost_text": "Free to play",
+      "description": "Thursday trivia over barbecue and drinks inside American Dream. Listed on Joe Trivia's current weekly schedule (the host company), not yet confirmed on the venue's own site.",
+      "source_url": "https://www.joetrivia.com/thursday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at The Lido",
+      "town": "Hackensack",
+      "location": "The Lido Restaurant, 701 Main St",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "pizza",
+        "bar pie",
+        "weekly"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Thursday",
+      "time_text": "8pm",
+      "cost_text": "Free to play",
+      "description": "Trivia at the 1956-vintage Main Street institution famous for its bar pie and open-face steak sandwich. Listed on Joe Trivia's current weekly schedule (the host company), not yet confirmed on the venue's own site.",
+      "source_url": "https://www.joetrivia.com/thursday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at SideBar Gastropub",
+      "town": "Hackensack",
+      "location": "SideBar Gastropub, Main St",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "gastropub",
+        "cocktails",
+        "weekly"
+      ],
+      "starts_on": "2026-11-15",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Sunday",
+      "time_text": "7pm",
+      "cost_text": "Free to play",
+      "description": "Sunday-night team trivia at Main Street's cocktail-forward gastropub. Listed on Joe Trivia's current weekly schedule (the host company), not yet confirmed on the venue's own site.",
+      "source_url": "https://www.joetrivia.com/sunday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Blackjack Mulligan's",
+      "town": "Garfield",
+      "location": "Blackjack Mulligan's",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "pub",
+        "weekly"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Monday",
+      "time_text": "8pm",
+      "cost_text": "Free to play",
+      "description": "A Monday-night quiz to kick off the week at this Garfield pub. Listed on Joe Trivia's current weekly schedule (the host company), not yet confirmed on the venue's own site.",
+      "source_url": "https://www.joetrivia.com/monday",
+      "verified": false
+    },
+    {
+      "title": "Karaoke Night at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "Tommy Fox's Public House, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "karaoke",
+        "pub"
+      ],
+      "starts_on": null,
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Recurring (past listings fell on Fridays)",
+      "time_text": "7:00 PM",
+      "cost_text": "Free",
+      "description": "Karaoke with host Alan is on Tommy Fox's events calendar; recent listings were on Friday nights but the exact current night wasn't confirmed, so check the calendar.",
+      "source_url": "https://www.tommyfoxs.com/events/",
+      "verified": false
+    },
+    {
+      "title": "Comedy Open Mic at The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "The Basement at Tommy Fox's, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "open mic",
+        "weekly"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": null,
+      "cost_text": null,
+      "description": "The comedy room under Tommy Fox's runs a weekly Tuesday open mic, a good chance to catch new local comics (or try a set yourself).",
+      "source_url": "https://onthestage.tickets/chip-ambrogio",
+      "verified": true
+    },
+    {
+      "title": "Happy Hour at Azul",
+      "town": "Hackensack",
+      "location": "Azul, 120 River St",
+      "category": "nightlife",
+      "tags": [
+        "happy hour",
+        "mezcal",
+        "cocktails"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Tue-Thu and Sundays",
+      "time_text": "Tue – Thu · 4 – 7 PM · Sun · 2 – 4 PM",
+      "cost_text": null,
+      "description": "Agave-bar happy hour at downtown Hackensack's new regional Mexican restaurant, known for mezcal cocktails.",
+      "source_url": "https://azulrestaurantnj.com/",
+      "verified": true
+    },
+    {
+      "title": "Happy Hour at Rojo",
+      "town": "Cliffside Park",
+      "location": "Rojo Tequileria + Mexican Grill, 790 Anderson Ave",
+      "category": "nightlife",
+      "tags": [
+        "happy hour",
+        "tequila",
+        "margaritas"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Monday through Friday",
+      "time_text": "4 PM to 7 PM",
+      "cost_text": null,
+      "description": "Weekday after-work cocktails at Cliffside Park's brand-new tequila bar and Mexican grill.",
+      "source_url": "https://www.instagram.com/rojocliffsidenj/",
+      "verified": true
+    },
+    {
+      "title": "Happy Hour at Pop Taco & Bar",
+      "town": "Dumont",
+      "location": "POP Taco & Bar, 20 E Madison Ave",
+      "category": "nightlife",
+      "tags": [
+        "happy hour",
+        "tacos",
+        "margaritas"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Tue-Fri, Sat afternoons, all day Sunday",
+      "time_text": "TUE-FRI 4-6, SAT 12-4, all day Sunday",
+      "cost_text": null,
+      "description": "Taco-and-margarita happy hour at a Readers' Choice favorite in Dumont, stretched to all day on Sundays.",
+      "source_url": "https://www.poptaconj.com/",
+      "verified": true
+    },
+    {
+      "title": "Salsa Thursdays at Don Coqui",
+      "town": "Edgewater",
+      "location": "Don Coqui, 541 River Rd",
+      "category": "nightlife",
+      "tags": [
+        "salsa",
+        "dancing",
+        "latin",
+        "live music"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Thursday",
+      "time_text": null,
+      "cost_text": "Free admission",
+      "description": "A night of live music, dinner, drinks and salsa dancing on the Edgewater waterfront, with half-off drinks 5-7pm.",
+      "source_url": "https://doncoqui.com/locations/new-jersey/events/",
+      "verified": true
+    },
+    {
+      "title": "Live DJ Weekends at Don Coqui",
+      "town": "Edgewater",
+      "location": "Don Coqui, 541 River Rd",
+      "category": "nightlife",
+      "tags": [
+        "dj",
+        "dancing",
+        "latin",
+        "lounge"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Friday and Saturday nights",
+      "time_text": null,
+      "cost_text": "Free admission",
+      "description": "Live DJ and entertainment across three bars on Friday and Saturday nights; open until 2am.",
+      "source_url": "https://doncoqui.com/locations/new-jersey/events/",
+      "verified": true
+    },
+    {
+      "title": "Weekend DJ at Penelope's Pizzeria & Sports Bar",
+      "town": "North Arlington",
+      "location": "Penelope's Pizzeria & Sports Bar, 25 Schuyler Ave",
+      "category": "nightlife",
+      "tags": [
+        "dj",
+        "sports bar",
+        "pizza"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Weekends",
+      "time_text": null,
+      "cost_text": null,
+      "description": "A new pizzeria and sports bar that brings in a DJ on weekends for a lounge vibe after dinner.",
+      "source_url": "https://www.penelopespizzeria.com/",
+      "verified": true
+    },
+    {
+      "title": "John McCellan - One Night Only! at The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "The Basement at Tommy Fox's, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Stand-up comedy in the intimate basement room under Tommy Fox's pub; tickets through the Basement's box office.",
+      "source_url": "https://onthestage.tickets/chip-ambrogio/season",
+      "verified": true
+    },
+    {
+      "title": "Saturday Night Showcase at The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "The Basement at Tommy Fox's, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-11-14",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Stand-up comedy in the intimate basement room under Tommy Fox's pub; tickets through the Basement's box office.",
+      "source_url": "https://onthestage.tickets/chip-ambrogio/season",
+      "verified": true
+    },
+    {
+      "title": "Coach Tom Whitley & Friends at The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "The Basement at Tommy Fox's, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-11-19",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Stand-up comedy in the intimate basement room under Tommy Fox's pub; tickets through the Basement's box office.",
+      "source_url": "https://onthestage.tickets/chip-ambrogio/season",
+      "verified": true
+    },
+    {
+      "title": "Carl's Comedy Showcase at The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "The Basement at Tommy Fox's, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-11-20",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Stand-up comedy in the intimate basement room under Tommy Fox's pub; tickets through the Basement's box office.",
+      "source_url": "https://onthestage.tickets/chip-ambrogio/season",
+      "verified": true
+    },
+    {
+      "title": "Out of The Mouth of Babes at The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "The Basement at Tommy Fox's, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-12-04",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Stand-up comedy in the intimate basement room under Tommy Fox's pub; tickets through the Basement's box office.",
+      "source_url": "https://onthestage.tickets/chip-ambrogio/season",
+      "verified": true
+    },
+    {
+      "title": "Monty Mason and Friends at The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "The Basement at Tommy Fox's, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-12-05",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Stand-up comedy in the intimate basement room under Tommy Fox's pub; tickets through the Basement's box office.",
+      "source_url": "https://onthestage.tickets/chip-ambrogio/season",
+      "verified": true
+    },
+    {
+      "title": "Six Shades of Funny at The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "The Basement at Tommy Fox's, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-12-12",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Stand-up comedy in the intimate basement room under Tommy Fox's pub; tickets through the Basement's box office.",
+      "source_url": "https://onthestage.tickets/chip-ambrogio/season",
+      "verified": true
+    },
+    {
+      "title": "Carl's Comedy Showcase at The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "The Basement at Tommy Fox's, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-12-18",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Stand-up comedy in the intimate basement room under Tommy Fox's pub; tickets through the Basement's box office.",
+      "source_url": "https://onthestage.tickets/chip-ambrogio/season",
+      "verified": true
+    },
+    {
+      "title": "Don Jameson and Friends at The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "location": "The Basement at Tommy Fox's, 32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up"
+      ],
+      "starts_on": "2026-12-19",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": null,
+      "cost_text": null,
+      "description": "Stand-up comedy in the intimate basement room under Tommy Fox's pub; tickets through the Basement's box office.",
+      "source_url": "https://onthestage.tickets/chip-ambrogio/season",
+      "verified": true
+    },
+    {
+      "title": "Joe DeVito at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-14",
+      "recurrence_text": null,
+      "time_text": "Fri 7:00 PM; Sat 6:00 PM & 8:30 PM",
+      "cost_text": "$29.99 general / $41.99 reserved (first show of the run)",
+      "description": "Gutfeld! regular and writer known for sharp timing and unexpected twists. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/140022",
+      "verified": true
+    },
+    {
+      "title": "Anthony Fuentes at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-11-22",
+      "recurrence_text": null,
+      "time_text": "Fri 7:00 PM; Sat 7:00 PM & 9:30 PM; Sun 7:00 PM",
+      "cost_text": "$29.99 general (first show of the run)",
+      "description": "Fast-rising storyteller with big social-media following and lots of crowd work. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/139158",
+      "verified": true
+    },
+    {
+      "title": "Carlos Mencia at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-11-27",
+      "ends_on": "2026-11-29",
+      "recurrence_text": null,
+      "time_text": "Fri 7:00 PM; Sat 7:00 PM & 9:30 PM; Sun 7:00 PM",
+      "cost_text": "$30.83 general / $44.25 reserved (first show of the run)",
+      "description": "The 'Mind of Mencia' star brings his raw, unfiltered stand-up for Thanksgiving weekend. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/146279",
+      "verified": true
+    },
+    {
+      "title": "Standoperos - La Tómbola at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-12-03",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7:30 PM",
+      "cost_text": "$53.99 general / $63.99 reserved",
+      "description": "Four Puerto Rican comics do audience-driven stand-up entirely in Spanish (no translation). There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/144610",
+      "verified": true
+    },
+    {
+      "title": "Mike Vecchione at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-12-04",
+      "ends_on": "2026-12-06",
+      "recurrence_text": null,
+      "time_text": "Fri 7:00 PM; Sat 6:00 PM & 8:30 PM; Sun 6:00 PM",
+      "cost_text": "$27.99 general / $39.99 reserved (first show of the run)",
+      "description": "Tonight Show and Netflix comic with a dry, joke-dense style. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/142031",
+      "verified": true
+    },
+    {
+      "title": "Steve Furey at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-12-11",
+      "ends_on": "2026-12-13",
+      "recurrence_text": null,
+      "time_text": "Fri 7:00 PM; Sat 7:00 PM & 9:30 PM; Sun 7:00 PM",
+      "cost_text": "$29.99 general / $41.99 reserved (first show of the run)",
+      "description": "Comedy Store regular who spent years opening for Bert Kreischer; seen on Kevin Hart's Funny AF. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/145323",
+      "verified": true
+    },
+    {
+      "title": "Sheryl Underwood at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-12-18",
+      "ends_on": "2026-12-20",
+      "recurrence_text": null,
+      "time_text": "Fri 7:00 PM; Sat 7:00 PM & 9:30 PM; Sun 7:00 PM",
+      "cost_text": "$28.76 general / $42.18 reserved (first show of the run)",
+      "description": "Co-host of CBS's The Talk and a veteran headliner. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/136970",
+      "verified": true
+    },
+    {
+      "title": "New Year's Eve with Dov Davidoff at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2026-12-31",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7:30 PM & 10:00 PM",
+      "cost_text": "$40.99 general / $51.99 reserved",
+      "description": "Ring in 2027 with a high-energy Comedy Central headliner; two NYE shows. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/146385",
+      "verified": true
+    },
+    {
+      "title": "Chris Higgins at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2027-01-15",
+      "ends_on": "2027-01-17",
+      "recurrence_text": null,
+      "time_text": "Fri 7:00 PM; Sat 7:00 PM & 9:30 PM; Sun 7:00 PM",
+      "cost_text": "$27.99 general / $39.99 reserved (first show of the run)",
+      "description": "Laid-back Colorado comic known for impressions and viral clips. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/146208",
+      "verified": true
+    },
+    {
+      "title": "AJ Wilkerson at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2027-01-22",
+      "ends_on": "2027-01-23",
+      "recurrence_text": null,
+      "time_text": "Fri 7:00 PM & 9:15 PM; Sat 7:00 PM & 9:30 PM",
+      "cost_text": "$29.99 general / $41.99 reserved (first show of the run)",
+      "description": "Florida-raised comic with nervous charm and millions of online views. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/146211",
+      "verified": true
+    },
+    {
+      "title": "Brendan Sagalow at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2027-01-29",
+      "ends_on": "2027-01-30",
+      "recurrence_text": null,
+      "time_text": "Fri 7:00 PM & 9:15 PM; Sat 7:00 PM & 9:30 PM",
+      "cost_text": "$27.99 general / $39.99 reserved (first show of the run)",
+      "description": "NYC club comic with confident observations and self-deprecating bite. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/146708",
+      "verified": true
+    },
+    {
+      "title": "Jerry Garcia at Bananas Comedy Club",
+      "town": "Rutherford",
+      "location": "Bananas Comedy Club, Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "date night"
+      ],
+      "starts_on": "2027-02-10",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7:30 PM",
+      "cost_text": "$32.99 general / $42.99 reserved",
+      "description": "HBO 'Entre Nos' comic with family-man stories and lots of audience interaction. There's a 2-item minimum in the showroom; listed prices include fees.",
+      "source_url": "https://www.bananascomedyclub.com/events/145620",
+      "verified": true
+    }
+  ],
+  "places": [
+    {
+      "name": "Azul",
+      "town": "Hackensack",
+      "address": "120 River St",
+      "category": "food",
+      "tags": [
+        "mexican",
+        "mezcal",
+        "agave bar",
+        "cocktails"
+      ],
+      "best_for": [
+        "date night",
+        "groups"
+      ],
+      "price_text": "$$",
+      "hours_text": "Lunch Tue – Fri 11 AM – 3 PM; dinner and bar open daily until late; Happy Hour Tue – Thu 4 – 7 PM, Sun 2 – 4 PM",
+      "description": "Regional Mexican kitchen with an agave bar pouring mezcal cocktails (~$17) in a converted newspaper building; opened Sept 2026.",
+      "website": "https://azulrestaurantnj.com/",
+      "source_url": "https://azulrestaurantnj.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Hackensack Brewing Company",
+      "town": "Hackensack",
+      "address": "78 Johnson Ave",
+      "category": "nightlife",
+      "tags": [
+        "brewery",
+        "taproom",
+        "biergarten",
+        "craft beer"
+      ],
+      "best_for": [
+        "groups",
+        "budget"
+      ],
+      "price_text": "$$",
+      "hours_text": "TAPROOM & biergarten Mon-Fri 4:30pm-10pm, Sat 2pm-10pm",
+      "description": "Local brewery taproom and biergarten, a Readers' Choice pick for best craft brewery.",
+      "website": "https://www.hackensackbrewing.com/",
+      "source_url": "https://www.hackensackbrewing.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "SideBar Gastropub",
+      "town": "Hackensack",
+      "address": "Main St",
+      "category": "nightlife",
+      "tags": [
+        "gastropub",
+        "cocktails",
+        "live music",
+        "happy hour"
+      ],
+      "best_for": [
+        "live music",
+        "date night",
+        "groups"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "Main Street gastropub in an 1895 building with live music several nights a week, Sunday trivia, and award-winning cocktails; three blocks from HACPAC.",
+      "website": "https://sidebarhackensack.com/",
+      "source_url": "https://sidebarhackensack.com/page/events",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Lido Restaurant",
+      "town": "Hackensack",
+      "address": "701 Main St",
+      "category": "food",
+      "tags": [
+        "bar pie",
+        "pizza",
+        "bar",
+        "trivia"
+      ],
+      "best_for": [
+        "groups",
+        "budget"
+      ],
+      "price_text": "$$",
+      "hours_text": "Monday – Sunday, 11am – 10pm",
+      "description": "Old-school 1956 Main Street spot with a full bar, famous thin-crust bar pie, and Thursday trivia.",
+      "website": "https://thelidorestaurant.com/",
+      "source_url": "https://thelidorestaurant.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Tommy Fox's Public House",
+      "town": "Bergenfield",
+      "address": "32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "irish pub",
+        "guinness",
+        "sports",
+        "trivia",
+        "karaoke"
+      ],
+      "best_for": [
+        "groups",
+        "late night"
+      ],
+      "price_text": "$$",
+      "hours_text": "Sun 11:00 AM - 2:00 AM (kitchen closes 8pm); Mon - Wed 11:00 AM - 2:00 AM (kitchen closes 10pm); Thurs & Fri 11:00 AM - 2:00 AM (kitchen closes midnight); Sat 11:00 AM - 3:00 AM (kitchen closes midnight)",
+      "description": "Classic Irish pub with a great pint of Guinness, sports on TV, Tuesday trivia, karaoke nights, and a comedy room downstairs.",
+      "website": "https://www.tommyfoxs.com/",
+      "source_url": "https://www.tommyfoxs.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Basement at Tommy Fox's",
+      "town": "Bergenfield",
+      "address": "32 S Washington Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "open mic",
+        "stand-up"
+      ],
+      "best_for": [
+        "date night",
+        "groups",
+        "late night"
+      ],
+      "price_text": "$",
+      "hours_text": null,
+      "description": "Intimate comedy room under Tommy Fox's with weekend showcases, comedy game shows, classes, and a weekly Tuesday open mic.",
+      "website": "https://onthestage.tickets/chip-ambrogio",
+      "source_url": "https://onthestage.tickets/chip-ambrogio",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Pop Taco & Bar",
+      "town": "Dumont",
+      "address": "20 E Madison Ave",
+      "category": "food",
+      "tags": [
+        "tacos",
+        "margaritas",
+        "happy hour",
+        "mexican"
+      ],
+      "best_for": [
+        "groups",
+        "budget"
+      ],
+      "price_text": "$$",
+      "hours_text": "Kitchen: Sun 12-9, Tue-Thu 4-9, Fri 4-10, Sat 12-10; Bar: Sun 12-9:30, Tue-Thu 4-9:30, Fri 4-10:45, Sat 12-10:45",
+      "description": "Lively taco bar with frozen cocktails and one of the area's better happy hours (all day Sunday).",
+      "website": "https://www.poptaconj.com/",
+      "source_url": "https://www.poptaconj.com/copy-of-what-s-happening-1",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "River & Henley",
+      "town": "New Milford",
+      "address": "704 River Rd",
+      "category": "nightlife",
+      "tags": [
+        "sports bar",
+        "cocktails",
+        "ufc",
+        "trivia"
+      ],
+      "best_for": [
+        "groups",
+        "late night"
+      ],
+      "price_text": "$$",
+      "hours_text": "Monday: 6pm-12am. Tuesday: CLOSED. Wednesday & Thursday: 4pm-12am. Friday & Saturday: 4pm-2am. Sunday: 12pm-12am",
+      "description": "Restaurant and sports bar with fight-night watch parties, themed parties, and late weekend hours.",
+      "website": "https://riverandhenley.com/",
+      "source_url": "https://www.instagram.com/riverandhenley/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Rojo Tequileria + Mexican Grill",
+      "town": "Cliffside Park",
+      "address": "790 Anderson Ave",
+      "category": "food",
+      "tags": [
+        "tequila",
+        "mexican",
+        "cocktails",
+        "happy hour"
+      ],
+      "best_for": [
+        "date night",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "New tequila bar and Mexican grill in the old Viva Margarita space (opened early Nov 2026) with a weekday 4-7 PM happy hour.",
+      "website": "https://rojonj.com/",
+      "source_url": "https://www.instagram.com/rojocliffsidenj/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "COV",
+      "town": "Edgewater",
+      "address": "115 River Rd",
+      "category": "food",
+      "tags": [
+        "seafood",
+        "waterfront",
+        "skyline views",
+        "cocktails"
+      ],
+      "best_for": [
+        "date night",
+        "special occasion"
+      ],
+      "price_text": "$$$",
+      "hours_text": "Mon & Tues - Closed; Wed & Thurs - 3pm - 10pm (Bar opens at 3pm, Dinner opens at 4pm); Friday - 3pm - 11pm; Saturday - 1pm - 11pm; Sunday - 1pm - 9pm",
+      "description": "Upscale waterfront seafood spot with Hudson River and NYC skyline views; the bar opens an hour before dinner.",
+      "website": "https://cov-restaurants.com/",
+      "source_url": "https://cov-restaurants.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Don Coqui",
+      "town": "Edgewater",
+      "address": "541 River Rd",
+      "category": "nightlife",
+      "tags": [
+        "latin",
+        "salsa",
+        "dj",
+        "lounge",
+        "happy hour"
+      ],
+      "best_for": [
+        "groups",
+        "late night",
+        "live music"
+      ],
+      "price_text": "$$",
+      "hours_text": "Monday - Thursday 5p-12a; Friday 5p-2a; Saturday 3p-2a; Sunday 12p-11p",
+      "description": "Puerto Rican restaurant-lounge with three bars, Salsa Thursdays, and live DJs on weekends.",
+      "website": "https://doncoqui.com/locations/new-jersey/",
+      "source_url": "https://doncoqui.com/locations/new-jersey/events/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Volume Up Karaoke",
+      "town": "Edgewater",
+      "address": null,
+      "category": "nightlife",
+      "tags": [
+        "karaoke",
+        "private rooms",
+        "korean"
+      ],
+      "best_for": [
+        "groups",
+        "late night"
+      ],
+      "price_text": null,
+      "hours_text": "Mon-Thu: 3:00 PM - 2:00 AM; Fri-Sat: 3:00 PM - 4:00 AM; Sun: 3:00 PM - 3:00 AM; CLOSED on MONDAY every 2nd and 3rd week",
+      "description": "Private-room karaoke with rooms for groups up to 50 and some of the latest weekend hours around (4 AM).",
+      "website": "https://www.volumeupkaraoke.com/",
+      "source_url": "https://www.volumeupkaraoke.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Orbit Karaoke",
+      "town": "Fort Lee",
+      "address": "2025 Lemoine Ave",
+      "category": "nightlife",
+      "tags": [
+        "karaoke",
+        "private rooms",
+        "bottle service",
+        "lounge"
+      ],
+      "best_for": [
+        "groups",
+        "late night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "New karaoke lounge (opened fall 2026) with LED-lit private rooms, bottle service and late-night bites.",
+      "website": "https://www.orbitkaraoke.com/",
+      "source_url": "https://www.boozyburbs.com/2026/10/08/opening-alert-orbit-karaoke-fort-lee-nj/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Rock 21 Karaoke",
+      "town": "Palisades Park",
+      "address": "400 Bergen Blvd",
+      "category": "nightlife",
+      "tags": [
+        "karaoke",
+        "private rooms",
+        "korean",
+        "bar food"
+      ],
+      "best_for": [
+        "groups",
+        "late night"
+      ],
+      "price_text": null,
+      "hours_text": "Open 365 Days 5:00pm-2:30am",
+      "description": "10+ private karaoke rooms (one fits 30) with a full bar and Korean and American bar food.",
+      "website": "https://rock21karaoke.com/",
+      "source_url": "https://rock21karaoke.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Third Floor Pocha",
+      "town": "Palisades Park",
+      "address": "232 Broad Ave, 3rd Floor",
+      "category": "nightlife",
+      "tags": [
+        "korean",
+        "pocha",
+        "karaoke",
+        "soju"
+      ],
+      "best_for": [
+        "groups",
+        "late night"
+      ],
+      "price_text": null,
+      "hours_text": "5pm - 2am",
+      "description": "Korean pocha (pub) on Broad Ave tied to the Mu:i karaoke rooms, for soju and late-night Korean bar food.",
+      "website": "https://www.thirdfloornj.com/",
+      "source_url": "https://www.thirdfloornj.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "VintEdge Wine Bar & Kitchen",
+      "town": "Lyndhurst",
+      "address": null,
+      "category": "nightlife",
+      "tags": [
+        "wine bar",
+        "brunch",
+        "happy hour"
+      ],
+      "best_for": [
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Wine bar and kitchen from the Somerville VintEdge team; its site still says 'Coming Soon - Fall 2026'.",
+      "website": "https://www.vintedgewinebarlyndhurst.com/",
+      "source_url": "https://www.vintedgewinebarlyndhurst.com/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Bolero Snort Brewery",
+      "town": "Carlstadt",
+      "address": "316 20th Street",
+      "category": "nightlife",
+      "tags": [
+        "brewery",
+        "tasting room",
+        "craft beer"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": "$$",
+      "hours_text": "Monday – Tuesday: 1-8PM; Wednesday: 12-9PM; Thursday – Saturday: 12-10PM; Sunday: 12-8PM",
+      "description": "Meadowlands brewery and tasting room known for its bull-themed 'hoof crafted' ales and lagers.",
+      "website": "https://www.bolerosnort.com/",
+      "source_url": "https://www.bolerosnort.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Bananas Comedy Club",
+      "town": "Rutherford",
+      "address": "Renaissance Hotel, 801 Rutherford Ave",
+      "category": "nightlife",
+      "tags": [
+        "comedy",
+        "stand-up",
+        "national headliners"
+      ],
+      "best_for": [
+        "date night",
+        "groups"
+      ],
+      "price_text": "$$",
+      "hours_text": null,
+      "description": "National headliners in an intimate room inside the Renaissance hotel; tickets mostly $28-$54 plus a 2-item minimum.",
+      "website": "https://www.bananascomedyclub.com/",
+      "source_url": "https://www.bananascomedyclub.com/events",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Debonair Music Hall",
+      "town": "Teaneck",
+      "address": null,
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "concerts",
+        "tribute bands"
+      ],
+      "best_for": [
+        "live music",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Teaneck music hall with live bands most weekends, from free shows to tribute acts.",
+      "website": "https://debonairmusichall.com/",
+      "source_url": "https://debonairmusichall.com/?page_id=565",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Sofia",
+      "town": "Englewood",
+      "address": "36 Engle Street",
+      "category": "food",
+      "tags": [
+        "steakhouse",
+        "italian",
+        "cigar lounge",
+        "cocktail lounge"
+      ],
+      "best_for": [
+        "date night",
+        "special occasion",
+        "late night"
+      ],
+      "price_text": "$$$",
+      "hours_text": "General & Lounge Hours: Mon-Thu 11:30 AM – 1:00 AM; Fri-Sat 11:30 AM – 2:00 AM; Sun 11:30 AM – 1:00 AM",
+      "description": "Downtown Englewood Italian steakhouse whose cigar and cocktail lounge serves late, with free valet.",
+      "website": "https://www.sofiaenglewood.com/",
+      "source_url": "https://www.sofiaenglewood.com/hours-and-location/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Blarney Station",
+      "town": "East Rutherford",
+      "address": "258 Park Ave",
+      "category": "nightlife",
+      "tags": [
+        "irish pub",
+        "trivia",
+        "sports"
+      ],
+      "best_for": [
+        "groups",
+        "late night",
+        "budget"
+      ],
+      "price_text": "$$",
+      "hours_text": "OPEN DAILY 11:00am - 2:00am; Kitchen 11AM-12AM Daily",
+      "description": "Park Avenue Irish pub with a kitchen open till midnight and Tuesday trivia.",
+      "website": "https://www.blarneystation.com/",
+      "source_url": "https://www.blarneystation.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Heights Bar & Grill",
+      "town": "Hasbrouck Heights",
+      "address": "163 Boulevard",
+      "category": "nightlife",
+      "tags": [
+        "pub",
+        "craft beer",
+        "sports",
+        "happy hour",
+        "trivia"
+      ],
+      "best_for": [
+        "groups",
+        "late night"
+      ],
+      "price_text": "$$",
+      "hours_text": "MON - WED 11:30 AM – 12 AM; THU - SAT 11:30 AM – 2:00 AM; SUN 12:00 PM – 12 AM",
+      "description": "Boulevard pub with a rotating craft-beer list, game-day specials and Wednesday trivia.",
+      "website": "https://heightsbarandgrill.com/",
+      "source_url": "https://heightsbarandgrill.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Penelope's Pizzeria and Sports Bar",
+      "town": "North Arlington",
+      "address": "25 Schuyler Ave",
+      "category": "nightlife",
+      "tags": [
+        "sports bar",
+        "pizza",
+        "cocktails",
+        "dj"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "New pizzeria and sports bar with TVs around the bar, craft cocktails and DJs on weekends.",
+      "website": "https://www.penelopespizzeria.com/",
+      "source_url": "https://www.penelopespizzeria.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "TPR Restaurant & Bar",
+      "town": "Tenafly",
+      "address": "38 W Railroad Ave",
+      "category": "food",
+      "tags": [
+        "italian",
+        "trattoria",
+        "bar room",
+        "trivia"
+      ],
+      "best_for": [
+        "date night"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Family-run Italian trattoria with a new bar room that hosts Wednesday trivia.",
+      "website": "https://tprrestaurant.com/",
+      "source_url": "https://tprrestaurant.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    }
+  ]
+}

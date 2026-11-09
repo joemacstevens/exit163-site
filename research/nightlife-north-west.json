@@ -1,0 +1,1740 @@
+{
+  "events": [
+    {
+      "title": "Karaoke Night at The Orange Lantern",
+      "town": "Paramus",
+      "location": "The Orange Lantern, 15 Firehouse Lane",
+      "category": "nightlife",
+      "tags": [
+        "karaoke",
+        "bar",
+        "monday"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Monday",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Karaoke is back on Monday nights at this classic Paramus sports bar, so grab the mic and a pint.",
+      "source_url": "https://www.orangelantern.com/events-entertainment/",
+      "verified": true
+    },
+    {
+      "title": "Grateful Tuesday at The Orange Lantern",
+      "town": "Paramus",
+      "location": "The Orange Lantern, 15 Firehouse Lane",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "grateful dead",
+        "tribute",
+        "tuesday"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "8PM",
+      "cost_text": null,
+      "description": "A weekly Grateful Dead night with a rotating cast of Dead tribute bands (Dead to the Core on Nov 10, Mighty Quinn on Nov 17, Baked Alaska on Nov 24).",
+      "source_url": "https://www.orangelantern.com/events-entertainment/",
+      "verified": true
+    },
+    {
+      "title": "Music Bingo at The Orange Lantern",
+      "town": "Paramus",
+      "location": "The Orange Lantern, 15 Firehouse Lane",
+      "category": "nightlife",
+      "tags": [
+        "music bingo",
+        "games",
+        "wednesday"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Wednesday",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Bingo played with song clips instead of numbers, a fun midweek night out. No Music Bingo on Nov 25.",
+      "source_url": "https://www.orangelantern.com/events-entertainment/",
+      "verified": true
+    },
+    {
+      "title": "Trivia Night at The Orange Lantern",
+      "town": "Paramus",
+      "location": "The Orange Lantern, 15 Firehouse Lane",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "free",
+        "thursday"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Thursday",
+      "time_text": "8PM",
+      "cost_text": null,
+      "description": "Joe Trivia hosts free team trivia with prizes every Thursday. No trivia on Thanksgiving (Nov 26) or Christmas Eve (Dec 24).",
+      "source_url": "https://www.orangelantern.com/events-entertainment/",
+      "verified": true
+    },
+    {
+      "title": "Live Bands at The Orange Lantern",
+      "town": "Paramus",
+      "location": "The Orange Lantern, 15 Firehouse Lane",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "bands",
+        "weekend"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Fridays & Saturdays",
+      "time_text": "9PM",
+      "cost_text": null,
+      "description": "Local cover bands rock the room most weekends: Dirty Rotten Bastid (Nov 13), InterCity 125 (Nov 14), Afterparty (Nov 20), Rewind Theory (Nov 21), Billy Monroe & The Soul Survivors (Dec 5), The Rummies (Dec 12), Fuzzy Dice (Dec 26) and more.",
+      "source_url": "https://www.orangelantern.com/events-entertainment/",
+      "verified": true
+    },
+    {
+      "title": "Darts Night at The Orange Lantern",
+      "town": "Paramus",
+      "location": "The Orange Lantern, 15 Firehouse Lane",
+      "category": "nightlife",
+      "tags": [
+        "darts",
+        "games",
+        "sunday"
+      ],
+      "starts_on": "2026-11-15",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Sunday",
+      "time_text": "8PM",
+      "cost_text": null,
+      "description": "Luck of the Draw darts on Sunday nights: show up, get paired, play and win.",
+      "source_url": "https://www.orangelantern.com/events-entertainment/",
+      "verified": true
+    },
+    {
+      "title": "Trivia Night at Stone & Rail",
+      "town": "Glen Rock",
+      "location": "Stone & Rail, 175 Rock Rd",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "tuesday",
+        "gastropub"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "7 PM",
+      "cost_text": null,
+      "description": "Tuesday trivia at Glen Rock's gastropub, which also runs Teacher Tuesday specials from 4 PM to close.",
+      "source_url": "http://stoneandrail.com/",
+      "verified": true
+    },
+    {
+      "title": "Industry Night at Stone & Rail",
+      "town": "Glen Rock",
+      "location": "Stone & Rail, 175 Rock Rd",
+      "category": "nightlife",
+      "tags": [
+        "industry night",
+        "monday",
+        "late night"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Monday",
+      "time_text": "9 PM - Close",
+      "cost_text": null,
+      "description": "A Monday late-night hang aimed at restaurant and bar workers, after a regular 4-6 PM happy hour.",
+      "source_url": "http://stoneandrail.com/",
+      "verified": true
+    },
+    {
+      "title": "Happy Hour at Stone & Rail",
+      "town": "Glen Rock",
+      "location": "Stone & Rail, 175 Rock Rd",
+      "category": "nightlife",
+      "tags": [
+        "happy hour",
+        "drinks",
+        "weekday"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Monday - Friday",
+      "time_text": "4 PM - 6 PM",
+      "cost_text": null,
+      "description": "Weekday happy hour at the bar of this Glen Rock gastropub near the train line.",
+      "source_url": "http://stoneandrail.com/",
+      "verified": true
+    },
+    {
+      "title": "Friday Live Music at Stone & Rail",
+      "town": "Glen Rock",
+      "location": "Stone & Rail, 175 Rock Rd",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "friday",
+        "bands"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Friday",
+      "time_text": "Live Music 5 PM - 8 PM; Live Local Bands 8:30 PM - 11:30PM",
+      "cost_text": null,
+      "description": "Two rounds of music every Friday: an early set from 5 to 8 PM and local bands from 8:30 PM, with the bar open until about 1 AM.",
+      "source_url": "http://stoneandrail.com/",
+      "verified": true
+    },
+    {
+      "title": "Country Wednesday for Veterans Day at Stone & Rail",
+      "town": "Glen Rock",
+      "location": "Stone & Rail, 175 Rock Rd",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "country",
+        "veterans day",
+        "free"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "7 PM - 10 PM",
+      "cost_text": "Free",
+      "description": "The Black Book Band plays country covers for a Veterans Day celebration. Free admission.",
+      "source_url": "https://www.thelocalmusicfinder.com/venue/stone-rail-311",
+      "verified": true
+    },
+    {
+      "title": "Live Music at Steel Wheel Tavern",
+      "town": "Ridgewood",
+      "location": "Steel Wheel Tavern, 51 N Broad St",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "acoustic",
+        "covers",
+        "ridgewood"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Most nights (6 days a week)",
+      "time_text": "Usually 6 PM; second sets 9:30 PM on Fri & Sat",
+      "cost_text": null,
+      "description": "Downtown Ridgewood's go-to for live local music, with acoustic acts and cover bands like The Faculty Meeting, John Lepre, That's What She Sang and PaperJam on the calendar.",
+      "source_url": "https://www.steelwheeltavern.com/entertainment",
+      "verified": true
+    },
+    {
+      "title": "Live Bands at The Shannon Rose",
+      "town": "Ramsey",
+      "location": "The Shannon Rose, 1200 Route 17 N",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "irish pub",
+        "weekend",
+        "dancing"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Fridays & Saturdays",
+      "time_text": "9pm",
+      "cost_text": null,
+      "description": "Weekend cover bands at this big Irish pub on Route 17: Mr. Lovejoy (Nov 13), ARENA (Nov 14), 8th Grade Science (Nov 20), The Georgia 5 80s Dance Party (Nov 21), The Benjamins (Nov 27), The Bergen Boys (Nov 28) and Kickin' Nash (Dec 12).",
+      "source_url": "https://www.theshannonrose.com/ramsey-live-music/",
+      "verified": true
+    },
+    {
+      "title": "Happy Hour at The Shannon Rose",
+      "town": "Ramsey",
+      "location": "The Shannon Rose, 1200 Route 17 N",
+      "category": "nightlife",
+      "tags": [
+        "happy hour",
+        "irish pub",
+        "monday"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Monday all day; Tuesday - Friday",
+      "time_text": "Monday: All Day; Tuesday - Friday: 3pm - 7pm",
+      "cost_text": null,
+      "description": "One of the area's more generous happy hours, running all day Monday, plus a late-night window Monday-Thursday from 10pm to close.",
+      "source_url": "https://www.theshannonrose.com/location/shannon-rose-ramsey/",
+      "verified": true
+    },
+    {
+      "title": "Open Mic Night at Five Dimes Brewery",
+      "town": "Westwood",
+      "location": "Five Dimes Brewery, 247 Westwood Ave",
+      "category": "nightlife",
+      "tags": [
+        "open mic",
+        "brewery",
+        "monday"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Monday",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Bring an instrument or just a pint and cheer on local performers at downtown Westwood's brewery.",
+      "source_url": "https://www.fivedimesbrewery.com/events",
+      "verified": true
+    },
+    {
+      "title": "Trivia Night at Five Dimes Brewery",
+      "town": "Westwood",
+      "location": "Five Dimes Brewery, 247 Westwood Ave",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "brewery",
+        "wednesday",
+        "free"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Wednesday",
+      "time_text": "7pm",
+      "cost_text": null,
+      "description": "Joe Trivia runs free team trivia at the brewery every Wednesday; food is BYO.",
+      "source_url": "https://www.fivedimesbrewery.com/events",
+      "verified": true
+    },
+    {
+      "title": "Bingo Night at Five Dimes Brewery",
+      "town": "Westwood",
+      "location": "Five Dimes Brewery, 247 Westwood Ave",
+      "category": "nightlife",
+      "tags": [
+        "bingo",
+        "brewery",
+        "thursday"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Thursday",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Thursday bingo with a flight of house beers, an easy low-key night out.",
+      "source_url": "https://www.fivedimesbrewery.com/events",
+      "verified": true
+    },
+    {
+      "title": "Weekend Live Music at Five Dimes Brewery",
+      "town": "Westwood",
+      "location": "Five Dimes Brewery, 247 Westwood Ave",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "brewery",
+        "weekend",
+        "21+"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Fridays & Saturdays",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Live bands on Friday and Saturday (After Party plays Nov 13). The brewery is 21+ after 8pm on weekends.",
+      "source_url": "https://www.fivedimesbrewery.com/events",
+      "verified": true
+    },
+    {
+      "title": "Trivia Night at Davey's Irish Pub",
+      "town": "Montvale",
+      "location": "Davey's Irish Pub, 5 Park St",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "irish pub",
+        "monday"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Monday",
+      "time_text": "7pm",
+      "cost_text": null,
+      "description": "Monday Joe Trivia at Montvale's family-run Irish pub, open since 1974. Listed on the Joe Trivia schedule, not on the pub's own site.",
+      "source_url": "https://www.joetrivia.com/monday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at The Cornerstone",
+      "town": "Hillsdale",
+      "location": "The Cornerstone, 84 Broadway",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "tuesday",
+        "late night"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "08:00 PM",
+      "cost_text": null,
+      "description": "Free Tuesday trivia at Hillsdale's neighborhood bar, which stays open until 2-3 AM.",
+      "source_url": "https://thecornerstonenj.com/all-events/",
+      "verified": true
+    },
+    {
+      "title": "Trivia Night at Allendale Bar & Grill",
+      "town": "Allendale",
+      "location": "Allendale Bar & Grill, 67 W Allendale Ave",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "free",
+        "tuesday"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "starting at 8:00pm",
+      "cost_text": null,
+      "description": "Free Joe Trivia that runs about two hours, with prizes for the top two teams.",
+      "source_url": "http://allendalebarandgrill.com/",
+      "verified": true
+    },
+    {
+      "title": "Happy Hour at Allendale Bar & Grill",
+      "town": "Allendale",
+      "location": "Allendale Bar & Grill, 67 W Allendale Ave",
+      "category": "nightlife",
+      "tags": [
+        "happy hour",
+        "drinks",
+        "weekday"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Monday through Friday",
+      "time_text": "4:00pm-6:00pm",
+      "cost_text": "$8 appetizer plates",
+      "description": "Bar-only weekday happy hour with drink deals and $8 appetizer plates.",
+      "source_url": "http://allendalebarandgrill.com/",
+      "verified": true
+    },
+    {
+      "title": "Trivia Night at Doc Watson's",
+      "town": "Oakland",
+      "location": "Doc Watson's, 20 Elm Street",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "irish pub",
+        "tuesday"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "7pm",
+      "cost_text": null,
+      "description": "Tuesday trivia at Oakland's Irish pub. The pub lists Tuesday trivia, and Joe Trivia gives the 7pm start.",
+      "source_url": "https://docwatsons.com/weekly-events",
+      "verified": true
+    },
+    {
+      "title": "Trivia Night at Nellie's Place",
+      "town": "Waldwick",
+      "location": "Nellie's Place, 9 Franklin Turnpike",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "pizza",
+        "wednesday"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Wednesday",
+      "time_text": "8pm",
+      "cost_text": null,
+      "description": "Wednesday Joe Trivia at a thin-crust pizza spot with 13 beers on tap. Listed by Joe Trivia, not on the restaurant's site.",
+      "source_url": "https://www.joetrivia.com/wednesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at JJ's Pub & Grill",
+      "town": "Fair Lawn",
+      "location": "JJ's Pub & Grill, 25-01 Broadway",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "pub",
+        "wednesday"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Wednesday",
+      "time_text": "8pm",
+      "cost_text": null,
+      "description": "Wednesday Joe Trivia at a family-run Fair Lawn pub that has been around for over 45 years. Listed by Joe Trivia.",
+      "source_url": "https://www.joetrivia.com/wednesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Mahwah Bar & Grill",
+      "town": "Mahwah",
+      "location": "Mahwah Bar & Grill",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "wednesday"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Wednesday",
+      "time_text": "8:30pm",
+      "cost_text": null,
+      "description": "Late-starting Wednesday Joe Trivia in Mahwah. Listed by Joe Trivia; the venue's own page wasn't reachable.",
+      "source_url": "https://www.joetrivia.com/wednesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Midland Brew House",
+      "town": "Saddle Brook",
+      "location": "Midland Brew House, 374 North Midland Avenue",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "sports bar",
+        "tuesday"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "8pm",
+      "cost_text": null,
+      "description": "Tuesday Joe Trivia at a two-floor sports lounge with 60-plus TVs. Listed by Joe Trivia.",
+      "source_url": "https://www.joetrivia.com/tuesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Houlihan's Ramsey",
+      "town": "Ramsey",
+      "location": "Houlihan's, Ramsey",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "tuesday"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "7pm",
+      "cost_text": null,
+      "description": "Tuesday Joe Trivia at Houlihan's in Ramsey. Listed by Joe Trivia.",
+      "source_url": "https://www.joetrivia.com/tuesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Houlihan's Paramus",
+      "town": "Paramus",
+      "location": "Houlihan's, Paramus",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "wednesday"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Wednesday",
+      "time_text": "7pm",
+      "cost_text": null,
+      "description": "Wednesday Joe Trivia at Houlihan's in Paramus. Listed by Joe Trivia.",
+      "source_url": "https://www.joetrivia.com/wednesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Miller's Ale House Paramus",
+      "town": "Paramus",
+      "location": "Miller's Ale House, Paramus",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "sports bar",
+        "tuesday"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "7pm",
+      "cost_text": null,
+      "description": "Tuesday Joe Trivia at the Paramus Miller's Ale House. Listed by Joe Trivia.",
+      "source_url": "https://www.joetrivia.com/tuesday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Plank Pizza Co.",
+      "town": "Saddle Brook",
+      "location": "Plank Pizza Co., Saddle Brook",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "pizza",
+        "thursday"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Thursday",
+      "time_text": "8pm",
+      "cost_text": null,
+      "description": "Thursday Joe Trivia with pizza in Saddle Brook. Listed by Joe Trivia.",
+      "source_url": "https://www.joetrivia.com/thursday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Napoletano Brick Oven Tavern",
+      "town": "River Vale",
+      "location": "Napoletano Brick Oven Tavern, River Vale",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "italian",
+        "thursday"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Thursday",
+      "time_text": "7:30pm",
+      "cost_text": null,
+      "description": "Thursday Joe Trivia at a brick-oven Italian tavern. Listed by Joe Trivia.",
+      "source_url": "https://www.joetrivia.com/thursday",
+      "verified": false
+    },
+    {
+      "title": "Trivia Night at Gotham City Diner",
+      "town": "Fair Lawn",
+      "location": "Gotham City Diner, 39-10 Broadway",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "diner",
+        "thursday",
+        "family friendly"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Thursday",
+      "time_text": "7:00pm",
+      "cost_text": null,
+      "description": "Thursday trivia with prizes at a big Fair Lawn diner, an easygoing alternative to a bar night.",
+      "source_url": "https://gothamcitydiner.com/",
+      "verified": true
+    },
+    {
+      "title": "Trivia Night at MacMurphy's",
+      "town": "Ridgewood",
+      "location": "MacMurphy's, Ridgewood",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "pub",
+        "tuesday"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": "8pm",
+      "cost_text": null,
+      "description": "Tuesday Joe Trivia in Ridgewood. Listed by Joe Trivia, but the pub's website no longer works, so call ahead.",
+      "source_url": "https://www.joetrivia.com/tuesday",
+      "verified": false
+    },
+    {
+      "title": "Open Mic Night at Booyah!",
+      "town": "Mahwah",
+      "location": "Booyah!, 180 Route 17 South",
+      "category": "nightlife",
+      "tags": [
+        "open mic",
+        "margaritas",
+        "90s",
+        "tuesday"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Tequila Tuesday at a 90s-themed bar, with half-off margaritas and an open mic.",
+      "source_url": "https://booyahnj.com/events",
+      "verified": true
+    },
+    {
+      "title": "Live Music at Booyah!",
+      "town": "Mahwah",
+      "location": "Booyah!, 180 Route 17 South",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "90s",
+        "weekend"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Fridays & Saturdays",
+      "time_text": "08:30 PM - 11:30 PM",
+      "cost_text": null,
+      "description": "Weekend bands at Mahwah's 90s-nostalgia bar: The Warehouse (Nov 20), The Georgia 5 (Nov 21), Kick Start Charlie (Dec 4), The Kootz (Dec 5), No Time Lost (Dec 12).",
+      "source_url": "https://booyahnj.com/events",
+      "verified": true
+    },
+    {
+      "title": "Happy Hour at Booyah!",
+      "town": "Mahwah",
+      "location": "Booyah!, 180 Route 17 South",
+      "category": "nightlife",
+      "tags": [
+        "happy hour",
+        "drinks"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every day",
+      "time_text": "Monday - Friday 3-6pm; Saturday & Sunday 11am-6pm",
+      "cost_text": null,
+      "description": "A daily happy hour that runs all afternoon on weekends.",
+      "source_url": "https://booyahnj.com/events",
+      "verified": true
+    },
+    {
+      "title": "Fleetwood Mac Tribute: Gold Dust Dreams at Booyah!",
+      "town": "Mahwah",
+      "location": "Booyah!, 180 Route 17 South",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "tribute",
+        "fleetwood mac"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "08:00 PM - 11:00 PM",
+      "cost_text": null,
+      "description": "Gold Dust Dreams plays a Fleetwood Mac tribute set at Booyah!; reservations recommended.",
+      "source_url": "https://booyahnj.com/events",
+      "verified": true
+    },
+    {
+      "title": "Thanksgiving Trivia Night at Booyah!",
+      "town": "Mahwah",
+      "location": "Booyah!, 180 Route 17 South",
+      "category": "nightlife",
+      "tags": [
+        "trivia",
+        "thanksgiving",
+        "free"
+      ],
+      "starts_on": "2026-11-19",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "07:00 PM - 09:00 PM",
+      "cost_text": "Free",
+      "description": "A free Thanksgiving-themed trivia night with prizes. Make it a dinner and trivia night.",
+      "source_url": "https://booyahnj.com/events",
+      "verified": true
+    },
+    {
+      "title": "Billy Doors Petty! at Booyah!",
+      "town": "Mahwah",
+      "location": "Booyah!, 180 Route 17 South",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "tribute",
+        "billy joel"
+      ],
+      "starts_on": "2026-11-28",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "08:30 PM - 11:30 PM",
+      "cost_text": null,
+      "description": "One band covering Billy Joel, The Doors and Tom Petty in a single night.",
+      "source_url": "https://booyahnj.com/events",
+      "verified": true
+    },
+    {
+      "title": "Lotion Holiday Party Show at Booyah!",
+      "town": "Mahwah",
+      "location": "Booyah!, 180 Route 17 South",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "holiday",
+        "late night"
+      ],
+      "starts_on": "2026-12-19",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "09:00 PM - 12:00 AM",
+      "cost_text": null,
+      "description": "Booyah's holiday-party special with the band Lotion, running until midnight.",
+      "source_url": "https://booyahnj.com/events",
+      "verified": true
+    },
+    {
+      "title": "New Year's Eve Party at Booyah!",
+      "town": "Mahwah",
+      "location": "Booyah!, 180 Route 17 South",
+      "category": "nightlife",
+      "tags": [
+        "new years eve",
+        "dj",
+        "open bar",
+        "late night"
+      ],
+      "starts_on": "2026-12-31",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "08:00 PM - 01:00 AM",
+      "cost_text": "$99 per person (early bird)",
+      "description": "Booyah's ballroom NYE bash has a live DJ, an open bar and a late-night food spread. Early-bird price goes up after Black Friday.",
+      "source_url": "https://booyahnj.com/events",
+      "verified": true
+    },
+    {
+      "title": "Music Bingo at Booyah!",
+      "town": "Mahwah",
+      "location": "Booyah!, 180 Route 17 South",
+      "category": "nightlife",
+      "tags": [
+        "music bingo",
+        "free"
+      ],
+      "starts_on": "2026-11-12",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "07:00 PM - 10:00 PM",
+      "cost_text": "Free",
+      "description": "Free music bingo with prizes. Sing along and mark your card over dinner and drinks.",
+      "source_url": "https://booyahnj.com/events",
+      "verified": true
+    },
+    {
+      "title": "Weekend Live Bands at Mason Jar",
+      "town": "Mahwah",
+      "location": "Mason Jar Family Restaurant and Bar, 219 Ramapo Valley Rd",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "bands",
+        "weekend"
+      ],
+      "starts_on": "2026-11-13",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Fridays & Saturdays",
+      "time_text": "8:00 PM",
+      "cost_text": null,
+      "description": "Local bands nearly every weekend through mid-December, including Just Us, Souled Out, Mary's Basement, The McDermott Brothers Band, Rewind Theory and Dave Kopec. Pattern is inferred from the listings.",
+      "source_url": "https://www.thelocalmusicfinder.com/venue/mason-jar-family-restaurant-and-bar-121",
+      "verified": false
+    },
+    {
+      "title": "Thanksgiving Eve with Rubber Duckie Riot at Mason Jar",
+      "town": "Mahwah",
+      "location": "Mason Jar Family Restaurant and Bar, 219 Ramapo Valley Rd",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "thanksgiving eve"
+      ],
+      "starts_on": "2026-11-25",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8:00 PM",
+      "cost_text": null,
+      "description": "A night-before-Thanksgiving show with Rubber Duckie Riot.",
+      "source_url": "https://www.thelocalmusicfinder.com/venue/mason-jar-family-restaurant-and-bar-121",
+      "verified": true
+    },
+    {
+      "title": "Saturday Night Bands at Dog House Saloon",
+      "town": "Washington Township",
+      "location": "Dog House Saloon & Grill, 270 Pascack Rd",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "classic rock",
+        "saturday"
+      ],
+      "starts_on": "2026-11-14",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Saturdays",
+      "time_text": "8:30 PM",
+      "cost_text": null,
+      "description": "Classic-rock cover bands on Saturday nights: Ed Gunderman & Friends (Nov 14), Rock Solid (Nov 21), Second Contact (Nov 28). Pattern is inferred from the listings.",
+      "source_url": "https://www.thelocalmusicfinder.com/venue/dog-house-saloon-grill-75",
+      "verified": false
+    },
+    {
+      "title": "Baked Alaska Grateful Dead Matinee at Dog House Saloon",
+      "town": "Washington Township",
+      "location": "Dog House Saloon & Grill, 270 Pascack Rd",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "grateful dead",
+        "tribute",
+        "sunday"
+      ],
+      "starts_on": "2026-11-15",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "2:00 PM",
+      "cost_text": null,
+      "description": "A Sunday-afternoon Grateful Dead tribute set by Baked Alaska.",
+      "source_url": "https://www.thelocalmusicfinder.com/venue/dog-house-saloon-grill-75",
+      "verified": true
+    },
+    {
+      "title": "New Year's Eve Bash with The EDGE at Dog House Saloon",
+      "town": "Washington Township",
+      "location": "Dog House Saloon & Grill, 270 Pascack Rd",
+      "category": "nightlife",
+      "tags": [
+        "new years eve",
+        "live music",
+        "free"
+      ],
+      "starts_on": "2026-12-31",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "8:30 PM",
+      "cost_text": "No cover",
+      "description": "Ring in 2027 with the cover band The EDGE. No cover charge.",
+      "source_url": "https://www.thelocalmusicfinder.com/venue/dog-house-saloon-grill-75",
+      "verified": true
+    },
+    {
+      "title": "New Year's Day with Achievers Band at Dog House Saloon",
+      "town": "Washington Township",
+      "location": "Dog House Saloon & Grill, 270 Pascack Rd",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "grateful dead",
+        "tribute"
+      ],
+      "starts_on": "2027-01-01",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "9:00 PM",
+      "cost_text": null,
+      "description": "A Grateful Dead and Jerry Garcia Band tribute to start the new year.",
+      "source_url": "https://www.thelocalmusicfinder.com/venue/dog-house-saloon-grill-75",
+      "verified": true
+    },
+    {
+      "title": "80s Dance Party with The Georgia 5 at The Shannon Rose",
+      "town": "Ramsey",
+      "location": "The Shannon Rose, 1200 Route 17 N",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "80s",
+        "dancing"
+      ],
+      "starts_on": "2026-11-21",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "9:00 PM",
+      "cost_text": null,
+      "description": "The Georgia 5 bring an 80s dance party to the Irish pub's stage.",
+      "source_url": "https://www.thelocalmusicfinder.com/venue/the-shannon-rose-ramsey-47",
+      "verified": true
+    },
+    {
+      "title": "Live Music Saturdays at The Emerson Hotel",
+      "town": "Emerson",
+      "location": "Emerson Hotel & Restaurant, 31 Emerson Plaza",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "saturday",
+        "historic"
+      ],
+      "starts_on": "2026-11-14",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Saturday",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Live bands every Saturday at this historic bar and steakhouse, open since 1872: til we can't (Nov 14), 5 equals (Nov 21), no hard feelings (Nov 28), the stone birds (Dec 5), blue collar band (Dec 12), summer breeze (Dec 19).",
+      "source_url": "https://emersonhotelrestaurant.com/",
+      "verified": true
+    },
+    {
+      "title": "Karaoke Tuesday at Blue 42",
+      "town": "Elmwood Park",
+      "location": "Blue 42, 158 Market St",
+      "category": "nightlife",
+      "tags": [
+        "karaoke",
+        "tuesday",
+        "late night"
+      ],
+      "starts_on": "2026-11-10",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Tuesday",
+      "time_text": null,
+      "cost_text": null,
+      "description": "Grab the mic on Tuesday nights at Elmwood Park's wings and sports bar, which stays open until 2 AM.",
+      "source_url": "https://www.blue42bar.com/",
+      "verified": true
+    },
+    {
+      "title": "Wing Wednesday at Blue 42",
+      "town": "Elmwood Park",
+      "location": "Blue 42, 158 Market St",
+      "category": "nightlife",
+      "tags": [
+        "wings",
+        "deal",
+        "wednesday"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Every Wednesday",
+      "time_text": "7PM to Midnight",
+      "cost_text": "$8 wings",
+      "description": "$8 wings (dine-in only) from a menu of 196 flavors, a cheap and fun midweek night.",
+      "source_url": "https://www.blue42bar.com/",
+      "verified": true
+    },
+    {
+      "title": "Happy Hour at Blue 42",
+      "town": "Elmwood Park",
+      "location": "Blue 42, 158 Market St",
+      "category": "nightlife",
+      "tags": [
+        "happy hour",
+        "weekday"
+      ],
+      "starts_on": "2026-11-09",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Monday to Friday",
+      "time_text": "3PM to 7PM",
+      "cost_text": null,
+      "description": "Weekday dine-in happy hour. On Mondays the doors open at 4PM.",
+      "source_url": "https://www.blue42bar.com/",
+      "verified": true
+    },
+    {
+      "title": "Live Entertainment at Twin Door Tavern",
+      "town": "Maywood",
+      "location": "Twin Door Tavern, 122 W Pleasant Ave",
+      "category": "nightlife",
+      "tags": [
+        "live music",
+        "tavern"
+      ],
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-02-28",
+      "recurrence_text": "Wednesdays, Thursdays, Fridays & Saturdays",
+      "time_text": "Wed 7:30pm to 9:30pm; Thu 6:00pm to 9:00pm; Fri & Sat 8:00pm to 11:00pm",
+      "cost_text": null,
+      "description": "Maywood's neighborhood tavern has live music four nights a week, and the bar stays open until 2 AM on weekends.",
+      "source_url": "https://www.twindoortavernnj.com/",
+      "verified": true
+    },
+    {
+      "title": "New Year's Eve at Midland Brew House",
+      "town": "Saddle Brook",
+      "location": "Midland Brew House, 374 North Midland Avenue",
+      "category": "nightlife",
+      "tags": [
+        "new years eve",
+        "late night",
+        "sports bar"
+      ],
+      "starts_on": "2026-12-31",
+      "ends_on": null,
+      "recurrence_text": null,
+      "time_text": "11:00 AM - 02:00 AM",
+      "cost_text": null,
+      "description": "Ring in the New Year at Saddle Brook's two-floor sports lounge, open until 2 AM.",
+      "source_url": "https://midlandbrewhouse.com/events",
+      "verified": true
+    }
+  ],
+  "places": [
+    {
+      "name": "Stone & Rail",
+      "town": "Glen Rock",
+      "address": "175 Rock Rd",
+      "category": "nightlife",
+      "tags": [
+        "gastropub",
+        "trivia",
+        "live music",
+        "happy hour",
+        "brunch"
+      ],
+      "best_for": [
+        "groups",
+        "live music",
+        "late night",
+        "brunch"
+      ],
+      "price_text": null,
+      "hours_text": "Mon-Wed: Kitchen 4 PM - 10 PM, Bar 4 PM - 11 PM approximately; Thu: Kitchen 11 AM - 10PM, Bar 4 PM - 12 AM approximately; Fri: Kitchen 11 AM - 11 PM, Bar 11 Am - 1 AM approximately; Sat: Kitchen 11 AM - 11 PM, Bar 11 AM- 1 AM approximately; Sun: Kitchen 11 AM - 9 PM, Bar 11 AM to 10 PM approximately",
+      "description": "Glen Rock gastropub with a busy week: happy hour every weekday, trivia Tuesday, Monday industry night and two rounds of live music on Fridays.",
+      "website": "http://stoneandrail.com/",
+      "source_url": "http://stoneandrail.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Orange Lantern",
+      "town": "Paramus",
+      "address": "15 Firehouse Lane",
+      "category": "nightlife",
+      "tags": [
+        "sports bar",
+        "live music",
+        "trivia",
+        "karaoke",
+        "darts"
+      ],
+      "best_for": [
+        "groups",
+        "live music"
+      ],
+      "price_text": null,
+      "hours_text": "MONDAY - SATURDAY from 10:00AM; SUNDAY from 12:00PM",
+      "description": "A longtime Paramus sports bar with something every night: karaoke Monday, Grateful Dead Tuesday, music bingo, Thursday trivia and weekend bands.",
+      "website": "https://www.orangelantern.com/",
+      "source_url": "https://www.orangelantern.com/events-entertainment/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Shannon Rose",
+      "town": "Ramsey",
+      "address": "1200 Route 17 N",
+      "category": "nightlife",
+      "tags": [
+        "irish pub",
+        "live music",
+        "happy hour",
+        "brunch"
+      ],
+      "best_for": [
+        "groups",
+        "live music",
+        "late night",
+        "brunch"
+      ],
+      "price_text": null,
+      "hours_text": "Sunday - Thursday: 11am - 12am; Friday - Saturday: 11am - 2am",
+      "description": "A big, lively Irish pub on Route 17 with cover bands at 9pm every weekend, an all-day Monday happy hour and weekend brunch.",
+      "website": "https://www.theshannonrose.com/",
+      "source_url": "https://www.theshannonrose.com/location/shannon-rose-ramsey/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "High Line",
+      "town": "Ridgewood",
+      "address": "Floor 2, 51 N Broad St",
+      "category": "nightlife",
+      "tags": [
+        "piano bar",
+        "cocktails",
+        "small plates"
+      ],
+      "best_for": [
+        "date night",
+        "live music"
+      ],
+      "price_text": null,
+      "hours_text": "Wednesday - Sunday 4pm - 11pm",
+      "description": "A vintage-style piano lounge with craft cocktails and small plates, upstairs from Steel Wheel Tavern. As of Nov 9, 2026 its site still says it is opening soon, so it is not confirmed open yet.",
+      "website": "https://www.highlineridgewood.com/",
+      "source_url": "https://www.highlineridgewood.com/",
+      "status": "coming_soon",
+      "opened_on": null,
+      "verified": false
+    },
+    {
+      "name": "Steel Wheel Tavern",
+      "town": "Ridgewood",
+      "address": "51 N Broad St",
+      "category": "nightlife",
+      "tags": [
+        "tavern",
+        "live music",
+        "craft beer",
+        "brunch"
+      ],
+      "best_for": [
+        "live music",
+        "groups",
+        "brunch"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Downtown Ridgewood tavern with craft beer and live local music about six nights a week, often with two sets on Fridays and Saturdays.",
+      "website": "https://www.steelwheeltavern.com/",
+      "source_url": "https://www.steelwheeltavern.com/entertainment",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Gearblock Brewing Company",
+      "town": "Waldwick",
+      "address": "140 Franklin Turnpike",
+      "category": "nightlife",
+      "tags": [
+        "brewery",
+        "taproom",
+        "craft beer",
+        "byo food"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": "Monday Closed; Tuesday Closed; Wednesday 4:00pm-9:00pm; Thursday 4:00pm-9:00pm; Friday 4:00pm-10:00pm; Saturday 12:00pm-10:00pm; Sunday 12:00pm-7:00pm",
+      "description": "A small-batch microbrewery with an industrial-chic tasting room and rotating taps, including sours and barrel-aged beers. Bring your own food.",
+      "website": "https://www.gearblockbrewing.com/",
+      "source_url": "https://www.gearblockbrewing.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Five Dimes Brewery",
+      "town": "Westwood",
+      "address": "247 Westwood Ave",
+      "category": "nightlife",
+      "tags": [
+        "brewery",
+        "rooftop",
+        "trivia",
+        "open mic",
+        "live music"
+      ],
+      "best_for": [
+        "groups",
+        "live music"
+      ],
+      "price_text": null,
+      "hours_text": "Monday 4:00pm - 10:00pm; Tuesday 4:00pm - 10:00pm; Wednesday 4:00pm - 10:00pm; Thursday 4:00pm - 11:00pm; Friday 12:00pm - 12:00am; Saturday 12:00pm - 12:00am; Sunday 12:00pm - 9:00pm",
+      "description": "Downtown Westwood brewery with a rooftop taproom and something every night: open mic Monday, trivia Wednesday, bingo Thursday and bands on weekends.",
+      "website": "https://www.fivedimesbrewery.com/",
+      "source_url": "https://www.fivedimesbrewery.com/events",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Davey's Irish Pub",
+      "town": "Montvale",
+      "address": "5 Park St",
+      "category": "nightlife",
+      "tags": [
+        "irish pub",
+        "trivia",
+        "guinness"
+      ],
+      "best_for": [
+        "groups",
+        "late night"
+      ],
+      "price_text": null,
+      "hours_text": "Sunday 10:00 AM - 12:00 AM; Monday-Thursday 12:00 PM - 12:00 AM; Friday-Saturday 12:00 PM - 2:00 AM",
+      "description": "A family-owned Irish pub since 1974 with Guinness on draft, pub classics and Monday trivia.",
+      "website": "https://www.daveyspub.com/",
+      "source_url": "https://www.daveyspub.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Cornerstone",
+      "town": "Hillsdale",
+      "address": "84 Broadway",
+      "category": "nightlife",
+      "tags": [
+        "sports bar",
+        "trivia",
+        "brunch"
+      ],
+      "best_for": [
+        "late night",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": "Mon-Thurs 11AM-2AM; Fri-Sat 11AM-3AM; Sun 10AM-12AM",
+      "description": "A neighborhood bar and restaurant open until 2-3 AM, with Tuesday trivia, NFL game days and occasional bands.",
+      "website": "https://www.thecornerstonenj.com/",
+      "source_url": "https://thecornerstonenj.com/all-events/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Allendale Bar & Grill",
+      "town": "Allendale",
+      "address": "67 W Allendale Ave",
+      "category": "nightlife",
+      "tags": [
+        "bar and grill",
+        "trivia",
+        "happy hour"
+      ],
+      "best_for": [
+        "groups",
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "A cozy local bar and grill with a weekday happy hour ($8 appetizer plates) and free Tuesday trivia.",
+      "website": "http://allendalebarandgrill.com/",
+      "source_url": "http://allendalebarandgrill.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Nellie's Place",
+      "town": "Waldwick",
+      "address": "9 Franklin Turnpike",
+      "category": "food",
+      "tags": [
+        "pizza",
+        "beer",
+        "trivia"
+      ],
+      "best_for": [
+        "groups",
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": "Sunday - Wednesday from 11:00am to 10:00pm; Thursday - Saturday from 11:00am to 11:00pm",
+      "description": "A thin-crust pizza and pub spot with 13 beers on tap and Wednesday trivia.",
+      "website": "https://nelliesplacenj.com/",
+      "source_url": "https://nelliesplacenj.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "JJ's Pub & Grill",
+      "town": "Fair Lawn",
+      "address": "25-01 Broadway",
+      "category": "nightlife",
+      "tags": [
+        "pub",
+        "sports",
+        "trivia"
+      ],
+      "best_for": [
+        "groups",
+        "budget"
+      ],
+      "price_text": null,
+      "hours_text": "Kitchen open daily from 11am - 10pm (except 12pm on Sunday)",
+      "description": "A family-run Fair Lawn pub for over 45 years, with 16 TVs for the game, an affordable menu and Wednesday trivia.",
+      "website": "http://www.jjspubandgrill.com/",
+      "source_url": "http://www.jjspubandgrill.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Midland Brew House",
+      "town": "Saddle Brook",
+      "address": "374 North Midland Avenue",
+      "category": "nightlife",
+      "tags": [
+        "sports bar",
+        "craft beer",
+        "live music",
+        "trivia"
+      ],
+      "best_for": [
+        "groups",
+        "late night",
+        "live music"
+      ],
+      "price_text": null,
+      "hours_text": "Mon-Wed 11:30 AM - 1:00 AM; Thu 11:30 AM - 2:00 AM; Fri, Sat 11:30 AM - 3:00 AM; Sun 11:30 AM - 1:00 AM",
+      "description": "A two-floor sports lounge with 60-plus TVs, a projection screen, rotating drafts and live bands, open until 3 AM on weekends.",
+      "website": "https://www.midlandbrewhouse.com/",
+      "source_url": "https://www.midlandbrewhouse.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Doc Watson's",
+      "town": "Oakland",
+      "address": "20 Elm Street",
+      "category": "nightlife",
+      "tags": [
+        "irish pub",
+        "sports",
+        "trivia"
+      ],
+      "best_for": [
+        "groups",
+        "late night"
+      ],
+      "price_text": null,
+      "hours_text": "Mon 12:00 pm – 12:00 am; Tue 12:00 pm – 12:00 am; Wed-Sat 12:00 pm – 02:00 am; Sun 12:00 pm – 12:00 am",
+      "description": "An Irish pub with 12 big screens, shepherd's pie and a weekly lineup: burger & beer Monday, Tuesday trivia and Wednesday wings.",
+      "website": "https://docwatsons.com/",
+      "source_url": "https://docwatsons.com/our-hours",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Booyah!",
+      "town": "Mahwah",
+      "address": "180 Route 17 South",
+      "category": "nightlife",
+      "tags": [
+        "90s theme",
+        "live music",
+        "open mic",
+        "trivia",
+        "music bingo"
+      ],
+      "best_for": [
+        "groups",
+        "live music"
+      ],
+      "price_text": "$$",
+      "hours_text": "Fri, Sat 11:00 AM - 12:00 AM",
+      "description": "A 90s-nostalgia bar and restaurant with weekend bands, Tequila Tuesday open mic, themed trivia and bingo nights and a daily happy hour.",
+      "website": "https://booyahnj.com/",
+      "source_url": "https://booyahnj.com/events",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Mason Jar Family Restaurant and Bar",
+      "town": "Mahwah",
+      "address": "219 Ramapo Valley Rd",
+      "category": "nightlife",
+      "tags": [
+        "bar",
+        "live music",
+        "cover bands"
+      ],
+      "best_for": [
+        "live music",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "A Mahwah restaurant and bar with local bands almost every Friday and Saturday at 8 PM.",
+      "website": null,
+      "source_url": "https://www.thelocalmusicfinder.com/venue/mason-jar-family-restaurant-and-bar-121",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Dog House Saloon & Grill",
+      "town": "Washington Township",
+      "address": "270 Pascack Rd",
+      "category": "nightlife",
+      "tags": [
+        "saloon",
+        "live music",
+        "classic rock"
+      ],
+      "best_for": [
+        "live music",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "A Pascack Valley saloon with classic-rock bands on Saturday nights and Grateful Dead tribute shows.",
+      "website": null,
+      "source_url": "https://www.thelocalmusicfinder.com/venue/dog-house-saloon-grill-75",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Emerson Hotel & Restaurant",
+      "town": "Emerson",
+      "address": "31 Emerson Plaza",
+      "category": "nightlife",
+      "tags": [
+        "historic",
+        "steakhouse",
+        "bar",
+        "live music"
+      ],
+      "best_for": [
+        "live music",
+        "late night"
+      ],
+      "price_text": null,
+      "hours_text": "Kitchen hours 11:30am – 9:00pm / 11:30am – 10pm / 12pm – 9:00pm; Bar is open until: 12am – 1am call to confirm",
+      "description": "A neighborhood bar and steakhouse open since 1872, with live bands every Saturday and a bar that stays open late.",
+      "website": "https://emersonhotelrestaurant.com/",
+      "source_url": "https://emersonhotelrestaurant.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Blue 42",
+      "town": "Elmwood Park",
+      "address": "158 Market St",
+      "category": "nightlife",
+      "tags": [
+        "sports bar",
+        "wings",
+        "karaoke"
+      ],
+      "best_for": [
+        "late night",
+        "groups",
+        "budget"
+      ],
+      "price_text": "$$",
+      "hours_text": "Monday 4:00 PM to 2:00 AM; Tuesday to Sunday 12:00 PM to 2:00 AM",
+      "description": "A wings-focused sports bar with 196 flavors, Karaoke Tuesday, $8 Wing Wednesday and a 2 AM close every night.",
+      "website": "https://www.blue42bar.com/",
+      "source_url": "https://www.blue42bar.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Twin Door Tavern",
+      "town": "Maywood",
+      "address": "122 W Pleasant Ave",
+      "category": "nightlife",
+      "tags": [
+        "tavern",
+        "live music",
+        "brunch",
+        "happy hour"
+      ],
+      "best_for": [
+        "live music",
+        "late night",
+        "brunch"
+      ],
+      "price_text": null,
+      "hours_text": "Monday - Thursday Kitchen: 12:00pm - 10:00pm, Bar: 12:00pm - 12:00am; Friday - Saturday Kitchen: 12:00pm - 11:00pm, Bar: 12:00pm - 2:00am; Sunday Kitchen: 11:00am - 9:00pm, Bar: 11:00am - 11:00pm",
+      "description": "Maywood's longtime tavern, with live entertainment Wednesday through Saturday, a daily happy hour and Sunday brunch.",
+      "website": "https://www.twindoortavernnj.com/",
+      "source_url": "https://www.twindoortavernnj.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Wyckoff Tavern",
+      "town": "Wyckoff",
+      "address": "315 Franklin Ave",
+      "category": "food",
+      "tags": [
+        "tavern",
+        "american",
+        "cocktails",
+        "happy hour"
+      ],
+      "best_for": [
+        "date night",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": "Monday-Wednesday: Lunch 11:00 AM–5:00 PM, Dinner 5:00 PM–11:00 PM; Thursday-Saturday: Lunch 11:00 AM–5:00 PM, Dinner 5:00 PM–12:00 AM; Sunday: Brunch 11:00 AM–5:00 PM, Dinner 5:00 PM–9:00 PM",
+      "description": "A newer Wyckoff tavern serving modern American food, with a bar that's good for a drink while you wait for a table.",
+      "website": "https://wyckofftavern.com/",
+      "source_url": "https://wyckofftavern.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Blue Moon Mexican Cafe",
+      "town": "Wyckoff",
+      "address": "327 Franklin Ave (Boulder Run Shopping Center)",
+      "category": "food",
+      "tags": [
+        "mexican",
+        "margaritas",
+        "fiesta hour",
+        "trivia",
+        "live music"
+      ],
+      "best_for": [
+        "groups",
+        "live music"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "Wyckoff's neighborhood Mexican spot, known for margaritas at Fiesta Hour, a ladies night, trivia and live music. Check its site for nights.",
+      "website": "https://www.bluemoonmexicancafe.com/",
+      "source_url": "https://www.bluemoonmexicancafe.com/blue-moons-bar-is-wyckoffs-go-to-neighborhood-spot-for-fiesta-hour-ladies-night-trivia-and-live-music",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Park West Tavern",
+      "town": "Ridgewood",
+      "address": "30 Oak Street",
+      "category": "food",
+      "tags": [
+        "tavern",
+        "cocktails",
+        "craft beer",
+        "american"
+      ],
+      "best_for": [
+        "date night",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": "Open Daily 11:30am to 12am; Sunday Open 10:30am to 12am",
+      "description": "A modern American tavern in Ridgewood with carefully made cocktails, a big craft beer list and a lively bar.",
+      "website": "https://www.parkwesttavern.com/",
+      "source_url": "https://www.parkwesttavern.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "The Madison Rose",
+      "town": "Ridgewood",
+      "address": "2-4 Garber Square",
+      "category": "nightlife",
+      "tags": [
+        "cocktail bar",
+        "lounge"
+      ],
+      "best_for": [
+        "date night",
+        "late night"
+      ],
+      "price_text": null,
+      "hours_text": "Open Daily 4pm-2am",
+      "description": "An upscale craft-cocktail room steps from the Ridgewood train station, open until 2am every night.",
+      "website": "https://www.instagram.com/themadisonro/",
+      "source_url": "https://www.instagram.com/themadisonro/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Felina",
+      "town": "Ridgewood",
+      "address": "18 Prospect St",
+      "category": "food",
+      "tags": [
+        "italian",
+        "wine",
+        "cocktails",
+        "rooftop"
+      ],
+      "best_for": [
+        "date night",
+        "special occasion",
+        "brunch"
+      ],
+      "price_text": null,
+      "hours_text": "Monday – Tuesday | Closed; Wednesday – Sunday | 5pm-10pm; Sunday | 4pm-8pm; Sunday Brunch | 12pm-3pm",
+      "description": "A stylish Ridgewood restaurant in a former bank, with vintage spirits and an award-winning wine list, plus the La Terrazza rooftop bar upstairs.",
+      "website": "https://bylandmark.com/felina-ridgewood/",
+      "source_url": "https://bylandmark.com/felina-ridgewood/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Gotham City Diner",
+      "town": "Fair Lawn",
+      "address": "39-10 Broadway",
+      "category": "food",
+      "tags": [
+        "diner",
+        "trivia"
+      ],
+      "best_for": [
+        "groups",
+        "budget",
+        "kids"
+      ],
+      "price_text": null,
+      "hours_text": "Sunday 7:00 AM - 8:30 PM; Monday-Thursday 7:00 AM - 11:00 PM; Friday-Saturday 7:00 AM - 12:00 AM",
+      "description": "A big diner open late with Thursday trivia at 7:00pm, a relaxed choice for game night with friends.",
+      "website": "https://gothamcitydiner.com/",
+      "source_url": "https://gothamcitydiner.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Allendale Social",
+      "town": "Allendale",
+      "address": "9 Franklin Turnpike",
+      "category": "food",
+      "tags": [
+        "restaurant",
+        "bar",
+        "cocktails"
+      ],
+      "best_for": [
+        "date night",
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": "Kitchen opens 4:30 pm; Bar closes (Sun , Tues, Wed) Closes 11pm; Bar closes (Thur, Fri, Sat) - Closes at 12pm",
+      "description": "A restaurant and bar from the team behind Uno Mas, with seasonal plates and house cocktails.",
+      "website": "https://www.allendalesocial.com/",
+      "source_url": "https://www.allendalesocial.com/",
+      "status": "open",
+      "opened_on": null,
+      "verified": true
+    },
+    {
+      "name": "Mahwah Bar & Grill",
+      "town": "Mahwah",
+      "address": null,
+      "category": "nightlife",
+      "tags": [
+        "bar and grill",
+        "trivia"
+      ],
+      "best_for": [
+        "groups"
+      ],
+      "price_text": null,
+      "hours_text": null,
+      "description": "A sister spot to Allendale Bar & Grill, with Wednesday Joe Trivia at 8:30pm. Not confirmed on its own site.",
+      "website": null,
+      "source_url": "https://www.joetrivia.com/wednesday",
+      "status": "open",
+      "opened_on": null,
+      "verified": false
+    }
+  ]
+}
