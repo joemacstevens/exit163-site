@@ -1,6 +1,9 @@
 {
   "buildCommand": "",
   "outputDirectory": ".",
+  "functions": {
+    "api/sms.js": { "maxDuration": 15 }
+  },
   "rewrites": [
     {
       "source": "/privacy",
@@ -11,7 +14,15 @@
       "destination": "/holidays.html"
     },
     {
-      "source": "/((?!api/).*)",
+      "source": "/claim",
+      "destination": "/claim.html"
+    },
+    {
+      "source": "/mcp",
+      "destination": "/api/mcp"
+    },
+    {
+      "source": "/((?!api/|llms\\.txt).*)",
       "destination": "/index.html"
     }
   ]

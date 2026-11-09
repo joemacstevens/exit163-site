@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Bergen Businesses | Exit 163</title>
+<meta name="description" content="Claim your free Exit 163 listing, or become your town's one sponsor in food, family, nightlife, shopping or services.">
+<link rel="canonical" href="https://exit163.com/claim">
+<meta name="theme-color" content="#1C1C1C">
+<link rel="icon" type="image/png" href="/avatar.png">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #F0F0E8; color: #2D3436; line-height: 1.5; }
+  a { color: #006B3F; }
+  .topbar { background: #1C1C1C; padding: 0.75rem 1rem; }
+  .topbar a { color: #F0F0E8; text-decoration: none; font-family: 'Overpass', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.04em; }
+  .topbar a span { background: #006B3F; border: 2px solid rgba(255,255,255,0.5); border-radius: 4px; padding: 0.1rem 0.4rem; margin-right: 0.4rem; }
+  .hero { background: #1C1C1C; color: #F0F0E8; padding: 2rem 1rem 2.5rem; text-align: center; }
+  .hero h1 { font-family: 'Overpass', sans-serif; font-weight: 900; font-size: clamp(1.7rem, 5vw, 2.6rem); line-height: 1.1; max-width: 720px; margin: 0 auto 0.75rem; }
+  .hero p { max-width: 560px; margin: 0 auto; opacity: 0.85; }
+  main { max-width: 760px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .card { background: #fff; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .card h2 { font-family: 'Overpass', sans-serif; font-weight: 900; font-size: 1.35rem; margin-bottom: 0.35rem; }
+  .card > p { margin-bottom: 1rem; color: #555; }
+  .tag { display: inline-block; font-family: 'Overpass', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; background: #FFB81C; color: #1C1C1C; border-radius: 4px; padding: 0.15rem 0.45rem; margin-bottom: 0.5rem; }
+  ul.points { margin: 0 0 1.1rem 1.1rem; color: #444; }
+  ul.points li { margin-bottom: 0.3rem; }
+  label { display: block; font-size: 0.85rem; font-weight: 600; margin: 0.75rem 0 0.25rem; }
+  input, select, textarea { width: 100%; font: inherit; padding: 0.65rem 0.75rem; border: 1.5px solid #cfcfc4; border-radius: 6px; background: #fff; }
+  textarea { min-height: 70px; resize: vertical; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.75rem; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+  button { margin-top: 1.1rem; width: 100%; font-family: 'Overpass', sans-serif; font-weight: 900; font-size: 1rem; padding: 0.85rem; border: 0; border-radius: 6px; background: #006B3F; color: #fff; cursor: pointer; }
+  button:disabled { opacity: 0.6; cursor: wait; }
+  .slots { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; min-height: 1.6rem; }
+  .slot { font-size: 0.8rem; border-radius: 999px; padding: 0.15rem 0.6rem; border: 1px solid #cfcfc4; }
+  .slot.open { background: #e6f3ec; border-color: #006B3F; color: #006B3F; }
+  .slot.taken { background: #eee; color: #888; text-decoration: line-through; }
+  .msg { margin-top: 0.9rem; font-weight: 600; }
+  .msg.err { color: #b3261e; }
+  .msg.ok { color: #006B3F; }
+  .hp { position: absolute; left: -9999px; }
+  .fine { font-size: 0.8rem; color: #777; margin-top: 0.75rem; }
+  footer { text-align: center; font-size: 0.85rem; color: #777; padding: 0 1rem 2rem; }
+</style>
+</head>
+<body>
+<div class="topbar"><a href="/"><span>163</span>EXIT 163</a></div>
+<section class="hero">
+  <h1>Get found by Bergen families planning their weekend</h1>
+  <p>Exit 163 answers "what should we do this weekend?" every Friday by email, by text and for AI assistants. Claim your listing free, or own your town's spot.</p>
+</section>
+<main>
+  <div id="banner" class="msg" style="display:none;margin:0 0 1rem"></div>
+
+  <section class="card" id="sponsor">
+    <span class="tag">One per town, per category</span>
+    <h2>Become your town's sponsor</h2>
+    <p>Each town has five sponsor spots: food, family, nightlife, shopping and services. Once a spot is yours, no one else can buy it while you stay on.</p>
+    <ul class="points">
+      <li>Shown first, labeled "Sponsored", when someone asks about your town in that category, by text, on the site, and to AI assistants using Exit 163.</li>
+      <li>A monthly report of how many times you were shown.</li>
+      <li>Cancel anytime.</li>
+    </ul>
+    <form id="sponsor-form" novalidate>
+      <input type="hidden" name="kind" value="sponsor">
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row">
+        <div><label for="s-town">Town</label><select id="s-town" name="town" required></select></div>
+        <div><label for="s-cat">Category</label>
+          <select id="s-cat" name="category" required>
+            <option value="food">Food &amp; drink</option><option value="family">Family &amp; kids</option>
+            <option value="nightlife">Nightlife &amp; arts</option><option value="shopping">Shopping</option>
+            <option value="services">Services</option>
+          </select></div>
+      </div>
+      <div class="slots" id="slots" aria-live="polite"></div>
+      <div class="row">
+        <div><label for="s-biz">Business name</label><input id="s-biz" name="business" required maxlength="120"></div>
+        <div><label for="s-url">Website or menu link</label><input id="s-url" name="url" type="url" placeholder="https://"></div>
+      </div>
+      <label for="s-pitch">One line we can share (140 characters)</label>
+      <input id="s-pitch" name="pitch" maxlength="140" placeholder="Wood-fired pizza and a kids' menu, 2 min from Ridgewood station">
+      <div class="row">
+        <div><label for="s-name">Your name</label><input id="s-name" name="name" required maxlength="120"></div>
+        <div><label for="s-email">Email</label><input id="s-email" name="email" type="email" required></div>
+      </div>
+      <button type="submit">Check out and claim this spot</button>
+      <div class="msg" id="sponsor-msg" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <section class="card" id="listing">
+    <span class="tag">Free</span>
+    <h2>Claim your free listing</h2>
+    <p>Already in our guide, or should be? Claim it so you can send us your events, hours and openings.</p>
+    <form id="claim-form" novalidate>
+      <input type="hidden" name="kind" value="claim">
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row">
+        <div><label for="c-biz">Business name</label><input id="c-biz" name="business" required maxlength="120"></div>
+        <div><label for="c-town">Town</label><select id="c-town" name="town" required></select></div>
+      </div>
+      <div class="row">
+        <div><label for="c-name">Your name</label><input id="c-name" name="name" required maxlength="120"></div>
+        <div><label for="c-role">Your role</label><input id="c-role" name="role" placeholder="Owner, manager..." maxlength="80"></div>
+      </div>
+      <div class="row">
+        <div><label for="c-email">Email</label><input id="c-email" name="email" type="email" required></div>
+        <div><label for="c-phone">Phone (optional)</label><input id="c-phone" name="phone" type="tel" maxlength="30"></div>
+      </div>
+      <label for="c-notes">Anything coming up? (events, openings, specials)</label>
+      <textarea id="c-notes" name="notes" maxlength="1000"></textarea>
+      <button type="submit">Claim my listing</button>
+      <div class="msg" id="claim-msg" aria-live="polite"></div>
+    </form>
+  </section>
+</main>
+<footer>Questions? Text "SPONSOR" to the Exit 163 line or email weekend@exit163.com · <a href="/privacy">Privacy</a></footer>
+<script>
+const TOWNS = ["Allendale","Alpine","Bergenfield","Bogota","Carlstadt","Cliffside Park","Closter","Cresskill","Demarest","Dumont","East Rutherford","Edgewater","Elmwood Park","Emerson","Englewood","Englewood Cliffs","Fair Lawn","Fairview","Fort Lee","Franklin Lakes","Garfield","Glen Rock","Hackensack","Harrington Park","Hasbrouck Heights","Haworth","Hillsdale","Ho-Ho-Kus","Leonia","Little Ferry","Lodi","Lyndhurst","Mahwah","Maywood","Midland Park","Montvale","Moonachie","New Milford","North Arlington","Northvale","Norwood","Oakland","Old Tappan","Oradell","Palisades Park","Paramus","Park Ridge","Ramsey","Ridgefield","Ridgefield Park","Ridgewood","River Edge","River Vale","Rochelle Park","Rockleigh","Rutherford","Saddle Brook","Saddle River","South Hackensack","Teaneck","Tenafly","Teterboro","Upper Saddle River","Waldwick","Wallington","Washington Township","Westwood","Wood-Ridge","Woodcliff Lake","Wyckoff"];
+for (const id of ['s-town', 'c-town']) {
+  const sel = document.getElementById(id);
+  sel.innerHTML = '<option value="">Choose your town</option>' + TOWNS.map((t) => `<option>${t}</option>`).join('');
+}
+const LABELS = { food: 'Food', family: 'Family', nightlife: 'Nightlife', shopping: 'Shopping', services: 'Services' };
+
+async function refreshSlots() {
+  const town = document.getElementById('s-town').value;
+  const box = document.getElementById('slots');
+  if (!town) { box.innerHTML = ''; return; }
+  box.textContent = 'Checking...';
+  try {
+    const r = await fetch('/api/claim?town=' + encodeURIComponent(town));
+    const d = await r.json();
+    if (!r.ok || d.error) throw new Error(d.error || 'error');
+    box.innerHTML = Object.keys(LABELS).map((c) => `<span class="slot ${d.open.includes(c) ? 'open' : 'taken'}">${LABELS[c]}${d.open.includes(c) ? ' · open' : ' · taken'}</span>`).join('');
+  } catch { box.textContent = ''; }
+}
+document.getElementById('s-town').addEventListener('change', refreshSlots);
+
+function wire(formId, msgId) {
+  const form = document.getElementById(formId);
+  const msg = document.getElementById(msgId);
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const btn = form.querySelector('button');
+    msg.className = 'msg'; msg.textContent = '';
+    if (!form.reportValidity()) return;
+    btn.disabled = true;
+    try {
+      const r = await fetch('/api/claim', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+      const d = await r.json();
+      if (!r.ok || !d.ok) throw new Error(d.error || 'Something went wrong.');
+      if (d.checkout_url) { window.location.href = d.checkout_url; return; }
+      msg.className = 'msg ok'; msg.textContent = d.message || 'Thanks!';
+      form.reset(); refreshSlots();
+    } catch (e) {
+      msg.className = 'msg err'; msg.textContent = e.message;
+    } finally { btn.disabled = false; }
+  });
+}
+wire('sponsor-form', 'sponsor-msg');
+wire('claim-form', 'claim-msg');
+
+const status = new URLSearchParams(location.search).get('sponsor');
+if (status) {
+  const b = document.getElementById('banner');
+  b.style.display = 'block';
+  b.className = 'msg ' + (status === 'success' ? 'ok' : 'err');
+  b.textContent = status === 'success' ? "Payment received. Your spot is reserved; we'll email you once it's live." : 'Checkout canceled. Your spot was not charged.';
+}
+</script>
+</body>
+</html>
