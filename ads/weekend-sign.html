@@ -1,0 +1,61 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@700;800;900&family=Overpass+Mono:wght@700&display=block" rel="stylesheet">
+<style>
+  :root { --green:#006B3F; --green-hi:#0A8F57; --amber:#FFB81C; --asphalt:#0B0D10; --text:#EDEBE3; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { width:1080px; height:1350px; overflow:hidden; }
+  body {
+    background:
+      radial-gradient(ellipse 900px 520px at 50% 34%, rgba(10,143,87,.28), transparent 70%),
+      radial-gradient(ellipse 700px 300px at 50% 112%, rgba(255,184,28,.16), transparent 70%),
+      var(--asphalt);
+    font-family:'Overpass', sans-serif; color:var(--text); position:relative;
+  }
+  /* gantry */
+  .truss { position:absolute; left:0; right:0; top:118px; height:34px;
+    background: repeating-linear-gradient(135deg,#2a2f37 0 6px,#1a1e24 6px 22px);
+    border-top:4px solid #3a414b; border-bottom:4px solid #3a414b; }
+  .hanger { position:absolute; top:152px; width:14px; height:40px; background:#3a414b; }
+  .kicker { position:absolute; top:48px; width:100%; text-align:center;
+    font-family:'Overpass Mono', monospace; font-size:30px; letter-spacing:.18em; color:var(--amber); }
+
+  .sign { position:absolute; left:70px; right:70px; top:192px; height:640px;
+    background:linear-gradient(180deg, var(--green-hi) 0%, var(--green) 40%, #005a35 100%);
+    border-radius:30px; box-shadow:0 30px 80px rgba(0,0,0,.6), inset 0 0 0 2px rgba(255,255,255,.08); }
+  .sign::before { content:''; position:absolute; inset:14px; border:7px solid #fff; border-radius:20px; }
+  .tab { position:absolute; right:110px; top:150px; z-index:2; background:var(--green);
+    border:7px solid #fff; border-radius:16px; padding:8px 28px 2px; font-weight:900; font-size:44px; color:#fff;
+    box-shadow:0 0 0 7px var(--green); letter-spacing:.02em; }
+  .head { position:absolute; left:64px; right:64px; top:58px; font-weight:900; font-size:96px; line-height:1; color:#fff; letter-spacing:-.005em; }
+  .rule { position:absolute; left:64px; right:64px; top:178px; height:6px; background:#fff; border-radius:3px; }
+  .rows { position:absolute; left:64px; right:64px; top:214px; }
+  .row { white-space:nowrap; display:flex; align-items:center; gap:30px; height:100px; font-weight:800; font-size:64px; color:#fff; letter-spacing:.005em; }
+  .row svg { width:62px; height:62px; flex:none; }
+
+  .h1 { position:absolute; top:890px; width:100%; text-align:center; font-weight:900; font-size:92px; line-height:1.02; color:#fff; letter-spacing:-.01em; }
+  .h1 em { font-style:normal; color:var(--amber); }
+  .sub { position:absolute; top:1110px; width:100%; text-align:center; font-weight:700; font-size:36px; color:var(--text); opacity:.78; }
+  .foot { position:absolute; bottom:70px; left:0; right:0; display:flex; justify-content:center; align-items:center; gap:22px; }
+  .pill { background:var(--amber); color:#14110a; font-weight:900; font-size:38px; padding:20px 38px 14px; border-radius:999px; }
+  .url { font-family:'Overpass Mono', monospace; font-size:34px; color:var(--text); opacity:.85; }
+</style></head>
+<body>
+  <div class="kicker">BERGEN COUNTY, NJ · EVERY FRIDAY</div>
+  <div class="truss"></div>
+  <div class="hanger" style="left:220px"></div><div class="hanger" style="right:220px"></div>
+  <div class="tab">EXIT 163</div>
+  <div class="sign">
+    <div class="head">THIS WEEKEND</div>
+    <div class="rule"></div>
+    <div class="rows">
+      <div class="row"><svg viewBox="0 0 24 24"><path d="M6 18 L17 7 M9 7 H17 V15" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="square"/></svg>Live music</div>
+      <div class="row"><svg viewBox="0 0 24 24"><path d="M12 21 V4 M5 11 L12 4 L19 11" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="square"/></svg>Holiday lights</div>
+      <div class="row"><svg viewBox="0 0 24 24"><path d="M18 18 L7 7 M15 7 H7 V15" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="square"/></svg>Stuff for the kids</div>
+      <div class="row"><svg viewBox="0 0 24 24"><path d="M6 18 L17 7 M9 7 H17 V15" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="square"/></svg>New spots to eat</div>
+    </div>
+  </div>
+  <div class="h1">Your Bergen weekend,<br><em>sorted.</em></div>
+  <div class="sub">The best of 70 towns, picked for you every Friday.</div>
+  <div class="foot"><div class="pill">FREE<span style="margin:0 16px">·</span>EMAIL OR TEXT</div><div class="url">exit163.com</div></div>
+</body></html>
