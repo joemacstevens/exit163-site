@@ -2,335 +2,685 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bergen County Tree Lighting &amp; Holiday Market Tracker 2026 | Exit 163</title>
-<meta name="description" content="Every Bergen County tree lighting, menorah lighting, holiday market and Santa event for 2026, in one list. Sorted by date, filterable by town, updated weekly.">
-<link rel="canonical" href="https://exit163.com/holidays">
+<meta name="description" content="Every Bergen County tree lighting, menorah lighting, holiday market and Santa event for 2026, in one list. Sorted by date, filterable by town, every listing sourced.">
+<link rel="canonical" href="https://www.exit163.com/holidays">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://exit163.com/holidays">
+<meta property="og:url" content="https://www.exit163.com/holidays">
 <meta property="og:title" content="Bergen County Tree Lighting &amp; Holiday Market Tracker 2026">
-<meta property="og:description" content="Every Bergen tree lighting, menorah lighting, holiday market and Santa event, in one list. Filter by your town. Updated weekly.">
-<meta property="og:image" content="https://exit163.com/og-image.png">
+<meta property="og:description" content="Every Bergen tree lighting, menorah lighting, holiday market and Santa event, in one list. Filter by your town.">
+<meta property="og:image" content="https://www.exit163.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bergen County Holiday Tracker 2026">
 <meta name="twitter:description" content="Every Bergen tree lighting, menorah lighting, holiday market and Santa event, in one list.">
-<meta name="twitter:image" content="https://exit163.com/og-image.png">
-<meta name="theme-color" content="#1C1C1C">
+<meta name="twitter:image" content="https://www.exit163.com/og-image.png">
+<meta name="theme-color" content="#0B0D10">
 <link rel="icon" type="image/png" href="/avatar.png">
-<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;900&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Inter', -apple-system, sans-serif; background: #F0F0E8; color: #2D3436; min-height: 100vh; }
-  a { color: #006B3F; }
-
-  .topbar { background: #1C1C1C; padding: 0.75rem 1rem; }
-  .topbar a { color: #F0F0E8; text-decoration: none; font-family: 'Overpass', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.04em; }
-  .topbar a span { background: #006B3F; border: 2px solid rgba(255,255,255,0.5); border-radius: 4px; padding: 0.1rem 0.4rem; margin-right: 0.4rem; }
-
-  .hero { background: #1C1C1C; color: #F0F0E8; padding: 1.75rem 1rem 2.5rem; text-align: center; position: relative; }
-  .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: #FFB81C; }
-  .kicker { display: inline-block; background: #006B3F; color: #fff; font-family: 'Overpass', sans-serif; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 999px; margin-bottom: 1rem; }
-  .hero h1 { font-family: 'Overpass', sans-serif; font-weight: 900; font-size: clamp(1.7rem, 7vw, 3rem); line-height: 1.15; color: #fff; max-width: 760px; margin: 0 auto 0.85rem; }
-  .hero h1 span { color: #FFB81C; }
-  .hero-sub { font-size: 1rem; color: rgba(240,240,232,0.75); max-width: 520px; margin: 0 auto 1rem; line-height: 1.55; }
-  .updated { font-size: 0.82rem; color: #FFB81C; font-weight: 600; }
-  .stats { margin-top: 0.4rem; font-size: 0.82rem; color: rgba(240,240,232,0.55); }
-
-  main { max-width: 760px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
-
-  .filters { position: sticky; top: 0; z-index: 5; background: #F0F0E8; padding: 0.75rem 0 0.6rem; border-bottom: 1px solid #dfd7cd; margin-bottom: 1rem; }
-  .chips { display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 0.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-  .chips::-webkit-scrollbar { display: none; }
-  .chip { flex: 0 0 auto; border: 1.5px solid #1C1C1C; background: #fff; color: #1C1C1C; border-radius: 999px; padding: 0.45rem 0.85rem; font: 600 0.85rem 'Inter', sans-serif; cursor: pointer; min-height: 38px; }
-  .chip[aria-pressed="true"] { background: #1C1C1C; color: #FFB81C; }
-  .town-row { display: flex; gap: 0.5rem; align-items: center; }
-  .town-row label { font-size: 0.85rem; font-weight: 600; color: #1C1C1C; }
-  .town-row select { flex: 1; min-width: 0; padding: 0.55rem 0.6rem; border: 1.5px solid #c9c0b4; border-radius: 8px; background: #fff; font: 500 0.95rem 'Inter', sans-serif; color: #1C1C1C; }
-  .count { font-size: 0.8rem; color: #6B6B5E; margin-top: 0.5rem; }
-
-  .section-label { font-family: 'Overpass', sans-serif; font-weight: 900; font-size: 1.15rem; color: #1C1C1C; margin: 1.25rem 0 0.6rem; }
-  .list { display: grid; gap: 0.75rem; }
-  .card { background: #fff; border: 1px solid #dfd7cd; border-radius: 12px; padding: 0.95rem 1rem; display: grid; grid-template-columns: 58px 1fr; gap: 0.85rem; }
-  .datebox { background: #006B3F; color: #fff; border-radius: 8px; text-align: center; padding: 0.45rem 0.2rem; align-self: start; font-family: 'Overpass', sans-serif; }
-  .datebox .m { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #FFB81C; }
-  .datebox .d { font-size: 1.6rem; font-weight: 900; line-height: 1.05; }
-  .datebox .w { font-size: 0.68rem; font-weight: 700; opacity: 0.8; }
-  .datebox.tba { background: #E8E0D8; color: #6B6B5E; }
-  .datebox.tba .d { font-size: 1rem; padding: 0.35rem 0; }
-  .pills { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.4rem; }
-  .pill { display: inline-block; background: #1C1C1C; color: #FFB81C; border-radius: 999px; padding: 0.2rem 0.6rem; font-size: 0.7rem; font-weight: 700; }
-  .pill.town { background: #F0F0E8; color: #1C1C1C; border: 1px solid #dfd7cd; }
-  .pill.warn { background: #FFF3D6; color: #8a5a00; border: 1px solid #f1d38a; }
-  .card h3 { font-family: 'Overpass', sans-serif; font-size: 1.05rem; line-height: 1.3; color: #1C1C1C; margin-bottom: 0.3rem; }
-  .meta { font-size: 0.85rem; color: #4a4a3f; line-height: 1.45; }
-  .meta strong { color: #1C1C1C; font-weight: 600; }
-  .notes { font-size: 0.84rem; color: #6B6B5E; line-height: 1.5; margin-top: 0.35rem; }
-  .src { display: inline-block; margin-top: 0.45rem; font-size: 0.82rem; font-weight: 700; text-decoration: none; }
-  .src:hover { text-decoration: underline; }
-
-  .locked { position: relative; }
-  .locked .card { filter: blur(5px); user-select: none; pointer-events: none; opacity: 0.85; }
-  .locked-fade { position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(rgba(240,240,232,0), #F0F0E8); pointer-events: none; }
-
-  .gate { background: #1C1C1C; color: #F0F0E8; border-radius: 14px; padding: 1.5rem 1.1rem; text-align: center; margin: 1rem 0; border-bottom: 4px solid #FFB81C; }
-  .gate h2 { font-family: 'Overpass', sans-serif; font-weight: 900; font-size: 1.4rem; line-height: 1.2; color: #fff; margin-bottom: 0.5rem; }
-  .gate h2 span { color: #FFB81C; }
-  .gate p { color: rgba(240,240,232,0.75); font-size: 0.95rem; line-height: 1.5; margin: 0 auto 1.1rem; max-width: 440px; }
-  .gate .fine { font-size: 0.78rem; color: rgba(240,240,232,0.45); margin: 0.6rem 0 0; }
-
-  /* Reused from index.html */
-  .subscribe-form { display: flex; gap: 0.5rem; max-width: 460px; margin: 0 auto; }
-  .subscribe-form input[type="email"] { flex: 1; min-width: 0; padding: 0.875rem 1.25rem; border: 2px solid rgba(255,255,255,0.2); border-radius: 8px; background: rgba(255,255,255,0.1); color: #fff; font-size: 1rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
-  .subscribe-form input[type="email"]::placeholder { color: rgba(255,255,255,0.4); }
-  .subscribe-form input[type="email"]:focus { border-color: #FFB81C; }
-  .subscribe-form button { padding: 0.875rem 1.5rem; background: #FFB81C; color: #1C1C1C; border: none; border-radius: 8px; font-weight: 700; font-size: 1rem; font-family: 'Inter', sans-serif; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
-  .subscribe-form button:hover { background: #e5a518; }
-  .subscribe-form button:disabled { opacity: 0.7; cursor: wait; }
-  .subscribe-msg { margin: 10px 0 0; font-weight: 700; }
-
-  .unlocked-note { background: #E3F1E9; border: 1px solid #b7dcc6; color: #1f5a3c; border-radius: 10px; padding: 0.7rem 0.9rem; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.75rem; }
-  .empty { text-align: center; color: #6B6B5E; padding: 2rem 1rem; font-size: 0.95rem; }
-  .tip { margin-top: 2rem; background: #fff; border: 1px dashed #c9c0b4; border-radius: 12px; padding: 1rem; font-size: 0.88rem; color: #4a4a3f; line-height: 1.55; }
-
-  .footer { border-top: 3px solid #006B3F; padding: 2rem 1rem; text-align: center; }
-  .footer p { font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; color: #6B6B5E; margin-bottom: 0.5rem; }
-  .footer .copy { font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.75rem; color: #999; }
-  .footer a { font-weight: 600; text-decoration: none; }
-
-  @media (max-width: 480px) {
-    .subscribe-form { flex-direction: column; }
-    .subscribe-form button { width: 100%; }
+  :root {
+    --asphalt: #0B0D10;
+    --ink: #13171C;
+    --ink-2: #1B2027;
+    --line: rgba(255,255,255,0.10);
+    --green: #006B3F;
+    --green-hi: #0A8F57;
+    --amber: #FFB81C;
+    --amber-hi: #FFC94D;
+    --red: #E5484D;
+    --ice: #9FD3FF;
+    --text: #EDEBE3;
+    --muted: rgba(237,235,227,0.68);
+    --dim: rgba(237,235,227,0.46);
+    --danger: #FF7A6B;
+    --ok: #4BE39A;
+    --sign: 'Overpass', 'Arial Narrow', sans-serif;
+    /* per-type accents */
+    --t-tree: #3DDC84;
+    --t-menorah: #7CC4FF;
+    --t-market: #FFB81C;
+    --t-santa: #FF6B6B;
+    --t-other: #C9A7FF;
   }
-  @media (min-width: 640px) {
-    .card { grid-template-columns: 70px 1fr; padding: 1.1rem 1.2rem; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--asphalt); color: var(--text); line-height: 1.5; overflow-x: hidden; }
+  a { color: inherit; }
+  .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  .sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+
+  /* ---------- Top bar ---------- */
+  .top { position: absolute; inset: 0 0 auto 0; z-index: 6; }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .shield { display: inline-flex; flex-direction: column; align-items: center; background: var(--green); border: 2px solid #fff; border-radius: 7px; padding: 3px 9px 1px; line-height: 1; box-shadow: 0 0 0 2px var(--green); }
+  .shield small { font: 800 9px/1 var(--sign); letter-spacing: .22em; color: #fff; }
+  .shield b { font: 900 20px/1 var(--sign); color: #fff; }
+  .brand span { font: 700 14px var(--sign); color: var(--muted); }
+  .top nav { display: flex; gap: 4px; }
+  .top nav a { font: 600 14px var(--sign); text-decoration: none; color: var(--muted); padding: 8px 12px; border-radius: 999px; }
+  .top nav a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+  @media (max-width: 640px) { .brand > span:not(.shield), .top nav .hide-sm { display: none; } }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; isolation: isolate; overflow: hidden;
+    padding: 118px 0 56px;
+    background:
+      radial-gradient(60% 60% at 80% 10%, rgba(124,196,255,0.16), transparent 60%),
+      radial-gradient(70% 70% at 10% 100%, rgba(0,107,63,0.35), transparent 60%),
+      linear-gradient(#05070a, #0B0D10);
+  }
+  #snow { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+  .garland { position: absolute; left: 0; right: 0; top: 62px; height: 60px; z-index: -1; pointer-events: none; }
+  .garland svg { width: 100%; height: 100%; display: block; }
+  .bulb { animation: twinkle 3.2s ease-in-out infinite; }
+  @keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 40px; align-items: end; }
+  .kicker { display: inline-flex; align-items: center; gap: 8px; font: 800 12px var(--sign); letter-spacing: .16em; text-transform: uppercase; color: var(--amber); background: rgba(255,184,28,0.08); border: 1px solid rgba(255,184,28,0.35); padding: 7px 12px 6px; border-radius: 999px; margin-bottom: 20px; }
+  h1 { font: 900 clamp(2.4rem, 6.4vw, 4.6rem)/0.98 var(--sign); letter-spacing: -0.035em; color: #fff; margin-bottom: 18px; }
+  h1 .glow { color: var(--amber); text-shadow: 0 0 28px rgba(255,184,28,0.45); }
+  .lede { font-size: clamp(1.02rem, 1.5vw, 1.15rem); color: var(--muted); max-width: 34em; }
+  .lede strong { color: #fff; font-weight: 600; }
+  .signs { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+  .mini-sign { background: var(--green); border: 2px solid #fff; box-shadow: 0 0 0 2px var(--green); border-radius: 8px; padding: 6px 12px 4px; text-align: center; min-width: 92px; }
+  .mini-sign b { display: block; font: 900 24px/1 var(--sign); color: #fff; }
+  .mini-sign small { font: 800 10px var(--sign); letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+  .updated { margin-top: 14px; font-size: 13px; color: var(--dim); }
+  .updated b { color: var(--muted); font-weight: 600; }
+
+  /* Next-up spotlight */
+  .spot { position: relative; background: rgba(19,23,28,0.85); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid rgba(255,184,28,0.35); border-radius: 20px; padding: 20px; box-shadow: 0 30px 80px -20px rgba(0,0,0,0.8), 0 0 60px -20px rgba(255,184,28,0.35); }
+  .spot .lbl { font: 800 11px var(--sign); letter-spacing: .16em; text-transform: uppercase; color: var(--amber); display: flex; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+  .spot .lbl span:last-child { color: var(--dim); letter-spacing: .08em; }
+  .countdown { display: flex; gap: 8px; margin-bottom: 14px; }
+  .countdown div { flex: 1; text-align: center; background: var(--ink-2); border: 1px solid var(--line); border-radius: 10px; padding: 8px 0 6px; }
+  .countdown b { display: block; font: 900 26px/1 var(--sign); color: #fff; font-variant-numeric: tabular-nums; }
+  .countdown small { font: 700 10px var(--sign); letter-spacing: .12em; text-transform: uppercase; color: var(--dim); }
+  .spot h2 { font: 900 21px/1.15 var(--sign); color: #fff; margin-bottom: 6px; letter-spacing: -0.01em; }
+  .spot p { font-size: 14px; color: var(--muted); }
+  .spot .acts { display: flex; gap: 8px; margin-top: 14px; }
+  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .spot { max-width: 520px; } .hero { padding-top: 128px; } .garland { top: 58px; } }
+
+  /* ---------- Buttons ---------- */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 40px; padding: 0 14px; border-radius: 10px; font: 800 14px var(--sign); text-decoration: none; cursor: pointer; border: 1.5px solid var(--line); background: rgba(255,255,255,0.04); color: #fff; white-space: nowrap; transition: background .15s, border-color .15s, color .15s; }
+  .btn:hover { border-color: var(--amber); color: var(--amber); }
+  .btn.solid { background: var(--amber); color: #111; border-color: var(--amber); }
+  .btn.solid:hover { background: var(--amber-hi); color: #111; }
+  .btn svg { width: 16px; height: 16px; flex: none; }
+
+  /* ---------- Filters ---------- */
+  .filters { position: sticky; top: 0; z-index: 5; background: rgba(11,13,16,0.86); -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid var(--line); }
+  .filters .wrap { display: flex; gap: 12px; align-items: center; padding-top: 12px; padding-bottom: 12px; }
+  .chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; flex: 1; min-width: 0; padding: 2px; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 13px; border-radius: 999px; border: 1.5px solid var(--line); background: rgba(255,255,255,0.03); color: var(--text); font: 700 14px var(--sign); cursor: pointer; transition: border-color .15s, background .15s; }
+  .chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--amber)); box-shadow: 0 0 10px var(--c, var(--amber)); font-style: normal; }
+  .chip .n { font-weight: 600; color: var(--dim); font-size: 12px; }
+  .chip:hover { border-color: rgba(255,255,255,0.3); }
+  .chip[aria-pressed="true"] { background: #fff; color: #111; border-color: #fff; }
+  .chip[aria-pressed="true"] .n { color: #555; }
+  .town { position: relative; flex: none; }
+  .town select { appearance: none; -webkit-appearance: none; height: 38px; padding: 0 34px 0 14px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--ink-2); color: #fff; font: 700 14px var(--sign); cursor: pointer; max-width: 210px; }
+  .town select:focus { border-color: var(--amber); outline: none; }
+  .town::after { content: ''; position: absolute; right: 14px; top: 50%; width: 7px; height: 7px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: translateY(-70%) rotate(45deg); pointer-events: none; }
+  .count { font-size: 13px; color: var(--dim); padding: 16px 0 0; }
+  .count b { color: var(--text); font-weight: 600; }
+  @media (max-width: 720px) {
+    .filters .wrap { flex-direction: column; align-items: stretch; gap: 8px; padding-top: 10px; padding-bottom: 10px; }
+    .chips { margin: 0 -20px; padding: 2px 20px; }
+    .town select { width: 100%; max-width: none; }
+  }
+
+  /* ---------- Timeline list ---------- */
+  .list-area { padding-top: 8px; padding-bottom: 40px; }
+  .day { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; padding-top: 22px; }
+  .day-head { position: sticky; top: 76px; align-self: start; }
+  .day-sign { background: var(--green); border: 2.5px solid #fff; box-shadow: 0 0 0 2.5px var(--green); border-radius: 10px; text-align: center; padding: 8px 6px 6px; color: #fff; }
+  .day-sign .m { font: 800 12px var(--sign); letter-spacing: .18em; text-transform: uppercase; color: var(--amber); }
+  .day-sign .d { font: 900 40px/1 var(--sign); }
+  .day-sign .w { font: 800 12px var(--sign); letter-spacing: .1em; text-transform: uppercase; opacity: .9; }
+  .day-rel { margin-top: 8px; text-align: center; font: 800 11px var(--sign); letter-spacing: .12em; text-transform: uppercase; color: var(--amber); }
+  .day-items { display: grid; gap: 12px; }
+  .week-label { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; margin-top: 26px; font: 800 13px var(--sign); letter-spacing: .16em; text-transform: uppercase; color: var(--dim); }
+  .week-label::after { content: ''; flex: 1; height: 0; border-top: 3px dashed rgba(255,184,28,0.3); }
+  .week-label:first-child { margin-top: 18px; }
+
+  .card { position: relative; background: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 18px 18px 16px 22px; overflow: hidden; transition: border-color .2s, transform .2s; }
+  .card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--c); box-shadow: 0 0 18px var(--c); }
+  .card:hover { border-color: rgba(255,255,255,0.22); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .tag { display: inline-flex; align-items: center; gap: 6px; font: 800 11px var(--sign); letter-spacing: .08em; text-transform: uppercase; padding: 4px 9px 3px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid var(--line); color: var(--text); }
+  .tag.type { color: var(--c); border-color: color-mix(in srgb, var(--c) 45%, transparent); background: color-mix(in srgb, var(--c) 10%, transparent); }
+  .tag.warn { color: #FFD27A; border-color: rgba(255,184,28,0.45); background: rgba(255,184,28,0.08); }
+  .tag.ok { color: var(--ok); border-color: rgba(75,227,154,0.4); background: rgba(75,227,154,0.07); }
+  .card h3 { font: 900 20px/1.2 var(--sign); color: #fff; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .facts { display: grid; gap: 4px; font-size: 14.5px; color: var(--muted); }
+  .facts div { display: flex; gap: 8px; align-items: flex-start; }
+  .facts svg { flex: none; width: 15px; height: 15px; margin-top: 3px; color: var(--dim); }
+  .facts strong { color: #fff; font-weight: 600; }
+  .notes { margin-top: 10px; font-size: 14px; color: var(--dim); line-height: 1.55; }
+  .card-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .card-acts .btn { height: 36px; font-size: 13px; padding: 0 12px; }
+  @media (max-width: 640px) {
+    .day { grid-template-columns: 1fr; gap: 10px; padding-top: 18px; }
+    .day-head { position: static; display: flex; align-items: center; gap: 12px; }
+    .day-sign { display: flex; align-items: baseline; gap: 8px; padding: 6px 12px 4px; }
+    .day-sign .d { font-size: 24px; }
+    .day-rel { margin: 0; }
+    .card { padding: 16px 14px 14px 18px; }
+    .card h3 { font-size: 18px; }
+  }
+
+  /* ---------- Gate ---------- */
+  .gate { position: relative; margin: 36px 0 8px; border-radius: 22px; overflow: hidden; border: 1px solid rgba(255,184,28,0.4); background: radial-gradient(120% 120% at 100% 0%, rgba(255,184,28,0.18), transparent 50%), radial-gradient(100% 120% at 0% 100%, rgba(0,107,63,0.45), transparent 55%), var(--ink); padding: clamp(22px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 28px; align-items: center; }
+  .gate h2 { font: 900 clamp(1.8rem, 4vw, 2.6rem)/1.02 var(--sign); color: #fff; letter-spacing: -0.03em; margin-bottom: 12px; }
+  .gate h2 em { font-style: normal; color: var(--amber); }
+  .gate p { color: var(--muted); font-size: 15.5px; }
+  .gate ul { list-style: none; margin-top: 14px; display: grid; gap: 6px; }
+  .gate li { font-size: 14.5px; color: var(--text); display: flex; gap: 8px; }
+  .gate li::before { content: '✓'; color: var(--ok); font-weight: 800; }
+  .join .field { position: relative; margin-bottom: 10px; }
+  .join .field label { position: absolute; left: 44px; top: 9px; font: 700 10.5px var(--sign); letter-spacing: .12em; text-transform: uppercase; color: var(--dim); pointer-events: none; }
+  .join .field .ico { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--dim); }
+  .join .field .tg { position: absolute; right: 12px; top: 9px; font: 700 9.5px var(--sign); letter-spacing: .1em; text-transform: uppercase; color: var(--amber); }
+  .join input:not(.sr) { width: 100%; height: 58px; padding: 22px 14px 6px 44px; background: rgba(255,255,255,0.05); color: #fff; border: 1.5px solid rgba(255,255,255,0.14); border-radius: 12px; font: 500 16px 'Inter', sans-serif; outline: none; }
+  .join input::placeholder { color: rgba(255,255,255,0.3); }
+  .join input:focus { border-color: var(--amber); background: rgba(255,184,28,0.06); }
+  .join .field:focus-within .ico { color: var(--amber); }
+  .join .field.bad input { border-color: var(--danger); }
+  .go { width: 100%; height: 58px; border: 0; border-radius: 12px; background: var(--amber); color: #111; font: 900 18px var(--sign); cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 10px 30px -8px rgba(255,184,28,0.55), inset 0 -3px 0 rgba(0,0,0,0.15); transition: background .15s, transform .12s; }
+  .go:hover { background: var(--amber-hi); transform: translateY(-1px); }
+  .go[disabled] { opacity: .7; cursor: progress; }
+  .join .msg { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--danger); }
+  .join .msg:empty { display: none; }
+  .join .fine { margin-top: 10px; font-size: 11px; line-height: 1.5; color: var(--dim); }
+  .join .fine a { color: var(--muted); }
+  @media (max-width: 820px) { .gate { grid-template-columns: 1fr; } }
+
+  .locked { position: relative; margin-top: 8px; max-height: 520px; overflow: hidden; }
+  .locked .inner { filter: blur(6px); opacity: .55; pointer-events: none; user-select: none; }
+  .locked::after { content: ''; position: absolute; inset: 40% 0 0 0; background: linear-gradient(rgba(11,13,16,0), var(--asphalt)); }
+  .locked-label { text-align: center; font: 800 13px var(--sign); letter-spacing: .14em; text-transform: uppercase; color: var(--dim); margin-top: 30px; }
+
+  .unlocked { display: flex; align-items: center; gap: 12px; margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: rgba(75,227,154,0.08); border: 1px solid rgba(75,227,154,0.35); font-size: 15px; color: var(--text); }
+  .unlocked b { color: #fff; }
+  .unlocked .ck { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ok); color: #062; display: grid; place-items: center; font-weight: 900; }
+
+  /* ---------- TBA ---------- */
+  .tba { margin-top: 56px; }
+  .tba-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+  .tba-head h2 { font: 900 clamp(1.6rem, 3.6vw, 2.3rem)/1.05 var(--sign); color: #fff; letter-spacing: -0.02em; }
+  .tba-head p { color: var(--muted); font-size: 15px; max-width: 34em; }
+  .tba-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+  .tba-item { position: relative; background: var(--ink); border: 1px solid var(--line); border-radius: 14px; padding: 14px 14px 12px 18px; overflow: hidden; }
+  .tba-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--c); opacity: .8; }
+  .tba-item .town-n { font: 800 11px var(--sign); letter-spacing: .12em; text-transform: uppercase; color: var(--c); }
+  .tba-item h3 { font: 800 16px/1.25 var(--sign); color: #fff; margin: 3px 0 4px; }
+  .tba-item p { font-size: 13px; color: var(--dim); line-height: 1.45; }
+  .tba-item a { display: inline-block; margin-top: 6px; font: 700 12.5px var(--sign); color: var(--amber); text-decoration: none; }
+  .tba-item a:hover { text-decoration: underline; }
+
+  .empty { text-align: center; padding: 48px 16px; color: var(--muted); }
+  .empty b { display: block; font: 900 22px var(--sign); color: #fff; margin-bottom: 6px; }
+
+  /* ---------- Agent CTA ---------- */
+  .agent { margin: 64px 0 24px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; padding: clamp(22px, 4vw, 36px); border-radius: 22px; background: var(--green); border: 4px solid #fff; box-shadow: 0 0 0 5px var(--green); }
+  .agent h2 { font: 900 clamp(1.6rem, 3.6vw, 2.4rem)/1.05 var(--sign); color: #fff; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .agent p { color: rgba(255,255,255,0.86); font-size: 15.5px; max-width: 36em; }
+  .agent .bubble { display: inline-block; margin-top: 12px; background: #0A84FF; color: #fff; border-radius: 18px 18px 5px 18px; padding: 9px 14px; font-size: 15px; }
+  .agent .btn.solid { height: 54px; padding: 0 22px; font-size: 17px; border-radius: 12px; }
+  .agent small { display: block; margin-top: 8px; text-align: center; color: rgba(255,255,255,0.75); font-size: 12px; }
+  @media (max-width: 720px) { .agent { grid-template-columns: 1fr; } }
+
+  .note { margin-top: 18px; font-size: 13.5px; color: var(--dim); line-height: 1.6; }
+  .note a { color: var(--muted); }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 0 48px; margin-top: 40px; }
+  .foot { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
+  .foot p { color: var(--dim); font-size: 13px; }
+  .foot nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  .foot nav a { color: var(--muted); font-size: 14px; text-decoration: none; }
+  .foot nav a:hover { color: var(--amber); }
+
+  .rv { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1); }
+  .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    .rv { opacity: 1; transform: none; }
   }
 </style>
 </head>
 <body>
 
-<nav class="topbar"><a href="/"><span>163</span>&larr; Exit 163 home</a></nav>
-
-<header class="hero">
-  <span class="kicker">Holiday Tracker 2026</span>
-  <h1>Every Bergen <span>tree lighting, menorah lighting &amp; holiday market</span>, in one list</h1>
-  <p class="hero-sub">Tree lightings, menorah lightings, holiday markets and Santa events across Bergen County's 70 towns, sorted by date. Every listing links to its source.</p>
-  <p class="updated">Last updated <span id="updated"></span></p>
-  <p class="stats" id="stats"></p>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Exit 163 home"><span class="shield" aria-hidden="true"><small>EXIT</small><b>163</b></span><span>Bergen County, NJ</span></a>
+    <nav aria-label="Primary">
+      <a class="hide-sm" href="/">Text the agent</a>
+      <a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">@exit.163</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-  <div class="filters">
+<section class="hero">
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <div class="garland" aria-hidden="true"><svg id="garland" preserveAspectRatio="none"></svg></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Holiday Tracker 2026</p>
+      <h1>Every Bergen <span class="glow">tree lighting, menorah &amp; holiday market</span>, in one list.</h1>
+      <p class="lede">Tree lightings, menorah lightings, markets and Santa visits across Bergen County&rsquo;s 70 towns, sorted by date. <strong>Every listing links to its source.</strong></p>
+      <div class="signs" id="signs" aria-label="Tracker stats"></div>
+      <p class="updated">Last updated <b id="updated"></b> &middot; new dates added every week</p>
+    </div>
+    <aside class="spot" id="spot" aria-label="Next event" hidden></aside>
+  </div>
+</section>
+
+<div class="filters" id="filters">
+  <div class="wrap">
     <div class="chips" role="group" aria-label="Filter by type" id="typeChips"></div>
-    <div class="town-row">
-      <label for="town">Town</label>
+    <div class="town">
+      <label for="town" class="sr">Town</label>
       <select id="town"><option value="">All towns</option></select>
     </div>
-    <p class="count" id="count" aria-live="polite"></p>
   </div>
+</div>
 
+<div class="wrap list-area">
+  <p class="count" id="count" aria-live="polite"></p>
   <div id="results"><p class="empty">Loading events&hellip;</p></div>
+  <section class="tba" id="tba" hidden></section>
 
-  <div class="tip">
-    <strong>Know about an event we're missing?</strong> Towns post dates all through November, so we add new ones every week. Listings marked "2026 date TBA" show last year's date as a guide only, so check the source before you go. Spotted something? DM us on <a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">Instagram</a>.
-  </div>
+  <section class="agent rv">
+    <div>
+      <h2>Rather just ask?</h2>
+      <p>Exit 163 is also a local agent you can text. It knows every listing on this page and remembers your town.</p>
+      <span class="bubble">what&rsquo;s the next tree lighting near Ridgewood?</span>
+    </div>
+    <div>
+      <a class="btn solid" href="/">Get the agent free &rarr;</a>
+      <small>No app. Reply STOP anytime.</small>
+    </div>
+  </section>
+
+  <p class="note">Towns post dates all through November, so we add new ones every week. Listings under &ldquo;Dates not announced yet&rdquo; show last year&rsquo;s date as a guide only, so check the source before you go. Know one we&rsquo;re missing? DM us on <a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">Instagram</a>.</p>
+</div>
 </main>
 
 <template id="gateTpl">
   <section class="gate" id="gate">
-    <h2>Unlock the <span>full list</span> free</h2>
-    <p>Get every event in the tracker, plus the Friday Exit 163 newsletter with this weekend's best Bergen County plans.</p>
-    <form class="subscribe-form" action="/api/subscribe" method="POST">
-      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-      <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" inputmode="email" aria-label="Email address">
-      <button type="submit">UNLOCK &rarr;</button>
+    <div>
+      <h2>Unlock the <em>full list</em> free.</h2>
+      <p>Get every event in the tracker, updated weekly as towns announce dates.</p>
+      <ul>
+        <li>All dated events, every town</li>
+        <li data-tba-li>Plus the events still waiting on 2026 dates</li>
+        <li>The Friday weekend picks by text or email</li>
+        <li>Ask the agent anything, any time</li>
+      </ul>
+    </div>
+    <form class="join" novalidate>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="sr">
+      <div class="field">
+        <input id="g-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(201) 555-0163" aria-describedby="g-fine">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+        <label for="g-phone">Mobile</label><span class="tg" aria-hidden="true">Text me</span>
+      </div>
+      <div class="field">
+        <input id="g-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <label for="g-email">Email</label><span class="tg" aria-hidden="true">Friday issue</span>
+      </div>
+      <button class="go" type="submit"><span class="label">Unlock the full list</span> <span aria-hidden="true">&rarr;</span></button>
+      <p class="msg" role="status" aria-live="polite"></p>
+      <p class="fine" id="g-fine">Either one unlocks it. Free. By adding your number you agree to get recurring automated texts from Exit 163 (about 1 a week, plus replies). We text once to confirm; reply JOIN. Consent isn&rsquo;t a condition of anything. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. <a href="/privacy">Privacy</a>.</p>
     </form>
-    <p class="fine">Free. Every Friday. Unsubscribe anytime.</p>
   </section>
 </template>
 
-<footer class="footer">
-  <p>Exit 163 is a weekly newsletter for people who live off the Turnpike and love it here anyway.</p>
-  <p class="copy"><a href="/">exit163.com</a> &middot; <a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="/privacy">Privacy Policy</a></p>
-  <p class="copy">&copy; 2026 Exit 163. Bergen County, NJ.</p>
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="/" aria-label="Exit 163 home"><span class="shield" aria-hidden="true"><small>EXIT</small><b>163</b></span></a>
+    <nav aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">Instagram</a>
+      <a href="/claim">For businesses</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p>&copy; 2026 Exit 163 &middot; Bergen County, NJ, for people who live off the Parkway and love it here anyway.</p>
+  </div>
 </footer>
 
 <script>
-(function(){
+(function () {
+  'use strict';
   // EDITOR: bump this when you update holidays-2026.json.
   var LAST_UPDATED = '2026-11-08';
   var DATA_URL = '/holidays-2026.json';
   var FREE_COUNT = 6;
   var UNLOCK_KEY = 'exit163_holidays_unlocked';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var TYPES = [
-    { id: '', label: 'All' },
-    { id: 'tree', label: '🎄 Tree lightings' },
-    { id: 'menorah', label: '🕎 Menorah lightings' },
-    { id: 'market', label: '🛍️ Markets' },
-    { id: 'santa', label: '🎅 Santa' },
-    { id: 'other', label: '✨ More' }
+    { id: '', label: 'All', c: '#fff' },
+    { id: 'tree', label: 'Tree lightings', c: 'var(--t-tree)' },
+    { id: 'menorah', label: 'Menorahs', c: 'var(--t-menorah)' },
+    { id: 'market', label: 'Markets', c: 'var(--t-market)' },
+    { id: 'santa', label: 'Santa', c: 'var(--t-santa)' },
+    { id: 'other', label: 'More', c: 'var(--t-other)' }
   ];
   var TYPE_LABEL = { tree: 'Tree lighting', menorah: 'Menorah lighting', market: 'Holiday market', santa: 'Santa', other: 'Holiday event' };
+  var TYPE_C = { tree: 'var(--t-tree)', menorah: 'var(--t-menorah)', market: 'var(--t-market)', santa: 'var(--t-santa)', other: 'var(--t-other)' };
   var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var DAYS_LONG = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var ICO = {
+    clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+    pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+    tag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="8" cy="8" r="1.5"/></svg>',
+    cal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+    ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg>'
+  };
 
   var state = { type: '', town: '', unlocked: false, events: [], freeIds: {} };
 
-  function storageGet(){ try { return window.localStorage.getItem(UNLOCK_KEY) === '1'; } catch (e) { return false; } }
-  function storageSet(){ try { window.localStorage.setItem(UNLOCK_KEY, '1'); } catch (e) {} }
+  function storageGet() { try { return localStorage.getItem(UNLOCK_KEY) === '1'; } catch (e) { return false; } }
+  function storageSet() { try { localStorage.setItem(UNLOCK_KEY, '1'); } catch (e) {} }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function parseISO(iso) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || ''); return m ? new Date(+m[1], +m[2] - 1, +m[3], 12) : null; }
+  function iso(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function todayISO() { return iso(new Date()); }
+  function safeUrl(u) { return /^https?:\/\//i.test(u || '') ? u : '#'; }
+  function hostOf(u) { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return 'source'; } }
+  function daysBetween(a, b) { return Math.round((parseISO(b) - parseISO(a)) / 864e5); }
+  function relDay(dateIso) {
+    var n = daysBetween(todayISO(), dateIso);
+    if (n === 0) return 'Today'; if (n === 1) return 'Tomorrow'; if (n < 7) return 'In ' + n + ' days';
+    return '';
+  }
+  function weekLabel(dateIso) {
+    var t = parseISO(todayISO()), d = parseISO(dateIso);
+    var mon = new Date(t); mon.setDate(t.getDate() - ((t.getDay() + 6) % 7));
+    var w = Math.floor((d - mon) / (7 * 864e5));
+    if (w <= 0) return 'This week';
+    if (w === 1) return 'Next week';
+    var start = new Date(mon); start.setDate(mon.getDate() + 7 * w);
+    return 'Week of ' + MONTHS[start.getMonth()] + ' ' + start.getDate();
+  }
 
-  function esc(s){
-    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-    });
+  // Parse "4:00 PM - 6:00 PM", "6 PM", "5:30-7:30 PM" into {h,m} start/end, best effort.
+  function parseTimes(t) {
+    if (!t) return null;
+    var re = /(\d{1,2})(?::(\d{2}))?\s*(am|pm|a\.m\.|p\.m\.)?/ig, out = [], m;
+    while ((m = re.exec(t)) && out.length < 2) out.push({ h: +m[1], m: +(m[2] || 0), ap: (m[3] || '').replace(/\./g, '').toLowerCase() });
+    if (!out.length || out[0].h > 12) return null;
+    var lastAp = (out[out.length - 1].ap || out[0].ap || 'pm');
+    out.forEach(function (x) { var ap = x.ap || lastAp; if (ap === 'pm' && x.h < 12) x.h += 12; if (ap === 'am' && x.h === 12) x.h = 0; });
+    return { start: out[0], end: out[1] || null };
   }
-  function parseISO(iso){
-    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
-    return m ? new Date(+m[1], +m[2] - 1, +m[3], 12) : null;
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function icsFor(e) {
+    var d = e.date.replace(/-/g, ''), tm = parseTimes(e.time), dt;
+    if (tm) {
+      var s = tm.start, en = tm.end || { h: Math.min(s.h + 2, 23), m: s.m };
+      dt = 'DTSTART;TZID=America/New_York:' + d + 'T' + pad(s.h) + pad(s.m) + '00\r\nDTEND;TZID=America/New_York:' + d + 'T' + pad(en.h) + pad(en.m) + '00';
+    } else {
+      var nx = parseISO(e.date); nx.setDate(nx.getDate() + 1);
+      dt = 'DTSTART;VALUE=DATE:' + d + '\r\nDTEND;VALUE=DATE:' + iso(nx).replace(/-/g, '');
+    }
+    function f(s) { return String(s || '').replace(/[\\;,]/g, function (c) { return '\\' + c; }).replace(/\n/g, '\\n'); }
+    return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Exit 163//Holiday Tracker//EN', 'BEGIN:VEVENT',
+      'UID:' + d + '-' + e._id + '@exit163.com', 'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z', dt,
+      'SUMMARY:' + f(e.event + ' (' + e.town + ')'), 'LOCATION:' + f((e.location ? e.location + ', ' : '') + e.town + ', NJ'),
+      'DESCRIPTION:' + f((e.notes ? e.notes + '\n\n' : '') + 'Source: ' + e.source_url + '\nFrom the Exit 163 holiday tracker: https://www.exit163.com/holidays'),
+      'URL:' + f(e.source_url), 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
   }
-  function todayISO(){
-    var d = new Date();
-    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-  }
-  function prettyDate(iso){
-    var d = parseISO(iso);
-    return d ? DAYS[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() : iso;
-  }
-  function safeUrl(u){ return /^https?:\/\//i.test(u || '') ? u : '#'; }
-  function hostOf(u){ try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return 'source'; } }
+  function mapsUrl(e) { return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent((e.location || e.event) + ', ' + e.town + ', NJ'); }
 
-  // Dated, upcoming events first (by date), then TBA events (by town).
-  function sortEvents(list){
-    return list.slice().sort(function(a, b){
+  function sortEvents(list) {
+    return list.slice().sort(function (a, b) {
       if (a.date && b.date) return a.date < b.date ? -1 : a.date > b.date ? 1 : a.town.localeCompare(b.town);
-      if (a.date) return -1;
-      if (b.date) return 1;
+      if (a.date) return -1; if (b.date) return 1;
       return a.town.localeCompare(b.town) || a.event.localeCompare(b.event);
     });
   }
 
-  function card(e){
-    var d = parseISO(e.date);
-    var dateBox = d
-      ? '<div class="datebox"><div class="m">' + MONTHS[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div><div class="w">' + DAYS[d.getDay()] + '</div></div>'
-      : '<div class="datebox tba"><div class="m">2026</div><div class="d">TBA</div></div>';
-    var pills = '<span class="pill">' + esc(TYPE_LABEL[e.type] || 'Holiday event') + '</span><span class="pill town">' + esc(e.town) + '</span>';
-    if (d && !e.verified_2026) pills += '<span class="pill warn">Date not yet confirmed</span>';
-    var when = d ? prettyDate(e.date) + ' · ' + (e.time ? esc(e.time) : 'time TBA') : '2026 date TBA';
-    var meta = '<div class="meta"><strong>When:</strong> ' + when + '</div>';
-    if (e.location) meta += '<div class="meta"><strong>Where:</strong> ' + esc(e.location) + '</div>';
-    if (e.cost) meta += '<div class="meta"><strong>Cost:</strong> ' + esc(e.cost) + '</div>';
-    return '<article class="card">' + dateBox + '<div><div class="pills">' + pills + '</div>' +
-      '<h3>' + esc(e.event) + '</h3>' + meta +
+  function card(e) {
+    var tags = '<span class="tag type">' + esc(TYPE_LABEL[e.type] || 'Holiday event') + '</span><span class="tag">' + esc(e.town) + '</span>';
+    tags += e.verified_2026 ? '<span class="tag ok">2026 date confirmed</span>' : '<span class="tag warn">Date not yet confirmed</span>';
+    var facts = '<div>' + ICO.clock + '<span><strong>' + (e.time ? esc(e.time) : 'Time TBA') + '</strong></span></div>';
+    if (e.location) facts += '<div>' + ICO.pin + '<span>' + esc(e.location) + '</span></div>';
+    if (e.cost) facts += '<div>' + ICO.tag + '<span>' + esc(e.cost) + '</span></div>';
+    return '<article class="card" style="--c:' + (TYPE_C[e.type] || 'var(--t-other)') + '">' +
+      '<div class="tags">' + tags + '</div><h3>' + esc(e.event) + '</h3><div class="facts">' + facts + '</div>' +
       (e.notes ? '<p class="notes">' + esc(e.notes) + '</p>' : '') +
-      '<a class="src" href="' + esc(safeUrl(e.source_url)) + '" target="_blank" rel="noopener">Source: ' + esc(hostOf(e.source_url)) + ' &rarr;</a>' +
+      '<div class="card-acts">' +
+        '<a class="btn" href="' + esc(safeUrl(e.source_url)) + '" target="_blank" rel="noopener">' + ICO.ext + 'Source: ' + esc(hostOf(e.source_url)) + '</a>' +
+        '<button class="btn" type="button" data-ics="' + e._id + '">' + ICO.cal + 'Add to calendar</button>' +
+        '<a class="btn" href="' + esc(mapsUrl(e)) + '" target="_blank" rel="noopener">' + ICO.pin + 'Directions</a>' +
       '</div></article>';
   }
 
-  function render(){
-    var list = state.events.filter(function(e){
-      return (!state.type || e.type === state.type) && (!state.town || e.town === state.town);
-    });
+  function timeline(list) {
+    var html = '', lastWeek = '', i = 0;
+    while (i < list.length) {
+      var dIso = list[i].date, group = [];
+      while (i < list.length && list[i].date === dIso) group.push(list[i++]);
+      var wl = weekLabel(dIso);
+      if (wl !== lastWeek) { html += '<div class="week-label">' + wl + '</div>'; lastWeek = wl; }
+      var d = parseISO(dIso), rel = relDay(dIso);
+      html += '<section class="day" aria-label="' + DAYS_LONG[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + '">' +
+        '<div class="day-head"><div class="day-sign"><div class="m">' + MONTHS[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div><div class="w">' + DAYS[d.getDay()] + '</div></div>' +
+        (rel ? '<div class="day-rel">' + rel + '</div>' : '') + '</div>' +
+        '<div class="day-items">' + group.map(card).join('') + '</div></section>';
+    }
+    return html;
+  }
+
+  function filtered() {
+    return state.events.filter(function (e) { return (!state.type || e.type === state.type) && (!state.town || e.town === state.town); });
+  }
+
+  function render() {
+    var list = filtered();
+    var dated = list.filter(function (e) { return e.date; });
+    var tba = list.filter(function (e) { return !e.date; });
     var out = document.getElementById('results');
-    var countEl = document.getElementById('count');
-    var dated = list.filter(function(e){ return e.date; }).length;
-    countEl.textContent = list.length + (list.length === 1 ? ' event' : ' events') + ' · ' + dated + ' with dates · ' + (list.length - dated) + ' TBA';
+    document.getElementById('count').innerHTML = '<b>' + dated.length + '</b> upcoming ' + (dated.length === 1 ? 'event' : 'events') + (tba.length ? ' &middot; <b>' + tba.length + '</b> waiting on 2026 dates' : '') + (state.town ? ' in ' + esc(state.town) : '');
 
-    if (!list.length) {
-      out.innerHTML = '<p class="empty">Nothing listed for this filter yet. Towns are still posting 2026 dates, so check back next week.</p>';
-      return;
+    if (!dated.length) {
+      out.innerHTML = '<div class="empty"><b>No dates yet' + (state.town ? ' for ' + esc(state.town) : '') + '.</b>Towns are still posting 2026 dates. Check back next week, or see the ones waiting on dates below.</div>';
+    } else if (state.unlocked) {
+      out.innerHTML = '<div class="unlocked"><span class="ck">&#10003;</span><span><b>You&rsquo;re in.</b> Here&rsquo;s every event on the tracker.</span></div>' + timeline(dated);
+    } else {
+      var free = dated.filter(function (e) { return state.freeIds[e._id]; });
+      var locked = dated.filter(function (e) { return !state.freeIds[e._id]; });
+      var html = free.length ? timeline(free) : '';
+      html += document.getElementById('gateTpl').innerHTML;
+      if (locked.length) {
+        html += '<p class="locked-label">' + locked.length + ' more ' + (locked.length === 1 ? 'event' : 'events') + ' in the full list</p>' +
+          '<div class="locked" aria-hidden="true"><div class="inner">' + timeline(locked.slice(0, 4)) + '</div></div>';
+      }
+      out.innerHTML = html;
+      wireForm(out.querySelector('form.join'));
     }
-
-    if (state.unlocked) {
-      out.innerHTML = '<div class="unlocked-note">You\'re in. Here\'s the full list.</div><div class="list">' + list.map(card).join('') + '</div>';
-      return;
-    }
-
-    var free = list.filter(function(e){ return state.freeIds[e._id]; });
-    var locked = list.filter(function(e){ return !state.freeIds[e._id]; });
-    var html = '';
-    if (free.length) html += '<h2 class="section-label">Coming up next</h2><div class="list">' + free.map(card).join('') + '</div>';
-    html += document.getElementById('gateTpl').innerHTML;
-    if (locked.length) {
-      // Only a few blurred teasers are drawn; the full list renders after unlock.
-      html += '<h2 class="section-label">' + locked.length + ' more ' + (locked.length === 1 ? 'event' : 'events') + ' in the full list</h2>' +
-        '<div class="locked" aria-hidden="true"><div class="list">' + locked.slice(0, 4).map(card).join('') + '</div><div class="locked-fade"></div></div>';
-    }
-    out.innerHTML = html;
-    wireForm(out.querySelector('form.subscribe-form'));
+    renderTba(state.unlocked ? tba : []);
   }
 
-  function msg(form, text, ok){
-    var el = form.nextElementSibling && form.nextElementSibling.classList.contains('subscribe-msg') ? form.nextElementSibling : null;
-    if (!el) { el = document.createElement('p'); el.className = 'subscribe-msg'; form.parentNode.insertBefore(el, form.nextSibling); }
-    el.textContent = text; el.style.color = ok ? '#7CD8A4' : '#FF8A80';
+  function renderTba(tba) {
+    var el = document.getElementById('tba');
+    if (!tba.length) { el.hidden = true; return; }
+    el.hidden = false;
+    el.innerHTML = '<div class="tba-head"><h2>Dates not announced yet</h2><p>These happen every year. We&rsquo;ll move them up the moment the town confirms. Last year&rsquo;s details are shown as a guide.</p></div>' +
+      '<div class="tba-grid">' + tba.map(function (e) {
+        return '<article class="tba-item" style="--c:' + (TYPE_C[e.type] || 'var(--t-other)') + '"><div class="town-n">' + esc(e.town) + ' &middot; ' + esc(TYPE_LABEL[e.type] || 'Event') + '</div>' +
+          '<h3>' + esc(e.event) + '</h3>' + (e.notes ? '<p>' + esc(e.notes) + '</p>' : '') +
+          '<a href="' + esc(safeUrl(e.source_url)) + '" target="_blank" rel="noopener">Check ' + esc(hostOf(e.source_url)) + ' &rarr;</a></article>';
+      }).join('') + '</div>';
   }
 
-  function wireForm(form){
+  /* ---------- Signup gate (phone and/or email via /api/join) ---------- */
+  function validPhone(v) { var d = v.replace(/\D/g, ''); if (d.length === 11 && d[0] === '1') d = d.slice(1); return /^[2-9]\d{2}[2-9]\d{6}$/.test(d); }
+  function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+  function fmtPhone(v) { var d = v.replace(/\D/g, ''); if (d.length === 11 && d[0] === '1') d = d.slice(1); d = d.slice(0, 10); if (d.length < 4) return d; if (d.length < 7) return '(' + d.slice(0, 3) + ') ' + d.slice(3); return '(' + d.slice(0, 3) + ') ' + d.slice(3, 6) + '-' + d.slice(6); }
+
+  function wireForm(form) {
     if (!form) return;
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var btn = form.querySelector('button'), label = btn.textContent;
-      btn.disabled = true; btn.textContent = 'Unlocking…';
-      fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
-        .then(function(r){ return r.json().catch(function(){ return { ok: false }; }); })
-        .then(function(d){
-          if (d.ok) {
-            storageSet();
-            state.unlocked = true;
-            render();
-            var top = document.getElementById('results');
-            if (top && top.scrollIntoView) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          } else {
-            msg(form, d.error || 'Something went wrong. Please try again.', false);
-            btn.disabled = false; btn.textContent = label;
-          }
+    var phone = form.querySelector('[name=phone]'), email = form.querySelector('[name=email]'), msg = form.querySelector('.msg'), btn = form.querySelector('.go'), label = btn.querySelector('.label');
+    phone.addEventListener('input', function () { phone.value = fmtPhone(phone.value); phone.parentNode.classList.remove('bad'); });
+    email.addEventListener('input', function () { email.parentNode.classList.remove('bad'); });
+    function err(t, f) { msg.textContent = t; if (f) { f.parentNode.classList.add('bad'); f.focus(); } }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); msg.textContent = '';
+      var p = phone.value.trim(), m = email.value.trim();
+      if (!p && !m) return err('Add your mobile number or your email.', phone);
+      if (p && !validPhone(p)) return err('Use a 10-digit US mobile number.', phone);
+      if (m && !validEmail(m)) return err('That email doesn’t look right.', email);
+      btn.disabled = true; label.textContent = 'Unlocking…';
+      fetch('/api/join', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ phone: p, email: m, website: form.querySelector('[name=website]').value }) })
+        .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+        .then(function (d) {
+          if (!d.ok) { btn.disabled = false; label.textContent = 'Unlock the full list'; return err(d.error || 'Something went wrong. Please try again.', d.field === 'phone' ? phone : d.field === 'email' ? email : null); }
+          storageSet(); state.unlocked = true; render();
+          var note = document.querySelector('.unlocked span:last-child');
+          if (note && d.phone === 'sent') note.innerHTML = '<b>You&rsquo;re in.</b> Here&rsquo;s every event. Check your texts and reply JOIN to switch on your agent.';
+          document.getElementById('count').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
         })
-        .catch(function(){ msg(form, 'Network hiccup. Please try again.', false); btn.disabled = false; btn.textContent = label; });
+        .catch(function () { btn.disabled = false; label.textContent = 'Unlock the full list'; err('Network hiccup. Please try again.'); });
     });
   }
 
-  function buildFilters(){
+  /* ---------- Calendar download ---------- */
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-ics]'); if (!b) return;
+    var e = state.events[+b.getAttribute('data-ics')]; if (!e || !e.date) return;
+    var blob = new Blob([icsFor(e)], { type: 'text/calendar;charset=utf-8' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    a.download = (e.town + '-' + e.event).toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 60) + '.ics';
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  });
+
+  /* ---------- Filters ---------- */
+  function buildFilters() {
+    var counts = {}; state.events.forEach(function (e) { if (e.date) counts[e.type] = (counts[e.type] || 0) + 1; });
+    var total = state.events.filter(function (e) { return e.date; }).length;
     var chips = document.getElementById('typeChips');
-    chips.innerHTML = TYPES.map(function(t){
-      return '<button type="button" class="chip" data-type="' + t.id + '" aria-pressed="' + (t.id === state.type) + '">' + t.label + '</button>';
+    chips.innerHTML = TYPES.map(function (t) {
+      var n = t.id ? (counts[t.id] || 0) : total;
+      return '<button type="button" class="chip" style="--c:' + t.c + '" data-type="' + t.id + '" aria-pressed="' + (t.id === state.type) + '">' + (t.id ? '<i></i>' : '') + t.label + ' <span class="n">' + n + '</span></button>';
     }).join('');
-    chips.addEventListener('click', function(e){
+    chips.addEventListener('click', function (e) {
       var b = e.target.closest('.chip'); if (!b) return;
       state.type = b.getAttribute('data-type');
-      chips.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', String(c === b)); });
-      render();
+      chips.querySelectorAll('.chip').forEach(function (c) { c.setAttribute('aria-pressed', String(c === b)); });
+      render(); jumpToList();
     });
-    var sel = document.getElementById('town');
-    var towns = {};
-    state.events.forEach(function(e){ towns[e.town] = (towns[e.town] || 0) + 1; });
-    Object.keys(towns).sort().forEach(function(t){
-      var o = document.createElement('option'); o.value = t; o.textContent = t + ' (' + towns[t] + ')'; sel.appendChild(o);
-    });
-    sel.addEventListener('change', function(){ state.town = sel.value; render(); });
+    var sel = document.getElementById('town'), towns = {};
+    state.events.forEach(function (e) { towns[e.town] = (towns[e.town] || 0) + 1; });
+    Object.keys(towns).sort().forEach(function (t) { var o = document.createElement('option'); o.value = t; o.textContent = t + ' (' + towns[t] + ')'; sel.appendChild(o); });
+    sel.addEventListener('change', function () { state.town = sel.value; render(); jumpToList(); });
+  }
+  function jumpToList() {
+    var f = document.getElementById('filters'), c = document.getElementById('count');
+    if (c.getBoundingClientRect().top < f.offsetHeight) window.scrollTo({ top: window.scrollY + c.getBoundingClientRect().top - f.offsetHeight - 4, behavior: reduce ? 'auto' : 'smooth' });
   }
 
-  function init(events){
+  /* ---------- Hero: stats + next-up countdown ---------- */
+  function heroStats() {
+    var towns = {}; state.events.forEach(function (e) { towns[e.town] = 1; });
+    var dated = state.events.filter(function (e) { return e.date; }).length;
+    var conf = state.events.filter(function (e) { return e.verified_2026 && e.date; }).length;
+    document.getElementById('signs').innerHTML =
+      '<div class="mini-sign"><b>' + dated + '</b><small>Upcoming</small></div>' +
+      '<div class="mini-sign"><b>' + Object.keys(towns).length + '</b><small>Towns</small></div>' +
+      '<div class="mini-sign"><b>' + conf + '</b><small>Confirmed</small></div>';
+  }
+  function spotlight() {
+    var next = state.events.filter(function (e) { return e.date; })[0];
+    var el = document.getElementById('spot'); if (!next) return;
+    var d = parseISO(next.date), tm = parseTimes(next.time);
+    var target = new Date(d.getFullYear(), d.getMonth(), d.getDate(), tm ? tm.start.h : 12, tm ? tm.start.m : 0);
+    el.hidden = false;
+    el.innerHTML = '<div class="lbl"><span>Next up</span><span>' + DAYS[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + '</span></div>' +
+      '<div class="countdown" id="cd"></div><h2>' + esc(next.event) + '</h2><p>' + esc(next.town) + (next.time ? ' &middot; ' + esc(next.time) : '') + '</p>' +
+      '<div class="acts"><button class="btn solid" type="button" data-ics="' + next._id + '">' + ICO.cal + 'Add to calendar</button><a class="btn" href="' + esc(safeUrl(next.source_url)) + '" target="_blank" rel="noopener">Details</a></div>';
+    function tick() {
+      var ms = Math.max(0, target - new Date()), s = Math.floor(ms / 1000);
+      var parts = [[Math.floor(s / 86400), 'Days'], [Math.floor(s % 86400 / 3600), 'Hrs'], [Math.floor(s % 3600 / 60), 'Min']];
+      document.getElementById('cd').innerHTML = parts.map(function (p) { return '<div><b>' + pad(p[0]) + '</b><small>' + p[1] + '</small></div>'; }).join('');
+    }
+    tick(); setInterval(tick, 30000);
+  }
+
+  function init(events) {
     var today = todayISO();
-    // Drop events whose date has passed; keep TBA ones.
-    state.events = sortEvents(events.filter(function(e){ return e && e.town && e.event && (!e.date || e.date >= today); }));
-    state.events.forEach(function(e, i){ e._id = i; });
-    // Free preview = the next FREE_COUNT dated events overall (independent of filters).
-    state.events.filter(function(e){ return e.date; }).slice(0, FREE_COUNT).forEach(function(e){ state.freeIds[e._id] = true; });
-    var towns = {}; state.events.forEach(function(e){ towns[e.town] = 1; });
-    var verified = state.events.filter(function(e){ return e.verified_2026; }).length;
-    document.getElementById('stats').textContent = state.events.length + ' events · ' + Object.keys(towns).length + ' towns · ' + verified + ' confirmed for 2026';
-    buildFilters();
-    render();
+    state.events = sortEvents(events.filter(function (e) { return e && e.town && e.event && (!e.date || e.date >= today); }));
+    state.events.forEach(function (e, i) { e._id = i; });
+    state.events.filter(function (e) { return e.date; }).slice(0, FREE_COUNT).forEach(function (e) { state.freeIds[e._id] = true; });
+    heroStats(); spotlight(); buildFilters(); render();
   }
 
-  document.getElementById('updated').textContent = prettyDate(LAST_UPDATED).replace(/^\w+, /, '');
+  var u = parseISO(LAST_UPDATED); document.getElementById('updated').textContent = MONTHS[u.getMonth()] + ' ' + u.getDate();
   state.unlocked = storageGet() || /[?&]unlocked=1\b/.test(location.search);
+  if (/[?&]unlocked=1\b/.test(location.search)) storageSet();
 
   fetch(DATA_URL, { cache: 'no-cache' })
-    .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function(data){ init(Array.isArray(data) ? data : []); })
-    .catch(function(){ document.getElementById('results').innerHTML = '<p class="empty">Couldn\'t load the list. Please refresh.</p>'; });
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) { init(Array.isArray(data) ? data : []); })
+    .catch(function () { document.getElementById('results').innerHTML = '<div class="empty"><b>Couldn&rsquo;t load the list.</b>Please refresh the page.</div>'; });
+
+  /* ---------- Reveal ---------- */
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }); }, { threshold: 0.1 }) : null;
+  document.querySelectorAll('.rv').forEach(function (el) { io ? io.observe(el) : el.classList.add('in'); });
+
+  /* ---------- Garland ---------- */
+  (function () {
+    var svg = document.getElementById('garland'); if (!svg) return;
+    function draw() {
+      var w = svg.clientWidth || window.innerWidth, h = 60, n = Math.max(8, Math.round(w / 70)), seg = w / n;
+      var path = 'M0 8', bulbs = '', cols = ['#FFB81C', '#3DDC84', '#FF6B6B', '#7CC4FF', '#FFF3D0'];
+      for (var i = 0; i < n; i++) {
+        var x0 = i * seg, x1 = x0 + seg;
+        path += ' Q' + (x0 + seg / 2) + ' 34 ' + x1 + ' 8';
+        for (var k = 1; k <= 2; k++) {
+          var t = k / 3, x = x0 + seg * t, y = (1 - t) * (1 - t) * 8 + 2 * (1 - t) * t * 34 + t * t * 8;
+          var c = cols[(i * 2 + k) % cols.length];
+          bulbs += '<g class="bulb" style="animation-delay:' + ((i * 0.37 + k * 0.9) % 3.2).toFixed(2) + 's"><circle cx="' + x + '" cy="' + (y + 9) + '" r="9" fill="' + c + '" opacity=".22"/><rect x="' + (x - 2.5) + '" y="' + (y - 1) + '" width="5" height="5" rx="1" fill="#2a2f36"/><ellipse cx="' + x + '" cy="' + (y + 9) + '" rx="4.2" ry="6" fill="' + c + '"/></g>';
+        }
+      }
+      svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+      svg.innerHTML = '<path d="' + path + '" fill="none" stroke="#2a2f36" stroke-width="2"/>' + bulbs;
+    }
+    draw(); window.addEventListener('resize', draw);
+  })();
+
+  /* ---------- Snow ---------- */
+  (function () {
+    var c = document.getElementById('snow'); if (!c || !c.getContext) return;
+    var g = c.getContext('2d'), flakes = [], W, H, dpr = Math.min(window.devicePixelRatio || 1, 2), running = true;
+    function size() { var r = c.getBoundingClientRect(); W = r.width; H = r.height; c.width = W * dpr; c.height = H * dpr; g.setTransform(dpr, 0, 0, dpr, 0, 0); }
+    size(); window.addEventListener('resize', size);
+    var N = Math.round(Math.min(140, W / 9));
+    for (var i = 0; i < N; i++) flakes.push({ x: Math.random() * W, y: Math.random() * H, r: Math.random() * 1.8 + 0.5, s: Math.random() * 0.5 + 0.25, d: Math.random() * Math.PI * 2 });
+    function frame(t) {
+      if (!running) return;
+      g.clearRect(0, 0, W, H); g.fillStyle = 'rgba(255,255,255,0.75)'; g.beginPath();
+      flakes.forEach(function (f) {
+        if (!reduce) { f.y += f.s; f.x += Math.sin(t / 1600 + f.d) * 0.25; if (f.y > H + 4) { f.y = -4; f.x = Math.random() * W; } }
+        g.moveTo(f.x, f.y); g.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+      });
+      g.fill(); if (!reduce) requestAnimationFrame(frame);
+    }
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { var was = running; running = e[0].isIntersecting; if (running && !was && !reduce) requestAnimationFrame(frame); }).observe(c);
+    requestAnimationFrame(frame);
+  })();
 })();
 </script>
 </body>
