@@ -36,7 +36,8 @@ const picked = only.length ? scenarios.filter((s) => only.includes(s.id)) : scen
       if (tools) md += `<sub>tools: ${tools}</sub>\n\n`;
     }
     const [u] = await q(db().from('sms_users').select('first_name,town_slug,notes,email,blast_opt_in').eq('phone', phone));
-    md += `<sub>profile after: ${JSON.stringify(u)}</sub>\n\n---\n\n`;
+    const facts = await q(db().from('subscriber_facts').select('kind,fact,born_year,source').eq('phone', phone));
+    md += `<sub>profile after: ${JSON.stringify(u)}</sub>\n\n<sub>facts after: ${JSON.stringify(facts)}</sub>\n\n---\n\n`;
   }
 
   const file = path.join(outDir, `${stamp}.md`);

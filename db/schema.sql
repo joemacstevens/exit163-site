@@ -160,3 +160,33 @@ alter table venues add column if not exists origin text not null default 'resear
 create index if not exists venues_town_idx on venues (town_slug);
 alter table events add column if not exists recurrence_text text;
 alter table events add column if not exists research_batch text;
+
+-- 2026-11-12: subscriber memory ----------------------------------------------
+-- One row per thing we remember about a texter, so facts are added and removed
+-- one at a time instead of rewriting a single notes blob. Kids are stored by
+-- approximate birth year (never by name) so their ages stay current.
+create table if not exists subscriber_facts (
+  id          bigint generated always as identity primary key,
+  phone       text not null references sms_users(phone) on delete cascade,
+  kind        text not null check (kind in ('kid','interest','dislike','food','budget','schedule','access','other')),
+  fact        text not null,
+  born_year   int,
+  source      text not null default 'chat' check (source in ('chat','review','onboarding')),
+  created_at  timestamptz not null default now(),
+  updated_at  timestamptz not null default now()
+);
+create index if not exists subscriber_facts_phone_idx on subscriber_facts (phone);
+alter table subscriber_facts enable row level security;
+
+-- When the nightly review last read this person's messages.
+alter table sms_users add column if not exists memory_reviewed_at timestamptz;
+
+-- One personal line per person per issue, written Thursday, used by /api/blast on Friday.
+create table if not exists personal_picks (
+  issue_date  date not null,
+  phone       text not null references sms_users(phone) on delete cascade,
+  line        text not null,
+  created_at  timestamptz not null default now(),
+  primary key (issue_date, phone)
+);
+alter table personal_picks enable row level security;
