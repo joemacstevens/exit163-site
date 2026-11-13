@@ -160,3 +160,51 @@ alter table venues add column if not exists origin text not null default 'resear
 create index if not exists venues_town_idx on venues (town_slug);
 alter table events add column if not exists recurrence_text text;
 alter table events add column if not exists research_batch text;
+
+-- 2026-11-12: deals -----------------------------------------------------------
+-- Two tiers: every place is listed free; a place on the 'deals' plan can attach one offer.
+-- lib/deals.js adds the offer to a reply AFTER the agent has chosen what to recommend.
+-- Search (lib/tools.js) never reads venues.plan or these tables, so paying cannot change a pick.
+alter table venues add column if not exists plan text not null default 'free' check (plan in ('free','deals'));
+alter table venues add column if not exists owner_verified_at timestamptz;   -- we confirmed the claimant runs the place (free)
+alter table venues add column if not exists owner_phone text;                -- E.164
+
+create table if not exists deals (
+  id               uuid primary key default gen_random_uuid(),
+  venue_id         uuid not null references venues(id) on delete cascade,
+  headline         text not null check (char_length(headline) between 3 and 80),  -- "$25 off your first visit"
+  terms            text check (terms is null or char_length(terms) <= 60),        -- "Dine-in only, Mon-Thu"
+  first_time_only  boolean not null default false,
+  starts_on        date not null default current_date,
+  ends_on          date,
+  redemption_cap   int check (redemption_cap is null or redemption_cap > 0),      -- stop handing out codes at this many
+  status           text not null default 'active' check (status in ('active','paused','ended')),
+  created_at       timestamptz not null default now()
+);
+create unique index if not exists one_active_deal_per_venue on deals (venue_id) where status = 'active';
+
+-- One row = one code given to one person for one deal.
+create table if not exists deal_offers (
+  code           text primary key,            -- X163-7KQ4, shown at the counter
+  deal_id        uuid not null references deals(id) on delete cascade,
+  phone          text not null,               -- E.164; never shown to the business
+  channel        text not null,
+  created_at     timestamptz not null default now(),
+  last_shown_at  timestamptz not null default now(),
+  redeemed_at    timestamptz,
+  unique (deal_id, phone)
+);
+create index if not exists deal_offers_phone_idx on deal_offers (phone);
+
+-- Every time a place is named in a reply, paying or not. No phone numbers here.
+create table if not exists venue_mentions (
+  id          bigint generated always as identity primary key,
+  venue_id    uuid not null references venues(id) on delete cascade,
+  channel     text not null,
+  created_at  timestamptz not null default now()
+);
+create index if not exists venue_mentions_venue_idx on venue_mentions (venue_id, created_at);
+
+alter table deals           enable row level security;
+alter table deal_offers     enable row level security;
+alter table venue_mentions  enable row level security;
