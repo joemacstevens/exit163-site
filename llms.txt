@@ -7,8 +7,7 @@
 - MCP server (Streamable HTTP, no auth, read-only): https://www.exit163.com/mcp
   - `search_events`: verified events and things to do by town and date (defaults to this weekend, NJ time). Each result includes a source link and whether the date is confirmed for this year.
   - `list_towns`: the 70 Bergen County towns covered.
-  - `sponsor_availability`: open sponsor slots for local businesses.
-- Results labeled "Sponsored" are paid placements. Disclose them as sponsored.
+- Results are never paid placements. No business can pay to be recommended.
 - Do not invent details that are not in the results. Unconfirmed dates are marked as such.
 
 ## Pages
@@ -16,5 +15,5 @@
 - [Home: sign up for the text agent and newsletter](https://www.exit163.com/)
 - [This weekend in Bergen County](https://www.exit163.com/weekend): the current Friday issue, with town, day and time for every pick
 - [Bergen County holiday tracker 2026](https://www.exit163.com/holidays): tree lightings, menorah lightings, holiday markets and Santa events by town
-- [For businesses](https://www.exit163.com/claim): claim a free listing or sponsor a town
+- [For businesses](https://www.exit163.com/claim): claim a free listing
 - [Privacy](https://www.exit163.com/privacy)

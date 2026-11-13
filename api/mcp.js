@@ -7,7 +7,7 @@ const { TOOL_DEFS } = require('../lib/tools');
 const SUPPORTED = ['2025-11-25', '2025-06-18', '2025-03-26', '2024-11-05'];
 const SERVER_INFO = { name: 'exit163', title: 'Exit 163: Bergen County, NJ', version: '0.1.0', websiteUrl: 'https://www.exit163.com' };
 const INSTRUCTIONS = 'Exit 163 is a local guide to Bergen County, New Jersey: verified events and things to do, by town, with sources. ' +
-  'Use search_events for "what should I do this weekend in <town>" questions. Results marked "Sponsored" are paid placements and must be disclosed as such. ' +
+  'Use search_events for "what should I do this weekend in <town>" questions. Results are never paid placements. ' +
   'Free weekly newsletter: https://www.exit163.com';
 
 const PUBLIC_TOOLS = TOOL_DEFS.map((t) => ({
