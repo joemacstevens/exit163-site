@@ -2,7 +2,15 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "functions": {
-    "api/sms.js": { "maxDuration": 15 }
+    "api/sms.js": {
+      "maxDuration": 15
+    },
+    "api/claim.js": {
+      "maxDuration": 30
+    },
+    "api/review.js": {
+      "maxDuration": 60
+    }
   },
   "rewrites": [
     {
@@ -20,6 +28,10 @@
     {
       "source": "/claim",
       "destination": "/claim.html"
+    },
+    {
+      "source": "/review",
+      "destination": "/review.html"
     },
     {
       "source": "/mcp",

@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Review · Exit163</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f4f1ea">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
+<style>
+/* ===== Exit163 design system: tokens ===== */
+:root, [data-theme="day"] {
+  --paper: #f4f1ea;
+  --surface: #ffffff;
+  --surface-sunk: #eae6dc;
+  --line: #d6d1c4;
+  --line-strong: #7e827b;
+  --ink: #121513;
+  --ink-muted: #575b55;
+  --ramp: #0a6b45;
+  --ramp-strong: #07573a;
+  --ramp-soft: #dcefe4;
+  --on-ramp: #ffffff;
+  --signal: #ffb81c;
+  --signal-soft: #fff0c7;
+  --on-signal: #1a1406;
+  --deal-ink: #7a4d00;
+  --danger: #b4410f;
+  --focus: var(--ramp);
+  --scrim: rgba(18,21,19,0.06);
+  --shadow-card: 0 1px 0 rgba(18,21,19,0.04), 0 12px 32px -18px rgba(18,21,19,0.22);
+  --shadow-pop: 0 2px 0 rgba(18,21,19,0.04), 0 30px 70px -28px rgba(18,21,19,0.35);
+}
+[data-theme="night"] {
+  --paper: #0e100f;
+  --surface: #171a18;
+  --surface-sunk: #222623;
+  --line: #323833;
+  --line-strong: #6c726c;
+  --ink: #f2efe7;
+  --ink-muted: #a5a9a1;
+  --ramp: #45d08c;
+  --ramp-strong: #6fe0a8;
+  --ramp-soft: #11301f;
+  --on-ramp: #04140b;
+  --signal: #ffc23d;
+  --signal-soft: #3a2c08;
+  --on-signal: #1a1406;
+  --deal-ink: #ffd27a;
+  --danger: #ff9466;
+  --focus: var(--ramp);
+  --scrim: rgba(255,255,255,0.06);
+  --shadow-card: 0 1px 0 rgba(0,0,0,0.5), 0 16px 40px -20px rgba(0,0,0,0.8);
+  --shadow-pop: 0 2px 0 rgba(0,0,0,0.5), 0 40px 90px -30px rgba(0,0,0,0.9);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-20: 80px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-bubble: 20px;
+  --radius-pill: 999px;
+  --font-display: "Bricolage Grotesque", "Instrument Sans", system-ui, sans-serif;
+  --font-sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+/* ===== Exit163 design system: components (ex-) ===== */
+/* Exit163 components. Every value comes from tokens.css. Class prefix: ex- */
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-sans); background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
+:where(a, button, input, [tabindex]):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* ---------- Wordmark ---------- */
+.ex-wordmark { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 750 22px/1 var(--font-display); letter-spacing: -0.04em; }
+.ex-wordmark b { font-weight: inherit; color: var(--ramp); }
+.ex-glyph { width: 30px; height: 30px; flex: none; display: block; }
+.ex-glyph .g-tile { fill: var(--ramp); }
+.ex-glyph .g-lane { stroke: var(--on-ramp); }
+.ex-glyph .g-dot { fill: var(--signal); }
+.ex-wordmark--lg { font-size: 44px; gap: 16px; }
+.ex-wordmark--lg .ex-glyph { width: 56px; height: 56px; }
+
+/* ---------- Button ---------- */
+.ex-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 52px; padding: 0 var(--space-6); border-radius: var(--radius-md); border: 1.5px solid transparent; font: 650 16px/1 var(--font-sans); text-decoration: none; cursor: pointer; white-space: nowrap; transition: background .15s, transform .12s, border-color .15s; }
+.ex-btn:active { transform: translateY(1px); }
+.ex-btn--primary { background: var(--ramp); color: var(--on-ramp); }
+.ex-btn--primary:hover { background: var(--ramp-strong); }
+.ex-btn--secondary { background: var(--surface); color: var(--ink); border-color: var(--line-strong); }
+.ex-btn--secondary:hover { background: var(--surface-sunk); }
+.ex-btn--ghost { background: transparent; color: var(--ink); }
+.ex-btn--ghost:hover { background: var(--scrim); }
+.ex-btn--sm { height: 38px; padding: 0 var(--space-4); font-size: 14px; border-radius: var(--radius-sm); }
+.ex-btn .ex-arrow { transition: transform .2s; }
+.ex-btn:hover .ex-arrow { transform: translateX(3px); }
+.ex-btn[disabled] { opacity: .55; cursor: not-allowed; }
+
+/* ---------- Form fields (from Join form) ---------- */
+.ex-field { position: relative; display: grid; }
+.ex-field label { position: absolute; left: 16px; top: 9px; font: 500 10.5px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); pointer-events: none; }
+.ex-field input { width: 100%; height: 56px; padding: 22px 16px 6px; border-radius: var(--radius-md); border: 1.5px solid var(--line-strong); background: var(--paper); color: var(--ink); font: 500 16px var(--font-sans); outline: none; transition: border-color .15s; }
+.ex-field input::placeholder { color: var(--ink-muted); opacity: .7; }
+.ex-field input:focus { border-color: var(--ramp); }
+.ex-field.is-bad input { border-color: var(--danger); }
+.ex-join__fine { margin: 0; font: 400 12px/1.5 var(--font-sans); color: var(--ink-muted); }
+.ex-join__fine a { color: inherit; }
+.ex-join__err { margin: 0; font: 600 14px/1.4 var(--font-sans); color: var(--danger); }
+
+/* select and textarea take the same shape as the Join form input */
+.ex-field select, .ex-field textarea { width: 100%; border-radius: var(--radius-md); border: 1.5px solid var(--line-strong); background: var(--paper); color: var(--ink); font: 500 16px var(--font-sans); outline: none; transition: border-color .15s; }
+.ex-field select { height: 56px; padding: 22px 40px 6px 16px; appearance: none; -webkit-appearance: none; }
+.ex-field--select::after { content: ""; position: absolute; right: 18px; top: 24px; width: 8px; height: 8px; border-right: 2px solid var(--ink-muted); border-bottom: 2px solid var(--ink-muted); transform: rotate(45deg); pointer-events: none; }
+.ex-field textarea { min-height: 112px; padding: 26px 16px 12px; line-height: 1.4; resize: vertical; }
+.ex-field select:focus, .ex-field textarea:focus { border-color: var(--ramp); }
+
+/* ===== Review page ===== */
+html { -webkit-text-size-adjust: 100%; }
+[hidden] { display: none !important; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 32px; }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px; }
+.nav__side { display: flex; align-items: center; gap: 8px; }
+.kick { margin: 0; font: 500 11.5px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ramp); }
+.muted { color: var(--ink-muted); }
+.mono { font: 500 11.5px/1.3 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); }
+
+.gate { max-width: 420px; margin: 12vh auto 0; display: grid; gap: 12px; padding: var(--space-6); border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-card); }
+.gate h1 { margin: 0; font: 700 28px/1.1 var(--font-display); letter-spacing: -0.025em; }
+.gate p { margin: 0; font: 400 15px/1.45 var(--font-sans); color: var(--ink-muted); }
+.gate .ex-btn { width: 100%; }
+
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 24px; }
+.tab { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; border-radius: var(--radius-pill); border: 1.5px solid var(--line-strong); background: var(--surface); color: var(--ink); font: 600 14px/1 var(--font-sans); text-decoration: none; }
+.tab b { font: 600 12px/1 var(--font-mono); padding: 4px 7px; border-radius: var(--radius-pill); background: var(--surface-sunk); }
+.tab b.has { background: var(--ramp); color: var(--on-ramp); }
+
+.sec { padding: 8px 0 40px; scroll-margin-top: 12px; }
+.sec > h2 { margin: 0 0 4px; font: 700 26px/1.15 var(--font-display); letter-spacing: -0.025em; }
+.sec > .sub { margin: 0 0 18px; font: 400 15px/1.45 var(--font-sans); color: var(--ink-muted); max-width: 44em; }
+.stack { display: grid; gap: 16px; }
+.empty { margin: 0; padding: 20px 24px; border-radius: var(--radius-lg); border: 1px dashed var(--line-strong); font: 400 15px/1.4 var(--font-sans); color: var(--ink-muted); }
+.banner { margin: 0 0 20px; padding: 14px 18px; border-radius: var(--radius-md); background: var(--signal-soft); color: var(--deal-ink); font: 500 14.5px/1.45 var(--font-sans); }
+
+.card { display: grid; gap: 18px; padding: var(--space-6); border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-card); }
+.card__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.card__head h3 { margin: 0 0 6px; font: 650 22px/1.2 var(--font-display); letter-spacing: -0.015em; overflow-wrap: anywhere; }
+.chip { display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: var(--radius-pill); font: 500 11px/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; background: var(--surface-sunk); color: var(--ink-muted); white-space: nowrap; }
+.chip--deal { background: var(--signal-soft); color: var(--deal-ink); }
+.chip--you { background: var(--ramp-soft); color: var(--ramp-strong); }
+.who { margin: 0; font: 400 15px/1.5 var(--font-sans); overflow-wrap: anywhere; }
+.who a { color: var(--ramp); }
+.part { display: grid; gap: 10px; }
+.part > h4 { margin: 0; font: 500 11.5px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+.note { margin: 0; padding: 14px 16px; border-radius: var(--radius-md); background: var(--surface-sunk); font: 400 15px/1.5 var(--font-sans); white-space: pre-wrap; overflow-wrap: anywhere; }
+.plain { margin: 0; padding-left: 18px; display: grid; gap: 4px; font: 400 15px/1.45 var(--font-sans); }
+.hint { margin: 0; font: 400 13.5px/1.45 var(--font-sans); color: var(--ink-muted); }
+.check { margin: 0; padding: 10px 14px; border-radius: var(--radius-sm); background: var(--signal-soft); color: var(--deal-ink); font: 500 14px/1.4 var(--font-sans); }
+
+.ev { display: grid; gap: 10px; padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--line); background: var(--paper); }
+.ev .ex-field input, .ev .ex-field select, .ev .ex-field textarea, .listing .ex-field input, .listing .ex-field textarea, .pick .ex-field select { background: var(--surface); }
+.ex-field textarea.short { min-height: 84px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.row .grow { flex: 1; }
+.btn-danger { color: var(--danger); }
+.tick { display: flex; align-items: center; gap: 10px; font: 500 15px/1.3 var(--font-sans); cursor: pointer; }
+.tick input { width: 18px; height: 18px; margin: 0; accent-color: var(--ramp); flex: none; }
+.pick { display: grid; gap: 8px; }
+.opt { display: grid; grid-template-columns: 18px 1fr; gap: 10px; align-items: start; padding: 12px 14px; border-radius: var(--radius-md); border: 1.5px solid var(--line); cursor: pointer; }
+.opt:has(input:checked) { border-color: var(--ramp); background: var(--ramp-soft); }
+.opt input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--ramp); }
+.opt b { display: block; font: 600 15px/1.3 var(--font-sans); }
+.opt span { display: block; font: 400 13.5px/1.4 var(--font-sans); color: var(--ink-muted); overflow-wrap: anywhere; }
+.opt .ex-field { margin-top: 8px; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px; border-top: 1px solid var(--line); padding-top: 18px; }
+.actions .ex-btn { height: 46px; }
+
+.ticket { display: grid; gap: 8px; padding: 16px 18px; border-radius: var(--radius-md); background: var(--surface); border: 1px solid var(--line); }
+.ticket p { margin: 0; font: 400 15px/1.45 var(--font-sans); overflow-wrap: anywhere; }
+.ticket p.lead { font-weight: 600; }
+
+.toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); max-width: min(560px, calc(100vw - 32px)); padding: 12px 18px; border-radius: var(--radius-md); background: var(--ink); color: var(--paper); font: 500 14.5px/1.4 var(--font-sans); box-shadow: var(--shadow-pop); z-index: 10; }
+.toast.is-bad { background: var(--danger); color: #fff; }
+
+@media (max-width: 720px) {
+  .wrap { padding: 0 16px; }
+  .card { padding: var(--space-4); }
+  .grid2, .grid3 { grid-template-columns: 1fr; }
+  .actions .ex-btn { flex: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- Sign in: the admin token, kept for this browser tab only. -->
+<main class="wrap" id="gate" hidden>
+  <form class="gate" id="gate-form" autocomplete="on">
+    <a class="ex-wordmark" href="/" aria-label="Exit163 home"><svg class="ex-glyph" viewBox="0 0 64 64" aria-hidden="true"><rect class="g-tile" width="64" height="64" rx="16"/><g class="g-lane" fill="none" stroke-width="6" stroke-linecap="round"><path d="M24 54V10"/><path d="M24 44c0-12 18-10 18-22"/></g><circle class="g-dot" cx="42" cy="12" r="5"/></svg><span>exit<b>163</b></span></a>
+    <h1>Review</h1>
+    <p>Claims, draft events and research leads waiting on you. Paste the admin token to open it.</p>
+    <input type="text" name="username" value="exit163-review" autocomplete="username" hidden>
+    <div class="ex-field"><input id="gate-token" name="password" type="password" required autocomplete="current-password" placeholder="Admin token"><label for="gate-token">Admin token</label></div>
+    <button class="ex-btn ex-btn--primary" type="submit">Open review</button>
+    <p class="ex-join__err" id="gate-err" role="alert" hidden></p>
+  </form>
+</main>
+
+<div id="app" hidden>
+  <header class="wrap nav">
+    <a class="ex-wordmark" href="/" aria-label="Exit163 home"><svg class="ex-glyph" viewBox="0 0 64 64" aria-hidden="true"><rect class="g-tile" width="64" height="64" rx="16"/><g class="g-lane" fill="none" stroke-width="6" stroke-linecap="round"><path d="M24 54V10"/><path d="M24 44c0-12 18-10 18-22"/></g><circle class="g-dot" cx="42" cy="12" r="5"/></svg><span>exit<b>163</b></span></a>
+    <div class="nav__side">
+      <button class="ex-btn ex-btn--ghost ex-btn--sm" id="reload" type="button">Reload</button>
+      <button class="ex-btn ex-btn--secondary ex-btn--sm" id="signout" type="button">Sign out</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="kick">Review</p>
+    <nav class="tabs" aria-label="Sections">
+      <a class="tab" href="#claims">Claims <b id="n-claims">0</b></a>
+      <a class="tab" href="#drafts">Draft events <b id="n-drafts">0</b></a>
+      <a class="tab" href="#tickets">Research leads <b id="n-tickets">0</b></a>
+    </nav>
+    <p class="banner" id="migration" hidden>The database change for this page has not been applied yet (db/migrations/2026-11-13-claim-review.sql). Claims show below, but notes are not being read into drafts.</p>
+
+    <section class="sec" id="claims">
+      <h2>Claims</h2>
+      <p class="sub">A business says a listing is theirs. Approving confirms the owner, applies the listing changes you keep, and publishes the events read from their note. Nothing here is public until you approve.</p>
+      <div class="stack" id="claims-list"></div>
+    </section>
+
+    <section class="sec" id="drafts">
+      <h2>Draft events</h2>
+      <p class="sub">Drafts that are not waiting on a claim.</p>
+      <div class="stack" id="drafts-list"></div>
+    </section>
+
+    <section class="sec" id="tickets">
+      <h2>Research leads</h2>
+      <p class="sub">What the text line learned it should go find: events and places people described, and things people asked for that we had nothing for.</p>
+      <div class="stack" id="tickets-list"></div>
+    </section>
+  </main>
+</div>
+
+<p class="toast" id="toast" role="status" aria-live="polite" hidden></p>
+
+<script>
+(function () {
+  'use strict';
+  if (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'night';
+
+  const KEY = 'exit163-review-token';
+  let token = '';
+  try { token = sessionStorage.getItem(KEY) || ''; } catch (e) { /* private mode: ask every time */ }
+  let CATS = { event: [], place: [] };
+  let uid = 0;
+  const $ = (id) => document.getElementById(id);
+
+  // Like el.append, but skips null and false (the native one would print "null").
+  const add = (el, ...kids) => { for (const kid of kids.flat()) if (kid != null && kid !== false) el.append(kid); return el; };
+
+  // Everything from the server is placed with textContent / properties, never as HTML.
+  function h(tag, attrs, ...kids) {
+    const el = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs || {})) {
+      if (v == null || v === false) continue;
+      if (k === 'class') el.className = v;
+      else if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
+      else if (k in el) el[k] = v;
+      else el.setAttribute(k, v);
+    }
+    return add(el, ...kids);
+  }
+
+  let toastTimer;
+  function toast(text, bad) {
+    const t = $('toast');
+    t.textContent = text; t.classList.toggle('is-bad', Boolean(bad)); t.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { t.hidden = true; }, bad ? 7000 : 3500);
+  }
+
+  async function api(method, body) {
+    const r = await fetch('/api/review', {
+      method,
+      headers: Object.assign({ Authorization: 'Bearer ' + token, Accept: 'application/json' }, body ? { 'Content-Type': 'application/json' } : {}),
+      body: body ? JSON.stringify(body) : undefined,
+    });
+    if (r.status === 401) { signOut('That token was not accepted.'); throw new Error('Signed out.'); }
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok || !d.ok) throw new Error(d.error || 'That did not go through. Try again.');
+    return d;
+  }
+
+  // Run an action from a button: lock the button, show what happened.
+  async function act(btn, fn) {
+    btn.disabled = true;
+    try { const d = await fn(); if (d && d.message) toast(d.message); return d; }
+    catch (e) { toast(e.message, true); return null; }
+    finally { btn.disabled = false; }
+  }
+
+  const day = (iso) => new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  const label = (s) => String(s || '').replace(/_/g, ' ');
+
+  function field(text, value, opts) {
+    const o = opts || {};
+    const id = 'f' + (++uid);
+    let input;
+    if (o.options) {
+      input = h('select', { id, name: o.name });
+      for (const v of o.options) input.append(h('option', { value: v, selected: v === value }, label(v) || o.blank || ''));
+    } else if (o.area) {
+      input = h('textarea', { id, name: o.name, maxLength: o.max || 600, className: 'short', placeholder: o.placeholder || '' });
+      input.value = value || '';
+    } else {
+      input = h('input', { id, name: o.name, type: o.type || 'text', maxLength: o.max || 200, placeholder: o.placeholder || '' });
+      input.value = value || '';
+    }
+    return h('div', { class: 'ex-field' + (o.options ? ' ex-field--select' : '') }, input, h('label', { for: id }, text));
+  }
+
+  function recount() {
+    for (const k of ['claims', 'drafts', 'tickets']) {
+      const list = $(k + '-list');
+      const n = list.querySelectorAll(':scope > [data-item]').length;
+      $('n-' + k).textContent = n; $('n-' + k).classList.toggle('has', n > 0);
+      const empty = list.querySelector(':scope > .empty');
+      if (!n && !empty) list.append(h('p', { class: 'empty' }, 'Nothing waiting.'));
+      if (n && empty) empty.remove();
+    }
+  }
+  function drop(el) { el.remove(); recount(); }
+
+  // ---------- one draft event, editable ----------
+  function eventEditor(ev, standalone) {
+    const form = h('form', { class: 'ev', 'data-item': standalone ? '1' : null, 'data-event': ev.id });
+    const save = h('button', { class: 'ex-btn ex-btn--secondary ex-btn--sm', type: 'submit', disabled: true }, 'Save changes');
+    add(form,
+      ev.check ? h('p', { class: 'check' }, 'Check: ' + ev.check) : null,
+      field('Title', ev.title, { name: 'title' }),
+      h('div', { class: 'grid3' },
+        field('Starts', ev.starts_on, { name: 'starts_on', type: 'date' }),
+        field('Ends · if multi-day', ev.ends_on, { name: 'ends_on', type: 'date' }),
+        field('Repeats', ev.recurrence_text, { name: 'recurrence_text', max: 120, placeholder: 'Every Friday' })),
+      h('div', { class: 'grid3' },
+        field('Time', ev.time_text, { name: 'time_text', max: 120, placeholder: '7:00 PM - 10:00 PM' }),
+        field('Cost', ev.cost_text, { name: 'cost_text', max: 120, placeholder: 'Free' }),
+        field('Category', ev.category, { name: 'category', options: CATS.event })),
+      field('Where · blank means at the business', ev.location, { name: 'location', max: 300 }),
+      field('About', ev.description, { name: 'description', area: true }),
+      h('div', { class: 'row' },
+        h('span', { class: 'mono grow' }, [ev.town, label(ev.origin)].filter(Boolean).join(' · ')),
+        save,
+        standalone ? h('button', { class: 'ex-btn ex-btn--primary ex-btn--sm', type: 'button', onclick: async (e) => {
+          const btn = e.currentTarget;   // gone from the event once we await
+          if (!(await form.saveIfDirty())) return;
+          const d = await act(btn, () => api('POST', { action: 'event.publish', id: ev.id }));
+          if (d) drop(form);
+        } }, 'Publish') : null,
+        h('button', { class: 'ex-btn ex-btn--ghost ex-btn--sm btn-danger', type: 'button', onclick: async (e) => {
+          if (!confirm('Delete this draft? It was never public.')) return;
+          const d = await act(e.currentTarget, () => api('POST', { action: 'event.discard', id: ev.id }));
+          if (d) { const part = form.closest('.part'); form.remove(); if (part && !part.querySelector('.ev')) part.remove(); recount(); }
+        } }, 'Delete draft')));
+    let dirty = false;
+    form.addEventListener('input', () => { dirty = true; save.disabled = false; });
+    form.saveIfDirty = async () => {
+      if (!dirty) return true;
+      const fields = Object.fromEntries(new FormData(form));
+      try { await api('POST', { action: 'event.save', id: ev.id, fields }); dirty = false; save.disabled = true; return true; }
+      catch (e) { toast(e.message, true); return false; }
+    };
+    form.addEventListener('submit', async (e) => { e.preventDefault(); if (await form.saveIfDirty()) toast('Saved.'); });
+    return form;
+  }
+
+  // ---------- one claim ----------
+  function claimCard(c) {
+    const card = h('article', { class: 'card', 'data-item': '1' });
+    const group = 'place-' + c.id;
+
+    card.append(h('div', { class: 'card__head' },
+      h('div', null, h('h3', null, c.business), h('p', { class: 'mono' }, c.town + ' · sent ' + day(c.created_at))),
+      c.wants_deals ? h('span', { class: 'chip chip--deal' }, 'Wants deals') : null));
+    card.append(h('p', { class: 'who' },
+      c.contact + (c.role ? ' (' + c.role + ')' : '') + ' · ',
+      h('a', { href: 'mailto:' + c.email }, c.email),
+      c.phone ? ' · ' + c.phone : ''));
+
+    if (c.note) card.append(h('div', { class: 'part' }, h('h4', null, 'Their note'), h('p', { class: 'note' }, c.note)));
+    if (c.note && !c.read) card.append(h('p', { class: 'hint' }, 'This note has not been read into drafts yet. Use "Read the note again" below.'));
+
+    if (c.events.length) card.append(h('div', { class: 'part' }, h('h4', null, 'Events read from the note'), c.events.map((e) => eventEditor(e, false))));
+
+    // Listing changes: prefilled with what the note said; a blank field changes nothing.
+    const L = c.listing || {};
+    const listing = h('form', { class: 'part listing' },
+      h('h4', null, 'Listing changes'),
+      h('p', { class: 'hint' }, 'Filled in from the note where it said something. Blank fields leave the listing as it is.'),
+      field('Hours', L.hours_text, { name: 'hours_text', placeholder: 'Tue-Sun 7am-3pm' }),
+      h('div', { class: 'grid2' },
+        field('Opening date', L.opened_on, { name: 'opened_on', type: 'date' }),
+        field('Phone', L.phone, { name: 'phone', max: 30 })),
+      h('div', { class: 'grid2' },
+        field('Address', L.address, { name: 'address' }),
+        field('Website', L.website, { name: 'website', max: 300 })),
+      field('What the place is', L.description, { name: 'description', area: true, max: 500 }),
+      h('label', { class: 'tick' }, h('input', { type: 'checkbox', name: 'status', value: 'coming_soon', checked: L.status === 'coming_soon' }), 'Not open yet (show as coming soon)'));
+    listing.addEventListener('submit', (e) => e.preventDefault());
+    const now = h('p', { class: 'hint', hidden: true });
+    listing.querySelector('.hint').after(now);
+    card.append(listing);
+    // Show what the chosen place says today, so it is clear what a filled-in field replaces.
+    function showCurrent(m) {
+      const have = m ? [['hours', m.hours_text], ['opening date', m.opened_on], ['phone', m.phone], ['address', m.address], ['website', m.website]].filter((x) => x[1]) : [];
+      now.textContent = m ? 'On the listing now: ' + (have.length ? have.map((x) => x[0] + ' ' + x[1]).join(' · ') : 'none of these are filled in') + '.' : '';
+      now.hidden = !m;
+    }
+
+    if (c.other.length) card.append(h('div', { class: 'part' }, h('h4', null, 'Also in the note'), h('ul', { class: 'plain' }, c.other.map((s) => h('li', null, s))), h('p', { class: 'hint' }, 'Specials and questions are not saved anywhere else. Reply to the owner or note them yourself.')));
+    if (c.skipped.length) card.append(h('div', { class: 'part' }, h('h4', null, 'Left out'), h('ul', { class: 'plain muted' }, c.skipped.map((s) => h('li', null, s)))));
+
+    // Which place this is.
+    const preselect = c.matches.filter((m) => m.exact).length === 1 ? c.matches.find((m) => m.exact).id : null;
+    const catPick = field('Category for the new place', '', { name: 'category', options: [''].concat(CATS.place), blank: 'Choose one' });
+    const pick = h('div', { class: 'part pick' },
+      h('h4', null, 'Which place is this?'),
+      c.matches.map((m) => h('label', { class: 'opt' },
+        h('input', { type: 'radio', name: group, value: m.id, checked: m.id === preselect }),
+        h('div', null, h('b', null, m.name),
+          h('span', null, [label(m.category), m.address, m.hours_text].filter(Boolean).join(' · ') || 'No details yet'),
+          m.claimed ? h('span', null, 'Already claimed by ' + (m.claimed_by_email || 'someone')) : null))),
+      h('label', { class: 'opt' },
+        h('input', { type: 'radio', name: group, value: 'new' }),
+        h('div', null, h('b', null, 'Add "' + c.business + '" as a new place'),
+          h('span', null, c.matches.length ? 'None of the above.' : 'We do not list a place with this name in ' + c.town + ' yet.'),
+          catPick)));
+    card.append(pick);
+    pick.addEventListener('change', (e) => { if (e.target.type === 'radio') showCurrent(c.matches.find((m) => m.id === e.target.value)); });
+    showCurrent(c.matches.find((m) => m.id === preselect));
+
+    async function approve(e) {
+      const chosen = pick.querySelector('input[type=radio]:checked');
+      if (!chosen) return toast('Pick which place this is first.', true);
+      const body = { action: 'claim.approve', id: c.id, apply: Object.fromEntries(new FormData(listing)) };
+      if (chosen.value === 'new') {
+        body.category = catPick.querySelector('select').value;
+        if (!body.category) return toast('Pick a category for the new place.', true);
+      } else body.venue_id = chosen.value;
+      const match = c.matches.find((m) => m.id === body.venue_id);
+      if (match && match.claimed && match.claimed_by_email && match.claimed_by_email !== c.email) {
+        if (!confirm(match.name + ' is already claimed by ' + match.claimed_by_email + '. Replace them with ' + c.email + '?')) return;
+        body.replace_owner = true;
+      }
+      const drafts = [...card.querySelectorAll('.ev')];
+      const n = drafts.length;
+      if (!confirm('Approve ' + c.business + (n ? ' and publish ' + n + ' event' + (n === 1 ? '' : 's') : '') + '?')) return;
+      const btn = e.currentTarget;
+      btn.disabled = true;
+      for (const f of drafts) if (!(await f.saveIfDirty())) { btn.disabled = false; return; }
+      const d = await act(btn, () => api('POST', body));
+      if (d) drop(card);
+    }
+
+    card.append(h('div', { class: 'actions' },
+      h('button', { class: 'ex-btn ex-btn--primary', type: 'button', onclick: approve }, 'Approve'),
+      h('button', { class: 'ex-btn ex-btn--secondary', type: 'button', onclick: async (e) => {
+        if (!confirm('Reject this claim? Its draft events are deleted. The owner is not emailed.')) return;
+        const d = await act(e.currentTarget, () => api('POST', { action: 'claim.reject', id: c.id }));
+        if (d) drop(card);
+      } }, 'Reject'),
+      c.note ? h('button', { class: 'ex-btn ex-btn--ghost', type: 'button', onclick: async (e) => {
+        if (c.events.length && !confirm('Read the note again? This replaces the drafts above, including your edits.')) return;
+        const d = await act(e.currentTarget, () => api('POST', { action: 'claim.reread', id: c.id }));
+        if (d) load();
+      } }, 'Read the note again') : null));
+    return card;
+  }
+
+  // ---------- one research lead ----------
+  function ticketRow(t) {
+    const row = h('article', { class: 'ticket', 'data-item': '1' });
+    const set = (status) => async (e) => {
+      const d = await act(e.currentTarget, () => api('POST', { action: 'ticket.set', id: t.id, status }));
+      if (d) drop(row);
+    };
+    add(row,
+      h('div', { class: 'row' },
+        h('span', { class: 'chip' + (t.kind === 'lead' ? ' chip--you' : '') }, t.kind === 'lead' ? 'Someone told us' : 'We had nothing'),
+        h('span', { class: 'mono' }, [t.town, label(t.category), day(t.created_at)].filter(Boolean).join(' · '))),
+      h('p', { class: 'lead' }, t.summary),
+      t.details ? h('p', { class: 'muted' }, t.details) : null,
+      h('div', { class: 'row' },
+        h('button', { class: 'ex-btn ex-btn--secondary ex-btn--sm', type: 'button', onclick: set('added') }, 'Added to the database'),
+        h('button', { class: 'ex-btn ex-btn--ghost ex-btn--sm', type: 'button', onclick: set('dismissed') }, 'Dismiss')));
+    return row;
+  }
+
+  async function load() {
+    const d = await api('GET');
+    CATS = d.categories;
+    $('migration').hidden = !d.migration_pending;
+    $('claims-list').replaceChildren(...d.claims.map(claimCard));
+    $('drafts-list').replaceChildren(...d.drafts.map((e) => eventEditor(e, true)));
+    $('tickets-list').replaceChildren(...d.tickets.map(ticketRow));
+    recount();
+    $('gate').hidden = true; $('app').hidden = false;
+  }
+
+  function signOut(why) {
+    token = '';
+    try { sessionStorage.removeItem(KEY); } catch (e) { /* nothing stored */ }
+    $('app').hidden = true; $('gate').hidden = false;
+    for (const k of ['claims', 'drafts', 'tickets']) $(k + '-list').replaceChildren();
+    $('gate-err').textContent = why || ''; $('gate-err').hidden = !why;
+    $('gate-token').value = '';
+  }
+
+  $('gate-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    token = $('gate-token').value.trim();
+    if (!token) return;
+    const btn = e.currentTarget.querySelector('button');
+    btn.disabled = true;
+    try { await load(); try { sessionStorage.setItem(KEY, token); } catch (err) { /* private mode */ } }
+    catch (err) { if ($('gate-err').hidden) { $('gate-err').textContent = err.message; $('gate-err').hidden = false; } }
+    finally { btn.disabled = false; }
+  });
+  $('signout').addEventListener('click', () => signOut(''));
+  $('reload').addEventListener('click', (e) => act(e.currentTarget, load));
+
+  if (token) load().catch((e) => { if (!$('app').hidden) toast(e.message, true); else signOut(e.message === 'Signed out.' ? 'That token was not accepted.' : e.message); });
+  else $('gate').hidden = false;
+})();
+</script>
+</body>
+</html>
