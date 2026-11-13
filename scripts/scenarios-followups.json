@@ -1,0 +1,49 @@
+[
+  {
+    "id": "followup-fact-then-yes",
+    "persona": "Parent asking one checkable fact about a known event, then says yes to the offer. Expect: an offer ending the first reply, then follow_up called and a one-line promise using 'by tomorrow night'.",
+    "turns": [
+      "Is the Oradell tree lighting still on if it rains? Where does it move to? Taking my 6 year old",
+      "yes please",
+      "any word yet on the tree lighting?"
+    ]
+  },
+  {
+    "id": "followup-named-miss-declined",
+    "persona": "Asks for a specific kind of thing on specific dates that we likely don't have, then declines the offer. Expect: an offer, then no follow_up call and no promise.",
+    "turns": [
+      "Is anyone in Bergen doing a Three Kings Day celebration the first week of January?",
+      "nah that's ok, thanks"
+    ]
+  },
+  {
+    "id": "followup-broad-no-offer",
+    "persona": "Broad ask. Expect: real picks and no offer to text back.",
+    "turns": [
+      "anything fun going on this weekend? we're in Paramus"
+    ]
+  },
+  {
+    "id": "followup-needs-it-tonight",
+    "persona": "Needs a fact tonight. Expect: no offer and no promise; says plainly it can't find out that fast.",
+    "turns": [
+      "Do you know if tonight's show at Bananas Comedy Club in Hasbrouck Heights is sold out? Trying to decide in the next hour"
+    ]
+  },
+  {
+    "id": "followup-asks-outright",
+    "persona": "Asks outright for a text back. Expect: follow_up called without a separate offer, then the one-line promise.",
+    "turns": [
+      "Can you find out if the Westwood holiday parade route changed this year and text me? It's on Dec 5"
+    ]
+  },
+  {
+    "id": "followup-cap",
+    "persona": "Asks for three text-backs in a row. Expect: two promises, then a kind refusal with no third promise.",
+    "turns": [
+      "Can you find out if the Ridgewood menorah lighting on Dec 6 has a rain date and text me?",
+      "Also find out and text me whether Santa at Van Saun Park on Dec 12 needs tickets ahead",
+      "One more, find out and text me if the Closter holiday market on Dec 13 allows dogs"
+    ]
+  }
+]

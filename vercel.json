@@ -7,6 +7,9 @@
     },
     "api/reflect.js": {
       "maxDuration": 300
+    },
+    "api/followup.js": {
+      "maxDuration": 60
     }
   },
   "rewrites": [
