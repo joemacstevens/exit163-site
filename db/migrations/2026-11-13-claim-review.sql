@@ -1,6 +1,7 @@
 -- 2026-11-13: claim notes become draft events, reviewed at /review ---------------
--- NOT applied to the live database yet. Until it is, a claim still saves and emails as
--- before; lib/claim-notes.js skips saving what it read and says so in the logs.
+-- Applied to the live database on 2026-11-13. On a database without it, a claim still
+-- saves and emails as before; lib/claim-notes.js skips saving what it read and says so
+-- in the logs. Safe to run twice.
 --
 -- 1. events.claim_id: a draft event read from an owner's "Anything coming up?" note.
 --    It stays status = 'draft' (search only reads 'published') until the claim is approved
