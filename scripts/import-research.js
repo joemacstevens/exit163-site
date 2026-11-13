@@ -57,7 +57,10 @@ function cleanPlace(p, batch) {
   };
 }
 
-(async () => {
+// lib/tools.js reuses the two cleaners for its test-only HARVEST_OVERLAY, so only import when run directly.
+module.exports = { cleanEvent, cleanPlace };
+
+if (require.main === module) (async () => {
   const dry = process.argv.includes('--dry');
   const files = process.argv.slice(2).filter((a) => !a.startsWith('--'));
   for (const file of files) {

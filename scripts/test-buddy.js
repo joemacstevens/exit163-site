@@ -2,13 +2,17 @@
 // No texts are sent and no newsletter signups happen. Test data is deleted afterwards.
 //   node --env-file=.env.local scripts/test-buddy.js            # all scenarios
 //   node --env-file=.env.local scripts/test-buddy.js rainy-kids  # just some
+//   HARVEST_OVERLAY=research/a.json,research/b.json node --env-file=.env.local scripts/test-buddy.js
+//     test only: lets the search tools see research files that have not been imported yet
+//     (merged in memory by lib/tools.js; nothing is written to the database for them)
+//   SCENARIOS=scripts/scenarios-paces.json PHONE_BLOCK=030 RUN_LABEL=check  pick the script, phone block and file label
 // Writes a transcript to research/test-runs/<timestamp>.md
 const fs = require('fs');
 const path = require('path');
 const { handleInbound } = require('../lib/conversation');
 const { db, q } = require('../lib/db');
 
-const scenarios = require('./scenarios.json');
+const scenarios = require(process.env.SCENARIOS ? path.resolve(process.env.SCENARIOS) : './scenarios.json');
 const only = process.argv.slice(2);
 const picked = only.length ? scenarios.filter((s) => only.includes(s.id)) : scenarios;
 
@@ -21,7 +25,7 @@ const picked = only.length ? scenarios.filter((s) => only.includes(s.id)) : scen
   let n = 0;
 
   for (const s of picked) {
-    const phone = `+1555010${String(1000 + n++).slice(-4)}`;
+    const phone = `+1555${process.env.PHONE_BLOCK || "010"}${String(1000 + n++).slice(-4)}`;
     phones.push(phone);
     md += `## ${s.id}\n_${s.persona}_\n\n`;
     process.stdout.write(`${s.id} `);
@@ -40,11 +44,13 @@ const picked = only.length ? scenarios.filter((s) => only.includes(s.id)) : scen
     md += `<sub>profile after: ${JSON.stringify(u)}</sub>\n\n<sub>facts after: ${JSON.stringify(facts)}</sub>\n\n---\n\n`;
   }
 
-  const file = path.join(outDir, `${stamp}.md`);
+  const file = path.join(outDir, `${stamp}${process.env.RUN_LABEL ? '-' + process.env.RUN_LABEL : ''}.md`);
   fs.writeFileSync(file, md);
 
   await q(db().from('sms_messages').delete().in('phone', phones));
   await q(db().from('sms_users').delete().in('phone', phones));
   await q(db().from('queries').delete().eq('channel', 'test'));
+  // Research notes from test runs (the table may not exist yet; see db/migrations).
+  await db().from('research_tickets').delete().eq('channel', 'test').then(() => {}, () => {});
   console.log(`\n${file}`);
 })().catch((e) => { console.error(e); process.exit(1); });

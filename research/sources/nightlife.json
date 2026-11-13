@@ -1,0 +1,2474 @@
+{
+  "domain": "nightlife",
+  "sources": [
+    {
+      "name": "Williams Center (Black Box / Rivoli / Cinema Underground)",
+      "kind": "venue_calendar",
+      "url": "https://www.williamscenter.co/williams-center-calendar/",
+      "other_urls": [
+        "https://www.williamscenter.co/calendar/",
+        "https://www.instagram.com/williamscenternj",
+        "https://www.facebook.com/williamscenternj",
+        "https://www.songkick.com/venues/4581591-black-box-williams-center",
+        "https://www.eventbrite.com/e/i-love-rb-party-rutherford-nj-tickets-1990872647682"
+      ],
+      "platform": "web",
+      "towns": [
+        "Rutherford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "2000s hip-hop and R&B dance parties",
+        "30+ daytime parties (Dayshift)",
+        "emo and throwback nights",
+        "holiday raves",
+        "Bingo Loco",
+        "tribute bands"
+      ],
+      "audience": "Mixed; themed dance parties skew late 20s-40s, Dayshift is explicitly 30+, I Love R&B is 21+",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Love In The Club: 2000's Hip Hop & R+B Dance Party",
+          "date": "2026-11-27",
+          "time": "9:00 PM (doors 8:00 PM)",
+          "venue": "Williams Center Black Box",
+          "town": "Rutherford",
+          "cost": "$19.28-$26.46",
+          "source_url": "https://www.ticketweb.com/event/love-in-the-club-2000s-williams-center-black-tickets/14315984?REFID=clientsitewp"
+        },
+        {
+          "title": "Bingo Loco presents Name That Song (Late Show)",
+          "date": "2026-12-11",
+          "time": "8:30 PM (doors 8:00 PM)",
+          "venue": "Williams Center Black Box",
+          "town": "Rutherford",
+          "cost": "$43.94",
+          "source_url": "https://www.ticketweb.com/event/bingo-loco-presents-name-that-williams-center-black-tickets/14328564?REFID=clientsitewp"
+        },
+        {
+          "title": "I Love R+B Dance Party",
+          "date": "2026-12-26",
+          "time": "9:00 PM (doors 8:00 PM)",
+          "venue": "Williams Center Black Box",
+          "town": "Rutherford",
+          "cost": "from $63.39",
+          "source_url": "https://www.ticketweb.com/event/i-love-rb-dance-party-williams-center-black-tickets/14965713?REFID=clientsitewp"
+        }
+      ],
+      "yield": "high",
+      "notes": "The single best ticketed dance-party room found in Bergen: 31 dated events through April 2027 on one page, including touring party brands (Dayshift 30+, Love In The Club, Santa Rave Dec 23, I Love R&B). Tickets run through TicketWeb; the Instagram @williamscenternj announces new parties first."
+    },
+    {
+      "name": "The Roosevelt (Saturday Night Dance Party DJs)",
+      "kind": "venue_calendar",
+      "url": "https://theroosevelt.us/calendar/",
+      "other_urls": [
+        "https://www.instagram.com/theroosevelt356",
+        "https://www.facebook.com/theroosevelt356",
+        "https://www.instagram.com/p/Dc3cd0zCSlI/",
+        "https://www.instagram.com/p/DVi6qvajKZ2/"
+      ],
+      "platform": "web",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "DJ dance parties",
+        "disco, house and freestyle nights",
+        "live acoustic acts",
+        "Thanksgiving Eve",
+        "New Year's Eve"
+      ],
+      "audience": "Dinner-then-dancing crowd, 30s-50s (inferred from disco/freestyle format, not stated)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "DJ Ralph Tunis",
+          "date": "2026-11-14",
+          "time": null,
+          "venue": "The Roosevelt, 356 Paterson Ave",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://theroosevelt.us/calendar/dj-ralph-tunis-26/"
+        },
+        {
+          "title": "DJ Anthony Pags (Thanksgiving Eve)",
+          "date": "2026-11-25",
+          "time": null,
+          "venue": "The Roosevelt, 356 Paterson Ave",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://theroosevelt.us/calendar/dj-anthony-pags-37/"
+        },
+        {
+          "title": "DJ G Rock",
+          "date": "2026-11-28",
+          "time": null,
+          "venue": "The Roosevelt, 356 Paterson Ave",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://theroosevelt.us/calendar/dj-g-rock-16/"
+        }
+      ],
+      "yield": "high",
+      "notes": "Names the DJ for every night, which is exactly the 'DJ so-and-so is at this venue Saturday' answer. The calendar gives no times; the venue's Instagram posts (@theroosevelt356) say the Saturday dance party starts at 8 PM (7:30 PM on one post) and rotate DJ Anthony Pags, DJ Frankie D, DJ Full Throttle, DJ G-Rock and DJ Ralph Tunis. Bar open until 2 AM Fri/Sat. A NYE page exists but still showed last year's event."
+    },
+    {
+      "name": "The Craftsman NJ",
+      "kind": "venue_calendar",
+      "url": "https://www.thecraftsmannj.com/projects-8",
+      "other_urls": [
+        "https://www.thecraftsmannj.com",
+        "https://www.instagram.com/thecraftsmannj",
+        "https://www.facebook.com/thecraftsmannj",
+        "https://www.instagram.com/p/DexHAhUC7fA/",
+        "https://www.facebook.com/groups/linedanceeventsnewjersey/posts/1735772588118797/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Fair Lawn"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "DJ nights Thu-Sat",
+        "Ladies Night Thursdays",
+        "country line dancing Wednesdays",
+        "drag brunch",
+        "Thanksgiving Eve party",
+        "New Year's Eve party",
+        "comedy"
+      ],
+      "audience": "'Come for dinner, stay for the party' crowd; 21+ late night (age range not stated)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Brunch Is a Drag: Britney | Whitney | Madonna",
+          "date": "2026-11-14",
+          "time": "12:00 PM",
+          "venue": "The Craftsman, 16-09 Maple Ave",
+          "town": "Fair Lawn",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/brunch-is-a-drag-at-the-craftsman-britney-whitney-madonna-tickets-2000609078609"
+        },
+        {
+          "title": "Thanksgiving Eve Party with DJ Chaos",
+          "date": "2026-11-25",
+          "time": "9 PM-2 AM",
+          "venue": "The Craftsman",
+          "town": "Fair Lawn",
+          "cost": null,
+          "source_url": "https://www.instagram.com/p/DekuZtqAWN-/"
+        },
+        {
+          "title": "Brunch Is a Drag: Holiday Drag Brunch",
+          "date": "2026-12-12",
+          "time": null,
+          "venue": "The Craftsman",
+          "town": "Fair Lawn",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/brunch-is-a-drag-at-the-craftsman-holiday-drag-brunch-tickets-2000609270182"
+        }
+      ],
+      "yield": "high",
+      "notes": "Restaurant that turns into a DJ party after dinner: site says local DJs Thursday, Friday and Saturday (open to 1 AM Thu, 2 AM Fri/Sat), Ladies' Night Thursdays, plus a NYE 2027 package on Resy. Instagram (@thecraftsmannj) names the DJ each week (DJ Chaos 9 PM-2 AM, guest DJ Rocsta) and posts the Wednesday line-dancing night; the Thanksgiving Eve details came from an Instagram search snippet, not the site."
+    },
+    {
+      "name": "CZEN Restaurant Englewood",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/czen-restaurant-group-94092638983",
+      "other_urls": [
+        "https://czennj.com",
+        "https://www.instagram.com/czenenglewood",
+        "https://www.areyouvip.com/upcoming-events-list/",
+        "https://thelocalgirl.com/calendar/event/dinner-a-vibe-at-czen-englewood-fridays/"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Englewood"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Caribbean Second Saturdays",
+        "R&B / dancehall / Afrobeats DJ nights",
+        "Ladies Love Brunch day party",
+        "karaoke and game night",
+        "Rum Punch Fridays"
+      ],
+      "audience": "Grown R&B and Caribbean crowd, 30s-40s (inferred; not stated)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Caribbean Second Saturdays w/ Kevin Crown (with DJ Dee One)",
+          "date": "2026-11-14",
+          "time": "9 PM-1 AM",
+          "venue": "CZEN Restaurant, 36 N Van Brunt St",
+          "town": "Englewood",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/caribbean-second-saturdays-w-kevin-crown-tickets-2004083002208"
+        },
+        {
+          "title": "Ladies Love Brunch with DJ Kim U",
+          "date": "2026-11-15",
+          "time": "12 PM-4 PM",
+          "venue": "CZEN Restaurant",
+          "town": "Englewood",
+          "cost": "$32 brunch package",
+          "source_url": "https://www.eventbrite.com/e/ladies-love-brunch-tickets-2004719019553"
+        },
+        {
+          "title": "Thursdays Are for Karaoke & Game Night (Dre & DJ Fish)",
+          "date": "2026-11-19",
+          "time": "6:00 PM",
+          "venue": "CZEN Restaurant",
+          "town": "Englewood",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/thursdays-are-for-karaoke-game-night-at-czen-tickets-2004712988514"
+        }
+      ],
+      "yield": "high",
+      "notes": "627 events hosted on Eventbrite; every week has named DJs: DJ Lefty (Un-Wine Wednesdays 5-10 PM), Dre & DJ Fish (Thursday karaoke), live DJ Fridays 8 PM-midnight, Kevin Crown & DJ Dee One (second Saturdays), DJ Kim U (Sunday brunch). The same listings are mirrored on czennj.com and AreYouVIP."
+    },
+    {
+      "name": "Life After Restaurant & Lounge (inside The Metropolitan)",
+      "kind": "venue_calendar",
+      "url": "https://lifeafterrestaurant.com/happeningslifeafterrestaurant",
+      "other_urls": [
+        "https://lifeafterrestaurant.com",
+        "https://www.instagram.com/lifeafterrestaurant",
+        "https://allevents.in/edgewater-nj/parties"
+      ],
+      "platform": "web",
+      "towns": [
+        "Edgewater"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Live Band Fridays then DJ",
+        "90s 'Rewind' nights",
+        "R&B and hip-hop bingo Wednesdays",
+        "Sunday sing-along brunch",
+        "day parties",
+        "singles mixers"
+      ],
+      "audience": "Grown R&B crowd; one outside listing for the room says 25 and up",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Live Band Fridays, then DJ APlus and DJ Rockon",
+          "date": "2026-11-13",
+          "time": "band until 9:30 PM, DJs 9:30 PM-1 AM",
+          "venue": "Life After, 190 River Road, Floor 2",
+          "town": "Edgewater",
+          "cost": null,
+          "source_url": "https://lifeafterrestaurant.com/happeningslifeafterrestaurant"
+        },
+        {
+          "title": "The Rewind (90s vibes all night)",
+          "date": "2026-11-20",
+          "time": null,
+          "venue": "Life After, 190 River Road, Floor 2",
+          "town": "Edgewater",
+          "cost": null,
+          "source_url": "https://lifeafterrestaurant.com/happeningslifeafterrestaurant"
+        },
+        {
+          "title": "Black Friday Brunch & Beats with live DJ",
+          "date": "2026-11-27",
+          "time": "11 AM-3 PM",
+          "venue": "Life After, 190 River Road, Floor 2",
+          "town": "Edgewater",
+          "cost": null,
+          "source_url": "https://lifeafterrestaurant.com/happeningslifeafterrestaurant"
+        }
+      ],
+      "yield": "high",
+      "notes": "The happenings page lists the month's dated nights with DJ names. Weekly: After Work Wednesday 'Flava In Ya Ear' R&B and hip-hop bingo, Friday live band then DJ until 1 AM, Sunday 'ROC DA MIC' brunch 11 AM-6 PM. Outside promoters also use the room (a 'Stogies & Stilettos' event Nov 21 and a 'Horn on the Hudson' dancehall day party in August were listed at 190 River Rd)."
+    },
+    {
+      "name": "DAYSHIFT: The 30+ Daytime Party (at Williams Center)",
+      "kind": "promoter",
+      "url": "https://www.instagram.com/p/DQp2qUVgITk/",
+      "other_urls": [
+        "https://www.williamscenter.co/williams-center-calendar/",
+        "https://concerts.consequence.net/events/dayshift-the-30-daytime-party-at-williams-center-black-box-rutherford-on-2026-07-25-17-00",
+        "https://www.instagram.com/p/DVvsMtylqz4/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Rutherford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "30+ daytime dance party",
+        "80s, 90s and 2000s anthems"
+      ],
+      "audience": "Explicitly 30+: club energy, done by 9 PM",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-09-26",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Touring party brand billed as 'the world's biggest 30+ daytime party', 5-9 PM, about $28-$31. It ran at the Williams Center on Mar 14 (sold out), May 23, Jun 20, Jul 25 and Sep 26, 2026, i.e. roughly every two months. No future Rutherford date was on the venue calendar today, so watch the Williams Center calendar and @williamscenternj for the next one. This is the closest thing found to the owner's test case."
+    },
+    {
+      "name": "Shawn's Crazy Saloon",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/shawns-crazy-saloon-20132988259",
+      "other_urls": [
+        "https://www.eventbrite.com/e/thanksgiving-eve-tickets-2002924788961",
+        "https://www.instagram.com/reel/DQX9TD1DHLP/"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "North Arlington"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Latin live music nights",
+        "Rock en Espanol and rumba nights",
+        "tribute bands",
+        "Thanksgiving Eve",
+        "free line dancing lessons"
+      ],
+      "audience": "21+ after 9 PM",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "LA FAMILIA is bringing NUESTRAS NOCHES (live Latin music)",
+          "date": "2026-11-14",
+          "time": "9 PM-1:30 AM",
+          "venue": "Shawn's Crazy Saloon, 350 Belleville Turnpike",
+          "town": "North Arlington",
+          "cost": "$15 pre-sale, $20 at the door",
+          "source_url": "https://www.eventbrite.com/e/la-familia-is-bringing-nuestras-noches-tickets-2003800090010"
+        },
+        {
+          "title": "Tributo a Hombres G en Vivo: Los Marcapasos",
+          "date": "2026-11-20",
+          "time": null,
+          "venue": "Shawn's Crazy Saloon",
+          "town": "North Arlington",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/tributo-a-hombres-g-en-vivo-los-marcapasos-en-nj-tickets-2004106997980"
+        },
+        {
+          "title": "Ultimo Show del Ano: Rock en Espanol & Rumba en Vivo",
+          "date": "2026-12-18",
+          "time": null,
+          "venue": "Shawn's Crazy Saloon",
+          "town": "North Arlington",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/ultimo-show-del-ano-rock-en-espanol-rumba-en-vivo-en-nj-tickets-2004399376492"
+        }
+      ],
+      "yield": "high",
+      "notes": "Nine or more ticketed nights listed at a time, 272 hosted over 7 years. Mix of Latin nights and tribute bands. Quirk: its 'Thanksgiving Eve' listing is dated Nov 26, 2026 at 9 PM, which is Thanksgiving Day itself, so confirm the date. An Instagram snippet also advertises free line dancing lessons every Tuesday at 7:30 PM."
+    },
+    {
+      "name": "Dominick's (Disco Night with DJ Frankie D)",
+      "kind": "venue_calendar",
+      "url": "https://dominicks.net/entertainment/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Disco Night",
+        "dance bands",
+        "holiday dance party",
+        "Sinatra nights"
+      ],
+      "audience": "Dinner-and-dancing crowd, 40s and up (inferred from disco/Sinatra programming)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Disco Night - DJ Frankie D",
+          "date": "2026-11-27",
+          "time": null,
+          "venue": "Dominick's, 1 Hoboken Road",
+          "town": "East Rutherford",
+          "cost": "No cover; $25 per person food/drink minimum",
+          "source_url": "https://dominicks.net/entertainment/"
+        },
+        {
+          "title": "Jersey Sound",
+          "date": "2026-11-21",
+          "time": null,
+          "venue": "Dominick's, 1 Hoboken Road",
+          "town": "East Rutherford",
+          "cost": "No cover; $25 per person food/drink minimum",
+          "source_url": "https://dominicks.net/entertainment/"
+        },
+        {
+          "title": "Disco Night - DJ Frankie D",
+          "date": "2026-12-11",
+          "time": null,
+          "venue": "Dominick's, 1 Hoboken Road",
+          "town": "East Rutherford",
+          "cost": "No cover; $25 per person food/drink minimum",
+          "source_url": "https://dominicks.net/entertainment/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Simple dated list of every Friday/Saturday act through January, no times shown (bar open to 1 AM Fri/Sat). Good for the 40+ 'dinner then dance' ask."
+    },
+    {
+      "name": "DJ Frankie D (Sound Illusion DJs)",
+      "kind": "dj",
+      "url": "https://www.instagram.com/soundillusiondjs_frankie_d/",
+      "other_urls": [
+        "https://soundillusiondjs.com/",
+        "https://www.facebook.com/Sound-Illusion-DJs-104794768433159",
+        "https://www.instagram.com/p/Db969LwjoYO/",
+        "https://www.instagram.com/p/Dc3cd0zCSlI/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "East Rutherford",
+        "Oakland",
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "disco nights",
+        "freestyle and house",
+        "'Back in the Day' Saturday nights",
+        "70s and 80s dance parties"
+      ],
+      "audience": "40s-50s disco/freestyle crowd (inferred)",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-12-11",
+      "sample_events": [
+        {
+          "title": "Disco Night - DJ Frankie D",
+          "date": "2026-11-27",
+          "time": null,
+          "venue": "Dominick's",
+          "town": "East Rutherford",
+          "cost": "No cover; $25 minimum",
+          "source_url": "https://dominicks.net/entertainment/"
+        },
+        {
+          "title": "Disco Night - DJ Frankie D",
+          "date": "2026-12-11",
+          "time": null,
+          "venue": "Dominick's",
+          "town": "East Rutherford",
+          "cost": "No cover; $25 minimum",
+          "source_url": "https://dominicks.net/entertainment/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Bergen County DJ who plays Dominick's (Disco Night, twice a month), Portobello in Oakland ('Back in the Day Saturday Nights', last seen Sat Nov 7 at 9 PM) and The Roosevelt's Saturday dance party. Handle comes from his own site, which loaded; the Instagram profile itself was not opened. His site shows logos for Uncorked Lounge, Giovanni's Bicycle Club, Aura NJ and Portobello but no dated gig list."
+    },
+    {
+      "name": "DJ Anthony Pags",
+      "kind": "dj",
+      "url": "https://theroosevelt.us/calendar/dj-anthony-pags-37/",
+      "other_urls": [
+        "https://theroosevelt.us/calendar/",
+        "https://www.instagram.com/reel/DRNovPsCbK6/",
+        "https://www.facebook.com/HotNightEvents/"
+      ],
+      "platform": "web",
+      "towns": [
+        "East Rutherford",
+        "North Arlington"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "80s, 90s and 2000s 'Decades' nights",
+        "freestyle and house",
+        "Saturday dance parties"
+      ],
+      "audience": "Throwback/freestyle crowd, 40s and up (inferred)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "DJ Anthony Pags (Thanksgiving Eve)",
+          "date": "2026-11-25",
+          "time": null,
+          "venue": "The Roosevelt, 356 Paterson Ave",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://theroosevelt.us/calendar/dj-anthony-pags-37/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "The most frequent DJ on The Roosevelt's calendar (his listing slug is numbered 37; listed Thu Nov 12 and Thanksgiving Eve, Wed Nov 25). Instagram snippets also show him spinning 'Decades Saturdays' at Project 584 in North Arlington and Hot Night Events freestyle parties. No personal Instagram handle or gig page was found; track him through the two venue pages."
+    },
+    {
+      "name": "Midland Brew House (DJ nights)",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/Dfh5upjnVOK/",
+      "other_urls": [
+        "https://www.midlandbrewhouse.com/events",
+        "https://www.instagram.com/reel/DbLiUCKumRW/",
+        "https://www.instagram.com/reel/DRdT-TLCciK/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Saddle Brook"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Ladies Night with DJs every Friday",
+        "Saturday DJ Night",
+        "Thanksgiving Eve party",
+        "New Year's Eve"
+      ],
+      "audience": "21+ late-night bar crowd, open until 3 AM Fri/Sat",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "New Year's Eve",
+          "date": "2026-12-31",
+          "time": "11:00 AM - 2:00 AM",
+          "venue": "Midland Brew House, 374 N Midland Ave",
+          "town": "Saddle Brook",
+          "cost": null,
+          "source_url": "https://www.midlandbrewhouse.com/events"
+        }
+      ],
+      "yield": "medium",
+      "notes": "We already list this bar for trivia; the missing layer is its DJ program, which lives only on Instagram. Search snippets show 'Ladies Night, drink specials and DJs every Friday', 'Saturday DJ Night', guest club DJs (DJ Cream, DJ Bryan Lubliner, DJ Mikey Gee) and a Thanksgiving Eve 2026 post. The profile handle was not confirmed (posts carry #MidlandBrewHouse); the website confirms the 3 AM weekend closing but lists no DJs."
+    },
+    {
+      "name": "Wisla Club (Polish club nights)",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/wislaclub/",
+      "other_urls": [
+        "https://www.facebook.com/p/Wis%C5%82a-Club-61566545944798/",
+        "https://biletuj.com/polska-noc-z-gwiazdami-garfield-nj/",
+        "https://biletuj.com/kup-bilet/",
+        "https://poland.us/sylwester-2025-2026-w-wisla-club-w-garfield/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Garfield"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Polish disco polo concerts",
+        "dyskoteka / Polish club nights",
+        "Andrzejki",
+        "Sylwester (New Year's Eve)"
+      ],
+      "audience": "Polish-American crowd, 18+ at ticketed concerts",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-28",
+      "sample_events": [
+        {
+          "title": "Andrzejki z Bayer Full",
+          "date": "2026-11-28",
+          "time": "Start 8 PM",
+          "venue": "Wisla Club, 73 Main St",
+          "town": "Garfield",
+          "cost": null,
+          "source_url": "https://www.facebook.com/p/Wis%C5%82a-Club-61566545944798/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "The Polish nightlife room for Garfield/Wallington. Biletuj.com (loaded) confirmed the Nov 7, 2026 'Polska Noc z Gwiazdami' at 73 Main St, doors 7 PM, $100 at the door, 18+. The Nov 28 Andrzejki date comes from a Facebook search snippet; the Facebook page itself returned only its title without login. Last year's Sylwester (NYE) was covered on poland.us, so expect one for Dec 31."
+    },
+    {
+      "name": "BaseLocal: Bergen County events",
+      "kind": "aggregator",
+      "url": "https://baselocal.com/nj/bergen-county/events/",
+      "other_urls": [
+        "https://baselocal.com/nj/bergen-county/events/this-weekend/",
+        "https://baselocal.com/nj/bergen-county/events/live-music/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife",
+        "community",
+        "arts"
+      ],
+      "event_types": [
+        "bar bands",
+        "singles nights",
+        "comedy",
+        "dance nights",
+        "everything else"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Singles Night (ages 40s-50s)",
+          "date": "2026-11-20",
+          "time": "6 PM",
+          "venue": "Medley's Bayou, 980 Teaneck Rd",
+          "town": "Teaneck",
+          "cost": null,
+          "source_url": "https://www.facebook.com/events/1817958615919510/"
+        },
+        {
+          "title": "Comedy Show",
+          "date": "2026-11-20",
+          "time": "8 PM",
+          "venue": "Redd's Bar and Restaurant",
+          "town": "Carlstadt",
+          "cost": null,
+          "source_url": "https://baselocal.com/nj/bergen-county/events/"
+        },
+        {
+          "title": "The Doors & AC/DC Tribute Night",
+          "date": "2026-11-21",
+          "time": "8:30 PM",
+          "venue": "Sidebar Hackensack, 45 Main St",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://www.facebook.com/events/1065701586499431/"
+        }
+      ],
+      "yield": "high",
+      "notes": "The most useful workaround for Facebook: it republishes public Facebook events for Bergen with the facebook.com/events link, readable without login. 163 events in the next 30 days, day-by-day, with JSON-LD in the page. Mostly bands and community events, but it catches bar nights at Shannon Rose Ramsey, Orange Lantern, The Roosevelt, 82 Oak (Garfield), The Local Pub (Carlstadt), Lenoras Bar (Hackensack) and Hansil's (Oakland)."
+    },
+    {
+      "name": "Eventbrite keyword searches with the town name in the keyword",
+      "kind": "ticketing_search",
+      "url": "https://www.eventbrite.com/d/nj--hackensack/hackensack-party/",
+      "other_urls": [
+        "https://www.eventbrite.com/d/nj--rutherford/rutherford-nj-dj/",
+        "https://www.eventbrite.com/d/nj--englewood/englewood-nj-party/",
+        "https://www.eventbrite.com/d/nj--paramus/paramus-nj-party/",
+        "https://www.eventbrite.com/d/nj--edgewater/edgewater-nj/"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "singles mixers and speed dating",
+        "Latin socials",
+        "bar crawls",
+        "comedy",
+        "dance parties"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Downtown Hackensack ELF CON Bar Crawl",
+          "date": "2026-12-12",
+          "time": "1:00 PM-6:00 PM",
+          "venue": "SideBar Gastropub (start)",
+          "town": "Hackensack",
+          "cost": "$20-$81.88",
+          "source_url": "https://www.eventbrite.com/e/downtown-hackensack-elf-con-bar-crawl-tickets-1985407771089"
+        },
+        {
+          "title": "Thanksgiving Eve Bash - Latin Social",
+          "date": "2026-11-25",
+          "time": "7 PM-12:30 AM",
+          "venue": "1 Teaneck Rd",
+          "town": "Ridgefield Park",
+          "cost": "$25",
+          "source_url": "https://www.eventbrite.com/e/thanksgiving-eve-bash-latin-social-tickets-2004682333825"
+        },
+        {
+          "title": "Singles Night 35+",
+          "date": "2026-12-17",
+          "time": "7 PM-11 PM",
+          "venue": "Cigarro Bar & Lounge, 91 Main St",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/singles-night-35-tickets-2004392716572"
+        }
+      ],
+      "yield": "high",
+      "notes": "Important quirk: Eventbrite's category pages for a Bergen town (e.g. /d/nj--hackensack/nightlife/ or /parties/) returned 20 of 20 New York City events. Putting the town in the keyword fixes it: /d/nj--<town>/<town>-nj-dj/, -party/, -latin/, -new-years-eve/. A partial sweep today (53 searches across 29 towns) returned 165 distinct Bergen events, roughly a quarter of them nightlife, singles, comedy or dance. Each results page carries a JSON-LD ItemList, so it can be parsed without a browser; pace requests about 9 seconds apart or it returns HTTP 429. Organizer pages (/o/<id>) embed their upcoming events in __NEXT_DATA__."
+    },
+    {
+      "name": "Mingle Around Singles (40s 50s 60s - Events & Adventures)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/mingle-around-singles-40s-50s-60s-events-adventures/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Paramus",
+        "Allendale",
+        "Oakland",
+        "Westwood",
+        "Norwood",
+        "Mahwah"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "meetups at cover-band nights",
+        "karaoke nights",
+        "line dancing lessons",
+        "pickleball socials"
+      ],
+      "audience": "Singles in their 40s, 50s and 60s",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "DRB / Orange Lantern",
+          "date": "2026-11-13",
+          "time": "8:00 PM (band at 9:00 PM)",
+          "venue": "The Orange Lantern, 15 Firehouse Lane",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.meetup.com/mingle-around-singles-40s-50s-60s-events-adventures/events/316260761/"
+        },
+        {
+          "title": "Karaoke Night / Orange Lantern",
+          "date": "2026-11-18",
+          "time": "7:30 PM",
+          "venue": "The Orange Lantern",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.meetup.com/mingle-around-singles-40s-50s-60s-events-adventures/events/317198688/"
+        }
+      ],
+      "yield": "high",
+      "notes": "Mahwah-based group (679 members shown, 117 ratings) that picks a Bergen bar-band or karaoke night most weeks and brings a 40+ singles crowd to it. Titles follow 'BAND / VENUE / Town', so it also tells you which cover-band nights draw that age group (Orange Lantern, Five Dimes Westwood, Gerry's Place Norwood). Some events are in Passaic/Morris; filter by town."
+    },
+    {
+      "name": "Kick It Up a Notch 40+",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/kick-it-up-a-notch/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Paramus",
+        "Hackensack",
+        "Saddle Brook"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "happy hours",
+        "live music outings",
+        "comedy",
+        "trivia",
+        "watch parties"
+      ],
+      "audience": "Adults around 40 and older (not singles-only)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Happy Hour (Thanksgiving Eve), Maggiano's",
+          "date": "2026-11-25",
+          "time": "5:00 PM",
+          "venue": "Maggiano's Little Italy, 70 Riverside Square Mall",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://www.meetup.com/kick-it-up-a-notch/events/316348235/"
+        },
+        {
+          "title": "NFL Sunday Football, Miller's Ale House",
+          "date": "2026-11-22",
+          "time": "12:00 PM",
+          "venue": "Miller's Ale House, 270 E State Rt 4",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.meetup.com/kick-it-up-a-notch/events/316347786/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Paramus-based, 3,984 members, 670 past events, 4.8 rating. The Thanksgiving Eve happy hour had 65 RSVPs, so it is a real 40+ crowd. A Super Bowl party at Midland Brew House (Feb 14, 2027) is already on its calendar."
+    },
+    {
+      "name": "NJ Singles - Bergen County",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/njsinglesbergencounty/",
+      "other_urls": [
+        "https://www.eventbrite.com/o/nj-singles-bergen-county-120648504852"
+      ],
+      "platform": "meetup",
+      "towns": [
+        "Hackensack",
+        "Closter",
+        "New Milford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "singles mixers with guided rotations",
+        "age-banded socials (30s-40s, late 40s-60s)"
+      ],
+      "audience": "Singles, split by age band: 30s-40s and late 40s-60s",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Fitness Singles Mixer (Ages 30s - 40s) with Guided Rotations",
+          "date": "2026-12-06",
+          "time": "2:00-4:00 PM",
+          "venue": "Viva Margarita, 774 Main Street",
+          "town": "Hackensack",
+          "cost": "$30",
+          "source_url": "https://www.meetup.com/njsinglesbergencounty/events/316954650/"
+        },
+        {
+          "title": "Fitness Singles Mixer (Ages Late 40s - 60s) with Guided Rotations",
+          "date": "2026-12-06",
+          "time": "4:30-6:30 PM",
+          "venue": "Viva Margarita, 774 Main Street",
+          "town": "Hackensack",
+          "cost": "$30",
+          "source_url": "https://www.meetup.com/njsinglesbergencounty/events/317002633/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Run by a matchmaker/dating-coach couple; 551 Meetup members. Same events are sold on its Eventbrite organizer page. Mixers are afternoon/early evening, not late-night parties."
+    },
+    {
+      "name": "Thursday New Jersey (Bergen County singles mixers)",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/instagramcomthursdaynewjersey-121768189159",
+      "other_urls": [],
+      "platform": "eventbrite",
+      "towns": [
+        "Paramus",
+        "Westwood"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "singles mixers at restaurants and breweries"
+      ],
+      "audience": "Singles 30-55 (one mixer is 21-45)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Classy, Sexy, Successful SINGLES of Bergen County, Ages 30-55",
+          "date": "2026-11-17",
+          "time": "6:30 PM",
+          "venue": "Fogo de Chao Brazilian Steakhouse",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/classy-sexy-successful-singles-of-bergen-county-ages-30-55-tickets-2003732183901"
+        },
+        {
+          "title": "Bergen County SINGLES Mixer -- A Fresh Start -- Ages 21-45",
+          "date": "2027-01-07",
+          "time": "7:00 PM",
+          "venue": "Five Dimes Brewery",
+          "town": "Westwood",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/bergen-county-singles-mixer-a-fresh-start-ages-21-45-tickets-2004686040913"
+        }
+      ],
+      "yield": "medium",
+      "notes": "New organizer (13 followers, 7 events total) whose name is literally its Instagram address, instagram.com/thursday.newjersey; the Instagram itself was not opened. Squarely the 30s-50s Bergen singles ask."
+    },
+    {
+      "name": "njdates | NJ Speed Dating",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/njdates-nj-speed-dating-82914445553",
+      "other_urls": [
+        "https://www.njdates.com"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Paramus",
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "speed dating by age band",
+        "singles socials (bowling, trivia)"
+      ],
+      "audience": "Singles, age-banded (35-49, 31-44 etc.)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "NJ | Modern Speed Dating | Singles 35 - 49 | PARAMUS",
+          "date": "2026-12-10",
+          "time": "7 PM-9 PM (doors 6:30 PM)",
+          "venue": "Houlihan's, 65 Route 4",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/nj-modern-speed-dating-singles-35-49-paramus-tickets-2004062423657"
+        },
+        {
+          "title": "NJ | Singles Social | Bowling | Singles 31-44 | HACKENSACK",
+          "date": "2026-12-13",
+          "time": "1:00 PM",
+          "venue": "Bowler City",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/nj-singles-social-bowling-singles-3144-hackensack-tickets-2004470139145"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Statewide organizer (1.3k followers, 15 upcoming); 1-2 Bergen events a month. Town is in capitals at the end of every title, so filter on PARAMUS / HACKENSACK."
+    },
+    {
+      "name": "Pre-Dating Speed Dating: New Jersey North (Paramus)",
+      "kind": "ticketing_search",
+      "url": "https://www.eventbrite.com/d/nj--paramus/paramus-nj-party/",
+      "other_urls": [
+        "https://www.eventbrite.com/o/pre-dating-speed-dating-and-lock-key-events-802314159"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Paramus"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "speed dating by age band"
+      ],
+      "audience": "Singles; separate nights for 23-39, 30s/40s and 55+",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "New Jersey North Speed Dating for Singles Age 30s/40s - Paramus NJ",
+          "date": "2026-11-24",
+          "time": "6:30 PM",
+          "venue": "Houlihans Restaurant",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/new-jersey-north-speed-dating-for-singles-age-30s40s-paramus-nj-tickets-1999055948154"
+        },
+        {
+          "title": "New Jersey North Speed Dating for Singles Age 55+ - Paramus NJ",
+          "date": "2026-11-25",
+          "time": null,
+          "venue": "Houlihans Restaurant",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/new-jersey-north-speed-dating-for-singles-age-55-paramus-nj-tickets-1999056985256"
+        },
+        {
+          "title": "New Jersey North Speed Dating for Singles Age 23-39 - Paramus NJ",
+          "date": "2026-12-29",
+          "time": null,
+          "venue": "Houlihans Restaurant",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/new-jersey-north-speed-dating-for-singles-age-23-39-paramus-nj-at-houlihans-restaurant-tickets-1999057571008"
+        }
+      ],
+      "yield": "medium",
+      "notes": "The organizer page (Pre-Dating Speed Dating and Lock & Key Events) is national and showed no New Jersey events on its first page, so re-check through the Paramus keyword search and look for titles starting 'New Jersey North Speed Dating'. Always at Houlihan's Paramus."
+    },
+    {
+      "name": "DJ Edwin Martinez | Salsa Social in New Jersey (The Salsa Connexion)",
+      "kind": "dj",
+      "url": "https://www.eventbrite.com/o/dj-edwin-martinez-salsa-social-in-new-jersey-9405005396",
+      "other_urls": [
+        "https://www.instagram.com/the_salsa_connexion/",
+        "https://www.facebook.com/DJEdwinMartinezTheSalsaConnexion"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Teaneck",
+        "Closter"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "salsa socials",
+        "Latin parties"
+      ],
+      "audience": "21 and over; salsa dancers of all levels",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Salsa Dance Social at Zina's Steakhouse, Teaneck, NJ",
+          "date": "2026-11-14",
+          "time": "8:30 PM-1 AM",
+          "venue": "Zina's Steakhouse & Grill, 827 Teaneck Road",
+          "town": "Teaneck",
+          "cost": "Free admission",
+          "source_url": "https://www.eventbrite.com/e/salsa-dance-social-at-zinas-steakhouse-teaneck-nj-tickets-2004265160047"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Ten years and 236 events on Eventbrite, 548 followers. A June 27, 2026 free Latin party at 208 Piermont Rd, Closter also carried his name. Instagram @the_salsa_connexion is where new socials are announced."
+    },
+    {
+      "name": "Havana Dance Center socials",
+      "kind": "venue_calendar",
+      "url": "https://www.havanadc.com/saturdaysocials",
+      "other_urls": [
+        "https://www.salsavida.com/event/new-jersey/paramus/hispanic-heritage-latin-social-at-havana-dance-center/",
+        "https://www.instagram.com/havanadc1",
+        "https://www.facebook.com/havanadancecenter"
+      ],
+      "platform": "web",
+      "towns": [
+        "Paramus"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Saturday Night Social (ballroom and Latin)",
+        "Friday Latin Social (salsa and bachata)",
+        "Thursday daytime social"
+      ],
+      "audience": "Social dancers, all levels; BYOB",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Ballroom & Latin Social",
+          "date": "2026-11-14",
+          "time": null,
+          "venue": "Havana Dance Center, 54 South Farview Avenue",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.havanadc.com/saturdaysocials"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Studio at the Paramus firehouse address that runs three recurring socials. The page names only the next Saturday date; a SalsaVida listing describes the Friday Latin Social as third Friday of the month, 8 PM-1 AM, $25, BYOB, hosted by Oscar Sanchez. Year is not printed on the page, so the Nov 14 date is read as 2026."
+    },
+    {
+      "name": "Tango Date NYC: Milonga Recuerdo (Paramus)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/tango-date-nyc/events/317199173/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Paramus"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "weekly tango milonga with dinner and lesson"
+      ],
+      "audience": "Tango dancers, beginners welcome",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Milonga Recuerdo, Dinner and Dance",
+          "date": "2026-11-18",
+          "time": "8:00 PM-12:00 AM",
+          "venue": "Paramus Fire Dept Company 4, 54 S Farview Ave",
+          "town": "Paramus",
+          "cost": "$25 (includes dinner, lesson, wine)",
+          "source_url": "https://www.meetup.com/tango-date-nyc/events/317199173/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Every Wednesday through Dec 30, 2026: lesson 8-9 PM, dinner and social dancing 9 PM-midnight with DJ Jon. BYOB."
+    },
+    {
+      "name": "Meetup event search around Hackensack",
+      "kind": "ticketing_search",
+      "url": "https://www.meetup.com/find/?location=us--nj--Hackensack&source=EVENTS&keywords=dance%20party&distance=tenMiles",
+      "other_urls": [
+        "https://www.meetup.com/mix-it-up-nights-dancing-meetup/",
+        "https://www.meetup.com/bergen-county-singles/"
+      ],
+      "platform": "meetup",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "dance socials",
+        "singles outings",
+        "line dance nights",
+        "comedy outings"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "FREE Friendsgiving Line Dance Celebration (NJ Christian Singles)",
+          "date": "2026-11-25",
+          "time": "7:30 PM",
+          "venue": null,
+          "town": "Paramus",
+          "cost": "Free",
+          "source_url": "https://www.meetup.com/nj-christian-singles/events/316473622/"
+        },
+        {
+          "title": "Stand Up Comedy Championship Show (Mix It Up Nights Dancing Meetup)",
+          "date": "2026-11-20",
+          "time": "8:00 PM (showtime 9 PM)",
+          "venue": "Redd's, 317 Washington Ave",
+          "town": "Carlstadt",
+          "cost": "$20",
+          "source_url": "https://www.meetup.com/mix-it-up-nights-dancing-meetup/events/317176567/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "This search URL loads without login and returned 10 Bergen events out of 12. It is how the smaller groups surface: Palisades Folk Dance (Tenafly), NJ Christian Singles, Mix It Up Nights Dancing Meetup (3,611 members, Rockaway-based, comes to Carlstadt). Swap the keyword for 'singles', 'salsa', 'karaoke'."
+    },
+    {
+      "name": "Cigarro Bar & Lounge",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/DbyddunE-AH/",
+      "other_urls": [
+        "https://www.beatportal.com/events/s2ppjos-halloween-afterdark-at-cigarro-global-vibes",
+        "https://www.instagram.com/p/Dd12F5jDUjS/",
+        "https://www.eventbrite.com/e/singles-night-35-tickets-2004392716572"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "'Let's Dance The Night Away' DJ Saturdays",
+        "Latin / global DJ nights",
+        "singles nights",
+        "cigar events"
+      ],
+      "audience": "21+; upscale cigar lounge, Singles Night is women 30+ / men 35+",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-12-17",
+      "sample_events": [
+        {
+          "title": "Singles Night 35+",
+          "date": "2026-12-17",
+          "time": "7 PM-11 PM",
+          "venue": "Cigarro Bar & Lounge, 91 Main St",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/singles-night-35-tickets-2004392716572"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Downtown Hackensack lounge that books a named DJ on Saturdays (DJ Nawtee, Sep 26, party at 9 PM; P La Cangri for the Oct 31 'Halloween Afterdark', 8 PM-2 AM, reservations via Resy). Lineups are posted on Instagram; one-offs also appear on Beatportal and Eventbrite. The Instagram handle was not confirmed."
+    },
+    {
+      "name": "SideBar Hackensack (DJ and live lineup)",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/DfS1HDqBKq5/",
+      "other_urls": [
+        "https://www.instagram.com/p/Dcdsqign1lx/",
+        "https://sidebarhackensack.com/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "DJ Saturdays",
+        "live music",
+        "Thanksgiving Eve",
+        "wing nights"
+      ],
+      "audience": "Downtown bar crowd, open to 2 AM Fri/Sat",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-21",
+      "sample_events": [
+        {
+          "title": "The Doors & AC/DC Tribute Night",
+          "date": "2026-11-21",
+          "time": "8:30 PM",
+          "venue": "Sidebar Hackensack, 45 Main St",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://www.facebook.com/events/1065701586499431/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Already in our data for trivia; its website has no calendar. The monthly lineup graphic is on Instagram: the November 2026 post reads 'live music, DJs, Wing Nights, late nights, Thanksgiving Eve'. Earlier posts name 'DJ Kool Keith & Lynrick Live' on a Saturday. Also the starting bar for the Dec 12 ELF CON crawl."
+    },
+    {
+      "name": "Lefkes at The Modern (former Ventanas space)",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/DeHyeitNql9/",
+      "other_urls": [
+        "https://www.thenationalherald.com/?p=592023",
+        "https://ventanasatthemodern.com/happenings/",
+        "https://www.eventbrite.com/e/selling-luxury-tickets-2003799533345"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Fort Lee"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Greek supper-club nights with DJs",
+        "late-night lounge",
+        "New Year's Eve"
+      ],
+      "audience": "Upscale dinner-then-party crowd, 30s-50s (inferred)",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-18",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Big change to record: Ventanas at 200 Park Ave closed and Lefkes (burned out of Englewood Cliffs in June) took the space, with a grand opening announced for Fri Oct 9, 2026 and 'parties with DJs' in the plan (The National Herald, search summary). An Instagram post thanks guests for 'spending their Saturday night with us at LEFKES at The Modern', and Eventbrite already lists an event there on Nov 18. The old ventanasatthemodern.com 'Happenings' page is still up advertising 'After Hours @ The RED Room' Saturdays 11 PM-2 AM; treat that as stale until confirmed. New venue's handle and weekly DJ schedule not yet found."
+    },
+    {
+      "name": "Mason Jar Mahwah: Saturday Night Dance Party with DJ Mike Mariano",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/Da5tZUBE-3V/",
+      "other_urls": [
+        "https://www.instagram.com/p/DdZOa07Dimv/",
+        "https://www.instagram.com/p/DR7hfJyjtvs/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Mahwah"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Saturday night dance party: classics, freestyle, today's dance",
+        "cover bands"
+      ],
+      "audience": "No cover; classics and freestyle point to 40s+",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-10-03",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "We already track the Mason Jar's bands via The Local Music Finder; the DJ dance parties are only on Instagram (@masonjarmahwah). DJ Mike Mariano ('from Illusions') posts 'I'm back in Mahwah for the SATURDAY NIGHT DANCE PARTY ... Classics, Freestyle, Today's Dance, 9pm-12am, No Cover'; dates seen: Dec 6, 2025, Aug 1 and Oct 3, 2026. Looks roughly monthly."
+    },
+    {
+      "name": "Portobello Restaurant & Bar: Back in the Day Saturday Nights",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/Db969LwjoYO/",
+      "other_urls": [
+        "https://www.instagram.com/p/DdAcMX5jvkn/",
+        "https://www.instagram.com/reel/DZKt0UBOEaX/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Oakland"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "disco, house and freestyle DJ nights"
+      ],
+      "audience": "Disco/freestyle crowd, 40s and up (inferred)",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-07",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "175 Ramapo Valley Rd, Oakland. Instagram snippets: 'DJ FRANKIE D IS BACK! Saturday, November 7, 9 PM', and 'Back in the Day Saturday Nights' on Sep 12 and 26 and Aug 15. About two Saturdays a month; next date not yet visible without login."
+    },
+    {
+      "name": "Project 584 Bar & Grill (Decades Saturdays)",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/reel/DRNovPsCbK6/",
+      "other_urls": [
+        "https://project584nj.com/",
+        "https://www.instagram.com/reel/DPe8Kt_EdGK/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "North Arlington"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Decades Saturdays: 80s, 90s, 2000s and beyond",
+        "no-cover DJ dance nights"
+      ],
+      "audience": "Throwback dance crowd; no cover",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": "2025-11-22",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "584 Ridge Rd, North Arlington. Instagram snippets (account project584nj) show 'Decades Saturdays' with DJ Anthony Pags and DJ Victor Franco. The newest dated post seen was Nov 2025; the website project584nj.com loads today (title only, it is JavaScript-rendered) so the bar is open, but whether Decades Saturdays still runs weekly needs a logged-in look."
+    },
+    {
+      "name": "The NJ Comedy Syndicate: Tokes N Jokes at City Lounge",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/the-nj-comedy-syndicate-68386416273",
+      "other_urls": [
+        "https://www.instagram.com/njcomedysyndicate/"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Lyndhurst"
+      ],
+      "categories": [
+        "nightlife",
+        "arts"
+      ],
+      "event_types": [
+        "weekly late comedy night at a lounge"
+      ],
+      "audience": "Adults, 21+ lounge",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Tokes N Jokes Comedy Night at the City Lounge in Lyndhurst!",
+          "date": "2026-11-19",
+          "time": "9:00 PM",
+          "venue": "City Lounge",
+          "town": "Lyndhurst",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/tokes-n-jokes-comedy-night-at-the-city-lounge-in-lyndhurst-tickets-2004324303948"
+        },
+        {
+          "title": "Tokes N Jokes Comedy Night at the City Lounge in Lyndhurst!",
+          "date": "2026-12-03",
+          "time": "9:00 PM",
+          "venue": "City Lounge",
+          "town": "Lyndhurst",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/tokes-n-jokes-comedy-night-at-the-city-lounge-in-lyndhurst-tickets-2004324429323"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Every Thursday at 9 PM through at least Dec 17, 13 dates listed. A comedy night that starts late in a lounge, i.e. comedy plus a night out. Instagram @njcomedysyndicate."
+    },
+    {
+      "name": "Meadowlands Racetrack events (Victory Sports Bar / Victory Terrace)",
+      "kind": "venue_calendar",
+      "url": "https://playmeadowlands.com/events/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "fight-night watch parties",
+        "dinner shows",
+        "live racing nights",
+        "rooftop DJ in season"
+      ],
+      "audience": "Adults; racing and sports-bar crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "UFC 334 Watch Party",
+          "date": "2026-11-14",
+          "time": "7:00 PM-11:59 PM",
+          "venue": "Meadowlands Racing & Entertainment",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://playmeadowlands.com/dine/gallery/"
+        },
+        {
+          "title": "Kyla Nicole Healey - Dinner & Show",
+          "date": "2026-12-19",
+          "time": "5:00 PM",
+          "venue": "Meadowlands Racing & Entertainment",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://playmeadowlands.com/event/kyla-nicole-healey-dinner-a-show/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "42 events on the calendar, mostly racing promos; the nightlife value is watch parties, dinner shows and (in the summer Championship Meet) the Victory Terrace rooftop with a live DJ. No New Year's Eve party listed yet."
+    },
+    {
+      "name": "Dancing Meetup - North Jersey (Dinner & Dancing)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/dinner-dancing-northjersey/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Maywood",
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "salsa, bachata and West Coast swing classes",
+        "Tuesday night social dance"
+      ],
+      "audience": "Adult social dancers, beginners welcome",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Tuesday Night Bachata Class",
+          "date": "2026-11-17",
+          "time": "7:00 PM",
+          "venue": "Knights of Columbus, 105 Grove Ave",
+          "town": "Maywood",
+          "cost": "$15 ($5 for the 8-9 PM practice)",
+          "source_url": "https://www.meetup.com/dinner-dancing-northjersey/events/317182183/"
+        },
+        {
+          "title": "Tuesday West Coast Swing Class",
+          "date": "2026-11-17",
+          "time": "8:00 PM",
+          "venue": "Knights of Columbus, 105 Grove Ave",
+          "town": "Maywood",
+          "cost": "$15",
+          "source_url": "https://www.meetup.com/dinner-dancing-northjersey/events/317183135/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "4,484 members, 25 upcoming events, organizer Lisa Skates. Mostly lessons, but the Tuesday lesson rolls into a social dance, which suits someone who wants to go out dancing without a club."
+    },
+    {
+      "name": "Downtown Hackensack (Main Street Business Alliance)",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/main-street-business-alliance-69579620643",
+      "other_urls": [
+        "https://www.downtownhackensack.org",
+        "https://www.facebook.com/downtownhackensack",
+        "https://happeningnext.com/event/downtown-hackensack-elf-con-bar-crawl-eid1ef0kux85bhr"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife",
+        "holiday"
+      ],
+      "event_types": [
+        "holiday bar crawl",
+        "summer Latin Social street party"
+      ],
+      "audience": "Adults; bar crawl is a daytime 21+ event",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Downtown Hackensack ELF CON Bar Crawl",
+          "date": "2026-12-12",
+          "time": "1:00 PM-6:00 PM",
+          "venue": "SideBar Gastropub, Whiskypriest, Cigarro Lounge, Casual Habana, El Alazan, Noches de Colombia",
+          "town": "Hackensack",
+          "cost": "$20-$81.88",
+          "source_url": "https://www.eventbrite.com/e/downtown-hackensack-elf-con-bar-crawl-tickets-1985407771089"
+        }
+      ],
+      "yield": "low",
+      "notes": "Few events a year but they are the big ones: the ELF CON crawl (Dec 12) and the free summer Latin Social with NJ Salsa and DJ Frank (June 25, 2026). The crawl's stop list doubles as a roster of downtown bars to watch. Instagram @downtownhackensack."
+    },
+    {
+      "name": "Linguallama Academy Latin Socials",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/linguallama-academy-77566379323",
+      "other_urls": [
+        "https://www.meetup.com/linguallama/",
+        "https://www.meetup.com/linguallama/events/317373773/"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Ridgefield Park",
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Latin socials with salsa class",
+        "holiday Latin parties"
+      ],
+      "audience": "Adults, no partner needed; BYOB",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Thanksgiving Eve Bash - Latin Social",
+          "date": "2026-11-25",
+          "time": "7 PM-12:30 AM (salsa class at 7 PM)",
+          "venue": "1 Teaneck Road",
+          "town": "Ridgefield Park",
+          "cost": "$25 (includes buffet dinner)",
+          "source_url": "https://www.eventbrite.com/e/thanksgiving-eve-bash-latin-social-tickets-2004682333825"
+        }
+      ],
+      "yield": "low",
+      "notes": "A Hackensack language school whose Eventbrite and Meetup feeds are 95% online language classes; the occasional in-person Latin Social is the part worth catching. Filter titles on 'Latin Social'. DJs named for Nov 25: DJ Rudy 'El Profe' and DJ Nico (DJ Nico also turns up at El Alazan's Latin Night in Hackensack)."
+    },
+    {
+      "name": "The Local Girl: Bergen events calendar",
+      "kind": "media_listing",
+      "url": "https://thelocalgirl.com/calendar/bergen/",
+      "other_urls": [
+        "https://thelocalgirl.com/events/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife",
+        "food",
+        "community"
+      ],
+      "event_types": [
+        "restaurant party nights",
+        "tastings",
+        "networking",
+        "live music"
+      ],
+      "audience": "Women 25-45 skew (site's readership)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Dinner & A Vibe at CZEN Englewood - Fridays",
+          "date": "2026-11-13",
+          "time": null,
+          "venue": "CZEN Restaurant",
+          "town": "Englewood",
+          "cost": null,
+          "source_url": "https://thelocalgirl.com/calendar/event/dinner-a-vibe-at-czen-englewood-fridays/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "The Bergen-filtered calendar of the Hoboken Girl / Montclair Girl network. The combined /events/ page mixes in Hudson, Essex and the Shore, and some items tagged Bergen are not in Bergen, so check the town. The CZEN item is a recurring Friday listing; Nov 13 is the next Friday."
+    },
+    {
+      "name": "Medley's Bayou",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/medleys-bayou-86282971323",
+      "other_urls": [
+        "https://www.medleysbayou.com/",
+        "https://www.facebook.com/events/1817958615919510/"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Teaneck"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "singles night with live music"
+      ],
+      "audience": "Singles in their 40s-50s (per the BaseLocal listing)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Singles Night at the Bayou",
+          "date": "2026-11-20",
+          "time": "6 PM-9 PM",
+          "venue": "Medley's Bayou, 980 Teaneck Rd",
+          "town": "Teaneck",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/singles-night-at-the-bayou-tickets-2004341691956"
+        }
+      ],
+      "yield": "low",
+      "notes": "New Orleans-style restaurant; only 3 events ever on Eventbrite, so low volume, but the Nov 20 night (live music, hosted by Cupid Daisy) is aimed at exactly the 40s crowd."
+    },
+    {
+      "name": "NJFirstDates.com / Singles Events New Jersey",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/25499720241",
+      "other_urls": [],
+      "platform": "eventbrite",
+      "towns": [
+        "Edgewater",
+        "Fort Lee"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "speed dating for single professionals"
+      ],
+      "audience": "Single professionals; this one women 33-45, men 35-48",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Single Professionals 30s & 40s - Speed Dating - Fort Lee, NJ",
+          "date": "2026-11-14",
+          "time": "5:00 PM-7:00 PM",
+          "venue": "Dino's Bar and Grill, 1466 River Road",
+          "town": "Edgewater",
+          "cost": "$39 (per AllEvents listing)",
+          "source_url": "https://www.eventbrite.com/e/single-professionals-30s-40s-speed-dating-fort-lee-nj-tickets-2004629464692"
+        }
+      ],
+      "yield": "low",
+      "notes": "Statewide (10 upcoming, 1 in Bergen). Titled 'Fort Lee' but the venue address is in Edgewater."
+    },
+    {
+      "name": "Latin Social Dancing for FUN in Bergen County",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/social-dancing-for-fun-in-englewood-nj/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Teaneck"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "club-style salsa, bachata and merengue bootcamps"
+      ],
+      "audience": "Beginners; partners not required",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "CLUB-STYLE Salsa, Bachata & Merengue BOOTCAMPS",
+          "date": "2026-11-19",
+          "time": "7:00 PM",
+          "venue": "ZINEniac, 221 Degraw Ave",
+          "town": "Teaneck",
+          "cost": "$25 single class",
+          "source_url": "https://www.meetup.com/social-dancing-for-fun-in-englewood-nj/events/317185002/"
+        }
+      ],
+      "yield": "low",
+      "notes": "436 members. Classes rather than parties, but it is the 'learn enough to go out' option on Thursdays; the page's series dates were inconsistent, so confirm before sending someone."
+    },
+    {
+      "name": "Shannon Rose Ramsey (ticketed holiday parties)",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/shannon-rose-ramsey-12207959686",
+      "other_urls": [
+        "https://www.facebook.com/ShannonRoseRamseyNJ",
+        "https://patch.com/new-jersey/ramsey-nj/calendar/event/20251126/b7ca6171-9b09-4409-a25f-02723fa3253f/thanksgiving-eve-pub-party"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Ramsey"
+      ],
+      "categories": [
+        "nightlife",
+        "holiday"
+      ],
+      "event_types": [
+        "New Year's Eve party",
+        "Thanksgiving Eve pub party with DJ"
+      ],
+      "audience": "Pub crowd, all adult ages",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "New Year's Eve Party at Ramsey Shannon Rose",
+          "date": "2026-12-31",
+          "time": "9:00 PM",
+          "venue": "The Shannon Rose, 1200 NJ-17",
+          "town": "Ramsey",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/new-years-eve-party-at-ramsey-shannon-rose-tickets-2004133743978"
+        }
+      ],
+      "yield": "low",
+      "notes": "Already in our data for bands; this organizer page is where the ticketed NYE party appears. Last year's Thanksgiving Eve Pub Party had DJ BPN with the kitchen open to 1 AM (Patch, 2025), so check for a repeat on Nov 25."
+    },
+    {
+      "name": "El Alazan Bar & Restaurant: Latin Night with DJ Nico",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/reel/DdeZ9d4xBjF/",
+      "other_urls": [
+        "https://www.instagram.com/reel/DXXeFSKkW31/",
+        "https://www.instagram.com/reel/DT2_BW8D3Gq/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Latin night with salsa and bachata classes then social dancing"
+      ],
+      "audience": "Latin dancers, beginners welcome",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Downtown Hackensack restaurant (it is a stop on the Dec 12 ELF CON crawl). Snippet: 'incredible Latin Night at El Alazan ... salsa and bachata classes, followed by social dancing with DJ Nico'. Date of the post not visible; frequency unknown. Same search surfaced two more Hackensack-area leads to verify with a logged-in session: a free-entry Thursday Salsa Night at Margaritas Bar, 252 Main St (classes 8 PM, social 9 PM-1 AM) and a Nov 12 Latin Night at Al Chile, 187 Hackensack St (town not confirmed)."
+    },
+    {
+      "name": "NJ Salsa & NJ Social",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/nj-salsa-nj-social-49096153083",
+      "other_urls": [
+        "http://TheNJSalsa.com",
+        "https://www.downtownhackensack.org/?p=10466"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "salsa and bachata socials",
+        "outdoor Latin Social in summer"
+      ],
+      "audience": "Social dancers; free outdoor events draw all ages",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Biggest salsa-social promoter in North Jersey (2.3k followers, 368 events, 18k attendees), but none of its 8 current weekly nights is in Bergen (Elizabeth, Somerville, Millburn, North Bergen, Woodbridge, Asbury Park, Rockaway). It co-runs the free Downtown Hackensack Latin Social each summer with DJ Frank (June 25, 2026). Re-check in spring."
+    },
+    {
+      "name": "Soosanghan Pocha",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/soosanghanpocha_/",
+      "other_urls": [
+        "https://www.instagram.com/reel/DQDrlm_DW7F/",
+        "https://www.boozyburbs.com/2026/04/02/opening-alert-crazy-pocha-palisades-park-nj/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Palisades Park"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Korean pocha late nights",
+        "private karaoke rooms"
+      ],
+      "audience": "Korean-American and mixed late-night crowd",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "243 Broad Ave. Bills itself as the largest Korean pocha and karaoke in New Jersey; bio says open nightly until 2:30 AM, karaoke downstairs. It is an always-open late-night place rather than a dated-event source, but it is the best public window on Palisades Park nightlife. Related: Crazy Pocha (42 Broad Ave, 2nd floor, opened April 2026, open to 2 AM, K-pop) per Boozy Burbs."
+    },
+    {
+      "name": "Pocha Baekjubu (DJ party nights)",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/DcXilcqNZQZ/",
+      "other_urls": [
+        "https://www.instagram.com/mui_karaoke_nj/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Fort Lee"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Korean pocha DJ parties"
+      ],
+      "audience": "Korean-language promotion",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-08-22",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "1550 Lemoine Ave, Fort Lee (reservations 201 482 4982). A Korean-language post announced a party 'with a famous DJ' on August 22. Directory listings disagree on whether the related Jumong Pocha at this address is open, so confirm before recommending. Also seen: Third Floor Karaoke Mu:i (@mui_karaoke_nj), 799 Abbott Blvd, Fort Lee."
+    },
+    {
+      "name": "Taverna Veranda",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/reel/DR8WADFkf5I/",
+      "other_urls": [
+        "https://www.hobokengirl.com/taverna-veranda-mediterranean-edgewater/",
+        "https://www.instagram.com/reel/DaB71OHMKBz/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Edgewater"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "live DJ late nights",
+        "New Year's Eve party packages",
+        "waterfront dinner-then-dance"
+      ],
+      "audience": "Upscale waterfront crowd",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "725 River Road, Edgewater. Snippets: 'our LIVE DJ is taking over tonight until 2 AM' and 'This is the New Years Eve hotspot ... ask about our party packages'. Hoboken Girl has profiled it. No dated 2026 event confirmed."
+    },
+    {
+      "name": "The Green Lounge",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/DQsvyDLjbwV/",
+      "other_urls": [
+        "https://www.atly.com/location/TheGreenLounge",
+        "https://www.instagram.com/p/DSFv5F1kcNJ/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "South Hackensack"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Ladies Night Fridays",
+        "Saturday DJ nights",
+        "New Year's Eve open bar and buffet"
+      ],
+      "audience": "21+ lounge crowd",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Snippets: 'LADIES NIGHT at The Green Lounge! Every Friday starting at 9 PM', 'each and every Saturday night, music by DJ Clubkilla', and a NYE open-bar/buffet post, with a US-46 South Hackensack location. A directory instead lists a Green Lounge at 314 Paramus Rd, Paramus, so the address needs confirming before anything is published."
+    },
+    {
+      "name": "Nikki's Bar & Grill",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/Dd8ISJqF7Dd/",
+      "other_urls": [],
+      "platform": "instagram",
+      "towns": [
+        "Little Ferry"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Friday DJ party nights"
+      ],
+      "audience": "Neighborhood bar crowd",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "213 Washington Ave, Little Ferry (201-518-2883). Snippet: 'FRIDAY NIGHT = PARTY TIME AT NIKKI'S! DJ FORTY is taking over'. Post date not visible; needs a logged-in check to confirm it is weekly."
+    },
+    {
+      "name": "Tavern 61",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/p/DfYGg0SAH-N/",
+      "other_urls": [
+        "https://www.eventbrite.com/e/lamp-the-north-jersey-real-estate-meetup-tickets-1998546094167"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife",
+        "holiday"
+      ],
+      "event_types": [
+        "Thanksgiving Eve bash",
+        "DJ nights"
+      ],
+      "audience": "Bar crowd",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "A November 2026 Instagram post is titled 'THANKSGIVING EVE BASH at TAVERN 61'; the DJ name in the snippet could not be tied cleanly to this venue. Eventbrite confirms Tavern 61 as a Hackensack venue (it hosted a Nov 12 meetup). Check the post itself for time and DJ."
+    },
+    {
+      "name": "Dream360 at American Dream",
+      "kind": "other",
+      "url": "https://www.eventbrite.com/e/the-bridge-and-tunnel-group-presents-for-the-love-of-rb-tickets-1933363104089",
+      "other_urls": [
+        "https://www.tickeri.com/events/gxvyszhaty62/benito-bowl-bad-bunny-super-bowl-viewing-party-at-dream360-american-dream-mall",
+        "https://www.americandream.com/events"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "R&B parties by outside promoters",
+        "viewing parties",
+        "lounge nights"
+      ],
+      "audience": "21+ at past events",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-02-08",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "LV Hospitality's hibachi/Topgolf/lounge venue on the mall's third floor. Proof it hosts promoter nights: The Bridge and Tunnel Group's 'For The Love Of R&B' (Nov 29, 2025, 9 PM-2 AM, Eventbrite page loaded, now ended) and the 21+ 'Benito Bowl' viewing party (Feb 8, 2026, sold on Tickeri). Nothing upcoming was visible today. A 2025 article says updates go out on Instagram as @dream360nj; that profile was not opened or confirmed. American Dream's own events page is JavaScript-only and returned nothing readable."
+    },
+    {
+      "name": "Posh: Fort Lee and East Rutherford listings",
+      "kind": "ticketing_search",
+      "url": "https://posh.vip/e/me-you-a-night-to-remember-ladies-night",
+      "other_urls": [
+        "https://posh.vip/e/buy-n-vibe-5",
+        "https://posh.vip/e/pop-up-",
+        "https://posh.vip/f/28d69?t=djfade"
+      ],
+      "platform": "posh",
+      "towns": [
+        "Fort Lee",
+        "East Rutherford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "ladies nights",
+        "pop-up DJ sets",
+        "promoter parties"
+      ],
+      "audience": "Younger promoter crowd, 20s-30s (inferred)",
+      "access": "js_heavy",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-03-06",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Posh has no public town browse; pages render only a header to a fetcher. A site-restricted search surfaced what Bergen promoters use it for: 'Ladies Night' by The Link Up NJ at Soho Nightclub, 2027 Lemoine Ave, Fort Lee (Jan 9, 2026); a 'Buy N Vibe' pop-up DJ set at The Hub II, 2037 Lemoine Ave (Mar 6, 2026, 8 PM-midnight); pop-ups at American Dream. All past, so this proves the channel, not a live event."
+    },
+    {
+      "name": "Hot Night Events (freestyle and club-classics promoter)",
+      "kind": "promoter",
+      "url": "https://www.facebook.com/HotNightEvents/",
+      "other_urls": [
+        "https://www.universe.com/events/frankie-cutlass-freestyle-sunday-brunch-at-46-lounge-tickets-DL1YGX"
+      ],
+      "platform": "facebook",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "freestyle parties",
+        "club classics and house nights",
+        "reunion-style dance parties"
+      ],
+      "audience": "Freestyle generation, 40s-50s",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-28",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "North Jersey promoter 'since 2013' working with DJ Anthony Pags, DJ Frank Stallone, DJ Joe D and Frankie Cutlass. Honest caveat: every dated event seen is outside Bergen (Nov 28 at 4Sixty6 Caterers in West Orange, 46 Lounge in Totowa, Seaside Heights). Listed because its DJs are the ones playing The Roosevelt and Project 584, and its photographer credit appears on Project 584's Decades Saturdays, so a Bergen date would show up here first."
+    },
+    {
+      "name": "LIve Music Bergen County NJ",
+      "kind": "facebook_group",
+      "url": "https://www.facebook.com/groups/1711563453037180/",
+      "other_urls": [
+        "https://www.facebook.com/groups/1711563453037180/posts/2188670585326462/"
+      ],
+      "platform": "facebook",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "bar band gigs posted by bands and venues"
+      ],
+      "audience": "Classic-rock bar crowd",
+      "access": "login_required",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Public group, 552 members; bands and venues post this week's gigs (a search snippet showed a recent post: 'Live classic rock music this Friday night in Bergen County', exact date not visible). Posts need login to read in full. Overlaps with The Local Music Finder, which members also plug there."
+    },
+    {
+      "name": "North Jersey Singles 50's & 60's",
+      "kind": "facebook_group",
+      "url": "https://www.facebook.com/groups/418700296437196/",
+      "other_urls": [],
+      "platform": "facebook",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "singles meetups",
+        "dance and dinner invitations posted by members"
+      ],
+      "audience": "Singles in their 50s and 60s",
+      "access": "login_required",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-08",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Public group, 5.1K members; newest post Nov 8, 2026. Without login only the header and one post stub load, so content could not be read. Older than the owner's target age, but the nearest active Facebook singles group found."
+    },
+    {
+      "name": "Line Dance Events - New Jersey",
+      "kind": "facebook_group",
+      "url": "https://www.facebook.com/groups/linedanceeventsnewjersey/",
+      "other_urls": [
+        "https://www.facebook.com/groups/linedanceeventsnewjersey/posts/1735772588118797/",
+        "https://www.facebook.com/groups/150052365669725/"
+      ],
+      "platform": "facebook",
+      "towns": [
+        "Fair Lawn",
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "country line dancing nights and lessons"
+      ],
+      "audience": "Line dancers, all ages",
+      "access": "login_required",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Public group, 3.8K members, statewide; its events tab is partly visible without login. It is where The Craftsman's Wednesday line dancing was announced ('Line dancing is back this week at the Craftsman! Wednesday, October 28, practice and open dancing 6:30 PM'). Most posts are Central/South Jersey, so filter for Bergen venues. A second group, 'Line & Couples Dancing in Central & Northern NJ', covers similar ground."
+    },
+    {
+      "name": "Bergen County's Nightlife In The 70s and Early 80's",
+      "kind": "facebook_group",
+      "url": "https://www.facebook.com/groups/bergencountynightlife/",
+      "other_urls": [
+        "https://www.facebook.com/groups/bergencountynightlife/posts/25467422659507796/"
+      ],
+      "platform": "facebook",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "club reunion chatter",
+        "nostalgia posts"
+      ],
+      "audience": "People who went out in Bergen in the 70s-80s",
+      "access": "login_required",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Only the group name loaded without login; a search snippet shows members sharing The Record's list of defunct North Jersey nightclubs. A nostalgia group, not an events feed, but reunion parties for old clubs tend to be announced in groups like this. Activity and member count unconfirmed."
+    },
+    {
+      "name": "NJ Radar (NJ events app)",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/njradar/",
+      "other_urls": [],
+      "platform": "instagram",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "statewide event roundups"
+      ],
+      "audience": null,
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Statewide events account, 19.3K followers, 340 posts. Other aggregator handles tagged on a Paramus salsa social post: @njeventss, @njeventscene, @nj.bachata, @newjerseynow (none opened). Worth a logged-in pass to see which actually cover Bergen."
+    },
+    {
+      "name": "New Jersey Isn't Boring: weekly events guide",
+      "kind": "media_listing",
+      "url": "https://newjerseyisntboring.com/",
+      "other_urls": [
+        "https://newjerseyisntboring.com/njibs-guide-to-20-new-jersey-events-november-13-15-2026/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife",
+        "community",
+        "holiday"
+      ],
+      "event_types": [
+        "weekend roundup, statewide"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-10",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Publishes a 'Guide to 20+ New Jersey Events' every week (latest: Nov 13-15, 2026, posted Nov 10). Statewide, so Bergen items are a minority; the guide itself was not opened to count them."
+    },
+    {
+      "name": "AllEvents: Edgewater parties",
+      "kind": "ticketing_search",
+      "url": "https://allevents.in/edgewater-nj/parties",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Edgewater",
+        "Fort Lee"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "promoter parties",
+        "speed dating"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "STOGIES & STILETTOS",
+          "date": "2026-11-21",
+          "time": "4:00-8:00 PM",
+          "venue": "190 River Rd",
+          "town": "Edgewater",
+          "cost": "$77",
+          "source_url": "https://allevents.in/edgewater/stogies-and-stilettos/100002003076191811"
+        }
+      ],
+      "yield": "low",
+      "notes": "Noisy: 16 dated events, most of them in Harlem despite the Edgewater slug. Two real Bergen hits (the Nov 14 speed dating at Dino's and a promoter event at 190 River Rd, the Life After / Metropolitan address; the page does not print the town). The /hackensack/parties path returned 404."
+    },
+    {
+      "name": "Next Stop Comedy (brewery shows)",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/next-stop-comedy-38476008843",
+      "other_urls": [
+        "https://www.nextstopcomedy.com/"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Carlstadt"
+      ],
+      "categories": [
+        "nightlife",
+        "arts"
+      ],
+      "event_types": [
+        "stand-up comedy at breweries"
+      ],
+      "audience": "Adults",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Next Stop Comedy at Bolero Snort Brewery! - Carlstadt, NJ",
+          "date": "2027-01-22",
+          "time": "8:00 PM",
+          "venue": "Bolero Snort Brewery and Tasting Room",
+          "town": "Carlstadt",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/next-stop-comedy-at-bolero-snort-brewery-carlstadt-nj-tickets-2000211714081"
+        }
+      ],
+      "yield": "low",
+      "notes": "National brewery-comedy tour (7,699 events); only the Bolero Snort dates matter. Search its page for 'Carlstadt'."
+    },
+    {
+      "name": "The Graycliff dinner shows (Lavika Entertainment)",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/lavika-entertainment-67441568313",
+      "other_urls": [],
+      "platform": "eventbrite",
+      "towns": [
+        "Moonachie"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "banquet-hall dinner shows"
+      ],
+      "audience": "40s and up (crooner dinner show)",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Sal Valentinetti Dinner Show in Moonachie, NJ",
+          "date": "2026-12-06",
+          "time": "1:00 PM",
+          "venue": "The Graycliff",
+          "town": "Moonachie",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/sal-valentinetti-dinner-show-in-moonachie-nj-tickets-2003686390933"
+        }
+      ],
+      "yield": "low",
+      "notes": "Example of a banquet hall opening to the public for a ticketed dinner show. Promoter has 33 events over 3 years across several halls; only some are in Bergen."
+    },
+    {
+      "name": "Garden State Connections (speed dating)",
+      "kind": "promoter",
+      "url": "https://luma.com/92m6b559",
+      "other_urls": [
+        "https://www.eventbrite.com/e/speed-dating-for-30s-40s-paramus-nj-events-tickets-1739576081889"
+      ],
+      "platform": "luma",
+      "towns": [
+        "Wood-Ridge",
+        "Paramus",
+        "Fair Lawn"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "speed dating for 30s and 40s"
+      ],
+      "audience": "Singles in their 30s and 40s",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Luma-based organizer that has run 30s/40s speed dating at Concourse Club (379 NJ-17 South, Wood-Ridge), in Paramus and in Fair Lawn. The Wood-Ridge page is marked past and showed no upcoming events, so it is unproven for this season; re-check its Luma calendar."
+    },
+    {
+      "name": "Bettr Fit Club singles mixers",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/107085138271",
+      "other_urls": [],
+      "platform": "eventbrite",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "daytime singles mixer at a gym"
+      ],
+      "audience": "Singles 35-50",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "BFC Singles Mixer | Ages 35-50",
+          "date": "2026-11-22",
+          "time": "12 PM-2 PM",
+          "venue": "Bettr Fit Club, 150 Union Avenue",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/bfc-singles-mixer-ages-3550-tickets-2004266325533"
+        }
+      ],
+      "yield": "low",
+      "notes": "One-venue organizer; included because the age band is the target one. Daytime, not nightlife."
+    }
+  ],
+  "search_recipes": [
+    "Eventbrite, town in the keyword (parse JSON-LD ItemList): https://www.eventbrite.com/d/nj--<town>/<town>-nj-dj/ , /<town>-nj-party/ , /<town>-nj-latin/ , /<town>-nj-new-years-eve/ (e.g. https://www.eventbrite.com/d/nj--rutherford/rutherford-nj-dj/)",
+    "Eventbrite singles: https://www.eventbrite.com/d/nj--hackensack/singles/ then keep rows whose city is a Bergen town (returned Teaneck, Paramus, Hackensack, East Rutherford, Oakland today)",
+    "Eventbrite organizer pages worth polling: /o/czen-restaurant-group-94092638983, /o/shawns-crazy-saloon-20132988259, /o/njdates-nj-speed-dating-82914445553, /o/dj-edwin-martinez-salsa-social-in-new-jersey-9405005396, /o/instagramcomthursdaynewjersey-121768189159, /o/the-nj-comedy-syndicate-68386416273, /o/nj-singles-bergen-county-120648504852, /o/main-street-business-alliance-69579620643",
+    "Meetup: https://www.meetup.com/find/?location=us--nj--Hackensack&source=EVENTS&keywords=dance%20party&distance=tenMiles (swap keywords: singles, salsa, karaoke, line dancing)",
+    "Instagram via a search engine (this is what surfaced the DJ nights): site:instagram.com (Rutherford OR \"East Rutherford\" OR Lyndhurst OR Carlstadt OR \"Wood-Ridge\" OR \"Hasbrouck Heights\") NJ DJ Saturday night party",
+    "site:instagram.com (Paramus OR Ridgewood OR \"Glen Rock\" OR \"Fair Lawn\" OR Westwood OR Hillsdale) NJ DJ Saturday night dance party",
+    "site:instagram.com (Mahwah OR Ramsey OR Allendale OR Montvale OR Waldwick OR Oakland) NJ DJ dance party Saturday night",
+    "site:instagram.com (\"Fort Lee\" OR \"Palisades Park\" OR \"Edgewater\" OR \"Cliffside Park\") NJ lounge DJ Saturday night party",
+    "site:instagram.com (Garfield OR Lodi OR Wallington OR \"Elmwood Park\" OR \"Saddle Brook\") NJ DJ Saturday night party 21+",
+    "site:instagram.com \"Thanksgiving Eve\" 2026 (Hackensack OR Ramsey OR Paramus OR \"Fair Lawn\" OR Rutherford OR \"Saddle Brook\" OR Mahwah OR Westwood OR Ridgewood) NJ DJ  (swap in \"New Years Eve\" in December)",
+    "site:instagram.com NJ \"30+\" OR \"40+\" OR \"grown and sexy\" party DJ (Hackensack OR Englewood OR Teaneck OR \"Fort Lee\" OR Rutherford OR Paramus OR Edgewater)",
+    "site:instagram.com (Hackensack OR Bergenfield OR Englewood OR Fairview OR \"Cliffside Park\" OR Garfield) NJ \"noche\" OR \"latin night\" OR salsa OR bachata DJ sabado",
+    "Wallington OR Garfield OR \"Elmwood Park\" NJ Polish club \"zabawa\" OR \"dyskoteka\" OR \"disco polo\" OR \"andrzejki\" OR \"sylwester\" 2026",
+    "site:posh.vip NJ (Hackensack OR Englewood OR \"Fort Lee\" OR Rutherford OR Teaneck OR Paramus OR Edgewater OR Lodi OR Garfield OR \"East Rutherford\")",
+    "site:facebook.com/groups Bergen County NJ (nightlife OR \"live music\" OR singles OR freestyle OR \"things to do\" OR \"over 40\")",
+    "DJ name searches that returned gig posts: instagram \"DJ Frankie D\" OR \"DJ Anthony Pags\" OR \"DJ Mike Mariano\" OR \"DJ Ralph Tunis\" New Jersey dance party"
+  ],
+  "gaps": [
+    "Instagram profiles could not be opened without login, so most venue DJ lineups here rest on search-engine snippets of individual posts. Handles confirmed from a venue's own website: @williamscenternj, @theroosevelt356, @thecraftsmannj, @czenenglewood, @lifeafterrestaurant, @havanadc1, @soundillusiondjs_frankie_d, @the_salsa_connexion. Handles NOT confirmed: Midland Brew House, Cigarro, SideBar Hackensack, Lefkes at The Modern, Portobello, Nikki's, The Green Lounge, Taverna Veranda, Tavern 61, Dream360 (@dream360nj per an article), Thursday New Jersey.",
+    "No Bergen-based promoter running a standing 30+/40+ or 'grown and sexy' night was found. The closest are DAYSHIFT (touring, about every two months at the Williams Center, no future date posted), CZEN and Life After (venue-run R&B/Caribbean nights) and The Roosevelt / Dominick's / Portobello / Mason Jar disco-freestyle DJ nights.",
+    "Freestyle: no Bergen freestyle party with a future date. bergenPAC's annual Freestyle Flashback was Jan 17, 2026 (2027 date not found); Hot Night Events' parties are in West Orange, Totowa and Seaside. A site:instagram.com freestyle search for Bergen towns returned nothing.",
+    "Korean nightlife in Fort Lee / Palisades Park: only always-open pochas and karaoke lounges surfaced (Soosanghan, Crazy Pocha, Pocha Baekjubu, Mu:i). No club-style promoter, DJ residency or event calendar was found; it likely lives on KakaoTalk/Instagram in Korean.",
+    "Hookah lounges with DJ nights: only The Green Lounge (address disputed) surfaced. Nothing confirmed for Hackensack, Lodi, Garfield or Fairview.",
+    "Hotel bars and banquet halls: no public singles dance or DJ night found at the Hilton Hasbrouck Heights, Teaneck Marriott, Sheraton/DoubleTree Mahwah, The Elan (Lodi), The Venetian (Garfield), The Fiesta (Wood-Ridge) or Biagio's (Paramus). Only The Graycliff dinner show turned up. Their own sites were not individually checked.",
+    "Latin nights in Hackensack (Noches de Colombia Fridays, Margaritas Bar Thursday salsa at 252 Main St, El Alazan Latin Night, Al Chile at 187 Hackensack St) are snippet-level leads with no confirmed dates; Al Chile's town was not confirmed. Don Coqui Edgewater's Friday/Saturday lounge DJ is already in our data.",
+    "Leads not verified enough to list as sources: La Terrazza Ridgewood 'Rooftop Social' Thursdays with a DJ (old post, seasonal); a restaurant at 91 W Clinton Ave, Tenafly with DJ sets Friday and Saturday; a restaurant at 2191 Fletcher Ave, Fort Lee with a live DJ Thursdays 7-11 PM; Invito / Wyckoff Tavern Saturday DJs; LT Bar & Grill 'Catch Wednesdays' ladies night at The Shops at Riverside (old article); Kid Rip's Thanksgiving Eve with DJ Big Ant (town unknown); 'Metropolitan Social Club' promoter nights at 190 River Rd, Edgewater (Dembow vs Trap with DJ Mega Jay and DJ Ricky, June 27, 2026).",
+    "Ticketing platforms that could not be read: Resident Advisor (ra.co/events/us/newjersey, HTTP 403), Bandsintown city page (403), Posh (header only), American Dream events page (JavaScript only). Tickeri's Tri-State page showed only New York on page 1 of 43. Dice, Shotgun, Partiful, Ticketleap and Tixr were not searched. TicketWeb works but only through the Williams Center calendar.",
+    "Silent discos, paint-and-sip late nights: nothing current in Bergen (a 2025 silent disco day party at The Hive Lounge / Dream Bar in American Dream was the only hit; an adult paint event in Garfield was skipped as explicit).",
+    "Facebook: group pages returned only name, member count and a post stub without login. No active public Bergen-specific nightlife, over-30 or freestyle group was confirmed; a general Bergen moms group (8.7K) had a 'girls night out with DJ' thread, which suggests recommendations happen in mom/town groups rather than nightlife groups.",
+    "Thanksgiving Eve (Wed Nov 25) is confirmed with a DJ at The Roosevelt (DJ Anthony Pags), The Craftsman (DJ Chaos, 9 PM-2 AM) and as a Latin social in Ridgefield Park; Midland Brew House, SideBar, Tavern 61, Viva Margarita Hackensack and Shannon Rose Ramsey are snippet-level or last-year only. New Year's Eve is confirmed only at Shannon Rose Ramsey (Eventbrite), The Craftsman (Resy package) and Midland Brew House; nothing yet for Fort Lee, Edgewater or the Meadowlands."
+  ]
+}

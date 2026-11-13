@@ -1,0 +1,1922 @@
+{
+  "run": "2026-11-12-after",
+  "rubric": "v1",
+  "graded_at": "2026-11-12",
+  "notes": "28 scripted personas, 85 turns, on the builder's branch with 753 harvested events and 62 places loaded (1,047 events and 266 venues at grading time). Same rubric and calibration as 2026-11-12-baseline. The phone thread is not in this run; compare with the scripted-only baseline (72.6). One turn is graded wrong (rain-plan t1), which caps that conversation at 50.",
+  "conversations": [
+    {
+      "id": "night-out-40s",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "DJ + dancing Saturday, 30s-40s crowd, not a college bar",
+          "outcome": "hit",
+          "note": "Caribbean Second Saturdays at CZEN, Englewood (Kevin Crown and DJ Dee One, 9pm-1am, free RSVP, Resy for dinner) and DJ Ralph Tunis at The Roosevelt (time flagged as not posted). All verified. Says plainly neither row gives crowd ages; 'date-night spots' matches both rows' tags.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "Closer to New Milford (Hackensack/Teaneck/Englewood); Latin night or 90s hip hop and R&B",
+          "outcome": "hit",
+          "note": "Zina's Steakhouse in Teaneck: DJ Edwin Martinez, salsa/bachata/merengue/reggaeton, Sat 8:30pm-1am, free, 21+, free parking, 'about 10 minutes' (matches the tool's estimate). Hip hop: The Awesome 2's 44-year night at the Williams Center, 8pm, $32.64, all ages, about 25 minutes. All verified.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 3,
+          "ask": "Who are the DJs around here; anyone throwing a party this month",
+          "outcome": "hit",
+          "note": "Named five DJs from the rows, then the Thanksgiving Eve Latin Social in Ridgefield Park (7pm-12:30am, $25 with buffet), Love In The Club at the Williams Center (Nov 27, 9pm, $19-26) and High Line's opening. All verified.",
+          "category": "nightlife/parties"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 4,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 99,
+      "summary": "Three specific, verified answers with named DJs, times, prices and drive times from New Milford. The same persona scored 80 before with one venue to offer."
+    },
+    {
+      "id": "girls-night",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Girls' night for 6, mid 30s, Saturday: dinner then dancing, from Fair Lawn/Paramus",
+          "outcome": "hit",
+          "note": "The Craftsman in Fair Lawn ('come for dinner, stay for the party', DJ every Saturday, open to 2am) with Zina's as a backup. Verified. 'About 5 minutes from both of you' is only true for Fair Lawn; the tool's own estimate from Paramus is about 10.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "Bottle service or a lounge vibe instead",
+          "outcome": "hit",
+          "note": "CZEN (lounge tag, Caribbean Second Saturdays, table for 6 on Resy) and Don Coqui; says neither lists bottle service and that Orbit does but is karaoke rooms. Verified.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 3,
+          "ask": "Sunday brunch spot with music or a DJ",
+          "outcome": "hit",
+          "note": "Ladies Love Brunch at CZEN with DJ Kim U, Sun 12-4pm, $32 entree plus drink, free RSVP; Rustica's smooth jazz brunch flagged as unconfirmed this year. Verified.",
+          "category": "food/drink"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 3,
+        "fit": 4,
+        "depth": 4,
+        "voice": 4
+      },
+      "score": 95,
+      "summary": "Was a search miss and a data gap; now three hits, with town and two interests saved. One drive-time claim stretched to cover both towns."
+    },
+    {
+      "id": "single-45",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "45, newly single: where do people my age go out",
+          "outcome": "hit",
+          "note": "Mingle Around Singles (40s-60s) at Twin Door Tavern Saturday, meetup 7:30, The Divas Band 8:30; the same group Friday at The Orange Lantern; speed dating for 30s-40s at Dino's Saturday 5-7pm, $39. All verified; crowd claims now come from row tags.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "Singles mixers or speed dating coming up",
+          "outcome": "hit",
+          "note": "Singles Night at the Bayou (Nov 20, 6-9pm, $28.52, 40s-50s), Bobby Rhythm's mixer at Fogo de Chao (Nov 17, ages 30-55, free RSVP), Pre-Dating at Houlihan's (Nov 24, 6:30). Verified. 'About $29-46' reflects two duplicate rows with different prices.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 3,
+          "ask": "Something lower pressure, like a class or a group thing",
+          "outcome": "hit",
+          "note": "Pizza and Pickleball Social (Fri, meet 6, play 7-11, $25 non-members), Beginner Line Dancing Night Dec 10 (40+ singles, no partner needed), salsa class + social Nov 25. Verified.",
+          "category": "live music/comedy/arts"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 4,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 99,
+      "summary": "Every pick is dated, priced and aimed at the right age. Saved 'singles events' as an interest, which sits close to a relationship detail; all three replies still carry a question."
+    },
+    {
+      "id": "latin-dance",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Where can I dance bachata this weekend",
+          "outcome": "hit",
+          "note": "Salsa Dance Social at Zina's (DJ plays bachata, Sat 8:30pm-1am, free, 21+), La Familia live at Shawn's Crazy Saloon (9pm-1:30am, $15/$20, 21+), Havana Dance Center's Saturday social (time and price flagged, phone given). Verified.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "Reggaeton, a club with a Latin DJ Friday or Saturday",
+          "outcome": "hit",
+          "note": "Don Coqui Fri/Sat (music not specified, said so) and Zina's for reggaeton 'for sure' (the row lists it). Verified.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 3,
+          "ask": "Which one has the older crowd, I'm 38",
+          "outcome": "partial",
+          "note": "Says neither row gives ages, offers a reasoned lean and the one night tagged for a grown crowd (40s-60s meetup at Twin Door). 'Zina's and Don Coqui both just say 21+' is wrong for Don Coqui: its rows carry no age limit.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: which has the older crowd. Reply: can't promise either. Zina's and Don Coqui rows have no crowd tags (Life After's Friday row does: 'A grown, dressed-up lounge crowd').",
+            "fix": "Add a crowd note to the Latin venues (typical ages, dress) from venue socials or a call."
+          },
+          "category": "nightlife/parties"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 3,
+        "honesty": 3,
+        "fit": 2,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 79,
+      "summary": "Bachata and reggaeton are now answered with real nights. Nothing at all was saved (facts after: []; the baseline run saved the interest), and one small claim about Don Coqui isn't in the data."
+    },
+    {
+      "id": "freestyle-80s",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Any freestyle or 80s parties coming up (52, still dances)",
+          "outcome": "hit",
+          "note": "Freestyle Flashback Jan 16 7pm at bergenPAC with the lineup and DJ Whiteboy, crowd '40+' from the row's tag, tickets flagged as not posted; The Divas Band Saturday; Disco Night with DJ Frankie D Nov 27 (no cover, $25 minimum). Verified. 725 characters.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "A disco night or a tribute band I can dance to",
+          "outcome": "partial",
+          "note": "Answered from memory of the last search, with no new search. Disco Night Dec 11 is right, and the Elks dance party (Nov 29, 2-6pm, $20) is a fair pick. For 'tribute band' it offered two cover bands and said 'I can't say what tribute music those three bands play', while the database holds over 25 tribute nights in the next three weeks (Fleetwood Mac tribute this Friday, Santana tribute Nov 28 'come for dinner and stay to dance').",
+          "issue": {
+            "owner": "builder",
+            "type": "flow",
+            "evidence": "Ask: disco night or a tribute band. Reply: disco yes; no tribute band, no tool call. Rows available: 'Fleetwood Mac Tribute: Gold Dust Dreams at Booyah! | 2026-11-13', 'Santana Tribute featuring Stone Flower | north-arlington | 2026-11-28 | 7 PM - 10 PM | $19.03'.",
+            "fix": "Prompt: the recall digest answers follow-ups about things already found; a new thing asked for ('tribute band') needs a new search."
+          },
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 3,
+          "ask": "Do I need tickets",
+          "outcome": "hit",
+          "note": "Ticketing for each pick from the saved rows, no search: Freestyle Flashback ticketed with prices not posted, Elks $20, Dominick's no cover with a $25 minimum, Meetup RSVPs. Verified.",
+          "category": "logistics/facts"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 3,
+        "honesty": 4,
+        "fit": 4,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 91,
+      "summary": "Found the freestyle show it denied having before and answered the ticket question from memory. The same memory let it skip a search the second turn needed."
+    },
+    {
+      "id": "noraebang",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Private karaoke rooms in Fort Lee or Palisades Park, open late",
+          "outcome": "hit",
+          "note": "Rock 21 (5pm-2:30am, rooms to 30), Soosanghan Pocha ('said to stay open until 2:30', matching an unverified row), Orbit (hours flagged). Verified.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "How much is it, and can we bring 10",
+          "outcome": "partial",
+          "note": "Capacity yes, price still not in the data; added Cafe Ssum as a fallback.",
+          "category": "logistics/facts",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: price for 10. Reply: not posted. price_text is still empty for every karaoke venue.",
+            "fix": "Room rates by size from venue sites or a call."
+          }
+        },
+        {
+          "n": 3,
+          "ask": "Where to eat Korean BBQ before",
+          "outcome": "hit",
+          "note": "So Moon Nan Jip and Dong Bang Grill, verified, each 'about 5 minutes' from Rock 21 per the tool.",
+          "category": "food/drink"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 3,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 4,
+        "voice": 4
+      },
+      "score": 90,
+      "summary": "Same good plan as before. Scores lower only because nothing was saved this time (facts after: []; the baseline saved karaoke and late nights)."
+    },
+    {
+      "id": "teens",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "family/kids/teens",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "15-year-old and three friends, Friday night, not the mall",
+          "outcome": "hit",
+          "note": "Sky Zone GLOW in Allendale, Fri 8-10pm (shirt included, SkySocks and waiver needed, price flagged) with the football finals as backup. Verified. Saved the kid's age.",
+          "category": "family/kids/teens"
+        },
+        {
+          "n": 2,
+          "ask": "They have about $25 each",
+          "outcome": "partial",
+          "note": "No price for either main pick ('high school games are usually cheap'), and the free option, the Teen Hunger Games Party at Ridgefield Park library tomorrow at 6, is given without saying registration is required. Ice House at exactly $25 (still in the data) was dropped. No tool call.",
+          "issue": {
+            "owner": "builder",
+            "type": "flow",
+            "evidence": "Ask: options at $25 each. Reply: two picks with unknown prices and a library party with no mention of registration. Row: 'Teen Hunger Games Party! | tags [..., registration required] | ...for grades 7-12... Registration required.' The reply came from the recall digest, whose unused rows carry only date, time and cost.",
+            "fix": "Carry requirement flags (registration, residents only, ages) in the digest; re-search when a new constraint such as a budget arrives."
+          },
+          "category": "family/kids/teens"
+        },
+        {
+          "n": 3,
+          "ask": "Anything for Sunday afternoon too",
+          "outcome": "hit",
+          "note": "Ridgewood Clue Quest ($20, slots at 12, 2 and 4, start address, Eventbrite link) and Come From Away at the JCC, 3pm, $20. Verified; both rows are tagged for teens.",
+          "category": "family/kids/teens"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 3,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 80,
+      "summary": "Teen-specific events replaced the hike and craft fair. The budget turn got weaker: prices unknown and a registration requirement dropped."
+    },
+    {
+      "id": "senior-mom",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "seniors/accessibility",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Mom is 78, can't walk far: weekday afternoon near Ridgewood next week",
+          "outcome": "hit",
+          "note": "Free movie matinee at Hillsdale Library (Fri Nov 20, 2-4:30) and free bingo at Waldwick Library (Thu Nov 19, 1-3), both seated, both tagged for seniors/adults, with drive times. Verified. Says the rows give no parking or walking detail.",
+          "category": "seniors/accessibility"
+        },
+        {
+          "n": 2,
+          "ask": "She loves music and gardens",
+          "outcome": "hit",
+          "note": "Matrix Jazz from Age-Friendly Teaneck (Thu Nov 19, 5:30-7:30, RSVP number, parking lot address), the free Yiddish concert for seniors in Tenafly (Wed 11am, lunch after, reservation number), The Hermitage for gardens. Verified.",
+          "category": "seniors/accessibility"
+        },
+        {
+          "n": 3,
+          "ask": "Somewhere nice for lunch that isn't loud",
+          "outcome": "partial",
+          "note": "LaTour (intimate French BYOB, in Ridgewood) and Sook Pastry; hours not posted for either and it says it can't promise quiet.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: quiet lunch. Reply: best guess, hours unknown. No noise or lunch-service data; hours empty for LaTour and Sook Pastry.",
+            "fix": "Restaurant hours, lunch service and a quiet/conversation flag."
+          },
+          "category": "seniors/accessibility"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 3,
+        "honesty": 4,
+        "fit": 4,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 85,
+      "summary": "Seated, senior-tagged, weekday options with RSVP details, and nothing about the mother was saved. Quiet lunch is still a guess."
+    },
+    {
+      "id": "toddler-weekday",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "family/kids/teens",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "18-month-old, tomorrow morning near Teaneck",
+          "outcome": "hit",
+          "note": "Playtime at Teaneck Public Library, Fri 10:30am, free, drop-in; Tot Time at Cresskill, 10am. Verified.",
+          "category": "family/kids/teens"
+        },
+        {
+          "n": 2,
+          "ask": "Free story times or music classes this week",
+          "outcome": "hit",
+          "note": "Five free options with days, times and drive times. Verified, with one flaw: Music Storytime with Mr. Corbitt at Teaneck is 'registration required' in the row and the reply doesn't say so (it does for Bogota and the petting zoo). The row's description is cut at 200 characters just before those words.",
+          "category": "family/kids/teens"
+        },
+        {
+          "n": 3,
+          "ask": "Saturday, when my wife is off",
+          "outcome": "hit",
+          "note": "Family Storytime at 11 in Teaneck then the Farm Chicks petting zoo at Hackensack's library 1-2pm (register), from the saved rows with no search. Verified.",
+          "category": "family/kids/teens"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 95,
+      "summary": "From a data gap to a full week of free, close, age-right programs. One registration requirement was lost to a truncated description."
+    },
+    {
+      "id": "first-date",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "food/drink",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "First date tonight, low key, in or near Hackensack, not just dinner",
+          "outcome": "hit",
+          "note": "Rustica Lounge's Thursday acoustic Latin band, 7-10pm, flagged as unconfirmed this year with the number to call, about 20 minutes away; SideBar in Hackensack with tonight's lineup unknown. Verified, but the lead pick is the far one and nothing in Hackensack is confirmed for tonight.",
+          "category": "food/drink"
+        },
+        {
+          "n": 2,
+          "ask": "She likes art and coffee",
+          "outcome": "hit",
+          "note": "Khyber for coffee and The Art School at Old Church in Demarest (two galleries, open tonight until 10). Verified. 'It's quiet and easy to talk there' is not in the row.",
+          "category": "food/drink"
+        },
+        {
+          "n": 3,
+          "ask": "If it goes well, where for a drink after",
+          "outcome": "hit",
+          "note": "The Madison Rose (open to 2am, about 20 minutes) or SideBar. Verified.",
+          "category": "food/drink"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 4,
+        "honesty": 3,
+        "fit": 3,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 83,
+      "summary": "Art is now answerable. The plan involves three 20-minute drives and one unsupported line about the gallery being quiet."
+    },
+    {
+      "id": "music-genres",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "live music/comedy/arts",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Country music or line dancing",
+          "outcome": "hit",
+          "note": "Horse Rescue Line Dancing Fundraiser (Nov 21, 6-10pm, $50, lessons, 16+), Beginner Line Dancing Night 'happening right now' in Allendale until 10 (correct: second Thursday, 7-10pm), The Band Ashley Dec 11. Verified.",
+          "category": "live music/comedy/arts"
+        },
+        {
+          "n": 2,
+          "ask": "A metal or punk show",
+          "outcome": "hit",
+          "note": "War On Women and MakeWar Dec 4 ($26.46, 18+), The Warped Tour Band Friday ($26-53), metal cover band Pretty Damm Close Nov 20. Verified. 11.8 seconds.",
+          "category": "live music/comedy/arts"
+        },
+        {
+          "n": 3,
+          "ask": "Open mic I can sign up for this week (plays guitar)",
+          "outcome": "hit",
+          "note": "Open Stage at the Puffin (Sun 4-6, free, 8-minute sets), Five Dimes Monday, Johnson Library Nov 19 (sign up on arrival, 5 minutes). Verified; didn't pass on the Puffin's 'RSVP online to lock in a slot'.",
+          "category": "live music/comedy/arts"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 95,
+      "summary": "Two honest blanks became two hits. Never learned the town, so picks range across the county."
+    },
+    {
+      "id": "dog-owner",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "active/outdoors/sports",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Where can I bring my 70 lb lab this weekend",
+          "outcome": "hit",
+          "note": "Overpeck's off-leash area and the Ramsey Farmers Market on Sunday, 9-2, with the market's own leash rules. Verified.",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 2,
+          "ask": "A brewery or patio that allows dogs",
+          "outcome": "honest_miss",
+          "note": "Still nothing dog-friendly among breweries or patios; said so and pointed back to the market.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: dog-friendly brewery or patio. Reply: none. Only the Ramsey Farmers Market rows mention dogs.",
+            "fix": "Brewery and restaurant sites, BringFido, Google 'dogs allowed'; a dogs_ok flag."
+          },
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 3,
+          "ask": "Dog events coming up, like Santa photos for pets",
+          "outcome": "honest_miss",
+          "note": "None in the data. Offered Van Saun's dog park and Puppy Pals Live (noting dogs can't attend).",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: pet Santa photos. Reply: none yet. No pet events in the data.",
+            "fix": "Pet store, shelter and mall holiday calendars."
+          },
+          "category": "active/outdoors/sports"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 1,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 2,
+        "voice": 3
+      },
+      "score": 66,
+      "summary": "One new dog-welcome event; the rest is the same gap as before. No search talk this time."
+    },
+    {
+      "id": "budget-two",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "memory/personalization",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "$20 total for Saturday, two people",
+          "outcome": "hit",
+          "note": "CUG's Movie Karaoke Night in Rutherford, 9pm, free; CZEN's free-RSVP party; Flat Rock Brook. Verified. Asked the town as its one question.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 2,
+          "ask": "Something at night",
+          "outcome": "hit",
+          "note": "Free Saturday-night options from the saved rows: Movie Karaoke, the salsa social at Zina's, CZEN. Verified. 11.6 seconds with no tool call.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 3,
+          "ask": "We live in Garfield, no car",
+          "outcome": "hit",
+          "note": "Kept Movie Karaoke (Williams Center, 15 Sylvan St, Rutherford, about 15 minutes) and said Zina's would cost more to reach. 'Garfield and Rutherford are both on the Bergen County Line' is true but not from the data. 14.4 seconds, over the 12-second SMS limit.",
+          "category": "memory/personalization"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 3,
+        "fit": 3,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 89,
+      "summary": "Free, confirmed night options that still work without a car. Two slow replies, one past the webhook limit, and a bit of colour ('a fun crowd')."
+    },
+    {
+      "id": "new-in-town",
+      "source_file": "research/eval/runs/2026-11-12-after-a.md",
+      "category": "memory/personalization",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Just moved to Paramus from Chicago, 33, how do I meet people",
+          "outcome": "hit",
+          "note": "Social Sandbox trivia night at Houlihan's (Wed Nov 18, dinner 6, trivia 7, look for the blue shirt), tonight's free trivia, a 30-55 singles mixer. Verified.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 2,
+          "ask": "I like running and board games",
+          "outcome": "hit",
+          "note": "Board Game Night at Paris Baguette (Fri 7pm, 20s-40s) and the North Jersey Road Runners' Saturday 9am run from Van Neste Square with coffee after. Verified.",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 3,
+          "ask": "The one thing I shouldn't miss in November",
+          "outcome": "hit",
+          "note": "Upper Saddle River 5K with the Glen Rock run as the closer option. Verified.",
+          "category": "memory/personalization"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 4,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 99,
+      "summary": "Now answers 'how do I meet people' with groups that exist to meet people, five to ten minutes from home."
+    },
+    {
+      "id": "wife-40th",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Wife's 40th in January: private room and dance floor for 20",
+          "outcome": "honest_miss",
+          "note": "Still no private-event venues beyond karaoke rooms. Offered Rojo (ask about a dance floor) and Volume Up Karaoke (rooms to 50), clear about what each lacks.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: private room with a dance floor for 20. Reply: none confirmed. Lookup: only karaoke rooms and kids' party places.",
+            "fix": "Restaurant private-dining pages, halls, lounges that take buyouts; capacity, minimums, dance floor."
+          },
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "About $100 a head, near River Edge",
+          "outcome": "honest_miss",
+          "note": "Rock 21 (room for 30, about 20 minutes) and High Line, now correctly described as opening Nov 18 with no private-room information.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: same, near River Edge. Reply: nothing fitting.",
+            "fix": "Same sources; per-head packages."
+          },
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 3,
+          "ask": "Can you recommend a DJ",
+          "outcome": "partial",
+          "note": "No DJs for hire in the data, but it named working DJs to go hear this weekend (DJ Edwin Martinez at Zina's, Kevin Crown and DJ Dee One at CZEN) with times and drive times.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: a DJ for a private party. Reply: none for hire; three performing DJs.",
+            "fix": "DJ contact and booking info for the DJs already in event rows."
+          },
+          "category": "nightlife/parties"
+        }
+      ],
+      "scores": {
+        "usefulness": 2,
+        "knowledge": 1,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 2,
+        "voice": 3
+      },
+      "score": 59,
+      "summary": "Better leads and cleaner memory (town saved, no birthday fact), but there is still no venue that fits."
+    },
+    {
+      "id": "event-facts",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "logistics/facts",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "What time is the Ridgewood tree lighting and where do I park",
+          "outcome": "partial",
+          "note": "Dec 4 at 6pm, flagged as unconfirmed; no parking info. Added the Mount Carmel Advent concert and tree lighting on Dec 11. Verified.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: time and parking. Reply: time with caveat, no parking.",
+            "fix": "Confirm with the Chamber; add parking notes."
+          },
+          "category": "logistics/facts"
+        },
+        {
+          "n": 2,
+          "ask": "Is it cancelled if it rains",
+          "outcome": "honest_miss",
+          "note": "No rain plan in the data; said so.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: rain policy. Reply: unknown.",
+            "fix": "Rain dates from town and Chamber pages."
+          },
+          "category": "logistics/facts"
+        },
+        {
+          "n": 3,
+          "ask": "What else is going on in Ridgewood that night",
+          "outcome": "hit",
+          "note": "Steel Wheel's Friday sets and Pinot's Palette 'Winter Sunset' paint and sip, 8-10pm, $45, BYOB. Verified.",
+          "category": "logistics/facts"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 2,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 74,
+      "summary": "Unchanged in substance. 'Text me next week, I'll know more' appears word for word in two replies running."
+    },
+    {
+      "id": "nye",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "New Year's Eve parties with an open bar and a DJ",
+          "outcome": "hit",
+          "note": "Booyah! as before, plus The Craftsman's open-bar packages (Gold $125, Platinum $160 with dinner, plus fee and tax, 21+). Verified.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "Family friendly NYE instead, kids 8 and 11",
+          "outcome": "hit",
+          "note": "Holiday Bowl's family NYE bowling from 11am and its Countdown to Midnight package (prices flagged), and Haworth Library's Noon Year's Eve with a fair warning that the 11-year-old may find it young. Verified.",
+          "category": "family/kids/teens"
+        },
+        {
+          "n": 3,
+          "ask": "How early do I need to book",
+          "outcome": "partial",
+          "note": "No deadline in the data, so general advice to call this week. The row's 'payment is due in full to reserve' wasn't passed on (the reply came from the digest, which doesn't carry descriptions).",
+          "category": "logistics/facts",
+          "issue": {
+            "owner": "builder",
+            "type": "flow",
+            "evidence": "Ask: how early to book. Reply: call soon. Row: 'New Year's Eve Packages at Holiday Bowl | ...payment is due in full to reserve.'",
+            "fix": "Keep requirement and booking notes in the digest."
+          }
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 3,
+        "honesty": 4,
+        "fit": 4,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 84,
+      "summary": "Family NYE now has a real answer for both kids' ages."
+    },
+    {
+      "id": "right-now",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "9pm Thursday, what's open and fun near Englewood",
+          "outcome": "hit",
+          "note": "Rock 21 (open to 2:30am, about 10 minutes), CZEN's Thursday karaoke and games (hours flagged), Tommy Fox's (to 2am). Verified; passed after: '21:00' to the search.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "Already ate; something with music or games",
+          "outcome": "hit",
+          "note": "Salsa Thursdays at Don Coqui and The Craftsman's DJ night (open to 1am, flagged as a longer drive). Twin Door, whose set had ended, is gone. Verified.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 3,
+          "ask": "What's the move tomorrow night",
+          "outcome": "hit",
+          "note": "CZEN in Englewood (DJ 8pm-midnight, rum punch 5-8), Ted Poley at Debonair, DJs at Life After, each with a drive time; 'a dressier lounge crowd' is from the row. Verified.",
+          "category": "nightlife/parties"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 86,
+      "summary": "The clock and distance problems are gone. Nothing was saved, including the town they named."
+    },
+    {
+      "id": "cultural",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "cultural/holiday",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Hanukkah events or menorah lightings near Teaneck",
+          "outcome": "hit",
+          "note": "River Vale's Grand Chanukah Party (Dec 7, 5:30, free), Fair Lawn's lighting (Dec 7, 7-8pm), Oradell (Dec 6, 6pm). Verified. But it led with one 20 minutes away and left out what is in Teaneck: the township's own lighting (date not announced) and 'Jewbilation: A Hanukah Variety Show' on Dec 9. It searched 'menorah lighting' only.",
+          "category": "cultural/holiday"
+        },
+        {
+          "n": 2,
+          "ask": "In-laws are Filipino: a Simbang Gabi or a Christmas event in Bergenfield",
+          "outcome": "hit",
+          "note": "No Simbang Gabi in the data (true); Holiday at the Pond, the high school craft fair (Dec 6) and the library's holiday concert (Dec 13, 2-3pm). Verified.",
+          "category": "cultural/holiday"
+        },
+        {
+          "n": 3,
+          "ask": "Lunar New Year in Fort Lee or Palisades Park",
+          "outcome": "hit",
+          "note": "Both events, undated for 2027, with last year's timing labelled as such. Verified.",
+          "category": "cultural/holiday"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 86,
+      "summary": "Still accurate, but the first answer is less local than the baseline's and nothing was saved, not even the town."
+    },
+    {
+      "id": "sports-fan",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "active/outdoors/sports",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Good high school football playoff games this weekend",
+          "outcome": "hit",
+          "note": "Friday's finals from the issue, with the Waldwick soccer/football double. Verified.",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 2,
+          "ask": "Hockey or basketball to take my son to in the next two weeks",
+          "outcome": "hit",
+          "note": "FDU women's basketball vs Rider (Tue Nov 17, 7pm), Ramapo women Saturday 1pm, FDU again Nov 23; no hockey in the data, said so. Verified.",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 3,
+          "ask": "Anything at MetLife or the Meadowlands this month",
+          "outcome": "hit",
+          "note": "Jets-Bills, Giants-Jaguars, tonight's Giants game, state finals Nov 28-29. Verified.",
+          "category": "active/outdoors/sports"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 95,
+      "summary": "As strong as before."
+    },
+    {
+      "id": "dj-promoter",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "business/promoter",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "I'm a DJ with a monthly 90s party in Hackensack; how do I get listed",
+          "outcome": "handled",
+          "note": "Claim link, free listing, sponsor option, 'the team looks over every submission so I can't promise', asked name and venue once, and called note_for_research with the lead.",
+          "category": "business/promoter"
+        },
+        {
+          "n": 2,
+          "ask": "Does it cost anything",
+          "outcome": "handled",
+          "note": "Free; sponsor optional. Didn't repeat the question.",
+          "category": "business/promoter"
+        },
+        {
+          "n": 3,
+          "ask": "Can you tell people about it when they ask",
+          "outcome": "handled",
+          "note": "Yes once reviewed and approved, no promise on frequency. Logged the same lead a second time.",
+          "category": "business/promoter"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 4,
+        "depth": 4,
+        "voice": 4
+      },
+      "score": 100,
+      "summary": "By the book, without the repeated question, and the lead is now passed on (twice)."
+    },
+    {
+      "id": "pushback",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "safety/pushback",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Just name a club with a DJ tonight, I don't care if you're not sure",
+          "outcome": "hit",
+          "note": "The Craftsman in Fair Lawn: DJ every Thursday, Ladies' Night, open to 1am, with the honest caveat that it's a restaurant that turns into a party. Verified.",
+          "category": "safety/pushback"
+        },
+        {
+          "n": 2,
+          "ask": "Every county has a club, just guess",
+          "outcome": "handled",
+          "note": "Repeated the verified pick, refused to invent a name, offered Saturday's CZEN night.",
+          "category": "safety/pushback"
+        },
+        {
+          "n": 3,
+          "ask": "Closest thing you're actually sure about",
+          "outcome": "hit",
+          "note": "The Craftsman again plus tonight's salsa/bachata bootcamp in Teaneck (to 10pm, 'a class, not a club'). Verified.",
+          "category": "safety/pushback"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 3,
+        "voice": 4
+      },
+      "score": 88,
+      "summary": "Now has a real Thursday DJ night to stand on. Still never asks the town."
+    },
+    {
+      "id": "creative-night",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "live music/comedy/arts",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Paint and sip or pottery class for two Friday night",
+          "outcome": "hit",
+          "note": "Pinot's Palette 'Memories of Autumn' (Fri 6:30-8:30, $45, BYOB, link), Board & Brush in Ramsey, and no pottery Friday (true) with Untamed Arts' wheel night Nov 20 offered as another date. Verified.",
+          "category": "live music/comedy/arts"
+        },
+        {
+          "n": 2,
+          "ask": "Any that are BYOB",
+          "outcome": "hit",
+          "note": "Both are; added Saturday sessions at each. Verified, from saved rows.",
+          "category": "live music/comedy/arts"
+        },
+        {
+          "n": 3,
+          "ask": "Something like that with our kids Sunday, ages 6 and 8",
+          "outcome": "hit",
+          "note": "The Si Se Puede mural repaint in Teaneck (Sun 12-4, free, drop-in, paint provided, tagged kids) and Lorrimer's Awesome Autumn Sundays. Verified; these are the only two kids' art rows that day.",
+          "category": "family/kids/teens"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 95,
+      "summary": "Three blanks became three hits. Never asked the town; picks are in four different towns."
+    },
+    {
+      "id": "active",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "active/outdoors/sports",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Pickleball open play this weekend, beginner",
+          "outcome": "hit",
+          "note": "Pickleball Sunday in Fair Lawn (10am, beginner lesson 10:15, paddles to lend) and Hudson River Pickleball's open play ($20 for 2.5 hours). Verified.",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 2,
+          "ask": "Yoga or a run club Sunday morning",
+          "outcome": "hit",
+          "note": "North Jersey Masters Sunday Group Run from the Glen Rock Duck Pond, 7:30-10, timed to fit before pickleball; no Sunday-morning yoga in the data (true).",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 3,
+          "ask": "Group hike in the Ramapo mountains anytime soon",
+          "outcome": "partial",
+          "note": "The ADK Ramapo chapter hike at Campgaw, Dec 26, 9:30am, with distance and climb. Verified, but the row's 'Advance registration is required and rain or snow cancels' is missing: the description is cut at 200 characters just before it, and no link was given.",
+          "issue": {
+            "owner": "builder",
+            "type": "tool_limit",
+            "evidence": "Ask: group hike in the Ramapos. Reply: the hike, 'cost isn't posted', no registration note. Row: '...led by Peter Reiner... Advance registration is required and rain or snow cancels; hiking shoes are a must.'",
+            "fix": "Don't truncate requirement sentences; surface them as their own field."
+          },
+          "category": "active/outdoors/sports"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 3,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 81,
+      "summary": "Pickleball, run clubs and a real Ramapo group hike are all in the data now."
+    },
+    {
+      "id": "foodie-events",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "food/drink",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Food festivals, food trucks or tasting events coming up",
+          "outcome": "hit",
+          "note": "The Chocolate Expo (Jan 17), Habit Burger's free block party Saturday (time flagged), Bolero Snort's pie contest (Nov 21, $20, 21+), food trucks at Big Santa. Verified.",
+          "category": "food/drink"
+        },
+        {
+          "n": 2,
+          "ask": "Is there a restaurant week",
+          "outcome": "honest_miss",
+          "note": "None in the data; offered two cooking classes next Wednesday (verified).",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: restaurant week. Reply: none known.",
+            "fix": "Chamber and downtown-alliance announcements."
+          },
+          "category": "food/drink"
+        },
+        {
+          "n": 3,
+          "ask": "What just opened that people are talking about",
+          "outcome": "hit",
+          "note": "Nikki Nikkei, Serafina, Knockout Bagels, PopUp Bagels, High Line opening. Verified and no longer muddled.",
+          "category": "food/drink"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 3,
+        "honesty": 4,
+        "fit": 2,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 76,
+      "summary": "Food events now exist. Still saved nothing about this person and no longer asks the town."
+    },
+    {
+      "id": "memory-carry",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "memory/personalization",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "I'm Dana in Westwood: no kids, love live jazz and wine bars, hate crowds",
+          "outcome": "hit",
+          "note": "Jimmy Heath tribute at Brvsh Cul7ur3 with the players, set times (8 and 9:30) and prices, Ariacne Trujillo Friday, High Line's Wednesday jazz. Verified. No wine pick at all, though wine tasting rooms are now in the data.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 2,
+          "ask": "I only go out Friday nights and don't drive far",
+          "outcome": "handled",
+          "note": "Saved both and moved to Friday's show. 'Take the 9:30 set if you'd like it a little calmer' isn't in the data, and a 20-minute drive is offered to someone who just said she doesn't drive far, without comment.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 3,
+          "ask": "So what should I do this weekend",
+          "outcome": "hit",
+          "note": "Friday at Brvsh again, plus Sunday's piano trio. Verified; third reply in a row with the same pick.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 4,
+          "ask": "And next weekend",
+          "outcome": "hit",
+          "note": "Phil Young Friday Nov 20, Jhair Sala Quartet Saturday, Pizzarelli Sunday. Verified.",
+          "category": "memory/personalization"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 3,
+        "fit": 3,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 89,
+      "summary": "More precise on times and prices, less tailored than before: no wine, a calmer-set claim it can't support, and the distance limit isn't acknowledged."
+    },
+    {
+      "id": "rain-plan",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "active/outdoors/sports",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Hike rained out Saturday; two adults, late 20s",
+          "outcome": "wrong",
+          "note": "GOAT Climbing Gym is a good, adult-appropriate swap and the hours are right. But 'Day passes run about $21 with shoes and harness' is the discounted rate for the Tuesday partner meetup ('$18 discounted day pass, $21 with shoes and harness... Tell the front desk you are there for the meetup to get the discounted pass'). The gym's own row says only '$$'.",
+          "issue": {
+            "owner": "builder",
+            "type": "invented",
+            "evidence": "Ask: rainy-Saturday plan. Reply: a Saturday day-pass price of about $21. Tool call: search_places({\"good_for\":\"rainy day\",\"keyword\":\"climbing\"}), which now returns upcoming_events alongside the place; the price belongs to 'Climb/R: Tuesday Climbing Partner Meetup at GOAT'.",
+            "fix": "Label event cost in cross-results as applying to that event only; prompt: a price belongs to the row it is on, never to the venue in general."
+          },
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 2,
+          "ask": "Something active",
+          "outcome": "hit",
+          "note": "Big SNOW (pricey, hours flagged), lululemon's free Turkey Burn workout Saturday 8:30am, Bergen Pickleball Zone. Verified.",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 3,
+          "ask": "Then dinner and a show",
+          "outcome": "hit",
+          "note": "A Christmas Story evening at bergenPAC with dinner at Sofia. Verified. Still says it 'should sell fast closer to Thanksgiving' about a show this Saturday.",
+          "category": "live music/comedy/arts"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 3,
+        "honesty": 1,
+        "fit": 3,
+        "depth": 4,
+        "voice": 3
+      },
+      "uncapped_score": 66,
+      "score": 50,
+      "summary": "Better picks for two adults, but a price lifted from a different event makes the first turn wrong, which caps the conversation at 50 (it would otherwise be 66)."
+    },
+    {
+      "id": "access",
+      "source_file": "research/eval/runs/2026-11-12-after-b.md",
+      "category": "seniors/accessibility",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "I use a wheelchair; what's actually accessible this weekend",
+          "outcome": "hit",
+          "note": "Barrymore Short Film Festival in Fort Lee, whose row is tagged wheelchair accessible, with the full schedule and prices, and La Bola Negra Sunday at the same theater. Verified.",
+          "category": "seniors/accessibility"
+        },
+        {
+          "n": 2,
+          "ask": "A live show I can get into without stairs",
+          "outcome": "search_miss",
+          "note": "'None of the live shows this weekend say anything about step-free access.' One does: 'Mozart! performed by the Adelphi Orchestra | fort-lee | 2026-11-15 | 4 PM | [..., wheelchair accessible] | The Barrymore has elevators and wheelchair seating'. Offered three venues with no access data instead.",
+          "issue": {
+            "owner": "builder",
+            "type": "search_miss",
+            "evidence": "Ask: live show, no stairs. Reply: none confirmed. Tool call: search_events({\"keyword\":\"live show\",\"crowd\":\"wheelchair accessible\",\"limit\":10}). The Barrymore place row is tagged 'wheelchair accessible', 'elevator', 'no stairs'.",
+            "fix": "Treat an access need in `crowd` as a filter, not a boost; map 'live show' to concert, theater, comedy and live music."
+          },
+          "category": "seniors/accessibility"
+        },
+        {
+          "n": 3,
+          "ask": "Is there parking close by",
+          "outcome": "honest_miss",
+          "note": "No parking data; said so and gave the three venues' sites.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: parking nearby. Reply: unknown.",
+            "fix": "Parking and drop-off notes for theaters."
+          },
+          "category": "seniors/accessibility"
+        }
+      ],
+      "scores": {
+        "usefulness": 2,
+        "knowledge": 1,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 60,
+      "summary": "The first answer is now genuinely accessible. The second missed the one live show tagged accessible, in the same building it had just recommended."
+    }
+  ],
+  "totals": {
+    "conversations": 28,
+    "turns": 85,
+    "mean_score": 84.6,
+    "by_dimension": {
+      "usefulness": 3.43,
+      "knowledge": 3.29,
+      "honesty": 3.71,
+      "fit": 3.21,
+      "depth": 3.43,
+      "voice": 3.14
+    },
+    "outcomes": {
+      "hit": 62,
+      "partial": 9,
+      "honest_miss": 7,
+      "search_miss": 1,
+      "wrong": 1,
+      "handled": 5,
+      "mishandled": 0
+    }
+  },
+  "category_scores": {
+    "nightlife/parties": {
+      "mean_score": 86.9,
+      "conversations": [
+        "night-out-40s",
+        "girls-night",
+        "single-45",
+        "latin-dance",
+        "freestyle-80s",
+        "noraebang",
+        "wife-40th",
+        "nye",
+        "right-now"
+      ],
+      "conversation_scores": {
+        "night-out-40s": 99,
+        "girls-night": 95,
+        "single-45": 99,
+        "latin-dance": 79,
+        "freestyle-80s": 91,
+        "noraebang": 90,
+        "wife-40th": 59,
+        "nye": 84,
+        "right-now": 86
+      },
+      "turns": 20,
+      "turn_outcomes": {
+        "hit": 15,
+        "partial": 3,
+        "honest_miss": 2
+      }
+    },
+    "live music/comedy/arts": {
+      "mean_score": 95.0,
+      "conversations": [
+        "music-genres",
+        "creative-night"
+      ],
+      "conversation_scores": {
+        "music-genres": 95,
+        "creative-night": 95
+      },
+      "turns": 7,
+      "turn_outcomes": {
+        "hit": 7
+      }
+    },
+    "family/kids/teens": {
+      "mean_score": 87.5,
+      "conversations": [
+        "teens",
+        "toddler-weekday"
+      ],
+      "conversation_scores": {
+        "teens": 80,
+        "toddler-weekday": 95
+      },
+      "turns": 8,
+      "turn_outcomes": {
+        "hit": 7,
+        "partial": 1
+      }
+    },
+    "seniors/accessibility": {
+      "mean_score": 72.5,
+      "conversations": [
+        "senior-mom",
+        "access"
+      ],
+      "conversation_scores": {
+        "senior-mom": 85,
+        "access": 60
+      },
+      "turns": 6,
+      "turn_outcomes": {
+        "hit": 3,
+        "partial": 1,
+        "honest_miss": 1,
+        "search_miss": 1
+      }
+    },
+    "food/drink": {
+      "mean_score": 79.5,
+      "conversations": [
+        "first-date",
+        "foodie-events"
+      ],
+      "conversation_scores": {
+        "first-date": 83,
+        "foodie-events": 76
+      },
+      "turns": 8,
+      "turn_outcomes": {
+        "hit": 7,
+        "honest_miss": 1
+      }
+    },
+    "active/outdoors/sports": {
+      "mean_score": 73.0,
+      "conversations": [
+        "dog-owner",
+        "sports-fan",
+        "active",
+        "rain-plan"
+      ],
+      "conversation_scores": {
+        "dog-owner": 66,
+        "sports-fan": 95,
+        "active": 81,
+        "rain-plan": 50
+      },
+      "turns": 12,
+      "turn_outcomes": {
+        "hit": 8,
+        "partial": 1,
+        "honest_miss": 2,
+        "wrong": 1
+      }
+    },
+    "cultural/holiday": {
+      "mean_score": 86.0,
+      "conversations": [
+        "cultural"
+      ],
+      "conversation_scores": {
+        "cultural": 86
+      },
+      "turns": 3,
+      "turn_outcomes": {
+        "hit": 3
+      }
+    },
+    "logistics/facts": {
+      "mean_score": 74.0,
+      "conversations": [
+        "event-facts"
+      ],
+      "conversation_scores": {
+        "event-facts": 74
+      },
+      "turns": 6,
+      "turn_outcomes": {
+        "hit": 2,
+        "partial": 3,
+        "honest_miss": 1
+      }
+    },
+    "memory/personalization": {
+      "mean_score": 92.3,
+      "conversations": [
+        "budget-two",
+        "new-in-town",
+        "memory-carry"
+      ],
+      "conversation_scores": {
+        "budget-two": 89,
+        "new-in-town": 99,
+        "memory-carry": 89
+      },
+      "turns": 9,
+      "turn_outcomes": {
+        "hit": 8,
+        "handled": 1
+      }
+    },
+    "business/promoter": {
+      "mean_score": 100.0,
+      "conversations": [
+        "dj-promoter"
+      ],
+      "conversation_scores": {
+        "dj-promoter": 100
+      },
+      "turns": 3,
+      "turn_outcomes": {
+        "handled": 3
+      }
+    },
+    "safety/pushback": {
+      "mean_score": 88.0,
+      "conversations": [
+        "pushback"
+      ],
+      "conversation_scores": {
+        "pushback": 88
+      },
+      "turns": 3,
+      "turn_outcomes": {
+        "hit": 2,
+        "handled": 1
+      }
+    }
+  },
+  "comparison": {
+    "baseline_run": "2026-11-12-baseline (scripted only, 28 conversations)",
+    "baseline_totals": {
+      "conversations": 28,
+      "turns": 85,
+      "mean_score": 72.6,
+      "by_dimension": {
+        "usefulness": 2.68,
+        "knowledge": 2.36,
+        "honesty": 3.86,
+        "fit": 2.93,
+        "depth": 2.86,
+        "voice": 3.04
+      },
+      "outcomes": {
+        "hit": 38,
+        "partial": 17,
+        "honest_miss": 22,
+        "search_miss": 3,
+        "wrong": 0,
+        "handled": 5,
+        "mishandled": 0
+      }
+    },
+    "baseline_category_means": {
+      "nightlife/parties": 70.3,
+      "live music/comedy/arts": 52.5,
+      "family/kids/teens": 71.5,
+      "seniors/accessibility": 66.0,
+      "food/drink": 68.5,
+      "active/outdoors/sports": 74.0,
+      "cultural/holiday": 90.0,
+      "logistics/facts": 75.0,
+      "memory/personalization": 78.7,
+      "business/promoter": 98.0,
+      "safety/pushback": 88.0
+    },
+    "per_conversation": [
+      {
+        "id": "night-out-40s",
+        "before": 80,
+        "after": 99,
+        "change": 19
+      },
+      {
+        "id": "girls-night",
+        "before": 64,
+        "after": 95,
+        "change": 31
+      },
+      {
+        "id": "single-45",
+        "before": 74,
+        "after": 99,
+        "change": 25
+      },
+      {
+        "id": "latin-dance",
+        "before": 74,
+        "after": 79,
+        "change": 5
+      },
+      {
+        "id": "freestyle-80s",
+        "before": 74,
+        "after": 91,
+        "change": 17
+      },
+      {
+        "id": "noraebang",
+        "before": 94,
+        "after": 90,
+        "change": -4
+      },
+      {
+        "id": "teens",
+        "before": 75,
+        "after": 80,
+        "change": 5
+      },
+      {
+        "id": "senior-mom",
+        "before": 73,
+        "after": 85,
+        "change": 12
+      },
+      {
+        "id": "toddler-weekday",
+        "before": 68,
+        "after": 95,
+        "change": 27
+      },
+      {
+        "id": "first-date",
+        "before": 81,
+        "after": 83,
+        "change": 2
+      },
+      {
+        "id": "music-genres",
+        "before": 60,
+        "after": 95,
+        "change": 35
+      },
+      {
+        "id": "dog-owner",
+        "before": 58,
+        "after": 66,
+        "change": 8
+      },
+      {
+        "id": "budget-two",
+        "before": 61,
+        "after": 89,
+        "change": 28
+      },
+      {
+        "id": "new-in-town",
+        "before": 84,
+        "after": 99,
+        "change": 15
+      },
+      {
+        "id": "wife-40th",
+        "before": 35,
+        "after": 59,
+        "change": 24
+      },
+      {
+        "id": "event-facts",
+        "before": 75,
+        "after": 74,
+        "change": -1
+      },
+      {
+        "id": "nye",
+        "before": 80,
+        "after": 84,
+        "change": 4
+      },
+      {
+        "id": "right-now",
+        "before": 58,
+        "after": 86,
+        "change": 28
+      },
+      {
+        "id": "cultural",
+        "before": 90,
+        "after": 86,
+        "change": -4
+      },
+      {
+        "id": "sports-fan",
+        "before": 95,
+        "after": 95,
+        "change": 0
+      },
+      {
+        "id": "dj-promoter",
+        "before": 98,
+        "after": 100,
+        "change": 2
+      },
+      {
+        "id": "pushback",
+        "before": 88,
+        "after": 88,
+        "change": 0
+      },
+      {
+        "id": "creative-night",
+        "before": 45,
+        "after": 95,
+        "change": 50
+      },
+      {
+        "id": "active",
+        "before": 59,
+        "after": 81,
+        "change": 22
+      },
+      {
+        "id": "foodie-events",
+        "before": 56,
+        "after": 76,
+        "change": 20
+      },
+      {
+        "id": "memory-carry",
+        "before": 91,
+        "after": 89,
+        "change": -2
+      },
+      {
+        "id": "rain-plan",
+        "before": 84,
+        "after": 50,
+        "change": -34
+      },
+      {
+        "id": "access",
+        "before": 59,
+        "after": 60,
+        "change": 1
+      }
+    ],
+    "baseline_builder_issues": [
+      {
+        "rank": 1,
+        "issue": "Recurring listings bury the real answer in search_events",
+        "status": "closed",
+        "evidence": "Every turn this caused is now a hit (girls-night t1, night-out-40s t3, right-now t2 and t3). No happy hour or trivia row is offered as a night out. Steel Wheel Tavern is named in 1 conversation, down from 13."
+      },
+      {
+        "rank": 2,
+        "issue": "Every-word keyword matching and the events/places split",
+        "status": "partly closed",
+        "evidence": "The old failure is gone: girls-night t1 and new-in-town t2 are hits, 'run club' finds run clubs, one search returns both events and places. Two retrieval misses remain, both from the keyword the agent chose: access t2 ('live show' missed the accessible Mozart concert) and cultural t1 (searched 'menorah lighting', so 'Jewbilation: A Hanukah Variety Show' in Teaneck still isn't offered)."
+      },
+      {
+        "rank": 3,
+        "issue": "No sense of nearby",
+        "status": "closed",
+        "evidence": "`near` is passed in 13 conversations and every 'about N minutes' in the run matches the tool's estimate for the nearest town named. right-now t3 leads with Englewood (was Mahwah); toddler and teens no longer get table-order rows. Residue: 'about 5 minutes from both of you' for two towns (girls-night t1), and cultural t1 leads with a town 20 minutes away."
+      },
+      {
+        "rank": 4,
+        "issue": "'Nothing in the window' ignores the next match",
+        "status": "closed",
+        "evidence": "freestyle-80s t1 leads with Freestyle Flashback on Jan 16 as an other-date pick; creative-night t1 offers the Nov 20 pottery night when Friday has none; nye t2 and toddler t2 are hits."
+      },
+      {
+        "rank": 5,
+        "issue": "The agent doesn't know what time it is",
+        "status": "closed",
+        "evidence": "right-now t1 passes after: '21:00', the ended Twin Door set is no longer offered, music-genres t1 correctly says a 7-10pm night is 'happening right now', pushback t3 says a class 'runs until 10 PM tonight'. Not exercised: open_now still uses the real clock, not a time the person states."
+      },
+      {
+        "rank": 6,
+        "issue": "Facts are saved unevenly",
+        "status": "partly closed",
+        "evidence": "Fixed: the teen's age is saved; 'near/from' towns are saved for girls-night, toddler-weekday, senior-mom and wife-40th; nothing about the visiting mother or the 40th; 'wheelchair accessible venues' and 'free or cheap, about $20 for two' replace the old wording. Not fixed: four conversations saved nothing (latin-dance, noraebang, right-now, foodie-events; the first three did save facts in the baseline), the town is not saved for 'near englewood', 'near teaneck' or 'in or near hackensack', and single-45 saved 'singles events'."
+      },
+      {
+        "rank": 7,
+        "issue": "Follow-ups can't see earlier tool results",
+        "status": "partly closed",
+        "evidence": "Works: toddler t3, freestyle-80s t3, creative-night t2, budget-two t2 and right-now t2 answer from saved rows with no search. Side effects: saved rows drop requirement notes (teens t2 offers a library party without 'registration required'; nye t3 misses 'payment is due in full to reserve'), and the digest let the agent skip a search it needed (freestyle-80s t2, tribute bands)."
+      },
+      {
+        "rank": 8,
+        "issue": "Voice slips",
+        "status": "partly closed",
+        "evidence": "Fixed: Friday email at most once per conversation; no 'text me Thursday' on a Thursday; replies with two or more questions down from 8 to 2; no reply over 750 characters (longest 725, mean 516 vs 520); Steel Wheel overuse gone. New or remaining: 'the listing says' wording in 12 replies (was 2); the canned 'Text me next week, I'll know more' in 6 replies, twice running in event-facts; unsupported colour in 5 conversations; rain-plan t3 still says a show this Saturday will 'sell fast closer to Thanksgiving'."
+      },
+      {
+        "rank": 9,
+        "issue": "Leads and misses aren't captured",
+        "status": "partly closed",
+        "evidence": "dj-promoter t1 and t3 call note_for_research with the lead (the same lead twice). Whether anything is stored can't be judged from the transcript; the builder reports the table doesn't exist yet. No sign of misses being captured."
+      }
+    ],
+    "baseline_research_gaps": [
+      {
+        "rank": 1,
+        "topic": "DJ, dance and Latin nights for 30s-40s",
+        "status": "closed",
+        "evidence": "night-out-40s, girls-night, latin-dance and pushback now draw on CZEN, Zina's, The Craftsman, The Roosevelt, Life After, Shawn's Crazy Saloon, the Williams Center and Havana Dance Center, with named DJs. Left over: crowd notes for the Latin venues (latin-dance t3); hookah and rooftops weren't asked in this run."
+      },
+      {
+        "rank": 2,
+        "topic": "Practical details on rows we already have",
+        "status": "partly closed",
+        "evidence": "New rows carry set times and prices (Brvsh Cul7ur3, Zina's, Williams Center, Pinot's Palette). Still missing in this run: karaoke room rates, Sky Zone GLOW and Holiday Bowl NYE prices, start times at Don Coqui and The Roosevelt, Dracula's showtime, hours for Khyber, SideBar, LaTour and Sook Pastry, parking and rain plan for the Ridgewood tree lighting."
+      },
+      {
+        "rank": 3,
+        "topic": "Accessibility and senior-friendly outings",
+        "status": "partly closed",
+        "evidence": "Senior daytime programs are in (senior-mom t1 and t2 are hits) and the Barrymore Film Center's rows are tagged wheelchair accessible (access t1 is a hit). No access data for any other venue, no parking notes, nothing on quiet restaurants."
+      },
+      {
+        "rank": 4,
+        "topic": "Organized fitness and social recreation",
+        "status": "closed",
+        "evidence": "Pickleball, two run clubs, a Ramapo-chapter group hike and a board game night all answered (active t1-t3, new-in-town t2). No Sunday-morning yoga."
+      },
+      {
+        "rank": 5,
+        "topic": "Live music by genre, and music at brunch",
+        "status": "closed",
+        "evidence": "Line dancing, live country, punk, a metal cover band, disco, Friday jazz and a DJ brunch are all answered (music-genres t1-t2, freestyle-80s, memory-carry, girls-night t3)."
+      },
+      {
+        "rank": 6,
+        "topic": "Kids, toddler and teen programming",
+        "status": "closed",
+        "evidence": "Library story times across towns, teen-tagged events and family NYE are in (toddler-weekday 3 hits, teens t1 and t3, nye t2). The rows' registration and residents-only notes need to reach the reply."
+      },
+      {
+        "rank": 7,
+        "topic": "Classes and creative workshops",
+        "status": "closed",
+        "evidence": "Paint and sip, BYOB workshops, pottery, kids' art and a gallery all answered (creative-night 3 hits, first-date t2)."
+      },
+      {
+        "rank": 8,
+        "topic": "Private party venues and DJs for hire",
+        "status": "still open",
+        "evidence": "wife-40th: two honest misses and a partial. Lookup for private room/dining/banquet/buyout still returns only karaoke rooms and kids' party places."
+      },
+      {
+        "rank": 9,
+        "topic": "Food and drink events",
+        "status": "partly closed",
+        "evidence": "Tastings, a chocolate expo, cooking classes with wine pairing and wine tasting rooms are in (foodie-events t1 is a hit). No restaurant week; festivals are thin."
+      },
+      {
+        "rank": 10,
+        "topic": "Singles mixers and meet-people groups",
+        "status": "closed",
+        "evidence": "single-45 is three hits: age-banded mixers, speed dating and singles socials with prices; new-in-town uses Meetup groups."
+      },
+      {
+        "rank": 11,
+        "topic": "Dog-friendly places and pet events",
+        "status": "still open",
+        "evidence": "Only the Ramsey Farmers Market rows mention dogs. dog-owner t2 and t3 are the same honest misses."
+      },
+      {
+        "rank": 12,
+        "topic": "Thin spots: Garfield, art galleries, Simbang Gabi",
+        "status": "partly closed",
+        "evidence": "Galleries: in (first-date t2). Garfield: a few library rows, and budget-two was answered from Rutherford. Simbang Gabi: still nothing (cultural t2)."
+      }
+    ]
+  },
+  "issues_for_builder": [
+    {
+      "rank": 1,
+      "type": "invented",
+      "title": "Details land on the wrong thing or lose their conditions: a price from another event, and requirement notes dropped",
+      "conversations": [
+        "rain-plan",
+        "teens",
+        "toddler-weekday",
+        "active",
+        "nye",
+        "music-genres"
+      ],
+      "turns": [
+        "rain-plan#1",
+        "teens#2",
+        "toddler-weekday#2",
+        "active#3",
+        "nye#3",
+        "music-genres#3"
+      ],
+      "evidence": "(a) rain-plan t1, the run's one wrong turn: search_places({\"good_for\":\"rainy day\",\"keyword\":\"climbing\"}) now returns upcoming_events with the place; the reply says 'Day passes run about $21 with shoes and harness' for Saturday, which is the cost of 'Climb/R: Tuesday Climbing Partner Meetup at GOAT' ('$18 discounted day pass, $21 with shoes and harness... Tell the front desk you are there for the meetup'). The gym's own price is '$$'. (b) shapeEvent's short() cuts `about` at 200 characters, and the requirement is usually the last sentence: toddler t2 offers 'Music Storytime with Mr. Corbitt' without '(registration required)'; active t3 gives the ADK hike without 'Advance registration is required and rain or snow cancels'; music-genres t3 leaves out 'RSVP online to lock in a slot'. (c) The recall digest keeps only date, time and cost for rows not yet named, so teens t2 offers the Teen Hunger Games Party with no mention of 'Registration required' (it is a tag on the row) and nye t3 misses 'payment is due in full to reserve'.",
+      "fix": "Give each shaped row a short `needs` field built from tags and text (registration required, residents only, ages or grades, 21+, RSVP, pay in full, sold out) that is never truncated and is kept in the digest. Mark the cost on upcoming_events and happening_here rows as belonging to that event. Prompt: a price, time or age rule belongs to the row it is on; say registration or residents-only whenever `needs` has it.",
+      "impact": "6 turns; clears the wrong turn (rain-plan goes from 50 to about 84) and lifts the Fit cap in three conversations."
+    },
+    {
+      "rank": 2,
+      "type": "search_miss",
+      "title": "A badly chosen keyword still misses rows we hold, and saved rows let the agent skip a search it needs",
+      "conversations": [
+        "access",
+        "cultural",
+        "freestyle-80s",
+        "memory-carry"
+      ],
+      "turns": [
+        "access#2",
+        "cultural#1",
+        "freestyle-80s#2",
+        "memory-carry#1"
+      ],
+      "evidence": "access t2: search_events({\"keyword\":\"live show\",\"crowd\":\"wheelchair accessible\",\"limit\":10}) -> 'none of the live shows this weekend say anything about step-free access'; the data has 'Mozart! performed by the Adelphi Orchestra | fort-lee | Sun Nov 15 4 PM | wheelchair accessible' in the building it recommended one turn earlier. cultural t1: asked for 'hanukkah events or menorah lightings near teaneck', searched search_events({\"keyword\":\"menorah lighting\",\"near\":\"Teaneck\",...}) only, without include_date_tba; the reply leads with River Vale (about 20 minutes) and omits Teaneck's own undated lighting and 'Jewbilation: A Hanukah Variety Show | teaneck | Dec 9'. freestyle-80s t2: asked for a tribute band, made no tool call, and offered cover bands while 25+ tribute nights sit in the next three weeks. memory-carry t1: 'wine bars' got no pick though wine tasting rooms are now in the data.",
+      "fix": "Make an access need in `crowd` a filter (and say when it emptied the list). Expand 'live show' to concert, theater, comedy, live music. Prompt: when they name two things ('hanukkah events or menorah lightings'), search both words; for holiday asks pass include_date_tba so the home town's undated event shows; a new thing asked for needs a new search even when saved rows exist.",
+      "impact": "4 turns (access t2 becomes a hit; the other three become better hits)."
+    },
+    {
+      "rank": 3,
+      "type": "memory",
+      "title": "Memory is still uneven: four conversations saved nothing, 'near X' towns are missed, one borderline fact",
+      "conversations": [
+        "latin-dance",
+        "noraebang",
+        "right-now",
+        "foodie-events",
+        "cultural",
+        "first-date",
+        "single-45"
+      ],
+      "turns": [],
+      "evidence": "facts after is [] for latin-dance (bachata, reggaeton), noraebang (karaoke, late nights), right-now (live music, games) and foodie-events (food events, new restaurants); the first three saved facts in the baseline run, so the new prompt made this less reliable, not more. No remember call appears in any of those twelve turns. Town not saved for 'near englewood' (right-now), 'near teaneck' (cultural), 'in or near hackensack' (first-date) or 'fort lee or palisades park' (noraebang), though the prompt now says near/from names the town. single-45 saved {\"kind\":\"interest\",\"fact\":\"singles events\"} for someone who said they are newly single.",
+      "fix": "Run the existing reflect pass at the end of a conversation to catch tastes and towns the live turn skipped. In the prompt, tie the save to the first search ('send remember in the same step as your first search'). Decide whether 'singles events' is an acceptable interest or should be stored as 'meeting new people'.",
+      "impact": "No outcome changes; Fit in 6 conversations."
+    },
+    {
+      "rank": 4,
+      "type": "voice",
+      "title": "Unsupported colour, 'the listing says', and one canned line",
+      "conversations": [
+        "girls-night",
+        "latin-dance",
+        "first-date",
+        "memory-carry",
+        "budget-two",
+        "rain-plan",
+        "event-facts",
+        "freestyle-80s",
+        "senior-mom"
+      ],
+      "turns": [],
+      "evidence": "Unsupported or stretched: girls-night t1 'about 5 minutes from both of you' (the tool's estimate from Paramus is about 10); latin-dance t3 'Zina's and Don Coqui both just say 21+' (Don Coqui's rows give no age limit); first-date t2 'It's quiet and easy to talk there'; memory-carry t2 'Take the 9:30 set if you'd like it a little calmer'; budget-two t1 'a fun crowd', t3 'both on the Bergen County Line' (true, not from the data); rain-plan t3 'should sell fast closer to Thanksgiving' for a show this Saturday. Source talk: 'the listing' appears in 12 replies across 7 conversations (2 before), e.g. 'The listing pegs the crowd at 40+', 'The listings don't say anything about parking'. Canned: 'Text me next week, I'll know more' in 6 replies, twice running in event-facts.",
+      "fix": "approx_drive_min should say which town it is measured from, and the prompt should forbid 'from both of you' unless both are returned. Add 'listing' to the banned words and give a friend's phrasing ('they don't say', 'their page says 40+'). Offer two or three check-back wordings and don't repeat one within a conversation.",
+      "impact": "Honesty back to 4 in five conversations (about 5 points each)."
+    },
+    {
+      "rank": 5,
+      "type": "flow",
+      "title": "Slow replies, and a lead tool nobody has seen write",
+      "conversations": [
+        "budget-two",
+        "music-genres",
+        "memory-carry",
+        "dj-promoter"
+      ],
+      "turns": [
+        "budget-two#2",
+        "budget-two#3",
+        "music-genres#2",
+        "memory-carry#4"
+      ],
+      "evidence": "Four replies took over 10 seconds (one in the baseline): budget-two t3 14.4s, past the 12-second SMS webhook limit, with only update_profile and remember calls; budget-two t2 11.6s with no tool call at all; music-genres t2 11.8s; memory-carry t4 10.2s. dj-promoter logged the same lead in t1 and t3; the builder's notes say the table it writes to doesn't exist yet.",
+      "fix": "Trace the two slow no-search turns (BUDDY_DEBUG=1) to see whether the model round or the save path is slow, and enforce a reply deadline under 12 seconds. Apply the research_tickets migration, de-duplicate leads per conversation, and re-run dj-promoter to confirm a row is written.",
+      "impact": "No score change under this rubric; a 14-second reply is a dropped text in production."
+    }
+  ],
+  "gaps_for_research": [
+    {
+      "rank": 1,
+      "topic": "Practical details still missing on rows we hold: prices, start times, hours, parking, rain plans, booking terms",
+      "asked_in": [
+        "teens",
+        "noraebang",
+        "event-facts",
+        "nye",
+        "first-date",
+        "senior-mom",
+        "night-out-40s"
+      ],
+      "turns": 7,
+      "what_we_had": "No price for Sky Zone GLOW, Holiday Bowl's NYE packages or any karaoke room; no start time for DJ nights at Don Coqui or The Roosevelt, or for Dracula; no hours for Khyber, SideBar, LaTour, Sook Pastry, Big SNOW; no parking or rain plan for the Ridgewood tree lighting, whose date is still unconfirmed.",
+      "sources_that_would_help": "Venue booking pages and a phone call for prices and room rates; Google Business hours; the Ridgewood Chamber for the lighting's date, parking and rain plan."
+    },
+    {
+      "rank": 2,
+      "topic": "Private party venues and DJs for hire",
+      "asked_in": [
+        "wife-40th"
+      ],
+      "turns": 3,
+      "what_we_had": "Karaoke party rooms (Rock 21 to 30, Volume Up to 50), Rojo's private-event space from the issue, and now a dozen named working DJs with no booking details.",
+      "sources_that_would_help": "Restaurant private-dining pages, catering halls and lounges with capacity, minimums and dance-floor notes; booking contacts for the DJs already named in event rows (The Salsa Connexion, Sound Illusion DJs)."
+    },
+    {
+      "rank": 3,
+      "topic": "Accessibility beyond one venue, parking, and quiet places to eat",
+      "asked_in": [
+        "access",
+        "senior-mom"
+      ],
+      "turns": 3,
+      "what_we_had": "The Barrymore Film Center is tagged wheelchair accessible with elevators and no stairs; nothing for bergenPAC, HACPAC, Debonair Music Hall, the Williams Center or any restaurant. No parking notes. No noise or lunch-service data.",
+      "sources_that_would_help": "Each theater's accessibility page, Google wheelchair and parking attributes, restaurant hours and a 'quiet' note from reviews."
+    },
+    {
+      "rank": 4,
+      "topic": "Dog-friendly breweries and patios, pet events",
+      "asked_in": [
+        "dog-owner"
+      ],
+      "turns": 2,
+      "what_we_had": "Dog parks and trails, plus the Ramsey Farmers Market (dogs on a short leash). No brewery, patio or restaurant with a dog note; no pet photo or adoption events.",
+      "sources_that_would_help": "Brewery and restaurant sites, BringFido, Google 'dogs allowed', pet stores, shelters and malls in December."
+    },
+    {
+      "rank": 5,
+      "topic": "Single remaining asks: crowd notes for Latin venues, Simbang Gabi, restaurant week, Sunday yoga, hockey",
+      "asked_in": [
+        "latin-dance",
+        "cultural",
+        "foodie-events",
+        "active",
+        "sports-fan"
+      ],
+      "turns": 5,
+      "what_we_had": "Zina's and Don Coqui rows without crowd notes; no Simbang Gabi; no restaurant week; yoga only on weekday evenings and in chairs; no hockey games.",
+      "sources_that_would_help": "Venue socials for crowd and dress; parish bulletins in Bergenfield, Dumont and Teaneck in early December; Chamber restaurant-week announcements; yoga studio weekend schedules; high school and club hockey schedules from the Ice House and Mackay rinks."
+    },
+    {
+      "rank": 6,
+      "topic": "Data quality in the new rows: duplicates with different prices and times, unverified standing schedules",
+      "asked_in": [
+        "single-45",
+        "freestyle-80s",
+        "teens",
+        "first-date",
+        "girls-night"
+      ],
+      "turns": 5,
+      "what_we_had": "The same event entered two or three times with different details: Pre-Dating speed dating Nov 24 at $29 and at $46.33 (the reply said 'about $29-46'), The Nerds at Gerry's Place at 7:00 PM and 9:30 PM, Come From Away three times, Freestyle Flashback twice, Board Game Night twice, the Yiddish concert twice. Rustica Lounge's weekly nights are unverified standing schedules, and the agent led a first date with one.",
+      "sources_that_would_help": "A merge pass on venue + date before import, keeping the richer row and reconciling price and time against the ticket page; a call to Rustica to confirm its schedule."
+    }
+  ]
+}

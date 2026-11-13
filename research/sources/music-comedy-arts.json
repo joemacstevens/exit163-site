@@ -1,0 +1,3102 @@
+{
+  "domain": "music-comedy-arts",
+  "sources": [
+    {
+      "name": "BaseLocal: Bergen County events",
+      "kind": "aggregator",
+      "url": "https://baselocal.com/nj/bergen-county/events/",
+      "other_urls": [
+        "https://baselocal.com/nj/bergen-county/events/live-music/",
+        "https://baselocal.com/nj/bergen-county/events/this-weekend/",
+        "https://baselocal.com/nj/bergen-county/events/free/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "arts",
+        "nightlife",
+        "community",
+        "family"
+      ],
+      "event_types": [
+        "bar bands",
+        "comedy nights",
+        "library programs",
+        "craft workshops",
+        "church concerts",
+        "film screenings"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2027-01-29",
+      "sample_events": [
+        {
+          "title": "Stand Up Comedy Show",
+          "date": "2026-11-20",
+          "time": "8 PM",
+          "venue": "Redd's",
+          "town": "Carlstadt",
+          "cost": null,
+          "source_url": "https://baselocal.com/nj/bergen-county/events/"
+        },
+        {
+          "title": "Sleigh What?! Improv Comedy",
+          "date": "2026-12-12",
+          "time": "6 PM",
+          "venue": "Bolero Snort Brewery",
+          "town": "Carlstadt",
+          "cost": null,
+          "source_url": "https://baselocal.com/nj/bergen-county/events/"
+        },
+        {
+          "title": "Miguel Zenon Duo",
+          "date": "2026-12-12",
+          "time": "8 PM",
+          "venue": "Brvsh Cul7ur3",
+          "town": "Teaneck",
+          "cost": null,
+          "source_url": "https://baselocal.com/nj/bergen-county/events/"
+        }
+      ],
+      "yield": "high",
+      "notes": "Best single find. Day-by-day county list that mostly links out to Facebook Events, so it surfaces small rooms we cannot read on Facebook: Untamed Arts (Hackensack craft nights), 82 Oak Bar & Bistro (Garfield), Ramsey Golf & Country Club/Rare Bird, Lenora's (Hackensack), Hansil's (Oakland), Temple Israel (Ridgewood), Our Lady of Mount Carmel (Ridgewood), Center for Modern Dance Education (Hackensack), Forte Piano (Paramus). Page is about 156k characters; read it in two passes. A stray Passaic listing slipped in, so check towns."
+    },
+    {
+      "name": "The Local Music Finder: Bergen County",
+      "kind": "aggregator",
+      "url": "https://www.thelocalmusicfinder.com/events/county/bergen-county-nj",
+      "other_urls": [
+        "https://www.thelocalmusicfinder.com/venue/steel-wheel-tavern-89",
+        "https://www.thelocalmusicfinder.com/search?entryPoint=NB"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife",
+        "arts"
+      ],
+      "event_types": [
+        "cover bands",
+        "tribute bands",
+        "acoustic duos",
+        "solo singers"
+      ],
+      "audience": "bar and restaurant crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2027-02-06",
+      "sample_events": [
+        {
+          "title": "After Party",
+          "date": "2026-11-20",
+          "time": "9 PM",
+          "venue": "The Orange Lantern",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/after-party-42"
+        },
+        {
+          "title": "John Lepre",
+          "date": "2026-11-21",
+          "time": "6 PM",
+          "venue": "Steel Wheel Tavern",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/venue/steel-wheel-tavern-89"
+        },
+        {
+          "title": "The Kootz",
+          "date": "2026-12-02",
+          "time": "6:30 PM",
+          "venue": "Steel Wheel Tavern",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/venue/steel-wheel-tavern-89"
+        }
+      ],
+      "yield": "high",
+      "notes": "Already used for events, listed here for how to mine it. County page said 102 events but only renders the first 20 (a ?page=2 URL returns the same 20), so walk the /venue/<slug>-<id> and /band/<slug>-<id> pages instead; each lists every upcoming gig plus the act's own site, Facebook and Instagram. 'Tomorrow'/'Tonight' labels are relative to the fetch date."
+    },
+    {
+      "name": "LIve Music Bergen County NJ (Facebook group)",
+      "kind": "facebook_group",
+      "url": "https://www.facebook.com/groups/1711563453037180/",
+      "other_urls": [],
+      "platform": "facebook",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife",
+        "arts"
+      ],
+      "event_types": [
+        "band gig flyers",
+        "venue lineups"
+      ],
+      "audience": "local music fans, bands and venues",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-09",
+      "sample_events": [],
+      "yield": "high",
+      "notes": "Public group whose stated purpose is sharing upcoming live music in Bergen County. Search snippets showed posts a few days old (The EDGE band at Gerry's Place in Norwood, a duo at Shortway's). Not loaded; needs a logged-in session to read the feed. The last-activity date is approximate, from a '3d' snippet."
+    },
+    {
+      "name": "Barrymore Film Center",
+      "kind": "venue_calendar",
+      "url": "https://barrymorefilmcenter.org/full-schedule",
+      "other_urls": [
+        "https://tockify.com/barrymore.film.center",
+        "https://barrymorefilmcenter.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Fort Lee"
+      ],
+      "categories": [
+        "arts",
+        "family"
+      ],
+      "event_types": [
+        "repertory and indie film",
+        "cult classics series",
+        "coffee & classics",
+        "live concerts",
+        "staged readings",
+        "family matinees"
+      ],
+      "audience": "film buffs, families at matinees",
+      "access": "js_heavy",
+      "how_checked": "firecrawl",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-12-05",
+      "sample_events": [
+        {
+          "title": "Cult Classics with Frank Falisi: The Straight Story",
+          "date": "2026-11-22",
+          "time": "4 PM",
+          "venue": "Barrymore Film Center",
+          "town": "Fort Lee",
+          "cost": null,
+          "source_url": "https://barrymorefilmcenter.org/full-schedule"
+        },
+        {
+          "title": "Dolly Parton Tribute: 9 to 5",
+          "date": "2026-11-29",
+          "time": "1:30 PM",
+          "venue": "Barrymore Film Center",
+          "town": "Fort Lee",
+          "cost": null,
+          "source_url": "https://barrymorefilmcenter.org/full-schedule"
+        },
+        {
+          "title": "LIVE: Tabitha Meeks",
+          "date": "2026-12-05",
+          "time": "7:30 PM",
+          "venue": "Barrymore Film Center",
+          "town": "Fort Lee",
+          "cost": null,
+          "source_url": "https://barrymorefilmcenter.org/full-schedule"
+        }
+      ],
+      "yield": "high",
+      "notes": "The county's art-house. The schedule is a Tockify calendar widget: WebFetch only saw stale June listings, Firecrawl with a 3 second wait rendered the real month. Also hosts Adelphi Orchestra, Black Box staged readings and Fever Candlelight concerts. Dates here were decoded from the Tockify event timestamps."
+    },
+    {
+      "name": "Williams Center (Black Box, Cinema Underground)",
+      "kind": "venue_calendar",
+      "url": "https://www.williamscenter.co/calendar/",
+      "other_urls": [
+        "https://www.williamscenter.co/cug-calendar/",
+        "https://www.williamscenter.co/williams-center-calendar/",
+        "https://www.songkick.com/venues/4581591-black-box-williams-center"
+      ],
+      "platform": "web",
+      "towns": [
+        "Rutherford"
+      ],
+      "categories": [
+        "arts",
+        "nightlife"
+      ],
+      "event_types": [
+        "punk and rock shows",
+        "tribute nights",
+        "repertory film",
+        "expos"
+      ],
+      "audience": "all-ages rock and film crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-12-18",
+      "sample_events": [
+        {
+          "title": "The Long Goodbye (1973)",
+          "date": "2026-11-14",
+          "time": "7:30 PM",
+          "venue": "Cinema Underground, Williams Center",
+          "town": "Rutherford",
+          "cost": "$13.63-$15.69",
+          "source_url": "https://www.williamscenter.co/calendar/"
+        },
+        {
+          "title": "War on Women with MakeWar",
+          "date": "2026-12-04",
+          "time": null,
+          "venue": "Black Box, Williams Center",
+          "town": "Rutherford",
+          "cost": null,
+          "source_url": "https://www.songkick.com/venues/4581591-black-box-williams-center"
+        },
+        {
+          "title": "Shakedown Citi",
+          "date": "2026-12-10",
+          "time": null,
+          "venue": "Black Box, Williams Center",
+          "town": "Rutherford",
+          "cost": null,
+          "source_url": "https://www.songkick.com/venues/4581591-black-box-williams-center"
+        }
+      ],
+      "yield": "high",
+      "notes": "Artist-run arts center at 15 Sylvan St with a concert room and an underground cinema; not in our files. Main calendar is long (124k characters) and mixes film showtimes with concerts. Songkick keeps a clean per-room concert list."
+    },
+    {
+      "name": "Adelphi Orchestra",
+      "kind": "community_org",
+      "url": "https://www.adelphiorchestra.org/events",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Fort Lee",
+        "Ramsey",
+        "Oradell",
+        "Fair Lawn",
+        "Paramus",
+        "Mahwah",
+        "Teaneck"
+      ],
+      "categories": [
+        "arts",
+        "family",
+        "holiday"
+      ],
+      "event_types": [
+        "orchestra concerts",
+        "chamber ensemble at libraries",
+        "Nutcracker ballet"
+      ],
+      "audience": "classical listeners, families",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-06-06",
+      "sample_events": [
+        {
+          "title": "Adelphi Chamber Ensemble",
+          "date": "2026-12-06",
+          "time": "2:00-3:00 PM",
+          "venue": "Ramsey Free Public Library",
+          "town": "Ramsey",
+          "cost": null,
+          "source_url": "https://www.adelphiorchestra.org/"
+        },
+        {
+          "title": "Nutcracker Ballet",
+          "date": "2026-12-12",
+          "time": "7:00-9:00 PM",
+          "venue": "River Dell High School",
+          "town": "Oradell",
+          "cost": null,
+          "source_url": "https://www.adelphiorchestra.org/"
+        },
+        {
+          "title": "Beethoven Bicentennial",
+          "date": "2027-02-28",
+          "time": "2:00-4:00 PM",
+          "venue": "Fair Lawn Community Center Theater",
+          "town": "Fair Lawn",
+          "cost": null,
+          "source_url": "https://www.adelphiorchestra.org/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "One season page covers seven Bergen towns, including free library chamber concerts. A few dates are in Manhattan, Mendham and Galloway; skip those. Prices are behind ticket links."
+    },
+    {
+      "name": "Puffin Cultural Forum",
+      "kind": "venue_calendar",
+      "url": "https://www.puffinculturalforum.org/events/",
+      "other_urls": [
+        "https://www.puffinculturalforum.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Teaneck"
+      ],
+      "categories": [
+        "arts",
+        "community"
+      ],
+      "event_types": [
+        "concerts",
+        "open stage",
+        "writers' open mic",
+        "film",
+        "gallery shows",
+        "workshops"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-22",
+      "sample_events": [
+        {
+          "title": "MCDB in Concert: An Evening of Contemporary Piano",
+          "date": "2026-11-14",
+          "time": "7:00 PM",
+          "venue": "Puffin Cultural Forum, 20 Puffin Way",
+          "town": "Teaneck",
+          "cost": "$10 suggested donation",
+          "source_url": "https://www.puffinculturalforum.org/"
+        },
+        {
+          "title": "November Open Stage at the Puffin!",
+          "date": "2026-11-15",
+          "time": "4:00 PM",
+          "venue": "Puffin Cultural Forum",
+          "town": "Teaneck",
+          "cost": "Free, RSVP required",
+          "source_url": "https://www.puffinculturalforum.org/"
+        },
+        {
+          "title": "SPEAK November: Writer's Workshop & Open Mic",
+          "date": "2026-11-22",
+          "time": "2:00 PM",
+          "venue": "Puffin Cultural Forum",
+          "town": "Teaneck",
+          "cost": null,
+          "source_url": "https://www.puffinculturalforum.org/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Cheap or free shows nearly every weekend, plus two recurring open mics (Open Stage on selected Sundays, SPEAK for writers). Home page shows one more event than the /events/ page; check both."
+    },
+    {
+      "name": "Kaplen JCC on the Palisades: arts calendar",
+      "kind": "venue_calendar",
+      "url": "https://www.jccotp.org/events/category/arts/",
+      "other_urls": [
+        "https://www.jccotp.org/events"
+      ],
+      "platform": "web",
+      "towns": [
+        "Tenafly"
+      ],
+      "categories": [
+        "arts",
+        "family"
+      ],
+      "event_types": [
+        "chamber music",
+        "film series",
+        "theater",
+        "dance",
+        "craft nights"
+      ],
+      "audience": "open to the public; families and older adults",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-12-06",
+      "sample_events": [
+        {
+          "title": "Music Connects Continents",
+          "date": "2026-11-17",
+          "time": "7:30-9:00 PM",
+          "venue": "Kaplen JCC, 411 East Clinton Ave",
+          "town": "Tenafly",
+          "cost": null,
+          "source_url": "https://www.jccotp.org/events/category/arts/"
+        },
+        {
+          "title": "Faculty Chamber Music Series: Young Masters",
+          "date": "2026-11-22",
+          "time": "2:00-3:30 PM",
+          "venue": "Kaplen JCC",
+          "town": "Tenafly",
+          "cost": null,
+          "source_url": "https://www.jccotp.org/events/category/arts/"
+        },
+        {
+          "title": "Next Up Cinema: We Met at Grossinger's",
+          "date": "2026-12-02",
+          "time": "7:30-9:15 PM",
+          "venue": "Kaplen JCC",
+          "town": "Tenafly",
+          "cost": null,
+          "source_url": "https://www.jccotp.org/events"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Steady stream of concerts, screenings and craft nights. Prices sit on each event page."
+    },
+    {
+      "name": "Parlance Chamber Concerts",
+      "kind": "community_org",
+      "url": "https://www.parlancechamberconcerts.org/",
+      "other_urls": [
+        "https://www.parlancechamberconcerts.org/2026-2027-season",
+        "https://www.parlancechamberconcerts.org/tickets"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "chamber music"
+      ],
+      "audience": "classical listeners",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-06-06",
+      "sample_events": [
+        {
+          "title": "Cafe Music",
+          "date": "2026-11-15",
+          "time": "4 PM",
+          "venue": "West Side Presbyterian Church",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.parlancechamberconcerts.org/"
+        },
+        {
+          "title": "Richard Goode & Itamar Zorman",
+          "date": "2027-01-17",
+          "time": "4 PM",
+          "venue": "West Side Presbyterian Church",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.parlancechamberconcerts.org/"
+        },
+        {
+          "title": "Benjamin Appl & James Baillieu: Schubert's Winterreise",
+          "date": "2027-02-28",
+          "time": "4 PM",
+          "venue": "West Side Presbyterian Church",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.parlancechamberconcerts.org/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "World-class players on Sunday afternoons, roughly monthly through June. Whole season is on the home page."
+    },
+    {
+      "name": "Howdy Stranger (improv)",
+      "kind": "promoter",
+      "url": "https://www.howdystranger.com/events",
+      "other_urls": [
+        "https://www.howdystranger.com/",
+        "https://hacpac.org/upcoming-events/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Hackensack"
+      ],
+      "categories": [
+        "arts",
+        "nightlife"
+      ],
+      "event_types": [
+        "improv comedy shows",
+        "open improv jam",
+        "classes"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-02",
+      "sample_events": [
+        {
+          "title": "Howdy Stranger's Improv Comedy Show",
+          "date": "2026-11-14",
+          "time": "8:00-9:30 PM",
+          "venue": "Hackensack Performing Arts Center, 102 State St",
+          "town": "Hackensack",
+          "cost": "$25, $15 seniors and kids under 12",
+          "source_url": "https://www.howdystranger.com/events"
+        },
+        {
+          "title": "Howdy Hour Improv Jam",
+          "date": "2026-12-02",
+          "time": "6:00-7:00 PM",
+          "venue": "SideBar Gastropub, 45 Main St",
+          "town": "Hackensack",
+          "cost": "$10 to play, free to watch",
+          "source_url": "https://www.howdystranger.com/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "The county's improv troupe: a monthly HACPAC show and a monthly jam at SideBar. Home page lists the jam; /events only showed the next show."
+    },
+    {
+      "name": "NJ Events (stand-up at Redd's)",
+      "kind": "ticketing_organizer",
+      "url": "https://www.tickettailor.com/events/njevents",
+      "other_urls": [],
+      "platform": "tickettailor",
+      "towns": [
+        "Carlstadt",
+        "East Rutherford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "stand-up comedy shows"
+      ],
+      "audience": "adults",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-20",
+      "sample_events": [
+        {
+          "title": "Stand Up Comedy Show! Free Parking!",
+          "date": "2026-11-20",
+          "time": "8:00-11:00 PM",
+          "venue": "Redds, 317 Washington Ave",
+          "town": "Carlstadt",
+          "cost": null,
+          "source_url": "https://www.tickettailor.com/events/njevents"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Organizer behind the recurring stand-up nights upstairs at Redd's. Tied to the Meadowlands Comedy Festival crowd, which also used The Roosevelt's speakeasy in East Rutherford in April 2026 (search snippet)."
+    },
+    {
+      "name": "Fever: Candlelight concerts, Fort Lee",
+      "kind": "ticketing_search",
+      "url": "https://feverup.com/en/fort-lee-nj-us/candlelight",
+      "other_urls": [
+        "https://feverup.com/en/fort-lee-nj-us/concerts-festivals"
+      ],
+      "platform": "fever",
+      "towns": [
+        "Fort Lee"
+      ],
+      "categories": [
+        "arts",
+        "holiday"
+      ],
+      "event_types": [
+        "string-quartet tribute concerts by candlelight"
+      ],
+      "audience": "date night, all ages",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-02-27",
+      "sample_events": [
+        {
+          "title": "Candlelight: Tribute to Adele",
+          "date": "2026-11-21",
+          "time": "4:00 PM",
+          "venue": "Barrymore Film Center",
+          "town": "Fort Lee",
+          "cost": "from $43.00",
+          "source_url": "https://feverup.com/en/fort-lee-nj-us/candlelight"
+        },
+        {
+          "title": "Candlelight: Christmas Carols on Strings",
+          "date": "2026-12-27",
+          "time": "4:00, 6:15 & 8:45 PM",
+          "venue": "Barrymore Film Center",
+          "town": "Fort Lee",
+          "cost": "from $38.00",
+          "source_url": "https://feverup.com/en/fort-lee-nj-us/candlelight"
+        },
+        {
+          "title": "Candlelight: Tribute to Fleetwood Mac",
+          "date": "2027-01-23",
+          "time": "6:15 PM",
+          "venue": "Barrymore Film Center",
+          "town": "Fort Lee",
+          "cost": "from $38.00",
+          "source_url": "https://feverup.com/en/fort-lee-nj-us/candlelight"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Fever lists every Candlelight date months ahead with exact start times and prices. BaseLocal showed the same series with different clock times, so trust Fever. BaseLocal also showed Candlelight-style holiday shows at First Presbyterian churches in Ridgewood (Dec 12, Dec 19) and Englewood (Jan 29), which this Fort Lee page does not cover."
+    },
+    {
+      "name": "Bergen County Players (Little Firehouse Theatre)",
+      "kind": "community_org",
+      "url": "https://bcplayers.org/shows/",
+      "other_urls": [
+        "https://bcplayers.org/tickets/",
+        "https://app.arts-people.com/index.php?ticketing=bcp"
+      ],
+      "platform": "web",
+      "towns": [
+        "Oradell"
+      ],
+      "categories": [
+        "arts",
+        "holiday"
+      ],
+      "event_types": [
+        "community theater: musicals, comedies, dramas"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-06-13",
+      "sample_events": [
+        {
+          "title": "Rodgers & Hammerstein's Cinderella",
+          "date": "2026-12-05",
+          "time": null,
+          "venue": "Little Firehouse Theatre, 298 Kinderkamack Rd",
+          "town": "Oradell",
+          "cost": null,
+          "source_url": "https://www.bcplayers.org/"
+        },
+        {
+          "title": "Calendar Girls",
+          "date": "2027-01-16",
+          "time": null,
+          "venue": "Little Firehouse Theatre",
+          "town": "Oradell",
+          "cost": null,
+          "source_url": "https://www.bcplayers.org/"
+        },
+        {
+          "title": "The Imaginary Invalid",
+          "date": "2027-02-20",
+          "time": null,
+          "venue": "Little Firehouse Theatre",
+          "town": "Oradell",
+          "cost": null,
+          "source_url": "https://www.bcplayers.org/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Runs: Cinderella Dec 5-20, Calendar Girls Jan 16-Feb 6, The Imaginary Invalid Feb 20-Mar 13, One Man Two Guv'nors Apr 3-24, Come From Away May 15-Jun 13. Sample dates are opening nights. Showtimes and prices are on the ticketing site."
+    },
+    {
+      "name": "Players Guild of Leonia",
+      "kind": "community_org",
+      "url": "https://www.leoniaplayers.org/2026-2027-season.html",
+      "other_urls": [
+        "https://www.leoniaplayers.org/",
+        "https://cur8.com/projects/23362"
+      ],
+      "platform": "web",
+      "towns": [
+        "Leonia"
+      ],
+      "categories": [
+        "arts",
+        "holiday"
+      ],
+      "event_types": [
+        "community theater",
+        "comedy night",
+        "new-play showcase",
+        "shadow-cast Rocky Horror"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-06-13",
+      "sample_events": [
+        {
+          "title": "Who's Holiday!",
+          "date": "2026-12-11",
+          "time": null,
+          "venue": "Civil War Drill Hall Theatre, 130 Grand Ave",
+          "town": "Leonia",
+          "cost": null,
+          "source_url": "https://www.leoniaplayers.org/2026-2027-season.html"
+        },
+        {
+          "title": "Steel Magnolias",
+          "date": "2027-01-22",
+          "time": null,
+          "venue": "Civil War Drill Hall Theatre",
+          "town": "Leonia",
+          "cost": null,
+          "source_url": "https://www.leoniaplayers.org/2026-2027-season.html"
+        },
+        {
+          "title": "Leonia Laugh-a-Maniacs",
+          "date": "2027-03-05",
+          "time": null,
+          "venue": "Civil War Drill Hall Theatre",
+          "town": "Leonia",
+          "cost": null,
+          "source_url": "https://www.leoniaplayers.org/2026-2027-season.html"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Season page gives run dates only (Who's Holiday! Dec 11-20, Steel Magnolias Jan 22-Feb 7, Laugh-a-Maniacs Mar 5-6, Bar None Mar 19-21). Times and prices are on the cur8 ticket page. Home page also promotes a shadow-cast Rocky Horror with no date in the text."
+    },
+    {
+      "name": "Porch Light Productions (Glen Rock stage)",
+      "kind": "community_org",
+      "url": "https://porchlightproductions.org/tickets/?location=1",
+      "other_urls": [
+        "https://www.porchlightproductions.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Glen Rock"
+      ],
+      "categories": [
+        "arts",
+        "family"
+      ],
+      "event_types": [
+        "youth and community musicals"
+      ],
+      "audience": "families",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-22",
+      "sample_events": [
+        {
+          "title": "Charlie & the Chocolate Factory Jr",
+          "date": "2026-11-14",
+          "time": "2:00 PM and 7:00 PM",
+          "venue": "Glen Rock Studio & Stage, 555 Broad St",
+          "town": "Glen Rock",
+          "cost": "$22",
+          "source_url": "https://porchlightproductions.org/tickets/?location=1"
+        },
+        {
+          "title": "Legally Blonde Jr",
+          "date": "2026-11-20",
+          "time": "8:00 PM",
+          "venue": "Glen Rock Studio & Stage",
+          "town": "Glen Rock",
+          "cost": "$24",
+          "source_url": "https://porchlightproductions.org/tickets/?location=1"
+        },
+        {
+          "title": "Legally Blonde Jr",
+          "date": "2026-11-22",
+          "time": "1:00 PM and 5:00 PM",
+          "venue": "Glen Rock Studio & Stage",
+          "town": "Glen Rock",
+          "cost": "$24",
+          "source_url": "https://porchlightproductions.org/tickets/?location=1"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Use the ?location=1 filter; the company also has a Cedar Grove stage (Essex County) we should skip. New shows appear every few weeks with exact performance times and prices."
+    },
+    {
+      "name": "First Flight Theatre Company",
+      "kind": "community_org",
+      "url": "https://www.firstflighttheatreco.com/",
+      "other_urls": [
+        "https://thehermitage.org/events"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ho-Ho-Kus"
+      ],
+      "categories": [
+        "arts",
+        "holiday"
+      ],
+      "event_types": [
+        "small professional theater, site-specific shows"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-20",
+      "sample_events": [
+        {
+          "title": "Dickens Presents A Christmas Carol The Musical",
+          "date": "2026-12-12",
+          "time": "7 PM",
+          "venue": "The Hermitage Museum, 335 Franklin Turnpike",
+          "town": "Ho-Ho-Kus",
+          "cost": null,
+          "source_url": "https://www.firstflighttheatreco.com/"
+        },
+        {
+          "title": "Dickens Presents A Christmas Carol The Musical",
+          "date": "2026-12-13",
+          "time": "3 PM",
+          "venue": "The Hermitage Museum",
+          "town": "Ho-Ho-Kus",
+          "cost": null,
+          "source_url": "https://www.firstflighttheatreco.com/"
+        },
+        {
+          "title": "Dickens Presents A Christmas Carol The Musical",
+          "date": "2026-12-19",
+          "time": "7 PM",
+          "venue": "The Hermitage Museum",
+          "town": "Ho-Ho-Kus",
+          "cost": null,
+          "source_url": "https://www.firstflighttheatreco.com/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Stages shows inside the Hermitage; tickets sell through thehermitage.org/events. Also lists a New York date, skip that."
+    },
+    {
+      "name": "Bergenstages at Bergen Community College",
+      "kind": "venue_calendar",
+      "url": "https://bergen.edu/theatres-at-bergen/bergenstages/current-season/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Paramus"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "college theater and musicals"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-05-02",
+      "sample_events": [
+        {
+          "title": "She Loves Me",
+          "date": "2026-12-04",
+          "time": "7:30 PM",
+          "venue": "Ciccone Theatre",
+          "town": "Paramus",
+          "cost": "$18 general, $12 seniors, $5 students",
+          "source_url": "https://bergen.edu/theatres-at-bergen/bergenstages/current-season/"
+        },
+        {
+          "title": "She Loves Me",
+          "date": "2026-12-12",
+          "time": "2:00 PM and 7:30 PM",
+          "venue": "Ciccone Theatre",
+          "town": "Paramus",
+          "cost": "$18 general, $12 seniors, $5 students",
+          "source_url": "https://bergen.edu/theatres-at-bergen/bergenstages/current-season/"
+        },
+        {
+          "title": "The Adventures of the Black Girl in Her Search for God",
+          "date": "2027-02-26",
+          "time": "7:30 PM",
+          "venue": "Ender Hall Lab Theatre",
+          "town": "Paramus",
+          "cost": "$18 general, $12 seniors, $5 students",
+          "source_url": "https://bergen.edu/theatres-at-bergen/bergenstages/current-season/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Cheapest theater ticket in the county. Three productions a year; Adelphi Orchestra's June ballet also uses the Ciccone. Tickets at tickets.bergen.edu."
+    },
+    {
+      "name": "Berrie Center, Ramapo College",
+      "kind": "venue_calendar",
+      "url": "https://www.ramapo.edu/berriecenter/performance-schedule/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Mahwah"
+      ],
+      "categories": [
+        "arts",
+        "family"
+      ],
+      "event_types": [
+        "touring music and dance",
+        "student theater",
+        "family shows"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-05-02",
+      "sample_events": [
+        {
+          "title": "RCNJ Theater: As You Like It",
+          "date": "2026-11-20",
+          "time": "7:30-10:00 PM",
+          "venue": "Sharp Theater",
+          "town": "Mahwah",
+          "cost": "Adults $18, students $8",
+          "source_url": "https://www.ramapo.edu/berriecenter/performance-schedule/"
+        },
+        {
+          "title": "A Holiday Evening with John Lloyd Young",
+          "date": "2026-12-05",
+          "time": "7:30-9:30 PM",
+          "venue": "Sharp Theater",
+          "town": "Mahwah",
+          "cost": "Adults $50/$45, children $20",
+          "source_url": "https://www.ramapo.edu/berriecenter/performance-schedule/"
+        },
+        {
+          "title": "Urban Bush Women",
+          "date": "2027-01-31",
+          "time": "2:00-4:30 PM",
+          "venue": "Sharp Theater",
+          "town": "Mahwah",
+          "cost": "Adults $45/$40, children $20",
+          "source_url": "https://www.ramapo.edu/berriecenter/performance-schedule/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Already in our files; kept because the schedule page lists the whole season through May with prices, including student plays that never get press."
+    },
+    {
+      "name": "Black Box Performing Arts Center",
+      "kind": "community_org",
+      "url": "https://www.blackboxpac.com/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Teaneck",
+        "Fort Lee"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "staged readings",
+        "new plays",
+        "acting classes"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-19",
+      "sample_events": [
+        {
+          "title": "Black Box Presents: WRITERS & ACTORS at The Barrymore",
+          "date": "2026-11-19",
+          "time": "7:30-9:30 PM",
+          "venue": "Barrymore Film Center",
+          "town": "Fort Lee",
+          "cost": null,
+          "source_url": "https://barrymorefilmcenter.org/full-schedule"
+        }
+      ],
+      "yield": "low",
+      "notes": "Now in residence at Debonair Music Hall (1409 Queen Anne Rd, Teaneck) and doing a readings series at the Barrymore. Its own site is thin and partly stale (an Albee reading listed for a May 14 with no year), so pair it with the Barrymore calendar. Past open mic nights with Liberty Arts were 2023-24 only."
+    },
+    {
+      "name": "Old Library Theatre",
+      "kind": "community_org",
+      "url": "https://www.oldlibrarytheatre.com/team-1",
+      "other_urls": [
+        "https://www.oldlibrarytheatre.com/",
+        "https://olt.ludus.com/index.php"
+      ],
+      "platform": "web",
+      "towns": [
+        "Fair Lawn"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "community theater, about three shows a year"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-10-25",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "2026 season ended Oct 25 with The Hello Girls; nothing dated after Nov 12 yet. Re-check in winter for the 2027 season. Tickets at olt.ludus.com. The old .net address redirects here."
+    },
+    {
+      "name": "Ridgewood Symphony Orchestra",
+      "kind": "community_org",
+      "url": "https://www.ridgewoodsymphony.org/concerts/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "orchestra concerts"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2027-05-06",
+      "sample_events": [
+        {
+          "title": "A Celebration of America and Ridgewood",
+          "date": "2026-12-09",
+          "time": "8:00 PM",
+          "venue": "West Side Presbyterian Church",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.ridgewoodsymphony.org/concerts/"
+        },
+        {
+          "title": "Celebrating the Genius of Beethoven",
+          "date": "2027-03-19",
+          "time": "8:00 PM",
+          "venue": "West Side Presbyterian Church",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.ridgewoodsymphony.org/concerts/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Four concerts a season, all at West Side Presbyterian. Prices behind Buy Tickets links."
+    },
+    {
+      "name": "Pro Arte Chorale",
+      "kind": "community_org",
+      "url": "https://www.proartechorale.org/",
+      "other_urls": [
+        "https://www.proartechorale.org/buy-tickets"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "choral concerts"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2027-05-01",
+      "sample_events": [
+        {
+          "title": "Light out of Darkness (Bernstein Chichester Psalms, Forrest Requiem for the Living)",
+          "date": "2026-11-21",
+          "time": null,
+          "venue": null,
+          "town": "Bergen County",
+          "cost": null,
+          "source_url": "https://www.proartechorale.org/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Home page gives dates and programs but not time or venue; those are on the ticket page, so confirm the hall is in Bergen before using. Next after this is Sacred Visions on May 1, 2027."
+    },
+    {
+      "name": "Ars Musica Chorale",
+      "kind": "community_org",
+      "url": "https://www.arsmusica.org/concerts",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "arts",
+        "holiday"
+      ],
+      "event_types": [
+        "choral concerts"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2027-05-15",
+      "sample_events": [
+        {
+          "title": "An Ars Musica Holiday",
+          "date": "2026-12-12",
+          "time": "7:30-8:30 PM",
+          "venue": "Bethlehem Lutheran Church",
+          "town": "Ridgewood",
+          "cost": "Adult $35, senior $30, student $15, under 12 free",
+          "source_url": "https://www.arsmusica.org/concerts"
+        },
+        {
+          "title": "Brahms: Requiem",
+          "date": "2027-04-03",
+          "time": "7:30-8:30 PM",
+          "venue": "Bethlehem Lutheran Church",
+          "town": "Ridgewood",
+          "cost": "Adult $40, senior $35, student $15, under 12 free",
+          "source_url": "https://www.arsmusica.org/concerts"
+        }
+      ],
+      "yield": "low",
+      "notes": "Clean season page with times, venues and prices."
+    },
+    {
+      "name": "Ridgewood Choral",
+      "kind": "community_org",
+      "url": "https://ridgewoodchoral.org/events/",
+      "other_urls": [
+        "https://www.ridgewoodchoral.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "arts",
+        "holiday"
+      ],
+      "event_types": [
+        "women's chorus concerts"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2027-04-10",
+      "sample_events": [
+        {
+          "title": "Ridgewood Choral December concert",
+          "date": "2026-12-11",
+          "time": null,
+          "venue": "Unitarian Society of Ridgewood",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.ridgewoodchoral.org/"
+        },
+        {
+          "title": "Ridgewood Choral Spring Concert",
+          "date": "2027-04-10",
+          "time": "3 PM",
+          "venue": "West Side Presbyterian Church",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.ridgewoodchoral.org/"
+        }
+      ],
+      "yield": "low",
+      "notes": "December dates on Dec 4 (Hawthorne) and Dec 5 (Pearl River, NY) are outside Bergen; only Dec 11 counts. Times were not on the home page."
+    },
+    {
+      "name": "Waldwick Band",
+      "kind": "community_org",
+      "url": "https://waldwickband.org/events/",
+      "other_urls": [
+        "https://www.waldwickband.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Waldwick"
+      ],
+      "categories": [
+        "arts",
+        "family"
+      ],
+      "event_types": [
+        "free community band concerts"
+      ],
+      "audience": "all ages",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2027-05-02",
+      "sample_events": [
+        {
+          "title": "Waldwick Band Concert",
+          "date": "2026-11-15",
+          "time": "2:30 PM",
+          "venue": "The Village School, 100 West Prospect St",
+          "town": "Waldwick",
+          "cost": "Free",
+          "source_url": "https://www.waldwickband.org/"
+        },
+        {
+          "title": "Waldwick Band Concert",
+          "date": "2027-01-31",
+          "time": "2:30 PM",
+          "venue": "The Village School",
+          "town": "Waldwick",
+          "cost": "Free",
+          "source_url": "https://www.waldwickband.org/"
+        },
+        {
+          "title": "Waldwick Band Concert",
+          "date": "2027-03-14",
+          "time": "2:30 PM",
+          "venue": "The Village School",
+          "town": "Waldwick",
+          "cost": "Free",
+          "source_url": "https://www.waldwickband.org/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Free Sunday afternoon concerts, four indoor dates plus summer park concerts."
+    },
+    {
+      "name": "West Side Presbyterian Church concert series",
+      "kind": "community_org",
+      "url": "https://www.westside.org/music-art/concert-series/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "free Sunday concerts",
+        "organ recitals"
+      ],
+      "audience": "all ages",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2027-05-16",
+      "sample_events": [
+        {
+          "title": "Amity Chamber Players",
+          "date": "2027-02-14",
+          "time": "3:00 PM",
+          "venue": "West Side Presbyterian Church, 6 S Monroe St",
+          "town": "Ridgewood",
+          "cost": "Free",
+          "source_url": "https://www.westside.org/music-art/concert-series/"
+        },
+        {
+          "title": "West Point Band",
+          "date": "2027-03-14",
+          "time": "3:00 PM",
+          "venue": "West Side Presbyterian Church",
+          "town": "Ridgewood",
+          "cost": "Free",
+          "source_url": "https://www.westside.org/music-art/concert-series/"
+        }
+      ],
+      "yield": "low",
+      "notes": "The church's own no-admission-fee series. The building is also the hall for Parlance, Ridgewood Symphony and Ars Musica, so most Ridgewood classical dates trace back here."
+    },
+    {
+      "name": "Teaneck Community Chorus",
+      "kind": "community_org",
+      "url": "https://www.teaneckcommunitychorus.org/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Teaneck",
+        "Fort Lee"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "community chorus concerts"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-08",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Home page listed a Fort Lee Public Library concert on Nov 8, 2026 and a Teaneck film festival tie-in; nothing dated after Nov 12 yet. Check before winter and spring concert seasons."
+    },
+    {
+      "name": "The Art School at Old Church",
+      "kind": "venue_calendar",
+      "url": "https://www.tasoc.org/events",
+      "other_urls": [
+        "https://www.tasoc.org/",
+        "https://www.oldchurchpotteryshow.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Demarest"
+      ],
+      "categories": [
+        "arts",
+        "holiday",
+        "shopping"
+      ],
+      "event_types": [
+        "gallery receptions",
+        "weekend workshops",
+        "annual pottery show"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-06",
+      "sample_events": [
+        {
+          "title": "Fall Workshops",
+          "date": "2026-11-21",
+          "time": null,
+          "venue": "The Art School at Old Church, 561 Piermont Rd",
+          "town": "Demarest",
+          "cost": null,
+          "source_url": "https://www.tasoc.org/"
+        },
+        {
+          "title": "52nd Old Church Pottery Show and Sale",
+          "date": "2026-12-04",
+          "time": "6:00-9:00 PM",
+          "venue": "The Art School at Old Church",
+          "town": "Demarest",
+          "cost": "$20 suggested donation",
+          "source_url": "https://www.oldchurchpotteryshow.org/"
+        },
+        {
+          "title": "52nd Old Church Pottery Show and Sale",
+          "date": "2026-12-05",
+          "time": "10:00 AM-5:00 PM",
+          "venue": "The Art School at Old Church",
+          "town": "Demarest",
+          "cost": "$10 suggested donation",
+          "source_url": "https://www.oldchurchpotteryshow.org/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Home page carries a dated strip of receptions, workshops and closures that is fuller than /events. Pottery Show also runs Sun Dec 6, 11 AM-4 PM. Winter semester starts Jan 3."
+    },
+    {
+      "name": "Ridgewood Art Institute",
+      "kind": "venue_calendar",
+      "url": "https://www.ridgewoodartinstitute.org/upcoming-exhibitions",
+      "other_urls": [
+        "https://www.ridgewoodartinstitute.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "artist demos",
+        "exhibition receptions",
+        "juried shows"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-05-07",
+      "sample_events": [
+        {
+          "title": "Artist Demo: Neal Hughes (oil painting)",
+          "date": "2026-11-21",
+          "time": "2:00 PM",
+          "venue": "Ridgewood Art Institute, 12 East Glen Ave",
+          "town": "Ridgewood",
+          "cost": "$10 members, $20 non-members",
+          "source_url": "https://www.ridgewoodartinstitute.org/upcoming-exhibitions"
+        },
+        {
+          "title": "Members' Holiday Show opening reception",
+          "date": "2026-11-22",
+          "time": "2-4 PM",
+          "venue": "Ridgewood Art Institute",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.ridgewoodartinstitute.org/"
+        },
+        {
+          "title": "Member Artist Show: Mary Zisk reception",
+          "date": "2027-01-10",
+          "time": "2 PM",
+          "venue": "Ridgewood Art Institute (the Barn)",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.ridgewoodartinstitute.org/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Free receptions most months and paid demos. Holiday Show hangs Nov 22-Dec 30; Open Juried Show Feb 14-Mar 14, 2027."
+    },
+    {
+      "name": "Pinot's Palette Ridgewood",
+      "kind": "venue_calendar",
+      "url": "https://www.pinotspalette.com/ridgewood/events",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "arts",
+        "nightlife"
+      ],
+      "event_types": [
+        "paint-and-sip classes"
+      ],
+      "audience": "adults, date night, groups",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-16",
+      "sample_events": [
+        {
+          "title": "Starry Tide",
+          "date": "2026-11-14",
+          "time": "7:00-9:30 PM",
+          "venue": "Pinot's Palette, 25 Oak St",
+          "town": "Ridgewood",
+          "cost": "$45",
+          "source_url": "https://www.pinotspalette.com/ridgewood/events"
+        },
+        {
+          "title": "Classy Cardinal",
+          "date": "2026-11-15",
+          "time": "3:00-5:00 PM",
+          "venue": "Pinot's Palette",
+          "town": "Ridgewood",
+          "cost": "$40",
+          "source_url": "https://www.pinotspalette.com/ridgewood/events"
+        },
+        {
+          "title": "Aurora Reflections",
+          "date": "2026-11-16",
+          "time": "7:00-9:00 PM",
+          "venue": "Pinot's Palette",
+          "town": "Ridgewood",
+          "cost": "$40",
+          "source_url": "https://www.pinotspalette.com/ridgewood/events"
+        }
+      ],
+      "yield": "high",
+      "notes": "A public class almost every day with title, time and price, so it reliably fills 'something to do tonight'."
+    },
+    {
+      "name": "Board & Brush Ramsey",
+      "kind": "venue_calendar",
+      "url": "https://boardandbrush.com/ramsey/",
+      "other_urls": [
+        "https://boardandbrush.com/ramsey#Calendar-workshop"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ramsey"
+      ],
+      "categories": [
+        "arts",
+        "nightlife"
+      ],
+      "event_types": [
+        "DIY wood sign workshops"
+      ],
+      "audience": "adults 16+, groups",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-15",
+      "sample_events": [
+        {
+          "title": "Pick Your Project Workshop (open registration)",
+          "date": "2026-11-13",
+          "time": "6:30-9:30 PM",
+          "venue": "Board & Brush, 119 East Main St",
+          "town": "Ramsey",
+          "cost": null,
+          "source_url": "https://boardandbrush.com/ramsey/"
+        },
+        {
+          "title": "Pick Your Project Workshop (ages 16+)",
+          "date": "2026-11-14",
+          "time": "4-7 PM",
+          "venue": "Board & Brush",
+          "town": "Ramsey",
+          "cost": null,
+          "source_url": "https://boardandbrush.com/ramsey/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Calendar mixes public workshops with private parties; only 'open registration' rows are bookable. Prices are on the booking step."
+    },
+    {
+      "name": "Mahwah Museum",
+      "kind": "venue_calendar",
+      "url": "https://mahwahmuseum.org/home/events/",
+      "other_urls": [
+        "https://mahwahmuseum.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Mahwah"
+      ],
+      "categories": [
+        "arts",
+        "community"
+      ],
+      "event_types": [
+        "lectures",
+        "Les Paul exhibit programs",
+        "history talks"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-17",
+      "sample_events": [
+        {
+          "title": "Les Paul from Start to Finish",
+          "date": "2026-11-15",
+          "time": null,
+          "venue": "Mahwah Museum",
+          "town": "Mahwah",
+          "cost": null,
+          "source_url": "https://mahwahmuseum.org/home/events/les-paul-from-start-to-finish/"
+        },
+        {
+          "title": "Starting Your Family Tree",
+          "date": "2026-11-17",
+          "time": null,
+          "venue": "Mahwah Museum",
+          "town": "Mahwah",
+          "cost": null,
+          "source_url": "https://mahwahmuseum.org/home/events/starting-your-family-tree/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Home page listed these without a year; assumed 2026 from context. Times are on each event page."
+    },
+    {
+      "name": "Mahwah Public Library calendar",
+      "kind": "library",
+      "url": "https://mahwah.librarycalendar.com/events/upcoming",
+      "other_urls": [
+        "https://www.mahwahlibrary.org/",
+        "https://mahwah.librarycalendar.com/index.php/events/upcoming?program_types=53"
+      ],
+      "platform": "web",
+      "towns": [
+        "Mahwah"
+      ],
+      "categories": [
+        "arts",
+        "community",
+        "family"
+      ],
+      "event_types": [
+        "Sunday concerts",
+        "film",
+        "author talks",
+        "writers' group"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-17",
+      "sample_events": [
+        {
+          "title": "Welcome Beautiful Autumn with Jane Stuart",
+          "date": "2026-11-15",
+          "time": "2:00-3:30 PM",
+          "venue": "Mahwah Public Library",
+          "town": "Mahwah",
+          "cost": "Free, registration required",
+          "source_url": "https://mahwah.librarycalendar.com/events/upcoming"
+        },
+        {
+          "title": "Mahwah Library Writers' Collective",
+          "date": "2026-11-17",
+          "time": "6:30-8:30 PM",
+          "venue": "Mahwah Public Library",
+          "town": "Mahwah",
+          "cost": "Free (registration full)",
+          "source_url": "https://mahwah.librarycalendar.com/events/upcoming"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Mahwah runs its own calendar outside the BCCLS LibCal system, with a 'Music, Dance & Film' program filter and 27 pages of events. Adelphi's chamber ensemble plays here Mar 14, 2027."
+    },
+    {
+      "name": "BCCLS libraries event calendar (LibCal)",
+      "kind": "library",
+      "url": "https://bccls.libcal.com/calendar",
+      "other_urls": [
+        "https://bccls.libcal.com/ajax/calendar/list?c=-1&date=0000-00-00&perpage=40&page=1&audience=&cats=&camps=&inc=0",
+        "https://bccls.libcal.com/calendar/hackensack"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "arts",
+        "family",
+        "community"
+      ],
+      "event_types": [
+        "library concerts",
+        "open mic",
+        "film screenings",
+        "author talks",
+        "craft programs"
+      ],
+      "audience": null,
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-19",
+      "sample_events": [
+        {
+          "title": "Open Mic Night",
+          "date": "2026-11-19",
+          "time": "7 PM",
+          "venue": "Johnson Public Library",
+          "town": "Hackensack",
+          "cost": "Free",
+          "source_url": "https://baselocal.com/nj/bergen-county/events/"
+        }
+      ],
+      "yield": "high",
+      "notes": "Already known, listed for the recipe. The page itself renders empty to WebFetch, but the JSON feed behind it is public: /ajax/calendar/list?c=-1&date=0000-00-00&perpage=40&page=1&audience=&cats=&camps=&inc=0 returned 263 events for one day with title, start time, library and event URL. Keyword search is client-side (URL form ?t=d&q=concert&cid=-1&cal=-1&inc=0), so filter titles yourself for concert, jazz, film, author, open mic. Feed includes non-Bergen member libraries (Montclair, Secaucus, West Caldwell, Roseland); drop those. Per-library URLs exist, e.g. /calendar/hackensack."
+    },
+    {
+      "name": "Teaneck International Film Festival",
+      "kind": "community_org",
+      "url": "https://www.teaneckfilmfestival.org/",
+      "other_urls": [
+        "https://www.teaneckfilmfestival.org/new-page-1",
+        "https://events.humanitix.com/2026-teaneck-international-film-festival"
+      ],
+      "platform": "web",
+      "towns": [
+        "Teaneck"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "annual film festival",
+        "occasional year-round screenings"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "TIFF 21 ran Nov 5-12, 2026, so it just ended. Tickets were on Humanitix. Worth a look each September for the November lineup."
+    },
+    {
+      "name": "Fairleigh Dickinson University, Metropolitan Campus calendar",
+      "kind": "venue_calendar",
+      "url": "https://www.fdu.edu/calendar/metro-campus-this-month/",
+      "other_urls": [
+        "https://www.fdu.edu/calendar/metro-campus-next-month/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Teaneck",
+        "Hackensack"
+      ],
+      "categories": [
+        "arts",
+        "community"
+      ],
+      "event_types": [
+        "guest speakers",
+        "gallery exhibits",
+        "lectures"
+      ],
+      "audience": "open to the public where noted",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-30",
+      "sample_events": [
+        {
+          "title": "An Evening with Deon Butler",
+          "date": "2026-11-18",
+          "time": "7-8 PM",
+          "venue": "Wilson Auditorium, Dickinson Hall",
+          "town": "Teaneck",
+          "cost": "Free",
+          "source_url": "https://www.fdu.edu/calendar/metro-campus-this-month/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Mostly campus business; a few free public talks and exhibits each month. The lecture series entries are at the Morris Museum, not Bergen."
+    },
+    {
+      "name": "openmikes.org: Teaneck open mics",
+      "kind": "aggregator",
+      "url": "https://new.openmikes.org/open-mics-in-Teaneck-NJ",
+      "other_urls": [
+        "https://openmikes.org/listings/puffinculturalforum",
+        "https://openmikes.org/listings/ethicalculturesocietyofbergencounty",
+        "https://openmikes.org/listings/absalom",
+        "https://www.facebook.com/ethicalbrew"
+      ],
+      "platform": "web",
+      "towns": [
+        "Teaneck"
+      ],
+      "categories": [
+        "arts",
+        "nightlife"
+      ],
+      "event_types": [
+        "music, comedy and poetry open mics"
+      ],
+      "audience": "performers and listeners",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [
+        {
+          "title": "Open Mic Variety Night (third Friday)",
+          "date": "2026-11-20",
+          "time": "7:30-10:30 PM",
+          "venue": "Ethical Culture Society of Bergen County, 541 Cumberland Ave",
+          "town": "Teaneck",
+          "cost": null,
+          "source_url": "https://openmikes.org/listings/ethicalculturesocietyofbergencounty"
+        }
+      ],
+      "yield": "low",
+      "notes": "Three listings: Puffin Cultural Forum (selected Sundays 4 PM, verified Nov 12), Ethical Culture Society (third Friday, 7:30 PM, 10-minute sets) and Absalom at 223 Degraw Ave (first Friday 8 PM, $20 cover, listing over a year old). The Nov 20 date is computed from the 'third Friday' rule, not printed. The society's own site returned 403; its coffeehouse Facebook page is facebook.com/ethicalbrew."
+    },
+    {
+      "name": "New Jersey Comedy Open Mics (Facebook group)",
+      "kind": "facebook_group",
+      "url": "https://www.facebook.com/groups/njcomedyopenmics/",
+      "other_urls": [],
+      "platform": "facebook",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife",
+        "arts"
+      ],
+      "event_types": [
+        "comedy open mic announcements",
+        "new room launches"
+      ],
+      "audience": "comics and comedy fans",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-08",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Statewide group with a maintained open mic list; snippets showed a post seeking a host for a Bergen County room and a thread asking about the Bergen open mic scene. Not loaded. Best place to learn of a new comedy night at a Bergen bar before it has a ticket page."
+    },
+    {
+      "name": "North Jersey LIVE MUSIC (Facebook group)",
+      "kind": "facebook_group",
+      "url": "https://www.facebook.com/groups/NorthJerseyLIVEMUSIC/",
+      "other_urls": [],
+      "platform": "facebook",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "gig flyers",
+        "open mics",
+        "band lineups"
+      ],
+      "audience": "musicians and fans",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Describes itself as a place to spread the word for gigs, bands, clubs, bars and open mics in North Jersey. Not loaded; activity date unknown."
+    },
+    {
+      "name": "New Jersey Cover Bands (Facebook group)",
+      "kind": "facebook_group",
+      "url": "https://www.facebook.com/groups/1075339199199750/",
+      "other_urls": [
+        "https://www.facebook.com/groups/131141127233149/",
+        "https://www.facebook.com/groups/354026020103832/",
+        "https://www.facebook.com/groups/1428315394110615/",
+        "https://www.facebook.com/groups/local363softball/"
+      ],
+      "platform": "facebook",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "cover band gig flyers"
+      ],
+      "audience": "bar band crowd",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Snippet showed a Mr. LoveJoy flyer for a Ramsey bar. Sister groups with the same flyers: New Jersey Local Bands, Jersey Cover Band Scene, NJ Local Music Promotion, and a Rockland NY/NJ entertainment group. Statewide, so filter by town. None loaded."
+    },
+    {
+      "name": "The Heart of Bergen County (Facebook group)",
+      "kind": "facebook_group",
+      "url": "https://www.facebook.com/groups/heartofbergen/",
+      "other_urls": [],
+      "platform": "facebook",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "community",
+        "arts",
+        "food"
+      ],
+      "event_types": [
+        "local events",
+        "business promos"
+      ],
+      "audience": null,
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "General 'all things Bergen County' group for events, local businesses and restaurants. Not loaded."
+    },
+    {
+      "name": "ArtsBergen (Northern NJ Community Foundation)",
+      "kind": "community_org",
+      "url": "https://www.nnjcf.org/artsbergen/",
+      "other_urls": [
+        "https://www.facebook.com/groups/artsbergencreates/",
+        "https://www.nnjcf.org/events/",
+        "https://www.facebook.com/groups/277198366386819/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County",
+        "Hackensack"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "artist networking",
+        "public art projects",
+        "calls for artists"
+      ],
+      "audience": "working artists and arts groups",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "County arts alliance. The web page had no dated events; the Facebook group 'ArtsBergen Creates + Connects' is where members post exhibitions and openings (not loaded). NNJCF has a general events page too."
+    },
+    {
+      "name": "Mr. Lovejoy",
+      "kind": "band",
+      "url": "https://www.mrlovejoymusic.com/shows",
+      "other_urls": [
+        "https://www.thelocalmusicfinder.com/band/mr-lovejoy-35",
+        "https://www.facebook.com/Mr.LoveJoyMusic"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ramsey"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "cover band: pop, rock, country, dance"
+      ],
+      "audience": "bar crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-05",
+      "sample_events": [
+        {
+          "title": "Mr. Lovejoy",
+          "date": "2026-11-13",
+          "time": "9:00 PM",
+          "venue": "The Shannon Rose",
+          "town": "Ramsey",
+          "cost": null,
+          "source_url": "https://www.mrlovejoymusic.com/shows"
+        }
+      ],
+      "yield": "low",
+      "notes": "Own shows page with two pages of dates; Shannon Rose Ramsey is the Bergen regular. Several rows are private events."
+    },
+    {
+      "name": "The Kootz",
+      "kind": "band",
+      "url": "https://www.thekootz.com/schedule.php",
+      "other_urls": [
+        "https://www.thelocalmusicfinder.com/band/the-kootz-8"
+      ],
+      "platform": "web",
+      "towns": [
+        "South Hackensack",
+        "East Rutherford",
+        "Ridgewood",
+        "Garfield"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "classic rock covers, full band and acoustic"
+      ],
+      "audience": "bar and restaurant crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-01-02",
+      "sample_events": [
+        {
+          "title": "The Kootz (acoustic)",
+          "date": "2026-11-18",
+          "time": "6:30-9:30 PM",
+          "venue": "Fat-B & Sons Restaurant Lounge",
+          "town": "South Hackensack",
+          "cost": null,
+          "source_url": "https://www.thekootz.com/schedule.php"
+        },
+        {
+          "title": "The Kootz (acoustic)",
+          "date": "2026-11-27",
+          "time": "8:00-11:00 PM",
+          "venue": "The Roosevelt Lounge & Speakeasy",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.thekootz.com/schedule.php"
+        },
+        {
+          "title": "The Kootz",
+          "date": "2026-12-16",
+          "time": "6:30 PM",
+          "venue": "GoodFellas Restaurant",
+          "town": "Garfield",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/venue/goodfellas-restaurant-1014"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Very busy North Jersey band: schedule runs 19 pages. Their dates led to three rooms we did not have (FB & Son's, The Roosevelt, GoodFellas). Most gigs are Morris/Passaic, so filter by town."
+    },
+    {
+      "name": "Dakota Leigh",
+      "kind": "band",
+      "url": "https://www.thelocalmusicfinder.com/band/dakota-leigh-1",
+      "other_urls": [
+        "https://www.instagram.com/lovealwayskota",
+        "https://www.facebook.com/lovealwayskota"
+      ],
+      "platform": "web",
+      "towns": [
+        "Garfield",
+        "East Rutherford",
+        "Hasbrouck Heights"
+      ],
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "solo singer, pop and classic rock covers"
+      ],
+      "audience": "restaurant diners",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-28",
+      "sample_events": [
+        {
+          "title": "Dakota Leigh",
+          "date": "2026-11-14",
+          "time": "6:30 PM",
+          "venue": "Vesta Wood-Fired",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/dakota-leigh-1"
+        },
+        {
+          "title": "Dakota Leigh",
+          "date": "2026-11-19",
+          "time": "7:00 PM",
+          "venue": "The Roosevelt",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/dakota-leigh-1"
+        },
+        {
+          "title": "Dakota Leigh",
+          "date": "2026-11-20",
+          "time": "6:30 PM",
+          "venue": "Ivy Inn Restaurant",
+          "town": "Hasbrouck Heights",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/dakota-leigh-1"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Nine gigs in two weeks, four in south Bergen restaurants; reveals Ivy Inn (Hasbrouck Heights) as a music room. Her own site refused the connection, so use this page or Instagram."
+    },
+    {
+      "name": "Achievers Band",
+      "kind": "band",
+      "url": "https://www.thelocalmusicfinder.com/band/achievers-band-826",
+      "other_urls": [
+        "https://www.facebook.com/achieversnj",
+        "https://www.instagram.com/achieversnj"
+      ],
+      "platform": "web",
+      "towns": [
+        "Hillsdale",
+        "Hackensack",
+        "Washington Township",
+        "Bergenfield"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Grateful Dead and Jerry Garcia Band tribute"
+      ],
+      "audience": "Deadheads",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-02-06",
+      "sample_events": [
+        {
+          "title": "Achievers Band",
+          "date": "2026-11-14",
+          "time": "8:00 PM",
+          "venue": "Lou's Tavern",
+          "town": "Hillsdale",
+          "cost": "Free",
+          "source_url": "https://www.thelocalmusicfinder.com/band/achievers-band-826"
+        },
+        {
+          "title": "Achievers Band",
+          "date": "2026-11-27",
+          "time": "8:00 PM",
+          "venue": "Lenora's Bar",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/achievers-band-826"
+        },
+        {
+          "title": "Achievers Band",
+          "date": "2027-01-01",
+          "time": "9:00 PM",
+          "venue": "Dog House Saloon & Grill",
+          "town": "Washington Township",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/achievers-band-826"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Bergen-heavy schedule booked months out, including Hashery Dispensary in Hackensack (Nov 25, 6 PM) and Tommy Fox's (Feb 6). Good lead on Lenora's Bar and Lou's Tavern."
+    },
+    {
+      "name": "After Party",
+      "kind": "band",
+      "url": "https://www.thelocalmusicfinder.com/band/after-party-42",
+      "other_urls": [
+        "https://www.facebook.com/profile.php?id=100037248968054"
+      ],
+      "platform": "web",
+      "towns": [
+        "Westwood",
+        "Paramus"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "cover band: rock, dance, alternative"
+      ],
+      "audience": "bar crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-20",
+      "sample_events": [
+        {
+          "title": "After Party",
+          "date": "2026-11-13",
+          "time": "8:00 PM",
+          "venue": "Five Dimes Brewery",
+          "town": "Westwood",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/after-party-42"
+        },
+        {
+          "title": "After Party",
+          "date": "2026-11-20",
+          "time": "9:00 PM",
+          "venue": "The Orange Lantern",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/after-party-42"
+        }
+      ],
+      "yield": "low",
+      "notes": "The website listed on their profile (afterpartyrocks.com) now redirects to a parked domain; rely on this page and Facebook."
+    },
+    {
+      "name": "John Lepre (NJ Solo Guitar)",
+      "kind": "band",
+      "url": "https://www.thelocalmusicfinder.com/band/john-lepre-63",
+      "other_urls": [
+        "https://www.facebook.com/NJSOLOGUITAR"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ridgewood",
+        "Paramus"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "solo guitar covers",
+        "oldies dance parties"
+      ],
+      "audience": "restaurant diners, 50+ dance crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-29",
+      "sample_events": [
+        {
+          "title": "John Lepre",
+          "date": "2026-11-21",
+          "time": "6:00 PM",
+          "venue": "Steel Wheel Tavern",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/john-lepre-63"
+        },
+        {
+          "title": "Pre Holiday Dance Party with The Tercels",
+          "date": "2026-11-29",
+          "time": "2:00 PM",
+          "venue": "Paramus Elks",
+          "town": "Paramus",
+          "cost": "$20 cover",
+          "source_url": "https://www.thelocalmusicfinder.com/band/john-lepre-63"
+        }
+      ],
+      "yield": "low",
+      "notes": "Only lead found on public band dances at the Paramus Elks lodge."
+    },
+    {
+      "name": "The DIVAS Band",
+      "kind": "band",
+      "url": "https://thedivasband.com/events",
+      "other_urls": [
+        "https://www.thelocalmusicfinder.com/band/the-divas-band-61",
+        "https://www.facebook.com/thedivasband"
+      ],
+      "platform": "web",
+      "towns": [
+        "Maywood"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "female-fronted pop, rock and dance covers"
+      ],
+      "audience": "bar crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-14",
+      "sample_events": [
+        {
+          "title": "The DIVAS Band",
+          "date": "2026-11-14",
+          "time": "8:30 PM",
+          "venue": "Twin Door Tavern",
+          "town": "Maywood",
+          "cost": null,
+          "source_url": "https://thedivasband.com/events"
+        }
+      ],
+      "yield": "low",
+      "notes": "Own events page lists public dates without towns."
+    },
+    {
+      "name": "The Faculty Meeting",
+      "kind": "band",
+      "url": "https://www.thelocalmusicfinder.com/band/the-faculty-meeting-148",
+      "other_urls": [
+        "https://www.facebook.com/people/Music-by-The-Faculty-Meeting/100069735992357/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "classic rock and pop covers"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-24",
+      "sample_events": [
+        {
+          "title": "The Faculty Meeting",
+          "date": "2026-11-20",
+          "time": "6:00 PM",
+          "venue": "Steel Wheel Tavern",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/the-faculty-meeting-148"
+        },
+        {
+          "title": "The Faculty Meeting",
+          "date": "2026-11-24",
+          "time": "6:00 PM",
+          "venue": "Steel Wheel Tavern",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/the-faculty-meeting-148"
+        }
+      ],
+      "yield": "low",
+      "notes": "Steel Wheel regulars."
+    },
+    {
+      "name": "The Exits",
+      "kind": "band",
+      "url": "https://www.thelocalmusicfinder.com/band/the-exits-3144",
+      "other_urls": [
+        "https://www.facebook.com/theexitsnj/",
+        "https://www.instagram.com/theexitsnj/reels/"
+      ],
+      "platform": "web",
+      "towns": [
+        "New Milford",
+        "Ramsey"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "cover band: rock, pop, country, dance"
+      ],
+      "audience": "bar crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-18",
+      "sample_events": [
+        {
+          "title": "The Exits",
+          "date": "2026-11-13",
+          "time": "9:30 PM",
+          "venue": "River & Henley",
+          "town": "New Milford",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/the-exits-3144"
+        },
+        {
+          "title": "Exits at the Shannon Rose",
+          "date": "2026-12-18",
+          "time": "9:30 PM",
+          "venue": "The Shannon Rose",
+          "town": "Ramsey",
+          "cost": null,
+          "source_url": "https://baselocal.com/nj/bergen-county/events/"
+        }
+      ],
+      "yield": "low",
+      "notes": "No website; Facebook and Instagram are the schedule."
+    },
+    {
+      "name": "That's What She Sang",
+      "kind": "band",
+      "url": "https://www.thelocalmusicfinder.com/band/thats-what-she-sang-3045",
+      "other_urls": [
+        "https://www.instagram.com/thatswhat_shesang",
+        "https://www.facebook.com/p/Thats-What-She-Sang-100087545777398/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "cover band and duo: classic rock, country, pop"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-29",
+      "sample_events": [
+        {
+          "title": "That's What She Sang",
+          "date": "2026-11-13",
+          "time": "6:00 PM and 9:30 PM",
+          "venue": "Steel Wheel Tavern",
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/thats-what-she-sang-3045"
+        }
+      ],
+      "yield": "low",
+      "notes": "Later November dates are in New York State and Sussex County."
+    },
+    {
+      "name": "Gold Dust Dreams (Fleetwood Mac tribute)",
+      "kind": "facebook_page",
+      "url": "https://www.facebook.com/GoldDustDreamsNJ",
+      "other_urls": [
+        "https://www.thelocalmusicfinder.com/band/gold-dust-dreams-2512"
+      ],
+      "platform": "facebook",
+      "towns": [
+        "Mahwah"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "Fleetwood Mac tribute shows"
+      ],
+      "audience": null,
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-13",
+      "sample_events": [
+        {
+          "title": "Gold Dust Dreams: Fleetwood Mac Tribute",
+          "date": "2026-11-13",
+          "time": "7:30 PM",
+          "venue": "Booyah!",
+          "town": "Mahwah",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/gold-dust-dreams-2512"
+        }
+      ],
+      "yield": "low",
+      "notes": "Facebook is their only home; the page was not loaded. The gig was read from their Local Music Finder profile."
+    },
+    {
+      "name": "Vesta Wood-Fired",
+      "kind": "venue_calendar",
+      "url": "https://www.thelocalmusicfinder.com/venue/vesta-wood-fired-2367",
+      "other_urls": [
+        "https://www.vestawoodfired.com/",
+        "https://www.facebook.com/VestaWoodFired"
+      ],
+      "platform": "web",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "food",
+        "nightlife"
+      ],
+      "event_types": [
+        "dinner music by solo singers"
+      ],
+      "audience": "diners",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-28",
+      "sample_events": [
+        {
+          "title": "Ciro Patti Jr",
+          "date": "2026-11-13",
+          "time": "6:30 PM",
+          "venue": "Vesta Wood-Fired, 64 Hoboken Rd",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/venue/vesta-wood-fired-2367"
+        },
+        {
+          "title": "Dakota Leigh",
+          "date": "2026-11-14",
+          "time": "6:30 PM",
+          "venue": "Vesta Wood-Fired",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/venue/vesta-wood-fired-2367"
+        },
+        {
+          "title": "Sean O'Flynn",
+          "date": "2026-11-28",
+          "time": "6:30 PM",
+          "venue": "Vesta Wood-Fired",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/venue/vesta-wood-fired-2367"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Not in our files. The restaurant's own site showed nothing but a title to WebFetch, so the Local Music Finder venue page is the readable calendar."
+    },
+    {
+      "name": "GoodFellas Restaurant",
+      "kind": "venue_calendar",
+      "url": "https://www.thelocalmusicfinder.com/venue/goodfellas-restaurant-1014",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Garfield"
+      ],
+      "categories": [
+        "food",
+        "nightlife"
+      ],
+      "event_types": [
+        "weeknight dinner music"
+      ],
+      "audience": "diners",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-16",
+      "sample_events": [
+        {
+          "title": "Pete The Beat",
+          "date": "2026-11-18",
+          "time": "6:30 PM",
+          "venue": "GoodFellas Restaurant, 661 Midland Ave",
+          "town": "Garfield",
+          "cost": "Free",
+          "source_url": "https://www.thelocalmusicfinder.com/venue/goodfellas-restaurant-1014"
+        },
+        {
+          "title": "The Kootz",
+          "date": "2026-12-16",
+          "time": "6:30 PM",
+          "venue": "GoodFellas Restaurant",
+          "town": "Garfield",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/venue/goodfellas-restaurant-1014"
+        }
+      ],
+      "yield": "low",
+      "notes": "Not in our files. BaseLocal also showed a ticketed dinner show here on Nov 19 (Sandra L. Barone, via Eventbrite)."
+    },
+    {
+      "name": "FB & Son's Restaurant (Fat-B & Sons)",
+      "kind": "venue_calendar",
+      "url": "https://www.thelocalmusicfinder.com/venue/fb-sons-restaurant-1081",
+      "other_urls": [
+        "https://www.facebook.com/FatBastardandSonsRestaurant",
+        "https://www.instagram.com/fatbastardandsonsrestaurant/"
+      ],
+      "platform": "web",
+      "towns": [
+        "South Hackensack"
+      ],
+      "categories": [
+        "food",
+        "nightlife"
+      ],
+      "event_types": [
+        "classic rock bands",
+        "acoustic nights"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-18",
+      "sample_events": [
+        {
+          "title": "Five O",
+          "date": "2026-11-13",
+          "time": "7:00 PM",
+          "venue": "FB & Son's Restaurant, 434 US-46",
+          "town": "South Hackensack",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/venue/fb-sons-restaurant-1081"
+        },
+        {
+          "title": "The Kootz (acoustic)",
+          "date": "2026-11-18",
+          "time": "6:30-9:30 PM",
+          "venue": "Fat-B & Sons Restaurant Lounge",
+          "town": "South Hackensack",
+          "cost": null,
+          "source_url": "https://www.thekootz.com/schedule.php"
+        }
+      ],
+      "yield": "medium",
+      "notes": "No website; lineups go out on Facebook and Instagram, which were not loaded. An earlier research file mentions it once."
+    },
+    {
+      "name": "Lou's Tavern",
+      "kind": "venue_calendar",
+      "url": "https://www.thelocalmusicfinder.com/venue/lous-tavern-44",
+      "other_urls": [
+        "https://www.facebook.com/LousTavernNJ"
+      ],
+      "platform": "web",
+      "towns": [
+        "Hillsdale"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "jam and tribute bands, no cover"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-14",
+      "sample_events": [
+        {
+          "title": "Achievers Band (Grateful Dead tribute)",
+          "date": "2026-11-14",
+          "time": "8:00 PM",
+          "venue": "Lou's Tavern, 74 Broadway",
+          "town": "Hillsdale",
+          "cost": "Free",
+          "source_url": "https://www.thelocalmusicfinder.com/venue/lous-tavern-44"
+        }
+      ],
+      "yield": "low",
+      "notes": "Not in our files. Facebook page is the main channel (not loaded)."
+    },
+    {
+      "name": "The Roosevelt (lounge and Lucy's Parlor speakeasy)",
+      "kind": "venue_calendar",
+      "url": "https://theroosevelt.us/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "acoustic acts",
+        "DJs",
+        "cabaret",
+        "comedy in the speakeasy"
+      ],
+      "audience": "cocktail crowd",
+      "access": "open",
+      "how_checked": "search_snippet_only",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-12-18",
+      "sample_events": [
+        {
+          "title": "Dakota Leigh",
+          "date": "2026-11-19",
+          "time": "7:00 PM",
+          "venue": "The Roosevelt, 356 Paterson Ave",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.thelocalmusicfinder.com/band/dakota-leigh-1"
+        },
+        {
+          "title": "The Kootz (acoustic)",
+          "date": "2026-11-27",
+          "time": "8:00-11:00 PM",
+          "venue": "The Roosevelt Lounge & Speakeasy",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.thekootz.com/schedule.php"
+        },
+        {
+          "title": "Sandy Stones",
+          "date": "2026-12-18",
+          "time": "7:30 PM",
+          "venue": "The Roosevelt",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://baselocal.com/nj/bergen-county/events/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Not in our files. Website address came from a directory snippet and was not loaded. Three independent sources (two band schedules and BaseLocal) show regular Thursday-Saturday music; an Eventbrite cabaret showcase ran in the speakeasy on Nov 9."
+    },
+    {
+      "name": "Rustica Lounge",
+      "kind": "venue_calendar",
+      "url": "https://rusticalounge.getbento.com/live-music/",
+      "other_urls": [
+        "https://www.rusticalounge.com/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Cliffside Park"
+      ],
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "weekly jazz nights",
+        "jazz brunch",
+        "acoustic Latin band"
+      ],
+      "audience": "date night",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Standing weekly program rather than dated acts: Friday Jazz Night, Saturday vocal/Latin jazz, Sunday smooth jazz brunch; home page adds Thursday acoustic Latin band 7-10 PM and Fri/Sat 8-11 PM. No performer names. Only dated item was a New Year's Eve page."
+    },
+    {
+      "name": "Brvsh Cul7ur3",
+      "kind": "venue_calendar",
+      "url": "https://51580356.hs-sites.com/concerts?hsLang=en",
+      "other_urls": [
+        "https://brvshcul7ur3.com"
+      ],
+      "platform": "web",
+      "towns": [
+        "Teaneck"
+      ],
+      "categories": [
+        "nightlife",
+        "arts"
+      ],
+      "event_types": [
+        "ticketed jazz concerts with dinner and cocktails"
+      ],
+      "audience": "jazz listeners, date night",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-12-12",
+      "sample_events": [
+        {
+          "title": "Ariacne Trujillo",
+          "date": "2026-11-13",
+          "time": "8 PM",
+          "venue": "Brvsh Cul7ur3, 482 Cedar Lane",
+          "town": "Teaneck",
+          "cost": null,
+          "source_url": "https://baselocal.com/nj/bergen-county/events/"
+        },
+        {
+          "title": "Miguel Zenon Duo",
+          "date": "2026-12-12",
+          "time": "8 PM",
+          "venue": "Brvsh Cul7ur3",
+          "town": "Teaneck",
+          "cost": null,
+          "source_url": "https://baselocal.com/nj/bergen-county/events/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Bills itself as the county's jazz destination and books name players. Its concert calendar page loaded with only a heading (events are injected by script), so dates here come from BaseLocal. Mentioned once in our events file; the calendar itself was not a tracked source."
+    },
+    {
+      "name": "Andiamo Restaurant",
+      "kind": "venue_calendar",
+      "url": "https://www.andiamorestaurant.net/events.html",
+      "other_urls": [
+        "https://www.andiamorestaurant.net/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Haworth"
+      ],
+      "categories": [
+        "food",
+        "nightlife"
+      ],
+      "event_types": [
+        "comedy nights",
+        "charity motorcycle run"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2027-02-11",
+      "sample_events": [
+        {
+          "title": "Andiamo Comedy Night",
+          "date": "2027-02-11",
+          "time": null,
+          "venue": "Andiamo Restaurant, 23 Hardenburgh Ave",
+          "town": "Haworth",
+          "cost": null,
+          "source_url": "https://www.andiamorestaurant.net/events.html"
+        }
+      ],
+      "yield": "low",
+      "notes": "Runs a comedy night a few times a year (the last was Oct 7, 2026). Call 201-384-1551 for time and price."
+    },
+    {
+      "name": "Glen Rock Inn",
+      "kind": "facebook_page",
+      "url": "https://www.facebook.com/TheGlenRockInn",
+      "other_urls": [
+        "https://glenrockinn.com/glen-rock-the-glen-rock-inn-events"
+      ],
+      "platform": "facebook",
+      "towns": [
+        "Glen Rock"
+      ],
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "jazz and acoustic nights"
+      ],
+      "audience": null,
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "NJArts.net lists it as a Glen Rock music room and points to this Facebook page, which was not loaded. The website's events page only showed New Year's Eve hours, so music listings, if still running, live on Facebook. Old press mentions Thursday jazz; unconfirmed for 2026."
+    },
+    {
+      "name": "Next Stop Comedy",
+      "kind": "ticketing_organizer",
+      "url": "https://www.eventbrite.com/o/38476008843",
+      "other_urls": [
+        "https://www.eventbrite.com/e/next-stop-comedy-at-bolero-snort-brewery-carlstadt-nj-tickets-771877435187"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Carlstadt"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "touring stand-up nights in breweries"
+      ],
+      "audience": "21+ brewery crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-01-22",
+      "sample_events": [
+        {
+          "title": "Next Stop Comedy at Bolero Snort Brewery",
+          "date": "2027-01-22",
+          "time": "8:00 PM",
+          "venue": "Bolero Snort Brewery and Tasting Room",
+          "town": "Carlstadt",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/e/next-stop-comedy-at-bolero-snort-brewery-carlstadt-nj-tickets-771877435187"
+        }
+      ],
+      "yield": "low",
+      "notes": "National producer that rotates through breweries; Bolero Snort is its Bergen stop, with two more dates behind the Jan 22 listing. The organizer page shows only the next 12 events until you click Show more, so the Bergen date may be hidden; the event URL is the reliable one."
+    },
+    {
+      "name": "Ridgewood Guild",
+      "kind": "community_org",
+      "url": "https://ridgewoodguild.com/events/",
+      "other_urls": [
+        "https://www.ridgewoodguild.com/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "arts",
+        "community",
+        "holiday"
+      ],
+      "event_types": [
+        "Winterfest",
+        "Music in the Night",
+        "Movies in the Park",
+        "Art in the Park",
+        "film festival"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-21",
+      "sample_events": [
+        {
+          "title": "Winterfest 2026",
+          "date": "2026-11-21",
+          "time": "11:00 AM-2:00 PM",
+          "venue": null,
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://www.ridgewoodguild.com/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Runs downtown Ridgewood's outdoor music, movie and art series in warm months and a spring film festival. Site says dates are pending and subject to change."
+    },
+    {
+      "name": "Paris Koh Fine Arts",
+      "kind": "venue_calendar",
+      "url": "https://www.pariskohfinearts.com/exhibitions",
+      "other_urls": [
+        "https://www.pariskohfinearts.com/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Fort Lee"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "gallery exhibitions and opening receptions"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-10-31",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Gallery with a Fort Lee space (201 Bridge Plaza North) and a Chelsea space. Last show closed Oct 31, 2026 with a reception in September; nothing announced after Nov 12 yet. Check which location each show is in."
+    },
+    {
+      "name": "Books & Greetings",
+      "kind": "venue_calendar",
+      "url": "https://www.booksandgreetings.com/events",
+      "other_urls": [
+        "https://www.booksandgreetings.com/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Northvale"
+      ],
+      "categories": [
+        "arts",
+        "family"
+      ],
+      "event_types": [
+        "celebrity and children's author signings"
+      ],
+      "audience": "families, fans",
+      "access": "js_heavy",
+      "how_checked": "firecrawl",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Calendar is a script widget (Firecrawl rendered it); it showed no events for November 2026. Signings are ticketed by buying the book in store or by phone at 201-784-2665. Historically busiest in spring and fall book seasons."
+    },
+    {
+      "name": "Songkick / Bandsintown town pages (via Hypebot)",
+      "kind": "aggregator",
+      "url": "https://concerts.hypebot.com/cities/popular/rutherford-nj",
+      "other_urls": [
+        "https://concerts.hypebot.com/cities/jazz/tenafly-nj",
+        "https://www.bandsintown.com/c/hackensack-nj"
+      ],
+      "platform": "bandsintown",
+      "towns": [
+        "Rutherford",
+        "Englewood",
+        "East Rutherford",
+        "Tenafly"
+      ],
+      "categories": [
+        "arts",
+        "nightlife"
+      ],
+      "event_types": [
+        "ticketed touring concerts"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-05-15",
+      "sample_events": [
+        {
+          "title": "John Pizzarelli",
+          "date": "2026-11-22",
+          "time": null,
+          "venue": "Bergen Performing Arts Center",
+          "town": "Englewood",
+          "cost": null,
+          "source_url": "https://concerts.hypebot.com/cities/jazz/tenafly-nj"
+        }
+      ],
+      "yield": "low",
+      "notes": "Hypebot mirrors Bandsintown city pages and loads without blocking (bandsintown.com itself returns 403 to WebFetch). Town pages are swamped by New York City shows; the Hackensack page was almost all Manhattan and Brooklyn. Useful only as a cross-check on bergenPAC, American Dream and Williams Center."
+    },
+    {
+      "name": "New Jersey Stage: This Week in Music",
+      "kind": "media_listing",
+      "url": "https://www.newjerseystage.com/sections/MusicThisWeek.php",
+      "other_urls": [
+        "https://www.newjerseystage.com/sections/EventsThisWeek.php",
+        "https://www.newjerseystage.com/articles/AdvancedPreviews.php"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "weekly concert, comedy and theater previews"
+      ],
+      "audience": null,
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-09-09",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Statewide arts paper. Section pages returned only a site description to WebFetch (content is script-loaded) and the /events/ path is a 404. Search results show weekly 'This Week in Music' and 'This Week in Comedy' preview articles through at least Sept 2026, plus per-event pages that name bergenPAC shows. No county filter found."
+    },
+    {
+      "name": "NJArts.net: Bergen County venues directory",
+      "kind": "media_listing",
+      "url": "https://njarts.net/383",
+      "other_urls": [
+        "https://www.facebook.com/RiverCrossingConcerts",
+        "https://www.facebook.com/JoeysNightlife"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "arts"
+      ],
+      "event_types": [
+        "venue directory"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Jay Lustig's town-by-town list of arts rooms with links; it led to First Flight Theatre, Players Guild of Leonia, Paris Koh, Brvsh Cul7ur3, River Crossing Concerts (River Edge, Facebook), Joey's (Lodi, Facebook) and Shawn's Crazy Saloon (North Arlington, Facebook). A linked headline says NJArts.net announced it is closing, so treat as a one-time seed, not a feed. Some entries are dead (Hurdy Gurdy stopped producing concerts; the Society Cafe page 404s)."
+    },
+    {
+      "name": "Macaroni KID Pascack Valley: Bergen high school musicals roundup",
+      "kind": "media_listing",
+      "url": "https://npascackvalley.macaronikid.com/articles/5e3a3404528af46205752495/grab-your-tickets-to-these-high-school-musicals-in-bergen-county",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "arts",
+        "family"
+      ],
+      "event_types": [
+        "high school musicals open to the public"
+      ],
+      "audience": "families",
+      "access": "blocked",
+      "how_checked": "search_snippet_only",
+      "cadence": "seasonal",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Annual roundup of school shows with ticket instructions; returned 403 to WebFetch, known from a search snippet (older years: Westwood, Emerson). Re-check in February-March when spring musicals go on sale. No equivalent list exists for fall plays."
+    }
+  ],
+  "search_recipes": [
+    "Read baselocal.com/nj/bergen-county/events/ in two passes (offset 0 and 100000) and keep anything tagged music, comedy, theater, film, book or craft",
+    "thelocalmusicfinder.com/venue/<slug>-<id> for each Bergen bar; then follow each /band/ link for the act's own schedule and socials",
+    "curl 'https://bccls.libcal.com/ajax/calendar/list?c=-1&date=YYYY-MM-DD&perpage=40&page=N&audience=&cats=&camps=&inc=0' and filter titles for concert|jazz|music|film|movie|author|open mic|paint",
+    "firecrawl scrape https://barrymorefilmcenter.org/full-schedule --wait-for 3000 (Tockify widget; plain fetch returns stale data)",
+    "firecrawl search 'facebook.com/groups \"Bergen County\" live music bands' (surfaces public group posts with fresh gig flyers in the snippets)",
+    "site:tickettailor.com OR site:eventbrite.com \"Carlstadt, NJ\" OR \"East Rutherford, NJ\" comedy",
+    "site:eventbrite.com \"Next Stop Comedy\" \"Bolero Snort\"",
+    "site:songkick.com/venues Rutherford OR Teaneck OR Englewood (per-room concert lists, e.g. Black Box at Williams Center)",
+    "feverup.com/en/fort-lee-nj-us/candlelight for all Candlelight dates and prices",
+    "\"<band name>\" site:thelocalmusicfinder.com/band to turn a flyer name into a full gig list"
+  ],
+  "gaps": [
+    "Facebook and Instagram could not be read without logging in. Groups and pages listed here were confirmed by search snippets only: LIve Music Bergen County NJ, North Jersey LIVE MUSIC, New Jersey Cover Bands, New Jersey Comedy Open Mics, The Heart of Bergen County, ArtsBergen Creates + Connects, Glen Rock Inn, Gold Dust Dreams, FB & Son's, Lou's Tavern.",
+    "Venues that BaseLocal surfaced via Facebook Events but whose own calendars I could not locate or load: Untamed Arts (Hackensack craft workshops, several a week), 82 Oak Bar & Bistro (Garfield), Rare Bird / Ramsey Golf & Country Club, Lenora's Bar (Hackensack), Hansil's (Oakland), Forte Piano (Paramus recitals), Center for Modern Dance Education (Hackensack; site failed TLS), Temple Israel (Ridgewood), Our Lady of Mount Carmel (Ridgewood), Helen Farabee Center (Carlstadt Mixed Chorus), The Treasury at Felina (Ridgewood).",
+    "Elks, VFW and American Legion halls: only one public dance found (Paramus Elks, Nov 29, via a musician's gig list). No lodge calendar or page located.",
+    "Bookstores: Bookends in Ridgewood (site failed certificate check) and Barnes & Noble Paramus (store page would not render) could not be read. Books & Greetings' calendar loaded but was empty for November.",
+    "High school theater: no page lists fall plays with public tickets; only an annual spring-musical roundup (blocked) turned up. Schools would need to be checked one by one.",
+    "Dead or stale: Hurdy Gurdy Folk Music Club (board voted to stop producing concerts), Unitarian Society of Ridgewood Society Cafe page (404), Belskie Museum site (2022 copyright, no schedule), Hiram Blauvelt Art Museum (temporarily closed, reopening date unclear), Gallery Bergen (latest listing April 2026), Art Center of Northern NJ events folder (empty), Mudspinners events (2024), Skyline Theatre Company (now performing in Bloomfield, Essex County).",
+    "No usable county filter on JerseyArts (zip sort did not work), NJ Jazz Society (lists only its own events, none in Bergen), Bandsintown/Songkick city pages (dominated by New York City), Eventbrite location searches (the bergen-county slug returns statewide results).",
+    "Jazz rooms beyond Brvsh Cul7ur3 and Rustica: search snippets mention Colombia Kaliente in Englewood (Fri/Sat jazz) and Tavlin in Tenafly (Saturday Bnai Jazz); neither was verified.",
+    "Websites with no dated listings when fetched: Ridgewood Orpheus Club (flyer image only), Green Point (River Vale), Gerry's Place (Norwood), Biagio's (Paramus), Color Me Mine Ridgewood, Sunshine Pottery (Englewood), Clay Ground (Teaneck), Yellow Door Art Studio and The Crafty Kit (Westwood; dates shown without a year).",
+    "Could not reach: Ridgewood Gilbert & Sullivan Opera Company, Ridgewood Concert Band, Grant Street Cafe (Dumont), Garage Theatre Group, Dakota Leigh's own site (all connection or certificate errors)."
+  ]
+}
