@@ -29,9 +29,9 @@ async function all(table, cols, build = (x) => x) {
   const P = pl.filter((p) => hit([p.name, p.description, p.address, p.town_slug, p.category, ...(p.tags || []), ...(p.best_for || [])].join(' ').toLowerCase()));
   console.log(`As of ${today} (NJ): ${ev.length} published events and ${pl.length} places read.`);
   console.log(`EVENTS (${E.length})`);
-  for (const e of E.slice(0, SHOW)) console.log(`- ${e.title} | ${e.town_slug} | ${e.starts_on || 'TBA'}${e.ends_on ? '..' + e.ends_on : ''} ${e.recurrence_text || ''} | ${e.time_text || 'no time'} | ${e.cost_text || ''} | ${e.category} [${(e.tags || []).join(',')}] | ${(e.description || '').slice(0, 160)}`);
-  if (E.length > SHOW) console.log(`... ${E.length - SHOW} more events not shown; add a narrower word.`);
+  for (const e of E.slice(0, SHOW)) console.log(`- ${e.title} | ${e.town_slug} | ${e.starts_on || 'TBA'}${e.ends_on ? '..' + e.ends_on : ''} ${e.recurrence_text || ''} | ${e.time_text || 'no time'} | ${e.cost_text || ''} | ${e.category} [${(e.tags || []).join(',')}] | ${(e.description || '').slice(0, 160)}${e.source_url ? ` | source: ${e.source_url}` : ''}`);
+  if (E.length > SHOW) console.log(`... ${E.length - SHOW} more events not shown; any one word matches, so use fewer, more specific words or one quoted phrase.`);
   console.log(`\nPLACES (${P.length})`);
   for (const p of P.slice(0, SHOW)) console.log(`- ${p.name} | ${p.town_slug} | ${p.category} [${(p.tags || []).join(',')}] good for [${(p.best_for || []).join(',')}] | ${p.hours_text || ''} | ${(p.description || '').slice(0, 160)}`);
-  if (P.length > SHOW) console.log(`... ${P.length - SHOW} more places not shown; add a narrower word.`);
+  if (P.length > SHOW) console.log(`... ${P.length - SHOW} more places not shown; any one word matches, so use fewer, more specific words or one quoted phrase.`);
 })().catch((e) => { console.error(e.message); process.exit(1); });

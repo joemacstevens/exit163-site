@@ -1,6 +1,6 @@
 # Follow-ups: "I'll find out and text you back"
 
-Spec, 2026-11-12. Step 1 of the build order is built on branch `agent-paces` (uncommitted, not deployed). It is off until the `followups` table exists and `FOLLOWUPS=on` is set. Where the build differs from the first draft of this spec, the text below has been updated.
+Spec, 2026-11-12. Step 1 of the build order is built and merged to `main` (PR #13). The `followups` table has been in the live database since 2026-11-13, and the yes path passed against the real buddy that day (`research/test-runs/2026-11-13T14-48-46-followups-live.md`). It stays off until `FOLLOWUPS=on` is set. Step 2 (the research routine and the email to Joe) was built the same day: `research/FOLLOWUP-ROUTINE.md`, scheduled tasks `exit163-followups-am` and `exit163-followups-pm`. Where the build differs from the first draft of this spec, the text below has been updated.
 
 When the buddy has no answer to a specific question, it offers to find out. If the person says yes, the question goes to research, and the buddy texts the answer (or an honest "couldn't confirm it") by a promised time. Every answer found also goes into the database, so the next person who asks gets it straight away.
 
@@ -85,7 +85,7 @@ New table `followups`:
 
 ## Research routine
 
-A local scheduled task, `exit163-followups`, at 10:30am and 5:00pm daily (clear of the phone routines). For each open follow-up, oldest promise first:
+Two local scheduled tasks, `exit163-followups-am` (10:30am) and `exit163-followups-pm` (5:00pm), daily and clear of the phone routines. Both follow `research/FOLLOWUP-ROUTINE.md`, which is the working copy of these steps. `scripts/followups.js research` gives them the open questions (no phone) with matching registry sources. For each open follow-up, oldest promise first:
 
 1. Search our own database again. A new harvest may already have the answer.
 2. Check the sources in `research/sources/REGISTRY.json` that match the town and category, including the logged-in ones.
@@ -95,9 +95,12 @@ A local scheduled task, `exit163-followups`, at 10:30am and 5:00pm daily (clear 
 6. Write what it found as a harvest row, so the event or detail reaches the database through the existing import (which still needs your OK).
 7. If nothing meets the bar, leave it open. On the last run before the promise is due, draft the honest close.
 
+The routine keeps its notes (`notes-<id>.md`) and what it found (`finds-<date>.json`) in `research/followups/`. "Last run before the promise is due" is worked out in code (`lastCall` in `lib/followups.js`): in practice, the 5pm run on the due date.
+
 ## Approve and send
 
-- After each run, one email to you (`notifyOwner`, `lib/notify.js`) listing each question, draft and source link.
+- After each run, one email to you (`scripts/followups.js digest --send`) listing each question, draft and source link, with the commands to approve and send. It is sent only when something needs you: a draft to approve, an approved answer not yet texted, a send that got stuck, or an open question that is late.
+- A second email comes from the server, not the Mac: the nightly job (`api/reflect.js`, 3am NJ) emails you when any promise is due within a day and has not been texted. That covers the days the Mac is off and the routine never runs.
 - v1 approval is `scripts/followups.js` in a session: `list`, `draft <id>`, `approve <id>`, `reject <id>` (back to open) and `send`, in the style of `scripts/partner.js`. To edit a draft, run `draft` again.
 - New endpoint `POST /api/followup` with `ADMIN_TOKEN`, dry run by default like `/api/blast`. It sends only rows marked `approved`, skips opted-out numbers, refuses outside 8am to 9pm, and logs the text to `sms_messages`.
 - It claims each row by moving `approved` to `sending` in one update before texting, so a double run cannot text someone twice.
@@ -141,7 +144,7 @@ These are in `scripts/scenarios-followups.json` (run with `FOLLOWUPS=on SCENARIO
 ## Build order
 
 1. **The loop, by hand.** Table, the two tools, prompt change, context lines, `scripts/followups.js`, `/api/followup`, tests. You or a session do the research. This alone makes the promise real.
-2. **The routine.** `exit163-followups` does the research and drafts; the email digest arrives; you approve.
+2. **The routine.** `exit163-followups-am` and `-pm` do the research and drafts; the email digest arrives; you approve. Built 2026-11-13.
 3. **Less waiting.** A one-tap approve page (opened from the email, with a Send button rather than a link that sends, since mail scanners follow links), and a server-side research job for when the Mac is off.
 4. **Automatic sending** for answers that meet the source bar, once the approval history shows the drafts are reliable.
 

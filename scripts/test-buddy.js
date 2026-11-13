@@ -41,7 +41,11 @@ const picked = only.length ? scenarios.filter((s) => only.includes(s.id)) : scen
     }
     const [u] = await q(db().from('sms_users').select('first_name,town_slug,notes,email,blast_opt_in').eq('phone', phone));
     const facts = await q(db().from('subscriber_facts').select('kind,fact,born_year,source').eq('phone', phone));
-    md += `<sub>profile after: ${JSON.stringify(u)}</sub>\n\n<sub>facts after: ${JSON.stringify(facts)}</sub>\n\n---\n\n`;
+    md += `<sub>profile after: ${JSON.stringify(u)}</sub>\n\n<sub>facts after: ${JSON.stringify(facts)}</sub>\n\n`;
+    // Follow-ups this person is owed (the table may not exist yet; see db/migrations).
+    const owed = await db().from('followups').select('id,status,question,needed_by,due_at,town_slug,category,ticket_id').eq('phone', phone).order('id');
+    if (!owed.error && owed.data.length) md += `<sub>follow-ups after: ${JSON.stringify(owed.data)}</sub>\n\n`;
+    md += `---\n\n`;
   }
 
   const file = path.join(outDir, `${stamp}${process.env.RUN_LABEL ? '-' + process.env.RUN_LABEL : ''}.md`);

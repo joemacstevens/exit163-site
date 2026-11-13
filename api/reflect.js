@@ -15,10 +15,13 @@ module.exports = async (req, res) => {
   const dryRun = url.searchParams.get('dry_run') === '1';
   const results = await reviewAll({ limit: 20, dryRun });
   if (!dryRun) await followups.prune(); // old sent, closed and canceled follow-ups (lib/followups.js)
+  // Promises due today that have not been texted: email Joe, in case the Mac that runs the research is off.
+  const nudged = dryRun ? { sent: false } : await followups.nudge();
   return res.status(200).json({
     ok: true,
     dry_run: dryRun,
     reviewed: results.length,
+    followups_due_email: nudged.sent,
     results: results.map((r) => ({ ...r, phone: mask(r.phone) })),
   });
 };
