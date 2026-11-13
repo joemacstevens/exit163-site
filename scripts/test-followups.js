@@ -405,6 +405,95 @@ test('with follow-ups off, the conversation carries on exactly as before', async
   await text('FORGET');
 });
 
+// ---------- the research routine and the email to Joe ----------
+const at = (iso) => new Date(iso);
+const SAT_1035 = at('2026-11-14T15:35:00Z');   // Saturday 10:35am NJ: the morning run on the day it's due
+const SAT_1704 = at('2026-11-14T22:04:00Z');   // Saturday 5:04pm NJ: the last run before 8pm
+const mailbox = () => { const sent = []; return { sent, email: async (subject, html) => { sent.push({ subject, html }); return true; } }; };
+
+test('last call is the 5pm run on the day the promise is due, not any run before it', async () => {
+  const due = followups.dueAt(DAY);                                   // Saturday 8pm NJ
+  assert.strictEqual(followups.lastCall(due, at('2026-11-13T22:04:00Z')), false);   // Friday 5:04pm: two runs left
+  assert.strictEqual(followups.lastCall(due, SAT_1035), false);                      // 5pm run still to come
+  assert.strictEqual(followups.lastCall(due, at('2026-11-14T21:45:00Z')), true);    // 4:45pm counts as the 5pm run
+  assert.strictEqual(followups.lastCall(due, SAT_1704), true);
+  assert.strictEqual(followups.lastCall(due, at('2026-11-15T15:35:00Z')), true);    // already late
+});
+
+test('the routine gets open questions only, soonest first, with no phone and no test rows', async () => {
+  reset();
+  const first = await make();
+  const second = await followups.create({ phone: OTHER, question: 'Does the Closter holiday market on Dec 13 allow dogs?', town: 'Closter' }, at('2026-11-13T20:00:00Z'));
+  await followups.create({ phone: OTHER, channel: 'test', question: 'A test question nobody should research' }, DAY);
+  const done = await followups.create({ phone: PHONE, question: 'Is Santa at Van Saun Park on Dec 12 ticketed?' }, DAY);
+  await followups.draft(done.id, { answer: 'Found out: no tickets needed.', source: 'https://example.org/santa' });
+  const rows = await followups.forResearch({ now: SAT_1704 });
+  assert.deepStrictEqual(rows.map((r) => r.id), [first.id, second.id]);
+  assert.ok(rows.every((r) => !('phone' in r) && !JSON.stringify(r).includes('555')));
+  assert.strictEqual(rows[0].town_slug, 'oradell');
+  assert.strictEqual(rows[0].promised_by, 'Sat, Nov 14 8:00 PM');
+  assert.ok(rows.every((r) => r.last_call === true && r.late === false));
+  assert.strictEqual((await followups.forResearch({ now: SAT_1035 }))[0].last_call, false);
+});
+
+test('the digest email goes out only when something needs Joe, and shows the draft, its source and how to send it', async () => {
+  reset();
+  const box = mailbox();
+  assert.strictEqual((await followups.sendDigest({ now: SAT_1035, email: box.email })).sent, false);     // nothing at all
+  const f = await followups.create({ phone: PHONE, question: 'Is the <b>Oradell</b> tree lighting on Dec 5 still on if it rains?' }, DAY);
+  const quietRun = await followups.sendDigest({ now: SAT_1035, email: box.email });                      // open, not late: no email
+  assert.strictEqual(quietRun.sent, false);
+  assert.strictEqual(box.sent.length, 0);
+  await followups.draft(f.id, { answer: 'Found out: it moves inside to the firehouse if it rains. Saturday 5pm, free.', source: 'https://www.oradell.org/tree-lighting' });
+  const out = await followups.sendDigest({ now: SAT_1035, email: box.email, note: '1 new fact saved for import' });
+  assert.strictEqual(out.sent, true);
+  assert.strictEqual(box.sent.length, 1);
+  const { subject, html } = box.sent[0];
+  assert.strictEqual(subject, 'Follow-ups: 1 to approve');
+  assert.ok(html.includes('it moves inside to the firehouse'));
+  assert.ok(html.includes('href="https://www.oradell.org/tree-lighting"'));
+  assert.ok(html.includes(`scripts/followups.js approve ${f.id} &amp;&amp;`) && html.includes(`send ${f.id} --live`));
+  assert.ok(html.includes('&lt;b&gt;Oradell&lt;/b&gt;') && !html.includes('<b>Oradell</b>'));           // their words can't inject markup
+  assert.ok(html.includes('1 new fact saved for import'));
+  assert.ok(!html.includes('5550100'));                                                                // never who asked
+  assert.ok(out.text.includes('DRAFTS WAITING FOR YOUR OK'));
+});
+
+test('the digest marks late promises, honest closes and sends that got stuck', async () => {
+  reset();
+  const late = await make();
+  const closeIt = await followups.create({ phone: OTHER, question: 'Does the Closter holiday market on Dec 13 allow dogs?' }, DAY);
+  await followups.draft(closeIt.id, { answer: 'I dug into the Closter holiday market and couldn\'t confirm the dog rule.', found: false });
+  const stuckId = await approved({ phone: OTHER, question: 'Is Santa at Van Saun Park on Dec 12 ticketed?' });
+  T.followups.find((r) => r.id === stuckId).status = 'sending';
+  const d = await followups.digest({ now: at('2026-11-15T15:35:00Z') });                                // Sunday morning: all late
+  assert.deepStrictEqual([d.open.length, d.drafted.length, d.stuck.length, d.late, d.needsJoe], [1, 1, 1, 3, true]);
+  const mail = followups.digestEmail(d);
+  assert.strictEqual(mail.subject, 'Follow-ups: 1 to approve, 1 stuck, 1 still open, 3 late');
+  assert.ok(mail.text.includes(`#${late.id}, promised by Sat, Nov 14 8:00 PM, LATE`));
+  assert.ok(mail.text.includes('Honest close, nothing confirmed'));
+  assert.ok(mail.text.includes('STUCK MID-SEND'));
+  const box = mailbox();                                                                                // a late open question alone is worth an email
+  reset(); await make();
+  assert.strictEqual((await followups.sendDigest({ now: at('2026-11-15T15:35:00Z'), email: box.email })).sent, true);
+});
+
+test('the nightly reminder emails only when a promise is due within a day and not yet texted', quiet(async () => {
+  reset();
+  const box = mailbox();
+  assert.deepStrictEqual(await followups.nudge({ now: DAY, email: box.email }), { sent: false, due: 0 });
+  await make();                                                                                          // due Saturday 8pm NJ
+  assert.strictEqual((await followups.nudge({ now: at('2026-11-13T08:00:00Z'), email: box.email })).sent, false);   // Friday 3am: 41 hours out
+  const night = await followups.nudge({ now: at('2026-11-14T08:00:00Z'), email: box.email });                       // Saturday 3am: due tonight
+  assert.deepStrictEqual(night, { sent: true, due: 1 });
+  assert.strictEqual(box.sent[0].subject, 'Follow-ups due today: 1 not texted yet');
+  T.followups[0].status = 'sent';
+  assert.strictEqual((await followups.nudge({ now: at('2026-11-14T08:00:00Z'), email: box.email })).sent, false);   // texted: nothing to nag about
+  missing.add('followups');
+  assert.deepStrictEqual(await followups.nudge({ now: DAY, email: box.email }), { sent: false, due: 0 });           // no table: no error
+  assert.strictEqual(box.sent.length, 1);
+}));
+
 (async () => {
   let failed = 0;
   for (const [name, fn] of tests) {

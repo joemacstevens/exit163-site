@@ -1,5 +1,5 @@
 -- 2026-11-12: follow-ups ("I'll find out and text you back") ------------------
--- NOT APPLIED to the live database when written. The code (lib/followups.js) only uses it
+-- Applied to the live database on 2026-11-13 (SQL editor). The code (lib/followups.js) only uses it
 -- when FOLLOWUPS=on, and treats a missing table as "follow-ups aren't available".
 -- Spec: research/FOLLOWUP-SPEC.md
 --
