@@ -1,0 +1,1154 @@
+{
+  "run": "2026-11-12-round2",
+  "rubric": "v1",
+  "graded_at": "2026-11-12",
+  "notes": "Ten re-run conversations, 31 turns, same database as the after run. Same rubric and calibration as 2026-11-12-baseline and 2026-11-12-after. No turn graded wrong; no caps applied.",
+  "conversations": [
+    {
+      "id": "latin-dance",
+      "source_file": "research/eval/runs/2026-11-12-round2.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Where can I dance bachata this weekend",
+          "outcome": "hit",
+          "note": "Zina's Saturday (DJ Edwin Martinez of The Salsa Connexion, 8:30pm-1am, free, free parking, 21+) and La Familia at Shawn's Crazy Saloon ($15/$20, 21+). Verified. Saved the interest in the same step and asked the town.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "Reggaeton, a club with a Latin DJ Friday or Saturday",
+          "outcome": "hit",
+          "note": "Don Coqui for both nights (music not specified, said so) and Zina's for reggaeton. Verified.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 3,
+          "ask": "Which one has the older crowd, I'm 38",
+          "outcome": "partial",
+          "note": "'Neither one says what ages show up': correct, and the false '21+' claim about Don Coqui is gone. Offers Havana Dance Center's Saturday social with its own unknowns flagged. Still can't answer the question.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: which has the older crowd. Reply: neither says. No crowd tags on Zina's, Don Coqui or Havana Dance Center rows.",
+            "fix": "Crowd notes (typical ages, dress) for the Latin venues."
+          },
+          "category": "nightlife/parties"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 3,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 88,
+      "summary": "Same picks as the after run, now with two interests saved and nothing unsupported. The crowd question is still a data gap."
+    },
+    {
+      "id": "teens",
+      "source_file": "research/eval/runs/2026-11-12-round2.md",
+      "category": "family/kids/teens",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "15-year-old and three friends, Friday night, not the mall",
+          "outcome": "hit",
+          "note": "Football finals (times from the issue, prices flagged) and GLOW at Sky Zone, 8-10pm, with its waiver, SkySocks and shirt rules stated. Verified.",
+          "category": "family/kids/teens"
+        },
+        {
+          "n": 2,
+          "ask": "They have about $25 each",
+          "outcome": "hit",
+          "note": "Leads with the free Teen Hunger Games Party (Fri 6-7:30, grades 7-12) and now says 'Registration's required'. Football and Humdingers with prices flagged. Verified. 'Then football at 7pm' follows a party that ends at 7:30.",
+          "category": "family/kids/teens"
+        },
+        {
+          "n": 3,
+          "ask": "Anything for Sunday afternoon too",
+          "outcome": "hit",
+          "note": "Clue Quest ($20, slots, 'buy tickets ahead', link), Come From Away ($20, 'tickets are required'), and the free mural repaint. Verified; ties both to the $25 budget.",
+          "category": "family/kids/teens"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 4,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 91,
+      "summary": "Requirements are stated on every pick and the budget carries into the Sunday answer. Saved the kid's age; also saved 'about $25 per teen for outings', a one-evening figure, as a lasting budget."
+    },
+    {
+      "id": "toddler-weekday",
+      "source_file": "research/eval/runs/2026-11-12-round2.md",
+      "category": "family/kids/teens",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "18-month-old, tomorrow morning near Teaneck",
+          "outcome": "hit",
+          "note": "Playtime at Teaneck library ('drop-in with no registration'), Tot Time in Cresskill, The Great Story Kids Cafe in Ridgefield (opens 10, socks). Verified.",
+          "category": "family/kids/teens"
+        },
+        {
+          "n": 2,
+          "ask": "Free story times or music classes this week",
+          "outcome": "hit",
+          "note": "Music Storytime with Mr. Corbitt now comes with 'you need to register first'; Bogota's 'Registration required' too. Verified. For Hackensack's Music & Movement it says 'They don't say whether you need to sign up'; the row says drop-in. 11.7 seconds.",
+          "category": "family/kids/teens"
+        },
+        {
+          "n": 3,
+          "ask": "Saturday, when my wife is off",
+          "outcome": "hit",
+          "note": "Hackensack story time at 10 and the petting zoo at 1 (register), verified. Says Teaneck's Family Storytime needs registration; in the row that note belongs to Music Storytime, not Family Storytime.",
+          "category": "family/kids/teens"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 3,
+        "fit": 4,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 94,
+      "summary": "The dropped registration note is fixed. The opposite slip appears once: a condition from one program in a combined library row is applied to another. One reply over 10 seconds."
+    },
+    {
+      "id": "budget-two",
+      "source_file": "research/eval/runs/2026-11-12-round2.md",
+      "category": "memory/personalization",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "$20 total for Saturday, two people",
+          "outcome": "hit",
+          "note": "Free salsa social at Zina's (8:30pm-1am, free parking, 21+), Flat Rock Brook trails, Hillsdale Holiday Boutique 10-3. Verified.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 2,
+          "ask": "Something at night",
+          "outcome": "hit",
+          "note": "Caribbean Second Saturdays (free with RSVP, 9pm-1am) and Zina's again, from saved rows. Verified.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 3,
+          "ask": "We live in Garfield, no car",
+          "outcome": "partial",
+          "note": "Blue 42 in Elmwood Park (open to 2am, tagged budget, prices not posted) and The DIVAS Band at Twin Door (cover not posted), each about 10 minutes, with an honest 'I can't promise either one is walkable'. Verified, but neither is known to fit $20 and the free Movie Karaoke Night in Rutherford, about 15 minutes away, which the after run led with, is not offered.",
+          "issue": {
+            "owner": "builder",
+            "type": "search_miss",
+            "evidence": "Ask: Saturday night from Garfield with no car and $20. Reply: a wings bar and a cover band, costs unknown. Tool calls: search_places({\"town\":\"Garfield\",\"good_for\":\"budget\"}), search_events({\"start_date\":\"2026-11-14\",\"end_date\":\"2026-11-14\",\"after\":\"18:00\",\"near\":\"Garfield\",\"category\":\"nightlife\"}). The category filter excludes 'CUG's Movie Karaoke Night | rutherford | 9 PM | Free' (category arts), and nothing in the call carries the budget.",
+            "fix": "Let saved budget and access facts shape the search (boost free and cheap rows when a 'free or cheap' fact exists); prompt: don't add a category when the constraint is cost."
+          },
+          "category": "memory/personalization"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 3,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 80,
+      "summary": "Faster (5.5, 6.5, 9.8 seconds) and free of colour, but the last turn lost the budget: the free option nearby dropped out behind a nightlife-only search."
+    },
+    {
+      "id": "nye",
+      "source_file": "research/eval/runs/2026-11-12-round2.md",
+      "category": "nightlife/parties",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "New Year's Eve parties with an open bar and a DJ",
+          "outcome": "hit",
+          "note": "Booyah! as before; The Shannon Rose as backup (open bar, champagne toast, live band not a DJ, 9pm, $125 with dinner, phone to reserve). Verified.",
+          "category": "nightlife/parties"
+        },
+        {
+          "n": 2,
+          "ask": "Family friendly NYE instead, kids 8 and 11",
+          "outcome": "hit",
+          "note": "Holiday Bowl's family NYE with 'you have to pay in full to reserve'; Hackensack library's Noon Year's Eve Rave, 'Registration's required'. Verified. The library rave is tagged for kids and toddlers and is offered without the age caveat the after run gave.",
+          "category": "family/kids/teens"
+        },
+        {
+          "n": 3,
+          "ask": "How early do I need to book",
+          "outcome": "hit",
+          "note": "No deadline exists in the data; says so and gives every term that does: pay in full at Holiday Bowl, registration required at Hackensack (opening date unknown, link), Englewood's registration opening Dec 17 at 11:15am for ages 4-8 only. Verified.",
+          "category": "logistics/facts"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 4,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 91,
+      "summary": "The booking turn now passes on the conditions the rows carry."
+    },
+    {
+      "id": "cultural",
+      "source_file": "research/eval/runs/2026-11-12-round2.md",
+      "category": "cultural/holiday",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Hanukkah events or menorah lightings near Teaneck",
+          "outcome": "hit",
+          "note": "Leads with Jewbilation in Teaneck (Dec 9, 7:30pm, Debonair Music Hall, price flagged), then Fair Lawn's lighting, and says Teaneck's own lighting on the Municipal Green isn't dated yet. Verified. Searched 'hanukkah' this time.",
+          "category": "cultural/holiday"
+        },
+        {
+          "n": 2,
+          "ask": "In-laws are Filipino: a Simbang Gabi or a Christmas event in Bergenfield",
+          "outcome": "hit",
+          "note": "No Simbang Gabi (true); Holiday at the Pond and the undated Holiday Lights Parade. Verified. 'About 5 min from you' is the estimate from Bergenfield itself, because the search filtered on that town; from Teaneck, the saved home, the tool's figure is about 10.",
+          "category": "cultural/holiday"
+        },
+        {
+          "n": 3,
+          "ask": "Lunar New Year in Fort Lee or Palisades Park",
+          "outcome": "hit",
+          "note": "Both undated events with last year's timing, 'about 5 min from either town' (both figures are 5), plus a Chinese New Year cooking class Jan 26/27 ($90, 21+, ticketed). Verified.",
+          "category": "cultural/holiday"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 4,
+        "honesty": 3,
+        "fit": 4,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 86,
+      "summary": "Retrieval is fixed: the first answer is local again. One drive time is measured from the wrong place. Town saved as Teaneck from 'near teaneck', and three holiday interests."
+    },
+    {
+      "id": "active",
+      "source_file": "research/eval/runs/2026-11-12-round2.md",
+      "category": "active/outdoors/sports",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Pickleball open play this weekend, beginner",
+          "outcome": "hit",
+          "note": "Pickleball Sunday in Fair Lawn and Hudson River Pickleball's open play. Verified.",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 2,
+          "ask": "Yoga or a run club Sunday morning",
+          "outcome": "hit",
+          "note": "North Jersey Masters Sunday run (7:30-10, any distance up to 14+ miles) and Saturday's 3-6 mile social run; no Sunday yoga in the data (true).",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 3,
+          "ask": "Group hike in the Ramapo mountains anytime soon",
+          "outcome": "hit",
+          "note": "The ADK Ramapo chapter hike at Campgaw, Dec 26, now with 'You have to register ahead, rain or snow cancels it, and the cost isn't posted', plus Ramapo Valley County Reservation for a solo hike. Verified. 'It's not in the Ramapos proper, but it's right next door' is not in the row.",
+          "category": "active/outdoors/sports"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 3,
+        "fit": 3,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 90,
+      "summary": "Three hits, with the hike's conditions stated. One geographic remark has no support."
+    },
+    {
+      "id": "memory-carry",
+      "source_file": "research/eval/runs/2026-11-12-round2.md",
+      "category": "memory/personalization",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "I'm Dana in Westwood: no kids, love live jazz and wine bars, hate crowds",
+          "outcome": "hit",
+          "note": "Jimmy Heath tribute (players, sets at 8 and 9:30, $19-59, a ticket per set), Felina's wine list (about 15 minutes, open from 5), 'I can't promise either one will be quiet'. Verified. Wine is back.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 2,
+          "ask": "I only go out Friday nights and don't drive far",
+          "outcome": "handled",
+          "note": "Saved both; Friday's Ariacne Trujillo show with prices, Felina's Friday hours, and the next Friday show. Still about 20 minutes away, stated but not weighed against 'I don't drive far'.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 3,
+          "ask": "So what should I do this weekend",
+          "outcome": "hit",
+          "note": "Friday at Brvsh with wine at Felina first, the Westwood football crowd warning, Sunday's piano trio. Verified.",
+          "category": "memory/personalization"
+        },
+        {
+          "n": 4,
+          "ask": "And next weekend",
+          "outcome": "hit",
+          "note": "Phil Young Friday Nov 20; Pizzarelli Sunday, with 'it'll probably be busier' offered as a guess. Verified.",
+          "category": "memory/personalization"
+        }
+      ],
+      "scores": {
+        "usefulness": 4,
+        "knowledge": 4,
+        "honesty": 4,
+        "fit": 3,
+        "depth": 3,
+        "voice": 3
+      },
+      "score": 94,
+      "summary": "Wine restored and the unsupported 'calmer set' line is gone. The same 20-minute drive is offered four times despite the new prompt rule about short drives."
+    },
+    {
+      "id": "rain-plan",
+      "source_file": "research/eval/runs/2026-11-12-round2.md",
+      "category": "active/outdoors/sports",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "Hike rained out Saturday; two adults, late 20s",
+          "outcome": "hit",
+          "note": "The Gravity Vault (140+ routes, speed wall, hours not posted, 'mid-range'), Dracula in the evening, Monster Mini Golf (noon to 10, $15-16). Verified; each price is from its own row.",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 2,
+          "ask": "Something active",
+          "outcome": "hit",
+          "note": "GOAT Climbing Gym: 'Exact prices aren't posted, but it's mid-range.' The Tuesday meetup rate is not carried over. Big SNOW and the free Turkey Burn class. Verified.",
+          "category": "active/outdoors/sports"
+        },
+        {
+          "n": 3,
+          "ask": "Then dinner and a show",
+          "outcome": "hit",
+          "note": "Sofia then the A Christmas Story evening at bergenPAC; Dracula with Bar Mutz in Westwood (about 10 minutes). Verified. 'Walk about 5 minutes' uses the drive estimate as a walking time. The Thanksgiving line is gone.",
+          "category": "live music/comedy/arts"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 4,
+        "honesty": 3,
+        "fit": 3,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 83,
+      "summary": "The wrong turn is fixed: no price is borrowed from another row. Saved 'date nights' for two adults who never said they were a couple."
+    },
+    {
+      "id": "access",
+      "source_file": "research/eval/runs/2026-11-12-round2.md",
+      "category": "seniors/accessibility",
+      "turns": [
+        {
+          "n": 1,
+          "ask": "I use a wheelchair; what's actually accessible this weekend",
+          "outcome": "hit",
+          "note": "Barrymore Short Film Festival with schedule, prices, 'buy them ahead' and the mature-content note; La Bola Negra Sunday. Verified.",
+          "category": "seniors/accessibility"
+        },
+        {
+          "n": 2,
+          "ask": "A live show I can get into without stairs",
+          "outcome": "hit",
+          "note": "'The one live show this weekend I can promise is wheelchair accessible: Mozart! with the Adelphi Orchestra, Sunday at 4pm at Barrymore Film Center', conductor and soloist named, tickets needed, price flagged. Verified. Says other shows have no access information.",
+          "category": "seniors/accessibility"
+        },
+        {
+          "n": 3,
+          "ask": "Is there parking close by",
+          "outcome": "honest_miss",
+          "note": "No parking data; says so, adds that the building has an elevator and no stairs (from the place row), and points to the box office.",
+          "issue": {
+            "owner": "research",
+            "type": "data_gap",
+            "evidence": "Ask: parking near the Barrymore. Reply: not posted. The place row has access tags but no parking note.",
+            "fix": "Parking and drop-off notes for the Barrymore and the other theaters."
+          },
+          "category": "seniors/accessibility"
+        }
+      ],
+      "scores": {
+        "usefulness": 3,
+        "knowledge": 3,
+        "honesty": 4,
+        "fit": 4,
+        "depth": 4,
+        "voice": 3
+      },
+      "score": 85,
+      "summary": "The retrieval miss is fixed: the accessible concert is found and named. Parking is still unknown."
+    }
+  ],
+  "totals": {
+    "conversations": 10,
+    "turns": 31,
+    "mean_score": 88.2,
+    "by_dimension": {
+      "usefulness": 3.4,
+      "knowledge": 3.7,
+      "honesty": 3.6,
+      "fit": 3.5,
+      "depth": 3.7,
+      "voice": 3.0
+    },
+    "outcomes": {
+      "hit": 27,
+      "partial": 2,
+      "honest_miss": 1,
+      "search_miss": 0,
+      "wrong": 0,
+      "handled": 1,
+      "mishandled": 0
+    }
+  },
+  "category_scores": {
+    "nightlife/parties": {
+      "mean_score": 89.5,
+      "conversations": [
+        "latin-dance",
+        "nye"
+      ],
+      "conversation_scores": {
+        "latin-dance": 88,
+        "nye": 91
+      },
+      "baseline_mean": 77.0,
+      "after_mean": 81.5
+    },
+    "family/kids/teens": {
+      "mean_score": 92.5,
+      "conversations": [
+        "teens",
+        "toddler-weekday"
+      ],
+      "conversation_scores": {
+        "teens": 91,
+        "toddler-weekday": 94
+      },
+      "baseline_mean": 71.5,
+      "after_mean": 87.5
+    },
+    "seniors/accessibility": {
+      "mean_score": 85.0,
+      "conversations": [
+        "access"
+      ],
+      "conversation_scores": {
+        "access": 85
+      },
+      "baseline_mean": 59.0,
+      "after_mean": 60.0
+    },
+    "active/outdoors/sports": {
+      "mean_score": 86.5,
+      "conversations": [
+        "active",
+        "rain-plan"
+      ],
+      "conversation_scores": {
+        "active": 90,
+        "rain-plan": 83
+      },
+      "baseline_mean": 71.5,
+      "after_mean": 65.5
+    },
+    "cultural/holiday": {
+      "mean_score": 86.0,
+      "conversations": [
+        "cultural"
+      ],
+      "conversation_scores": {
+        "cultural": 86
+      },
+      "baseline_mean": 90.0,
+      "after_mean": 86.0
+    },
+    "memory/personalization": {
+      "mean_score": 87.0,
+      "conversations": [
+        "budget-two",
+        "memory-carry"
+      ],
+      "conversation_scores": {
+        "budget-two": 80,
+        "memory-carry": 94
+      },
+      "baseline_mean": 76.0,
+      "after_mean": 89.0
+    }
+  },
+  "comparison": {
+    "same_ten_baseline": {
+      "conversations": 10,
+      "turns": 31,
+      "mean_score": 74.1,
+      "by_dimension": {
+        "usefulness": 2.7,
+        "knowledge": 2.6,
+        "honesty": 3.9,
+        "fit": 2.9,
+        "depth": 2.7,
+        "voice": 3.0
+      },
+      "outcomes": {
+        "hit": 16,
+        "partial": 8,
+        "honest_miss": 6,
+        "search_miss": 0,
+        "wrong": 0,
+        "handled": 1,
+        "mishandled": 0
+      }
+    },
+    "same_ten_after": {
+      "conversations": 10,
+      "turns": 31,
+      "mean_score": 79.3,
+      "by_dimension": {
+        "usefulness": 3.3,
+        "knowledge": 3.2,
+        "honesty": 3.4,
+        "fit": 3.0,
+        "depth": 3.3,
+        "voice": 3.0
+      },
+      "outcomes": {
+        "hit": 23,
+        "partial": 4,
+        "honest_miss": 1,
+        "search_miss": 1,
+        "wrong": 1,
+        "handled": 1,
+        "mishandled": 0
+      }
+    },
+    "per_conversation": [
+      {
+        "id": "latin-dance",
+        "baseline": 74,
+        "after": 79,
+        "round2": 88,
+        "change_from_after": 9,
+        "baseline_scores": {
+          "usefulness": 3,
+          "knowledge": 2,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 2,
+          "voice": 4
+        },
+        "after_scores": {
+          "usefulness": 4,
+          "knowledge": 3,
+          "honesty": 3,
+          "fit": 2,
+          "depth": 3,
+          "voice": 3
+        },
+        "round2_scores": {
+          "usefulness": 4,
+          "knowledge": 3,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 3,
+          "voice": 3
+        },
+        "baseline_outcomes": [
+          "partial",
+          "hit",
+          "honest_miss"
+        ],
+        "after_outcomes": [
+          "hit",
+          "hit",
+          "partial"
+        ],
+        "round2_outcomes": [
+          "hit",
+          "hit",
+          "partial"
+        ]
+      },
+      {
+        "id": "teens",
+        "baseline": 75,
+        "after": 80,
+        "round2": 91,
+        "change_from_after": 11,
+        "baseline_scores": {
+          "usefulness": 3,
+          "knowledge": 3,
+          "honesty": 4,
+          "fit": 2,
+          "depth": 2,
+          "voice": 3
+        },
+        "after_scores": {
+          "usefulness": 3,
+          "knowledge": 3,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 3,
+          "voice": 3
+        },
+        "round2_scores": {
+          "usefulness": 3,
+          "knowledge": 4,
+          "honesty": 4,
+          "fit": 4,
+          "depth": 4,
+          "voice": 3
+        },
+        "baseline_outcomes": [
+          "hit",
+          "hit",
+          "partial"
+        ],
+        "after_outcomes": [
+          "hit",
+          "partial",
+          "hit"
+        ],
+        "round2_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ]
+      },
+      {
+        "id": "toddler-weekday",
+        "baseline": 68,
+        "after": 95,
+        "round2": 94,
+        "change_from_after": -1,
+        "baseline_scores": {
+          "usefulness": 3,
+          "knowledge": 2,
+          "honesty": 3,
+          "fit": 3,
+          "depth": 2,
+          "voice": 3
+        },
+        "after_scores": {
+          "usefulness": 4,
+          "knowledge": 4,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 4,
+          "voice": 3
+        },
+        "round2_scores": {
+          "usefulness": 4,
+          "knowledge": 4,
+          "honesty": 3,
+          "fit": 4,
+          "depth": 4,
+          "voice": 3
+        },
+        "baseline_outcomes": [
+          "hit",
+          "honest_miss",
+          "partial"
+        ],
+        "after_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ],
+        "round2_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ]
+      },
+      {
+        "id": "budget-two",
+        "baseline": 61,
+        "after": 89,
+        "round2": 80,
+        "change_from_after": -9,
+        "baseline_scores": {
+          "usefulness": 2,
+          "knowledge": 2,
+          "honesty": 4,
+          "fit": 2,
+          "depth": 2,
+          "voice": 3
+        },
+        "after_scores": {
+          "usefulness": 4,
+          "knowledge": 4,
+          "honesty": 3,
+          "fit": 3,
+          "depth": 3,
+          "voice": 3
+        },
+        "round2_scores": {
+          "usefulness": 3,
+          "knowledge": 3,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 3,
+          "voice": 3
+        },
+        "baseline_outcomes": [
+          "hit",
+          "partial",
+          "honest_miss"
+        ],
+        "after_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ],
+        "round2_outcomes": [
+          "hit",
+          "hit",
+          "partial"
+        ]
+      },
+      {
+        "id": "nye",
+        "baseline": 80,
+        "after": 84,
+        "round2": 91,
+        "change_from_after": 7,
+        "baseline_scores": {
+          "usefulness": 3,
+          "knowledge": 3,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 3,
+          "voice": 3
+        },
+        "after_scores": {
+          "usefulness": 3,
+          "knowledge": 3,
+          "honesty": 4,
+          "fit": 4,
+          "depth": 3,
+          "voice": 3
+        },
+        "round2_scores": {
+          "usefulness": 3,
+          "knowledge": 4,
+          "honesty": 4,
+          "fit": 4,
+          "depth": 4,
+          "voice": 3
+        },
+        "baseline_outcomes": [
+          "hit",
+          "partial",
+          "hit"
+        ],
+        "after_outcomes": [
+          "hit",
+          "hit",
+          "partial"
+        ],
+        "round2_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ]
+      },
+      {
+        "id": "cultural",
+        "baseline": 90,
+        "after": 86,
+        "round2": 86,
+        "change_from_after": 0,
+        "baseline_scores": {
+          "usefulness": 3,
+          "knowledge": 4,
+          "honesty": 4,
+          "fit": 4,
+          "depth": 3,
+          "voice": 3
+        },
+        "after_scores": {
+          "usefulness": 3,
+          "knowledge": 4,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 3,
+          "voice": 3
+        },
+        "round2_scores": {
+          "usefulness": 3,
+          "knowledge": 4,
+          "honesty": 3,
+          "fit": 4,
+          "depth": 4,
+          "voice": 3
+        },
+        "baseline_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ],
+        "after_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ],
+        "round2_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ]
+      },
+      {
+        "id": "active",
+        "baseline": 59,
+        "after": 81,
+        "round2": 90,
+        "change_from_after": 9,
+        "baseline_scores": {
+          "usefulness": 2,
+          "knowledge": 1,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 3,
+          "voice": 2
+        },
+        "after_scores": {
+          "usefulness": 3,
+          "knowledge": 3,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 4,
+          "voice": 3
+        },
+        "round2_scores": {
+          "usefulness": 4,
+          "knowledge": 4,
+          "honesty": 3,
+          "fit": 3,
+          "depth": 4,
+          "voice": 3
+        },
+        "baseline_outcomes": [
+          "honest_miss",
+          "partial",
+          "partial"
+        ],
+        "after_outcomes": [
+          "hit",
+          "hit",
+          "partial"
+        ],
+        "round2_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ]
+      },
+      {
+        "id": "memory-carry",
+        "baseline": 91,
+        "after": 89,
+        "round2": 94,
+        "change_from_after": 5,
+        "baseline_scores": {
+          "usefulness": 3,
+          "knowledge": 4,
+          "honesty": 4,
+          "fit": 4,
+          "depth": 4,
+          "voice": 3
+        },
+        "after_scores": {
+          "usefulness": 4,
+          "knowledge": 4,
+          "honesty": 3,
+          "fit": 3,
+          "depth": 3,
+          "voice": 3
+        },
+        "round2_scores": {
+          "usefulness": 4,
+          "knowledge": 4,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 3,
+          "voice": 3
+        },
+        "baseline_outcomes": [
+          "hit",
+          "handled",
+          "hit",
+          "hit"
+        ],
+        "after_outcomes": [
+          "hit",
+          "handled",
+          "hit",
+          "hit"
+        ],
+        "round2_outcomes": [
+          "hit",
+          "handled",
+          "hit",
+          "hit"
+        ]
+      },
+      {
+        "id": "rain-plan",
+        "baseline": 84,
+        "after": 50,
+        "round2": 83,
+        "change_from_after": 33,
+        "baseline_scores": {
+          "usefulness": 3,
+          "knowledge": 4,
+          "honesty": 4,
+          "fit": 2,
+          "depth": 4,
+          "voice": 3
+        },
+        "after_scores": {
+          "usefulness": 3,
+          "knowledge": 3,
+          "honesty": 1,
+          "fit": 3,
+          "depth": 4,
+          "voice": 3
+        },
+        "round2_scores": {
+          "usefulness": 3,
+          "knowledge": 4,
+          "honesty": 3,
+          "fit": 3,
+          "depth": 4,
+          "voice": 3
+        },
+        "baseline_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ],
+        "after_outcomes": [
+          "wrong",
+          "hit",
+          "hit"
+        ],
+        "round2_outcomes": [
+          "hit",
+          "hit",
+          "hit"
+        ]
+      },
+      {
+        "id": "access",
+        "baseline": 59,
+        "after": 60,
+        "round2": 85,
+        "change_from_after": 25,
+        "baseline_scores": {
+          "usefulness": 2,
+          "knowledge": 1,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 2,
+          "voice": 3
+        },
+        "after_scores": {
+          "usefulness": 2,
+          "knowledge": 1,
+          "honesty": 4,
+          "fit": 3,
+          "depth": 3,
+          "voice": 3
+        },
+        "round2_scores": {
+          "usefulness": 3,
+          "knowledge": 3,
+          "honesty": 4,
+          "fit": 4,
+          "depth": 4,
+          "voice": 3
+        },
+        "baseline_outcomes": [
+          "partial",
+          "honest_miss",
+          "honest_miss"
+        ],
+        "after_outcomes": [
+          "hit",
+          "search_miss",
+          "honest_miss"
+        ],
+        "round2_outcomes": [
+          "hit",
+          "hit",
+          "honest_miss"
+        ]
+      }
+    ],
+    "after_run_builder_issues": [
+      {
+        "rank": 1,
+        "issue": "Details land on the wrong thing or lose their conditions",
+        "status": "closed for the cases re-run, with a smaller relative left",
+        "evidence": "rain-plan t2 says GOAT's 'exact prices aren't posted' and no reply borrows a price or time from another row. Conditions are stated where they were dropped: toddler t2 ('you need to register first'), teens t2 ('Registration's required'), active t3 ('register ahead, rain or snow cancels it'), nye t2 and t3 ('pay in full to reserve'). Left over: toddler t3 applies the Teaneck row's registration note to Family Storytime (it belongs to Music Storytime), and toddler t2 says Hackensack doesn't say about sign-up where the row says drop-in. Both come from library rows that bundle several programs."
+      },
+      {
+        "rank": 2,
+        "issue": "Keyword misses and skipped searches",
+        "status": "closed for access and Hanukkah; one new filter miss",
+        "evidence": "access t2 finds the accessible Mozart concert. cultural t1 searches 'hanukkah' and leads with the Teaneck show and Teaneck's undated lighting. memory-carry t1 has a wine pick. Not testable here: the 'new ask, new search' rule (freestyle-80s was not re-run). New: budget-two t3 searched with category nightlife and lost the free event 15 minutes away."
+      },
+      {
+        "rank": 3,
+        "issue": "Memory still uneven",
+        "status": "closed for the cases re-run",
+        "evidence": "latin-dance now saves 2 facts (was 0), cultural 3 facts and the town (was nothing). Every conversation in the set saved something on its first turn. Nothing sensitive. Presumptive saves: 'date nights' for 'two adults' (rain-plan), 'about $25 per teen for outings' as a lasting budget (teens), 'Saturdays as a family' (toddler). right-now, foodie-events, noraebang and single-45 were not in this set."
+      },
+      {
+        "rank": 4,
+        "issue": "Unsupported colour, 'the listing says', one canned line",
+        "status": "mostly closed",
+        "evidence": "'The listing' appears in 0 of 31 replies; the check-back line once. Gone: 'both just say 21+', 'a fun crowd', 'take the 9:30 set', 'sell fast closer to Thanksgiving'. Remaining, stated as fact: 'about 5 min from you' measured from Bergenfield rather than home (cultural t2), 'walk about 5 minutes' from a drive estimate (rain-plan t3), 'not in the Ramapos proper, but it's right next door' (active t3), Family Storytime 'you register first' (toddler t3). Hedged and left at Honesty 4: 'it'll probably be busier' (memory-carry t4), 'the kind of thing that fills up' (nye t3). The builder listed four of these; the cultural drive time and the toddler condition are the two it did not."
+      },
+      {
+        "rank": 5,
+        "issue": "Slow replies and an unverified lead tool",
+        "status": "improved; not fully testable",
+        "evidence": "One reply over 10 seconds (toddler t2, 11.7s, two searches and a save); budget-two ran 5.5, 6.5 and 9.8 seconds (11.6 and 14.4 before). Median 6.4s. The 10.7-second cut-off cannot fire in the harness, and dj-promoter was not in this set."
+      }
+    ]
+  },
+  "issues_for_builder": [
+    {
+      "rank": 1,
+      "type": "invented",
+      "title": "A number or condition is still sometimes read against the wrong reference",
+      "conversations": [
+        "cultural",
+        "rain-plan",
+        "toddler-weekday",
+        "active"
+      ],
+      "turns": [
+        "cultural#2",
+        "rain-plan#3",
+        "toddler-weekday#2",
+        "toddler-weekday#3",
+        "active#3"
+      ],
+      "evidence": "cultural t2: search_events({\"keyword\":\"christmas\",\"town\":\"Bergenfield\",...}) measures from Bergenfield (0 miles, 5 min); the reply says 'about 5 min from you' to someone whose saved home is Teaneck (the tool's own figure from there is 10). rain-plan t3: 'walk about 5 minutes' to bergenPAC is the drive estimate. toddler t3: 'Teaneck library has Family Storytime at 11am... and you register first'; the row reads 'Family Storytime (Sat 11 AM, through Jan 2); Playtime (...drop-in...); Music Storytime with Mr. Corbitt (Mon 10:30 AM; registration required...)'. toddler t2: 'They don't say whether you need to sign up' for Music & Movement, which the Hackensack row marks drop-in. active t3: 'not in the Ramapos proper, but it's right next door'.",
+      "fix": "When a search filters on `town` and a home town is saved, return the drive time from home (or label it 'from Bergenfield'). Name the field as a drive and add the two prompt lines the builder proposed (a drive time is never a walk; no geography the row doesn't state). For bundled library rows, emit requirements per program, or have research split them into one row per program.",
+      "impact": "Honesty back to 4 in four conversations (about 5 points each)."
+    },
+    {
+      "rank": 2,
+      "type": "search_miss",
+      "title": "Constraints the person already gave drop out when the search is re-aimed",
+      "conversations": [
+        "budget-two",
+        "memory-carry"
+      ],
+      "turns": [
+        "budget-two#3",
+        "memory-carry#2",
+        "memory-carry#3",
+        "memory-carry#4"
+      ],
+      "evidence": "budget-two t3: with 'free or cheap, about $20 for two' saved, the search was search_events({...\"near\":\"Garfield\",\"category\":\"nightlife\"}); the reply offers a wings bar and a cover band with unknown costs and drops the free 'CUG's Movie Karaoke Night' in Rutherford (category arts, about 15 minutes). memory-carry: after 'I don't drive far' is saved, the same about-20-minute club is offered in t2, t3 and t4 with a 15-minute stop the other way, though the prompt now says not to keep offering the same long drive.",
+      "fix": "Pass saved budget and distance facts into the tool context: boost free and cheap rows when a budget fact exists, and penalise rows beyond about 15 minutes when a short-drive fact exists, returning a note when nothing close matches so the agent can say 'this is the closest jazz'. Prompt: don't add a category when the limiting factor is cost.",
+      "impact": "1 turn to a hit (budget-two t3) and Fit to 4 in memory-carry."
+    },
+    {
+      "rank": 3,
+      "type": "memory",
+      "title": "Presumptive saves, softer source talk, and one slow reply",
+      "conversations": [
+        "rain-plan",
+        "teens",
+        "toddler-weekday",
+        "budget-two",
+        "active",
+        "latin-dance"
+      ],
+      "turns": [
+        "toddler-weekday#2"
+      ],
+      "evidence": "Saved without being said: {\"kind\":\"interest\",\"fact\":\"date nights\"} for 'two adults, late 20s' (rain-plan); {\"kind\":\"budget\",\"fact\":\"about $25 per teen for outings\"} from one evening's pocket money (teens); {\"kind\":\"schedule\",\"fact\":\"Saturdays as a family\"} (toddler). Source talk moved from 'the listing' to 'It's marked as budget-friendly', 'a musical marked for teens', 'it's called beginner friendly', 'They call it a friendly studio setting'. toddler t2 took 11.7 seconds (two searches plus a save); in production the new cut-off would have trimmed it at 10.7.",
+      "fix": "Prompt: save who they go out with only when they say it; a one-night amount is not a standing budget. Add 'marked as' and 'called' to the phrasing rule with a natural alternative ('it's a budget spot', 'good for beginners'). Run the harness once at the 12-second limit so cut-off replies are graded as sent.",
+      "impact": "No outcome changes; cleaner memory and Voice."
+    }
+  ],
+  "gaps_for_research": [
+    {
+      "rank": 1,
+      "topic": "Prices, start times and hours on rows we hold",
+      "asked_in": [
+        "teens",
+        "nye",
+        "budget-two",
+        "rain-plan",
+        "latin-dance",
+        "access"
+      ],
+      "turns": 6,
+      "what_we_had": "Still no price for Sky Zone GLOW, football finals, Humdingers, Holiday Bowl's NYE packages, Blue 42 or the Mozart concert; no cover for Twin Door; no start time for Don Coqui's DJs or Dracula; no hours for The Gravity Vault or Big SNOW.",
+      "sources_that_would_help": "Venue booking pages and a phone call; Google Business hours."
+    },
+    {
+      "rank": 2,
+      "topic": "Library rows that bundle several programs",
+      "asked_in": [
+        "toddler-weekday"
+      ],
+      "turns": 2,
+      "what_we_had": "One row per library holding three to five programs with different days and different rules (drop-in vs registration required, resident priority). The agent can't tell which rule goes with which program.",
+      "sources_that_would_help": "Re-import from BCCLS LibCal as one row per program, each with its own day, time, ages and registration rule."
+    },
+    {
+      "rank": 3,
+      "topic": "Single remaining asks: crowd notes for Latin venues, parking at the Barrymore, Simbang Gabi, Sunday yoga",
+      "asked_in": [
+        "latin-dance",
+        "access",
+        "cultural",
+        "active"
+      ],
+      "turns": 4,
+      "what_we_had": "No crowd notes on Zina's, Don Coqui or Havana Dance Center; access tags but no parking note for the Barrymore; no Simbang Gabi; no Sunday-morning yoga.",
+      "sources_that_would_help": "Venue socials or a call for crowd; the Barrymore's visit page for parking; parish bulletins in early December; yoga studio weekend schedules."
+    }
+  ]
+}
