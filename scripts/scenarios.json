@@ -1,21 +1,165 @@
 [
-  {"id":"first-hello","persona":"Brand-new texter, saw the number on Instagram","turns":["hey is this the bergen weekend thing?","cool. I'm in Westwood, what's good this weekend","I'm Dana btw"]},
-  {"id":"rainy-kids","persona":"Parent of two young kids, rainy Saturday","turns":["it's supposed to pour saturday and my kids (3 and 6) are going to lose it. ideas near paramus?","anything free?"]},
-  {"id":"date-night","persona":"Couple, anniversary dinner","turns":["need a date night spot in ridgewood for our anniversary friday","something a little cheaper?","great, anything to do after dinner?"]},
-  {"id":"holiday-lights","persona":"Family planning December","turns":["when is the ridgewood tree lighting","what about santa events in bergen the first weekend of december"]},
-  {"id":"new-spots","persona":"Foodie wants what's new","turns":["what new restaurants opened in bergen recently?","any good korean bbq in fort lee"]},
-  {"id":"out-of-area","persona":"Asks about somewhere outside Bergen","turns":["what's happening in hoboken tonight","ok what about englewood then"]},
-  {"id":"vague","persona":"Bored, low effort","turns":["bored","idk something fun","teaneck"]},
-  {"id":"newsletter-flow","persona":"Happy texter who'll take the email","turns":["any fun family stuff in hackensack in december?","awesome thanks!","sure, it's dana.test@example.com"]},
-  {"id":"join-keyword","persona":"Wants the weekly text","turns":["JOIN","glen rock"]},
-  {"id":"nye","persona":"Planning New Year's Eve","turns":["anything going on for new years eve in bergen county?"]},
-  {"id":"january","persona":"Thinking ahead to winter","turns":["where can we go ice skating this winter","and anything for lunar new year?"]},
-  {"id":"business","persona":"Restaurant owner","turns":["I own a cafe in tenafly, how do I get listed or advertise with you?"]},
-  {"id":"rude","persona":"Grumpy","turns":["this is probably useless. what's actually worth doing in lodi"]},
-  {"id":"privacy","persona":"Overshares","turns":["my name is Mike Johnson, I live at 14 Oak St in Ramsey, kids are 8 and 10, what's fun for them this weekend"]},
-  {"id":"trivia-tonight","persona":"Wants something tonight on a weeknight","turns":["any trivia tonight near paramus?","what about thursday"]},
-  {"id":"live-music-sat","persona":"Group of friends, Saturday night","turns":["4 of us want live music and drinks saturday night, we are in hackensack","somewhere open late after?"]},
-  {"id":"karaoke","persona":"Birthday group","turns":["where can we do karaoke for my bday, like 10 people, fort lee area"]},
-  {"id":"brewery","persona":"Casual beer drinker","turns":["best brewery in bergen? ideally w food trucks or something"]},
-  {"id":"cheap-drinks","persona":"Budget night out","turns":["cheap drinks + good vibe in rutherford friday?","any comedy?"]}
+  {
+    "id": "first-hello",
+    "persona": "Brand-new texter, saw the number on Instagram",
+    "turns": [
+      "hey is this the bergen weekend thing?",
+      "cool. I'm in Westwood, what's good this weekend",
+      "I'm Dana btw"
+    ]
+  },
+  {
+    "id": "rainy-kids",
+    "persona": "Parent of two young kids, rainy Saturday",
+    "turns": [
+      "it's supposed to pour saturday and my kids (3 and 6) are going to lose it. ideas near paramus?",
+      "anything free?"
+    ]
+  },
+  {
+    "id": "date-night",
+    "persona": "Couple, anniversary dinner",
+    "turns": [
+      "need a date night spot in ridgewood for our anniversary friday",
+      "something a little cheaper?",
+      "great, anything to do after dinner?"
+    ]
+  },
+  {
+    "id": "holiday-lights",
+    "persona": "Family planning December",
+    "turns": [
+      "when is the ridgewood tree lighting",
+      "what about santa events in bergen the first weekend of december"
+    ]
+  },
+  {
+    "id": "new-spots",
+    "persona": "Foodie wants what's new",
+    "turns": [
+      "what new restaurants opened in bergen recently?",
+      "any good korean bbq in fort lee"
+    ]
+  },
+  {
+    "id": "out-of-area",
+    "persona": "Asks about somewhere outside Bergen",
+    "turns": [
+      "what's happening in hoboken tonight",
+      "ok what about englewood then"
+    ]
+  },
+  {
+    "id": "vague",
+    "persona": "Bored, low effort",
+    "turns": [
+      "bored",
+      "idk something fun",
+      "teaneck"
+    ]
+  },
+  {
+    "id": "newsletter-flow",
+    "persona": "Happy texter who'll take the email",
+    "turns": [
+      "any fun family stuff in hackensack in december?",
+      "awesome thanks!",
+      "sure, it's dana.test@example.com"
+    ]
+  },
+  {
+    "id": "join-keyword",
+    "persona": "Wants the weekly text",
+    "turns": [
+      "JOIN",
+      "glen rock"
+    ]
+  },
+  {
+    "id": "nye",
+    "persona": "Planning New Year's Eve",
+    "turns": [
+      "anything going on for new years eve in bergen county?"
+    ]
+  },
+  {
+    "id": "january",
+    "persona": "Thinking ahead to winter",
+    "turns": [
+      "where can we go ice skating this winter",
+      "and anything for lunar new year?"
+    ]
+  },
+  {
+    "id": "business",
+    "persona": "Restaurant owner",
+    "turns": [
+      "I own a cafe in tenafly, how do I get listed or advertise with you?"
+    ]
+  },
+  {
+    "id": "rude",
+    "persona": "Grumpy",
+    "turns": [
+      "this is probably useless. what's actually worth doing in lodi"
+    ]
+  },
+  {
+    "id": "privacy",
+    "persona": "Overshares",
+    "turns": [
+      "my name is Mike Johnson, I live at 14 Oak St in Ramsey, kids are 8 and 10, what's fun for them this weekend"
+    ]
+  },
+  {
+    "id": "trivia-tonight",
+    "persona": "Wants something tonight on a weeknight",
+    "turns": [
+      "any trivia tonight near paramus?",
+      "what about thursday"
+    ]
+  },
+  {
+    "id": "live-music-sat",
+    "persona": "Group of friends, Saturday night",
+    "turns": [
+      "4 of us want live music and drinks saturday night, we are in hackensack",
+      "somewhere open late after?"
+    ]
+  },
+  {
+    "id": "karaoke",
+    "persona": "Birthday group",
+    "turns": [
+      "where can we do karaoke for my bday, like 10 people, fort lee area"
+    ]
+  },
+  {
+    "id": "brewery",
+    "persona": "Casual beer drinker",
+    "turns": [
+      "best brewery in bergen? ideally w food trucks or something"
+    ]
+  },
+  {
+    "id": "cheap-drinks",
+    "persona": "Budget night out",
+    "turns": [
+      "cheap drinks + good vibe in rutherford friday?",
+      "any comedy?"
+    ]
+  },
+  {
+    "id": "memory",
+    "persona": "Parent who shares family details over a few texts, checks what's remembered, corrects it, then wipes it.",
+    "turns": [
+      "hi! what can we do saturday in paramus?",
+      "we've got two kids, 4 and 9, and my husband and I love live music when we can get a sitter",
+      "what do you know about me",
+      "actually the little one just turned 5",
+      "what's good for the kids this weekend?",
+      "FORGET",
+      "MEMORY"
+    ]
+  }
 ]
