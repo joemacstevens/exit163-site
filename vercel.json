@@ -5,6 +5,9 @@
     "api/sms.js": {
       "maxDuration": 15
     },
+    "api/sms-status.js": {
+      "maxDuration": 15
+    },
     "api/reflect.js": {
       "maxDuration": 300
     },
