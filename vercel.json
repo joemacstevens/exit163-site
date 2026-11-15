@@ -13,6 +13,12 @@
     },
     "api/followup.js": {
       "maxDuration": 60
+    },
+    "api/article-pipeline.js": {
+      "maxDuration": 300
+    },
+    "api/article-review.js": {
+      "maxDuration": 30
     }
   },
   "rewrites": [
@@ -33,6 +39,10 @@
       "destination": "/claim.html"
     },
     {
+      "source": "/article-review",
+      "destination": "/article-review.html"
+    },
+    {
       "source": "/mcp",
       "destination": "/api/mcp"
     },
@@ -42,6 +52,10 @@
     }
   ],
   "crons": [
+    {
+      "path": "/api/article-pipeline",
+      "schedule": "0 6 * * *"
+    },
     {
       "path": "/api/reflect",
       "schedule": "0 8 * * *"
