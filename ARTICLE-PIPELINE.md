@@ -366,11 +366,17 @@ Common issues:
 
 **API usage per day** (assuming 20 drafts):
 
-- Discovery: Free (RSS feeds)
-- Verification: Free (database lookups, basic regex)
-- Writing: 20 × ~500 input tokens × $0.25/M = **~$0.003/day** = **~$1/year**
+- **Discovery**: Free (RSS feeds)
+- **Verification**: Free (DuckDuckGo search fallback) or ~$5/month with Firecrawl (optional)
+- **Entity Extraction**: 20 stories × 500 input + 100 output tokens = 10K input + 2K output
+- **Draft Writing**: 20 drafts × 1,000 input + 200 output tokens = 20K input + 4K output
 
-Verification could add cost if using external APIs (Google Places, Yelp) - not implemented yet.
+**Daily totals** (Claude Haiku 5-5 @ $0.25/M input, $1.25/M output):
+- Input: 30,000 tokens × $0.25/M = **$0.0075/day**
+- Output: 6,000 tokens × $1.25/M = **$0.0075/day**
+- **Total: $0.015/day = ~$5.50/year** (Claude API only)
+
+Add Firecrawl (~$5/month for better verification, optional) → **~$65/year total** with Firecrawl, or **~$6/year** without.
 
 **Time per day**:
 - Pipeline: ~30 seconds automated

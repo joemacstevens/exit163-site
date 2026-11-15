@@ -72,7 +72,7 @@ create table if not exists article_drafts (
   confidence        text not null check (confidence in ('high','medium','low')),
   unconfirmed_items text[] not null default '{}', -- what couldn't be verified: ['opening date', 'hours']
   raw_generation    jsonb,                    -- Claude response for debugging
-  status            text not null default 'pending' check (status in ('pending','approved','rejected','published')),
+  status            text not null default 'pending' check (status in ('pending','approved','rejected','published','needs_manual_check')),
   reviewed_by       text,                     -- email of who approved/rejected
   reviewed_at       timestamptz,
   rejection_reason  text,
