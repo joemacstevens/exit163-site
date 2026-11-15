@@ -1,7 +1,7 @@
 // GET/POST /api/article-review - Review and manage article drafts
 // Authorization: Bearer <ADMIN_TOKEN>
 const { readBody } = require('../lib/http');
-const { getPendingDrafts, approveDraft, rejectDraft, getRecentArticles } = require('../lib/articles');
+const { getPendingDrafts, getNeedsCheckDrafts, approveDraft, rejectDraft, getRecentArticles, NotPendingError } = require('../lib/articles');
 
 module.exports = async (req, res) => {
   // CORS
@@ -25,13 +25,16 @@ module.exports = async (req, res) => {
     if (req.method === 'GET') {
       // Return pending drafts and recent articles
       const pending = await getPendingDrafts({ limit: 50 });
+      const needsCheck = await getNeedsCheckDrafts({ limit: 50 });
       const recent = await getRecentArticles({ limit: 20 });
       
       return res.status(200).json({
         pending,
+        needsCheck,
         recent,
         counts: {
-          pendingDrafts: pending.length
+          pendingDrafts: pending.length,
+          needsCheck: needsCheck.length
         }
       });
     }
@@ -59,6 +62,9 @@ module.exports = async (req, res) => {
     
     return res.status(405).json({ error: 'Method not allowed' });
   } catch (error) {
+    if (error instanceof NotPendingError) {
+      return res.status(409).json({ error: error.message });
+    }
     console.error('[article-review] Error:', error);
     return res.status(500).json({ error: error.message });
   }

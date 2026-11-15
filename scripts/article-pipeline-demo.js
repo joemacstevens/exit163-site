@@ -1,5 +1,10 @@
 #!/usr/bin/env node
-// Demonstrate the article pipeline with fixtures (no credentials needed)
+// Demonstrate the article pipeline with fixtures (no credentials needed).
+//
+// This is an illustration only: it carries its own inline copy of the parsing, town lookup,
+// verification and writing steps and does NOT load lib/discovery, lib/verification or lib/writer.
+// Its output says nothing about whether the real code works. To test the real code offline, run
+//   node scripts/test-article-pipeline.js
 
 // Parse RSS feed (inline to avoid loading discovery.js which loads db.js)
 function parseRssFeed(xmlText) {

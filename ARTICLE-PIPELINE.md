@@ -34,18 +34,20 @@ See `db/migrations/2026-11-15-article-pipeline.sql` for full schema.
 
 ### API Endpoints
 
-- **`POST /api/article-pipeline`** - Run pipeline (called by Vercel cron daily at 6am)
-  - Auth: `Authorization: Bearer <ADMIN_TOKEN>`
-  - Body: `{ "dry_run": true/false, "steps": ["discovery", "verification", "writing"] }`
+- **`GET or POST /api/article-pipeline`** - Run pipeline (Vercel cron calls it with GET daily at 6am UTC)
+  - Auth: `Authorization: Bearer <CRON_SECRET>` (what Vercel cron sends) or `Bearer <ADMIN_TOKEN>` (by hand)
+  - Options, in a POST body or the query string: `dry_run` (`true` / `1`), `steps` (`["discovery", "verification", "writing"]` or `discovery,writing`)
   - Returns: Execution results with counts and timing
 
 - **`GET /api/article-review`** - Get pending drafts and recent articles
   - Auth: `Authorization: Bearer <ADMIN_TOKEN>`
-  - Returns: `{ pending: [...], recent: [...], counts: {...} }`
+  - Returns: `{ pending: [...], needsCheck: [...], recent: [...], counts: {...} }`
+  - `needsCheck` holds stories the pipeline would not write up because it found no second source
 
 - **`POST /api/article-review`** - Approve or reject a draft
   - Auth: `Authorization: Bearer <ADMIN_TOKEN>`
   - Body: `{ "action": "approve|reject", "draft_id": 123, "reviewed_by": "admin", "reason": "..." }`
+  - Answers `409` if the draft is no longer waiting (already approved, published or rejected)
 
 ### Review Interface
 
@@ -66,21 +68,24 @@ Connect to your Supabase project and run:
 
 ```bash
 psql $DATABASE_URL < db/migrations/2026-11-15-article-pipeline.sql
+psql $DATABASE_URL < db/migrations/2026-11-15b-article-pipeline-fixes.sql
 ```
 
-Or paste the contents into the Supabase SQL Editor.
+Or paste the contents into the Supabase SQL Editor. The second file is required: without it no
+entity can be stored (the first file's `entity_type` check rejects what the extractor returns).
 
 ### 2. Seed Discovery Sources
 
 ```bash
-node scripts/article-pipeline-test.js seed
+node --env-file=.env.local scripts/article-pipeline-test.js seed
 ```
 
 This creates initial sources:
-- NorthJersey.com Bergen County RSS
-- Patch Ridgewood & Paramus
-- TAPinto Ridgewood & Paramus
-- Bergen Mama family events
+- Patch Ridgewood-Glen Rock, Paramus and Hackensack
+- Boozy Burbs (North Jersey restaurant and bar openings)
+
+NorthJersey.com, TAPinto and Bergen Mama are not in the list: their feeds answer 402 / 403 to
+bots. Getting them means asking the publisher, not changing the User-Agent.
 
 Add more sources directly in the database or by editing `lib/discovery.js`.
 
@@ -90,10 +95,18 @@ The pipeline uses the existing `ANTHROPIC_API_KEY` and `ADMIN_TOKEN` from `.env.
 
 **Cost management**: Pipeline defaults to `claude-haiku-5-5` (cheap) with `effort: low` to keep costs reasonable. Adjust in `lib/writer.js` if needed.
 
-### 4. Test Locally (Dry Run)
+### 4. Test Locally
+
+Offline test of the real pipeline code (fake database, fake Claude, fake web; no keys needed):
 
 ```bash
-node scripts/article-pipeline-test.js dry-run
+node scripts/test-article-pipeline.js
+```
+
+Dry run against the real feeds, database and Claude (reads only, writes nothing):
+
+```bash
+node --env-file=.env.local scripts/article-pipeline-test.js dry-run
 ```
 
 This runs the full pipeline **without writing to the database**, showing what would happen:
@@ -367,7 +380,7 @@ Common issues:
 **API usage per day** (assuming 20 drafts):
 
 - **Discovery**: Free (RSS feeds)
-- **Verification**: Free (DuckDuckGo search fallback) or ~$5/month with Firecrawl (optional)
+- **Verification**: ~$5/month with Firecrawl. The free DuckDuckGo fallback answers bots with a challenge page (no results), so without `FIRECRAWL_API_KEY` only venues already in the database can be matched and nothing gets a second source
 - **Entity Extraction**: 20 stories × 500 input + 100 output tokens = 10K input + 2K output
 - **Draft Writing**: 20 drafts × 1,000 input + 200 output tokens = 20K input + 4K output
 

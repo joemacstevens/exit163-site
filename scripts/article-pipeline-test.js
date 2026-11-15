@@ -1,6 +1,8 @@
 #!/usr/bin/env node
-// Test the article pipeline in dry-run mode
-require('dotenv').config();
+// Seed sources, or run the article pipeline in dry-run mode, against the real database and APIs.
+// Needs SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY and ANTHROPIC_API_KEY, e.g.:
+//   node --env-file=.env.local scripts/article-pipeline-test.js dry-run
+// For a run with no network, database or keys, use: node scripts/test-article-pipeline.js
 const { seedSources } = require('../lib/discovery');
 const { runPipeline } = require('../lib/articles');
 

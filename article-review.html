@@ -293,6 +293,10 @@
           <div class="stat-label">Pending Drafts</div>
         </div>
         <div class="stat-card">
+          <div class="stat-number" id="needsCheckCount">0</div>
+          <div class="stat-label">Need a Manual Check</div>
+        </div>
+        <div class="stat-card">
           <div class="stat-number" id="recentCount">0</div>
           <div class="stat-label">Recent Articles</div>
         </div>
@@ -301,6 +305,12 @@
       <div class="section">
         <h2>Pending Drafts</h2>
         <div id="pendingDrafts"></div>
+      </div>
+      
+      <div class="section">
+        <h2>Needs a Manual Check</h2>
+        <p class="subtitle">Not written up: the pipeline could not find a second source. Check them yourself or dismiss.</p>
+        <div id="needsCheckDrafts"></div>
       </div>
       
       <div class="section">
@@ -360,8 +370,18 @@
       document.getElementById('pendingCount').textContent = data.pending.length;
       document.getElementById('recentCount').textContent = data.recent.length;
       
+      const needsCheck = data.needsCheck || [];
+      document.getElementById('needsCheckCount').textContent = needsCheck.length;
+      
       const pendingDiv = document.getElementById('pendingDrafts');
+      const needsCheckDiv = document.getElementById('needsCheckDrafts');
       const recentDiv = document.getElementById('recentArticles');
+      
+      if (needsCheck.length === 0) {
+        needsCheckDiv.innerHTML = '<div class="empty-state">Nothing waiting</div>';
+      } else {
+        needsCheckDiv.innerHTML = needsCheck.map(renderNeedsCheck).join('');
+      }
       
       if (data.pending.length === 0) {
         pendingDiv.innerHTML = '<div class="empty-state">No pending drafts</div>';
@@ -376,12 +396,21 @@
       }
     }
     
+    // Everything on a draft comes from a feed or the model, so nothing goes into the page raw:
+    // text is escaped (quotes too, for attributes) and links must be plain http(s).
+    const CONFIDENCE = ['high', 'medium', 'low'];
+    
+    function safeUrl(url) {
+      return /^https?:\/\//i.test(String(url || '')) ? escapeHtml(url) : '#';
+    }
+    
     function renderDraft(draft) {
-      const confidence = draft.confidence || 'medium';
-      const unconfirmed = draft.unconfirmed_items || [];
+      const confidence = CONFIDENCE.includes(draft.confidence) ? draft.confidence : 'low';
+      const unconfirmed = Array.isArray(draft.unconfirmed_items) ? draft.unconfirmed_items : [];
+      const id = Number(draft.id);
       
       return `
-        <div class="draft-card" id="draft-${draft.id}">
+        <div class="draft-card" id="draft-${id}">
           <div class="draft-header">
             <div class="draft-meta">
               <div class="draft-headline">${escapeHtml(draft.headline)}</div>
@@ -397,20 +426,47 @@
           <div class="draft-body">${escapeHtml(draft.body)}</div>
           
           <div class="draft-sources">
-            <strong>Source:</strong> <a href="${escapeHtml(draft.source_url)}" target="_blank">Original article</a>
-            ${draft.entity_link ? `<br><strong>Business link:</strong> <a href="${escapeHtml(draft.entity_link)}" target="_blank">${escapeHtml(draft.entity_link)}</a>` : ''}
-            ${draft.second_source_url ? `<br><strong>Second source:</strong> <a href="${escapeHtml(draft.second_source_url)}" target="_blank">Confirmation</a>` : ''}
+            <strong>Source:</strong> <a href="${safeUrl(draft.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(draft.source_url)}</a>
+            ${draft.entity_link ? `<br><strong>Business link:</strong> <a href="${safeUrl(draft.entity_link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(draft.entity_link)}</a>` : ''}
+            ${draft.second_source_url ? `<br><strong>Second source:</strong> <a href="${safeUrl(draft.second_source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(draft.second_source_url)}</a>` : ''}
           </div>
           
           ${unconfirmed.length > 0 ? `
             <div class="unconfirmed">
-              <strong>⚠️ Unconfirmed:</strong> ${unconfirmed.join(', ')}
+              <strong>⚠️ Unconfirmed:</strong> ${unconfirmed.map(escapeHtml).join(', ')}
             </div>
           ` : ''}
           
           <div class="draft-actions">
-            <button class="btn btn-approve" onclick="approveDraft(${draft.id})">✓ Approve & Publish</button>
-            <button class="btn btn-reject" onclick="rejectDraft(${draft.id})">✗ Reject</button>
+            <button class="btn btn-approve" onclick="approveDraft(${id})">✓ Approve & Publish</button>
+            <button class="btn btn-reject" onclick="rejectDraft(${id})">✗ Reject</button>
+          </div>
+        </div>
+      `;
+    }
+    
+    function renderNeedsCheck(draft) {
+      const id = Number(draft.id);
+      
+      return `
+        <div class="draft-card" id="draft-${id}">
+          <div class="draft-header">
+            <div class="draft-meta">
+              <div class="draft-headline">${escapeHtml(draft.headline)}</div>
+              <div class="draft-info">
+                <span>${escapeHtml(draft.town_slug)}</span>
+                <span>${new Date(draft.created_at).toLocaleDateString()}</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="draft-sources">
+            <strong>Source:</strong> <a href="${safeUrl(draft.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(draft.source_url)}</a>
+            ${draft.entity_link ? `<br><strong>Business link:</strong> <a href="${safeUrl(draft.entity_link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(draft.entity_link)}</a>` : ''}
+          </div>
+          
+          <div class="draft-actions">
+            <button class="btn btn-reject" onclick="rejectDraft(${id})">✗ Dismiss</button>
           </div>
         </div>
       `;
@@ -493,9 +549,12 @@
     }
     
     function escapeHtml(text) {
-      const div = document.createElement('div');
-      div.textContent = text;
-      return div.innerHTML;
+      return String(text ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
     }
     
     // Initialize
