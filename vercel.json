@@ -33,6 +33,10 @@
       "destination": "/claim.html"
     },
     {
+      "source": "/read/:slug",
+      "destination": "/read/:slug.html"
+    },
+    {
       "source": "/mcp",
       "destination": "/api/mcp"
     },
