@@ -80,12 +80,12 @@ entity can be stored (the first file's `entity_type` check rejects what the extr
 node --env-file=.env.local scripts/article-pipeline-test.js seed
 ```
 
-This creates the initial source:
+This creates initial sources:
+- Patch Ridgewood-Glen Rock, Paramus and Hackensack
 - Boozy Burbs (North Jersey restaurant and bar openings)
 
-Sources are things to do only, no general news, so the Patch town feeds are left out even though
-they load. NorthJersey.com, TAPinto and Bergen Mama are not in the list either: their feeds answer
-402 / 403 to bots. Getting them means asking the publisher, not changing the User-Agent.
+NorthJersey.com, TAPinto and Bergen Mama are not in the list: their feeds answer 402 / 403 to
+bots. Getting them means asking the publisher, not changing the User-Agent.
 
 Add more sources directly in the database or by editing `lib/discovery.js`.
 
