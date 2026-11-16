@@ -1,64 +1,88 @@
 #!/usr/bin/env node
 // Builds the editorial ad-landing articles in /read from holidays-2026.json.
 //   node scripts/build-reads.js
-// Every date, time, venue, note and source link on the page is copied from the data file, so
-// re-run this after the tracker data changes. The only hand-written copy is in ARTICLES below
-// (hook, standfirst, section headlines); keep it in step with the data, and the build fails if a
-// headline's section or a "short version" pick no longer matches any event.
+// Dates, times and venues come from the data file, so re-run this after the tracker data changes.
+// Hand-written copy lives in ARTICLES (hook, intro, section headlines) and in WHY / VENUE below;
+// keep it in step with the data. The build fails if a WHY / VENUE key or a section no longer
+// matches an event. Events without a 2026 date are left out of the articles.
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const EVENTS = JSON.parse(fs.readFileSync(path.join(ROOT, 'holidays-2026.json'), 'utf8'));
-// EDITOR: the day the data was last checked against its sources (same as LAST_UPDATED in holidays.html).
-const LAST_CHECKED = '2026-11-12';
 
 const ARTICLES = [
   {
     slug: 'ridgewood-glen-rock-holidays',
     area: 'Ridgewood area',
     title: 'Ridgewood, Glen Rock and nearby: 2026 tree and menorah lightings',
-    h1: 'Ridgewood’s tree lighting is listed for Fri, Dec 4 at 6 PM. Here’s every other one near you.',
-    lede: 'One catch: Ridgewood’s date comes from a county roundup that doesn’t state the year, so we mark it unconfirmed. Waldwick’s two lightings the same night are on the borough calendar. Glen Rock and Ho-Ho-Kus haven’t posted 2026 dates yet.',
+    h1: 'Ridgewood’s tree lighting is expected Fri, Dec 4 at 6 PM. Here’s what else is on nearby.',
+    lede: 'Waldwick lights its menorah and its tree that same night. The week after brings Hanukkah in Ridgewood and Fair Lawn, two historic houses dressed for the season, and Wyckoff’s cookie walk.',
     match: (e) => ['Ridgewood', 'Glen Rock', 'Waldwick', 'Ho-Ho-Kus', 'Wyckoff', 'Fair Lawn'].includes(e.town),
-    short: ['Ridgewood|Downtown for the Holidays Tree Lighting (41st annual)', 'Waldwick|Annual Menorah Lighting', 'Waldwick|Annual Tree Lighting', 'Fair Lawn|Community Menorah Lighting at Borough Hall'],
     sections: [
-      { h2: 'Fri, Dec 4: Ridgewood at 6 PM, Waldwick at 4:30 and 7 PM', from: '2026-12-04', to: '2026-12-04' },
-      { h2: 'Dec 5 to Dec 12: Hanukkah in Ridgewood and Fair Lawn, two holiday house days, Wyckoff’s cookie walk', from: '2026-12-05', to: '2026-12-12' },
+      { h2: 'Fri, Dec 4', from: '2026-12-04', to: '2026-12-04' },
+      { h2: 'Dec 5 to Dec 12', from: '2026-12-05', to: '2026-12-12' },
     ],
-    tbaH2: 'No 2026 date yet: Glen Rock, Ho-Ho-Kus and Wyckoff’s tree lightings',
   },
   {
     slug: 'pascack-valley-holidays',
     area: 'Pascack Valley',
     title: 'Pascack Valley: 2026 tree and menorah lightings',
-    h1: 'Westwood’s holiday parade and tree lighting is Sat, Dec 5 at 6 PM. Here’s every Pascack Valley lighting we could find.',
-    lede: 'Westwood’s night is on the borough calendar. After it, Valley Chabad lists seven menorah lightings across the valley from Dec 6 to Dec 8. Hillsdale, Montvale and Park Ridge haven’t posted 2026 tree lighting dates yet.',
+    h1: 'Westwood’s holiday parade and tree lighting is Sat, Dec 5 at 6 PM. Here’s every Pascack Valley lighting we found.',
+    lede: 'After Westwood’s big night, Valley Chabad lights a menorah in seven towns across the valley from Dec 6 to Dec 8.',
     match: (e) => ['Westwood', 'Hillsdale', 'Montvale', 'Park Ridge', 'Emerson', 'Woodcliff Lake', 'Washington Township', 'River Vale'].includes(e.town),
-    short: ['Westwood|Home for the Holidays Parade & Tree Lighting', 'Montvale|Valley Chabad Menorah Lighting', 'River Vale|Menorah Lighting & Gelt Drop (Valley Chabad)', 'Hillsdale|Valley Chabad Menorah Lighting'],
     sections: [
-      { h2: 'Sat, Dec 5: Westwood’s parade and tree lighting at 6 PM', from: '2026-12-05', to: '2026-12-05' },
-      { h2: 'Dec 6 to Dec 8: seven menorah lightings in three nights', from: '2026-12-06', to: '2026-12-08' },
+      { h2: 'Sat, Dec 5', from: '2026-12-05', to: '2026-12-05' },
+      { h2: 'Dec 6 to Dec 8: menorahs across the valley', from: '2026-12-06', to: '2026-12-08' },
     ],
-    tbaH2: 'No 2026 date yet: tree lightings in Hillsdale, Montvale and Park Ridge',
   },
   {
     slug: 'paramus-river-edge-holidays',
     area: 'Paramus & River Edge',
     title: 'Paramus, River Edge and Oradell: 2026 holiday lightings',
     h1: 'Paramus’s Big Santa lighting is Sun, Nov 22 at 4 PM. Here’s what’s next near Paramus and River Edge.',
-    lede: 'The Big Santa lighting is on the Garden State Plaza site for 4 to 6 PM. Winter Wonderland at Van Saun Park opens Fri, Nov 27, and its hours aren’t posted yet. Paramus and River Edge haven’t posted their own tree lightings.',
+    lede: 'Winter Wonderland opens at Van Saun Park the day after Thanksgiving. In December there’s tea with Sinterklaas in River Edge, Oradell’s tree and menorah lighting, and a menorah at Bergen Town Center.',
     // County-run events count here only when they happen in Paramus (Van Saun Park).
     match: (e) => ['Paramus', 'River Edge', 'Oradell'].includes(e.town) || (e.town === 'Bergen County' && /Paramus/.test(e.location || '')),
-    short: ['Paramus|Big Santa Lighting at Westfield Garden State Plaza', 'Bergen County|Bergen County Winter Wonderland opens at Van Saun Park', 'Oradell|Holiday Tree & Menorah Lighting', 'Paramus|Menorah Lighting at Bergen Town Center'],
     sections: [
-      { h2: 'Sun, Nov 22: the Big Santa lighting at Garden State Plaza, 4 to 6 PM', from: '2026-11-22', to: '2026-11-22' },
-      { h2: 'Fri, Nov 27: Winter Wonderland opens at Van Saun Park. Hours aren’t posted yet', from: '2026-11-27', to: '2026-11-27' },
-      { h2: 'Dec 6 to Dec 10: Sinterklaas in River Edge, Oradell’s tree and menorah, a menorah at Bergen Town Center', from: '2026-12-06', to: '2026-12-10' },
+      { h2: 'Sun, Nov 22', from: '2026-11-22', to: '2026-11-22' },
+      { h2: 'Fri, Nov 27', from: '2026-11-27', to: '2026-11-27' },
+      { h2: 'Dec 6 to Dec 10', from: '2026-12-06', to: '2026-12-10' },
     ],
-    tbaH2: 'No 2026 date yet: tree lightings in River Edge, at Paramus Borough Hall and at Van Saun Park',
   },
 ];
+
+// EDITOR: one line on why each event is worth going to, keyed "town|event". Say only what the
+// data's notes support; leave an event out of this list rather than invent a reason.
+const RSVP = 'Free. RSVP on the Valley Chabad site.';
+const WHY = {
+  'Paramus|Big Santa Lighting at Westfield Garden State Plaza': 'Santa arrives by fire truck, then the 42-foot Big Santa lights up, with live music and fireworks. Free.',
+  'Bergen County|Bergen County Winter Wonderland opens at Van Saun Park': 'The county’s holiday season, with Santa visits and a crafts market village.',
+  'River Edge|Sinterklaas & Dutch Christmas Tea': 'A three-course Dutch colonial tea and a photo with Sinterklaas. $25 adults, $10 kids; reserve ahead.',
+  'Oradell|Holiday Tree & Menorah Lighting': 'The tree and the menorah are lit together.',
+  'Ridgewood|Downtown for the Holidays Tree Lighting (41st annual)': 'The Chamber’s downtown lighting, in its 41st year. Free.',
+  'Waldwick|Annual Menorah Lighting': 'The first night of Hanukkah. Free.',
+  'Waldwick|Annual Tree Lighting': 'Free.',
+  'Wyckoff|Zabriskie House Holiday Tour': 'Wyckoff’s oldest home, decorated for the season, with music and lit fireplaces.',
+  'Wyckoff|Grace Church Cookie Walk (10th annual)': 'Cookies by the pound ($13) until they sell out.',
+  'Westwood|Home for the Holidays Parade & Tree Lighting': 'A parade through downtown, then the tree. Last year brought Santa and carolers too. Free.',
+  'Montvale|Valley Chabad Menorah Lighting': RSVP,
+  'Woodcliff Lake|Valley Chabad Menorah Lighting': RSVP,
+  'Washington Township|Valley Chabad Menorah Lighting': RSVP,
+  'River Vale|Menorah Lighting & Gelt Drop (Valley Chabad)': RSVP,
+  'Park Ridge|Valley Chabad Menorah Lighting': RSVP,
+  'Hillsdale|Valley Chabad Menorah Lighting': RSVP,
+  'Westwood|Valley Chabad Menorah Lighting': RSVP,
+};
+
+// EDITOR: reader-facing venue where the data's location carries research notes. A venue taken
+// from past years reads "Usually ...", never as this year's confirmed spot.
+const VENUE = {
+  'Ridgewood|Downtown for the Holidays Tree Lighting (41st annual)': 'Downtown Ridgewood',
+  'Waldwick|Annual Menorah Lighting': 'Usually outside Waldwick Public Library',
+  'Waldwick|Annual Tree Lighting': 'Usually Borough Park',
+  'River Vale|Menorah Lighting & Gelt Drop (Valley Chabad)': 'Location sent after you RSVP',
+};
 
 const TYPE_LABEL = { tree: 'Tree lighting', menorah: 'Menorah lighting', market: 'Holiday market', santa: 'Santa', other: 'Holiday event' };
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -66,39 +90,23 @@ const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const fmtDate = (iso) => { const [y, m, d] = iso.split('-').map(Number); return `${DAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()]}, ${MONTHS[m - 1]} ${d}`; };
-const host = (url) => new URL(url).hostname.replace(/^www\./, '');
-const source = (e) => `<a class="ex-place__src" href="${esc(e.source_url)}" target="_blank" rel="noopener">Source: ${esc(host(e.source_url))}</a>`;
-const why = (e, label) => (e.verify_note ? `<details><summary>${label}</summary><p>${esc(e.verify_note)}</p></details>` : '');
+const keyOf = (e) => `${e.town}|${e.event}`;
 // Markup and classes follow the homepage (index.html): its ex- components plus .wrap, .nav, .kick, .lede, .foot.
 const GLYPH = '<svg class="ex-glyph" viewBox="0 0 64 64" aria-hidden="true"><rect class="g-tile" width="64" height="64" rx="16"/><g class="g-lane" fill="none" stroke-width="6" stroke-linecap="round"><path d="M24 54V10"/><path d="M24 44c0-12 18-10 18-22"/></g><circle class="g-dot" cx="42" cy="12" r="5"/></svg>';
 const WORDMARK = `<a class="ex-wordmark" href="/" aria-label="Exit163 home">${GLYPH}<span>exit<b>163</b></span></a>`;
-const CHECK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>';
-const TAG_OK = `<span class="ex-badge ex-badge--verified">${CHECK}2026 date confirmed</span>`;
-const tagWarn = (label) => `<span class="ex-badge is-unconfirmed">${label}</span>`;
-const status = (e) => (e.verified_2026 ? TAG_OK : tagWarn('Date not yet confirmed'));
 
+// read.js tags past events by .ev[data-date] and appends to .when. Keep both.
 function card(e) {
-  // Say what's missing once: skip our placeholder when the event's own notes already cover it.
-  const notes = e.notes || '';
-  const time = e.time ? esc(e.time) : /^All day/i.test(notes) ? 'All day' : '<i>Time not posted yet</i>';
-  const where = [e.location ? esc(e.location) : /venue/i.test(notes) ? '' : '<i>Venue not posted yet</i>', e.cost ? esc(e.cost) : ''].filter(Boolean).join(' &middot; ');
+  // A date the organizer hasn't confirmed for 2026 reads "Expected <date>", never as certain.
+  const date = `${e.verified_2026 ? '' : 'Expected '}${fmtDate(e.date)}`;
+  const time = e.time ? e.time : /^All day/i.test(e.notes || '') ? 'All day' : 'Time TBA';
+  const venue = VENUE[keyOf(e)] || e.location || 'Venue TBA';
+  const why = WHY[keyOf(e)];
   return `<div class="ev t-${e.type}" data-date="${e.date}">
-  <p class="when"><b>${fmtDate(e.date)}</b> ${time}</p>
-  <p class="what"><span>${esc(e.town)} &middot; ${TYPE_LABEL[e.type]}</span>${esc(e.event)}</p>
-  ${where ? `<p class="where">${where}</p>` : ''}
-  ${e.notes ? `<p class="notes">${esc(e.notes)}</p>` : ''}
-  <p class="ev-foot">${status(e)} ${source(e)}</p>
-  ${why(e, e.verified_2026 ? 'How we confirmed it' : 'Why unconfirmed?')}
-</div>`;
-}
-
-function tbaRow(e) {
-  return `<div class="ev tba t-${e.type}">
-  <p class="what"><span>${esc(e.town)} &middot; ${TYPE_LABEL[e.type]}</span>${esc(e.event)}</p>
-  <p class="where"><b>Last held:</b> ${e.last_seen ? esc(e.last_seen) : 'not found'}${e.location ? ` &middot; ${esc(e.location)}` : ''}</p>
-  ${e.notes ? `<p class="notes">${esc(e.notes)}</p>` : ''}
-  <p class="ev-foot">${tagWarn('No 2026 date yet')} ${source(e)}</p>
-  ${why(e, 'Why no date yet?')}
+  <p class="when"><b>${date}</b> ${esc(time)}</p>
+  <p class="what"><span>${esc(e.town === 'Bergen County' ? 'Paramus' : e.town)} &middot; ${TYPE_LABEL[e.type]}</span>${esc(e.event)}</p>
+  <p class="where">${esc(venue)}</p>
+  ${why ? `<p class="notes">${esc(why)}</p>` : ''}
 </div>`;
 }
 
@@ -114,10 +122,13 @@ const form = (placement, h, p) => `<aside class="ex-join signup">
   <p class="msg ex-join__err" role="status" aria-live="polite"></p>
 </aside>`;
 
+// Fail the build if hand-written copy points at an event that's no longer in the data.
+for (const k of [...Object.keys(WHY), ...Object.keys(VENUE)]) {
+  if (!EVENTS.some((e) => e.date && keyOf(e) === k)) throw new Error(`WHY/VENUE key matches no dated event: ${k}`);
+}
+
 function build(a) {
-  const mine = EVENTS.filter(a.match);
-  const dated = mine.filter((e) => e.date).sort((x, y) => x.date.localeCompare(y.date) || x.town.localeCompare(y.town));
-  const tba = mine.filter((e) => !e.date).sort((x, y) => x.town.localeCompare(y.town));
+  const dated = EVENTS.filter((e) => a.match(e) && e.date).sort((x, y) => x.date.localeCompare(y.date) || x.town.localeCompare(y.town));
 
   const used = new Set();
   const sections = a.sections.map((s) => {
@@ -129,43 +140,24 @@ function build(a) {
   const orphans = dated.filter((e) => !used.has(e));
   if (orphans.length) throw new Error(`${a.slug}: dated events not in any section: ${orphans.map((e) => `${e.town} ${e.date}`).join(', ')}`);
 
-  const short = a.short.map((key) => {
-    const e = dated.find((x) => `${x.town}|${x.event}` === key);
-    if (!e) throw new Error(`${a.slug}: short-version pick not found in data: ${key}`);
-    return `<li><b>${fmtDate(e.date)}${e.time ? ` &middot; ${esc(e.time)}` : ''}</b> ${esc(e.town === 'Bergen County' ? '' : `${e.town}: `)}${esc(e.event)}${e.verified_2026 ? '' : ' <em>(not yet confirmed)</em>'}</li>`;
-  });
-  short.push(`<li><b>Not announced</b> ${tba.length} more listings near you are still waiting on a 2026 date. They’re at the bottom, with the last date we found as a guide.</li>`);
-
-  const mid = Math.ceil(sections.length / 2); // the first signup sits about halfway through the dated events
-  const [, cm, cd] = LAST_CHECKED.split('-').map(Number);
-  const checked = `${MONTHS[cm - 1]} ${cd}`;
-  const body = `<p class="lede">${a.lede}</p>
-<aside class="callout">
-  <h2 class="kick">The short version</h2>
-  <ul>
-${short.join('\n')}
-  </ul>
-</aside>
+  const mid = Math.ceil(sections.length / 2); // the first signup sits about halfway through the events
+  const article = `<p class="lede">${a.lede}</p>
 ${sections.slice(0, mid).join('\n')}
-${form('mid', 'Towns are still posting dates', 'We keep checking, and every Friday at 7am we email the weekend’s things to do in Bergen County, each with its town and time. Free, one email a week.')}
+@@MIDFORM@@
 ${sections.slice(mid).join('\n')}
-<aside class="callout">
-  <h2 class="kick">How to read the tags</h2>
-  <p>${TAG_OK} means the organizer or an official listing shows this year’s date. ${tagWarn('Date not yet confirmed')} means we found a date, but the listing doesn’t state the year. Tap “Why unconfirmed?” for the detail, and check the source before you go.</p>
-</aside>
-<section>
-<h2>${a.tbaH2}</h2>
-<p class="blurb">Nobody has posted a 2026 date for these yet. “Last held” is the most recent date we found. It’s a guide only, not this year’s date.</p>
-${tba.map(tbaRow).join('\n')}
-</section>`;
+<p class="blurb">Details can change. Check with the host before you go.</p>`;
 
-  // Read time from the visible words (the tap-to-open notes don't count), at 200 words a minute.
-  const words = `${a.h1} ${body}`.replace(/<details>[\s\S]*?<\/details>/g, ' ').replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+  // Read time from the article's own words (not the signup form), at 200 words a minute.
+  const words = `${a.h1} ${article}`.replace(/<[^>]+>/g, ' ').replace('@@MIDFORM@@', ' ').split(/\s+/).filter(Boolean).length;
   const mins = Math.max(1, Math.round(words / 200));
+  const body = article.replace('@@MIDFORM@@', form('mid', 'Get the weekend list every Friday', 'Every Friday at 7am we email the weekend’s things to do in Bergen County, each with its town and time. Free, one email a week.'));
   const url = `https://www.exit163.com/read/${a.slug}`;
   const desc = esc(a.lede.replace(/’/g, "'"));
 
-  return `<!doctype html>
+  return {
+    words,
+    mins,
+    html: `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -198,11 +190,11 @@ ${tba.map(tbaRow).join('\n')}
 <article data-article="${a.slug}">
 <p class="kick">Holiday guide &middot; ${esc(a.area)}</p>
 <h1>${a.h1}</h1>
-<p class="meta"><b>${mins} min read</b> &middot; Dates checked ${checked} &middot; Every listing links to its source</p>
+<p class="meta"><b>${mins} min read</b></p>
 ${body}
 </article>
 ${form('end', 'Get the weekend list every Friday', 'One email, 7am Friday: what’s on in Bergen County that weekend, with town and time on every pick. Free. Unsubscribe anytime.')}
-<p class="more">Looking for another town? Every listing we have is in the <a href="/holidays">Bergen County holiday tracker</a>.</p>
+<p class="more">Looking for another town? See the <a href="/holidays">Bergen County holiday tracker</a>.</p>
 </main>
 <footer>
   <div class="wrap read foot">
@@ -214,11 +206,13 @@ ${form('end', 'Get the weekend list every Friday', 'One email, 7am Friday: what�
 <script src="/read.js"></script>
 </body>
 </html>
-`;
+`,
+  };
 }
 
 fs.mkdirSync(path.join(ROOT, 'read'), { recursive: true });
 for (const a of ARTICLES) {
-  fs.writeFileSync(path.join(ROOT, 'read', `${a.slug}.html`), build(a));
-  console.log(`read/${a.slug}.html`);
+  const { html, words, mins } = build(a);
+  fs.writeFileSync(path.join(ROOT, 'read', `${a.slug}.html`), html);
+  console.log(`read/${a.slug}.html  ${words} words, ${mins} min read`);
 }
