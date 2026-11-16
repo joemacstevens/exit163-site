@@ -67,9 +67,15 @@ const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const fmtDate = (iso) => { const [y, m, d] = iso.split('-').map(Number); return `${DAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()]}, ${MONTHS[m - 1]} ${d}`; };
 const host = (url) => new URL(url).hostname.replace(/^www\./, '');
-const source = (e) => `<a class="src" href="${esc(e.source_url)}" target="_blank" rel="noopener">Source: ${esc(host(e.source_url))}</a>`;
+const source = (e) => `<a class="ex-place__src" href="${esc(e.source_url)}" target="_blank" rel="noopener">Source: ${esc(host(e.source_url))}</a>`;
 const why = (e, label) => (e.verify_note ? `<details><summary>${label}</summary><p>${esc(e.verify_note)}</p></details>` : '');
-const status = (e) => (e.verified_2026 ? '<span class="tag ok">2026 date confirmed</span>' : '<span class="tag warn">Date not yet confirmed</span>');
+// Markup and classes follow the homepage (index.html): its ex- components plus .wrap, .nav, .kick, .lede, .foot.
+const GLYPH = '<svg class="ex-glyph" viewBox="0 0 64 64" aria-hidden="true"><rect class="g-tile" width="64" height="64" rx="16"/><g class="g-lane" fill="none" stroke-width="6" stroke-linecap="round"><path d="M24 54V10"/><path d="M24 44c0-12 18-10 18-22"/></g><circle class="g-dot" cx="42" cy="12" r="5"/></svg>';
+const WORDMARK = `<a class="ex-wordmark" href="/" aria-label="Exit163 home">${GLYPH}<span>exit<b>163</b></span></a>`;
+const CHECK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>';
+const TAG_OK = `<span class="ex-badge ex-badge--verified">${CHECK}2026 date confirmed</span>`;
+const tagWarn = (label) => `<span class="ex-badge is-unconfirmed">${label}</span>`;
+const status = (e) => (e.verified_2026 ? TAG_OK : tagWarn('Date not yet confirmed'));
 
 function card(e) {
   // Say what's missing once: skip our placeholder when the event's own notes already cover it.
@@ -81,7 +87,7 @@ function card(e) {
   <p class="what"><span>${esc(e.town)} &middot; ${TYPE_LABEL[e.type]}</span>${esc(e.event)}</p>
   ${where ? `<p class="where">${where}</p>` : ''}
   ${e.notes ? `<p class="notes">${esc(e.notes)}</p>` : ''}
-  <p class="foot">${status(e)} ${source(e)}</p>
+  <p class="ev-foot">${status(e)} ${source(e)}</p>
   ${why(e, e.verified_2026 ? 'How we confirmed it' : 'Why unconfirmed?')}
 </div>`;
 }
@@ -91,20 +97,21 @@ function tbaRow(e) {
   <p class="what"><span>${esc(e.town)} &middot; ${TYPE_LABEL[e.type]}</span>${esc(e.event)}</p>
   <p class="where"><b>Last held:</b> ${e.last_seen ? esc(e.last_seen) : 'not found'}${e.location ? ` &middot; ${esc(e.location)}` : ''}</p>
   ${e.notes ? `<p class="notes">${esc(e.notes)}</p>` : ''}
-  <p class="foot"><span class="tag warn">No 2026 date yet</span> ${source(e)}</p>
+  <p class="ev-foot">${tagWarn('No 2026 date yet')} ${source(e)}</p>
   ${why(e, 'Why no date yet?')}
 </div>`;
 }
 
-const form = (placement, h, p) => `<aside class="signup">
+// read.js finds these by form.sub, the form's first button, and the .msg beside it. Keep those three.
+const form = (placement, h, p) => `<aside class="ex-join signup">
   <h2>${h}</h2>
   <p>${p}</p>
-  <form class="sub" action="/api/subscribe" method="post" data-placement="${placement}">
+  <form class="sub ex-join__row" action="/api/subscribe" method="post" data-placement="${placement}">
     <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="sr">
-    <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address" autocomplete="email">
-    <button type="submit">Send me the Friday email</button>
+    <div class="ex-field"><input id="${placement}-email" name="email" type="email" inputmode="email" required placeholder="you@email.com" autocomplete="email"><label for="${placement}-email">Your email</label></div>
+    <button class="ex-btn ex-btn--primary" type="submit">Send me the Friday email <span class="ex-arrow" aria-hidden="true">&rarr;</span></button>
   </form>
-  <p class="msg" role="status" aria-live="polite"></p>
+  <p class="msg ex-join__err" role="status" aria-live="polite"></p>
 </aside>`;
 
 function build(a) {
@@ -134,7 +141,7 @@ function build(a) {
   const checked = `${MONTHS[cm - 1]} ${cd}`;
   const body = `<p class="lede">${a.lede}</p>
 <aside class="callout">
-  <h2>The short version</h2>
+  <h2 class="kick">The short version</h2>
   <ul>
 ${short.join('\n')}
   </ul>
@@ -143,8 +150,8 @@ ${sections.slice(0, mid).join('\n')}
 ${form('mid', 'Towns are still posting dates', 'We keep checking, and every Friday at 7am we email the weekend’s things to do in Bergen County, each with its town and time. Free, one email a week.')}
 ${sections.slice(mid).join('\n')}
 <aside class="callout">
-  <h2>How to read the tags</h2>
-  <p><span class="tag ok">2026 date confirmed</span> means the organizer or an official listing shows this year’s date. <span class="tag warn">Date not yet confirmed</span> means we found a date, but the listing doesn’t state the year. Tap “Why unconfirmed?” for the detail, and check the source before you go.</p>
+  <h2 class="kick">How to read the tags</h2>
+  <p>${TAG_OK} means the organizer or an official listing shows this year’s date. ${tagWarn('Date not yet confirmed')} means we found a date, but the listing doesn’t state the year. Tap “Why unconfirmed?” for the detail, and check the source before you go.</p>
 </aside>
 <section>
 <h2>${a.tbaH2}</h2>
@@ -171,23 +178,25 @@ ${tba.map(tbaRow).join('\n')}
 <meta property="og:title" content="${esc(a.title)}">
 <meta property="og:description" content="${desc}">
 <meta property="og:image" content="https://www.exit163.com/og-image.png">
-<meta name="theme-color" content="#0B0D10">
-<link rel="icon" type="image/png" href="/avatar.png">
+<meta name="theme-color" content="#f4f1ea">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/read.css">
 <script src="/meta-pixel.js"></script>
 </head>
 <body>
 <!-- Generated by scripts/build-reads.js from holidays-2026.json. Edit there, not here. -->
-<header class="top">
-  <a class="brand" href="/" aria-label="Exit 163 home"><span class="shield" aria-hidden="true"><small>EXIT</small><b>163</b></span></a>
-  <a class="all" href="/holidays">All of Bergen County &rarr;</a>
+<header class="wrap read nav">
+  ${WORDMARK}
+  <nav aria-label="Primary"><a class="ex-btn ex-btn--secondary ex-btn--sm" href="/holidays">All of Bergen County <span class="ex-arrow" aria-hidden="true">&rarr;</span></a></nav>
 </header>
-<main>
+<main class="wrap read">
 <article data-article="${a.slug}">
-<p class="kicker">Holiday guide &middot; ${esc(a.area)}</p>
+<p class="kick">Holiday guide &middot; ${esc(a.area)}</p>
 <h1>${a.h1}</h1>
 <p class="meta"><b>${mins} min read</b> &middot; Dates checked ${checked} &middot; Every listing links to its source</p>
 ${body}
@@ -196,7 +205,11 @@ ${form('end', 'Get the weekend list every Friday', 'One email, 7am Friday: what�
 <p class="more">Looking for another town? Every listing we have is in the <a href="/holidays">Bergen County holiday tracker</a>.</p>
 </main>
 <footer>
-  <p>Exit 163 is a free guide to what to do in Bergen County, NJ. <a href="/">Home</a> &middot; <a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">@exit.163</a> &middot; <a href="/privacy">Privacy</a></p>
+  <div class="wrap read foot">
+    ${WORDMARK}
+    <nav aria-label="Footer"><a href="/claim">For businesses</a><a href="/#mcp">Your own AI</a><a href="/holidays">Holiday tracker</a><a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">Instagram</a><a href="/privacy">Privacy</a></nav>
+    <p>&copy; 2026 Exit163 · Made in Bergen County, for people who'd rather be out than scrolling.</p>
+  </div>
 </footer>
 <script src="/read.js"></script>
 </body>
