@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "title": "Bergen County's Winter Wonderland 2026-2027",
+      "town": "Paramus",
+      "location": "Van Saun County Park, 216 Forest Ave",
+      "category": "holiday",
+      "tags": ["holiday", "winter wonderland", "ice skating", "santa", "kids", "all ages", "ticketed", "bumper cars", "carousel", "food trucks", "live music"],
+      "starts_on": "2026-11-27",
+      "ends_on": "2027-01-03",
+      "recurrence_text": "Friday through Sunday",
+      "time_text": null,
+      "cost_text": "Ticketed; free for children 3 and under. Skate rentals $5, bumper cars $12 a ride",
+      "description": "The county's winter festival at Van Saun Park: open-air ice skating, bumper cars, carousel rides, live music, food trucks and an indoor/outdoor beer garden. Santa's North Pole Workshop is listed for select days only, and the ticket page does not say which days. Online tickets are for one admission on the date you pick, and only All-Access tickets include skating.",
+      "source_url": "https://www.eventbrite.com/e/bergen-county-winter-wonderland-20262027-tickets-2004236269635",
+      "verified": true
+    }
+  ],
+  "places": []
+}

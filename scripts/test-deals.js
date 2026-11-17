@@ -32,7 +32,7 @@ function term(expr) {         // "col.is.null" | "col.gte.2026-01-01"
 function from(table) {
   touched.push(table);
   const rows = () => (T[table] ||= []);
-  const s = { op: 'select', filters: [], opts: {}, payload: null, returning: false, one: null, limit: null, orders: [] };
+  const s = { op: 'select', filters: [], opts: {}, payload: null, returning: false, one: null, limit: null, range: null, orders: [], cols: null };
   const hit = (r) => s.filters.every((f) => f(r));
   const add = (f) => { s.filters.push(f); return b; };
   const run = () => {
@@ -53,12 +53,18 @@ function from(table) {
     let out = rows().filter(hit);
     for (const [c, asc] of s.orders) out = [...out].sort((x, y) => (x[c] > y[c] ? 1 : x[c] < y[c] ? -1 : 0) * (asc ? 1 : -1));
     if (s.opts.head) return { data: null, error: null, count: out.length };
+    if (s.range) out = out.slice(s.range[0], s.range[1] + 1);
     if (s.limit != null) out = out.slice(0, s.limit);
-    if (s.one) return { data: out[0] || null, error: null };
-    return { data: out.map((r) => ({ ...r })), error: null, count: out.length };
+    // Like Supabase, a select with a column list returns only those columns.
+    const pick = (r) => (s.cols ? Object.fromEntries(s.cols.filter((c) => c in r).map((c) => [c, r[c]])) : { ...r });
+    if (s.one) return { data: out[0] ? pick(out[0]) : null, error: null };
+    return { data: out.map(pick), error: null, count: out.length };
   };
   const b = {
-    select(_cols, opts) { if (s.op === 'select') s.opts = opts || {}; else s.returning = true; return b; },
+    select(cols, opts) {
+      if (s.op === 'select') { s.opts = opts || {}; if (cols && cols !== '*') s.cols = cols.split(',').map((c) => c.trim()); } else s.returning = true;
+      return b;
+    },
     insert(p) { s.op = 'insert'; s.payload = Array.isArray(p) ? p : [p]; return b; },
     update(p) { s.op = 'update'; s.payload = p; return b; },
     delete() { s.op = 'delete'; return b; },
@@ -73,6 +79,7 @@ function from(table) {
     or(expr) { const ts = expr.split(',').map(term); return add((r) => ts.some((t) => t(r))); },
     order(c, o = {}) { s.orders.push([c, o.ascending !== false]); return b; },
     limit(n) { s.limit = n; return b; },
+    range(from, to) { s.range = [from, to]; return b; },
     maybeSingle() { s.one = true; return b; },
     single() { s.one = true; return b; },
     then(res, rej) { return Promise.resolve().then(run).then(res, rej); },
@@ -89,13 +96,14 @@ let lastHistory = null;
 fake('lib/agent.js', {
   runBuddy: async ({ history, channel }) => {
     lastHistory = history;
-    const seen = new Map();
-    await require('../lib/tools').searchPlaces({ town: 'Westwood' }, { channel, seen });
-    return { reply: nextReply, toolCalls: [], seen: [...seen].map(([id, name]) => ({ id, name })) };
+    const shown = new Map();
+    await freshTools().searchPlaces({ town: 'Westwood' }, { channel, shown });
+    return { reply: nextReply, toolCalls: [], seen: [...shown].map(([id, name]) => ({ id, name })) };
   },
 });
 
-const tools = require('../lib/tools');
+// lib/tools.js keeps a one-minute snapshot of the tables; each test needs a fresh read of its own rows.
+function freshTools() { delete require.cache[require.resolve('../lib/tools')]; return require('../lib/tools'); }
 const deals = require('../lib/deals');
 const { handleInbound } = require('../lib/conversation');
 const partner = require('./partner');
@@ -120,10 +128,10 @@ const test = (name, fn) => tests.push([name, fn]);
 
 test('search is identical whether or not anyone pays, and never reads deal data', async () => {
   reset();
-  const withDeals = await tools.searchPlaces({ town: 'Westwood' }, { channel: 'test' });
+  const withDeals = await freshTools().searchPlaces({ town: 'Westwood' }, { channel: 'test' });
   assert.ok(!touched.includes('deals') && !touched.includes('deal_offers'));
   T.deals = []; T.venues.forEach((v) => { v.plan = 'free'; v.owner_verified_at = null; });
-  const without = await tools.searchPlaces({ town: 'Westwood' }, { channel: 'test' });
+  const without = await freshTools().searchPlaces({ town: 'Westwood' }, { channel: 'test' });
   assert.deepStrictEqual(withDeals, without);
   const json = JSON.stringify(withDeals);
   for (const leak of ['plan', 'owner_', 'deal', '"id"']) assert.ok(!json.includes(leak), `search output leaks ${leak}`);

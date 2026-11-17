@@ -3,3 +3,6 @@ node_modules
 !.env.example
 .vercel
 .firecrawl/
+
+# Live phone test threads hold a real subscriber's name and saved profile; keep them local.
+research/eval/runs/*phone-live*.md
