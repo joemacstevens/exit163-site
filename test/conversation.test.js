@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 
 describe('Conversation - Subscribe keyword handling (real behavior test)', () => {
-  it('Issue 5: WEEKEND/BERGEN should not subscribe, JOIN should, STOP should opt-out', async () => {
+  it('Issue 5: WEEKEND/BERGEN/JOIN subscribe, a sentence mentioning the weekend does not, STOP opts out', async () => {
     // Clear module cache
     const dbPath = path.join(__dirname, '../lib/db.js');
     const agentPath = path.join(__dirname, '../lib/agent.js');
@@ -113,17 +113,23 @@ describe('Conversation - Subscribe keyword handling (real behavior test)', () =>
     try {
       const { handleInbound } = require(conversationPath);
       
-      // Test WEEKEND doesn't subscribe
+      // WEEKEND and BERGEN are published opt-in keywords (terms.html), so they subscribe
       allUpdates.length = 0;
       await handleInbound({ phone: '+15551234567', text: 'WEEKEND', channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
       const weekendWrites = allUpdates.filter(u => u.blast_opt_in === true);
-      assert.strictEqual(weekendWrites.length, 0, 'WEEKEND should not set blast_opt_in');
+      assert.ok(weekendWrites.length > 0, 'WEEKEND should set blast_opt_in=true');
       
-      // Test BERGEN doesn't subscribe  
       allUpdates.length = 0;
+      userState.opted_out = false; // reset
       await handleInbound({ phone: '+15551234567', text: 'BERGEN', channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
       const bergenWrites = allUpdates.filter(u => u.blast_opt_in === true);
-      assert.strictEqual(bergenWrites.length, 0, 'BERGEN should not set blast_opt_in');
+      assert.ok(bergenWrites.length > 0, 'BERGEN should set blast_opt_in=true');
+      
+      // A sentence that merely contains "weekend" is a question, not an opt-in
+      allUpdates.length = 0;
+      await handleInbound({ phone: '+15551234567', text: "what's on this weekend?", channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
+      const sentenceWrites = allUpdates.filter(u => u.blast_opt_in === true);
+      assert.strictEqual(sentenceWrites.length, 0, 'a question mentioning the weekend should not set blast_opt_in');
       
       // Test JOIN subscribes
       allUpdates.length = 0;
@@ -140,7 +146,7 @@ describe('Conversation - Subscribe keyword handling (real behavior test)', () =>
       assert.ok(stopWrites.length > 0, 'STOP should set opted_out=true');
       
       // The conversation test verified critical behaviors:
-      // - WEEKEND/BERGEN don't subscribe
+      // - WEEKEND/BERGEN subscribe; a question about the weekend doesn't
       // - JOIN subscribes
       // - STOP sets opted_out
       // Note: Testing opted-out user + JOIN ordering requires complex state management
