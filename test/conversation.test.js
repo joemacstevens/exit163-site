@@ -314,3 +314,54 @@ describe('Memory - a show "playing" is not live music', () => {
     } finally { f.cleanup(); }
   });
 });
+
+describe('Conversation - name ask flags', () => {
+  const u = (content) => ({ role: 'user', content });
+  const a = (content) => ({ role: 'assistant', content });
+
+  it('counts our replies so far in the conversation', () => {
+    const { nameAsk } = require('../lib/conversation.js');
+    assert.deepStrictEqual(nameAsk([]), { priorReplies: 0, askedName: false });
+    assert.deepStrictEqual(nameAsk([u('hi')]), { priorReplies: 0, askedName: false });
+    assert.strictEqual(nameAsk([u('hi'), a('Hey'), u('cool'), a('Nice')]).priorReplies, 2);
+  });
+
+  it('spots a name ask however it was worded', () => {
+    const { nameAsk, ASKED_NAME } = require('../lib/conversation.js');
+    for (const s of ['btw, what should I call you?', "what's your name?", 'Whats your name btw', 'who am I texting with?', "who i'm texting, btw?"]) {
+      assert.ok(ASKED_NAME.test(s), s);
+      assert.strictEqual(nameAsk([u('hi'), a(s)]).askedName, true, s);
+    }
+  });
+
+  it('ignores their own texts and ordinary replies', () => {
+    const { nameAsk } = require('../lib/conversation.js');
+    assert.strictEqual(nameAsk([u("what's your name?"), a('Exit 163! Story time is Sat 10am, free.')]).askedName, false);
+  });
+
+  it('a first text reaches the agent as reply zero, not yet asked', async () => {
+    let profile;
+    const f = loadWithFakes({ onTurn: (opts) => { profile = opts.profile; } });
+    try {
+      await f.send('anything fun saturday?');
+      assert.strictEqual(profile.priorReplies, 0);
+      assert.strictEqual(profile.askedName, false);
+    } finally { f.cleanup(); }
+  });
+});
+
+describe('Compliance texts are unchanged', () => {
+  it('keyword lists and HELP/JOIN/confirm texts match exactly', () => {
+    const src = fs.readFileSync(path.join(__dirname, '../lib/conversation.js'), 'utf8');
+    const join = fs.readFileSync(path.join(__dirname, '../api/join.js'), 'utf8');
+    for (const line of [
+      "const STOP_WORDS = ['STOP', 'STOPALL', 'UNSUBSCRIBE', 'CANCEL', 'END', 'QUIT', 'REVOKE', 'OPTOUT'];",
+      "const START_WORDS = ['START', 'UNSTOP', 'YES'];",
+      "const HELP_WORDS = ['HELP', 'INFO'];",
+      "const JOIN_WORDS = ['JOIN', 'SUBSCRIBE', 'BERGEN', 'WEEKEND'];",
+      'const HELP_TEXT = \'Exit 163: your Bergen County weekend buddy. Text me things like "what\\\'s on in Ridgewood Saturday?" Reply JOIN for the Friday text (about 1 msg/week). Some replies include a labeled deal. Msg & data rates may apply. Reply STOP to opt out. exit163.com\';',
+      'const JOIN_TEXT = "You\'re in! Every Friday morning you\'ll get the best of the Bergen weekend by text (about 1 msg/week). Msg & data rates may apply. Reply STOP to cancel, HELP for help.";',
+    ]) assert.ok(src.includes(line), line);
+    assert.ok(join.includes('const CONFIRM_TEXT = "Exit 163 here, your Bergen County local agent. Reply JOIN to confirm and get the Friday weekend text (about 1 msg/wk), plus answers whenever you text me. Msg & data rates may apply. Reply HELP for help, STOP to cancel.";'));
+  });
+});
