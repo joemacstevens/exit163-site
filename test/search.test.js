@@ -210,6 +210,63 @@ describe('Search - Recurrence exceptions (B1-B3 blocking issues)', () => {
     assert.strictEqual(dates.length, 40, 'Should have 40 days (46 total - 6 Mondays)');
   });
 
+  it('Review 5: "closed Sat, Nov 28 until 2pm" is a date label, not a range (time is not a day)', () => {
+    const event = {
+      starts_on: '2026-11-07',
+      ends_on: '2026-12-19',
+      recurrence_text: 'Saturdays Nov 7–Dec 19 closed Sat, Nov 28 until 2pm',
+    };
+    const { dates } = occurrences(event, '2026-11-07', '2026-12-19');
+    assert.strictEqual(dates.length, 6, 'Should have 6 Saturdays');
+    assert.ok(!dates.includes('2026-11-28'), 'Should exclude Nov 28');
+  });
+
+  it('Review 5: "except Sat, Nov 28 – 5pm" is a date label, not a range', () => {
+    const event = {
+      starts_on: '2026-11-07',
+      ends_on: '2026-12-19',
+      recurrence_text: 'Saturdays Nov 7–Dec 19 except Sat, Nov 28 – 5pm',
+    };
+    const { dates } = occurrences(event, '2026-11-07', '2026-12-19');
+    assert.strictEqual(dates.length, 6, 'Should have 6 Saturdays');
+    assert.ok(!dates.includes('2026-11-28'), 'Should exclude Nov 28');
+  });
+
+  it('Review 5: "Daily except Monday, Nov 20 – Sun, Jan 4" (weekday after range word) is a range', () => {
+    const event = {
+      starts_on: '2026-11-20',
+      ends_on: '2027-01-04',
+      recurrence_text: 'Daily except Monday, Nov 20 – Sun, Jan 4',
+    };
+    const { dates } = occurrences(event, '2026-11-20', '2027-01-04');
+    // 46 days Nov 20 - Jan 4, minus 7 Mondays (Nov 23, 30, Dec 7, 14, 21, 28, Jan 4)
+    assert.strictEqual(dates.length, 39, 'Should have 39 days');
+    assert.ok(dates.every((d) => new Date(`${d}T12:00:00Z`).getUTCDay() !== 1), 'Should have no Mondays');
+    assert.ok(dates.includes('2026-11-20'), 'Should include Fri Nov 20');
+    assert.ok(dates.includes('2027-01-03'), 'Should include Sun Jan 3');
+  });
+
+  it('Review 5 safety net: exceptions that remove every date are ignored', () => {
+    const event = {
+      starts_on: '2026-11-07',
+      ends_on: '2026-12-19',
+      recurrence_text: 'Saturdays Nov 7–Dec 19 closed Saturdays',
+    };
+    const { dates } = occurrences(event, '2026-11-07', '2026-12-19');
+    assert.strictEqual(dates.length, 7, 'Should fall back to all 7 Saturdays');
+  });
+
+  it('Review 5 safety net: exceptions that leave some dates still apply', () => {
+    const event = {
+      starts_on: '2026-11-07',
+      ends_on: '2026-12-19',
+      recurrence_text: 'Saturdays Nov 7–Dec 19 except Sat, Nov 28',
+    };
+    // Window covering only the excepted day: still excluded (net is per event, not per window)
+    assert.strictEqual(occurrences(event, '2026-11-28', '2026-11-28').dates.length, 0);
+    assert.strictEqual(occurrences(event, '2026-11-07', '2026-12-19').dates.length, 6);
+  });
+
   it('Issue 1+7: should parse "Open Tue–Sun, closed Mon, Nov 20–Jan 4" with all days except Mondays', () => {
     const event = {
       starts_on: '2024-11-20',
