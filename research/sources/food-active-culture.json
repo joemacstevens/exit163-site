@@ -1,0 +1,3172 @@
+{
+  "domain": "food-active-culture",
+  "sources": [
+    {
+      "name": "Meetup: social events within 10 miles of Paramus",
+      "kind": "ticketing_search",
+      "url": "https://www.meetup.com/find/?location=us--nj--Paramus&source=EVENTS&distance=tenMiles&categoryId=652",
+      "other_urls": [
+        "https://www.meetup.com/find/?keywords=board%20games&location=us--nj--Hackensack&source=EVENTS&distance=tenMiles",
+        "https://www.meetup.com/find/?keywords=hiking&location=us--nj--Mahwah&source=EVENTS&distance=tenMiles",
+        "https://www.meetup.com/find/?location=us--nj--Paramus&source=GROUPS&distance=tenMiles",
+        "https://www.meetup.com/find/?location=us--nj--Hackensack&source=EVENTS"
+      ],
+      "platform": "meetup",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "community",
+        "nightlife",
+        "sports",
+        "food"
+      ],
+      "event_types": [
+        "singles socials",
+        "board game nights",
+        "happy hours",
+        "pickleball meetups",
+        "trivia outings"
+      ],
+      "audience": "Adults 20s to 60s, mostly singles and new-in-town",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-25",
+      "sample_events": [
+        {
+          "title": "Board Game Night - Paris Baguette - Singles and Non Singles - 20s-40s",
+          "date": "2026-11-13",
+          "time": "7:00 PM",
+          "venue": "Paris Baguette, 67 E Ridgewood Ave",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.meetup.com/bergen-county-singles/events/317349964/"
+        },
+        {
+          "title": "Social Hour",
+          "date": "2026-11-14",
+          "time": "7:00 PM",
+          "venue": null,
+          "town": null,
+          "cost": null,
+          "source_url": "https://www.meetup.com/bergen-county-upscale-singles/events/317105180/"
+        },
+        {
+          "title": "HAPPY HOUR (Thanksgiving Eve) -- MAGGIANO'S in Hackensack NJ",
+          "date": "2026-11-25",
+          "time": "5:00 PM",
+          "venue": "Maggiano's",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://www.meetup.com/kick-it-up-a-notch/events/316348235/"
+        }
+      ],
+      "yield": "high",
+      "notes": "The one Meetup URL that reads without JavaScript and returned 12 dated events today, about half in Bergen. Towns are often missing from the card, and Rockland, Nassau and NYC groups leak in, so open each event before listing it. Swap the keyword for board games or hiking (see other_urls)."
+    },
+    {
+      "name": "RunSignup: races within 10 miles of Paramus (07652)",
+      "kind": "ticketing_search",
+      "url": "https://runsignup.com/Races?zipcodeRadius=07652&radius=10",
+      "other_urls": [
+        "https://www.runningintheusa.com/race/list/map/table/bergen-county-nj/upcoming/sort-by-open-date",
+        "https://thelocalgirl.com/bergen/?p=240366"
+      ],
+      "platform": "runsignup",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "sports",
+        "outdoors",
+        "holiday"
+      ],
+      "event_types": [
+        "5Ks",
+        "turkey trots",
+        "fun runs",
+        "charity walks",
+        "training programs"
+      ],
+      "audience": "Runners and walkers of all levels, families",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2027-04-03",
+      "sample_events": [
+        {
+          "title": "Leonia Turkey Trot 2026",
+          "date": "2026-11-26",
+          "time": null,
+          "venue": null,
+          "town": "Leonia",
+          "cost": null,
+          "source_url": "https://runsignup.com/Races?zipcodeRadius=07652&radius=10"
+        },
+        {
+          "title": "Racefaster through American Dream: Santa Run",
+          "date": "2026-12-06",
+          "time": null,
+          "venue": null,
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://runsignup.com/Races?zipcodeRadius=07652&radius=10"
+        },
+        {
+          "title": "1st Day Live and Virtual 5K Run & 1 Mile Walk",
+          "date": "2027-01-01",
+          "time": null,
+          "venue": null,
+          "town": "Fair Lawn",
+          "cost": null,
+          "source_url": "https://runsignup.com/Races?zipcodeRadius=07652&radius=10"
+        }
+      ],
+      "yield": "high",
+      "notes": "Returned 30 races on page 1 of 2, about two thirds in Bergen (Fort Lee, Leonia, Rochelle Park, River Vale, Glen Rock, Ridgefield Park, Rutherford, Fair Lawn). Wayne, Clifton and Bronx races also appear, so filter by town. The Running in the USA Bergen page already used in events-nov-dec.json returned 403 to WebFetch today."
+    },
+    {
+      "name": "Bolero Snort Brewery events",
+      "kind": "venue_calendar",
+      "url": "https://www.bolerosnort.com/events",
+      "other_urls": [
+        "https://www.instagram.com/bolerosnort/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Carlstadt"
+      ],
+      "categories": [
+        "food",
+        "nightlife",
+        "arts",
+        "community"
+      ],
+      "event_types": [
+        "beer release contests",
+        "silent book club",
+        "emo nights",
+        "comedy",
+        "improv",
+        "watch parties",
+        "vendor markets",
+        "cabaret"
+      ],
+      "audience": "21+ taproom crowd; some all-ages daytime events",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2027-01-22",
+      "sample_events": [
+        {
+          "title": "2nd Annual Patron Pie Contest | Winning Flavor Becomes a Beer!",
+          "date": "2026-11-21",
+          "time": "1:00 - 3:00 pm",
+          "venue": "Bolero Snort Brewery",
+          "town": "Carlstadt",
+          "cost": "$20",
+          "source_url": "https://www.bolerosnort.com/events"
+        },
+        {
+          "title": "Books 'n Brews Presents: Silent Book Club",
+          "date": "2026-11-24",
+          "time": "6:30 - 8:00 pm",
+          "venue": "Bolero Snort Brewery",
+          "town": "Carlstadt",
+          "cost": null,
+          "source_url": "https://www.bolerosnort.com/events"
+        },
+        {
+          "title": "Christmas Emo Night",
+          "date": "2026-12-12",
+          "time": "9:00 pm",
+          "venue": "Bolero Snort Brewery",
+          "town": "Carlstadt",
+          "cost": "$10",
+          "source_url": "https://www.bolerosnort.com/events"
+        }
+      ],
+      "yield": "high",
+      "notes": "Best brewery calendar in the county: 11 dated events listed today through Jan 22, 2027, with times and prices. Instagram @bolerosnort is age-gated (21+ login wall)."
+    },
+    {
+      "name": "Ridgewood Culinary Studio adult classes",
+      "kind": "venue_calendar",
+      "url": "https://ridgewoodculinarystudio.com/adult-cooking-classes/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "food"
+      ],
+      "event_types": [
+        "cooking classes",
+        "wine pairing classes",
+        "sourdough and baking workshops",
+        "couples dinners"
+      ],
+      "audience": "Adults, date night, small groups",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-02-24",
+      "sample_events": [
+        {
+          "title": "Pie Making & Wine Pairing",
+          "date": "2026-11-18",
+          "time": "6:30-8:30 p.m.",
+          "venue": "Ridgewood Culinary Studio, 223 Chestnut St",
+          "town": "Ridgewood",
+          "cost": "$100",
+          "source_url": "https://ridgewoodculinarystudio.com/adult-cooking-classes/"
+        },
+        {
+          "title": "Thanksgiving Charcuterie Board Making and Wine Pairing",
+          "date": "2026-11-24",
+          "time": "6:30-8:30 p.m.",
+          "venue": "Ridgewood Culinary Studio",
+          "town": "Ridgewood",
+          "cost": "$125",
+          "source_url": "https://ridgewoodculinarystudio.com/adult-cooking-classes/"
+        },
+        {
+          "title": "Adult Gingerbread House Decorating, Wine & Cheese Pairing",
+          "date": "2026-12-10",
+          "time": "6:30-8:30 p.m.",
+          "venue": "Ridgewood Culinary Studio",
+          "town": "Ridgewood",
+          "cost": "$100",
+          "source_url": "https://ridgewoodculinarystudio.com/adult-cooking-classes/"
+        }
+      ],
+      "yield": "high",
+      "notes": "21 dated adult classes posted through Feb 24, 2027, each with time and price. Plain HTML, easy to re-read."
+    },
+    {
+      "name": "The Local Girl: Bergen County calendar (with category feeds)",
+      "kind": "media_listing",
+      "url": "https://thelocalgirl.com/calendar/bergen/",
+      "other_urls": [
+        "https://thelocalgirl.com/calendar/category/food-drink/tastings/",
+        "https://thelocalgirl.com/calendar/category/lifestyle/networking/",
+        "https://thelocalgirl.com/calendar/category/runs/",
+        "https://thelocalgirl.com/calendar/category/sports/",
+        "https://thelocalgirl.com/calendar/category/pop-up-event/",
+        "https://thelocalgirl.com/calendar/category/grand-opening/",
+        "https://www.instagram.com/thebergencountygirl/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "food",
+        "community",
+        "sports",
+        "nightlife",
+        "arts"
+      ],
+      "event_types": [
+        "tastings",
+        "networking mixers",
+        "grand openings",
+        "pop-ups",
+        "runs",
+        "roller derby",
+        "live music dinners"
+      ],
+      "audience": "20s to 50s, skews women and young families",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-14",
+      "sample_events": [
+        {
+          "title": "Bergen County Women Entrepreneur FREE Networking Event",
+          "date": "2026-11-13",
+          "time": null,
+          "venue": "Balansa Center",
+          "town": "Cresskill",
+          "cost": "Free",
+          "source_url": "https://thelocalgirl.com/calendar/bergen/"
+        },
+        {
+          "title": "Business Connections - Bergen County NJ Networking",
+          "date": "2026-11-13",
+          "time": null,
+          "venue": "Booyah",
+          "town": "Mahwah",
+          "cost": null,
+          "source_url": "https://thelocalgirl.com/calendar/bergen/"
+        },
+        {
+          "title": "Habit Burger & Grill's \"Fresh Off the Block\" Party!",
+          "date": "2026-11-14",
+          "time": null,
+          "venue": "Habit Burger & Grill Teterboro",
+          "town": "Teterboro",
+          "cost": "Free",
+          "source_url": "https://thelocalgirl.com/calendar/bergen/"
+        }
+      ],
+      "yield": "high",
+      "notes": "User-submitted calendar with useful categories (Tastings, Networking, Runs, Sports, Pop-up Event, Grand Opening, Trivia). The main Bergen page is very long (238k characters) and mixes in NYC, Jersey City and Union County listings; category pages rendered empty to WebFetch, so they need a JS scrape. Instagram @thebergencountygirl (53.1K followers) posted Nov 12, 2026 and breaks openings first."
+    },
+    {
+      "name": "Bicycle Touring Club of North Jersey ride schedule",
+      "kind": "community_org",
+      "url": "https://btcnj.com/pages/rideSchedulePublic",
+      "other_urls": [
+        "https://btcnj.com/pages/eventCalendar"
+      ],
+      "platform": "web",
+      "towns": [
+        "Fair Lawn",
+        "Glen Rock",
+        "Ramsey",
+        "Paramus"
+      ],
+      "categories": [
+        "outdoors",
+        "sports"
+      ],
+      "event_types": [
+        "group road rides",
+        "gravel rides",
+        "club socials"
+      ],
+      "audience": "Adult cyclists, many retirees on weekday rides",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-20",
+      "sample_events": [
+        {
+          "title": "Nyack Beach State Park ride",
+          "date": "2026-11-14",
+          "time": "9:00 AM",
+          "venue": "Fair Lawn Commuter Lot (Saddle River Rd)",
+          "town": "Fair Lawn",
+          "cost": null,
+          "source_url": "https://btcnj.com/pages/rideSchedulePublic"
+        },
+        {
+          "title": "Mini Alpe d'Huez + birthday ride",
+          "date": "2026-11-15",
+          "time": "8:15 AM",
+          "venue": "Fair Lawn Commuter Lot (Saddle River Rd)",
+          "town": "Fair Lawn",
+          "cost": null,
+          "source_url": "https://btcnj.com/pages/rideSchedulePublic"
+        },
+        {
+          "title": "Steady gears and autumn views",
+          "date": "2026-11-17",
+          "time": "10:45 AM",
+          "venue": "Ramsey Municipal Lot (North)",
+          "town": "Ramsey",
+          "cost": null,
+          "source_url": "https://btcnj.com/pages/rideSchedulePublic"
+        }
+      ],
+      "yield": "high",
+      "notes": "Public rolling schedule (11 rides in the next week), about half starting in Bergen from Fair Lawn, Glen Rock Duck Pond and Ramsey; the rest start in Morris or Rockland. Rides are club rides, so say that guests should check the club's guest policy."
+    },
+    {
+      "name": "Kaplen JCC on the Palisades events",
+      "kind": "community_org",
+      "url": "https://www.jccotp.org/events/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Tenafly"
+      ],
+      "categories": [
+        "community",
+        "arts",
+        "food"
+      ],
+      "event_types": [
+        "concerts",
+        "theater",
+        "cooking evenings",
+        "holiday boutiques",
+        "volunteer events",
+        "lectures"
+      ],
+      "audience": "Jewish community and the wider public; some events members-first",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-18",
+      "sample_events": [
+        {
+          "title": "Holiday Boutique",
+          "date": "2026-11-15",
+          "time": "10:00 am-4:00 pm",
+          "venue": "Kaplen JCC on the Palisades",
+          "town": "Tenafly",
+          "cost": null,
+          "source_url": "https://www.jccotp.org/events/"
+        },
+        {
+          "title": "Music Connects Continents",
+          "date": "2026-11-17",
+          "time": "7:30-9:00 pm",
+          "venue": "Kaplen JCC on the Palisades",
+          "town": "Tenafly",
+          "cost": null,
+          "source_url": "https://www.jccotp.org/events/"
+        },
+        {
+          "title": "A Taste of Israel: Iraqi Cuisine",
+          "date": "2026-11-18",
+          "time": "6:30-9:00 pm",
+          "venue": "Kaplen JCC on the Palisades",
+          "town": "Tenafly",
+          "cost": null,
+          "source_url": "https://www.jccotp.org/events/"
+        }
+      ],
+      "yield": "high",
+      "notes": "Shows one week at a time (12 events for Nov 12 to 18). Cost and member/non-member rules are on each event page, so check before telling a non-member to go."
+    },
+    {
+      "name": "Joe Trivia weekly schedule (by day of week)",
+      "kind": "promoter",
+      "url": "https://www.joetrivia.com/wednesday",
+      "other_urls": [
+        "https://www.joetrivia.com/thursday",
+        "https://www.joetrivia.com/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Westwood",
+        "Tenafly",
+        "Paramus",
+        "Norwood",
+        "Hasbrouck Heights",
+        "Fair Lawn",
+        "Waldwick",
+        "Mahwah",
+        "River Vale",
+        "Saddle Brook",
+        "Hackensack",
+        "East Rutherford"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "bar trivia nights",
+        "music bingo"
+      ],
+      "audience": "Adults, bar and brewery regulars",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [
+        {
+          "title": "Joe Trivia at Five Dimes (every Wednesday)",
+          "date": "2026-11-18",
+          "time": "7pm",
+          "venue": "Five Dimes Brewery",
+          "town": "Westwood",
+          "cost": null,
+          "source_url": "https://www.joetrivia.com/wednesday"
+        },
+        {
+          "title": "Joe Trivia at Mahwah Bar & Grill (every Wednesday)",
+          "date": "2026-11-18",
+          "time": "8:30pm",
+          "venue": "Mahwah Bar & Grill",
+          "town": "Mahwah",
+          "cost": null,
+          "source_url": "https://www.joetrivia.com/wednesday"
+        },
+        {
+          "title": "Joe Trivia at Orange Lantern (every Thursday)",
+          "date": "2026-11-19",
+          "time": "8:00 pm",
+          "venue": "Orange Lantern",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.joetrivia.com/thursday"
+        }
+      ],
+      "yield": "high",
+      "notes": "Already used in existing research; listed for the re-check URLs. One page per weekday (/monday, /tuesday, /wednesday, /thursday, /saturday, /sunday) with venue, town and start time. Wednesday has 8 Bergen venues and Thursday 6. Sample dates are the next occurrence of a standing weekly night, not separately announced events. The home page links to joemusicbingo.com for music bingo."
+    },
+    {
+      "name": "Bergen & Rockland County Singles - 20s & 30s (Meetup)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/bergen-county-singles/events/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Paramus",
+        "Westwood",
+        "Fair Lawn"
+      ],
+      "categories": [
+        "community",
+        "nightlife"
+      ],
+      "event_types": [
+        "board game nights",
+        "brewery trivia",
+        "bookstore meetups",
+        "adult coloring",
+        "dining out"
+      ],
+      "audience": "Singles and non-singles, 20s to 40s; 3,283 members",
+      "access": "js_heavy",
+      "how_checked": "firecrawl",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-12-04",
+      "sample_events": [
+        {
+          "title": "Board Game Night - Paris Baguette - Singles and Non Singles - 20s-40s",
+          "date": "2026-11-13",
+          "time": "7:00 PM",
+          "venue": "Paris Baguette, 67 E Ridgewood Ave",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.meetup.com/bergen-county-singles/events/"
+        },
+        {
+          "title": "Meet at Barnes and Noble! - Paramus, NJ- Singles and Non Singles",
+          "date": "2026-12-04",
+          "time": "7:00 PM",
+          "venue": "Barnes and Noble, 634 NJ-17",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.meetup.com/bergen-county-singles/events/"
+        }
+      ],
+      "yield": "high",
+      "notes": "454 events hosted to date; several a week, almost all in Bergen, with full addresses. WebFetch shows 'Events 0' on every Meetup group page; a Firecrawl scrape with a 5 second wait returns the full list. Also takes its members to Joe Trivia at Five Dimes in Westwood."
+    },
+    {
+      "name": "North Jersey Bowling, Volleyball, Tennis & More (Meetup)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/north-jersey-bowling-soccer-volleyball/events/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Leonia",
+        "River Edge",
+        "Edgewater",
+        "Paramus",
+        "Hackensack"
+      ],
+      "categories": [
+        "sports",
+        "community"
+      ],
+      "event_types": [
+        "free weekend tennis",
+        "ping pong parties",
+        "adult laser tag",
+        "bowling",
+        "volleyball",
+        "board game nights"
+      ],
+      "audience": "Active adults, mixed ages; 5,250 members",
+      "access": "js_heavy",
+      "how_checked": "firecrawl",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-29",
+      "sample_events": [
+        {
+          "title": "Weekend Warrior Tennis (Saturdays)",
+          "date": "2026-11-14",
+          "time": "9:00 AM",
+          "venue": "Overpeck County Park",
+          "town": "Leonia",
+          "cost": null,
+          "source_url": "https://www.meetup.com/north-jersey-bowling-soccer-volleyball/events/"
+        },
+        {
+          "title": "Ping Pong Party - North Jersey",
+          "date": "2026-11-27",
+          "time": "7:30 PM",
+          "venue": "Ready to Golf, 3 New Bridge Road",
+          "town": "River Edge",
+          "cost": null,
+          "source_url": "https://www.meetup.com/north-jersey-bowling-soccer-volleyball/events/"
+        },
+        {
+          "title": "Adult Laser Tag - Edgewater",
+          "date": "2026-11-28",
+          "time": "5:00 PM",
+          "venue": "43 The Promenade",
+          "town": "Edgewater",
+          "cost": null,
+          "source_url": "https://www.meetup.com/north-jersey-bowling-soccer-volleyball/events/"
+        }
+      ],
+      "yield": "high",
+      "notes": "Largest Bergen-based activity group found. Tennis at Overpeck every Saturday and Sunday morning plus one-off game nights. Same JS caveat as other Meetup group pages."
+    },
+    {
+      "name": "Boozy Burbs (openings and pop-ups tracker)",
+      "kind": "media_listing",
+      "url": "https://www.boozyburbs.com/",
+      "other_urls": [
+        "https://www.boozyburbs.com/category/openings-closings/",
+        "https://www.instagram.com/boozyburbs/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "food"
+      ],
+      "event_types": [
+        "restaurant opening alerts",
+        "coming-soon news",
+        "food pop-ups",
+        "closings"
+      ],
+      "audience": "Bergen County diners",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [],
+      "yield": "high",
+      "notes": "Posts several times a day; nine posts dated Nov 9 to 12, 2026, including opening alerts for Rojo (Cliffside Park), Saigon Bistro (Northvale), Let's Cluck Chicken (Hasbrouck Heights), an artisan cheese shop coming to Rutherford and a cinnamon-roll pop-up. Not a dated-events calendar, so no sample_events; it feeds the places table and 'what's new' answers. Instagram @boozyburbs has 53K followers and posted Nov 12, 2026."
+    },
+    {
+      "name": "Big North Conference master calendar (high school sports)",
+      "kind": "other",
+      "url": "https://live.arbiter.io/org/188306/calendar",
+      "other_urls": [
+        "https://www.bignorthconferencenj.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "sports"
+      ],
+      "event_types": [
+        "high school football, basketball, wrestling, hockey and more"
+      ],
+      "audience": "Families, alumni, students",
+      "access": "js_heavy",
+      "how_checked": "firecrawl",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "high",
+      "notes": "bignorthconferencenj.org now redirects here. One calendar for 36 member schools (most Bergen publics plus Bergen Catholic, Don Bosco Prep, Paramus Catholic, St. Joseph Regional) with School, Sport and Event-type filters and a Site column. My scrape reached the page (week of Nov 8 to 14, 2026) but the table rows had not loaded after 6 seconds, so no games were read; it needs a longer wait or a browser. Potentially the highest-volume sports source in the county."
+    },
+    {
+      "name": "Bergen Culinary School adult classes",
+      "kind": "venue_calendar",
+      "url": "https://www.bergenculinary.com/classes",
+      "other_urls": [
+        "https://bergenculinary.com/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergenfield"
+      ],
+      "categories": [
+        "food"
+      ],
+      "event_types": [
+        "hands-on cooking classes",
+        "cake and cookie workshops",
+        "holiday entertaining classes"
+      ],
+      "audience": "Adults; some classes allow teens with an adult",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-31",
+      "sample_events": [
+        {
+          "title": "Soup, There It Is!",
+          "date": "2026-11-13",
+          "time": "6:30-9:30 PM",
+          "venue": "Bergen Culinary School, 66B S. Washington Ave",
+          "town": "Bergenfield",
+          "cost": null,
+          "source_url": "https://www.bergenculinary.com/classes"
+        },
+        {
+          "title": "Beyond the Bird: Thanksgiving Sides",
+          "date": "2026-11-22",
+          "time": "3:00-6:00 PM",
+          "venue": "Bergen Culinary School",
+          "town": "Bergenfield",
+          "cost": null,
+          "source_url": "https://www.bergenculinary.com/classes"
+        },
+        {
+          "title": "The Art of Holiday Entertaining: Festive Bites",
+          "date": "2026-12-17",
+          "time": "6:30-9:30 PM",
+          "venue": "Bergen Culinary School",
+          "town": "Bergenfield",
+          "cost": null,
+          "source_url": "https://www.bergenculinary.com/classes"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Nine adult-oriented classes listed through Dec 27. Prices are behind each Buy Tickets link, not on the listing page."
+    },
+    {
+      "name": "AllEvents.in: Paramus",
+      "kind": "aggregator",
+      "url": "https://allevents.in/paramus/all",
+      "other_urls": [
+        "https://allevents.in/wyckoff/all",
+        "https://allevents.in/wyckoff/this-weekend"
+      ],
+      "platform": "web",
+      "towns": [
+        "Paramus",
+        "Teaneck",
+        "Bergen County"
+      ],
+      "categories": [
+        "community",
+        "sports",
+        "food",
+        "family",
+        "holiday"
+      ],
+      "event_types": [
+        "singles mixers",
+        "fitness pop-ups",
+        "mall events",
+        "concerts",
+        "craft fairs",
+        "classes"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-12-12",
+      "sample_events": [
+        {
+          "title": "Turkey Burn with Kay",
+          "date": "2026-11-14",
+          "time": "8:30-9:30 am",
+          "venue": "lululemon Garden State Plaza",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://allevents.in/paramus/all"
+        },
+        {
+          "title": "Classy, Sexy, Successful SINGLES of Bergen County, Ages 30-55",
+          "date": "2026-11-17",
+          "time": "6:30-9:30 pm",
+          "venue": "Fogo de Chao Brazilian Steakhouse",
+          "town": null,
+          "cost": null,
+          "source_url": "https://allevents.in/paramus/all"
+        },
+        {
+          "title": "IAN MAKSIN in PARAMUS, NJ: \"The Poet's Cello\"",
+          "date": "2026-11-27",
+          "time": "7-9 pm",
+          "venue": "Forte Piano Music Company",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://allevents.in/paramus/all"
+        }
+      ],
+      "yield": "medium",
+      "notes": "19 of the first 20 listings were in Bergen today, far cleaner than Eventbrite's location pages. It scrapes Eventbrite and Facebook events, so it is a no-login window into Facebook Events. Has date sub-pages (/paramus/all--this-weekend, /all--november, /all--december). Town slugs are inconsistent: /wyckoff/all appeared in search results, /hackensack/all returned 404 and /fort-lee/all looped on redirects."
+    },
+    {
+      "name": "MetLife Stadium events",
+      "kind": "venue_calendar",
+      "url": "https://www.metlifestadium.com/events",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "sports"
+      ],
+      "event_types": [
+        "NFL games",
+        "college football",
+        "high school state finals",
+        "stadium concerts"
+      ],
+      "audience": "Sports fans, all ages",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-12",
+      "sample_events": [
+        {
+          "title": "Jets vs. Bills",
+          "date": "2026-11-15",
+          "time": null,
+          "venue": "MetLife Stadium",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.metlifestadium.com/events"
+        },
+        {
+          "title": "NJSIAA High School Football Championships",
+          "date": "2026-11-28",
+          "time": null,
+          "venue": "MetLife Stadium",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.metlifestadium.com/events"
+        },
+        {
+          "title": "Army-Navy presented by USAA",
+          "date": "2026-12-12",
+          "time": null,
+          "venue": "MetLife Stadium",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.metlifestadium.com/events"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Already cited in events-nov-dec.json; kept here because it is the page to re-check. Listing shows dates only, kickoff times are on each event page. NJSIAA finals run Nov 28-29 with tickets TBA."
+    },
+    {
+      "name": "Meadowlands Racing & Entertainment events",
+      "kind": "venue_calendar",
+      "url": "https://playmeadowlands.com/events/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "sports",
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "live harness racing",
+        "fight-night watch parties",
+        "handicapping contests",
+        "dinner shows",
+        "food festivals",
+        "giveaway nights"
+      ],
+      "audience": "Adults; racing nights are family-friendly",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-12-19",
+      "sample_events": [
+        {
+          "title": "FanDuel Championships",
+          "date": "2026-11-14",
+          "time": "6:20 PM - 11:00 PM EST",
+          "venue": "Meadowlands Racetrack",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://playmeadowlands.com/events/"
+        },
+        {
+          "title": "UFC 334 Watch Party",
+          "date": "2026-11-14",
+          "time": "7:00 PM - 11:59 PM EST",
+          "venue": "Meadowlands Racetrack",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://playmeadowlands.com/events/"
+        },
+        {
+          "title": "Kyla Nicole Healey - Dinner & Show",
+          "date": "2026-12-19",
+          "time": "5:00 PM",
+          "venue": "Meadowlands Racetrack",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://playmeadowlands.com/events/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Mixes live racing nights, watch parties and food events (Pie Palooza was Nov 7). Full live-racing dates sit in a linked racing-calendar PDF, not on the page."
+    },
+    {
+      "name": "FDU Knights home schedules (Division I)",
+      "kind": "venue_calendar",
+      "url": "https://fduknights.com/sports/mens-basketball/schedule/2026-27",
+      "other_urls": [
+        "https://fduknights.com/calendar"
+      ],
+      "platform": "web",
+      "towns": [
+        "Hackensack",
+        "Teaneck"
+      ],
+      "categories": [
+        "sports"
+      ],
+      "event_types": [
+        "college basketball",
+        "other Division I home games"
+      ],
+      "audience": "Families, students, alumni",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-28",
+      "sample_events": [
+        {
+          "title": "FDU men's basketball vs. NJIT (Rich Conrad Game)",
+          "date": "2026-11-18",
+          "time": "7 p.m.",
+          "venue": "Bogota Savings Bank Center",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://fduknights.com/sports/mens-basketball/schedule/2026-27"
+        },
+        {
+          "title": "FDU men's basketball vs. Binghamton (Cyber Monday Mystery Drop)",
+          "date": "2026-11-30",
+          "time": "7 p.m.",
+          "venue": "Bogota Savings Bank Center",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://fduknights.com/sports/mens-basketball/schedule/2026-27"
+        },
+        {
+          "title": "FDU men's basketball vs. Lafayette",
+          "date": "2026-12-04",
+          "time": "7 p.m.",
+          "venue": "Bogota Savings Bank Center",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://fduknights.com/sports/mens-basketball/schedule/2026-27"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Per-sport schedule pages read cleanly; the all-sports calendar at /calendar is JavaScript-only and came back empty. Swap the sport slug for women's basketball and other teams."
+    },
+    {
+      "name": "Ramapo College Roadrunners home schedules",
+      "kind": "venue_calendar",
+      "url": "https://ramapoathletics.com/sports/mens-basketball/schedule",
+      "other_urls": [
+        "https://ramapoathletics.com/calendar"
+      ],
+      "platform": "web",
+      "towns": [
+        "Mahwah"
+      ],
+      "categories": [
+        "sports"
+      ],
+      "event_types": [
+        "college basketball",
+        "other Division III home games"
+      ],
+      "audience": "Families, students, northwest Bergen locals",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-12",
+      "sample_events": [
+        {
+          "title": "Ramapo men's basketball vs. Sarah Lawrence College",
+          "date": "2026-11-18",
+          "time": "7:30 PM",
+          "venue": "Bradley Center",
+          "town": "Mahwah",
+          "cost": null,
+          "source_url": "https://ramapoathletics.com/sports/mens-basketball/schedule"
+        },
+        {
+          "title": "Ramapo men's basketball vs. Farmingdale State College",
+          "date": "2026-11-21",
+          "time": "2:00 PM",
+          "venue": "Bradley Center",
+          "town": "Mahwah",
+          "cost": null,
+          "source_url": "https://ramapoathletics.com/sports/mens-basketball/schedule"
+        },
+        {
+          "title": "Ramapo men's basketball vs. New Paltz",
+          "date": "2026-12-02",
+          "time": "7:30 PM",
+          "venue": "Bradley Center",
+          "town": "Mahwah",
+          "cost": null,
+          "source_url": "https://ramapoathletics.com/sports/mens-basketball/schedule"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Same pattern as FDU: per-sport pages read fine, the composite calendar at /calendar needs JavaScript. Existing research only had Ramapo's Berrie Center arts schedule."
+    },
+    {
+      "name": "North Jersey Masters events (run club)",
+      "kind": "community_org",
+      "url": "http://njmasters.com/events/",
+      "other_urls": [
+        "https://njmasters.com/",
+        "https://runsignup.com/Club/Races/806"
+      ],
+      "platform": "web",
+      "towns": [
+        "Glen Rock",
+        "Ridgewood",
+        "Ridgefield Park"
+      ],
+      "categories": [
+        "outdoors",
+        "sports"
+      ],
+      "event_types": [
+        "weekly group runs",
+        "track and tempo workouts",
+        "club races",
+        "beginner 5K programs"
+      ],
+      "audience": "Runners of every age and ability",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-06",
+      "sample_events": [
+        {
+          "title": "Group Run",
+          "date": "2026-11-15",
+          "time": "7:30-10:00 am",
+          "venue": "Glen Rock Duck Pond",
+          "town": "Glen Rock",
+          "cost": null,
+          "source_url": "http://njmasters.com/events/"
+        },
+        {
+          "title": "Group Run",
+          "date": "2026-11-22",
+          "time": "7:30-10:00 am",
+          "venue": "Glen Rock Duck Pond",
+          "town": "Glen Rock",
+          "cost": null,
+          "source_url": "http://njmasters.com/events/"
+        },
+        {
+          "title": "Chris Conway Memorial Run and 1 Mile Walk",
+          "date": "2026-12-06",
+          "time": "9:30-10:30 am",
+          "venue": null,
+          "town": "Ridgefield Park",
+          "cost": null,
+          "source_url": "http://njmasters.com/events/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Sunday 7:30 AM Duck Pond runs and Saturday 8 AM social runs every week, plus the club's races. The Ridgefield Park location for the Dec 6 race comes from RunSignup, not this page. Also runs the Ridgewood Run (Memorial Day)."
+    },
+    {
+      "name": "Bergen County Audubon Society field trips",
+      "kind": "community_org",
+      "url": "https://bergencountyaudubon.org/field-trips/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "North Arlington",
+        "Lyndhurst",
+        "Teaneck"
+      ],
+      "categories": [
+        "outdoors"
+      ],
+      "event_types": [
+        "free guided bird walks",
+        "raptor walks",
+        "holiday nature walks",
+        "Eagle Festival"
+      ],
+      "audience": "All ages, beginners welcome",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-29",
+      "sample_events": [
+        {
+          "title": "Harrier Meadow walk",
+          "date": "2026-11-15",
+          "time": "10:00 AM",
+          "venue": "Harrier Meadow",
+          "town": "North Arlington",
+          "cost": null,
+          "source_url": "https://bergencountyaudubon.org/field-trips/"
+        },
+        {
+          "title": "Richard DeKorte Park walk",
+          "date": "2026-11-22",
+          "time": "10:00 AM",
+          "venue": "Richard DeKorte Park",
+          "town": "Lyndhurst",
+          "cost": null,
+          "source_url": "https://bergencountyaudubon.org/field-trips/"
+        },
+        {
+          "title": "Annual Thanksgiving Day Walk",
+          "date": "2026-11-26",
+          "time": "9:00 AM",
+          "venue": "Teaneck Creek Conservancy",
+          "town": "Teaneck",
+          "cost": null,
+          "source_url": "https://bergencountyaudubon.org/field-trips/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Already cited 7 times in existing research; listed because it is a twice-weekly rolling list worth re-reading monthly. Some walks are in Secaucus (Hudson County), so filter by town."
+    },
+    {
+      "name": "Tenafly Nature Center seasonal programs",
+      "kind": "venue_calendar",
+      "url": "https://www.tenaflynaturecenter.org/seasonal-programs/",
+      "other_urls": [
+        "https://www.tenaflynaturecenter.org/calendar"
+      ],
+      "platform": "web",
+      "towns": [
+        "Tenafly"
+      ],
+      "categories": [
+        "outdoors",
+        "family"
+      ],
+      "event_types": [
+        "guided hikes",
+        "night hikes and campfires",
+        "nature talks",
+        "scavenger hunts"
+      ],
+      "audience": "Families and adults",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-01-13",
+      "sample_events": [
+        {
+          "title": "Heal and Hike",
+          "date": "2026-11-15",
+          "time": "10:00 AM",
+          "venue": "Tenafly Nature Center",
+          "town": "Tenafly",
+          "cost": null,
+          "source_url": "https://www.tenaflynaturecenter.org/seasonal-programs/"
+        },
+        {
+          "title": "Winter Solstice Campfire and Night Hike",
+          "date": "2026-12-20",
+          "time": "4:00 PM",
+          "venue": "Tenafly Nature Center",
+          "town": "Tenafly",
+          "cost": null,
+          "source_url": "https://www.tenaflynaturecenter.org/seasonal-programs/"
+        },
+        {
+          "title": "Beech Leaf Disease and Forest Restoration",
+          "date": "2027-01-13",
+          "time": "7:00 PM",
+          "venue": null,
+          "town": "Tenafly",
+          "cost": null,
+          "source_url": "https://www.tenaflynaturecenter.org/seasonal-programs/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Use this URL, not /calendar (that page is an image). Fees are only on each registration page."
+    },
+    {
+      "name": "Jewish Federation of Northern New Jersey community calendar",
+      "kind": "community_org",
+      "url": "https://www.jfnnj.org/calendar",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Paramus",
+        "Teaneck",
+        "Tenafly",
+        "Rockleigh"
+      ],
+      "categories": [
+        "community",
+        "arts"
+      ],
+      "event_types": [
+        "Mitzvah Day volunteering",
+        "film screenings",
+        "concerts",
+        "family holiday events",
+        "teen programs"
+      ],
+      "audience": "Jewish community across Bergen; many teen and family items",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-05-13",
+      "sample_events": [
+        {
+          "title": "Mitzvah Day",
+          "date": "2026-11-22",
+          "time": "12:30-3:00 pm",
+          "venue": "Federation, 50 Eisenhower Dr.",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.jfnnj.org/calendar"
+        },
+        {
+          "title": "Elie Wiesel: Soul on Fire Film Screening",
+          "date": "2026-11-23",
+          "time": "7:30-9:30 pm",
+          "venue": null,
+          "town": null,
+          "cost": null,
+          "source_url": "https://www.jfnnj.org/calendar"
+        },
+        {
+          "title": "Life & Legacy Launch Event",
+          "date": "2026-12-02",
+          "time": "7:00-8:30 pm",
+          "venue": null,
+          "town": null,
+          "cost": null,
+          "source_url": "https://www.jfnnj.org/calendar"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Month grid covering many synagogues and day schools. About half the rows are school open houses, board meetings or out-of-county teen trips; many omit a location."
+    },
+    {
+      "name": "Downtown Hackensack (Main Street Business Alliance) events",
+      "kind": "town_calendar",
+      "url": "https://www.downtownhackensack.org/events/",
+      "other_urls": [
+        "https://www.downtownhackensack.org/events/month/2026-12/",
+        "https://www.downtownhackensack.org/?p=10466"
+      ],
+      "platform": "web",
+      "towns": [
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife",
+        "food",
+        "community"
+      ],
+      "event_types": [
+        "bar crawls",
+        "Latin Social street dances",
+        "HACKENSACKtoberfest",
+        "restaurant promotions"
+      ],
+      "audience": "Adults 21+, downtown residents",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-12",
+      "sample_events": [
+        {
+          "title": "ElfCon Bar Crawl",
+          "date": "2026-12-12",
+          "time": "1:00 pm to 6:00 pm",
+          "venue": "Downtown Hackensack bars and restaurants",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://www.downtownhackensack.org/events/month/2026-12/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "The list view came back empty to WebFetch; the month view (/events/month/2026-12/) worked. This is where the summer Latin Social (salsa, bachata, merengue on Main Street) and Oktoberfest get announced."
+    },
+    {
+      "name": "Festival Guides and Reviews: 2026 New Jersey Festival Guide",
+      "kind": "aggregator",
+      "url": "https://festivalguidesandreviews.com/new-jersey-festivals/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "food",
+        "community",
+        "holiday"
+      ],
+      "event_types": [
+        "Greek festivals",
+        "Italian feasts",
+        "food truck festivals",
+        "street fairs",
+        "heritage festivals",
+        "night markets"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-06",
+      "sample_events": [
+        {
+          "title": "Fort Lee Main Street Pops Artisan Night Market II",
+          "date": "2026-12-05",
+          "time": null,
+          "venue": null,
+          "town": "Fort Lee",
+          "cost": null,
+          "source_url": "https://festivalguidesandreviews.com/new-jersey-festivals/"
+        },
+        {
+          "title": "Chanukah Family Fun Festival",
+          "date": "2026-12-06",
+          "time": null,
+          "venue": null,
+          "town": "Fair Lawn",
+          "cost": null,
+          "source_url": "https://festivalguidesandreviews.com/new-jersey-festivals/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "One long statewide list sorted by date, each row linking to the organizer's own page or Facebook event. Best single map of who runs Bergen's cultural and food festivals: it led to St. Athanasios (Paramus), St. John (Tenafly), St. Nicholas (Wyckoff), Ascension (Fairview), St. Leon (Fair Lawn), Saint Joseph Society (Lodi), the Filipino American Festival (Ridgefield Park), Garfield Multicultural Food and Music Festival, Diwali in Norwood and Dream Asia Food Festival. Dates with an asterisk are last year's and unconfirmed."
+    },
+    {
+      "name": "JC Promotions (street fairs, food truck fests, flea markets)",
+      "kind": "promoter",
+      "url": "https://jcpromotions.info/calendar/",
+      "other_urls": [
+        "https://jcpromotions.info/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Elmwood Park",
+        "Bergenfield",
+        "Montvale",
+        "Ridgefield Park"
+      ],
+      "categories": [
+        "shopping",
+        "food",
+        "community"
+      ],
+      "event_types": [
+        "street fairs with food trucks",
+        "flea and collectible markets",
+        "holiday vendor pop-ups",
+        "fall harvest festival"
+      ],
+      "audience": "Families, bargain hunters",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2027-05-16",
+      "sample_events": [
+        {
+          "title": "Elmwood Park \"Everything\" Flea & Collectible Monthly Market",
+          "date": "2026-11-22",
+          "time": null,
+          "venue": null,
+          "town": "Elmwood Park",
+          "cost": null,
+          "source_url": "https://jcpromotions.info/calendar/"
+        },
+        {
+          "title": "Bergenfield High School Holiday Vendor Pop Up & Craft Fair",
+          "date": "2026-12-06",
+          "time": null,
+          "venue": "Bergenfield High School",
+          "town": "Bergenfield",
+          "cost": null,
+          "source_url": "https://jcpromotions.info/calendar/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Promoter behind the Montvale Mile Long Street Fair & Food Truck Fest, the Ridgefield Park Street Fair + Food Truck Fest and the Bergen County Fall Harvest Festival at Overpeck. 15 events listed through May 2027; most winter ones are in Passaic and Hudson, Bergen picks up in spring."
+    },
+    {
+      "name": "Kick It Up a Notch 40+ (Meetup)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/kick-it-up-a-notch/events/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Hackensack",
+        "Paramus"
+      ],
+      "categories": [
+        "community",
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "happy hours",
+        "dinners",
+        "outings"
+      ],
+      "audience": "Adults 40+; 3,984 members",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-25",
+      "sample_events": [
+        {
+          "title": "HAPPY HOUR (Thanksgiving Eve) -- MAGGIANO'S in Hackensack NJ",
+          "date": "2026-11-25",
+          "time": "5:00 PM",
+          "venue": "Maggiano's",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://www.meetup.com/kick-it-up-a-notch/events/316348235/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Member count read from the group page; the event was read from the Meetup find page because group pages show 'Events 0' without JavaScript."
+    },
+    {
+      "name": "Fun & Games MeetUp, Tenafly / Northern NJ (Meetup)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/fun-and-games-meetup-tenafly-northern-new-jersey-nj/events/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Saddle Brook",
+        "Tenafly"
+      ],
+      "categories": [
+        "community",
+        "sports"
+      ],
+      "event_types": [
+        "weekly board game afternoons",
+        "pickleball"
+      ],
+      "audience": "Adults, mixed ages; 2,420 members",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-15",
+      "sample_events": [
+        {
+          "title": "Afternoon of Board Games @ Crowne Plaza, Saddle Brook (every Sunday)",
+          "date": "2026-11-15",
+          "time": "2:30 PM",
+          "venue": "Crowne Plaza",
+          "town": "Saddle Brook",
+          "cost": null,
+          "source_url": "https://www.meetup.com/find/?keywords=board%20games&location=us--nj--Hackensack&source=EVENTS&distance=tenMiles"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Standing Sunday board game afternoon at the Crowne Plaza in Saddle Brook. Events read from the Meetup find page."
+    },
+    {
+      "name": "Bergen County Upscale Singles, 30s, 40s & 50s (Meetup)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/bergen-county-upscale-singles/events/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Ridgewood",
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife",
+        "community"
+      ],
+      "event_types": [
+        "social hours at upscale venues",
+        "singles mixers"
+      ],
+      "audience": "Singles in their 30s to 50s; 1,107 members",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-14",
+      "sample_events": [
+        {
+          "title": "Social Hour",
+          "date": "2026-11-14",
+          "time": "7:00 PM",
+          "venue": null,
+          "town": null,
+          "cost": null,
+          "source_url": "https://www.meetup.com/bergen-county-upscale-singles/events/317105180/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "The Nov 14 Social Hour was waitlisted, so events fill. Venue is hidden until you open the event page with JavaScript."
+    },
+    {
+      "name": "Bergen County's Winter Wonderland calendar (Van Saun rink)",
+      "kind": "county",
+      "url": "https://www.bergencountywinterwonderland.com/calendar",
+      "other_urls": [
+        "https://www.bergencountywinterwonderland.com/faq-s-and-location"
+      ],
+      "platform": "web",
+      "towns": [
+        "Paramus"
+      ],
+      "categories": [
+        "holiday",
+        "family",
+        "sports"
+      ],
+      "event_types": [
+        "outdoor ice skating sessions",
+        "live bands",
+        "bumper cars on ice",
+        "skating lessons"
+      ],
+      "audience": "Families, teens, date night",
+      "access": "js_heavy",
+      "how_checked": "firecrawl",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-12-05",
+      "sample_events": [
+        {
+          "title": "Winter Wonderland 2026-27 season, first calendar date (2 events listed)",
+          "date": "2026-11-27",
+          "time": null,
+          "venue": "Van Saun County Park",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.bergencountywinterwonderland.com/calendar"
+        },
+        {
+          "title": "The FrostKings at the Winter Wonderland",
+          "date": "2026-12-05",
+          "time": "2 pm",
+          "venue": "Van Saun County Park",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://allevents.in/paramus/all"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Banner reads 'OUR 2026-2027 CALENDAR IS HERE'. The scraped month grid shows no events until Friday Nov 27 (2 events), then entries on Nov 28, Nov 29, Dec 4 and Dec 5; event titles need a click. An Eventbrite search snippet lists 'Bergen County Winter Wonderland 2026/2027, Fri, Nov 27, 12:00 PM + 94 more'."
+    },
+    {
+      "name": "Ramsey Farmers' Market",
+      "kind": "community_org",
+      "url": "https://www.ramseyfarmersmarket.org/",
+      "other_urls": [
+        "https://www.instagram.com/ramseyfarmersmarket",
+        "https://thelocalgirl.com/bergen/event/glen-rock-farmers-market/2027-01-17",
+        "https://thelocalgirl.com/bergen/event/saddle-brook-farmers-market/2027-02-14"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ramsey"
+      ],
+      "categories": [
+        "food",
+        "shopping",
+        "family"
+      ],
+      "event_types": [
+        "year-round Sunday farmers market",
+        "winter market",
+        "seasonal theme days"
+      ],
+      "audience": "Families, home cooks",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-13",
+      "sample_events": [
+        {
+          "title": "Second Chance Toy Collection at the market",
+          "date": "2026-11-15",
+          "time": "9 am to 2 pm",
+          "venue": "Ramsey Main Street Train Station, Erie Plaza",
+          "town": "Ramsey",
+          "cost": null,
+          "source_url": "https://www.ramseyfarmersmarket.org/"
+        },
+        {
+          "title": "Poinsettia and Christmas Cactus Sale",
+          "date": "2026-12-06",
+          "time": "10 am to 1 pm",
+          "venue": "Ramsey Main Street Train Station, Erie Plaza",
+          "town": "Ramsey",
+          "cost": null,
+          "source_url": "https://www.ramseyfarmersmarket.org/"
+        },
+        {
+          "title": "Visit with St. Nick at the Old Stone House",
+          "date": "2026-12-13",
+          "time": "1 pm to 4 pm",
+          "venue": "Old Stone House",
+          "town": "Ramsey",
+          "cost": null,
+          "source_url": "https://www.ramseyfarmersmarket.org/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "The county's year-round market: Sundays 9 am to 2 pm May through November, 10 am to 1 pm December through April, at the train station. Theme days are listed without a year; the weekdays match 2026. Market times on the samples are the standing seasonal hours. Instagram and Facebook: ramseyfarmersmarket. The Local Girl also carries Glen Rock and Saddle Brook farmers market dates into 2027."
+    },
+    {
+      "name": "MyBergen: 'Things to Do This Weekend and Beyond' roundup",
+      "kind": "media_listing",
+      "url": "https://www.mybergen.com/garden-state-rollergirls/",
+      "other_urls": [
+        "https://www.mybergen.com/local-events-calendar-nj-northern-new-jersey-bergen-county/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "outdoors",
+        "sports",
+        "arts",
+        "community"
+      ],
+      "event_types": [
+        "runs",
+        "nature walks",
+        "pickleball clinics",
+        "history weekends",
+        "craft shows",
+        "theater"
+      ],
+      "audience": "Adults 40+, families",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-12-20",
+      "sample_events": [
+        {
+          "title": "Winter Pickleball Clinics (through Jan 24)",
+          "date": "2026-11-16",
+          "time": null,
+          "venue": "Montclair Pickleball",
+          "town": "Fair Lawn",
+          "cost": null,
+          "source_url": "https://www.mybergen.com/garden-state-rollergirls/"
+        },
+        {
+          "title": "Thanksgiving Day Nature Walk",
+          "date": "2026-11-26",
+          "time": "9 am",
+          "venue": "Teaneck Creek Conservancy",
+          "town": "Teaneck",
+          "cost": null,
+          "source_url": "https://www.mybergen.com/garden-state-rollergirls/"
+        },
+        {
+          "title": "Winter Solstice at Lorrimer Sanctuary",
+          "date": "2026-12-19",
+          "time": "3:30-5 pm",
+          "venue": "Lorrimer Sanctuary",
+          "town": "Franklin Lakes",
+          "cost": null,
+          "source_url": "https://www.mybergen.com/garden-state-rollergirls/"
+        }
+      ],
+      "yield": "medium",
+      "notes": "Odd slug, but this is the site's rolling seasonal roundup (titled 'Bergen County Fall Events', marked last updated November 2026). Short, hand-picked and strong on outdoors and active listings. The full calendar ('42 events found') is at the other_url but was truncated on fetch."
+    },
+    {
+      "name": "Rat Race Run Club",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/ratracerunclub/",
+      "other_urls": [
+        "https://www.instagram.com/ratracerunclub/reels/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Ridgewood",
+        "Upper Saddle River",
+        "Bergen County"
+      ],
+      "categories": [
+        "outdoors",
+        "sports",
+        "community"
+      ],
+      "event_types": [
+        "free weekly 3-mile social runs",
+        "pop-up workouts",
+        "5K meetups"
+      ],
+      "audience": "All paces, 20s to 40s; 1,077 followers",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-10-26",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Bio reads 'Based in Bergen County, NJ' and 'Next Event: Upper Saddle River Turkey Trot 5k'. Search snippets say it runs 3 miles every Wednesday, meet 7 PM, run 7:15 PM, 'all faces, all paces', starting from partner shops such as FreshMonkee Ridgewood. The profile grid and post dates load without login (11 posts since Sept 11, newest Oct 26, 2026) but captions do not, so the weekly meeting spot needs a logged-in read."
+    },
+    {
+      "name": "Bergen Pickleball Zone",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/bergenpickleballzone/",
+      "other_urls": [
+        "https://www.bergenpickleballzone.com/",
+        "https://app.courtreserve.com/Online/Portal/Index/9822"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Ramsey"
+      ],
+      "categories": [
+        "sports"
+      ],
+      "event_types": [
+        "open play",
+        "round robins",
+        "clinics",
+        "member days",
+        "fundraiser tournaments"
+      ],
+      "audience": "Adult pickleball players, all levels; 1,699 followers",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Six indoor courts at 50 Spring Street, Ramsey. The website has no schedule; dated open play and round robins live in the CourtReserve portal (not loaded) and on Instagram, where 11 posts appeared between Oct 13 and Nov 12, 2026. Captions need login."
+    },
+    {
+      "name": "Hudson River Pickleball",
+      "kind": "venue_calendar",
+      "url": "https://www.hudsonriverpickleball.com/",
+      "other_urls": [
+        "https://hudsonriverpickleball.com/play",
+        "https://www.instagram.com/hudsonriverpickleball/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Englewood"
+      ],
+      "categories": [
+        "sports"
+      ],
+      "event_types": [
+        "open play",
+        "round-robin leagues",
+        "monthly cash-prize tournaments"
+      ],
+      "audience": "Adult players, levels 3.0 to 4.5+",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-10",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "456 Nordhoff Place, Englewood, open 7am to 10:30pm daily. Open play is $20 per 2.5-hour session; tournaments run the last weekend of every month (sign-up via courtcut.com), so the next should be Nov 28-29, but the page gives no exact dates. Instagram @hudsonriverpickleball (1,815 followers) posted Nov 10, 2026."
+    },
+    {
+      "name": "Don Bosco Prep athletics",
+      "kind": "venue_calendar",
+      "url": "https://www.donboscoprepathletics.org/",
+      "other_urls": [
+        "https://www.arbiterlive.com/School/Calendar/6023",
+        "https://donboscoathletics.digitalsports.com/pages/schedule/schedule.php"
+      ],
+      "platform": "web",
+      "towns": [
+        "Ramsey"
+      ],
+      "categories": [
+        "sports"
+      ],
+      "event_types": [
+        "high school football",
+        "basketball",
+        "wrestling",
+        "hockey"
+      ],
+      "audience": "Families, alumni, high school sports fans",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Home page links three schedule feeds (digitalsports, ArbiterLive school 6023, Big North) but its own 'Upcoming Events' block was empty and the ArbiterLive calendar loaded without rows. Social posts on the page mention football vs. DePaul Catholic and St. Joe's Regional at Granatell Stadium, year not shown. Could not confirm a dated upcoming game."
+    },
+    {
+      "name": "Bergen Catholic athletics",
+      "kind": "venue_calendar",
+      "url": "https://bergencatholicathletics.org/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Oradell"
+      ],
+      "categories": [
+        "sports"
+      ],
+      "event_types": [
+        "high school football",
+        "wrestling",
+        "basketball",
+        "hockey"
+      ],
+      "audience": "Families, alumni, high school sports fans",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "bergencatholic.org/athletics redirects through bergencatholicfootball.com to this Sidearm site with schedules, rosters and a calendar. Only the site description loaded, no game rows, so no upcoming game is confirmed. The old bergencatholicathletics.com address shows 'School Not Found'."
+    },
+    {
+      "name": "Five Dimes Brewery events",
+      "kind": "venue_calendar",
+      "url": "https://www.fivedimesbrewery.com/events",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Westwood"
+      ],
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "open mic",
+        "trivia",
+        "bingo",
+        "live music",
+        "off-site pop-ups"
+      ],
+      "audience": "21+ after 8pm on music nights",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-11",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Page lists the standing week only: Monday open mic, Wednesday JoeTrivia, Thursday bingo, Friday and Saturday live music. One-off events and off-site pop-ups are sent to Facebook and Instagram; the Instagram profile returned no readable text. A Meetup group held its trivia outing here Nov 11."
+    },
+    {
+      "name": "Hackensack Brewing",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/hackensackbrewing/",
+      "other_urls": [
+        "https://www.hackensackbrewing.com/",
+        "https://newjerseycraftbeer.com/njcb-calendar/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "beer releases",
+        "taproom events",
+        "daily happy hour"
+      ],
+      "audience": "21+",
+      "access": "login_required",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": "2026-11-18",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Instagram shows 'You must be 21 years old or over to see this profile. Log in to continue.' The website (78 Johnson Avenue) has hours and a shop but no events page (/events is 404). The NJ Craft Beer calendar lists its 4:30 to 6:30 pm happy hour on weekdays through Nov 18. Needs a logged-in session."
+    },
+    {
+      "name": "Just Jersey Fest (food truck festivals)",
+      "kind": "promoter",
+      "url": "https://www.justjerseyfest.com/",
+      "other_urls": [
+        "https://www.instagram.com/justjerseyfest/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Paramus",
+        "Garfield"
+      ],
+      "categories": [
+        "food",
+        "family"
+      ],
+      "event_types": [
+        "food truck festivals",
+        "truck-or-treat",
+        "beer gardens"
+      ],
+      "audience": "Families",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Runs the Paramus Park Mall food truck festivals (Apr 26, Jun 7 and Oct 25 this year, $5) and one at 20th Century Park in Garfield (Jun 14). Nothing in Bergen is listed for winter; the next item is Feb 27, 2027 in Morristown. Instagram @justjerseyfest (19.4K followers) posted Nov 12, 2026. Re-check from March."
+    },
+    {
+      "name": "Korean Community Center (KCC), Tenafly",
+      "kind": "community_org",
+      "url": "https://kccus.org/",
+      "other_urls": [
+        "https://www.tenaflynj.gov/484/Community-Centers"
+      ],
+      "platform": "web",
+      "towns": [
+        "Tenafly",
+        "Fort Lee",
+        "Palisades Park",
+        "Leonia"
+      ],
+      "categories": [
+        "community",
+        "arts"
+      ],
+      "event_types": [
+        "Korean cultural performances",
+        "classes",
+        "community celebrations"
+      ],
+      "audience": "Korean-American community; many events open to all",
+      "access": "blocked",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Could not load: WebFetch failed twice ('Socket is closed') and Firecrawl got ERR_CONNECTION_CLOSED. Search results and a nonprofit database give kccus.org (events at kccus.org/events); the Borough of Tenafly lists the center at 100 Grove Street, (201) 541-1200. It is the main Korean community venue in the county, so try again from a normal browser."
+    },
+    {
+      "name": "Orguyo Dance (salsa)",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/orguyo_dance/",
+      "other_urls": [
+        "https://www.instagram.com/p/De-SVFuo5HC/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Teaneck",
+        "Hackensack"
+      ],
+      "categories": [
+        "nightlife",
+        "community",
+        "arts"
+      ],
+      "event_types": [
+        "beginner salsa and bachata class cycles",
+        "socials"
+      ],
+      "audience": "Adults, LGBTQ+ inclusive ('No Gender Roles'); 1,861 followers",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-11",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Verified account with studios at 406 Cedar Lane, Teaneck and 84 Euclid Ave, Hackensack. A search snippet says a new class cycle started the week of Nov 2, 2026 and the first beginner salsa class is free. Posts almost daily (Nov 9, 10, 11) but captions and flyers need login to read. Website orguyodance.com is in the bio (not loaded)."
+    },
+    {
+      "name": "DJ Edwin Martinez, The Salsa Connexion (salsa socials at Zina's)",
+      "kind": "dj",
+      "url": "https://www.facebook.com/DJEdwinMartinezTheSalsaConnexion/posts/halloween-latin-partysaturday-october-31stprize-for-the-best-costume-zinas-steak/1804052948389599/",
+      "other_urls": [
+        "https://www.facebook.com/DJEdwinMartinezTheSalsaConnexion/videos/halloween-latin-partysaturday-october-31stprize-for-the-best-costume-zinas-steak/4501983940048551/"
+      ],
+      "platform": "facebook",
+      "towns": [
+        "Teaneck"
+      ],
+      "categories": [
+        "nightlife"
+      ],
+      "event_types": [
+        "free public salsa socials",
+        "Latin holiday parties"
+      ],
+      "audience": "Adult social dancers, salsa and bachata",
+      "access": "login_required",
+      "how_checked": "search_snippet_only",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-10-31",
+      "sample_events": [],
+      "yield": "medium",
+      "notes": "Search snippets only. They describe a free-admission, free-parking 'Public Salsa Social' with salsa, bachata, merengue and reggaeton at Zina's Steakhouse, 827 Teaneck Rd., Teaneck, including a Halloween Latin Party on Saturday Oct 31. An older snippet mentions a Saturday Dec 6 social, which is last year's date. Needs a logged-in Facebook read for the next one."
+    },
+    {
+      "name": "The Social Scene North NJ Events - 20s-40s (Meetup)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/social-scene-nj/events/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Paramus"
+      ],
+      "categories": [
+        "community",
+        "nightlife"
+      ],
+      "event_types": [
+        "board game nights",
+        "social outings"
+      ],
+      "audience": "20s to 40s; 1,631 members",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-13",
+      "sample_events": [
+        {
+          "title": "Board Game Night - Paris Baguette - Ages 20s - 30s",
+          "date": "2026-11-13",
+          "time": "7:00 PM",
+          "venue": "Paris Baguette",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://www.meetup.com/find/?keywords=board%20games&location=us--nj--Hackensack&source=EVENTS&distance=tenMiles"
+        }
+      ],
+      "yield": "low",
+      "notes": "Cross-posts the same Paris Baguette game night as the Bergen & Rockland singles group and the North Jersey Bowling group, so dedupe by venue and time. Paramus location for Paris Baguette comes from the sister group's listing."
+    },
+    {
+      "name": "North Jersey Geeks & Nerds (Meetup)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/northjerseygeeksandnerds/events/",
+      "other_urls": [],
+      "platform": "meetup",
+      "towns": [
+        "Rutherford"
+      ],
+      "categories": [
+        "community"
+      ],
+      "event_types": [
+        "weekly board and card game days"
+      ],
+      "audience": "Tabletop gamers; 1,038 members",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-15",
+      "sample_events": [
+        {
+          "title": "Board & Card Game Day With The North Jersey Geeks & Nerds (every Sunday)",
+          "date": "2026-11-15",
+          "time": "12:00 PM",
+          "venue": null,
+          "town": null,
+          "cost": null,
+          "source_url": "https://www.meetup.com/find/?keywords=board%20games&location=us--nj--Hackensack&source=EVENTS&distance=tenMiles"
+        }
+      ],
+      "yield": "low",
+      "notes": "Group is based in Rutherford; the venue for the Sunday game day was not shown on the find page, so confirm the town before listing."
+    },
+    {
+      "name": "Rockland & Bergen Social Sandbox (Meetup)",
+      "kind": "meetup",
+      "url": "https://www.meetup.com/rockland-social-sandbox/",
+      "other_urls": [
+        "https://www.meetup.com/rockland-social-sandbox/events/317335126/"
+      ],
+      "platform": "meetup",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "community",
+        "sports"
+      ],
+      "event_types": [
+        "board and card game nights",
+        "pickleball sessions and tournaments"
+      ],
+      "audience": "Adults, social pickleball players",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-11-27",
+      "sample_events": [
+        {
+          "title": "Pickleball Sunday",
+          "date": "2026-11-15",
+          "time": "10:00 AM",
+          "venue": null,
+          "town": null,
+          "cost": null,
+          "source_url": "https://www.meetup.com/rockland-social-sandbox/events/317254217/"
+        },
+        {
+          "title": "Battle for the Golden Pickle",
+          "date": "2026-11-27",
+          "time": "8:30 AM",
+          "venue": null,
+          "town": null,
+          "cost": null,
+          "source_url": "https://www.meetup.com/find/?keywords=board%20games&location=us--nj--Hackensack&source=EVENTS&distance=tenMiles"
+        }
+      ],
+      "yield": "low",
+      "notes": "Straddles the state line; venues were not shown on the find page, so some events will be in Rockland County, NY. Check each venue before using."
+    },
+    {
+      "name": "NY-NJ Trail Conference events",
+      "kind": "community_org",
+      "url": "https://events.nynjtc.org/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Mahwah"
+      ],
+      "categories": [
+        "outdoors",
+        "community"
+      ],
+      "event_types": [
+        "trail work days",
+        "trail skills workshops",
+        "guided hikes",
+        "volunteer days"
+      ],
+      "audience": "Hikers and volunteers, adults",
+      "access": "js_heavy",
+      "how_checked": "firecrawl",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-06",
+      "sample_events": [
+        {
+          "title": "CPR & First Aid for Trail Workers",
+          "date": "2026-11-21",
+          "time": null,
+          "venue": "Trail Conference Headquarters",
+          "town": "Mahwah",
+          "cost": null,
+          "source_url": "https://events.nynjtc.org/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Headquartered in Mahwah, but most listed work days right now are in Upper Nyack, NY. Has a Region filter (New Jersey) and month filter. Old URL nynjtc.org/events redirects here; the page is empty without JavaScript."
+    },
+    {
+      "name": "IWF Wrestling",
+      "kind": "promoter",
+      "url": "https://www.campiwf.com/",
+      "other_urls": [
+        "https://www.campiwf.com/northarlington"
+      ],
+      "platform": "web",
+      "towns": [
+        "North Arlington"
+      ],
+      "categories": [
+        "sports",
+        "family"
+      ],
+      "event_types": [
+        "live pro wrestling shows",
+        "charity wrestling events"
+      ],
+      "audience": "Families, wrestling fans",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-14",
+      "sample_events": [
+        {
+          "title": "IWF Wrestling: 30th Anniversary Event",
+          "date": "2026-11-14",
+          "time": "Doors 6:00 PM; show 7:00 PM",
+          "venue": "North Arlington High School, 222 Ridge Road",
+          "town": "North Arlington",
+          "cost": null,
+          "source_url": "https://www.campiwf.com/northarlington"
+        }
+      ],
+      "yield": "low",
+      "notes": "Only live pro wrestling found inside Bergen. Runs a few shows a year alternating North Arlington (Bergen) and Nutley (Essex); tickets and VIP packages sell on Eventbrite. General admission price not on the page."
+    },
+    {
+      "name": "Garden State Roller Derby",
+      "kind": "other",
+      "url": "https://www.gardenstaterollerderby.org",
+      "other_urls": [
+        "https://events.ticketleap.com/events/gsrderby"
+      ],
+      "platform": "web",
+      "towns": [
+        "North Arlington"
+      ],
+      "categories": [
+        "sports"
+      ],
+      "event_types": [
+        "roller derby bouts",
+        "double headers"
+      ],
+      "audience": "All ages, alternative-sports crowd",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-14",
+      "sample_events": [
+        {
+          "title": "Brick City Bruisers vs. Jersey Shore",
+          "date": "2026-11-14",
+          "time": "Doors 5:30 PM, first whistle 6:00 PM",
+          "venue": "Inline Skating Club of America, 170 Schuyler Ave",
+          "town": "North Arlington",
+          "cost": null,
+          "source_url": "https://www.gardenstaterollerderby.org"
+        }
+      ],
+      "yield": "low",
+      "notes": "Home bouts are in North Arlington; Nov 14 is billed as the final game of the season, so re-check in spring. Tickets on Ticketleap (page loads title only without JavaScript). August double header cost $16.30 advance, $20 at the door per a Patch listing. Bolero Snort hosts their watch parties."
+    },
+    {
+      "name": "Bergen County Card & Collectibles Show",
+      "kind": "other",
+      "url": "https://www.treasurehunter.show/show/bergen-county-card-collectibles-show-midland-park-nj-2026-09-13",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Midland Park"
+      ],
+      "categories": [
+        "shopping",
+        "sports"
+      ],
+      "event_types": [
+        "sports card shows",
+        "Pokemon and TCG vendors"
+      ],
+      "audience": "Collectors, kids with parents",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-13",
+      "sample_events": [
+        {
+          "title": "Bergen County Card & Collectibles Show",
+          "date": "2026-12-13",
+          "time": "9:00 AM to 3:00 PM",
+          "venue": "Midland Park High School, 250 Prospect St.",
+          "town": "Midland Park",
+          "cost": null,
+          "source_url": "https://www.treasurehunter.show/show/bergen-county-card-collectibles-show-midland-park-nj-2026-09-13"
+        }
+      ],
+      "yield": "low",
+      "notes": "Roughly monthly Sunday show with 95+ vendor tables (Sept 13, Oct 11, Nov 8 and Dec 13, 2026 listed across TreasureHunter and Beckett). Organizer and admission are not shown. TreasureHunter URLs are per date; a guessed Oct 11 URL returned 404, so find the next date from the newest page or a site search."
+    },
+    {
+      "name": "New Jersey Craft Beer calendar",
+      "kind": "aggregator",
+      "url": "https://newjerseycraftbeer.com/njcb-calendar/",
+      "other_urls": [
+        "https://newjerseycraftbeer.com/",
+        "https://www.brewersguildnj.com/events-calendar"
+      ],
+      "platform": "web",
+      "towns": [
+        "Hackensack",
+        "Bergen County"
+      ],
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "brewery trivia",
+        "bingo",
+        "food trucks",
+        "happy hours",
+        "release parties"
+      ],
+      "audience": "Craft beer drinkers, 21+",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-18",
+      "sample_events": [
+        {
+          "title": "Happy Hour at Hackensack Brewing",
+          "date": "2026-11-13",
+          "time": "4:30-6:30 pm",
+          "venue": "Hackensack Brewing",
+          "town": "Hackensack",
+          "cost": null,
+          "source_url": "https://newjerseycraftbeer.com/njcb-calendar/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Statewide week-at-a-time calendar. For Nov 12 to 18 the only Bergen venue was Hackensack Brewing's happy hour; everything else was Morris, Passaic, Monmouth or South Jersey. Cheap to re-check for Bergen brewery one-offs. The Brewers Guild of NJ calendar (brewersguildnj.com/events-calendar) said 'Coming soon'."
+    },
+    {
+      "name": "Main Street Pops (Fort Lee and Tenafly markets)",
+      "kind": "promoter",
+      "url": "https://mainstreetpops.com/events/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Fort Lee",
+        "Tenafly"
+      ],
+      "categories": [
+        "shopping",
+        "food",
+        "holiday"
+      ],
+      "event_types": [
+        "artisan night markets",
+        "holiday night markets",
+        "street fairs"
+      ],
+      "audience": "Families, shoppers",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-05",
+      "sample_events": [
+        {
+          "title": "Be Fort Lee Holiday Night Market",
+          "date": "2026-12-05",
+          "time": null,
+          "venue": null,
+          "town": "Fort Lee",
+          "cost": null,
+          "source_url": "https://mainstreetpops.com/events/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Produces the Be Fort Lee Artisan Market (monthly, May through December) and Tenafly's spring street fair and holiday fair; the rest of its calendar is Hoboken and Union Township. Times and exact location are on each event page."
+    },
+    {
+      "name": "The Ridgewood Guild event calendar",
+      "kind": "community_org",
+      "url": "https://ridgewoodguild.com/event-calendar/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "community",
+        "food",
+        "arts",
+        "shopping"
+      ],
+      "event_types": [
+        "Winterfest",
+        "marketplaces",
+        "Music in the Night",
+        "film festival",
+        "Movies in the Park",
+        "cash mobs"
+      ],
+      "audience": "Ridgewood residents and visitors, all ages",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-21",
+      "sample_events": [
+        {
+          "title": "Winterfest 2026",
+          "date": "2026-11-21",
+          "time": "11:00am to 2:00pm EST",
+          "venue": null,
+          "town": "Ridgewood",
+          "cost": null,
+          "source_url": "https://ridgewoodguild.com/event-calendar/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Downtown Ridgewood's merchant group. Only one dated item now; the page warns that all dates are pending. No restaurant week was listed."
+    },
+    {
+      "name": "Mitsuwa Marketplace New Jersey (Edgewater)",
+      "kind": "venue_calendar",
+      "url": "https://www.mitsuwa.com/nj/",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Edgewater"
+      ],
+      "categories": [
+        "food",
+        "shopping"
+      ],
+      "event_types": [
+        "Japanese food and brand fairs",
+        "seasonal pre-orders",
+        "pop-up vendors"
+      ],
+      "audience": "Japanese and Korean food fans, families",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "biweekly",
+      "last_seen_activity": "2026-12-31",
+      "sample_events": [
+        {
+          "title": "GLICO Fair (runs Nov 6 to 19)",
+          "date": "2026-11-13",
+          "time": null,
+          "venue": "Mitsuwa Marketplace",
+          "town": "Edgewater",
+          "cost": null,
+          "source_url": "https://www.mitsuwa.com/nj/"
+        },
+        {
+          "title": "Osechi Early Bird Special reservations (through Dec 7; pickup Dec 29 to 31)",
+          "date": "2026-12-07",
+          "time": null,
+          "venue": "Mitsuwa Marketplace",
+          "town": "Edgewater",
+          "cost": null,
+          "source_url": "https://www.mitsuwa.com/nj/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Store page rotates two-week brand fairs (Glico, Itoen, Sapporo Ichiban and Zen-Noh rice fairs all run Nov 6 to 19) and seasonal items; the Appliance Fair runs to Dec 31. These are in-store promotions, so treat them as 'worth a trip' notes. Bigger regional food fairs appear here first. The GLICO sample date is a day inside the Nov 6 to 19 run."
+    },
+    {
+      "name": "Eventbrite: Food & Drink in Paramus (location + category page)",
+      "kind": "ticketing_search",
+      "url": "https://www.eventbrite.com/d/nj--paramus/food-and-drink--events/",
+      "other_urls": [
+        "https://www.eventbrite.com/d/nj--hackensack/food-and-drink--events/",
+        "https://www.eventbrite.com/d/nj--hackensack/sports-and-fitness--events/",
+        "https://www.eventbrite.com/d/nj--wallington/events/"
+      ],
+      "platform": "eventbrite",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "food"
+      ],
+      "event_types": [
+        "tastings",
+        "food expos",
+        "dinner parties"
+      ],
+      "audience": null,
+      "access": "js_heavy",
+      "how_checked": "firecrawl",
+      "cadence": "biweekly",
+      "last_seen_activity": "2027-01-17",
+      "sample_events": [
+        {
+          "title": "The Chocolate Expo 2027 American Dream",
+          "date": "2027-01-17",
+          "time": "10:00 AM",
+          "venue": "The Avenue at American Dream",
+          "town": "East Rutherford",
+          "cost": null,
+          "source_url": "https://www.eventbrite.com/d/nj--paramus/food-and-drink--events/"
+        }
+      ],
+      "yield": "low",
+      "notes": "Recorded as a warning. The page returned 8 'most popular' events and only one was in Bergen; the rest were Montclair, Jersey City and Manhattan. The Hackensack food page returned the same list and the Hackensack sports-and-fitness page returned only NYC items (Millrose Games at The Armory). WebFetch got HTTP 429 on some tries. Eventbrite works better through keyword pages and organizer pages, see search_recipes."
+    },
+    {
+      "name": "St. Athanasios Greek Orthodox Church",
+      "kind": "community_org",
+      "url": "https://stathanasiosnj.org",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Paramus"
+      ],
+      "categories": [
+        "community",
+        "food"
+      ],
+      "event_types": [
+        "Greek festival",
+        "dinner dances",
+        "beefsteaks"
+      ],
+      "audience": "Greek community and neighbors, all welcome at festival",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-14",
+      "sample_events": [
+        {
+          "title": "Beefsteak Dinner & Dance",
+          "date": "2026-11-14",
+          "time": "7:00-11:00 PM",
+          "venue": "Christos M. Cotsakos Community Center",
+          "town": "Paramus",
+          "cost": null,
+          "source_url": "https://stathanasiosnj.org"
+        }
+      ],
+      "yield": "low",
+      "notes": "Home page carries current parish events; the /events list and a public Google Calendar did not load. Its Greek Festival is listed for mid-May (5/13 to 5/16, unconfirmed for 2027)."
+    },
+    {
+      "name": "The Gravity Vault Upper Saddle River calendar",
+      "kind": "venue_calendar",
+      "url": "https://gravityvault.com/locations/upper-saddle-river-nj/events/calendar",
+      "other_urls": [
+        "https://www.gravityvault.com/locations/upper-saddle-river-nj",
+        "https://www.instagram.com/gravityvault_upsr/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Upper Saddle River"
+      ],
+      "categories": [
+        "sports"
+      ],
+      "event_types": [
+        "lead and belay classes",
+        "adult day-pass specials",
+        "competitions",
+        "anniversary parties"
+      ],
+      "audience": "Climbers, adults and teens",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-04",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Calendar grid is JavaScript-only (headings loaded, no events). The location page did show a November lead class, a Monday 21+ two-for-one and a $14 Friday happy-hour pass from 5pm. Instagram @gravityvault_upsr (2,093 followers) posted Nov 4, 2026."
+    },
+    {
+      "name": "Ice House public skating",
+      "kind": "venue_calendar",
+      "url": "https://www.icehousenj.com/public-skating",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "Hackensack"
+      ],
+      "categories": [
+        "sports",
+        "family"
+      ],
+      "event_types": [
+        "public skating sessions"
+      ],
+      "audience": "Families, teens",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-12-01",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Already in existing research. The monthly schedule is posted as an image flyer ('Public Skating December 2026'), so it has to be read by eye. $25 online, $30 at the booth, rental included; December tickets go on sale 12/1."
+    },
+    {
+      "name": "Campgaw Mountain events",
+      "kind": "venue_calendar",
+      "url": "https://www.skicampgaw.com/events",
+      "other_urls": [
+        "https://www.skicampgaw.com/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Mahwah"
+      ],
+      "categories": [
+        "outdoors",
+        "sports",
+        "family"
+      ],
+      "event_types": [
+        "ski and tubing season opening",
+        "mountain events"
+      ],
+      "audience": "Families, beginner skiers",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-15",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Nothing for 2026-27 yet: the events page still shows last March's 'Mascots on the Mountain', and the home page only has season passes and a Nov 15 job fair. No opening date posted. Re-check weekly from early December; Facebook page is campgawmountain."
+    },
+    {
+      "name": "Golf Bergen County events",
+      "kind": "county",
+      "url": "https://www.golfbergencounty.com/events/calendar",
+      "other_urls": [
+        "https://www.golfbergencounty.com/",
+        "https://www.golfbergencounty.com/events/bc-events"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "sports",
+        "outdoors"
+      ],
+      "event_types": [
+        "county tournaments",
+        "outings",
+        "seasonal promotions"
+      ],
+      "audience": "Golfers",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-13",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Six county courses (Darlington, Rockleigh, Orchard Hills, Soldier Hill, Overpeck, Valley Brook). The seasonal calendar is a PDF dated February 2026; the home page carried a Veterans Day free-round offer for Nov 9 to 13. Worth re-checking from March."
+    },
+    {
+      "name": "Hackensack Riverkeeper events",
+      "kind": "community_org",
+      "url": "https://www.hackensackriverkeeper.org/events-2026",
+      "other_urls": [
+        "https://www.hackensackriverkeeper.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Teaneck",
+        "Carlstadt",
+        "Old Tappan",
+        "River Vale"
+      ],
+      "categories": [
+        "outdoors",
+        "community"
+      ],
+      "event_types": [
+        "eco-cruises",
+        "guided paddles",
+        "river cleanups",
+        "free kayaking days"
+      ],
+      "audience": "Adults and families",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-10-28",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Season is over: the latest items are the Oct 28 gala in River Vale and 'TRICK or CREEK!' on Oct 10 at the Overpeck Paddling Center in Teaneck. The URL is year-stamped, so look for /events-2027 in spring."
+    },
+    {
+      "name": "Gearblock Brewing Company",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/gearblockbrewing/",
+      "other_urls": [
+        "https://www.gearblockbrewing.com/",
+        "https://www.facebook.com/gearblockbrewing/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Waldwick"
+      ],
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "beer releases",
+        "taproom events"
+      ],
+      "audience": "21+",
+      "access": "login_required",
+      "how_checked": "webfetch",
+      "cadence": "weekly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Website (140 Franklin Turnpike, Waldwick) says releases and events are posted on social media only. Instagram is a 'Restricted profile... Log in to continue'. Facebook page is facebook.com/gearblockbrewing. Needs a logged-in session."
+    },
+    {
+      "name": "Brix City Brewing",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/brixcitybrewing/",
+      "other_urls": [
+        "https://www.brixcitybrewing.com/",
+        "https://www.brixcitybrewing.com/news"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Little Ferry"
+      ],
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "event_types": [
+        "beer releases",
+        "festival pours",
+        "tap takeovers at local bars"
+      ],
+      "audience": "21+; 26.1K followers",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-10-31",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Bio says 'We're relocating - taproom at 4 Alsan Way is closed', beers in stores only. Still active (post Oct 31, 2026) and pouring at outside events such as the Baron's Oktoberfest at the Steuben House and a Halloween set at Stosh's. Watch for the new taproom announcement; news page is brixcitybrewing.com/news."
+    },
+    {
+      "name": "From Scratch Ridgewood",
+      "kind": "instagram",
+      "url": "https://www.instagram.com/fromscratchridgewood/",
+      "other_urls": [
+        "https://thelocalgirl.com/bergen/where-to-take-cooking-classes-bergen-county-nj/"
+      ],
+      "platform": "instagram",
+      "towns": [
+        "Ridgewood"
+      ],
+      "categories": [
+        "food"
+      ],
+      "event_types": [
+        "pasta-making classes",
+        "Italian cooking classes"
+      ],
+      "audience": "Adults, date night; 23.9K followers",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-10-31",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Italian restaurant at 44 E Ridgewood Ave whose bio lists cooking classes. Posts are infrequent (Oct 31, Sept 18, July 30, 2026) and captions need login; class dates were not readable. Bio links www.fromscratchridgewood.com; The Local Girl lists fromscratchpasta.com."
+    },
+    {
+      "name": "Jersey Bites (statewide food news)",
+      "kind": "media_listing",
+      "url": "https://jerseybites.com/",
+      "other_urls": [
+        "https://jerseybites.com/category/restaurants/openings/",
+        "https://jerseybites.com/category/events/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergen County"
+      ],
+      "categories": [
+        "food"
+      ],
+      "event_types": [
+        "monthly new-restaurant roundups",
+        "restaurant weeks",
+        "food tours",
+        "holiday dining lists"
+      ],
+      "audience": null,
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-12",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Posts every two to three days (Nov 12, 10, 9, 3 and 2, 2026) but coverage is statewide and none of the latest eight posts was about Bergen. Worth it for the monthly 'New Restaurants to Discover' roundup (Oct 14, 2026) and restaurant-week announcements. A guessed /category/new-restaurant-openings/ URL was 404; the real category URLs are in other_urls (seen on the home page, not loaded)."
+    },
+    {
+      "name": "Metropolitan Cathedral of St. John the Theologian",
+      "kind": "community_org",
+      "url": "https://stjohntenafly.org/",
+      "other_urls": [
+        "https://stjohntenafly.org/parishcalendar.html",
+        "https://stjohntenafly.org/news.html",
+        "https://stjohntenafly.org/annualfestival"
+      ],
+      "platform": "web",
+      "towns": [
+        "Tenafly"
+      ],
+      "categories": [
+        "community",
+        "food"
+      ],
+      "event_types": [
+        "A Taste of Greece festival",
+        "luncheons",
+        "holiday services"
+      ],
+      "audience": "Greek community; festival open to everyone",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-11-29",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Hosts the annual Taste of Greece Festival of Tenafly (55th edition listed for May 29 to 31; next year's dates unconfirmed). Parish calendar currently shows only liturgies through Nov 29. Re-check from March."
+    },
+    {
+      "name": "Saint Nicholas Greek Orthodox Church",
+      "kind": "community_org",
+      "url": "https://www.stnicholasnj.org/",
+      "other_urls": [
+        "https://www.stnicholasnj.org/greekfest"
+      ],
+      "platform": "web",
+      "towns": [
+        "Wyckoff"
+      ],
+      "categories": [
+        "community",
+        "food"
+      ],
+      "event_types": [
+        "Greek festival",
+        "holiday sales"
+      ],
+      "audience": "Greek community; festival open to everyone",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-12-13",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Runs a September Greek Festival (Sept 17 to 19 this year per the festival guide; own page at /greekfest). Home page now shows a wreath sale through Dec 13 and a Dec 5 vespers service."
+    },
+    {
+      "name": "Ascension Greek Orthodox Church",
+      "kind": "community_org",
+      "url": "https://www.ascensionfairview.org/community-calendar/",
+      "other_urls": [
+        "https://www.ascensionfairview.org/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Fairview"
+      ],
+      "categories": [
+        "community",
+        "food"
+      ],
+      "event_types": [
+        "Greek festival",
+        "dinner dance"
+      ],
+      "audience": "Greek community; festival open to everyone",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Greek festival is listed for early June (6/3 to 6/6, unconfirmed). Home page shows a 'Dinner Dance 2026' graphic with no date in text; the calendar page only showed Sunday services. A 'Current Events' page (ascensionfairview.org/current-events/) was linked but not loaded. No dated upcoming event confirmed."
+    },
+    {
+      "name": "Saint Joseph Society of Lodi",
+      "kind": "community_org",
+      "url": "https://www.saintjosephsociety.org/",
+      "other_urls": [
+        "https://www.instagram.com/st_joseph_society_lodi_nj/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Lodi"
+      ],
+      "categories": [
+        "community",
+        "food",
+        "family"
+      ],
+      "event_types": [
+        "Italian feast with rides and food",
+        "La Tavolata di San Giuseppe"
+      ],
+      "audience": "Italian-American community, families",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-10-17",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Runs the Labor Day weekend Saint Joseph Feast at 40 Spring St. (111th edition, Sept 4 to 7) and a St. Joseph's table in March with no date posted yet. Instagram @st_joseph_society_lodi_nj (1,001 followers) last posted Oct 17, 2026."
+    },
+    {
+      "name": "Council of Irish Associations of Greater Bergen County",
+      "kind": "community_org",
+      "url": "https://www.bergencountyirish.org/",
+      "other_urls": [
+        "https://www.bergencountyirish.org/council-calendar",
+        "https://www.bergencountyirish.org/bergen-county-st-patricks-day-parade",
+        "https://www.instagram.com/thebccia/",
+        "https://bergenfieldnj.gov/st-patricks-day-parade/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Bergenfield"
+      ],
+      "categories": [
+        "community",
+        "holiday"
+      ],
+      "event_types": [
+        "St. Patrick's Day parade",
+        "Grand Marshal brunch",
+        "5K fun run",
+        "Great Hunger commemoration"
+      ],
+      "audience": "Irish-American community, families",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-05-15",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Organizes the Bergen County St. Patrick's Day Parade in Bergenfield (44th was Sunday March 15, 2026). The site still shows 2026 dates and the council calendar page was empty; Instagram @thebccia (443 followers) last posted May 15, 2026. The 2027 date is not announced. Re-check from January."
+    },
+    {
+      "name": "St. Leon Armenian Church",
+      "kind": "facebook_page",
+      "url": "https://www.facebook.com/stleonchurch",
+      "other_urls": [],
+      "platform": "facebook",
+      "towns": [
+        "Fair Lawn"
+      ],
+      "categories": [
+        "community",
+        "food"
+      ],
+      "event_types": [
+        "Armenian food festival",
+        "church bazaars"
+      ],
+      "audience": "Armenian community; festival open to everyone",
+      "access": "login_required",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-10-17",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Only the page name and town loaded without login. The festival guide lists the St. Leon Food Festival for Oct 16 to 17, 2026 and points to this Facebook page as the source. Needs a logged-in session for anything else."
+    },
+    {
+      "name": "The Filipino American Festival, Inc.",
+      "kind": "facebook_page",
+      "url": "https://www.facebook.com/filipinoamericanfestival/",
+      "other_urls": [],
+      "platform": "facebook",
+      "towns": [
+        "Ridgefield Park",
+        "Bergenfield"
+      ],
+      "categories": [
+        "community",
+        "food"
+      ],
+      "event_types": [
+        "Filipino American Festival",
+        "cultural performances and food vendors"
+      ],
+      "audience": "Filipino-American community, families",
+      "access": "login_required",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Page name and Ridgefield Park location loaded; posts and follower count did not. The festival guide lists the Filipino American Festival in Ridgefield Park on 9/6. Needs a logged-in session."
+    },
+    {
+      "name": "Fiesta in America / Pasko in America",
+      "kind": "promoter",
+      "url": "https://www.philippinefiestausa.com",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "community",
+        "food",
+        "holiday"
+      ],
+      "event_types": [
+        "Filipino expo and festival",
+        "Filipino Christmas festival"
+      ],
+      "audience": "Filipino-American community, families",
+      "access": "open",
+      "how_checked": "search_snippet_only",
+      "cadence": "seasonal",
+      "last_seen_activity": "2026-08-16",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Not loaded; the URL comes from the festival guide's link. News coverage says the 29th Fiesta in America ran Aug 15 to 16, 2026 at American Dream, and that the Filipino Christmas festival Pasko in America was held at American Dream in 2025. No 2026 Pasko date found; check in late November."
+    },
+    {
+      "name": "Dream Asia Food Festival (New Jersey)",
+      "kind": "promoter",
+      "url": "https://www.dreamasiafest.com/newjersey",
+      "other_urls": [],
+      "platform": "web",
+      "towns": [
+        "East Rutherford"
+      ],
+      "categories": [
+        "food",
+        "community"
+      ],
+      "event_types": [
+        "pan-Asian street food festival"
+      ],
+      "audience": "Asian food fans, families, 20s to 30s",
+      "access": "js_heavy",
+      "how_checked": "webfetch",
+      "cadence": "seasonal",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Only the page title ('Dream Asia Festival') loaded. The festival guide lists it for late March in East Rutherford (3/26 to 3/28, last year's dates, unconfirmed). Re-check in January."
+    },
+    {
+      "name": "County of Bergen events calendar (heritage ceremonies)",
+      "kind": "county",
+      "url": "https://bergencountynj.gov/events/",
+      "other_urls": [
+        "https://bergencountynj.gov/bergen-county-department-of-parks/cultural-historic-affairs/",
+        "https://www.instagram.com/p/DbqTmbXm9Zd/?hl=en",
+        "https://www.instagram.com/p/DU8gw1vFtWw/?hl=en"
+      ],
+      "platform": "web",
+      "towns": [
+        "Hackensack",
+        "Bergen County"
+      ],
+      "categories": [
+        "community"
+      ],
+      "event_types": [
+        "heritage-month flag raisings",
+        "Indian Independence Day ceremony",
+        "Greek Independence Day",
+        "Armenian Genocide Remembrance",
+        "Latino community events"
+      ],
+      "audience": "Open to the public",
+      "access": "open",
+      "how_checked": "search_snippet_only",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-08-12",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Not loaded by me; linked as 'View Calendar of Events' from the county's Cultural & Historic Affairs page, which I did load and which lists no dates itself. County Instagram posts in search results show an Annual Indian Independence Day Ceremony (Aug 12, 2026, 5:30 pm) and a February 2026 event with the county's Latino community. This is where the smaller heritage observances get announced; another scout may already cover the county calendar."
+    },
+    {
+      "name": "Dance With Me Glen Rock (ballroom and Latin)",
+      "kind": "venue_calendar",
+      "url": "https://www.dancewithmeusa.com/glen-rock/",
+      "other_urls": [
+        "https://www.dancewithmeusa.com/fort-lee/"
+      ],
+      "platform": "web",
+      "towns": [
+        "Glen Rock",
+        "Fort Lee"
+      ],
+      "categories": [
+        "nightlife",
+        "arts"
+      ],
+      "event_types": [
+        "weeknight group classes",
+        "social dance parties"
+      ],
+      "audience": "Adults, singles and couples, no partner needed",
+      "access": "open",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": "2026-11-30",
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Posts a monthly group-class grid (November: 6:50 PM classes in tango, rumba, Latin groove and salsa on 1; 7:40 PM night club movement) and holds social parties, but party dates are not on the page; call 201.447.4200. A $49 intro offer expires Nov 30. Sister studio in Fort Lee."
+    },
+    {
+      "name": "Bergen Volunteers",
+      "kind": "community_org",
+      "url": "https://www.bergenvolunteers.org/",
+      "other_urls": [
+        "https://volunteer.bergenvolunteers.org/",
+        "https://www.bergenvolunteers.org/paddles2026"
+      ],
+      "platform": "web",
+      "towns": [
+        "Hackensack",
+        "Bergen County"
+      ],
+      "categories": [
+        "community"
+      ],
+      "event_types": [
+        "volunteer opportunities",
+        "charity socials (Paddles & Prosecco)",
+        "Neighbors Helping Neighbors"
+      ],
+      "audience": "Adults, families, corporate groups",
+      "access": "blocked",
+      "how_checked": "webfetch",
+      "cadence": "monthly",
+      "last_seen_activity": null,
+      "sample_events": [],
+      "yield": "low",
+      "notes": "Main site loaded and lists event pages for 2026 (Diamond Jubilee, Neighbors Helping Neighbors, Paddles & Prosecco) with no dates on the home page. The actual opportunities calendar at volunteer.bergenvolunteers.org returned HTTP 403 to WebFetch. No dated item confirmed."
+    }
+  ],
+  "search_recipes": [
+    "Meetup events, no login: https://www.meetup.com/find/?location=us--nj--Paramus&source=EVENTS&distance=tenMiles&categoryId=652 (swap in &keywords=board%20games, hiking, trivia, salsa, pickleball; drop categoryId)",
+    "Meetup groups near Paramus: https://www.meetup.com/find/?location=us--nj--Paramus&source=GROUPS&distance=tenMiles (returned 16 groups; group /events/ pages need a JS scrape with a 5 second wait)",
+    "RunSignup by zip radius: https://runsignup.com/Races?zipcodeRadius=07652&radius=10 (also try 07450 Ridgewood, 07024 Fort Lee, 07430 Mahwah)",
+    "AllEvents.in town pages: https://allevents.in/paramus/all and https://allevents.in/paramus/all--this-weekend (try other town slugs; /wyckoff/all exists, /hackensack/all did not)",
+    "Joe Trivia by weekday: https://www.joetrivia.com/monday through /sunday (no Friday page)",
+    "Festival organizers by date: https://festivalguidesandreviews.com/new-jersey-festivals/ then follow each Bergen row's link",
+    "Eventbrite keyword pages beat category pages, pattern https://www.eventbrite.com/d/nj--hackensack/<keyword>/ ; https://www.eventbrite.com/d/nj--hackensack/salsa-dancing/ and a /nj--hackensack/bergen-county/ page surfaced in search results but were not loaded (expect HTTP 429 from plain fetches)",
+    "The Local Girl category feeds: https://thelocalgirl.com/calendar/category/food-drink/tastings/ , /lifestyle/networking/ , /runs/ , /sports/ , /pop-up-event/ , /grand-opening/ (JS scrape needed)",
+    "site:instagram.com \"Bergen County\" \"run club\" (found @ratracerunclub)",
+    "site:instagram.com OR site:facebook.com salsa bachata social Teaneck OR Hackensack (found @orguyo_dance and DJ Edwin Martinez at Zina's)",
+    "site:treasurehunter.show \"Midland Park\" card show (per-date pages for the Bergen County Card & Collectibles Show)",
+    "\"wine dinner\" OR \"whiskey dinner\" OR \"pairing dinner\" Bergen County NJ, restricted to the past month",
+    "\"Opening Alert\" site:boozyburbs.com (one post per new restaurant, town in the title)",
+    "Instagram profiles read without login through WebFetch (grid, follower count and post dates, no captions); 21+ brewery accounts and some others return a login wall"
+  ],
+  "gaps": [
+    "Restaurant wine dinners, chef's tables, whiskey and cigar nights: no restaurant in Bergen was found with a dated events page that loads. Wyckoff Tavern's events page was empty, Felina's /events redirects to a private-events page, Biddy O'Malley's /events was 404. These are announced on each restaurant's Instagram; needs a logged-in pass over the accounts of the ~115 places already in places-food-nightlife.json.",
+    "Wine shop tastings and classes: Total Wine River Edge blocked WebFetch (HTTP 403) on every URL tried; a 'Sips of the Season' class on Nov 12, 2026 showed in search results but its store could not be confirmed. No independent Bergen wine shop with a public tasting calendar was found. No Bergen distillery with events was found.",
+    "Drag brunch and jazz brunch: nothing current in Bergen. Only past one-offs (Drag Queen Bingo at Temple Emeth in Teaneck, March 2026; an undated drag brunch at The Craftsman in Fair Lawn).",
+    "Restaurant weeks: none found for Bergen towns for winter 2026-27 (Hoboken's runs Nov 9 to 22). The Ridgewood Guild calendar lists no restaurant week.",
+    "Alementary Brewing (Hackensack): website returned an empty page and Instagram @alementary's newest post is April 16, 2024, so it looks dormant or closed. Left out.",
+    "The Flavor Labs (Norwood and Paramus cooking classes): site loaded but its single-classes page showed no dates, so it was not listed.",
+    "Facebook Events location pages and Facebook groups: not readable without login. AllEvents.in is the only no-login proxy found. The Facebook pages listed (St. Leon, Filipino American Festival, Cars and Coffee NJ, DJ Edwin Martinez) loaded as a page title only.",
+    "Car shows and cruise nights: season is over. newjerseycarshows.com cruise-night page had no Bergen entries (monthly pages at /november-2026-car-shows.html were not checked). Leads seen only in snippets: Cars and Coffee New Jersey on Facebook ('LAST SHOW OF 2026' on Nov 1, location not confirmed as Bergen) and Audi Club NJ Cars and Coffee at Bagel Shack, 395 NJ-17, Mahwah (April 26, 2026 season opener). Re-scout in April.",
+    "Boxing and MMA: no current card found in Bergen. An older article mentions Abella Boxing Promotions' 'Bergen County Fight Night 2' in East Rutherford on a Friday July 29, which is not a 2026 date.",
+    "High school sports schedules: the Big North master calendar, Don Bosco's ArbiterLive page and Bergen Catholic's Sidearm site all need a real browser; no game rows were captured. highschoolsports.nj.com could not be fetched at all. St. Joseph Regional and NJSIAA winter tournament pages were not reached.",
+    "Minor league and semi-pro teams, esports venues: none found inside Bergen County.",
+    "Korean community: KCC Tenafly's site would not load from any tool; no events calendar was found for the Korean American Association of New Jersey, or for Fort Lee and Palisades Park Korean festivals (Palisades Park's Broad Avenue festival appears only in 2025 coverage). A Chinese American Community of Fort Lee Moon Festival (September 2026) showed up in one Instagram snippet with no organizer page.",
+    "Latino (Hackensack, Garfield, Fairview), Polish (Wallington, Garfield), Indian and Japanese community organizers: no organizer calendar found. Only one-offs via the festival guide (Garfield Multicultural Food and Music Festival in June, Diwali in Norwood in October, Japan Fes at Overpeck) and county ceremonies. The Pulaski Day banquet in Wallington appears on poland.us, which is news, not a calendar.",
+    "Filipino (Bergenfield): the borough held a Philippine Independence Day flag raising on June 14, 2026 and a Barrio Fest in 2022; no standing organizer calendar found beyond the two festival pages listed.",
+    "Adult rec leagues: NJ Play Sports names Bergen County in its title but lists no Bergen league or dates on the page read. No open-play adult league calendar found beyond the pickleball clubs and Meetup groups.",
+    "Run clubs: an 'In Motion Run Club' serving Englewood appears in Facebook snippets, but the Instagram handle tried (@inmotionrunclub, 12 followers) did not look like the right account. Fleet Feet race pages are linked from The Local Girl's 5K guide but were not loaded; racefaster.com did not resolve.",
+    "Ice rinks: no working schedule page found for Mackay Ice Rink (Englewood; only a parks registration page at parksrec.egov.basgov.com) or Fritz Dietl Ice Rink (the address tried shows a blank template site).",
+    "Not found at all: yoga-in-the-park or outdoor fitness series (out of season), fishing derbies, dog events, language-exchange meetups with in-person Bergen dates, young-professional groups with their own calendar (networking shows up only through The Local Girl's Networking category).",
+    "Flat Rock Brook Nature Center (Englewood): events page still shows an Aug 27, 2026 full moon hike and a September calendar PDF, so it was left out as stale."
+  ]
+}
