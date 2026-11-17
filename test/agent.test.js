@@ -64,9 +64,10 @@ describe('Agent - friend voice', () => {
     assert.doesNotMatch(describeProfile({ firstName: 'Sam', priorReplies: 1 }), /may ask their name/);
   });
 
-  it('first-text greeting is short and not the old formula', () => {
+  it('first-text greeting is in their own words, with no template to copy', () => {
     const d = describeProfile({ isNew: true });
-    assert.match(d, /under 6 words/);
-    assert.doesNotMatch(d, /varied phrasing like "Hey! Exit 163 here\."/);
+    assert.match(d, /in your own words/);
+    assert.doesNotMatch(d, /Exit 163 here/);
+    assert.doesNotMatch(d, /Ooh|Oh nice/);
   });
 });
