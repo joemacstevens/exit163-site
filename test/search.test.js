@@ -380,6 +380,15 @@ describe('Search - daily runs with a closure', () => {
     assert.strictEqual(out.when, 'Daily Nov 22-28 (closed Thanksgiving)');
   });
 
+  it('still gives Paper Moon its daily run and except when asked about Thanksgiving alone', () => {
+    const row = { title: 'Paper Moon', town_slug: 'ridgewood', starts_on: '2026-11-22', ends_on: '2026-11-28',
+      recurrence_text: 'Daily Nov 22-28 (closed Thanksgiving)', tags: [], verified: true };
+    const out = shapeEvent(row, occurrences(row, '2026-11-26', '2026-11-26'));
+    assert.strictEqual(out.runs, 'daily Sun, Nov 22 - Sat, Nov 28');
+    assert.strictEqual(out.except, 'Thu, Nov 26');
+    assert.strictEqual(out.when, 'Daily Nov 22-28 (closed Thanksgiving)');
+  });
+
   it('leaves weekly listings as a list of dates with no except', () => {
     const row = { title: 'Saturday Market', town_slug: 'ridgewood', starts_on: '2026-11-07', ends_on: '2026-12-19',
       recurrence_text: 'Saturdays Nov 7-Dec 19', tags: [], verified: true };
