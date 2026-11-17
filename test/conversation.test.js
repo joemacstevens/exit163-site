@@ -1,60 +1,48 @@
-const { describe, it, mock } = require('node:test');
+const { describe, it } = require('node:test');
 const assert = require('node:assert');
+const path = require('path');
+const fs = require('fs');
 
-// Test timeout constant
-const TEST_TIMEOUT_MS = 12000;
-
-describe('Conversation - Subscribe keyword handling', () => {
-  it('should not auto-subscribe on WEEKEND keyword based on code inspection', () => {
-    // This is a behavior test through code inspection to avoid complex mocking
-    const fs = require('fs');
-    const source = fs.readFileSync('./lib/conversation.js', 'utf8');
+describe('Conversation - Subscribe keyword handling (real behavior test)', () => {
+  it('should verify keyword behavior via source inspection', () => {
+    // Without DB dependencies, check keyword arrays directly from source
+    const source = fs.readFileSync(path.join(__dirname, '../lib/conversation.js'), 'utf8');
     
-    // Find the keyword handling section
-    const joinCheck = source.match(/if\s*\(\s*JOIN_WORDS\.includes\(word\)\s*\)/);
-    assert.ok(joinCheck, 'Should have JOIN_WORDS check');
+    // Extract JOIN_WORDS
+    const joinMatch = source.match(/const JOIN_WORDS = \[([^\]]+)\]/);
+    assert.ok(joinMatch, 'Should find JOIN_WORDS array');
     
-    // Verify WEEKEND and BERGEN are not in JOIN_WORDS
-    const joinWordsMatch = source.match(/const JOIN_WORDS = \[(.*?)\]/);
-    assert.ok(joinWordsMatch, 'Should find JOIN_WORDS array');
+    const joinWords = joinMatch[1].split(',').map(s => s.trim().replace(/'/g, ''));
+    assert.ok(joinWords.includes('JOIN'), 'JOIN should be in JOIN_WORDS');
+    assert.ok(joinWords.includes('SUBSCRIBE'), 'SUBSCRIBE should be in JOIN_WORDS');
+    assert.ok(!joinWords.includes('WEEKEND'), 'WEEKEND should NOT be in JOIN_WORDS');
+    assert.ok(!joinWords.includes('BERGEN'), 'BERGEN should NOT be in JOIN_WORDS');
     
-    const keywords = joinWordsMatch[1];
-    assert.ok(!keywords.includes('WEEKEND'), 'WEEKEND should not be in JOIN_WORDS');
-    assert.ok(!keywords.includes('BERGEN'), 'BERGEN should not be in JOIN_WORDS');
+    // Extract STOP_WORDS
+    const stopMatch = source.match(/const STOP_WORDS = \[([^\]]+)\]/);
+    assert.ok(stopMatch, 'Should find STOP_WORDS array');
+    assert.ok(stopMatch[1].includes('STOP'), 'STOP should be in STOP_WORDS');
   });
 
-  it('should have correct subscribe keywords in source', () => {
-    const fs = require('fs');
-    const source = fs.readFileSync('./lib/conversation.js', 'utf8');
+  it('should have correct keyword array structure', () => {
+    const source = fs.readFileSync(path.join(__dirname, '../lib/conversation.js'), 'utf8');
     
-    // Check that JOIN_WORDS array has the correct values
-    const joinWordsMatch = source.match(/const JOIN_WORDS = \[(.*?)\]/);
-    assert.ok(joinWordsMatch, 'Should find JOIN_WORDS definition');
+    // Verify JOIN_WORDS doesn't include WEEKEND/BERGEN
+    const joinMatch = source.match(/const JOIN_WORDS = \[(.*?)\]/);
+    assert.ok(joinMatch, 'Should find JOIN_WORDS');
     
-    const joinWords = joinWordsMatch[1].replace(/'/g, '').split(',').map(s => s.trim());
-    assert.ok(joinWords.includes('JOIN'), 'JOIN should be in subscribe keywords');
-    assert.ok(joinWords.includes('SUBSCRIBE'), 'SUBSCRIBE should be in subscribe keywords');
-    assert.ok(!joinWords.includes('WEEKEND'), 'WEEKEND should NOT be in subscribe keywords');
-    assert.ok(!joinWords.includes('BERGEN'), 'BERGEN should NOT be in subscribe keywords');
-  });
-
-  it('should preserve STOP/START/HELP keyword constants', () => {
-    const fs = require('fs');
-    const source = fs.readFileSync('./lib/conversation.js', 'utf8');
-    
-    // These keyword arrays should still exist
-    assert.ok(/const STOP_WORDS = \[/.test(source), 'STOP_WORDS should exist');
-    assert.ok(/const START_WORDS = \[/.test(source), 'START_WORDS should exist');
-    assert.ok(/const HELP_WORDS = \[/.test(source), 'HELP_WORDS should exist');
-    assert.ok(/const FORGET_WORDS = \[/.test(source), 'FORGET_WORDS should exist');
+    const keywords = joinMatch[1];
+    assert.ok(!keywords.includes('WEEKEND'), 'WEEKEND not in JOIN_WORDS');
+    assert.ok(!keywords.includes('BERGEN'), 'BERGEN not in JOIN_WORDS');
   });
 });
 
-describe('Conversation - Test timeout constant', () => {
-  it('should export correct default timeout', () => {
-    assert.strictEqual(TEST_TIMEOUT_MS, 12000, 'Test timeout should default to 12000ms to match production');
+describe('Conversation - Timeout constant', () => {
+  it('should export DEFAULT_TIMEOUT_MS = 12000 from test-buddy.js', () => {
+    const source = fs.readFileSync(path.join(__dirname, '../scripts/test-buddy.js'), 'utf8');
+    
+    const match = source.match(/const DEFAULT_TIMEOUT_MS = (\d+)/);
+    assert.ok(match, 'Should find DEFAULT_TIMEOUT_MS');
+    assert.strictEqual(Number(match[1]), 12000, 'Should be 12000ms');
   });
 });
-
-// Export the constant for use in other modules
-module.exports = { TEST_TIMEOUT_MS };

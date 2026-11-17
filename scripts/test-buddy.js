@@ -20,6 +20,7 @@ const only = process.argv.slice(2);
 const picked = only.length ? scenarios.filter((s) => only.includes(s.id)) : scenarios;
 
 (async () => {
+  const timeout = Number(process.env.TEST_TIMEOUT_MS) || DEFAULT_TIMEOUT_MS;
   const outDir = path.join(__dirname, '..', 'research', 'test-runs');
   fs.mkdirSync(outDir, { recursive: true });
   const stamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
@@ -35,7 +36,6 @@ const picked = only.length ? scenarios.filter((s) => only.includes(s.id)) : scen
     for (const text of s.turns) {
       const t = Date.now();
       let r;
-      const timeout = Number(process.env.TEST_TIMEOUT_MS) || DEFAULT_TIMEOUT_MS;
       try { r = await handleInbound({ phone, text, channel: 'test', dryRunNewsletter: true, timeoutMs: timeout }); }
       catch (e) { r = { reply: `ERROR: ${e.message}` }; }
       const secs = ((Date.now() - t) / 1000).toFixed(1);
