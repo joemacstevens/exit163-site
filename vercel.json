@@ -13,6 +13,12 @@
     },
     "api/followup.js": {
       "maxDuration": 60
+    },
+    "api/claim.js": {
+      "maxDuration": 30
+    },
+    "api/review.js": {
+      "maxDuration": 60
     }
   },
   "rewrites": [
@@ -35,6 +41,10 @@
     {
       "source": "/claim",
       "destination": "/claim.html"
+    },
+    {
+      "source": "/review",
+      "destination": "/review.html"
     },
     {
       "source": "/read/:slug",
