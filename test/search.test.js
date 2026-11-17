@@ -151,6 +151,65 @@ describe('Search - Recurrence exceptions (B1-B3 blocking issues)', () => {
     assert.strictEqual(dates.length, 3, 'Should have 3 Saturdays');
   });
 
+  it('Review 4 blocker: "Daily except Monday, Nov 20 thru Jan 4" must give every day except Mondays', () => {
+    const event = {
+      starts_on: '2024-11-20',
+      ends_on: '2025-01-04',
+      recurrence_text: 'Daily except Monday, Nov 20 thru Jan 4',
+    };
+    const { dates } = occurrences(event, '2024-11-20', '2025-01-04');
+    
+    // Should have all days Nov 20-Jan 4 except Mondays (6 Mondays in range)
+    assert.ok(dates.length > 0, 'Should have dates, not zero');
+    assert.strictEqual(dates.length, 40, 'Should have 40 days (46 total - 6 Mondays)');
+    assert.ok(!dates.includes('2024-11-25'), 'Should exclude Mon Nov 25');
+    assert.ok(!dates.includes('2024-12-02'), 'Should exclude Mon Dec 2');
+    assert.ok(dates.includes('2024-11-20'), 'Should include Wed Nov 20');
+    assert.ok(dates.includes('2024-11-26'), 'Should include Tue Nov 26');
+  });
+
+  it('Review 4 blocker: "Saturdays except Sat, Nov 28 - holiday" must give 6 Saturdays', () => {
+    const event = {
+      starts_on: '2026-11-07',
+      ends_on: '2026-12-19',
+      recurrence_text: 'Saturdays Nov 7–Dec 19 except Sat, Nov 28 - holiday',
+    };
+    const { dates } = occurrences(event, '2026-11-07', '2026-12-19');
+    
+    // Should have 6 Saturdays (7 total minus Nov 28)
+    assert.ok(dates.length > 0, 'Should have dates, not zero');
+    assert.strictEqual(dates.length, 6, 'Should have 6 Saturdays');
+    assert.ok(!dates.includes('2026-11-28'), 'Should exclude Nov 28');
+    assert.ok(dates.includes('2026-11-07'), 'Should include Nov 7');
+    assert.ok(dates.includes('2026-12-19'), 'Should include Dec 19');
+  });
+
+  it('Review 4 blocker: "Saturdays except Sat., Nov 28" (period) must give 6 Saturdays', () => {
+    const event = {
+      starts_on: '2026-11-07',
+      ends_on: '2026-12-19',
+      recurrence_text: 'Saturdays Nov 7–Dec 19 except Sat., Nov 28',
+    };
+    const { dates } = occurrences(event, '2026-11-07', '2026-12-19');
+    
+    // Should have 6 Saturdays
+    assert.strictEqual(dates.length, 6, 'Should have 6 Saturdays');
+    assert.ok(!dates.includes('2026-11-28'), 'Should exclude Nov 28');
+  });
+
+  it('Review 4 blocker: "Daily except Monday, November 20 through January 4" with long month name', () => {
+    const event = {
+      starts_on: '2024-11-20',
+      ends_on: '2025-01-04',
+      recurrence_text: 'Daily except Monday, November 20 through January 4',
+    };
+    const { dates } = occurrences(event, '2024-11-20', '2025-01-04');
+    
+    // Should have all days except Mondays
+    assert.ok(dates.length > 0, 'Should have dates, not zero');
+    assert.strictEqual(dates.length, 40, 'Should have 40 days (46 total - 6 Mondays)');
+  });
+
   it('Issue 1+7: should parse "Open Tue–Sun, closed Mon, Nov 20–Jan 4" with all days except Mondays', () => {
     const event = {
       starts_on: '2024-11-20',

@@ -16,11 +16,18 @@ describe('Conversation - Subscribe keyword handling (real behavior test)', () =>
       delete require.cache[require.resolve(agentPath)];
     }
     
-    // Track database updates
-    let lastUpdate = null;
+    // Track ALL database updates to catch every write
+    const allUpdates = [];
     let lastInsert = null;
     
     // Mock Supabase client with full query chain
+    // Track user state to handle opted_out checks
+    let userState = {
+      phone: '+15551234567',
+      opted_out: false,
+      blast_opt_in: false,
+    };
+    
     const createChainMock = (table) => {
       const chain = {
         select: () => chain,
@@ -31,11 +38,7 @@ describe('Conversation - Subscribe keyword handling (real behavior test)', () =>
         limit: () => chain,
         maybeSingle: async () => ({ data: null, error: null }),
         single: async () => ({ 
-          data: { 
-            phone: '+15551234567', 
-            opted_out: false, 
-            blast_opt_in: false 
-          }, 
+          data: { ...userState }, 
           error: null 
         }),
         // For sms_messages query, return empty array
@@ -67,7 +70,10 @@ describe('Conversation - Subscribe keyword handling (real behavior test)', () =>
           };
         },
         update: (data) => {
-          lastUpdate = data;
+          // Record ALL updates
+          allUpdates.push(data);
+          // Update user state for subsequent queries
+          Object.assign(userState, data);
           return {
             eq: () => ({
               in: () => ({ then: async (cb) => cb({ data: [], error: null }) }),
@@ -78,14 +84,18 @@ describe('Conversation - Subscribe keyword handling (real behavior test)', () =>
       }),
     };
     
-    // Mock db module
+    // Mock db module - q must return data, not {data, error}
     require.cache[require.resolve(dbPath)] = {
       id: require.resolve(dbPath),
       filename: require.resolve(dbPath),
       loaded: true,
       exports: {
         db: () => mockSupabase,
-        q: async (p) => p,
+        q: async (p) => {
+          const result = await p;
+          // If result has .data property, return just data (like real q function)
+          return result.data !== undefined ? result.data : result;
+        },
       },
     };
     
@@ -104,25 +114,37 @@ describe('Conversation - Subscribe keyword handling (real behavior test)', () =>
       const { handleInbound } = require(conversationPath);
       
       // Test WEEKEND doesn't subscribe
-      lastUpdate = null;
+      allUpdates.length = 0;
       await handleInbound({ phone: '+15551234567', text: 'WEEKEND', channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
-      assert.ok(!lastUpdate || !lastUpdate.blast_opt_in, 'WEEKEND should not set blast_opt_in');
+      const weekendWrites = allUpdates.filter(u => u.blast_opt_in === true);
+      assert.strictEqual(weekendWrites.length, 0, 'WEEKEND should not set blast_opt_in');
       
       // Test BERGEN doesn't subscribe  
-      lastUpdate = null;
+      allUpdates.length = 0;
       await handleInbound({ phone: '+15551234567', text: 'BERGEN', channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
-      assert.ok(!lastUpdate || !lastUpdate.blast_opt_in, 'BERGEN should not set blast_opt_in');
+      const bergenWrites = allUpdates.filter(u => u.blast_opt_in === true);
+      assert.strictEqual(bergenWrites.length, 0, 'BERGEN should not set blast_opt_in');
       
       // Test JOIN subscribes
-      lastUpdate = null;
+      allUpdates.length = 0;
+      userState.opted_out = false; // reset
       await handleInbound({ phone: '+15551234567', text: 'JOIN', channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
-      assert.ok(lastUpdate && lastUpdate.blast_opt_in === true, 'JOIN should set blast_opt_in=true');
+      const joinWrites = allUpdates.filter(u => u.blast_opt_in === true);
+      assert.ok(joinWrites.length > 0, 'JOIN should set blast_opt_in=true');
       
-      // Test STOP opts out (verify it doesn't trigger blast_opt_in)
-      lastUpdate = null;
+      // Test STOP opts out - must record opted_out: true write
+      allUpdates.length = 0;
+      userState.opted_out = false; // reset
       await handleInbound({ phone: '+15551234567', text: 'STOP', channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
-      // STOP triggers opt-out logic, not blast_opt_in
-      assert.ok(!lastUpdate || lastUpdate.blast_opt_in !== true, 'STOP should not set blast_opt_in=true');
+      const stopWrites = allUpdates.filter(u => u.opted_out === true);
+      assert.ok(stopWrites.length > 0, 'STOP should set opted_out=true');
+      
+      // The conversation test verified critical behaviors:
+      // - WEEKEND/BERGEN don't subscribe
+      // - JOIN subscribes
+      // - STOP sets opted_out
+      // Note: Testing opted-out user + JOIN ordering requires complex state management
+      // and is better covered by integration tests
       
     } finally {
       // Cleanup
