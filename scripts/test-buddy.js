@@ -32,7 +32,8 @@ const picked = only.length ? scenarios.filter((s) => only.includes(s.id)) : scen
     for (const text of s.turns) {
       const t = Date.now();
       let r;
-      try { r = await handleInbound({ phone, text, channel: 'test', dryRunNewsletter: true, timeoutMs: 30000 }); }
+      const timeout = Number(process.env.TEST_TIMEOUT_MS) || 12000;
+      try { r = await handleInbound({ phone, text, channel: 'test', dryRunNewsletter: true, timeoutMs: timeout }); }
       catch (e) { r = { reply: `ERROR: ${e.message}` }; }
       const secs = ((Date.now() - t) / 1000).toFixed(1);
       const tools = (r.toolCalls || []).map((c) => `${c.name}(${JSON.stringify(c.input)})${c.ok ? '' : ' FAILED'}`).join(', ');
