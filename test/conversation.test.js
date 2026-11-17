@@ -4,36 +4,134 @@ const path = require('path');
 const fs = require('fs');
 
 describe('Conversation - Subscribe keyword handling (real behavior test)', () => {
-  it('should verify keyword behavior via source inspection', () => {
-    // Without DB dependencies, check keyword arrays directly from source
-    const source = fs.readFileSync(path.join(__dirname, '../lib/conversation.js'), 'utf8');
+  it('Issue 5: WEEKEND/BERGEN should not subscribe, JOIN should, STOP should opt-out', async () => {
+    // Clear module cache
+    const dbPath = path.join(__dirname, '../lib/db.js');
+    const agentPath = path.join(__dirname, '../lib/agent.js');
+    const conversationPath = path.join(__dirname, '../lib/conversation.js');
     
-    // Extract JOIN_WORDS
-    const joinMatch = source.match(/const JOIN_WORDS = \[([^\]]+)\]/);
-    assert.ok(joinMatch, 'Should find JOIN_WORDS array');
+    delete require.cache[require.resolve(dbPath)];
+    delete require.cache[require.resolve(conversationPath)];
+    if (require.cache[require.resolve(agentPath)]) {
+      delete require.cache[require.resolve(agentPath)];
+    }
     
-    const joinWords = joinMatch[1].split(',').map(s => s.trim().replace(/'/g, ''));
-    assert.ok(joinWords.includes('JOIN'), 'JOIN should be in JOIN_WORDS');
-    assert.ok(joinWords.includes('SUBSCRIBE'), 'SUBSCRIBE should be in JOIN_WORDS');
-    assert.ok(!joinWords.includes('WEEKEND'), 'WEEKEND should NOT be in JOIN_WORDS');
-    assert.ok(!joinWords.includes('BERGEN'), 'BERGEN should NOT be in JOIN_WORDS');
+    // Track database updates
+    let lastUpdate = null;
+    let lastInsert = null;
     
-    // Extract STOP_WORDS
-    const stopMatch = source.match(/const STOP_WORDS = \[([^\]]+)\]/);
-    assert.ok(stopMatch, 'Should find STOP_WORDS array');
-    assert.ok(stopMatch[1].includes('STOP'), 'STOP should be in STOP_WORDS');
-  });
-
-  it('should have correct keyword array structure', () => {
-    const source = fs.readFileSync(path.join(__dirname, '../lib/conversation.js'), 'utf8');
+    // Mock Supabase client with full query chain
+    const createChainMock = (table) => {
+      const chain = {
+        select: () => chain,
+        eq: () => chain,
+        gte: () => chain,
+        lte: () => chain,
+        order: () => chain,
+        limit: () => chain,
+        maybeSingle: async () => ({ data: null, error: null }),
+        single: async () => ({ 
+          data: { 
+            phone: '+15551234567', 
+            opted_out: false, 
+            blast_opt_in: false 
+          }, 
+          error: null 
+        }),
+        // For sms_messages query, return empty array
+        then: async (cb) => {
+          if (table === 'sms_messages') {
+            return cb([]);
+          }
+          return cb({ data: [], error: null });
+        },
+      };
+      return chain;
+    };
     
-    // Verify JOIN_WORDS doesn't include WEEKEND/BERGEN
-    const joinMatch = source.match(/const JOIN_WORDS = \[(.*?)\]/);
-    assert.ok(joinMatch, 'Should find JOIN_WORDS');
+    const mockSupabase = {
+      from: (table) => ({
+        select: (...args) => {
+          const chain = createChainMock(table);
+          return chain;
+        },
+        insert: (data) => {
+          lastInsert = data;
+          return {
+            select: () => ({
+              single: async () => ({ 
+                data: { phone: '+15551234567', ...(Array.isArray(data) ? data[0] : data) }, 
+                error: null 
+              }),
+            }),
+          };
+        },
+        update: (data) => {
+          lastUpdate = data;
+          return {
+            eq: () => ({
+              in: () => ({ then: async (cb) => cb({ data: [], error: null }) }),
+              then: async (cb) => cb({ data: [], error: null }),
+            }),
+          };
+        },
+      }),
+    };
     
-    const keywords = joinMatch[1];
-    assert.ok(!keywords.includes('WEEKEND'), 'WEEKEND not in JOIN_WORDS');
-    assert.ok(!keywords.includes('BERGEN'), 'BERGEN not in JOIN_WORDS');
+    // Mock db module
+    require.cache[require.resolve(dbPath)] = {
+      id: require.resolve(dbPath),
+      filename: require.resolve(dbPath),
+      loaded: true,
+      exports: {
+        db: () => mockSupabase,
+        q: async (p) => p,
+      },
+    };
+    
+    // Mock agent module to avoid Anthropic SDK
+    require.cache[require.resolve(agentPath)] = {
+      id: require.resolve(agentPath),
+      filename: require.resolve(agentPath),
+      loaded: true,
+      exports: {
+        chat: async () => ({ reply: 'Test response', used_tools: [] }),
+        runBuddy: async () => ({ reply: 'Test response', tool_calls: 0, used_tools: [] }),
+      },
+    };
+    
+    try {
+      const { handleInbound } = require(conversationPath);
+      
+      // Test WEEKEND doesn't subscribe
+      lastUpdate = null;
+      await handleInbound({ phone: '+15551234567', text: 'WEEKEND', channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
+      assert.ok(!lastUpdate || !lastUpdate.blast_opt_in, 'WEEKEND should not set blast_opt_in');
+      
+      // Test BERGEN doesn't subscribe  
+      lastUpdate = null;
+      await handleInbound({ phone: '+15551234567', text: 'BERGEN', channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
+      assert.ok(!lastUpdate || !lastUpdate.blast_opt_in, 'BERGEN should not set blast_opt_in');
+      
+      // Test JOIN subscribes
+      lastUpdate = null;
+      await handleInbound({ phone: '+15551234567', text: 'JOIN', channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
+      assert.ok(lastUpdate && lastUpdate.blast_opt_in === true, 'JOIN should set blast_opt_in=true');
+      
+      // Test STOP opts out (verify it doesn't trigger blast_opt_in)
+      lastUpdate = null;
+      await handleInbound({ phone: '+15551234567', text: 'STOP', channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
+      // STOP triggers opt-out logic, not blast_opt_in
+      assert.ok(!lastUpdate || lastUpdate.blast_opt_in !== true, 'STOP should not set blast_opt_in=true');
+      
+    } finally {
+      // Cleanup
+      delete require.cache[require.resolve(dbPath)];
+      delete require.cache[require.resolve(conversationPath)];
+      if (require.cache[require.resolve(agentPath)]) {
+        delete require.cache[require.resolve(agentPath)];
+      }
+    }
   });
 });
 

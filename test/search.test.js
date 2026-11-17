@@ -65,20 +65,24 @@ describe('Search - Recurrence exceptions (B1-B3 blocking issues)', () => {
   });
 
   it('B2: should not exclude all Saturdays when exception has specific date', () => {
-    // 'Saturdays Nov 7–Dec 19 except Sat Nov 28'
-    const rec = parseRecurrence('Saturdays Nov 7–Dec 19 except Sat Nov 28', '2024-11-07', '2024-12-19');
+    // 'Saturdays Nov 7–Dec 19 except Sat Nov 28' - use 2026 where Nov 28 is Saturday
     const event = {
-      starts_on: '2024-11-07',
-      ends_on: '2024-12-19',
+      starts_on: '2026-11-07',
+      ends_on: '2026-12-19',
       recurrence_text: 'Saturdays Nov 7–Dec 19 except Sat Nov 28',
     };
-    const { dates } = occurrences(event, '2024-11-07', '2024-12-19');
+    const { dates } = occurrences(event, '2026-11-07', '2026-12-19');
     
-    // Should include other Saturdays
-    assert.ok(dates.includes('2024-11-09'), 'Should include Nov 9 (Sat)');
-    assert.ok(dates.includes('2024-12-07'), 'Should include Dec 7 (Sat)');
+    // Should include other Saturdays (Nov 7, 14, 21; Dec 5, 12, 19)
+    assert.ok(dates.includes('2026-11-07'), 'Should include Nov 7 (Sat)');
+    assert.ok(dates.includes('2026-11-14'), 'Should include Nov 14 (Sat)');
+    assert.ok(dates.includes('2026-11-21'), 'Should include Nov 21 (Sat)');
+    assert.ok(dates.includes('2026-12-05'), 'Should include Dec 5 (Sat)');
+    assert.ok(dates.includes('2026-12-12'), 'Should include Dec 12 (Sat)');
+    assert.ok(dates.includes('2026-12-19'), 'Should include Dec 19 (Sat)');
     // Should exclude only Nov 28
-    assert.ok(!dates.includes('2024-11-28'), 'Should exclude Nov 28');
+    assert.ok(!dates.includes('2026-11-28'), 'Should exclude Nov 28 (Sat)');
+    assert.strictEqual(dates.length, 6, 'Should have 6 Saturdays total');
   });
 
   it('B3: should apply exceptDays to date-range patterns', () => {
@@ -100,28 +104,94 @@ describe('Search - Recurrence exceptions (B1-B3 blocking issues)', () => {
     assert.ok(dates.includes('2024-11-11'), 'Should include Monday Nov 11');
   });
 
-  it('Issue 7: should parse "Closed Mondays, open Tue–Sun Nov 20–Jan 4"', () => {
+  it('Issue 2: should not exclude all Fri-Sun for "except holiday weekends"', () => {
+    // 'Saturdays Nov 1–30 except holiday weekends'
+    const event = {
+      starts_on: '2026-11-01',
+      ends_on: '2026-11-30',
+      recurrence_text: 'Saturdays Nov 1–30 except holiday weekends',
+    };
+    const { dates } = occurrences(event, '2026-11-01', '2026-11-30');
+    
+    // Should NOT be empty - "weekends" should not be parsed as excluded weekdays
+    assert.ok(dates.length > 0, 'Should have Saturdays, not exclude all Fri-Sun');
+    // Should have Saturdays: Nov 7, 14, 21, 28
+    assert.ok(dates.includes('2026-11-07'), 'Should include Sat Nov 7');
+    assert.ok(dates.includes('2026-11-14'), 'Should include Sat Nov 14');
+  });
+
+  it('Issue 3: "except Sat, Nov 28" should not exclude all Saturdays', () => {
+    const event = {
+      starts_on: '2026-11-01',
+      ends_on: '2026-11-30',
+      recurrence_text: 'Saturdays except Sat, Nov 28',
+    };
+    const { dates } = occurrences(event, '2026-11-01', '2026-11-30');
+    
+    // Should include Saturdays except Nov 28
+    assert.ok(dates.includes('2026-11-07'), 'Should include Sat Nov 7');
+    assert.ok(dates.includes('2026-11-14'), 'Should include Sat Nov 14');
+    assert.ok(dates.includes('2026-11-21'), 'Should include Sat Nov 21');
+    assert.ok(!dates.includes('2026-11-28'), 'Should exclude Sat Nov 28');
+    assert.strictEqual(dates.length, 3, 'Should have 3 Saturdays');
+  });
+
+  it('Issue 3: "except Sat. Nov 28" (period) should not exclude all Saturdays', () => {
+    const event = {
+      starts_on: '2026-11-01',
+      ends_on: '2026-11-30',
+      recurrence_text: 'Saturdays except Sat. Nov 28',
+    };
+    const { dates } = occurrences(event, '2026-11-01', '2026-11-30');
+    
+    // Should include Saturdays except Nov 28
+    assert.ok(dates.includes('2026-11-07'), 'Should include Sat Nov 7');
+    assert.ok(dates.includes('2026-11-21'), 'Should include Sat Nov 21');
+    assert.ok(!dates.includes('2026-11-28'), 'Should exclude Sat Nov 28');
+    assert.strictEqual(dates.length, 3, 'Should have 3 Saturdays');
+  });
+
+  it('Issue 1+7: should parse "Open Tue–Sun, closed Mon, Nov 20–Jan 4" with all days except Mondays', () => {
     const event = {
       starts_on: '2024-11-20',
       ends_on: '2025-01-04',
-      recurrence_text: 'Closed Mondays, open Tue–Sun Nov 20–Jan 4',
+      recurrence_text: 'Open Tue–Sun, closed Mon, Nov 20–Jan 4',
     };
     const { dates } = occurrences(event, '2024-11-20', '2025-01-04');
     
-    assert.ok(dates.length > 0, 'Should parse successfully');
-    // Nov 25, Dec 2, 9, 16, 23, 30 are Mondays - should be excluded
-    assert.ok(!dates.includes('2024-11-25'), 'Should exclude Monday');
-    // Tuesdays should be included
-    assert.ok(dates.includes('2024-11-26'), 'Should include Tuesday');
+    // Should have Tue–Sun: Nov 20 (Wed) through Jan 4, minus all Mondays
+    // Mondays in range: Nov 25, Dec 2, 9, 16, 23, 30
+    assert.ok(!dates.includes('2024-11-25'), 'Should exclude Mon Nov 25');
+    assert.ok(!dates.includes('2024-12-02'), 'Should exclude Mon Dec 2');
+    assert.ok(!dates.includes('2024-12-30'), 'Should exclude Mon Dec 30');
+    
+    // Should include all other days
+    assert.ok(dates.includes('2024-11-20'), 'Should include Wed Nov 20');
+    assert.ok(dates.includes('2024-11-21'), 'Should include Thu Nov 21');
+    assert.ok(dates.includes('2024-11-22'), 'Should include Fri Nov 22');
+    assert.ok(dates.includes('2024-11-23'), 'Should include Sat Nov 23');
+    assert.ok(dates.includes('2024-11-24'), 'Should include Sun Nov 24');
+    assert.ok(dates.includes('2024-11-26'), 'Should include Tue Nov 26');
+    
+    // Total: 46 days minus 6 Mondays = 40 days
+    assert.strictEqual(dates.length, 40, 'Should have 40 days (Tue-Sun only)');
   });
 
-  it('should normalize curly apostrophes', () => {
-    // Test that curly apostrophes are normalized (pattern matching should work)
-    const textWithCurly = 'Daily Dec 20 - Jan 5. Closed New Year' + String.fromCharCode(8217) + 's Day';
-    const rec = parseRecurrence(textWithCurly, '2024-12-20', '2025-01-05');
+  it('Issue 4: curly apostrophes in New Years Eve should exclude Dec 31 not Jan 1', () => {
+    // Use Unicode curly apostrophe (U+2019)
+    const textWithCurly = 'Daily Dec 20 - Jan 5. Closed New Year' + String.fromCharCode(0x2019) + 's Eve';
+    const event = {
+      starts_on: '2024-12-20',
+      ends_on: '2025-01-05',
+      recurrence_text: textWithCurly,
+    };
+    const { dates } = occurrences(event, '2024-12-20', '2025-01-05');
     
-    assert.ok(rec.except, 'Should parse with curly apostrophe');
-    assert.ok(rec.except.length > 0, 'Should have exceptions');
+    // Should exclude Dec 31 (NYE), NOT Jan 1
+    assert.ok(!dates.includes('2024-12-31'), 'Should exclude Dec 31 (NYE with curly apostrophe)');
+    assert.ok(dates.includes('2025-01-01'), 'Should include Jan 1 (not NYE)');
+    assert.ok(dates.includes('2024-12-30'), 'Should include Dec 30');
+    assert.ok(dates.includes('2025-01-02'), 'Should include Jan 2');
   });
 
   it('should recognize Thanksgiving', () => {

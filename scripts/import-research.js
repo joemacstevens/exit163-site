@@ -16,7 +16,10 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const CLOSURE_PATTERN = /\b(?:closed|except|excluding|cancell?ed|cancels?|no (?:show|event|market)s?|rain (?:cancels|date)|weather permitting)\b/i;
 
 function smartTruncate(text, limit) {
-  if (!text || text.length <= limit) return text;
+  if (!text) return null;
+  text = String(text).trim();
+  if (!text) return null;
+  if (text.length <= limit) return text;
   
   // Split into sentences, avoiding abbreviations (p.m., a.m., St., Dr., etc.)
   const sentences = text.split(/(?<=[.!?])(?<!\b[ap]\.m\.)(?<!\bSt\.)(?<!\bDr\.)(?<!\bMr\.)(?<!\bMs\.)(?<!\bMrs\.)\s+/);
@@ -24,7 +27,20 @@ function smartTruncate(text, limit) {
   let truncated = text.slice(0, limit);
   
   // Only cut at sentence boundary if it keeps at least 80% of the limit
-  const sentenceCutPoint = truncated.lastIndexOf('. ');
+  // AND don't cut right at an abbreviation near the end
+  let sentenceCutPoint = truncated.lastIndexOf('. ');
+  // Check if the cut point is at 'St. ' or similar
+  if (sentenceCutPoint > 0 && sentenceCutPoint < truncated.length - 2) {
+    const beforePeriod = truncated.slice(Math.max(0, sentenceCutPoint - 4), sentenceCutPoint);
+    if (/\b(?:St|Dr|Mr|Ms|Mrs|Ave|Blvd)$/i.test(beforePeriod)) {
+      // Find previous sentence boundary
+      const prevCut = truncated.lastIndexOf('. ', sentenceCutPoint - 1);
+      if (prevCut > limit * 0.8) {
+        sentenceCutPoint = prevCut;
+      }
+    }
+  }
+  
   if (sentenceCutPoint > limit * 0.8 && sentenceCutPoint > 0) {
     truncated = truncated.slice(0, sentenceCutPoint + 1);
   }
