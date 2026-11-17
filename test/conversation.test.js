@@ -172,3 +172,145 @@ describe('Conversation - Timeout constant', () => {
     assert.strictEqual(Number(match[1]), 12000, 'Should be 12000ms');
   });
 });
+
+// Shared fake Supabase + agent for the retest fixes below. Records every update and insert by table;
+// runBuddy is replaced so no real LLM is ever called.
+function loadWithFakes({ user = {}, onTurn } = {}) {
+  const dbPath = require.resolve('../lib/db.js');
+  const agentPath = require.resolve('../lib/agent.js');
+  const conversationPath = require.resolve('../lib/conversation.js');
+  const memoryPath = require.resolve('../lib/memory.js');
+  for (const p of [dbPath, agentPath, conversationPath, memoryPath]) delete require.cache[p];
+
+  const state = { phone: '+15550001111', opted_out: false, blast_opt_in: false, ...user };
+  const updates = [];
+  const inserts = [];
+  const result = (data) => ({ then: (ok, bad) => Promise.resolve({ data, error: null }).then(ok, bad) });
+  const chain = (table) => {
+    const c = {
+      select: () => c, eq: () => c, gt: () => c, gte: () => c, lte: () => c, in: () => c,
+      order: () => c, limit: () => c,
+      maybeSingle: async () => ({ data: table === 'sms_users' ? { ...state } : null, error: null }),
+      single: async () => ({ data: { ...state }, error: null }),
+      then: (ok, bad) => Promise.resolve({ data: [], error: null }).then(ok, bad),
+    };
+    return c;
+  };
+  const fake = {
+    from: (table) => ({
+      select: () => chain(table),
+      insert: (data) => {
+        inserts.push({ table, data });
+        const rows = (Array.isArray(data) ? data : [data]).map((d, i) => ({ id: 100 + inserts.length + i, created_at: new Date().toISOString(), ...d }));
+        return { ...result(rows), select: () => ({ ...result(rows), single: async () => ({ data: rows[0], error: null }) }) };
+      },
+      update: (data) => {
+        updates.push({ table, data });
+        Object.assign(state, data);
+        const r = { ...result([]), eq: () => r, in: () => r, select: () => r };
+        return r;
+      },
+      delete: () => { const r = { ...result([]), eq: () => r, in: () => r, select: () => r }; return r; },
+    }),
+  };
+  require.cache[dbPath] = { id: dbPath, filename: dbPath, loaded: true,
+    exports: { db: () => fake, q: async (p) => { const r = await p; return r && r.data !== undefined ? r.data : r; } } };
+  require.cache[agentPath] = { id: agentPath, filename: agentPath, loaded: true,
+    exports: { runBuddy: async (opts) => { if (onTurn) await onTurn(opts); return { reply: 'Test response', tool_calls: 0, used_tools: [] }; } } };
+  const { handleInbound } = require(conversationPath);
+  const send = (text) => handleInbound({ phone: state.phone, text, channel: 'test', dryRunNewsletter: true, timeoutMs: 5000 });
+  const cleanup = () => { for (const p of [dbPath, agentPath, conversationPath, memoryPath]) delete require.cache[p]; };
+  return { send, state, updates, inserts, cleanup };
+}
+
+describe('Conversation - opt-in keywords asked as a question', () => {
+  it('"weekend?", "Bergen?" and "join?" go to the chat instead of subscribing', async () => {
+    for (const text of ['weekend?', 'Bergen?', 'join?', 'WEEKEND ?']) {
+      let chatted = false;
+      const f = loadWithFakes({ onTurn: () => { chatted = true; } });
+      try {
+        const out = await f.send(text);
+        assert.strictEqual(f.updates.filter((u) => u.data.blast_opt_in === true).length, 0, `${text} should not subscribe`);
+        assert.notStrictEqual(out.reply && out.reply.startsWith("You're in!"), true, `${text} should not get the JOIN reply`);
+        assert.ok(chatted, `${text} should reach the chat agent`);
+      } finally { f.cleanup(); }
+    }
+  });
+
+  it('"WEEKEND", "Weekend!", "join." and "Subscribe" still subscribe', async () => {
+    for (const text of ['WEEKEND', 'Weekend!', 'join.', 'Subscribe', 'BERGEN']) {
+      const f = loadWithFakes({ onTurn: () => assert.fail(`${text} should not reach the chat agent`) });
+      try {
+        const out = await f.send(text);
+        assert.ok(f.updates.some((u) => u.data.blast_opt_in === true), `${text} should subscribe`);
+        assert.ok(out.reply.startsWith("You're in!"), `${text} should get the JOIN reply`);
+      } finally { f.cleanup(); }
+    }
+  });
+
+  it('carrier STOP words opt out even with punctuation, including "stop?"', async () => {
+    for (const text of ['stop?', 'STOP.', 'Stop!', 'unsubscribe?']) {
+      const f = loadWithFakes({ user: { blast_opt_in: true } });
+      try {
+        const out = await f.send(text);
+        assert.ok(f.updates.some((u) => u.data.opted_out === true), `${text} should opt out`);
+        assert.strictEqual(out.reply, null);
+      } finally { f.cleanup(); }
+    }
+  });
+
+  it('an opted-out texter sending "WEEKEND" is still ignored (opt-out check comes first)', async () => {
+    const f = loadWithFakes({ user: { opted_out: true } });
+    try {
+      const out = await f.send('WEEKEND');
+      assert.strictEqual(out.reply, null);
+      assert.strictEqual(f.updates.filter((u) => u.data.blast_opt_in === true).length, 0);
+    } finally { f.cleanup(); }
+  });
+});
+
+describe('Memory - a show "playing" is not live music', () => {
+  const Q = 'is Paper Moon playing at the Williams Center on Thanksgiving?';
+
+  it('musicUnsupported refuses a music interest with no music words, allows one with them', () => {
+    const f = loadWithFakes(); // memory.js needs lib/db.js, which is faked here
+    try {
+      const memory = require('../lib/memory.js');
+      assert.ok(memory.musicUnsupported('interest', 'live music', Q));
+      assert.ok(memory.musicUnsupported('interest', 'live music', 'playing'));
+      assert.strictEqual(memory.musicUnsupported('interest', 'live music', 'any live bands this weekend'), null);
+      assert.strictEqual(memory.musicUnsupported('interest', 'jazz concerts', 'we love jazz'), null);
+      assert.strictEqual(memory.musicUnsupported('interest', 'movies', Q), null);
+      assert.strictEqual(memory.musicUnsupported('kid', 'plays in a band', 'my 12 year old'), null);
+    } finally { f.cleanup(); }
+  });
+
+  it('the chat agent remembering "live music" from that question saves nothing', async () => {
+    let result;
+    const f = loadWithFakes({
+      onTurn: async (opts) => {
+        result = await opts.onRemember([{ kind: 'interest', fact: 'live music', they_said: 'playing at the Williams Center' }]);
+      },
+    });
+    try {
+      await f.send(Q);
+      assert.strictEqual(f.inserts.filter((i) => i.table === 'subscriber_facts').length, 0, 'no fact should be stored');
+      assert.deepStrictEqual(result.saved, []);
+      assert.ok(result.skipped.some((s) => /live music: not saved/.test(s)));
+    } finally { f.cleanup(); }
+  });
+
+  it('a real music ask is still saved', async () => {
+    const f = loadWithFakes({
+      onTurn: async (opts) => {
+        await opts.onRemember([{ kind: 'interest', fact: 'live music', they_said: 'any live bands' }]);
+      },
+    });
+    try {
+      await f.send('any live bands in Teaneck Saturday?');
+      const saved = f.inserts.filter((i) => i.table === 'subscriber_facts');
+      assert.strictEqual(saved.length, 1);
+      assert.strictEqual(saved[0].data.fact, 'live music');
+    } finally { f.cleanup(); }
+  });
+});
