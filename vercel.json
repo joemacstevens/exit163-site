@@ -3,7 +3,7 @@
   "outputDirectory": ".",
   "functions": {
     "api/sms.js": {
-      "maxDuration": 15
+      "maxDuration": 60
     },
     "api/sms-status.js": {
       "maxDuration": 15
@@ -13,12 +13,22 @@
     },
     "api/followup.js": {
       "maxDuration": 60
+    },
+    "api/claim.js": {
+      "maxDuration": 30
+    },
+    "api/review.js": {
+      "maxDuration": 60
     }
   },
   "rewrites": [
     {
       "source": "/privacy",
       "destination": "/privacy.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
     },
     {
       "source": "/holidays",
@@ -33,11 +43,19 @@
       "destination": "/claim.html"
     },
     {
+      "source": "/review",
+      "destination": "/review.html"
+    },
+    {
+      "source": "/read/:slug",
+      "destination": "/read/:slug.html"
+    },
+    {
       "source": "/mcp",
       "destination": "/api/mcp"
     },
     {
-      "source": "/((?!api/|llms\\.txt).*)",
+      "source": "/((?!api/|images/|llms\\.txt).*)",
       "destination": "/index.html"
     }
   ],
