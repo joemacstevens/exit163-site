@@ -12,6 +12,9 @@ const path = require('path');
 const { handleInbound } = require('../lib/conversation');
 const { db, q } = require('../lib/db');
 
+// Default timeout matches production (12s)
+const DEFAULT_TIMEOUT_MS = 12000;
+
 const scenarios = require(process.env.SCENARIOS ? path.resolve(process.env.SCENARIOS) : './scenarios.json');
 const only = process.argv.slice(2);
 const picked = only.length ? scenarios.filter((s) => only.includes(s.id)) : scenarios;
@@ -32,7 +35,7 @@ const picked = only.length ? scenarios.filter((s) => only.includes(s.id)) : scen
     for (const text of s.turns) {
       const t = Date.now();
       let r;
-      const timeout = Number(process.env.TEST_TIMEOUT_MS) || 12000;
+      const timeout = Number(process.env.TEST_TIMEOUT_MS) || DEFAULT_TIMEOUT_MS;
       try { r = await handleInbound({ phone, text, channel: 'test', dryRunNewsletter: true, timeoutMs: timeout }); }
       catch (e) { r = { reply: `ERROR: ${e.message}` }; }
       const secs = ((Date.now() - t) / 1000).toFixed(1);

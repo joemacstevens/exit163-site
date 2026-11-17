@@ -12,7 +12,37 @@ const PLACE_CATS = new Set(['food', 'family', 'nightlife', 'shopping', 'arts', '
 const YMD = /^\d{4}-\d{2}-\d{2}$/;
 const TODAY = new Date().toISOString().slice(0, 10);
 
-const str = (v, n = 500) => (v == null || v === '' ? null : String(v).trim().slice(0, n));
+// Smart string truncation that preserves important closure/exception sentences
+const str = (v, n = 500) => {
+  if (v == null || v === '') return null;
+  const s = String(v).trim();
+  if (s.length <= n) return s;
+  
+  // Check if there are closure/exception sentences that should be preserved
+  const CLOSURE_PATTERN = /\b(?:closed|except|excluding|cancel(?:led|s)?|no (?:show|event|market)s?|rain (?:cancels|date)|weather permitting)\b/i;
+  const sentences = s.split(/(?<=[.!?])\s+/);
+  
+  let truncated = s.slice(0, n);
+  const lastPeriod = truncated.lastIndexOf('.');
+  if (lastPeriod > 0) truncated = truncated.slice(0, lastPeriod + 1);
+  
+  // Find closure sentences that were cut off
+  const preservedLength = truncated.length;
+  const remainingSentences = sentences.filter(sent => {
+    const sentStart = s.indexOf(sent);
+    return sentStart >= preservedLength && CLOSURE_PATTERN.test(sent);
+  });
+  
+  // Append the first closure sentence if there's one and room
+  if (remainingSentences.length > 0) {
+    const closureSent = remainingSentences[0];
+    if (closureSent.length < 150 && truncated.length + closureSent.length + 1 <= n + 80) {
+      truncated += ' ' + closureSent;
+    }
+  }
+  
+  return truncated;
+};
 const arr = (v) => (Array.isArray(v) ? v.map((x) => String(x).toLowerCase().trim()).filter(Boolean).slice(0, 12) : []);
 const date = (v) => (YMD.test(String(v || '')) ? String(v) : null);
 const url = (v) => (/^https?:\/\//.test(String(v || '')) ? String(v).slice(0, 600) : null);

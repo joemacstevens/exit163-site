@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node --test test/**/*.test.js"
+    "test": "node --test test/search.test.js test/conversation.test.js test/agent.test.js test/import.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.6.0",
     "@supabase/supabase-js": "^2.119.0"
