@@ -67,7 +67,7 @@ describe('Agent - friend voice', () => {
   it('first-text greeting is in their own words, with no template to copy', () => {
     const d = describeProfile({ isNew: true });
     assert.match(d, /in your own words/);
-    assert.doesNotMatch(d, /Exit 163 here/);
+    assert.match(d, /no tagline or self-description/);
     assert.doesNotMatch(d, /Ooh|Oh nice/);
   });
 });
