@@ -3,7 +3,7 @@
   "outputDirectory": ".",
   "functions": {
     "api/sms.js": {
-      "maxDuration": 15
+      "maxDuration": 60
     },
     "api/sms-status.js": {
       "maxDuration": 15
@@ -19,6 +19,10 @@
     {
       "source": "/privacy",
       "destination": "/privacy.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
     },
     {
       "source": "/holidays",
@@ -41,7 +45,7 @@
       "destination": "/api/mcp"
     },
     {
-      "source": "/((?!api/|llms\\.txt).*)",
+      "source": "/((?!api/|images/|llms\\.txt).*)",
       "destination": "/index.html"
     }
   ],
