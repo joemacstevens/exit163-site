@@ -357,3 +357,34 @@ describe('Search - Requirements with cap', () => {
     assert.ok(reqs2.some(r => /cancel/i.test(r)), 'Should match cancelled (British spelling)');
   });
 });
+
+describe('Search - daily runs with a closure', () => {
+  const { dailySkips } = require(path.join(__dirname, '../lib/search'));
+  const { shapeEvent } = require(path.join(__dirname, '../lib/tools'));
+
+  it('finds the skipped day in a daily run, and nothing for weekly or split runs', () => {
+    assert.deepStrictEqual(dailySkips(['2026-11-22', '2026-11-23', '2026-11-24', '2026-11-25', '2026-11-27', '2026-11-28']), ['2026-11-26']);
+    assert.deepStrictEqual(dailySkips(['2026-11-22', '2026-11-23', '2026-11-24']), []);
+    assert.strictEqual(dailySkips(['2026-11-07', '2026-11-14', '2026-11-21']), null, 'weekly');
+    assert.strictEqual(dailySkips(['2026-11-07', '2026-11-08', '2026-11-14', '2026-11-15']), null, 'weekends');
+    assert.strictEqual(dailySkips(['2026-11-13', '2026-11-14', '2026-11-15', '2026-11-19', '2026-11-20', '2026-11-21']), null, 'two stretches');
+    assert.strictEqual(dailySkips(['2026-11-01', '2026-11-03', '2026-11-05', '2026-11-07']), null, 'alternate days');
+  });
+
+  it('shapes Paper Moon as daily Nov 22-28 except Thanksgiving', () => {
+    const row = { title: 'Paper Moon', town_slug: 'ridgewood', starts_on: '2026-11-22', ends_on: '2026-11-28',
+      recurrence_text: 'Daily Nov 22-28 (closed Thanksgiving)', tags: [], verified: true };
+    const out = shapeEvent(row, occurrences(row, '2026-11-17', '2026-12-31'));
+    assert.strictEqual(out.date, 'daily Sun, Nov 22 - Sat, Nov 28');
+    assert.strictEqual(out.except, 'Thu, Nov 26');
+    assert.strictEqual(out.when, 'Daily Nov 22-28 (closed Thanksgiving)');
+  });
+
+  it('leaves weekly listings as a list of dates with no except', () => {
+    const row = { title: 'Saturday Market', town_slug: 'ridgewood', starts_on: '2026-11-07', ends_on: '2026-12-19',
+      recurrence_text: 'Saturdays Nov 7-Dec 19', tags: [], verified: true };
+    const out = shapeEvent(row, occurrences(row, '2026-11-01', '2026-12-31'));
+    assert.match(out.date, /^Sat, Nov 7, Sat, Nov 14, Sat, Nov 21 \(\+\d+ more dates\)$/);
+    assert.strictEqual(out.except, undefined);
+  });
+});

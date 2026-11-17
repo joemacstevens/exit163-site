@@ -64,10 +64,21 @@ describe('Agent - friend voice', () => {
     assert.doesNotMatch(describeProfile({ firstName: 'Sam', priorReplies: 1 }), /may ask their name/);
   });
 
-  it('first-text greeting is in their own words, with no template to copy', () => {
+  it('first text reacts first and folds the intro in after, with no template to copy', () => {
     const d = describeProfile({ isNew: true });
-    assert.match(d, /in your own words/);
+    assert.match(d, /React to what they said or answer it first/);
+    assert.match(d, /Never make the name your opening words/);
     assert.match(d, /no tagline or self-description/);
-    assert.doesNotMatch(d, /Ooh|Oh nice/);
+    assert.match(d, /Use your own words/);
+    assert.doesNotMatch(d, /like "Exit 163 here"/, 'no single copyable opener');
+    assert.doesNotMatch(d, /Ooh|Oh nice|[Ss]adly|Unfortunately/);
+    // The example shapes never open with the name.
+    for (const ex of d.match(/"[^"]*Exit 163[^"]*"/g).filter((s) => !/Hi, it's/.test(s))) assert.doesNotMatch(ex, /^"(Exit 163|This is Exit|I'm Exit)/);
+  });
+
+  it('bans list lead-ins anywhere, and "every other day" unless it alternates', () => {
+    assert.match(SYSTEM, /never lead into a list with "here are a few", "here are some"/);
+    assert.match(SYSTEM, /daily Nov 22 to 28 except Thanksgiving/);
+    assert.match(SYSTEM, /Never say "every other day" unless the details say it alternates/);
   });
 });
