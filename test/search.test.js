@@ -377,16 +377,25 @@ describe('Search - daily runs with a closure', () => {
     const out = shapeEvent(row, occurrences(row, '2026-11-17', '2026-12-31'));
     assert.strictEqual(out.date, 'daily Sun, Nov 22 - Sat, Nov 28');
     assert.strictEqual(out.except, 'Thu, Nov 26');
-    assert.strictEqual(out.when, 'Daily Nov 22-28 (closed Thanksgiving)');
+    assert.strictEqual(out.when, 'daily Sun, Nov 22 - Sat, Nov 28, closed Thu, Nov 26');
+    assert.strictEqual(out.runs, undefined, 'one phrasing, folded into when');
+    assert.doesNotMatch(JSON.stringify(out), /Daily Nov 22-28 \(closed/);
   });
 
   it('still gives Paper Moon its daily run and except when asked about Thanksgiving alone', () => {
     const row = { title: 'Paper Moon', town_slug: 'ridgewood', starts_on: '2026-11-22', ends_on: '2026-11-28',
       recurrence_text: 'Daily Nov 22-28 (closed Thanksgiving)', tags: [], verified: true };
     const out = shapeEvent(row, occurrences(row, '2026-11-26', '2026-11-26'));
-    assert.strictEqual(out.runs, 'daily Sun, Nov 22 - Sat, Nov 28');
+    assert.strictEqual(out.when, 'daily Sun, Nov 22 - Sat, Nov 28, closed Thu, Nov 26');
     assert.strictEqual(out.except, 'Thu, Nov 26');
-    assert.strictEqual(out.when, 'Daily Nov 22-28 (closed Thanksgiving)');
+    assert.strictEqual(out.runs, undefined);
+    assert.doesNotMatch(JSON.stringify(out), /Daily Nov 22-28 \(closed/);
+  });
+
+  it('keeps the raw recurrence text for a weekly listing', () => {
+    const row = { title: 'Saturday Market', town_slug: 'ridgewood', starts_on: '2026-11-07', ends_on: '2026-12-19',
+      recurrence_text: 'Saturdays Nov 7-Dec 19', tags: [], verified: true };
+    assert.strictEqual(shapeEvent(row, occurrences(row, '2026-11-01', '2026-12-31')).when, 'Saturdays Nov 7-Dec 19');
   });
 
   it('leaves weekly listings as a list of dates with no except', () => {
@@ -395,5 +404,32 @@ describe('Search - daily runs with a closure', () => {
     const out = shapeEvent(row, occurrences(row, '2026-11-01', '2026-12-31'));
     assert.match(out.date, /^Sat, Nov 7, Sat, Nov 14, Sat, Nov 21 \(\+\d+ more dates\)$/);
     assert.strictEqual(out.except, undefined);
+  });
+});
+
+describe('Search - free events with no cost posted', () => {
+  const { shapeEvent, saysFree } = require(path.join(__dirname, '../lib/tools'));
+  const row = (title, description, cost_text = null) => ({ title, description, cost_text, town_slug: 'ridgewood', starts_on: '2026-11-20', tags: [], verified: true });
+
+  it('reads "free team trivia" as free', () => {
+    const out = shapeEvent(row('Joe Trivia at Five Dimes', 'Joe Trivia runs free team trivia every Thursday night.'));
+    assert.strictEqual(out.cost, 'free (per the details)');
+  });
+
+  it('reads free admission and "the program is free" as free', () => {
+    assert.ok(saysFree('Holiday Lights Walk', 'Free admission; bring a flashlight.'));
+    assert.ok(saysFree('Story Time', 'The program is free for all.'));
+    assert.ok(saysFree('Free Movie Night', null));
+  });
+
+  it('does not read gluten-free, sugar free or free parking as a free event', () => {
+    assert.strictEqual(shapeEvent(row('Cookie Decorating', 'Gluten-free cookies available.')).cost, 'not posted');
+    assert.strictEqual(shapeEvent(row('Cookie Decorating', 'Sugar free icing on request.')).cost, 'not posted');
+    assert.strictEqual(shapeEvent(row('Craft Fair', 'Free parking in the municipal lot.')).cost, 'not posted');
+    assert.strictEqual(shapeEvent(row('Craft Fair', 'Parking is free.')).cost, 'not posted');
+  });
+
+  it('keeps a posted cost as is', () => {
+    assert.strictEqual(shapeEvent(row('Trivia', 'free team trivia', '$5')).cost, '$5');
   });
 });

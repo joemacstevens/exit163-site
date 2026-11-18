@@ -72,13 +72,68 @@ describe('Agent - friend voice', () => {
     assert.match(d, /Use your own words/);
     assert.doesNotMatch(d, /like "Exit 163 here"/, 'no single copyable opener');
     assert.doesNotMatch(d, /Ooh|Oh nice|[Ss]adly|Unfortunately/);
-    // The example shapes never open with the name.
-    for (const ex of d.match(/"[^"]*Exit 163[^"]*"/g).filter((s) => !/Hi, it's/.test(s))) assert.doesNotMatch(ex, /^"(Exit 163|This is Exit|I'm Exit)/);
+    // The example shapes (quoted mid-sentence fragments) never open with the name.
+    const shapes = d.match(/"\.\.\.[^"]*Exit 163[^"]*"/g);
+    assert.ok(shapes.length >= 2);
+    for (const ex of shapes) assert.match(ex, /^"\.\.\.\s*\S/, `example ${ex} should follow other words`);
+  });
+
+  it('first-text intro is first person and bans third-person self-reference', () => {
+    const d = describeProfile({ isNew: true });
+    assert.match(d, /The intro is first person and plain: "I'm Exit 163" or "this is Exit 163"/);
+    assert.match(d, /never refer to Exit 163 in the third person/);
+    for (const w of ['"Exit 163 votes for"', '"Exit 163 has you covered"', '"Exit 163 can confirm"', '"Exit 163\'s pick"', '"Exit 163 approves"', '"Exit 163 would point you"', '"here at Exit 163"', '"you\'ve got Exit 163"']) {
+      assert.ok(d.includes(w), `should ban ${w}`);
+    }
+    assert.match(d, /Never comment on it being their first text/);
+  });
+
+  it('bans "sadly" and "the good news is" anywhere, not just as an opener', () => {
+    assert.match(SYSTEM, /"sadly", "unfortunately", "the good news is" and "the bad news is" are banned anywhere in a reply, not just as the first word/);
   });
 
   it('bans list lead-ins anywhere, and "every other day" unless it alternates', () => {
     assert.match(SYSTEM, /never lead into a list with "here are a few", "here are some"/);
     assert.match(SYSTEM, /daily Nov 22 to 28 except Thanksgiving/);
     assert.match(SYSTEM, /Never say "every other day" unless the details say it alternates/);
+  });
+
+  it('discourages "A few that stand out:" style list lead-ins', () => {
+    for (const w of ['"A few that stand out:"', '"a few standouts"', '"here\'s a quick taste"']) assert.ok(SYSTEM.includes(w), `should discourage ${w}`);
+  });
+
+  it('first-text intro gives no "by the way" example and asks for a varied shape', () => {
+    const d = describeProfile({ isNew: true });
+    assert.doesNotMatch(d, /\(Exit 163, by the way\)/);
+    for (const ex of d.match(/"[^"]*Exit 163[^"]*"/g)) assert.doesNotMatch(ex, /by the way|\bbtw\b/i, `example ${ex}`);
+    assert.match(d, /Don't introduce yourself with "by the way" or "btw"/);
+    assert.match(d, /never the same intro shape every time/);
+  });
+});
+
+describe('Agent - every-other-day guard', () => {
+  const { fixEveryOtherDay } = require('../lib/agent.js');
+  const paperMoon = { events: [{ title: 'Paper Moon', when: 'daily Sun, Nov 22 - Sat, Nov 28, closed Thu, Nov 26', except: 'Thu, Nov 26', about: 'A musical at the Williams Center.' }] };
+
+  it('rewrites to "every day except" when a result has a closed day', () => {
+    const r = fixEveryOtherDay('Paper Moon plays every other day from Sun Nov 22 to Sat Nov 28.', [paperMoon]);
+    assert.strictEqual(r, 'Paper Moon plays every day except Thu, Nov 26 from Sun Nov 22 to Sat Nov 28.');
+  });
+
+  it('rewrites to "every day" when no result has a closed day', () => {
+    const r = fixEveryOtherDay('Every other day through Sunday, 7pm.', [{ events: [{ title: 'Lights', when: 'Daily Nov 20-29' }] }]);
+    assert.strictEqual(r, 'Every day through Sunday, 7pm.');
+    assert.strictEqual(fixEveryOtherDay('It runs every other day.', []), 'It runs every day.');
+  });
+
+  it('leaves a genuinely alternating event alone', () => {
+    const alt = [{ events: [{ title: 'Pickup Soccer', when: 'Every other day, Nov 1-30' }] }];
+    assert.strictEqual(fixEveryOtherDay('Pickup Soccer runs every other day.', alt), 'Pickup Soccer runs every other day.');
+    const desc = [{ events: [{ title: 'Yoga', about: 'Classes alternate between the park and the library.' }] }];
+    assert.strictEqual(fixEveryOtherDay('Yoga is every other day.', desc), 'Yoga is every other day.');
+  });
+
+  it('leaves replies without the phrase untouched', () => {
+    assert.strictEqual(fixEveryOtherDay('Daily Nov 22 to 28, closed Thanksgiving.', [paperMoon]), 'Daily Nov 22 to 28, closed Thanksgiving.');
   });
 });
