@@ -12,6 +12,58 @@ const PLACE_CATS = new Set(['food', 'family', 'nightlife', 'shopping', 'arts', '
 const YMD = /^\d{4}-\d{2}-\d{2}$/;
 const TODAY = new Date().toISOString().slice(0, 10);
 
+// Helper for smart truncation that preserves closure/exception sentences
+const CLOSURE_PATTERN = /\b(?:closed|except|excluding|cancell?ed|cancels?|no (?:show|event|market)s?|rain (?:cancels|date)|weather permitting)\b/i;
+
+function smartTruncate(text, limit) {
+  if (!text) return null;
+  text = String(text).trim();
+  if (!text) return null;
+  if (text.length <= limit) return text;
+  
+  // Split into sentences, avoiding abbreviations (p.m., a.m., St., Dr., etc.)
+  const sentences = text.split(/(?<=[.!?])(?<!\b[ap]\.m\.)(?<!\bSt\.)(?<!\bDr\.)(?<!\bMr\.)(?<!\bMs\.)(?<!\bMrs\.)\s+/);
+  
+  let truncated = text.slice(0, limit);
+  
+  // Only cut at sentence boundary if it keeps at least 80% of the limit
+  // AND don't cut right at an abbreviation near the end
+  let sentenceCutPoint = truncated.lastIndexOf('. ');
+  // Check if the cut point is at 'St. ' or similar
+  if (sentenceCutPoint > 0 && sentenceCutPoint < truncated.length - 2) {
+    const beforePeriod = truncated.slice(Math.max(0, sentenceCutPoint - 4), sentenceCutPoint);
+    if (/\b(?:St|Dr|Mr|Ms|Mrs|Ave|Blvd)$/i.test(beforePeriod)) {
+      // Find previous sentence boundary
+      const prevCut = truncated.lastIndexOf('. ', sentenceCutPoint - 1);
+      if (prevCut > limit * 0.8) {
+        sentenceCutPoint = prevCut;
+      }
+    }
+  }
+  
+  if (sentenceCutPoint > limit * 0.8 && sentenceCutPoint > 0) {
+    truncated = truncated.slice(0, sentenceCutPoint + 1);
+  }
+  
+  // Find closure sentences that were cut off
+  const preservedLength = truncated.length;
+  const remainingSentences = sentences.filter(sent => {
+    const sentStart = text.indexOf(sent, preservedLength);
+    return sentStart >= preservedLength && sentStart !== -1 && CLOSURE_PATTERN.test(sent);
+  });
+  
+  // Append the first closure sentence if there's one and room
+  if (remainingSentences.length > 0) {
+    const closureSent = remainingSentences[0].trim();
+    if (closureSent.length < 150 && truncated.length + closureSent.length + 1 <= limit + 80) {
+      truncated += ' ' + closureSent;
+    }
+  }
+  
+  return truncated.trim();
+}
+
+// Simple string truncation (for non-description fields)
 const str = (v, n = 500) => (v == null || v === '' ? null : String(v).trim().slice(0, n));
 const arr = (v) => (Array.isArray(v) ? v.map((x) => String(x).toLowerCase().trim()).filter(Boolean).slice(0, 12) : []);
 const date = (v) => (YMD.test(String(v || '')) ? String(v) : null);
@@ -32,7 +84,7 @@ function cleanEvent(e, batch) {
       title: str(e.title, 200), town_slug: town, location: str(e.location, 300),
       category: EVENT_CATS.has(e.category) ? e.category : 'other', tags: arr(e.tags),
       starts_on: starts, ends_on: ends && ends !== starts ? ends : null, recurrence_text: str(e.recurrence_text, 120),
-      time_text: str(e.time_text, 120), cost_text: str(e.cost_text, 120), description: str(e.description, 600),
+      time_text: str(e.time_text, 120), cost_text: str(e.cost_text, 120), description: smartTruncate(e.description, 600),
       source_url: url(e.source_url), verified: e.verified === true, origin: 'research', research_batch: batch,
     },
   };
