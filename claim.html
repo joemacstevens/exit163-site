@@ -193,7 +193,7 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; }
 }
 @media (max-width: 560px) { .claim-row { grid-template-columns: 1fr; } }
 </style>
-<script src="/meta-pixel.js"></script>
+<script src="/ga.js"></script><script src="/meta-pixel.js"></script>
 </head>
 <body>
 <header class="wrap nav">
@@ -277,6 +277,7 @@ document.getElementById('c-town').innerHTML = '<option value="">Choose your town
       bad.focus();
       return fail(bad.type === 'email' && bad.value ? "That email doesn't look right. Check it and try again." : 'Fill in your business, town, name and email so we can reach you.');
     }
+    if (window.gtag) window.gtag('event', 'claim_listing_start', { town: form.querySelector('#c-town')?.value || '' });
     const btn = form.querySelector('button');
     btn.disabled = true;
     try {
