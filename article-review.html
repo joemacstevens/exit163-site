@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Review - Exit 163</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    header {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    
+    .subtitle {
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .auth-form {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: 40px auto;
+    }
+    
+    .auth-form h2 {
+      margin-bottom: 20px;
+    }
+    
+    .auth-form input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    
+    .auth-form button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    .auth-form button:hover {
+      background: #0056b3;
+    }
+    
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .stat-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .stat-number {
+      font-size: 32px;
+      font-weight: bold;
+      color: #007bff;
+    }
+    
+    .stat-label {
+      color: #666;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    
+    .section {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    
+    .draft-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 15px;
+      background: #fafafa;
+    }
+    
+    .draft-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 15px;
+    }
+    
+    .draft-meta {
+      flex: 1;
+    }
+    
+    .draft-headline {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    
+    .draft-info {
+      font-size: 13px;
+      color: #666;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    
+    .badge-high { background: #d4edda; color: #155724; }
+    .badge-medium { background: #fff3cd; color: #856404; }
+    .badge-low { background: #f8d7da; color: #721c24; }
+    
+    .draft-body {
+      margin: 15px 0;
+      padding: 15px;
+      background: white;
+      border-left: 3px solid #007bff;
+      line-height: 1.7;
+    }
+    
+    .draft-sources {
+      font-size: 13px;
+      color: #666;
+      margin: 10px 0;
+    }
+    
+    .draft-sources a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    
+    .draft-sources a:hover {
+      text-decoration: underline;
+    }
+    
+    .unconfirmed {
+      background: #fff3cd;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      margin: 10px 0;
+    }
+    
+    .draft-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    
+    .btn-approve {
+      background: #28a745;
+      color: white;
+    }
+    
+    .btn-approve:hover {
+      background: #218838;
+    }
+    
+    .btn-reject {
+      background: #dc3545;
+      color: white;
+    }
+    
+    .btn-reject:hover {
+      background: #c82333;
+    }
+    
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 40px;
+      color: #999;
+    }
+    
+    .article-item {
+      padding: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .article-item:last-child {
+      border-bottom: none;
+    }
+    
+    .article-headline {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .article-meta {
+      font-size: 13px;
+      color: #666;
+    }
+    
+    .error {
+      background: #f8d7da;
+      color: #721c24;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="authSection" class="auth-form">
+      <h2>Article Review Login</h2>
+      <input type="password" id="tokenInput" placeholder="Enter admin token">
+      <button onclick="authenticate()">Login</button>
+      <div id="authError" class="error hidden"></div>
+    </div>
+    
+    <div id="mainContent" class="hidden">
+      <header>
+        <h1>Article Review</h1>
+        <p class="subtitle">Exit 163 Article Pipeline - Approve or reject AI-generated drafts</p>
+      </header>
+      
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number" id="pendingCount">0</div>
+          <div class="stat-label">Pending Drafts</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="needsCheckCount">0</div>
+          <div class="stat-label">Need a Manual Check</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="recentCount">0</div>
+          <div class="stat-label">Recent Articles</div>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2>Pending Drafts</h2>
+        <div id="pendingDrafts"></div>
+      </div>
+      
+      <div class="section">
+        <h2>Needs a Manual Check</h2>
+        <p class="subtitle">Not written up: the pipeline could not find a second source. Check them yourself or dismiss.</p>
+        <div id="needsCheckDrafts"></div>
+      </div>
+      
+      <div class="section">
+        <h2>Recently Published</h2>
+        <div id="recentArticles"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let token = localStorage.getItem('exit163_admin_token');
+    
+    function authenticate() {
+      const inputToken = document.getElementById('tokenInput').value;
+      if (!inputToken) {
+        showAuthError('Please enter a token');
+        return;
+      }
+      
+      token = inputToken;
+      localStorage.setItem('exit163_admin_token', token);
+      checkAuthAndLoad();
+    }
+    
+    function showAuthError(message) {
+      const errorDiv = document.getElementById('authError');
+      errorDiv.textContent = message;
+      errorDiv.classList.remove('hidden');
+    }
+    
+    async function checkAuthAndLoad() {
+      try {
+        const response = await fetch('/api/article-review', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        
+        if (!response.ok) {
+          if (response.status === 401) {
+            showAuthError('Invalid token');
+            return;
+          }
+          throw new Error('Failed to load data');
+        }
+        
+        const data = await response.json();
+        
+        document.getElementById('authSection').classList.add('hidden');
+        document.getElementById('mainContent').classList.remove('hidden');
+        
+        renderData(data);
+      } catch (error) {
+        showAuthError('Error: ' + error.message);
+      }
+    }
+    
+    function renderData(data) {
+      document.getElementById('pendingCount').textContent = data.pending.length;
+      document.getElementById('recentCount').textContent = data.recent.length;
+      
+      const needsCheck = data.needsCheck || [];
+      document.getElementById('needsCheckCount').textContent = needsCheck.length;
+      
+      const pendingDiv = document.getElementById('pendingDrafts');
+      const needsCheckDiv = document.getElementById('needsCheckDrafts');
+      const recentDiv = document.getElementById('recentArticles');
+      
+      if (needsCheck.length === 0) {
+        needsCheckDiv.innerHTML = '<div class="empty-state">Nothing waiting</div>';
+      } else {
+        needsCheckDiv.innerHTML = needsCheck.map(renderNeedsCheck).join('');
+      }
+      
+      if (data.pending.length === 0) {
+        pendingDiv.innerHTML = '<div class="empty-state">No pending drafts</div>';
+      } else {
+        pendingDiv.innerHTML = data.pending.map(renderDraft).join('');
+      }
+      
+      if (data.recent.length === 0) {
+        recentDiv.innerHTML = '<div class="empty-state">No recent articles</div>';
+      } else {
+        recentDiv.innerHTML = data.recent.map(renderArticle).join('');
+      }
+    }
+    
+    // Everything on a draft comes from a feed or the model, so nothing goes into the page raw:
+    // text is escaped (quotes too, for attributes) and links must be plain http(s).
+    const CONFIDENCE = ['high', 'medium', 'low'];
+    
+    function safeUrl(url) {
+      return /^https?:\/\//i.test(String(url || '')) ? escapeHtml(url) : '#';
+    }
+    
+    function renderDraft(draft) {
+      const confidence = CONFIDENCE.includes(draft.confidence) ? draft.confidence : 'low';
+      const unconfirmed = Array.isArray(draft.unconfirmed_items) ? draft.unconfirmed_items : [];
+      const id = Number(draft.id);
+      
+      return `
+        <div class="draft-card" id="draft-${id}">
+          <div class="draft-header">
+            <div class="draft-meta">
+              <div class="draft-headline">${escapeHtml(draft.headline)}</div>
+              <div class="draft-info">
+                <span>${escapeHtml(draft.town_slug)}</span>
+                <span>${escapeHtml(draft.category)}</span>
+                <span class="badge badge-${confidence}">${confidence} confidence</span>
+                <span>${new Date(draft.created_at).toLocaleDateString()}</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="draft-body">${escapeHtml(draft.body)}</div>
+          
+          <div class="draft-sources">
+            <strong>Source:</strong> <a href="${safeUrl(draft.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(draft.source_url)}</a>
+            ${draft.entity_link ? `<br><strong>Business link:</strong> <a href="${safeUrl(draft.entity_link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(draft.entity_link)}</a>` : ''}
+            ${draft.second_source_url ? `<br><strong>Second source:</strong> <a href="${safeUrl(draft.second_source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(draft.second_source_url)}</a>` : ''}
+          </div>
+          
+          ${unconfirmed.length > 0 ? `
+            <div class="unconfirmed">
+              <strong>⚠️ Unconfirmed:</strong> ${unconfirmed.map(escapeHtml).join(', ')}
+            </div>
+          ` : ''}
+          
+          <div class="draft-actions">
+            <button class="btn btn-approve" onclick="approveDraft(${id})">✓ Approve & Publish</button>
+            <button class="btn btn-reject" onclick="rejectDraft(${id})">✗ Reject</button>
+          </div>
+        </div>
+      `;
+    }
+    
+    function renderNeedsCheck(draft) {
+      const id = Number(draft.id);
+      
+      return `
+        <div class="draft-card" id="draft-${id}">
+          <div class="draft-header">
+            <div class="draft-meta">
+              <div class="draft-headline">${escapeHtml(draft.headline)}</div>
+              <div class="draft-info">
+                <span>${escapeHtml(draft.town_slug)}</span>
+                <span>${new Date(draft.created_at).toLocaleDateString()}</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="draft-sources">
+            <strong>Source:</strong> <a href="${safeUrl(draft.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(draft.source_url)}</a>
+            ${draft.entity_link ? `<br><strong>Business link:</strong> <a href="${safeUrl(draft.entity_link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(draft.entity_link)}</a>` : ''}
+          </div>
+          
+          <div class="draft-actions">
+            <button class="btn btn-reject" onclick="rejectDraft(${id})">✗ Dismiss</button>
+          </div>
+        </div>
+      `;
+    }
+    
+    function renderArticle(article) {
+      return `
+        <div class="article-item">
+          <div class="article-headline">${escapeHtml(article.headline)}</div>
+          <div class="article-meta">
+            ${escapeHtml(article.town_slug)} • ${escapeHtml(article.category)} • 
+            Published ${new Date(article.published_at).toLocaleDateString()}
+          </div>
+        </div>
+      `;
+    }
+    
+    async function approveDraft(draftId) {
+      if (!confirm('Approve and publish this article?')) return;
+      
+      const card = document.getElementById(`draft-${draftId}`);
+      const buttons = card.querySelectorAll('button');
+      buttons.forEach(btn => btn.disabled = true);
+      
+      try {
+        const response = await fetch('/api/article-review', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            action: 'approve',
+            draft_id: draftId,
+            reviewed_by: 'admin'
+          })
+        });
+        
+        if (!response.ok) throw new Error('Failed to approve');
+        
+        card.style.background = '#d4edda';
+        setTimeout(() => location.reload(), 1000);
+      } catch (error) {
+        alert('Error: ' + error.message);
+        buttons.forEach(btn => btn.disabled = false);
+      }
+    }
+    
+    async function rejectDraft(draftId) {
+      const reason = prompt('Reason for rejection (optional):');
+      if (reason === null) return;
+      
+      const card = document.getElementById(`draft-${draftId}`);
+      const buttons = card.querySelectorAll('button');
+      buttons.forEach(btn => btn.disabled = true);
+      
+      try {
+        const response = await fetch('/api/article-review', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            action: 'reject',
+            draft_id: draftId,
+            reviewed_by: 'admin',
+            reason: reason || 'No reason provided'
+          })
+        });
+        
+        if (!response.ok) throw new Error('Failed to reject');
+        
+        card.style.background = '#f8d7da';
+        setTimeout(() => location.reload(), 1000);
+      } catch (error) {
+        alert('Error: ' + error.message);
+        buttons.forEach(btn => btn.disabled = false);
+      }
+    }
+    
+    function escapeHtml(text) {
+      return String(text ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+    
+    // Initialize
+    if (token) {
+      checkAuthAndLoad();
+    }
+  </script>
+</body>
+</html>

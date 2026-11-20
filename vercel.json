@@ -14,6 +14,12 @@
     "api/followup.js": {
       "maxDuration": 60
     },
+    "api/article-pipeline.js": {
+      "maxDuration": 300
+    },
+    "api/article-review.js": {
+      "maxDuration": 30
+    },
     "api/claim.js": {
       "maxDuration": 30
     },
@@ -43,6 +49,10 @@
       "destination": "/claim.html"
     },
     {
+      "source": "/article-review",
+      "destination": "/article-review.html"
+    },
+    {
       "source": "/review",
       "destination": "/review.html"
     },
@@ -60,6 +70,10 @@
     }
   ],
   "crons": [
+    {
+      "path": "/api/article-pipeline",
+      "schedule": "0 6 * * *"
+    },
     {
       "path": "/api/reflect",
       "schedule": "0 8 * * *"
