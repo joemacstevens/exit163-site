@@ -11,6 +11,7 @@ const { readBody } = require('../lib/http');
 const { db, q } = require('../lib/db');
 const { sendSms } = require('../lib/twilio');
 const { hourNJ } = require('../lib/dates');
+const { hasConsent } = require('../lib/consent');
 
 const FOOTER = '\nReply STOP to opt out.';
 const YMD = /^\d{4}-\d{2}-\d{2}$/;
@@ -35,7 +36,16 @@ module.exports = async (req, res) => {
   if (issueDate && !YMD.test(issueDate)) return res.status(400).json({ ok: false, error: 'issue_date must be YYYY-MM-DD' });
   const dryRun = b.dry_run !== false;
 
-  const recipients = await q(db().from('sms_users').select('phone').eq('blast_opt_in', true).eq('opted_out', false));
+  const allRecipients = await q(db().from('sms_users').select('phone').eq('blast_opt_in', true).eq('opted_out', false));
+  
+  // Filter to only users with consent records (TFV compliance)
+  const recipients = [];
+  for (const r of allRecipients) {
+    if (await hasConsent(r.phone)) {
+      recipients.push(r);
+    }
+  }
+  
   const picks = new Map();
   if (issueDate) {
     for (const r of await q(db().from('personal_picks').select('phone,line').eq('issue_date', issueDate))) picks.set(r.phone, r.line);

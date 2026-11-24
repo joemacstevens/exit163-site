@@ -13,6 +13,7 @@ const { readBody } = require('../lib/http');
 const { EMAIL_RE, addSubscriber, sendWelcome } = require('../lib/newsletter');
 const { db, q } = require('../lib/db');
 const { sendSms } = require('../lib/twilio');
+const { logConsent } = require('../lib/consent');
 
 const CONFIRM_TEXT = "Exit 163 here, your Bergen County local agent. Reply JOIN to confirm and get the Friday marketing text (about 1 msg/wk), plus answers whenever you text me. Msg & data rates may apply. Reply HELP for help, STOP to cancel.";
 const RESEND_WINDOW_MS = 24 * 3600e3; // at most one confirmation text per number per day
@@ -31,7 +32,7 @@ function displayNumber() {
   return { e164: n, pretty: `(${n.slice(2, 5)}) ${n.slice(5, 8)}-${n.slice(8)}` };
 }
 
-async function joinPhone(phone, email) {
+async function joinPhone(phone, email, consentData) {
   const existing = await q(db().from('sms_users').select('*').eq('phone', phone).maybeSingle());
   if (existing?.opted_out) return { status: 'opted_out' };
   if (existing?.blast_opt_in) return { status: 'already' };
@@ -45,6 +46,18 @@ async function joinPhone(phone, email) {
   const recent = await q(db().from('sms_messages').select('id').eq('phone', phone)
     .eq('direction', 'out').eq('body', CONFIRM_TEXT).gte('created_at', since).limit(1));
   if (recent.length) return { status: 'sent' }; // already pending; don't re-text
+
+  // Log consent before sending SMS
+  await logConsent({
+    phone,
+    method: 'web_form',
+    source: consentData.source || 'unknown',
+    eventType: 'initial_consent',
+    disclosureText: consentData.disclosureText || null,
+    consentVersion: consentData.consentVersion || null,
+    ipAddress: consentData.ipAddress || null,
+    userAgent: consentData.userAgent || null,
+  });
 
   await sendSms(phone, CONFIRM_TEXT);
   await q(db().from('sms_messages').insert({ phone, direction: 'out', body: CONFIRM_TEXT })).catch(() => {});
@@ -70,6 +83,15 @@ module.exports = async (req, res) => {
   const phone = rawPhone ? toE164(rawPhone) : null;
   if (rawPhone && !phone) return res.status(400).json({ ok: false, field: 'phone', error: 'Use a 10-digit US mobile number.' });
 
+  // Server-side consent enforcement: reject phone signups without explicit consent
+  if (phone && body.consent !== true) {
+    return res.status(400).json({ 
+      ok: false, 
+      field: 'phone', 
+      error: 'Please check the box to agree to receive marketing texts.' 
+    });
+  }
+
   const out = { ok: true, email: null, phone: null };
   const jobs = [];
   if (email) {
@@ -81,7 +103,14 @@ module.exports = async (req, res) => {
       .catch((e) => { console.error('join email failed', e); out.email = 'error'; }));
   }
   if (phone) {
-    jobs.push(joinPhone(phone, email)
+    const consentData = {
+      source: body.source || 'unknown',
+      disclosureText: body.disclosure_text || body.disclosureText || null,
+      consentVersion: body.consent_version || body.consentVersion || null,
+      ipAddress: req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket?.remoteAddress || null,
+      userAgent: req.headers['user-agent'] || null,
+    };
+    jobs.push(joinPhone(phone, email, consentData)
       .then((r) => { out.phone = r.status; })
       .catch((e) => { console.error('join phone failed', e); out.phone = 'error'; }));
   }
