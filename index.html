@@ -421,16 +421,17 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; }
       <form class="ex-join" id="join-h" novalidate>
         <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="sr">
         <div class="ex-join__row">
-          <div class="ex-field"><input id="h-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(201) 555-0163" aria-describedby="h-fine"><label for="h-phone">Your mobile</label></div>
+          <div class="ex-field"><input id="h-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(201) 555-0163" aria-describedby="h-consent"><label for="h-phone">Your mobile</label></div>
           <button class="ex-btn ex-btn--primary" type="submit"><span class="label">Start texting</span> <span class="ex-arrow" aria-hidden="true">&rarr;</span></button>
         </div>
         <div class="ex-field" id="h-email-wrap" data-email-wrap hidden><input id="h-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com"><label for="h-email">Email · the Friday letter</label></div>
         <button class="ex-join__more" type="button" aria-expanded="false" aria-controls="h-email-wrap">Add email for the Friday letter</button>
         <p class="ex-join__err" role="status" aria-live="polite"></p>
-        <p class="ex-join__fine" id="h-fine">Free. By adding your number you agree to get recurring automated texts from Exit163 (about 1 a week, plus replies when you text it). Consent isn&rsquo;t a condition of anything. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>.</p>
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-top:4px"><input type="checkbox" id="h-consent" name="consent" required style="margin-top:3px;flex-shrink:0"><label for="h-consent" class="ex-join__fine" style="margin:0;cursor:pointer">By providing your number and checking this box, you agree to receive recurring automated marketing texts from Exit 163 (about 1 message/week, plus replies when you text us). Msg &amp; data rates may apply. Consent is not a condition of any purchase. Reply STOP to cancel, HELP for help. <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>.</label></div>
         <div class="join-done" tabindex="-1"></div>
       </form>
-      <p class="hero-alt"><span data-textline-wrap hidden>On your phone? <a data-textline href="#">Text JOIN to <span data-textline-num></span></a> · </span>Or follow <a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">@exit.163</a></p>
+      <p class="hero-alt" style="margin-top:16px;line-height:1.5"><strong>Or text JOIN to (888) 814-6536</strong><br><span style="font-size:13px">Recurring automated marketing texts from Exit 163 (~1 msg/week). Msg &amp; data rates may apply. Consent not a condition of purchase. Reply STOP to cancel, HELP for help. <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>.</span></p>
+      <p class="hero-alt">Or follow <a href="https://www.instagram.com/exit.163/" target="_blank" rel="noopener">@exit.163</a> on Instagram</p>
     </div>
 
     <div class="convo" role="img" aria-label="Example conversation: someone asks what's up tonight with three friends and the game on. Exit163 checks spots near Hackensack, recommends a verified bar with a deal, and offers to text a heads-up at 6 if it gets packed.">
@@ -614,13 +615,13 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; }
     <form class="ex-join" id="join-f" novalidate>
         <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="sr">
         <div class="ex-join__row">
-          <div class="ex-field"><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(201) 555-0163" aria-describedby="f-fine"><label for="f-phone">Your mobile</label></div>
+          <div class="ex-field"><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(201) 555-0163" aria-describedby="f-consent"><label for="f-phone">Your mobile</label></div>
           <button class="ex-btn ex-btn--primary" type="submit"><span class="label">Start texting</span> <span class="ex-arrow" aria-hidden="true">&rarr;</span></button>
         </div>
         <div class="ex-field" id="f-email-wrap" data-email-wrap hidden><input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com"><label for="f-email">Email · the Friday letter</label></div>
         <button class="ex-join__more" type="button" aria-expanded="false" aria-controls="f-email-wrap">Add email for the Friday letter</button>
         <p class="ex-join__err" role="status" aria-live="polite"></p>
-        <p class="ex-join__fine" id="f-fine">Free. By adding your number you agree to get recurring automated texts from Exit163 (about 1 a week, plus replies when you text it). Consent isn&rsquo;t a condition of anything. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>.</p>
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-top:4px"><input type="checkbox" id="f-consent" name="consent" required style="margin-top:3px;flex-shrink:0"><label for="f-consent" class="ex-join__fine" style="margin:0;cursor:pointer">By providing your number and checking this box, you agree to receive recurring automated marketing texts from Exit 163 (about 1 message/week, plus replies when you text us). Msg &amp; data rates may apply. Consent is not a condition of any purchase. Reply STOP to cancel, HELP for help. <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>.</label></div>
         <div class="join-done" tabindex="-1"></div>
       </form>
   </div>
@@ -828,7 +829,9 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; }
       e.preventDefault();
       msg.textContent = '';
       var p = phone.value.trim(), m = email.value.trim();
+      var consent = form.querySelector('input[name=consent]');
       if (!p && !m) return err('Add your mobile number, your email, or both.', phone);
+      if (p && consent && !consent.checked) return err('Please check the box to agree to receive marketing texts.', phone);
       var badP = p && !validPhone(p), badM = m && !validEmail(m);
       if (badP && badM) { email.parentNode.classList.add('is-bad'); return err('Check both: use a 10-digit US mobile and a real email.', phone); }
       if (badP) return err('That number doesn’t look right. Use a 10-digit US mobile.', phone);
