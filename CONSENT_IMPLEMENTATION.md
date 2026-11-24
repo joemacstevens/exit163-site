@@ -15,6 +15,12 @@ This PR implements server-side consent enforcement and proof-of-consent logging 
 **New column: `sms_users.consent_logged_at`**
 - Tracks when consent was last logged for quick filtering
 
+**Automatic backfill:**
+- Migration includes idempotent backfill of existing `blast_opt_in` users
+- Skips phones that already have an `initial_consent` record
+- Uses method='keyword', source='BACKFILL', consent_version='backfill-pre-2026-11-24'
+- One SQL file does everything
+
 ### 2. Consent Logging Module (`lib/consent.js`)
 
 New helper functions:
@@ -37,6 +43,12 @@ New helper functions:
 - User agent
 - Timestamp (UTC)
 
+**Fail-safe:** If consent logging fails (e.g., table doesn't exist yet):
+- Logs error to console
+- **Still requires consent: true**
+- Continues signup (doesn't 500 the user)
+- This allows deployment before migration
+
 ### 4. Keyword Opt-In Logging (`lib/conversation.js`)
 
 Now logs consent for:
@@ -51,7 +63,9 @@ Each event creates a `consent_log` record with the keyword as the source.
 **Breaking change:** Friday blast now only sends to recipients who:
 - Have `blast_opt_in = true`
 - Have `opted_out = false`
-- **AND have at least one consent record** (checked via `hasConsent()`)
+- **AND have at least one consent record** (single query, no N+1)
+
+**Optimized:** Uses one query to fetch all consented phones, then filters in memory (not N+1 loop)
 
 This ensures only consented users receive marketing texts.
 
@@ -83,47 +97,38 @@ New test coverage:
 
 ### Before Merge
 
-1. **Apply the migration:**
+1. **Run tests:**
+   ```bash
+   npm test
+   ```
+   All tests should pass, including the new `consent.test.js`.
+
+2. **Apply the migration:**
    ```bash
    # Connect to your Supabase database
    psql $DATABASE_URL < db/migrations/2026-11-24-consent-log.sql
    ```
+   
+   This creates the table, adds the column, **AND backfills existing opt-ins automatically**.
 
-2. **Verify the migration:**
+3. **Verify the migration:**
    ```sql
-   -- Check table exists
-   SELECT * FROM consent_log LIMIT 1;
+   -- Check table exists and has backfilled data
+   SELECT event_type, method, source, COUNT(*) 
+   FROM consent_log 
+   GROUP BY event_type, method, source;
+   
+   -- Should see: initial_consent | keyword | BACKFILL | <count>
    
    -- Check new column exists
    SELECT consent_logged_at FROM sms_users LIMIT 1;
-   ```
-
-3. **Run tests:**
-   ```bash
-   npm test -- consent.test.js
    ```
 
 4. **Review front-end changes** in `index.html` - ensure the consent checkbox is working and sending data correctly
 
 ### After Merge
 
-1. **Backfill existing opt-ins (optional but recommended):**
-   ```sql
-   -- Log consent for existing blast_opt_in users
-   INSERT INTO consent_log (phone, method, source, event_type, created_at)
-   SELECT 
-     phone, 
-     'keyword' as method,
-     'BACKFILL' as source,
-     'initial_consent' as event_type,
-     opt_in_at
-   FROM sms_users 
-   WHERE blast_opt_in = true 
-     AND opted_out = false
-     AND opt_in_at IS NOT NULL;
-   ```
-
-2. **Monitor consent logging:**
+1. **Monitor consent logging:**
    ```sql
    -- Check recent consent events
    SELECT 
@@ -141,7 +146,7 @@ New test coverage:
 3. **Verify blast filtering works:**
    - Run a dry-run blast: `POST /api/blast` with `dry_run: true`
    - Check the recipient count matches users with consent records
-   - If the count drops unexpectedly, run the backfill query above
+   - Should match since migration includes automatic backfill
 
 ## Breaking Changes
 
@@ -152,8 +157,8 @@ New test coverage:
 
 ### For Weekly Blast
 - **Before:** Sent to all `blast_opt_in = true` users
-- **After:** Only sends to users with `hasConsent() === true`
-- **Impact:** Users without consent records will be skipped (run backfill query to fix)
+- **After:** Only sends to users with consent records
+- **Impact:** None (migration includes automatic backfill)
 
 ## Environment Variables
 
@@ -174,7 +179,7 @@ If you need to rollback:
 
 3. **Temporarily disable consent check in api/blast.js:**
    ```javascript
-   // Comment out the hasConsent filter
+   // Comment out the consent filter
    const recipients = allRecipients;
    ```
 
@@ -202,7 +207,10 @@ After this is deployed and tested, you can submit for Twilio toll-free verificat
   Because Twilio wants proof of the double opt-in flow. Web forms create `initial_consent`, then when user replies JOIN, we log `double_optin_confirm`.
 
 - **What if someone opts in via keyword but we don't have their IP?**  
-  That's fine - keyword opt-ins don't require IP/UA. The inbound SMS itself is proof (we could log the MessageSid if Twilio provides it).
+  That's fine - keyword opt-ins don't require IP/UA. The inbound SMS itself is proof.
+
+- **What happens if I deploy before running the migration?**  
+  Fail-safe: consent logging errors are caught and logged, but signup continues. The server still enforces `consent: true` requirement. Run the migration ASAP to start capturing records.
 
 - **Can I delete old consent records?**  
   **NO.** Never delete consent_log records. This is your legal proof-of-consent for Twilio audits.

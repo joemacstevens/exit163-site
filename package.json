@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node --test test/search.test.js test/conversation.test.js test/agent.test.js test/import.test.js"
+    "test": "node --test test/search.test.js test/conversation.test.js test/agent.test.js test/import.test.js test/consent.test.js"
   },
   "keywords": [],
   "author": "",

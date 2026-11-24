@@ -11,7 +11,6 @@ const { readBody } = require('../lib/http');
 const { db, q } = require('../lib/db');
 const { sendSms } = require('../lib/twilio');
 const { hourNJ } = require('../lib/dates');
-const { hasConsent } = require('../lib/consent');
 
 const FOOTER = '\nReply STOP to opt out.';
 const YMD = /^\d{4}-\d{2}-\d{2}$/;
@@ -39,12 +38,15 @@ module.exports = async (req, res) => {
   const allRecipients = await q(db().from('sms_users').select('phone').eq('blast_opt_in', true).eq('opted_out', false));
   
   // Filter to only users with consent records (TFV compliance)
-  const recipients = [];
-  for (const r of allRecipients) {
-    if (await hasConsent(r.phone)) {
-      recipients.push(r);
-    }
-  }
+  // Single query instead of N+1 loop
+  const consentedPhones = await q(
+    db()
+      .from('consent_log')
+      .select('phone')
+      .eq('event_type', 'initial_consent')
+  );
+  const consentedSet = new Set(consentedPhones.map(r => r.phone));
+  const recipients = allRecipients.filter(r => consentedSet.has(r.phone));
   
   const picks = new Map();
   if (issueDate) {

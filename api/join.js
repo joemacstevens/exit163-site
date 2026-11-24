@@ -47,7 +47,7 @@ async function joinPhone(phone, email, consentData) {
     .eq('direction', 'out').eq('body', CONFIRM_TEXT).gte('created_at', since).limit(1));
   if (recent.length) return { status: 'sent' }; // already pending; don't re-text
 
-  // Log consent before sending SMS
+  // Log consent before sending SMS (fail-safe: log error but don't block signup)
   await logConsent({
     phone,
     method: 'web_form',
@@ -57,6 +57,8 @@ async function joinPhone(phone, email, consentData) {
     consentVersion: consentData.consentVersion || null,
     ipAddress: consentData.ipAddress || null,
     userAgent: consentData.userAgent || null,
+  }).catch((e) => {
+    console.error('consent log failed (continuing signup)', e.message);
   });
 
   await sendSms(phone, CONFIRM_TEXT);

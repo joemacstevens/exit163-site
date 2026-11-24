@@ -359,9 +359,9 @@ describe('Compliance texts are unchanged', () => {
       "const START_WORDS = ['START', 'UNSTOP', 'YES'];",
       "const HELP_WORDS = ['HELP', 'INFO'];",
       "const JOIN_WORDS = ['JOIN', 'SUBSCRIBE', 'BERGEN', 'WEEKEND'];",
-      'const HELP_TEXT = \'Exit 163: your Bergen County weekend buddy. Text me things like "what\\\'s on in Ridgewood Saturday?" Reply JOIN for the Friday text (about 1 msg/week). Some replies include a labeled deal. Msg & data rates may apply. Reply STOP to opt out. exit163.com\';',
-      'const JOIN_TEXT = "You\'re in! Every Friday morning you\'ll get the best of the Bergen weekend by text (about 1 msg/week). Msg & data rates may apply. Reply STOP to cancel, HELP for help.";',
+      'const HELP_TEXT = \'Exit 163: your Bergen County weekend buddy. Text me things like "what\\\'s on in Ridgewood Saturday?" Reply JOIN for the Friday marketing text (about 1 msg/week). Some replies include a labeled deal. Msg & data rates may apply. Reply STOP to opt out. exit163.com\';',
+      'const JOIN_TEXT = "You\'re in! Every Friday morning you\'ll get the best of the Bergen weekend in a marketing text (about 1 msg/week). Msg & data rates may apply. Reply STOP to cancel, HELP for help.";',
     ]) assert.ok(src.includes(line), line);
-    assert.ok(join.includes('const CONFIRM_TEXT = "Exit 163 here, your Bergen County local agent. Reply JOIN to confirm and get the Friday weekend text (about 1 msg/wk), plus answers whenever you text me. Msg & data rates may apply. Reply HELP for help, STOP to cancel.";'));
+    assert.ok(join.includes('const CONFIRM_TEXT = "Exit 163 here, your Bergen County local agent. Reply JOIN to confirm and get the Friday marketing text (about 1 msg/wk), plus answers whenever you text me. Msg & data rates may apply. Reply HELP for help, STOP to cancel.";'));
   });
 });

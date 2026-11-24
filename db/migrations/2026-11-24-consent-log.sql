@@ -27,3 +27,22 @@ alter table sms_users add column if not exists consent_logged_at timestamptz;
 comment on table consent_log is 'Immutable proof-of-consent audit trail for Twilio TFV compliance. Never delete.';
 comment on column consent_log.disclosure_text is 'Exact consent disclosure text shown to user, or NULL for keyword opt-ins where disclosure is in the confirmation SMS';
 comment on column consent_log.event_type is 'initial_consent = form submit or keyword; double_optin_confirm = JOIN reply; opt_out = STOP';
+
+-- Backfill existing opt-ins (idempotent: skips phones that already have initial_consent)
+insert into consent_log (phone, method, source, event_type, consent_version, created_at)
+select 
+  s.phone,
+  'keyword' as method,
+  'BACKFILL' as source,
+  'initial_consent' as event_type,
+  'backfill-pre-2026-11-24' as consent_version,
+  coalesce(s.opt_in_at, now()) as created_at
+from sms_users s
+where s.blast_opt_in = true
+  and s.opted_out = false
+  and not exists (
+    select 1 
+    from consent_log c 
+    where c.phone = s.phone 
+      and c.event_type = 'initial_consent'
+  );
