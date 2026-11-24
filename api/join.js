@@ -14,7 +14,7 @@ const { EMAIL_RE, addSubscriber, sendWelcome } = require('../lib/newsletter');
 const { db, q } = require('../lib/db');
 const { sendSms } = require('../lib/twilio');
 
-const CONFIRM_TEXT = "Exit 163 here, your Bergen County local agent. Reply JOIN to confirm and get the Friday weekend text (about 1 msg/wk), plus answers whenever you text me. Msg & data rates may apply. Reply HELP for help, STOP to cancel.";
+const CONFIRM_TEXT = "Exit 163 here, your Bergen County local agent. Reply JOIN to confirm and get the Friday marketing text (about 1 msg/wk), plus answers whenever you text me. Msg & data rates may apply. Reply HELP for help, STOP to cancel.";
 const RESEND_WINDOW_MS = 24 * 3600e3; // at most one confirmation text per number per day
 
 // US/Canada numbers only (NANP): 10 digits, area code and exchange can't start with 0/1.
