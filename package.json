@@ -17,5 +17,9 @@
     "@anthropic-ai/sdk": "^1.6.0",
     "@supabase/supabase-js": "^2.119.0",
     "@vercel/functions": "^3.11.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "playwright": "^1.65.1"
   }
 }
