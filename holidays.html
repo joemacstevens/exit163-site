@@ -503,11 +503,15 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; }
     </div>
     <form class="ex-join join" novalidate>
       <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="sr">
-      <div class="ex-field"><input id="g-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(201) 555-0163" aria-describedby="g-fine"><label for="g-phone">Your mobile · text me</label></div>
+      <div class="ex-field"><input id="g-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(201) 555-0163" aria-describedby="g-fine g-consent-label"><label for="g-phone">Your mobile · text me</label></div>
       <div class="ex-field"><input id="g-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com"><label for="g-email">Email · the Friday letter</label></div>
+      <p class="ex-join__fine" id="g-fine">Use your mobile number, email, or both. You don&rsquo;t need to agree to texts to sign up by email.</p>
+      <div style="display:flex;align-items:flex-start;gap:8px;margin-top:4px">
+        <input type="checkbox" id="g-consent" name="consent" style="margin-top:3px;flex-shrink:0">
+        <label for="g-consent" id="g-consent-label" class="ex-join__fine" style="margin:0;cursor:pointer">By providing your number and checking this box, you agree to receive recurring automated marketing texts from Exit 163 (about 1 message/week, plus replies when you text us). Msg &amp; data rates may apply. Consent is not a condition of any purchase. Reply STOP to cancel, HELP for help. <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>.</label>
+      </div>
       <button class="ex-btn ex-btn--primary go" type="submit"><span class="label">Unlock the full list</span> <span class="ex-arrow" aria-hidden="true">&rarr;</span></button>
       <p class="ex-join__err msg" role="status" aria-live="polite"></p>
-      <p class="ex-join__fine" id="g-fine">Either one unlocks it. Free. By adding your number you agree to get recurring automated texts from Exit 163 (about 1 a week, plus replies). We text once to confirm; reply JOIN. Consent isn&rsquo;t a condition of anything. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help. <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>.</p>
     </form>
   </section>
 </template>
@@ -758,6 +762,8 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; }
   function wireForm(form) {
     if (!form) return;
     var phone = form.querySelector('[name=phone]'), email = form.querySelector('[name=email]'), msg = form.querySelector('.msg'), btn = form.querySelector('.go'), label = btn.querySelector('.label');
+    var consent = form.querySelector('[name=consent]'), disclosure = form.querySelector('#g-consent-label');
+    consent.addEventListener('change', function () { if (consent.checked) msg.textContent = ''; });
     phone.addEventListener('input', function () { phone.value = fmtPhone(phone.value); phone.parentNode.classList.remove('bad'); });
     email.addEventListener('input', function () { email.parentNode.classList.remove('bad'); });
     function err(t, f) { msg.textContent = t; if (f) { f.parentNode.classList.add('bad'); f.focus(); } }
@@ -767,8 +773,19 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 48px; }
       if (!p && !m) return err('Add your mobile number or your email.', phone);
       if (p && !validPhone(p)) return err('Use a 10-digit US mobile number.', phone);
       if (m && !validEmail(m)) return err('That email doesn’t look right.', email);
+      if (p && !consent.checked) {
+        msg.textContent = 'Check the box to agree to marketing texts, or remove your phone number to sign up by email only.';
+        consent.focus();
+        return;
+      }
       btn.disabled = true; label.textContent = 'Unlocking…';
-      fetch('/api/join', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ phone: p, email: m, website: form.querySelector('[name=website]').value }) })
+      var payload = { phone: p, email: m, website: form.querySelector('[name=website]').value, source: 'holiday-tracker' };
+      if (p) {
+        payload.consent = consent.checked;
+        payload.disclosure_text = disclosure.textContent.trim();
+        payload.consent_version = 'v1';
+      }
+      fetch('/api/join', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
         .then(function (d) {
           if (!d.ok) { btn.disabled = false; label.textContent = 'Unlock the full list'; return err(d.error || 'Something went wrong. Please try again.', d.field === 'phone' ? phone : d.field === 'email' ? email : null); }
